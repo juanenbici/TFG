@@ -1,0 +1,204 @@
+\documentclass[10pt]{report}
+\usepackage[utf8]{inputenc}
+
+\usepackage[spanish]{babel} % Idioma
+\selectlanguage{spanish}
+\usepackage{graphicx} %imagenes
+\usepackage{verbatim} % Para comment
+
+\usepackage{geometry}
+\geometry{ % Margenes
+  a4paper,
+  left=20mm,
+  right=20mm,
+  top=20mm,
+  bottom=20mm
+}
+\setlength{\parindent}{0pt} % Quitar indentado parrafos automatico
+
+\usepackage{amsmath} % Movidas útiles
+\usepackage{amssymb} % Simbolos mates
+\usepackage{amsthm} % Personalizar teoremas (mas abajo continuacion)
+\usepackage{thmtools} % Mas movidas teoremas
+\usepackage{tikz} % Para pictures
+\usepackage{sectsty} % Personalizar titulos secciones
+\sectionfont{\underline} % Titulo seccion subrayado
+
+% Comandos simbolos utiles 
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Epsilon}{\mathcal{E}}
+
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Comando para normas
+
+% Estilos teoremas (Mejorable)
+\newtheorem{defin}{Definición}
+\newtheorem{tma}{Teorema}
+\newtheorem*{tma*}{Teorema}
+\newtheorem{corol}{Corolario}
+\newtheorem{prop}{Proposición}
+\newtheorem{lema}[tma]{Lema}
+\newcommand{\demo}{Demostración.\\}
+\newcommand{\ok}{\hfill$\square$}
+\theoremstyle{remark}
+\newtheorem{obs}{Observación}
+\newtheorem{eje}{Ejemplo}
+\graphicspath{ {images/} }
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \newpage}
+
+
+% Cabeceras
+\renewcommand{\title}{ZIP}
+\newcommand{\subtitle}{Trabajo fin de grado}
+\renewcommand{\maketitle}{{\Large{\textbf{\title}}}\\\\{\Large \subtitle}\\\rule{17cm}{0.4pt}\\}
+
+\begin{document}
+%%%%%%%%PORTADA%%%%%%%%%%%
+
+%%% PORTADA%%%%%%
+\begin{titlepage} %Creo que esto es para la numeración de páginas
+\begin{center} %Que todo quede centradito
+
+% Todo esto de abajo habría que retocarlo pero así sirve de ejemplo
+\huge\textsc{Universidad Complutense de Madrid}\\[0.2in]
+\includegraphics[scale=0.8]{comlu}\\[0.1in] %Introduce la imagen y la reescala, inserta un pequeño hueco con lo de debajo
+
+\Large{Facultad de Matemáticas}\\[0.5in] %inserta un hueco mayor con lo de abajo
+ %la linea horizontal
+\Large{Trabajo de Fin de Grado}\\[.1in]
+\Huge {Un tratamiento riguroso de la prueba ZIP}\\[0.2in]
+
+
+
+\vfill %Llenar verticalmente
+\Large {Juan Valero Oliet}\\[0.5in]
+\vfill 
+Dirigido por:\\
+Manuel Alonso Morón\\[.1in]
+\Large{Junio de 2020}
+\end{center}
+
+\end{titlepage}
+
+
+%\afterpage{\blankpage}
+
+%%%%%%%%%%%%%PORTADA%%%%%%%%%%%%%%%%%%%%%5
+
+
+\chapter{Definiciones preeliminares}
+
+
+\section{Variedades}
+
+\subsection{Variedades y superficies}
+
+
+Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo son las variedades.%, que son los más relevantes desde el punto de vista de la geometría.
+
+
+\begin{defin}
+Una variedad topológica (de ahora en adelante variedad) es un espacio topológico Hausdorff, II AN y localmente homeomorfo a $R^n$, para algún $n\geq 0$.
+\end{defin}
+
+Como la propiedad ``ser localmente homeomorfo a $\R^n$'' es local, toda propiedad local de $\R^n$ se traslada a una variedad. Así, las variedades son localmente compactas, I AN, localmente conexas, localmente conexas por caminos y localmente simplemente conexas.\\
+
+
+
+%COPIADO lo de abajo, cambiar las palabras!!!!!!!!!!!!
+
+El \textit{teorema de invarianza del dominio} dice que si $W\subset \R^n$ y $W'\subset \R^m$ son abiertos y existe $\phi: W \rightarrow W'$ homeomorfismo, entonces $n=m$. Esto implica que, dado un punto $p\in X$ de una variedad, hay un único $n=n(p)$ tal que un entorno $U^p$ es homeomorfo a un abierto $U'\subset \R^n$. Llamamos $n(p)$ la dimensión en p. Claramente, para todo punto $q\in U$ podemos tomar $U$ como entorno de $q$, y por tanto $n(q)=n(p)$. Luego en toda la componente conexa de $p$, el $n$ que aparece es el mismo, y lo llamaremos dimensión de dicha componente conexa. Nótese que si escribimos $X=\sqcup X_i$, con $X_i$ componentes conexas de $X$, todas las $X_i$ son variedades. Si todas las $X_i$ tienen la misma dimensión $n$, entonces escribimos $n=dim X$ , y decimos que $X$ es una $n$-variedad.\\
+
+
+
+\begin{eje}
+\begin{itemize}
+\item Las 0-variedades son espacios discretos numerables. La única 0-variedad conexa es un punto.
+\item Existen dos 1-variedades conexas salvo homeomorfismo: la recta $\R$ y el círculo $\mathbb{S}^1$
+
+\end{itemize}
+
+
+\end{eje}
+
+\begin{defin}
+A las 2-variedades las llamamos superficies.
+\end{defin}
+
+\begin{eje}
+	\begin{itemize}
+		\item La esfera $\mathbb{S}^2=\{(x,y,z) \in \R^3 \mid x^2+y^2+z^2=1\}$
+
+
+		\item El toro $\mathbb{T}^2=\{(x,y,z)\in \R^3 \mid (\sqrt{x^2+y^2}-2)^2+z^2=1\}$
+	\end{itemize}
+
+\end{eje}
+
+\
+
+
+\begin{figure}
+	\begin{center}
+		\begin{tikzpicture}
+			\draw (0,0) circle (2cm);
+			\draw (2,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=-180];
+			\draw [dashed] (2,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=180];
+			\draw (6,-0.1) ellipse (2.9cm and 1.4 cm);
+			\draw (7.5,0.1) arc[x radius=1.5, y radius=0.4, start angle=0, end angle=-180];
+			\draw (7.3,-0.1) arc[x radius=1.3, y radius=0.3, start angle=0, end angle=180]; 
+		\end{tikzpicture}
+	\caption{$\mathbb{S}^2$ y $\mathbb{T}^2$}
+	\end{center}
+\end{figure}
+
+
+
+
+
+
+
+
+% Aquí deberían ir dibujos de la esfera pero ni idea
+
+
+
+
+
+
+\subsection{Suma conexa de variedades}
+
+
+Sean $V_1$ y $V_2$ dos $n$-variedades conexas. Dados $p_1\in V_1$ y $p_2\in V_2$ sean $U_1^{p_1}\subset V_1$, $U_2^{p_2}\subset V_2$  entornos de $p_1$ y $p_2$ respectivamente, y sean $\phi_1:U_1\to\R^n$ y $\phi_2:U_2\to\R^n$ dos homeomorfismos tales que $\phi_1(p_1)=0$ y $\phi_2(p_2)=0$. Si llamamos $B_1=\phi_1^{-1}(B_1(0))\subset V_1$ y $B_2=\phi_2^{-1}(B_1(0))\subset V_2$, consideremos $V_1^o=V_1-B_1$, $V_2^o=V_2-B_2$ y $V_1^o \sqcup V_2^o$ con la topología unión disjunta.
+Se define la relación de equivalencia $\sim$ en la que si $x_1\in S_1=\phi_1^{-1}(\partial B_1(0))$, $x_2\in S_2=\phi_2^{-1}(\partial B_1(0))$, entonces $x_1\sim x_2$ si y sólo si $\phi_1(x_1)=\phi_2(x_2)$, y se considera el cociente 
+
+$$X=\frac{V_1^o\sqcup V_2^o}{\sim}.$$
+
+\begin{defin}
+A $X$ se le llama suma conexa de $V_1$ y $V_2$, y se denota por $X=V_1\#V_2$.
+\end{defin}
+%%%%%%%%%%%%DIBUJO DE SUMA CONEXA%%%%%%%%%%%%
+\begin{prop}
+$X$ es una variedad.
+\end{prop}
+\begin{demo}
+Denotemos la proyección $\pi:V_1\#V_2\to X$ 
+\end{demo}
+
+
+
+
+
+
+
+
+
+\end{document}
