@@ -7,14 +7,14 @@
 \usepackage{verbatim} % Para comment
 
 \usepackage{geometry}
-\geometry{ % Margenes
-  a4paper,
-  left=20mm,
-  right=20mm,
-  top=20mm,
-  bottom=20mm
-}
-\setlength{\parindent}{0pt} % Quitar indentado parrafos automatico
+%\geometry{ % Margenes
+%  a4paper,
+ % left=20mm,
+ % right=20mm,
+  %top=20mm,
+ % bottom=20mm
+%}
+%\setlength{\parindent}{0pt} % Quitar indentado parrafos automatico
 
 \usepackage{amsmath} % Movidas útiles
 \usepackage{amssymb} % Simbolos mates
@@ -35,17 +35,18 @@
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Comando para normas
 
 % Estilos teoremas (Mejorable)
-\newtheorem{defin}{Definición}
-\newtheorem{tma}{Teorema}
+\theoremstyle{definition}
+\newtheorem{defin}{Definición}[section]
+\newtheorem{tma}[defin]{Teorema}
 \newtheorem*{tma*}{Teorema}
-\newtheorem{corol}{Corolario}
-\newtheorem{prop}{Proposición}
-\newtheorem{lema}[tma]{Lema}
-\newcommand{\demo}{Demostración.\\}
-\newcommand{\ok}{\hfill$\square$}
-\theoremstyle{remark}
-\newtheorem{obs}{Observación}
-\newtheorem{eje}{Ejemplo}
+\newtheorem{corol}[defin]{Corolario}
+\newtheorem{prop}[defin]{Proposición}
+\newtheorem{lema}[defin]{Lema}
+%\newcommand{\demo}{Demostración.\\}
+%\newcommand{\ok}{\hfill$\square$}
+%\theoremstyle{remark}
+\newtheorem{obs}[defin]{Observación}
+\newtheorem{eje}[defin]{Ejemplo}
 \graphicspath{ {images/} }
 \usepackage{afterpage}
 
@@ -189,9 +190,32 @@ A $X$ se le llama suma conexa de $V_1$ y $V_2$, y se denota por $X=V_1\#V_2$.
 \begin{prop}
 $X$ es una variedad.
 \end{prop}
-\begin{demo}
-Denotemos la proyección $\pi:V_1\#V_2\to X$ af
-\end{demo}
+\begin{proof}
+Denotemos la proyección $\pi:V_1\#V_2\to X$ %%%%%%%%DEMOSTRACION%%%%%%%%%%%
+\end{proof}
+
+
+
+\section{Representación de superficies}
+
+Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Representaremos todas las superficies como cocientes de polígonos con $2n$ lados. 
+
+\begin{defin}
+Sea $S$ un conjunto. Una palabra en $S$ es una $k$-tupla ordenada de símbolos, cada uno de la forma $a$ o $a^{-1}$, para cierto $a\in S$.
+\end{defin}
+
+\begin{defin}
+Una representación poligonal, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,...,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotamos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabras $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b \mid aba^{-1}b^{-1}\rangle$. Permitimos el caso especial de $S=\{a\}$ y palabras de longitud $2$, es decir $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
+\end{defin}
+\begin{defin}
+Toda representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $|\mathcal{P}|$, llamado \textbf{realización geométrica de $\mathcal{P}$} . $|\mathcal{P}|$ se obtiene de la siguiente manera:
+\begin{itemize}
+\item[1.] Para cada $W_i\in \mathcal{P}$ de longitud $k$, sea $P_i$ el $k$-polígono centrado en el origen con lados de longitud 1 y tal que un lado yace sobre el eje $OY$.
+\item[2.] Se define una correspondencia uno a uno entre los símbolos de $W_ i$ y los lados de $P_i$ en orden inverso a las agujas del reloj, empezando por el que yace en el eje $OY$.
+\item[3.] Sea $|\mathcal{P}|$ el espacio cociente de $\coprod_i P_i$ determinado identificando lados que tengan el mismo símbolo, conforme al homeomorfismo afín que hace coincidir los primeros vértices de lo lados con una dada etiqueta $a$ y los últimos vertices de los que tienen la correspondiente etiqueta $a^{-1}$ (en el sentido contrario a las agujas del reloj).
+\end{itemize}
+\end{defin}
+Si $|\mathcal{P}|$ es una de las representaciones poligonales de un solo elemento, decimos que $|\mathcal{P}|$ es la esfera si la palabra es $aa^{-1}$ o $a^{-1}a$, y el plano proyectivo si es $aa$ o $a^{-1}a^{-1}$.
 
 
 
