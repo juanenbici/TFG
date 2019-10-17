@@ -23,7 +23,10 @@
 
 \usepackage{tikz} % Para pictures
 \usetikzlibrary{decorations.markings,arrows} %decoracion en tikz
-
+\usetikzlibrary{shadows,arrows,positioning,shapes.geometric}
+\usetikzlibrary{decorations,decorations.markings}
+\usepackage{etoolbox}
+\usetikzlibrary{optics}
 
 \usepackage{sectsty} % Personalizar titulos secciones
 \sectionfont{\underline} % Titulo seccion subrayado
@@ -221,11 +224,12 @@ Toda representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $
 \end{defin}
 \begin{figure}
 \begin{center}
-\begin{tikzpicture}
+\begin{tikzpicture}[use optics]
 
-    \draw[<-] (-1,0) -- (0,1) -- (1,0) -- (0,-1) -- cycle;
-	\draw (-1.5,0) -- (1.5,0);
-	\draw (0,-1.5) -- (0,1.5);
+
+\draw[put arrow={at=0.12}, put arrow={at=0.37}] (-1,0) -- (0,1) -- (1,0) -- (0,-1) -- cycle;
+\draw (-1.5,0) -- (1.5,0);
+\draw (0,-1.5) -- (0,1.5);
 \end{tikzpicture}
 \caption{Representación poligonal de $\mathbb{S}^2$}
 \end{center}
