@@ -20,7 +20,11 @@
 \usepackage{amssymb} % Simbolos mates
 \usepackage{amsthm} % Personalizar teoremas (mas abajo continuacion)
 \usepackage{thmtools} % Mas movidas teoremas
+
 \usepackage{tikz} % Para pictures
+\usetikzlibrary{decorations.markings,arrows} %decoracion en tikz
+
+
 \usepackage{sectsty} % Personalizar titulos secciones
 \sectionfont{\underline} % Titulo seccion subrayado
 
@@ -107,7 +111,7 @@ Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo 
 
 
 \begin{defin}
-Una variedad topológica (de ahora en adelante variedad) es un espacio topológico Hausdorff, II AN y localmente homeomorfo a $R^n$, para algún $n\geq 0$.
+Una \textbf{\emph{variedad topológica}} (de ahora en adelante \emph{variedad}) es un espacio topológico Hausdorff, II AN y localmente homeomorfo a $R^n$, para algún $n\geq 0$.
 \end{defin}
 
 Como la propiedad ``ser localmente homeomorfo a $\R^n$'' es local, toda propiedad local de $\R^n$ se traslada a una variedad. Así, las variedades son localmente compactas, I AN, localmente conexas, localmente conexas por caminos y localmente simplemente conexas.\\
@@ -131,7 +135,7 @@ El \textit{teorema de invarianza del dominio} dice que si $W\subset \R^n$ y $W'\
 \end{eje}
 
 \begin{defin}
-A las 2-variedades las llamamos superficies.
+Una \textbf{\emph{superficie}} es una $2$-variedad.
 \end{defin}
 
 \begin{eje}
@@ -184,7 +188,7 @@ Se define la relación de equivalencia $\sim$ en la que si $x_1\in S_1=\phi_1^{-
 $$X=\frac{V_1^o\sqcup V_2^o}{\sim}.$$
 
 \begin{defin}
-A $X$ se le llama suma conexa de $V_1$ y $V_2$, y se denota por $X=V_1\#V_2$.
+A $X$ se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, y se denota por $X=V_1\#V_2$.
 \end{defin}
 %%%%%%%%%%%%DIBUJO DE SUMA CONEXA%%%%%%%%%%%%
 \begin{prop}
@@ -201,26 +205,35 @@ Denotemos la proyección $\pi:V_1\#V_2\to X$ %%%%%%%%DEMOSTRACION%%%%%%%%%%%
 Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Representaremos todas las superficies como cocientes de polígonos con $2n$ lados. 
 
 \begin{defin}
-Sea $S$ un conjunto. Una palabra en $S$ es una $k$-tupla ordenada de símbolos, cada uno de la forma $a$ o $a^{-1}$, para cierto $a\in S$.
+Sea $S$ un conjunto. Una \textbf{\textit{palabra en $S$}} es una $k$-tupla ordenada de símbolos, cada uno de la forma $a$ o $a^{-1}$, para cierto $a\in S$.
 \end{defin}
 
 \begin{defin}
-Una representación poligonal, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,...,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotamos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabras $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b \mid aba^{-1}b^{-1}\rangle$. Permitimos el caso especial de $S=\{a\}$ y palabras de longitud $2$, es decir $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
+Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,...,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotamos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabras $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b \mid aba^{-1}b^{-1}\rangle$. Permitimos el caso especial de $S=\{a\}$ y palabras de longitud $2$, es decir $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
 \end{defin}
 \begin{defin}
-Toda representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $|\mathcal{P}|$, llamado \textbf{realización geométrica de $\mathcal{P}$} . $|\mathcal{P}|$ se obtiene de la siguiente manera:
+Toda representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $|\mathcal{P}|$, llamado \textbf{\textit{realización geométrica de $\mathcal{P}$}} . $|\mathcal{P}|$ se obtiene de la siguiente manera:
 \begin{itemize}
 \item[1.] Para cada $W_i\in \mathcal{P}$ de longitud $k$, sea $P_i$ el $k$-polígono centrado en el origen con lados de longitud 1 y tal que un lado yace sobre el eje $OY$.
 \item[2.] Se define una correspondencia uno a uno entre los símbolos de $W_ i$ y los lados de $P_i$ en orden inverso a las agujas del reloj, empezando por el que yace en el eje $OY$.
-\item[3.] Sea $|\mathcal{P}|$ el espacio cociente de $\coprod_i P_i$ determinado identificando lados que tengan el mismo símbolo, conforme al homeomorfismo afín que hace coincidir los primeros vértices de lo lados con una dada etiqueta $a$ y los últimos vertices de los que tienen la correspondiente etiqueta $a^{-1}$ (en el sentido contrario a las agujas del reloj).
+\item[3.] Sea $|\mathcal{P}|$ el espacio cociente de $\coprod_i P_i$ determinado identificando lados que tengan el mismo símbolo, conforme al homeomorfismo afín que hace coincidir los primeros vértices de lo lados con una dada etiqueta $a$ y los últimos vertices de los que tienen la correspondiente etiqueta $a^{-1}$ (en el sentido a las agujas del reloj).
 \end{itemize}
 \end{defin}
-Si $|\mathcal{P}|$ es una de las representaciones poligonales de un solo elemento, decimos que $|\mathcal{P}|$ es la esfera si la palabra es $aa^{-1}$ o $a^{-1}a$, y el plano proyectivo si es $aa$ o $a^{-1}a^{-1}$.
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
 
+    \draw[<-] (-1,0) -- (0,1) -- (1,0) -- (0,-1) -- cycle;
+	\draw (-1.5,0) -- (1.5,0);
+	\draw (0,-1.5) -- (0,1.5);
+\end{tikzpicture}
+\caption{Representación poligonal de $\mathbb{S}^2$}
+\end{center}
+\end{figure}
 
-
-
-
+Si $|\mathcal{P}|$ es una de las representaciones poligonales de un solo elemento, decimos que $|\mathcal{P}|$ es la esfera $\mathbb{S}^2$ si la palabra es $aa^{-1}$ o $a^{-1}a$, y el plano proyectivo $\mathbb{P}^2$ si es $aa$ o $a^{-1}a^{-1}$.
+Las regiones interiores, los lados y los vértices de cada polígono $\mathcal{P}_i$ se llaman \textbf{\emph{caras, lados y vértices de la presentación}}. El número de caras es el mismo que el número de palabras, y el número de lados coincide con la suma de la longitud de las palabras.
+Para un lado etiquetado $a$, el \textbf{\emph{vértice inicial}} es el primero en el sentido de las agujas del reloj.
 
 
 
