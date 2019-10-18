@@ -171,16 +171,7 @@ Una \textbf{\emph{superficie}} es una $2$-variedad.
 
 
 
-
-
-
-
-% Aquí deberían ir dibujos de la esfera pero ni idea
-
-
-
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Suma conexa de variedades}
 
@@ -206,12 +197,13 @@ Denotemos la proyección $\pi:V_1\#V_2\to X$ %%%%%%%%DEMOSTRACION%%%%%%%%%%%
 \section{Representación de superficies}
 
 Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Representaremos todas las superficies como cocientes de polígonos con $2n$ lados. 
-
+%%%%%%%%% QUIZAS INCLUIR UNA DEFINICION INFORMAL%%%%%%%%%%%%%%
 \begin{defin}
 Sea $S$ un conjunto. Una \textbf{\textit{palabra en $S$}} es una $k$-tupla ordenada de símbolos, cada uno de la forma $a$ o $a^{-1}$, para cierto $a\in S$.
 \end{defin}
 
 \begin{defin}
+\label{def:rep_pol}
 Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,...,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotamos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabras $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b \mid aba^{-1}b^{-1}\rangle$. Permitimos el caso especial de $S=\{a\}$ y palabras de longitud $2$, es decir $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
 \end{defin}
 \begin{defin}
@@ -221,13 +213,17 @@ Toda representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $
 \item[2.] Se define una correspondencia uno a uno entre los símbolos de $W_ i$ y los lados de $P_i$ en orden inverso a las agujas del reloj, empezando por el que yace en el eje $OY$.
 \item[3.] Sea $|\mathcal{P}|$ el espacio cociente de $\coprod_i P_i$ determinado identificando lados que tengan el mismo símbolo, conforme al homeomorfismo afín que hace coincidir los primeros vértices de lo lados con una dada etiqueta $a$ y los últimos vertices de los que tienen la correspondiente etiqueta $a^{-1}$ (en el sentido a las agujas del reloj).
 \end{itemize}
+
+
+Si $|\mathcal{P}|$ es una de las representaciones poligonales de un solo elemento, decimos que $|\mathcal{P}|$ es la esfera $\mathbb{S}^2$ si la palabra es $aa^{-1}$ o $a^{-1}a$, y el plano proyectivo $\mathbb{P}^2$ si es $aa$ o $a^{-1}a^{-1}$.
+
 \end{defin}
 \begin{figure}
 \begin{center}
 \begin{tikzpicture}[use optics]
 
 
-\draw[put arrow={at=0.12}, put arrow={at=0.37}] (-1,0) -- (0,1) -- (1,0) -- (0,-1) -- cycle;
+\draw[put arrow={at=0.12}, put arrow={at=0.39}] (-1,0) -- (0,1) -- (1,0) -- (0,-1) -- cycle;
 \draw (-1.5,0) -- (1.5,0);
 \draw (0,-1.5) -- (0,1.5);
 \end{tikzpicture}
@@ -235,11 +231,46 @@ Toda representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $
 \end{center}
 \end{figure}
 
-Si $|\mathcal{P}|$ es una de las representaciones poligonales de un solo elemento, decimos que $|\mathcal{P}|$ es la esfera $\mathbb{S}^2$ si la palabra es $aa^{-1}$ o $a^{-1}a$, y el plano proyectivo $\mathbb{P}^2$ si es $aa$ o $a^{-1}a^{-1}$.
-Las regiones interiores, los lados y los vértices de cada polígono $\mathcal{P}_i$ se llaman \textbf{\emph{caras, lados y vértices de la presentación}}. El número de caras es el mismo que el número de palabras, y el número de lados coincide con la suma de la longitud de las palabras.
-Para un lado etiquetado $a$, el \textbf{\emph{vértice inicial}} es el primero en el sentido de las agujas del reloj.
+\begin{defin}
+
+ Las regiones interiores, los lados y los vértices de cada polígono $P_i$ se llaman \textbf{\emph{caras, lados y vértices de la presentación}}. El número de caras es el mismo que el número de palabras, y el número de lados coincide con la suma de la longitud de las palabras.
+Para un lado etiquetado $a$, el \textbf{\emph{vértice inicial}} es el primero en el sentido de las agujas del reloj, y el otro es el \textbf{\emph{vértice final}}. Para un lado etiquetado $a^{-1}$, estas definiciones se invierten. 
+\end{defin}
+
+\begin{defin}
+Una representación poligonal es una \textbf{\emph{representación de una superficie}} si para todo $a\in S$, $a$ ocurre exáctamente dos veces en $W_1,...,W_k$ como $a$ o como $a^{-1}$.
+\end{defin}
+
+\begin{defin}
+Si $X$ es un espacio topológico y $\mathcal{P}$ una representación poligonal cuya realización geométrica es homeomorfa a $\mathcal{P}$, decimos que $\mathcal{P}$ es una \textbf{\emph{representación de $X$}}.
+\end{defin}
+
+\begin{obs}
+Un espacion topológico que admite una representación con una sola cara es conexo, pues es homeomorfo al cociente de una región poligonal conexa. Con más de una cara, puede ser o no conexo.
+\end{obs}
+
+Veamos la representación de algunas superficies importantes.
+
+\begin{prop}
+La esfera $\mathbb{S}^2$ es homeomorfa a los siguientes espacios cociente: 
+%%%%%%%%%%o cocientes??????????%%%%%
+\begin{itemize}
+\item[(a)] El disco cerrado $\overline{\mathbb{B}}^2\subseteq \mathbb{R}^2$ módulo la relación de equivalencia generada por $(x,y)\sim (-x,y)$, para $(x,y)\in \partial \overline{\mathbb{B}}^2$
+\item[(b)] El cuadrado $S=\{(x,y):|x|+|y|\leq 1\}$ módulo la relación de equivalencia generada por $(x,y)\sim(-x,y)$ para $(x,y)\in \partial S$.
+\end{itemize}
+\end{prop}
+\begin{proof}
+
+\end{proof}
 
 
 
+\begin{corol}
+$\mathbb{S}^2=\langle a|aa^{-1}\rangle=\langle a,b| aba^{-1}b^{-1}\rangle$
+\end{corol}
+\begin{proof}
+$\mathbb{S}^2=\langle a|aa^{-1}\rangle$ por la definición \ref{def:rep_pol}. La segunda igualdad es consecuencia de la proposición anterior.
+%%%%%%%%%%%%Falta demo%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{proof}
 
 \end{document}
