@@ -7,7 +7,7 @@
 \usepackage{verbatim} % Para comment
 
 
-
+\usepackage{appendix} %Para el apéndice
 
 
 \usepackage{ragged2e} %para alinear texto izqda y derecha
@@ -112,7 +112,7 @@ Manuel Alonso Morón\\[.1in]
 
 %%%%%%%%%%%%%PORTADA%%%%%%%%%%%%%%%%%%%%%5
 
-
+\tableofcontents
 \chapter{Definiciones preeliminares}
 
 
@@ -280,6 +280,9 @@ $$\pi(x,y)=\left\{\begin{array}{lc}
 
 \end{array}
 \right.$$
+Es claro que $\pi$ es continua y hace las mismas identificaciones que la relación de equivalencia. Por ser sobreyectiva, es una aplicación cociente (\emph{Teorema de la aplicación cerrada \ref{teo:aplicac_cerrada}})
+
+Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo 
 \end{proof}
 
 
@@ -335,5 +338,13 @@ $\mathbb{S}^2=\langle a|aa^{-1}\rangle$ por la definición \ref{def:rep_pol}. La
 \caption{Representación poligonal de $\mathbb{2}^2 y \mathbb{P}^2$}
 \end{figure}
 
+\appendix
+\chapter{Teoremas Usados}
 
+\begin{tma}[Teorema de la aplicación cerrada]
+Sea
+\end{tma}
+\begin{tma}
+Si $D\subseteq \R^n$ es un conjunto compacto y convexo con interior no vacío, entonces $D$ es homeomorfo a $\overline{\mathbb{B}}^n.$ De hecho, dado $p\in \mathring{D}$, entonces existe un homeomorfismo $F:\overline{\mathbb{B}}^n\to D$ que envía $0$ a $p$, $\overline{\mathbb{B}}^n$ a $\mathring{D}$, y $\mathbb{S}^{n-1}$ a $\partial D$.
+\end{tma}
 \end{document}
