@@ -6,6 +6,14 @@
 \usepackage{graphicx} %imagenes
 \usepackage{verbatim} % Para comment
 
+
+
+
+
+\usepackage{ragged2e} %para alinear texto izqda y derecha
+
+
+
 \usepackage{geometry}
 %\geometry{ % Margenes
 %  a4paper,
@@ -27,6 +35,9 @@
 \usetikzlibrary{decorations,decorations.markings}
 \usepackage{etoolbox}
 \usetikzlibrary{optics}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{babel}
 
 \usepackage{sectsty} % Personalizar titulos secciones
 \sectionfont{\underline} % Titulo seccion subrayado
@@ -256,11 +267,19 @@ La esfera $\mathbb{S}^2$ es homeomorfa a los siguientes espacios cociente:
 %%%%%%%%%%o cocientes??????????%%%%%
 \begin{itemize}
 \item[(a)] El disco cerrado $\overline{\mathbb{B}}^2\subseteq \mathbb{R}^2$ módulo la relación de equivalencia generada por $(x,y)\sim (-x,y)$, para $(x,y)\in \partial \overline{\mathbb{B}}^2$
-\item[(b)] El cuadrado $S=\{(x,y):|x|+|y|\leq 1\}$ módulo la relación de equivalencia generada por $(x,y)\sim(-x,y)$ para $(x,y)\in \partial S$.
+\item[(b)] El cuadrado $C=\{(x,y):|x|+|y|\leq 1\}$ módulo la relación de equivalencia generada por $(x,y)\sim(-x,y)$ para $(x,y)\in \partial S$.
 \end{itemize}
 \end{prop}
 \begin{proof}
+Para ver que cada espacio es homeomorfo a la esfera, daremos una aplicación cociente desde el espacio dado a la esfera que haga las mismas identificaciones que la relación de equivalencia, y entonces apelaremos a la unicidad del espacio cociente.\\
+Para (a), vamos a definir una aplicación del disco en la esfera que envuelve cada paralelo con un segmento horizontal del disco (ver %figura)
+Formalmente, esta aplicación $\pi:\overline{\mathbb{B}}^2\to \mathbb{S}^2$ vienen dada por 
+$$\pi(x,y)=\left\{\begin{array}{lc}
+			(-\sqrt{1-y^2} \cos\dfrac{\pi x}{\sqrt{1-y^2}}, -\sqrt{1-y^2}, y), & y\neq \pm 1 \\
+			\\(0,0,y), & y=\pm1 
 
+\end{array}
+\right.$$
 \end{proof}
 
 
@@ -271,6 +290,50 @@ $\mathbb{S}^2=\langle a|aa^{-1}\rangle=\langle a,b| aba^{-1}b^{-1}\rangle$
 \begin{proof}
 $\mathbb{S}^2=\langle a|aa^{-1}\rangle$ por la definición \ref{def:rep_pol}. La segunda igualdad es consecuencia de la proposición anterior.
 %%%%%%%%%%%%Falta demo%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \end{proof}
+
+\begin{figure}
+
+\definecolor{uququq}{rgb}{0.25,0.25,0.25}
+
+
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+%\clip(-5.39,-4) rectangle (8.94,3.29);
+\draw(0,0) circle (2cm);
+\draw (-2.2,-0.2)-- (-1.99,0.2);
+\draw (-1.99,0.2)-- (-1.85,-0.2);
+\draw (1.85,-0.2)-- (1.99,0.2);
+\draw (1.99,0.2)-- (2.2,-0.2);
+\draw (2.5,0.15) node[anchor=north west] {$ a $};
+\draw (-2.5,0.15) node[anchor=north east] {$ a $};
+\draw (0.00,-2.3) node[anchor=north] {$ \mathbb{S}^2 $};
+\begin{scriptsize}
+\fill [color=uququq] (0,2) circle (1.5pt);
+\fill [color=uququq] (0,-2) circle (1.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+%\clip(-4.3,-5.46) rectangle (18.82,6.3);
+\draw(0,0) circle (2cm);
+\draw (-2.2,-0.2)-- (-1.99,0.2);
+\draw (-1.99,0.2)-- (-1.85,-0.2);
+\draw (2.5,0.24) node[anchor=north west] {$ a $};
+\draw (-2.5,0.24) node[anchor=north east] {$ a $};
+\draw (0,-2.3) node[anchor=north] {$ \mathbb{P}^2 $};
+\draw (1.85,0.2)-- (1.99,-0.2);
+\draw (1.99,-0.2)-- (2.2,0.2);
+\begin{scriptsize}
+\fill [color=uququq] (0,2) circle (1.5pt);
+\fill [color=uququq] (0,-2) circle (1.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+\caption{Representación poligonal de $\mathbb{2}^2 y \mathbb{P}^2$}
+\end{figure}
+
 
 \end{document}
