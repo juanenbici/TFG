@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}
+\babel@toc {spanish}{}
+\contentsline {chapter}{\numberline {1}Definiciones preeliminares}{2}
+\contentsline {section}{\numberline {1.1}Variedades}{2}
+\contentsline {subsection}{\numberline {1.1.1}Variedades y superficies}{2}
+\contentsline {subsection}{\numberline {1.1.2}Suma conexa de variedades}{3}
+\contentsline {section}{\numberline {1.2}Representaci\IeC {\'o}n de superficies}{4}
+\contentsline {chapter}{\numberline {A}Teoremas Usados}{9}
