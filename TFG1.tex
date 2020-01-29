@@ -202,18 +202,33 @@ A $X$ se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, y se denota po
 %\clip(-8.56,-6.52) rectangle (6.77,3.86);
 \draw [rotate around={0:(-5.5,0)}] (-5.5,0) ellipse (2.5cm and 2cm);
 \draw(0,0) circle (0.5cm);
-\draw [rotate around={0:(5.5,0)}] (5.5,0) ellipse (2.5cm and 2cm);
-\draw [rotate around={0:(6.22,1.32)}] (6.22,1.32) ellipse (0.45cm and 0.28cm);
-\draw(6.22,1.32) circle (0.45cm);
-\draw (-6.5,0) arc[x radius=0.6, y radius=0.4, start angle=180, end angle=0];
-\draw (-6.6,0.31) arc[x radius=0.7, y radius=0.4, start angle=180, end angle=360];
+\fill [black!10] (0.5,0) arc[x radius=0.5, y radius=0.5, start angle=0, end angle=-180];
+%\draw [rotate around={0:(0,0)}] (0,0) ellipse (0.5cm and 0.23cm);
+\filldraw [color=black, fill=black!15] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=-180];
+\filldraw [color=black, fill=black!15][dashed] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=180];
+
+\draw [rotate around={0:(5.7,0)}] (5.7,0) ellipse (2.5cm and 2cm);
+%\draw [dashed] [rotate around={0:(6.22,1.32)}] (6.22,1.32) ellipse (0.45cm and 0.22cm);
+\draw [dashed] (6.67,1.32) arc[x radius=0.45, y radius=0.22, start angle=0, end angle=180];
+\draw (6.67,1.32) arc[x radius=0.45, y radius=0.22, start angle=0, end angle=-180];
+
+\filldraw [color=black, fill=black!10] [rotate around={0:(-5,1.32)}] (-5.0,1.32) ellipse (0.45cm and 0.22cm);
+%\fill [black!10] [rotate around={0:(6.22,1.32)}] (6.22,1.32) ellipse (0.45cm and 0.28cm);
+%\draw(6.22,1.32) circle (0.45cm);
+\draw (5.77,1.32) arc[x radius=0.45, y radius=0.45, start angle=180, end angle=0];
+%\draw [ultra thin] (5.77,1.32) arc[x radius=0.45, y radius=0.45, start angle=-180, end angle=0];
+
+\draw (-6.1,0) arc[x radius=0.4, y radius=0.2, start angle=180, end angle=0];
+\draw (-6.4,0.31) arc[x radius=0.7, y radius=0.4, start angle=180, end angle=360];
 \draw (-1.8,0.56) node[anchor=north west] {$\#$};
 \draw (1.22,0.56) node[anchor=north west] {$=$};
+\draw (5.1,0) arc[x radius=0.4, y radius=0.2, start angle=180, end angle=0];
+\draw (4.8,0.31) arc[x radius=0.7, y radius=0.4, start angle=180, end angle=360];
 \end{tikzpicture}
 \end{figure}
 %%%%%%%%%%%%DIBUJO DE SUMA CONEXA%%%%%%%%%%%%
 \begin{prop}
-$X$ es una variedad.
+Sean $V_1$ y $V_2$ variedades. Entonces $X=V_1\#V_2$ es una variedad.
 \end{prop}
 \begin{proof}
 Denotemos la proyección $\pi:M_1^o\sqcup M_2^o\to X$. Sea $S=\pi (S_1)=\pi (S_2)$. Tenemosdos abiertos $U_j=M_j^o-S_j$, $j=1,2$ saturados. Por tanto, $\pi :U_ j\to \pi (U_j)=U_j'$ es homeomorfismo. Esto implica que $X$ es localmente $\R^n$ en los puntos de $U_1'\cup U_2'$ . Además ahí la topología es Hausdorff y IIAN.
@@ -246,7 +261,7 @@ Sea $S$ un conjunto. Una \textbf{\textit{palabra en $S$}} es una $k$-tupla orden
 
 \begin{defin}
 \label{def:rep_pol}
-Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,...,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotamos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabras $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b \mid aba^{-1}b^{-1}\rangle$. Permitimos el caso especial de $S=\{a\}$ y palabras de longitud $2$, es decir $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
+Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,...,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b \mid aba^{-1}b^{-1}\rangle$. Permitimos el caso especial de $S=\{a\}$ y palabras de longitud $2$, es decir $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
 \end{defin}
 \begin{defin}
 Toda representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $|\mathcal{P}|$, llamado \textbf{\textit{realización geométrica de $\mathcal{P}$}} . $|\mathcal{P}|$ se obtiene de la siguiente manera:
@@ -492,7 +507,8 @@ El plano proyectivo $\mathbb{P}^2$ es homeomorfo a los siguientes espacios cocie
 \end{prop}
 \begin{proof}
 Sea $p:\mathbb{S}^2 \to \mathbb{P}^2$ la aplicación cociente dada por la relación de equivalencia $\sim$ generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \mathbb{S}^2$, que representa $\mathbb{P}^2$ como el cociente de una esfera. %AQUI FALTA UN POCO DE EXPLICACION, EJEMPLO 4.54 DEL LEE
-Si 
+Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el disco en el emisferio superior de la esfera por $F(x,y)=(x,y,\sqrt{1-x^2-y^2})$, entonces $p\o F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2/\sim$ es sobreyectiva (---lo demuestro?) y es así una aplicación cociente por el teorema de la aplicación cerrada (\ref{teo:aplicac_cerrada}). La aplicación identifica únicamente $(x,y)\in \partial \overline{\mathbb{B}}^2$ con $(-x,-y)\in \partial \overline{\mathbb{B}}^2$, por lo que $\mathbb{P}^2$ es homeomorfo al espacio cociente resultante.
+PARTE B
 
 \end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -540,6 +556,27 @@ Si
 \end{figure}
 
 \end{comment}
+
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+
+
+
 \appendix
 \chapter{Teoremas Usados}
 
