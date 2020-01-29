@@ -275,7 +275,7 @@ Toda representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $
 Si $|\mathcal{P}|$ es una de las representaciones poligonales de un solo elemento, decimos que $|\mathcal{P}|$ es la esfera $\mathbb{S}^2$ si la palabra es $aa^{-1}$ o $a^{-1}a$, y el plano proyectivo $\mathbb{P}^2$ si es $aa$ o $a^{-1}a^{-1}$.
 
 \end{defin}
-
+Por notación, dadas dos palabras $W_1$ y $W_2$, $W_1W_2$ representará la palabra formada concatenando $W_1$ y $W_2$. Por otro lado, adoptaremos la convención de que $(a^{-1})^{-1}=a$.
 \begin{defin}
 
  Las regiones interiores, los lados y los vértices de cada polígono $P_i$ se llaman \textbf{\emph{caras, lados y vértices de la presentación}}. El número de caras es el mismo que el número de palabras, y el número de lados coincide con la suma de la longitud de las palabras.
@@ -418,6 +418,7 @@ $F$ es continua fuera del origen por serlo $f^{-1}$, y en el origen porque por s
 \caption{La esfera como cociente de una circunferencia.}
 \end{figure}
 \begin{prop}
+\label{teo:Esfera como cociente de disco y cuadrado}
 La esfera $\mathbb{S}^2$ es homeomorfa a los siguientes espacios cociente: 
 %%%%%%%%%%o cocientes??????????%%%%%
 \begin{itemize}
@@ -489,13 +490,16 @@ Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo cons
 \end{figure}
 
 \begin{corol}
-$\mathbb{S}^2=\langle a|aa^{-1}\rangle=\langle a,b| aba^{-1}b^{-1}\rangle$
+$\mathbb{S}^2=\langle a|aa^{-1}\rangle=\langle a,b| aba^{-1}b^{-1}\rangle$.
 \end{corol}
 \begin{proof}
 $\mathbb{S}^2=\langle a|aa^{-1}\rangle$ por la definición \ref{def:rep_pol}. La segunda igualdad es consecuencia de la proposición anterior.
 
 
 \end{proof}
+
+
+
 
 \begin{prop}
 El plano proyectivo $\mathbb{P}^2$ es homeomorfo a los siguientes espacios cociente:
@@ -508,9 +512,41 @@ El plano proyectivo $\mathbb{P}^2$ es homeomorfo a los siguientes espacios cocie
 \begin{proof}
 Sea $p:\mathbb{S}^2 \to \mathbb{P}^2$ la aplicación cociente dada por la relación de equivalencia $\sim$ generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \mathbb{S}^2$, que representa $\mathbb{P}^2$ como el cociente de una esfera. %AQUI FALTA UN POCO DE EXPLICACION, EJEMPLO 4.54 DEL LEE
 Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el disco en el emisferio superior de la esfera por $F(x,y)=(x,y,\sqrt{1-x^2-y^2})$, entonces $p\o F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2/\sim$ es sobreyectiva (---lo demuestro?) y es así una aplicación cociente por el teorema de la aplicación cerrada (\ref{teo:aplicac_cerrada}). La aplicación identifica únicamente $(x,y)\in \partial \overline{\mathbb{B}}^2$ con $(-x,-y)\in \partial \overline{\mathbb{B}}^2$, por lo que $\mathbb{P}^2$ es homeomorfo al espacio cociente resultante.
-PARTE B
-
+ Para la parte (b) hacemos como en la demostración de \ref{teo:Esfera como cociente de disco y cuadrado} (b). 
 \end{proof}
+
+\begin{figure}
+\begin{center}
+\definecolor{uququq}{rgb}{0.25,0.25,0.25}
+\begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+
+\draw[-<-={at=0.5}, -<-={at=1}](-3,0) circle (2cm);
+\draw [-<-={at=0.5}] (4,2)-- (6,0);
+\draw [-<<-={at=0.5}](6,0)-- (4,-2);
+\draw [-<-={at=0.5}](4,-2)-- (2,0);
+\draw [-<<-={at=0.5}](2,0)-- (4,2);
+\begin{scriptsize}
+\fill [color=black] (6,0) circle (1.5pt);
+\fill [color=black] (4,2) circle (1.5pt);
+\fill [color=uququq] (2,0) circle (1.5pt);
+\fill [color=uququq] (4,-2) circle (1.5pt);
+\fill [color=black] (-3,-2) circle (1.5pt);
+\fill [color=black] (-3,2) circle (1.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+\caption{Representación de $\mathbb{P}^2$ como un espacio cociente.}
+\end{center}
+\end{figure}
+
+\begin{corol}
+$\mathbb{P}^2= \langle a|aa \rangle = \langle a,b|abab \rangle$.
+\end{corol}
+\begin{proof}
+El corolario es resultado de la anterior proposición y la definición \ref{def:rep_pol}.
+\end{proof}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{comment}
