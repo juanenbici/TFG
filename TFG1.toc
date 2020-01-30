@@ -5,4 +5,4 @@
 \contentsline {subsection}{\numberline {1.1.1}Variedades y superficies}{2}{subsection.1.1.1}
 \contentsline {subsection}{\numberline {1.1.2}Suma conexa de variedades}{7}{subsection.1.1.2}
 \contentsline {section}{\numberline {1.2}Representaci\IeC {\'o}n de superficies}{8}{section.1.2}
-\contentsline {chapter}{\numberline {A}Teoremas Usados}{10}{appendix.Alph1}
+\contentsline {chapter}{\numberline {A}Teoremas Usados}{11}{appendix.Alph1}

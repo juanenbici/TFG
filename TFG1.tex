@@ -84,6 +84,8 @@
 \renewcommand{\maketitle}{{\Large{\textbf{\title}}}\\\\{\Large \subtitle}\\\rule{17cm}{0.4pt}\\}
 
 \begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%PORTADA%%%%%%%%%%%
 
 %%% PORTADA%%%%%%
@@ -114,9 +116,11 @@ Manuel Alonso Morón\\[.1in]
 
 %\afterpage{\blankpage}
 
-%%%%%%%%%%%%%PORTADA%%%%%%%%%%%%%%%%%%%%%5
-
+%%%%%%%%%%%%%PORTADA%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \tableofcontents
+
+
 \chapter{Definiciones preeliminares}
 
 
@@ -125,15 +129,16 @@ Manuel Alonso Morón\\[.1in]
 \subsection{Variedades y superficies}
 
 
-Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo son las variedades.%, que son los más relevantes desde el punto de vista de la geometría.
+Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo son las variedades, que son los más relevantes desde el punto de vista de la geometría.
 
 
-\begin{defin}
+\begin{defin}%%%%DEF: variedad topológica
 Una \textbf{\emph{variedad topológica}} (de ahora en adelante \emph{variedad}) es un espacio topológico Hausdorff, II AN y localmente homeomorfo a $R^n$, para algún $n\geq 0$.
 \end{defin}
 
+\begin{obs}%%%%OBS: toda propiedad local de Rn se pasa a las variedades
 Como la propiedad ``ser localmente homeomorfo a $\R^n$'' es local, toda propiedad local de $\R^n$ se traslada a una variedad. Así, las variedades son localmente compactas, I AN, localmente conexas, localmente conexas por caminos y localmente simplemente conexas.\\
-
+\end{obs}
 
 
 %COPIADO lo de abajo, cambiar las palabras!!!!!!!!!!!!
@@ -142,21 +147,18 @@ El \textit{teorema de invarianza del dominio} dice que si $W\subset \R^n$ y $W'\
 
 
 
-\begin{eje}
+\begin{eje}%%%%EJE: variedades.
 \begin{itemize}
 \item Las 0-variedades son espacios discretos numerables. La única 0-variedad conexa es un punto.
 \item Existen dos 1-variedades conexas salvo homeomorfismo: la recta $\R$ y el círculo $\mathbb{S}^1$.
-
 \end{itemize}
-
-
 \end{eje}
 
-\begin{defin}
+\begin{defin}%%%%DEF: SUPERFICIE
 Una \textbf{\emph{superficie}} es una $2$-variedad.
 \end{defin}
 
-\begin{eje}
+\begin{eje}%%%%EJE: toro y esfera
 \begin{itemize}
 \item La esfera $\mathbb{S}^2=\{(x,y,z) \in \R^3 \mid x^2+y^2+z^2=1\}$.
 
@@ -166,10 +168,9 @@ Una \textbf{\emph{superficie}} es una $2$-variedad.
 
 \end{eje}
 
-\
 
 
-\begin{figure}[h]
+\begin{figure}[h]%%%%FIG: Toro y esfera
 	\begin{center}
 		\begin{tikzpicture}
 			\draw (0,0) circle (2cm);
@@ -183,15 +184,16 @@ Una \textbf{\emph{superficie}} es una $2$-variedad.
 	\end{center}
 \end{figure}
 
-
-Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Trataremos de dar una forma de representarlas como CW complejos. Veremos que toda superficie compacta se puede representar en el plano como un cociente de una región poligonal por una relación de equivalencia que identifica sus lados dos a dos. Empecemos viendo tres figuras elementales: la esfera, el plano proyectivo y el toro. 
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Trataremos de dar una forma de representarlas como CW complejos. Veremos que toda superficie compacta se puede representar en el plano como un cociente de una región poligonal por una relación de equivalencia que identifica sus lados dos a dos. Empecemos viendo tres figuras elementales: la esfera $\Esfera$, el plano proyectivo $\Proyectivo$ y el toro $\Toro$. Como veremos, estos ejemplos son fundamentales pues toda superficie compacta se puede construir a partir de ellas.
 Para ello necesitaremos antes la siguiente proposición:
 
 
-\begin{figure}[h]
+\begin{figure}[h]%%%%FIG: CONVEXO ESFERA%
 \begin{center}
-
-
 \label{fig:convexo_esfera}
 \definecolor{uququq}{rgb}{0.25,0.25,0.25}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.65cm,y=0.65cm]
@@ -224,7 +226,7 @@ Para ello necesitaremos antes la siguiente proposición:
 \end{center}
 \caption{Demostración de que sólo hay un punto de la frontera en la semirecta.}
 \end{figure}
-\begin{prop}% TEOREMA 5.1 LEE
+\begin{prop}% TEOREMA 5.1 LEE%%%% CONVEXO HOMEOM ESFERA
 \label{teo:convexo_homeom_esfera} 
 Si $D\subseteq \R^n$ es un conjunto compacto y convexo con interior no vacío, entonces $D$ es homeomorfo a $\overline{\mathbb{B}}^n.$ De hecho, dado $p\in \mathring{D}$, entonces existe un homeomorfismo $F:\overline{\mathbb{B}}^n\to D$ que envía $0$ a $p$, $\overline{\mathbb{B}}^n$ a $\mathring{D}$, y $\mathbb{S}^{n-1}$ a $\partial D$.
 \end{prop}
@@ -250,20 +252,7 @@ $F$ es continua fuera del origen por serlo $f^{-1}$, y en el origen porque por s
 \end{proof}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{figure}[h]
+\begin{figure}[h]%%%%%%% FIGURA: ESFERA COCIENTE CIRCUNFERENCIA%%%%
 \begin{center}
 \label{fig:esfera_cociente_circunferencia}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.5cm,y=1.5cm]
@@ -307,7 +296,7 @@ $F$ es continua fuera del origen por serlo $f^{-1}$, y en el origen porque por s
 
 \caption{La esfera como cociente de una circunferencia.}
 \end{figure}
-\begin{prop}
+\begin{prop}%%%%PROP: ESFERA COCIENTE DISCO Y CUADRADO%%%%
 \label{teo:Esfera como cociente de disco y cuadrado}
 La esfera $\mathbb{S}^2$ es homeomorfa a los siguientes espacios cociente: 
 %%%%%%%%%%o cocientes??????????%%%%%
@@ -330,17 +319,9 @@ Es claro que $\pi$ es continua y hace las mismas identificaciones que la relaci�
 
 Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo construido en la demostración de \ref{teo:convexo_homeom_esfera} que manda linealmente cada segmento radial entre el origen y la frontera de $S$ al segmento paralelo entre centro del disco y su frontera. Hagamos ahora $\beta=\pi \circ \alpha : S \to \mathbb{S}^2$, donde $\pi$ es la aplicación cociente del parágrafo anterior. Tenemos entonces que $\beta$ identifica $(x,y)$ y $(-x,y)$ cuando $(x,y)\in \partial S$, y por otro lado es inyectia, así que hace las mismas identificaciones que la aplicación cociente definida en (b), completando así la demostración (ver figura \ref{fig:esfera_cuadrado}). 
 \end{proof}
-
-
-
 \definecolor{uququq}{rgb}{0.25,0.25,0.25}
 \definecolor{qqqqff}{rgb}{0,0,1}
-
-
-    
-
-\begin{figure}[h]
-
+\begin{figure}[h]%%%%FIGURA: ESFERA CUADRADO
 \begin{center}
 \label{fig:esfera_cuadrado}
 
@@ -366,6 +347,7 @@ Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo cons
 \draw [<-] [shift={(3,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
 \draw (-3.1,3.21) node[anchor=north west] {$ \alpha $};
 \draw (2.89,3.23) node[anchor=north west] {$ \pi $};
+\draw [->-={at=0.25}, -<<-={at=0.75}](6,2) arc[x radius=0.7, y radius=2, start angle=90, end angle=270];
 \begin{scriptsize}
 \fill [color=qqqqff] (0,2) circle (1.5pt);
 \fill [color=uququq] (-8,0) circle (1.5pt);
@@ -385,17 +367,14 @@ Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo cons
 \end{figure}
 
 
-\begin{prop}
+\begin{prop}%%%%PROP: TORO COMO CUADRADO
 \label{teo:toro_cuadrado}
 El toro $\Toro$ es homeomorfo al espacio cociente resultante de la relación de equivalencia en el cuadrado $I\times I$ que identifica $(x,0)\sim (x,1)$ para todo $x\in I$, y $(0,y)\sim(1,y)$ para todo $y\in I$ (\ref{fig:toro_cuadrado}. 
 \end{prop}
-
 \begin{proof}
 Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},e^{2\pi iv})$. Por el teorema de la aplicación cerrada (\ref{teo:aplicac_cerrada}), es una aplicación cociente. Al hacer las mismas identificaciones que la relación de equivalencia, por la unicidad del espacio cociente (Teorema \ref{teo:unicidad_espacio_cociente}) se obtiene el resultado.
 \end{proof}
-
-
-\begin{figure}
+\begin{figure}%%%%FIGURA: TORO COMO CUADRADO
 \label{fig:toro_cuadrado}
 \begin{center}
 
@@ -437,22 +416,20 @@ Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},
 \end{figure}
 
 
-\begin{prop}
+\begin{prop}%%%%PROP: PLANO PROYECTIVO COMO CUADRADO
 El plano proyectivo $\mathbb{P}^2$ es homeomorfo a los siguientes espacios cociente:
 \begin{itemize}
 \item[(a)] El disco cerrado $\overline{\mathbb{B}}^2$ módulo la relación de equivalencia generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \partial \overline{\mathbb{B}}^2$.
 \item[(b)] La región cuadrada $S=\{(x,y):|x|+|y|\leq 1\} $ módulo la relación de equivalencia generada por $(x,y)\sim (-x,-y) $ para todo $(x,y)\in \partial S$.
 \end{itemize}
 \end{prop}
-
-
 \begin{proof}
 Sea $p:\mathbb{S}^2 \to \mathbb{P}^2$ la aplicación cociente dada por la relación de equivalencia $\sim$ generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \mathbb{S}^2$, que representa $\mathbb{P}^2$ como el cociente de una esfera. %AQUI FALTA UN POCO DE EXPLICACION, EJEMPLO 4.54 DEL LEE
-Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el disco al emisferio superior de la esfera por $F(x,y)=(x,y,\sqrt{1-x^2-y^2})$, entonces $p\o F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2/\sim$ es sobreyectiva (---lo demuestro?) y es así una aplicación cociente por el teorema de la aplicación cerrada (\ref{teo:aplicac_cerrada}). La aplicación identifica únicamente $(x,y)\in \partial \overline{\mathbb{B}}^2$ con $(-x,-y)\in \partial \overline{\mathbb{B}}^2$, por lo que $\mathbb{P}^2$ es homeomorfo al espacio cociente resultante.
- Para la parte (b) hacemos como en la demostración de \ref{teo:Esfera como cociente de disco y cuadrado} (b). 
+Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el disco al emisferio superior de la esfera por $F(x,y)=(x,y,\sqrt{1-x^2-y^2})$, entonces $p\circ F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2/\sim$ es sobreyectiva (---lo demuestro?) y es así una aplicación cociente por el teorema de la aplicación cerrada (\ref{teo:aplicac_cerrada}). La aplicación identifica únicamente $(x,y)\in \partial \overline{\mathbb{B}}^2$ con $(-x,-y)\in \partial \overline{\mathbb{B}}^2$, por lo que $\mathbb{P}^2$ es homeomorfo al espacio cociente resultante.
+ Para la parte (b) hacemos como en la demostración de la Proposición \ref{teo:Esfera como cociente de disco y cuadrado} (b). 
 \end{proof}
-
-\begin{figure}[h]
+\begin{figure}[h]%%%%FIGURA: PLANO PROYECTIVO COMO CUADRADO
+\label{fig:plano_proyectivo_cuadrado}
 \begin{center}
 \definecolor{uququq}{rgb}{0.25,0.25,0.25}
 \begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
@@ -477,7 +454,7 @@ Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el d
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Suma conexa de variedades}
 
@@ -487,11 +464,11 @@ Se define la relación de equivalencia $\sim$ en la que si $x_1\in S_1=\phi_1^{-
 
 $$X=\frac{V_1^o\sqcup V_2^o}{\sim}.$$
 
-\begin{defin}
+\begin{defin}%%%% DEF: suma conexa
 A $X$ se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, y se denota por $X=V_1\#V_2$.
 \end{defin}
 
-\begin{figure}[h]
+\begin{figure}[h]%%%% FIG: suma conexa toro esfera
 \label{fig:suma_toro_esfera}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 %\clip(-8.56,-6.52) rectangle (6.77,3.86);
@@ -525,7 +502,7 @@ A $X$ se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, y se denota po
 
 
 
-\begin{prop}
+\begin{prop}%%%% PROP: suma conexa es variedad.
 Sean $V_1$ y $V_2$ variedades. Entonces $X=V_1\#V_2$ es una variedad.
 \end{prop}
 \begin{proof}
@@ -543,28 +520,48 @@ $\overline{\Phi}$ es abierta: si tomamos un abierto básico saturado de $V_1\sqc
 Los abiertos construidos, $\tilde{V} \subset X$, se pueden tomar en cantidad numerable para formar una base de la topología, con lo cual $X$ es IIAN. También, dado un $q\in U_j'$, $j=1,2$, y un $p\in S$, se puede tomar un abierto $\tilde{V}$ entorno de $p$ disjunto de un entorno pequeño de $q$. Y si tomamos $p, p' \in S$ distintos, los abiertos $\tilde{V}$,$\tilde{V}'$ construidos partiendo de $V,V'\subset \partial B_1(0)$ disjuntos, serán disjuntos. Luego $X$ es Hausdorff.
 \end{proof}
 
-\begin{obs}
+\begin{obs}%%%%OBS: Suma conexa variedad y esfera
 Si $V$ es una $n$-variedad, la suma conexa $V\#\Esfera$ es homeomorfa a $V$, al menos si hacemos las elecciones correctas (Fig. \ref{fig:suma_toro_esfera})
 \end{obs}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+%\draw plot [smooth cycle] coordinates {(-4,0) (-3.414213562,1.414213562) (-2,2) (-1,1.732050808) (0,1.5)(1,1.732050808) (2,2) ((3.414213562,1.414213562) (4,0) (3.414213562,-1.414213562) (2,-2) (1,-1.732050808) (0,-1.5) (-1,-1.732050808) (-2,-2) (-3.414213562,-1.414213562)};
+\draw plot [smooth cycle, tension=0.9] coordinates {(-4,0)  (-2,2)  (0,1.5) (2,2)  (4,0)  (2,-2)  (0,-1.5)  (-2,-2)};
+\draw (-1.3,0.13) arc[x radius=0.5, y radius=0.2, start angle=0, end angle=-180];
+\draw (-1.5,0) arc[x radius=0.3, y radius=0.2, start angle=0, end angle=180]; 
+\draw (2.2,0.13) arc[x radius=0.5, y radius=0.2, start angle=0, end angle=-180];
+\draw (2,0) arc[x radius=0.3, y radius=0.2, start angle=0, end angle=180]; 
+
+\end{tikzpicture}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \section{Representación de superficies}
 
 
 
-Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Representaremos todas las superficies como cocientes de polígonos con $2n$ lados. 
+Como ya hemos dicho anteriormente, para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Representaremos todas las superficies como cocientes de polígonos con $2n$ lados. 
 
 
 %%%%%%%%% QUIZAS INCLUIR UNA DEFINICION INFORMAL%%%%%%%%%%%%%%
-\begin{defin}
+
+
+\begin{defin}%%%%DEF: palabra
 Sea $S$ un conjunto. Una \textbf{\textit{palabra en $S$}} es una $k$-tupla ordenada de símbolos, cada uno de la forma $a$ o $a^{-1}$, para cierto $a\in S$.
 \end{defin}
 
-\begin{defin}
+\begin{defin}%%%%DEF: Representación poligonal
+
 \label{def:rep_pol}
 Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,...,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b \mid aba^{-1}b^{-1}\rangle$. Permitimos el caso especial de $S=\{a\}$ y palabras de longitud $2$, es decir $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
 \end{defin}
-\begin{defin}
+\begin{defin}%%%%DEF: Realización geométrica
+
+
 Toda representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $|\mathcal{P}|$, llamado \textbf{\textit{realización geométrica de $\mathcal{P}$}} . $|\mathcal{P}|$ se obtiene de la siguiente manera:
 \begin{itemize}
 \item[1.] Para cada $W_i\in \mathcal{P}$ de longitud $k$, sea $P_i$ el $k$-polígono centrado en el origen con lados de longitud 1 y tal que un lado yace sobre el eje $OY$.
@@ -577,28 +574,29 @@ Si $|\mathcal{P}|$ es una de las representaciones poligonales de un solo element
 
 \end{defin}
 Por notación, dadas dos palabras $W_1$ y $W_2$, $W_1W_2$ representará la palabra formada concatenando $W_1$ y $W_2$. Por otro lado, adoptaremos la convención de que $(a^{-1})^{-1}=a$.
-\begin{defin}
 
- Las regiones interiores, los lados y los vértices de cada polígono $P_i$ se llaman \textbf{\emph{caras, lados y vértices de la presentación}}. El número de caras es el mismo que el número de palabras, y el número de lados coincide con la suma de la longitud de las palabras.
+
+\begin{defin}%%%%DEF: caras, lados y vértices polígono
+Las regiones interiores, los lados y los vértices de cada polígono $P_i$ se llaman \textbf{\emph{caras, lados y vértices de la presentación}}. El número de caras es el mismo que el número de palabras, y el número de lados coincide con la suma de la longitud de las palabras.
 Para un lado etiquetado $a$, el \textbf{\emph{vértice inicial}} es el primero en el sentido de las agujas del reloj, y el otro es el \textbf{\emph{vértice final}}. Para un lado etiquetado $a^{-1}$, estas definiciones se invierten. 
 \end{defin}
 
-\begin{defin}
+\begin{defin}%%%%DEF: representación de una superficie
 Una representación poligonal es una \textbf{\emph{representación de una superficie}} si para todo $a\in S$, $a$ ocurre exáctamente dos veces en $W_1,...,W_k$ como $a$ o como $a^{-1}$.
 \end{defin}
 
-\begin{defin}
+\begin{defin}%%%%DEF: representación de un espacio topológico
 Si $X$ es un espacio topológico y $\mathcal{P}$ una representación poligonal cuya realización geométrica es homeomorfa a $\mathcal{P}$, decimos que $\mathcal{P}$ es una \textbf{\emph{representación de $X$}}.
 \end{defin}
 
-\begin{obs}
+\begin{obs}%%%%OBS: representación de una sola cara implica conexo
 Un espacion topológico que admite una representación con una sola cara es conexo, pues es homeomorfo al cociente de una región poligonal conexa. Con más de una cara, puede ser o no conexo.
 \end{obs}
 
+
 Veamos la representación de algunas superficies importantes.
 
-
-\begin{prop}
+\begin{prop}%%%%PROP: representación de superficies importantes
 Se tiene que 
 \begin{itemize}
 \item[a] $\mathbb{S}^2=\langle a|aa^{-1}\rangle=\langle a,b| aba^{-1}b^{-1}\rangle$.
@@ -609,7 +607,7 @@ Se tiene que
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{comment}
+\begin{comment}%%%%REPRESENTACIONES DE S1 Y P2....SON UNA MIERDA MEJOR REPETIRLAS
 \begin{figure}
 
 \definecolor{uququq}{rgb}{0.25,0.25,0.25}
@@ -652,6 +650,8 @@ Se tiene que
 \end{figure}
 
 \end{comment}
+
+
 
 %
 %
