@@ -53,7 +53,7 @@
 \newcommand{\Epsilon}{\mathcal{E}}
 
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Comando para normas
-\newcommand{\Esfera}{\mathbb{S}^1}
+\newcommand{\Esfera}{\mathbb{S}^2}
 \newcommand{\Toro}{\mathbb{T}^2}
 \newcommand{\Proyectivo}{\mathbb{P}^2}
 % Estilos teoremas (Mejorable)
@@ -294,8 +294,10 @@ $F$ es continua fuera del origen por serlo $f^{-1}$, y en el origen porque por s
 \end{tikzpicture}
 \end{center}
 
-\caption{La esfera como cociente de una circunferencia.}
+\caption{La esfera como cociente del disco $\overline{\mathbb{B}}^2$.}
 \end{figure}
+
+
 \begin{prop}%%%%PROP: ESFERA COCIENTE DISCO Y CUADRADO%%%%
 \label{teo:Esfera como cociente de disco y cuadrado}
 La esfera $\mathbb{S}^2$ es homeomorfa a los siguientes espacios cociente: 
@@ -319,12 +321,13 @@ Es claro que $\pi$ es continua y hace las mismas identificaciones que la relaci�
 
 Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo construido en la demostración de \ref{teo:convexo_homeom_esfera} que manda linealmente cada segmento radial entre el origen y la frontera de $S$ al segmento paralelo entre centro del disco y su frontera. Hagamos ahora $\beta=\pi \circ \alpha : S \to \mathbb{S}^2$, donde $\pi$ es la aplicación cociente del parágrafo anterior. Tenemos entonces que $\beta$ identifica $(x,y)$ y $(-x,y)$ cuando $(x,y)\in \partial S$, y por otro lado es inyectia, así que hace las mismas identificaciones que la aplicación cociente definida en (b), completando así la demostración (ver figura \ref{fig:esfera_cuadrado}). 
 \end{proof}
+
+
 \definecolor{uququq}{rgb}{0.25,0.25,0.25}
 \definecolor{qqqqff}{rgb}{0,0,1}
 \begin{figure}[h]%%%%FIGURA: ESFERA CUADRADO
 \begin{center}
 \label{fig:esfera_cuadrado}
-
 \begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 %\clip(-15.84,-6.32) rectangle (13.31,6.01);
 \draw[-<-={at=0.125},->-={at=0.375}, -<<-={at=0.625}, ->>-={at=0.875} ](0,0) circle (2cm);
@@ -347,7 +350,7 @@ Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo cons
 \draw [<-] [shift={(3,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
 \draw (-3.1,3.21) node[anchor=north west] {$ \alpha $};
 \draw (2.89,3.23) node[anchor=north west] {$ \pi $};
-\draw [->-={at=0.25}, -<<-={at=0.75}](6,2) arc[x radius=0.7, y radius=2, start angle=90, end angle=270];
+\draw [->-={at=0.45}, -<<-={at=0.82}](6,2) arc[x radius=0.7, y radius=2, start angle=90, end angle=270];
 \begin{scriptsize}
 \fill [color=qqqqff] (0,2) circle (1.5pt);
 \fill [color=uququq] (-8,0) circle (1.5pt);
@@ -358,6 +361,7 @@ Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo cons
 \fill [color=uququq] (2,0) circle (1.5pt);
 \fill [color=uququq] (0,-2) circle (1.5pt);
 \fill [color=uququq] (0,2) circle (1.5pt);
+\fill [color=uququq] (5.34,-0.66) circle (1.5pt);
 \end{scriptsize}
 \end{tikzpicture}
 
@@ -374,10 +378,11 @@ El toro $\Toro$ es homeomorfo al espacio cociente resultante de la relación de 
 \begin{proof}
 Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},e^{2\pi iv})$. Por el teorema de la aplicación cerrada (\ref{teo:aplicac_cerrada}), es una aplicación cociente. Al hacer las mismas identificaciones que la relación de equivalencia, por la unicidad del espacio cociente (Teorema \ref{teo:unicidad_espacio_cociente}) se obtiene el resultado.
 \end{proof}
+
+
 \begin{figure}%%%%FIGURA: TORO COMO CUADRADO
 \label{fig:toro_cuadrado}
 \begin{center}
-
 \definecolor{uququq}{rgb}{0.25,0.25,0.25}
 \definecolor{tttttt}{rgb}{0.2,0.2,0.2}
 \begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
@@ -417,6 +422,7 @@ Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},
 
 
 \begin{prop}%%%%PROP: PLANO PROYECTIVO COMO CUADRADO
+\label{teo:proyectivo_cociente_cuadrado}
 El plano proyectivo $\mathbb{P}^2$ es homeomorfo a los siguientes espacios cociente:
 \begin{itemize}
 \item[(a)] El disco cerrado $\overline{\mathbb{B}}^2$ módulo la relación de equivalencia generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \partial \overline{\mathbb{B}}^2$.
@@ -524,15 +530,24 @@ Los abiertos construidos, $\tilde{V} \subset X$, se pueden tomar en cantidad num
 Si $V$ es una $n$-variedad, la suma conexa $V\#\Esfera$ es homeomorfa a $V$, al menos si hacemos las elecciones correctas (Fig. \ref{fig:suma_toro_esfera})
 \end{obs}
 
-\begin{figure}
+\begin{figure}%%%%FIG: 2-toro
 \centering
 \begin{tikzpicture}
-%\draw plot [smooth cycle] coordinates {(-4,0) (-3.414213562,1.414213562) (-2,2) (-1,1.732050808) (0,1.5)(1,1.732050808) (2,2) ((3.414213562,1.414213562) (4,0) (3.414213562,-1.414213562) (2,-2) (1,-1.732050808) (0,-1.5) (-1,-1.732050808) (-2,-2) (-3.414213562,-1.414213562)};
-\draw plot [smooth cycle, tension=0.9] coordinates {(-4,0)  (-2,2)  (0,1.5) (2,2)  (4,0)  (2,-2)  (0,-1.5)  (-2,-2)};
-\draw (-1.3,0.13) arc[x radius=0.5, y radius=0.2, start angle=0, end angle=-180];
-\draw (-1.5,0) arc[x radius=0.3, y radius=0.2, start angle=0, end angle=180]; 
-\draw (2.2,0.13) arc[x radius=0.5, y radius=0.2, start angle=0, end angle=-180];
-\draw (2,0) arc[x radius=0.3, y radius=0.2, start angle=0, end angle=180]; 
+
+
+%\draw plot [smooth cycle, tension=0.1] coordinates {(-4.5,0) (-3.914213562,1.414213562) (-2.5,2) (-1.5,1.732050808) (0,1)(1.5,1.732050808) (2.5,2) ((3.914213562,1.414213562) (4.5,0) (3.914213562,-1.414213562) (2.5,-2) (1.5,-1.732050808) (0,-1) (-1.5,-1.732050808) (-2.5,-2) (-3.914213562,-1.414213562)};
+
+\draw (-1.5,1.732050808) arc[x radius=2, y radius=2, start angle=60, end angle=300];
+\draw (1.5,-1.732050808) arc[x radius=2, y radius=2, start angle=240, end angle=480];
+\draw plot [smooth] coordinates { (-1.5,1.732050808) (0,1)(1.5,1.732050808)};
+\draw plot [smooth] coordinates {(1.5,-1.732050808) (0,-1) (-1.5,-1.732050808)};
+
+\draw (-1.8,0.35) arc[x radius=0.7, y radius=0.6, start angle=0, end angle=-180];
+\draw (-2,0) arc[x radius=0.5, y radius=0.5, start angle=0, end angle=180]; 
+\draw (3.2,0.35) arc[x radius=0.7, y radius=0.6, start angle=0, end angle=-180];
+\draw (3,0) arc[x radius=0.5, y radius=0.5, start angle=0, end angle=180]; 
+
+
 
 \end{tikzpicture}
 \end{figure}
@@ -555,13 +570,12 @@ Sea $S$ un conjunto. Una \textbf{\textit{palabra en $S$}} es una $k$-tupla orden
 \end{defin}
 
 \begin{defin}%%%%DEF: Representación poligonal
-
 \label{def:rep_pol}
 Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,...,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b \mid aba^{-1}b^{-1}\rangle$. Permitimos el caso especial de $S=\{a\}$ y palabras de longitud $2$, es decir $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
 \end{defin}
+
+
 \begin{defin}%%%%DEF: Realización geométrica
-
-
 Toda representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $|\mathcal{P}|$, llamado \textbf{\textit{realización geométrica de $\mathcal{P}$}} . $|\mathcal{P}|$ se obtiene de la siguiente manera:
 \begin{itemize}
 \item[1.] Para cada $W_i\in \mathcal{P}$ de longitud $k$, sea $P_i$ el $k$-polígono centrado en el origen con lados de longitud 1 y tal que un lado yace sobre el eje $OY$.
@@ -571,8 +585,8 @@ Toda representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $
 
 
 Si $|\mathcal{P}|$ es una de las representaciones poligonales de un solo elemento, decimos que $|\mathcal{P}|$ es la esfera $\mathbb{S}^2$ si la palabra es $aa^{-1}$ o $a^{-1}a$, y el plano proyectivo $\mathbb{P}^2$ si es $aa$ o $a^{-1}a^{-1}$.
-
 \end{defin}
+
 Por notación, dadas dos palabras $W_1$ y $W_2$, $W_1W_2$ representará la palabra formada concatenando $W_1$ y $W_2$. Por otro lado, adoptaremos la convención de que $(a^{-1})^{-1}=a$.
 
 
@@ -596,13 +610,59 @@ Un espacion topológico que admite una representación con una sola cara es cone
 
 Veamos la representación de algunas superficies importantes.
 
-\begin{prop}%%%%PROP: representación de superficies importantes
+\begin{eje}%%%%PROP: representación de superficies importantes
 Se tiene que 
 \begin{itemize}
-\item[a] $\mathbb{S}^2=\langle a|aa^{-1}\rangle=\langle a,b| aba^{-1}b^{-1}\rangle$.
-\item[b] $\mathbb{P}^2= \langle a|aa \rangle = \langle a,b|abab \rangle$.
+\item[a)] $\mathbb{S}^2=\langle a|aa^{-1}\rangle=\langle a,b| abb^{-1}a^{-1}\rangle$ (Proposición \ref{teo:Esfera como cociente de disco y cuadrado})
+\item[b)] $\mathbb{P}^2= \langle a|aa \rangle = \langle a,b|abab \rangle$ (Proposición \ref{teo:proyectivo_cociente_cuadrado})
+\item[c)] $\Toro=\langle a,b|aba^{-1}b^{-1}\rangle$ (Proposición \ref{teo:toro_cuadrado})
 \end{itemize}
-\end{prop}
+\end{eje}
+
+
+\begin{figure}%%%%FIG: Representación de superficies impoirtantes
+\label{fig:Representacion_superficies_importantes}
+\centering
+\begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [->-](0,2)-- (2,0);
+\draw [->-](2,0)-- (0,-2);
+\draw [->-](0,-2)-- (-2,0);
+\draw [->-](-2,0)-- (0,2);
+
+\draw [-<-](3,0)-- (5,2);
+\draw [->-](5,2)-- (7,0);
+\draw [->-](7,0)-- (5,-2);
+\draw [-<-](5,-2)-- (3,0);
+
+\draw [-<-](-3,0)-- (-5,2);
+\draw [->-](-5,-2)-- (-3,0);
+\draw [->-](-5,-2)-- (-7,0);
+\draw [-<-](-7,0)-- (-5,2);
+
+
+\draw (-4,1.5) node[anchor=north west] {$ a $};
+\draw (-4,-1) node[anchor=north west] {$ b $};
+\draw (-6,1.5) node[anchor=north east] {$ a $};
+\draw (-6,-1) node[anchor=north east] {$ b $};
+
+\draw (1,1.5) node[anchor=north west] {$ a $};
+\draw (1,-1) node[anchor=north west] {$ b $};
+\draw (-1,1.5) node[anchor=north east] {$ b $};
+\draw (-1,-1) node[anchor=north east] {$ a $};
+
+\draw (6,1.5) node[anchor=north west] {$ a $};
+\draw (6,-1) node[anchor=north west] {$ b $};
+\draw (4,1.5) node[anchor=north east] {$ b $};
+\draw (4,-1) node[anchor=north east] {$ a $};
+
+\draw (5.1,-2.5) node[anchor=south] {$ \Toro $};
+\draw (0.1,-2.5) node[anchor=south] {$ \Proyectivo $};
+\draw (-4.9,-2.5) node[anchor=south] {$ \Esfera $};
+
+
+\end{tikzpicture}
+\end{figure}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
