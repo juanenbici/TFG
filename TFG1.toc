@@ -3,6 +3,6 @@
 \contentsline {chapter}{\numberline {1}Definiciones preeliminares}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}Variedades}{2}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Variedades y superficies}{2}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Suma conexa de variedades}{7}{subsection.1.1.2}
 \contentsline {section}{\numberline {1.2}Representaci\IeC {\'o}n de superficies}{8}{section.1.2}
-\contentsline {chapter}{\numberline {A}Teoremas Usados}{11}{appendix.Alph1}
+\contentsline {section}{\numberline {1.3}Suma conexa de variedades}{9}{section.1.3}
+\contentsline {chapter}{\numberline {A}Teoremas Usados}{12}{appendix.Alph1}
