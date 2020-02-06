@@ -195,7 +195,6 @@ Para ello necesitaremos antes la siguiente proposición:
 
 \begin{figure}[h]%%%%FIG: CONVEXO ESFERA%
 \begin{center}
-\label{fig:convexo_esfera}
 \definecolor{uququq}{rgb}{0.25,0.25,0.25}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.65cm,y=0.65cm]
 %\clip(-6.02,-3.95) rectangle (8.11,5.63);
@@ -225,8 +224,9 @@ Para ello necesitaremos antes la siguiente proposición:
 \end{scriptsize}
 \end{tikzpicture}
 \end{center}
-\caption{Demostración de que sólo hay un punto de la frontera en la semirecta.}
+\caption{Demostración de que sólo hay un punto de la frontera en la semirecta.\label{fig:convexo_esfera}}
 \end{figure}
+
 \begin{prop}% TEOREMA 5.1 LEE%%%% CONVEXO HOMEOM ESFERA
 \label{teo:convexo_homeom_esfera} 
 Si $D\subseteq \R^n$ es un conjunto compacto y convexo con interior no vacío, entonces $D$ es homeomorfo a $\overline{\mathbb{B}}^n.$ De hecho, dado $p\in \mathring{D}$, entonces existe un homeomorfismo $F:\overline{\mathbb{B}}^n\to D$ que envía $0$ a $p$, $\overline{\mathbb{B}}^n$ a $\mathring{D}$, y $\mathbb{S}^{n-1}$ a $\partial D$.
@@ -255,7 +255,6 @@ $F$ es continua fuera del origen por serlo $f^{-1}$, y en el origen porque por s
 
 \begin{figure}[h]%%%%%%% FIGURA: ESFERA COCIENTE CIRCUNFERENCIA%%%%
 \begin{center}
-\label{fig:esfera_cociente_circunferencia}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.5cm,y=1.5cm]
 %\clip(-5.98,-3.38) rectangle (6.76,3.11);
 \draw [<-][shift={(0,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
@@ -295,7 +294,7 @@ $F$ es continua fuera del origen por serlo $f^{-1}$, y en el origen porque por s
 \end{tikzpicture}
 \end{center}
 
-\caption{La esfera como cociente del disco $\overline{\mathbb{B}}^2$.}
+\caption{La esfera como cociente del disco $\overline{\mathbb{B}}^2$.\label{fig:esfera_cociente_circunferencia}}
 \end{figure}
 
 
@@ -328,7 +327,6 @@ Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo cons
 \definecolor{qqqqff}{rgb}{0,0,1}
 \begin{figure}[h]%%%%FIGURA: ESFERA CUADRADO
 \begin{center}
-\label{fig:esfera_cuadrado}
 \begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 %\clip(-15.84,-6.32) rectangle (13.31,6.01);
 \draw[-<-={at=0.125},->-={at=0.375}, -<<-={at=0.625}, ->>-={at=0.875} ](0,0) circle (2cm);
@@ -366,7 +364,7 @@ Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo cons
 \end{scriptsize}
 \end{tikzpicture}
 
-\caption{La esfera como cociente de un cuadrado.}
+\caption{La esfera como cociente de un cuadrado.\label{fig:esfera_cuadrado}}
 
 \end{center}
 \end{figure}
@@ -382,7 +380,6 @@ Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},
 
 
 \begin{figure}%%%%FIGURA: TORO COMO CUADRADO
-\label{fig:toro_cuadrado}
 \begin{center}
 \definecolor{uququq}{rgb}{0.25,0.25,0.25}
 \definecolor{tttttt}{rgb}{0.2,0.2,0.2}
@@ -418,7 +415,7 @@ Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},
 \end{scriptsize}
 \end{tikzpicture}
 \end{center}
-\caption{El toro como cociente de un cuadrado.}
+\caption{El toro como cociente de un cuadrado.\label{fig:toro_cuadrado}}
 \end{figure}
 
 
@@ -436,7 +433,6 @@ Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el d
  Para la parte (b) hacemos como en la demostración de la Proposición \ref{teo:Esfera como cociente de disco y cuadrado} (b). 
 \end{proof}
 \begin{figure}[h]%%%%FIGURA: PLANO PROYECTIVO COMO CUADRADO
-\label{fig:plano_proyectivo_cuadrado}
 \begin{center}
 \definecolor{uququq}{rgb}{0.25,0.25,0.25}
 \begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
@@ -455,7 +451,7 @@ Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el d
 \fill [color=black] (-3,2) circle (1.5pt);
 \end{scriptsize}
 \end{tikzpicture}
-\caption{Representación de $\mathbb{P}^2$ como un espacio cociente.}
+\caption{Representación de $\mathbb{P}^2$ como un espacio cociente.\label{fig:plano_proyectivo_cuadrado}}
 \end{center}
 \end{figure}
 
@@ -510,7 +506,7 @@ Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{
 Toda representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $|\mathcal{P}|$, llamado \textbf{\textit{realización geométrica de $\mathcal{P}$}} . $|\mathcal{P}|$ se obtiene de la siguiente manera:
 \begin{itemize}
 \item[1.] Para cada $W_i\in \mathcal{P}$ de longitud $k$, sea $P_i$ la $k$-región poligonal centrada en el origen con lados de longitud 1, ángulos iguales y tal que un vértice yace sobre el eje $OY$.
-\item[2.] Se define una correspondencia uno a uno entre los símbolos de $W_ i$ y los bordes de $P_i$ en orden inverso a las agujas del reloj, empezando por el que yace en el eje $OY$.
+\item[2.] Se define una correspondencia uno a uno entre los símbolos de $W_ i$ y los bordes de $P_i$ en sentido contrario a las agujas del reloj, empezando por el que yace en el eje $OY$.
 \item[3.] Sea $|\mathcal{P}|$ el espacio cociente de $\coprod_i P_i$ determinado identificando bordes que tengan el mismo símbolo, conforme al homeomorfismo afín que hace coincidir los primeros vértices de lo bordes con una etiqueta dada $a$ y los últimos vertices de los que tienen la correspondiente etiqueta $a^{-1}$ (en el sentido contrario a las agujas del reloj).
 \end{itemize}
 
@@ -523,7 +519,7 @@ Por notación, dadas dos palabras $W_1$ y $W_2$, $W_1W_2$ representará la palab
 
 \begin{defin}%%%%DEF: caras, lados y vértices polígono
 Los interiores, los bordes y los vértices de cada región polgonal $P_i$ se llaman \textbf{\emph{caras, bordes y vértices de la presentación}}. El número de caras es el mismo que el número de palabras, y el número de bordes coincide con la suma de la longitud de las palabras.
-Para un lado etiquetado $a$, el \textbf{\emph{vértice inicial}} es el primero en el sentido de las agujas del reloj, y el otro es el \textbf{\emph{vértice final}}. Para un lado etiquetado $a^{-1}$, estas definiciones se invierten. 
+Para un lado etiquetado $a$, el \textbf{\emph{vértice inicial}} es el primero en el sentido contrario de las agujas del reloj, y el otro es el \textbf{\emph{vértice final}}. Para un lado etiquetado $a^{-1}$, estas definiciones se invierten. 
 \end{defin}
 
 \begin{defin}%%%%DEF: representación de una superficie
@@ -552,14 +548,13 @@ Se tiene que:
 \end{eje}
 
 
-\begin{figure}[h]%%%%FIG: Representación de superficies impoirtantes
-\label{fig:Representacion_superficies_importantes}
+\begin{figure}%%%%FIG: Representación de superficies impoirtantes
 \centering
 \begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-\draw [->-](0,2)-- (2,0);
-\draw [->-](2,0)-- (0,-2);
-\draw [->-](0,-2)-- (-2,0);
-\draw [->-](-2,0)-- (0,2);
+\draw [-<-](0,2)-- (2,0);
+\draw [-<-](2,0)-- (0,-2);
+\draw [-<-](0,-2)-- (-2,0);
+\draw [-<-](-2,0)-- (0,2);
 
 \draw [-<-](3,0)-- (5,2);
 \draw [->-](5,2)-- (7,0);
@@ -567,8 +562,8 @@ Se tiene que:
 \draw [-<-](5,-2)-- (3,0);
 
 \draw [-<-](-3,0)-- (-5,2);
-\draw [->-](-5,-2)-- (-3,0);
-\draw [->-](-5,-2)-- (-7,0);
+\draw [-<-](-5,-2)-- (-3,0);
+\draw [-<-](-5,-2)-- (-7,0);
 \draw [-<-](-7,0)-- (-5,2);
 
 \draw (-4,1.5) node[anchor=north west] {$ a $};
@@ -576,22 +571,22 @@ Se tiene que:
 \draw (-6,1.5) node[anchor=north east] {$ a $};
 \draw (-6,-1) node[anchor=north east] {$ b $};
 
-\draw (1,1.5) node[anchor=north west] {$ a $};
-\draw (1,-1) node[anchor=north west] {$ b $};
-\draw (-1,1.5) node[anchor=north east] {$ b $};
-\draw (-1,-1) node[anchor=north east] {$ a $};
+\draw (1,1.5) node[anchor=north west] {$ b $};
+\draw (1,-1) node[anchor=north west] {$ a $};
+\draw (-1,1.5) node[anchor=north east] {$ a $};
+\draw (-1,-1) node[anchor=north east] {$ b $};
 
-\draw (6,1.5) node[anchor=north west] {$ a $};
-\draw (6,-1) node[anchor=north west] {$ b $};
-\draw (4,1.5) node[anchor=north east] {$ b $};
-\draw (4,-1) node[anchor=north east] {$ a $};
+\draw (6,1.5) node[anchor=north west] {$ b $};
+\draw (6,-1) node[anchor=north west] {$ a $};
+\draw (4,1.5) node[anchor=north east] {$ a $};
+\draw (4,-1) node[anchor=north east] {$ b $};
 
 \draw (5.1,-2.6) node[anchor=south] {$ \Toro $};
 \draw (0.1,-2.6) node[anchor=south] {$ \Proyectivo $};
 \draw (-4.9,-2.6) node[anchor=south] {$ \Esfera $};
 
 \end{tikzpicture}
-\caption{Representación de superficies importantes.}
+\caption{Representación de superficies importantes.\label{fig:Representacion_superficies_importantes}}
 \end{figure}
 
 
@@ -607,7 +602,7 @@ Se define la relación de equivalencia $\sim$ en la que si $x_1\in S_1=\phi_1^{-
 $$X=\frac{V_1^o\sqcup V_2^o}{\sim}.$$
 
 \begin{defin}%%%% DEF: suma conexa
-A $X$ se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, y se denota por $X=V_1\#V_2$.
+A $X$ así definido se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, y se denota por $X=V_1\#V_2$.
 \end{defin}
 
 
@@ -654,11 +649,11 @@ Los abiertos construidos, $\tilde{V} \subset X$, se pueden tomar en cantidad num
 \end{proof}
 
 \begin{obs}%%%%OBS: Suma conexa variedad y esfera
-Si $V$ es una $n$-variedad, la suma conexa $V\#\Esfera$ es homeomorfa a $V$, al menos si hacemos las elecciones correctas (Fig. \ref{fig:suma_toro_esfera}).
+Si $V$ es una $n$-variedad, la suma conexa $V\# \mathbb{S}^n$ es homeomorfa a $V$, al menos si hacemos las elecciones correctas (Fig. \ref{fig:suma_toro_esfera}).
 \end{obs}
 
 \begin{figure}[h]%%%% FIG: suma conexa toro esfera
-\label{fig:suma_toro_esfera}
+
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
 %\clip(-8.56,-6.52) rectangle (6.77,3.86);
 \draw [rotate around={0:(-5.5,0)}] (-5.5,0) ellipse (2.5cm and 2cm);
@@ -686,7 +681,7 @@ Si $V$ es una $n$-variedad, la suma conexa $V\#\Esfera$ es homeomorfa a $V$, al 
 \draw (5.1,0) arc[x radius=0.4, y radius=0.2, start angle=180, end angle=0];
 \draw (4.8,0.31) arc[x radius=0.7, y radius=0.4, start angle=180, end angle=360];
 \end{tikzpicture}
-\caption{Suma conexa de un toro y una esfera.}
+\caption{Suma conexa de un toro y una esfera.\label{fig:suma_toro_esfera}}
 \end{figure}
 
 
