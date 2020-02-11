@@ -45,7 +45,7 @@
 
 
 \usepackage{sectsty} % Personalizar titulos secciones
-\sectionfont{\underline} % Titulo seccion subrayado
+%\sectionfont{\underline} % Titulo seccion subrayado
 
 % Comandos simbolos utiles 
 \newcommand{\C}{\mathbb{C}}
@@ -60,6 +60,7 @@
 \newcommand{\Toro}{\mathbb{T}^2}
 \newcommand{\Proyectivo}{\mathbb{P}^2}
 \newcommand{\enfatiza}[1]{\textbf{\textit{#1}}}
+
 % Estilos teoremas (Mejorable)
 \theoremstyle{definition}
 \newtheorem{defin}{Definición}[section]
@@ -118,11 +119,14 @@ Manuel Alonso Morón\\[.1in]
 \end{titlepage}
 
 
-%\afterpage{\blankpage}
+\afterpage{\blankpage}
 
 %%%%%%%%%%%%%PORTADA%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \tableofcontents
+\listoffigures
 
 
 \chapter{Definiciones preeliminares}
@@ -162,17 +166,6 @@ El \textit{teorema de invarianza del dominio} dice que si $W\subset \R^n$ y $W'\
 Una \textbf{\emph{superficie}} es una $2$-variedad.
 \end{defin}
 
-\begin{eje}%%%%EJE: toro y esfera
-\begin{itemize}
-\item La esfera $\mathbb{S}^2=\{(x,y,z) \in \R^3 \mid x^2+y^2+z^2=1\}$.
-
-
-\item El toro $\mathbb{T}^2=\{(x,y,z)\in \R^3 \mid (\sqrt{x^2+y^2}-2)^2+z^2=1\}$.
-\end{itemize}
-
-\end{eje}
-
-
 
 \begin{figure}[h]%%%%FIG: Toro y esfera
 	\begin{center}
@@ -188,16 +181,39 @@ Una \textbf{\emph{superficie}} es una $2$-variedad.
 	\end{center}
 \end{figure}
 
+\
+
+
+\
+
+\
+
+
+
+
+\begin{eje}%%%%EJE: toro y esfera
+\begin{itemize}
+\item La esfera $\mathbb{S}^2=\{(x,y,z) \in \R^3 \mid x^2+y^2+z^2=1\}$.
+
+\item El toro $\mathbb{T}^2=\{(x,y,z)\in \R^3 \mid (\sqrt{x^2+y^2}-2)^2+z^2=1\}$.
+\end{itemize}
+
+\end{eje}
+
+
+
 %%%%%%%%%%%%%
 %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
-Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Trataremos de dar una forma de representarlas como CW complejos. Veremos que toda superficie compacta se puede representar en el plano como un cociente de una región poligonal por una relación de equivalencia que identifica sus lados dos a dos. Empecemos viendo tres figuras elementales: la esfera $\Esfera$, el plano proyectivo $\Proyectivo$ y el toro $\Toro$. Como veremos, estos ejemplos son fundamentales pues toda superficie compacta se puede construir a partir de ellas.
+Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Trataremos de dar una forma de representarlas como CW-complejos. Veremos que toda superficie compacta se puede representar en el plano como el cociente de una región poligonal por una relación de equivalencia que identifica sus lados dos a dos. Empecemos viendo tres ejemplos elementales: la esfera $\Esfera$, el plano proyectivo $\Proyectivo$ y el toro $\Toro$. Como veremos, estas superficies son fundamentales pues toda superficie compacta se puede construir a partir de ellas. 
 Para ello necesitaremos antes la siguiente proposición:
 
 
 \begin{figure}[h]%%%%FIG: CONVEXO ESFERA%
+
 \begin{center}
+
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.65cm,y=0.65cm]
 \draw [shift={(7.74,-8.14)}] plot[domain=1.68:2.51,variable=\t]({1*14.71*cos(\t r)+0*14.71*sin(\t r)},{0*14.71*cos(\t r)+1*14.71*sin(\t r)});
 \draw [shift={(-0.34,-1.89)}] plot[domain=2.56:4.7,variable=\t]({1*4.5*cos(\t r)+0*4.5*sin(\t r)},{0*4.5*cos(\t r)+1*4.5*sin(\t r)});
@@ -224,9 +240,13 @@ Para ello necesitaremos antes la siguiente proposición:
 \fill [color=black] (3.8,0.56) circle (1.5pt);
 \end{scriptsize}
 \end{tikzpicture}
+
 \end{center}
+
 \caption{Demostración de que sólo hay un punto de la frontera en la semirecta.\label{fig:convexo_esfera}}
+
 \end{figure}
+
 
 \begin{prop}% TEOREMA 5.1 LEE%%%% CONVEXO HOMEOM ESFERA
 \label{teo:convexo_homeom_esfera} 
@@ -235,13 +255,13 @@ Si $D\subseteq \R^n$ es un conjunto compacto y convexo con interior no vacío, e
 \begin{proof}
 Sea $p\in D$ un punto de su interior. Si reemplazamos $D$ por su imagen mediante la traslación $x\mapsto x-p$, que es un homeomorfismo de $\R^n$ en sí mismo, podemos asumir que $p=0\in \mathring{D}$. Entonces existe un $\varepsilon >0 $ tal que la bola $B_{\varepsilon}(0)$ está contenida en $D$. Usando la dilatación $x\mapsto x/\varepsilon$, podemos asumir que $\mathbb{B}^n = B_ 1(0) \subseteq D$.
 La clave de la demostración es la siguiente: \emph{cada semirecta cerrada empezando en el origen interseca $\partial
-D$ en exactamente un punto}. Sea $R$ una semirecta tal. Dado que $D$ es compacto, su interrsección con R es compacta. Por tanto existe un punto $x_0$ en su intersección tal que en él su distancia al origen asume el máximo. Es claro %lo es?
-que pertenece a la frontera de $D$. Para ver que el punto es único, veamos que el segmento que une $0$ y $x_0$ está formado enteramente por puntos interiores de $D$ excepto por el $x_0$ mismo. Cualquier punto en este segmento distinto de $x_o$ se puede escribir de la forma $\lambda x_o $ para $0\leq \lambda <1. $ Supongamos $z\in B_{1-\lambda}(\lambda x_0)$, y sea $y=(z-\lambda x_0)/(1-\lambda )$. Como $|z-\lambda x_0|<|1-\lambda|$ se tiene que $|y|<1$, y por tanto $y\in B_ 1(0)\subseteq D$ (\ref{fig:convexo_esfera}). Como $y$ y $x_0$ están en $D$ y $z=\lambda x_0 + (1-\lambda )y$, se sigue de la convexidad que $\in D$. Por tanto la bola abierta $B_{1-\lambda}(\lambda x_0)$ está contenida en $D$, lo que implica que $\lambda x_0$ es un punto interior.
+D$ en exactamente un punto}. Sea $R$ una semirecta así. Dado que $D$ es compacto, su intersección con $R$ es compacta. Por tanto existe un punto $x_0$ en su intersección tal que en él su distancia al origen asume el máximo. Es claro %lo es?
+que pertenece a la frontera de $D$. Para ver que el punto es único, veamos que el segmento que une $0$ y $x_0$ está formado enteramente por puntos interiores de $D$ excepto por el $x_0$ mismo. Cualquier punto en este segmento distinto de $x_o$ se puede escribir de la forma $\lambda x_0 $ para $0\leq \lambda <1. $ Supongamos $z\in B_{1-\lambda}(\lambda x_0)$, y sea $y=(z-\lambda x_0)/(1-\lambda )$. Como $|z-\lambda x_0|<|1-\lambda|$ se tiene que $|y|<1$, y por tanto $y\in B_ 1(0)\subseteq D$ (ver \autoref{fig:convexo_esfera}). Como $y$ y $x_0$ están en $D$ y $z=\lambda x_0 + (1-\lambda )y$, se sigue de la convexidad que $\in D$. Por tanto la bola abierta $B_{1-\lambda}(\lambda x_0)$ está contenida en $D$, lo que implica que $\lambda x_0$ es un punto interior.
 
 Definimos ahora la aplicación $f:\partial D \to \mathbb{S}^{n-1}$ por 
 $$f(x)=\frac{x}{|x|}$$
 
-$f(x)$ es el punto donde el segmento desde el origen hasta $x$ interseca la esfera unidad. Como $f$ es la restricción de una función continua, es continua, y por el parágrafo anterior es biyectiva. Dado que $\partial D$ es compacta, $f$ es un homeomorfismo por el teorema de la aplicación cerrada (\ref{teo:aplicac_cerrada}).
+$f(x)$ es el punto donde el segmento desde el origen hasta $x$ interseca la esfera unidad. Como $f$ es la restricción de una función continua, es continua, y por el parágrafo anterior es biyectiva. Dado que $\partial D$ es compacta, $f$ es un homeomorfismo por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}).
 
 Finalmente definimos $F:\overline{\mathbb{S}}^n \to D$ por 
 $$F(x)= \left\{\begin{array}{lc}
@@ -250,7 +270,7 @@ $$F(x)= \left\{\begin{array}{lc}
 
 \end{array}
 \right. $$
-$F$ es continua fuera del origen por serlo $f^{-1}$, y en el origen porque por ser $f^{-1}$ acotada $F(x) \to 0$ cuando $x\to 0$. Geometricamente, $F$ manda cada segmento radial que conecta 0 con un punto de $\mathbb{S}^{n-1}$ al segmento radial desde $0$ hasta el punto $f^{-1}(w)\in \partial D$. Por convexidad, $F$ toma valores en $D$. La aplicación $F$ es inyectiva, pues puntos de distintas semirectas van a parar a distintas semirectas, y cada segmento radial va linealmente a su imagen. Es sobreyectiva pues cada punto $y \in D$ está en una semirecta empezando en 0. Por el teorema de la aplicación cerrada \ref{teo:aplicac_cerrada}, $F$ es un homeomorfismo.
+$F$ es continua fuera del origen por serlo $f^{-1}$, y en el origen porque por ser $f^{-1}$ acotada $F(x) \to 0$ cuando $x\to 0$. Geometricamente, $F$ manda cada segmento radial que conecta 0 con un punto de $\mathbb{S}^{n-1}$ al segmento radial desde $0$ hasta el punto $f^{-1}(w)\in \partial D$. Por convexidad, $F$ toma valores en $D$. La aplicación $F$ es inyectiva, pues puntos de distintas semirectas van a parar a distintas semirectas, y cada segmento radial va linealmente a su imagen. Es sobreyectiva pues cada punto $y \in D$ está en una semirecta empezando en 0. Por el teorema de la aplicación cerrada, $F$ es un homeomorfismo.
 \end{proof}
 
 
@@ -300,17 +320,17 @@ $F$ es continua fuera del origen por serlo $f^{-1}$, y en el origen porque por s
 
 
 \begin{prop}%%%%PROP: ESFERA COCIENTE DISCO Y CUADRADO%%%%
-\label{teo:Esfera como cociente de disco y cuadrado}
+\label{prop:Esfera como cociente de disco y cuadrado}
 La esfera $\mathbb{S}^2$ es homeomorfa a los siguientes espacios cociente: 
 %%%%%%%%%%o cocientes??????????%%%%%
 \begin{itemize}
-\item[(a)] El disco cerrado $\overline{\mathbb{B}}^2\subseteq \mathbb{R}^2$ módulo la relación de equivalencia generada por $(x,y)\sim (-x,y)$, para $(x,y)\in \partial \overline{\mathbb{B}}^2$
-\item[(b)] El cuadrado $S=\{(x,y):|x|+|y|\leq 1\}$ módulo la relación de equivalencia generada por $(x,y)\sim(-x,y)$ para $(x,y)\in \partial S$.
+\item[(a)] El disco cerrado $\overline{\mathbb{B}}^2\subseteq \mathbb{R}^2$ módulo la relación de equivalencia generada por $(x,y)\sim (-x,y)$, si $(x,y)\in \partial \overline{\mathbb{B}}^2$
+\item[(b)] El cuadrado $S=\{(x,y):|x|+|y|\leq 1\}$ módulo la relación de equivalencia generada por $(x,y)\sim(-x,y)$ si $(x,y)\in \partial S$.
 \end{itemize}
 \end{prop}
 \begin{proof}
-Para ver que cada espacio es homeomorfo a la esfera, daremos una aplicación cociente desde el espacio dado a la esfera que haga las mismas identificaciones que la relación de equivalencia, y entonces apelaremos a la unicidad del espacio cociente. (Teorema \ref{teo:unicidad_espacio_cociente})\\
-Para (a), vamos a definir una aplicación del disco en la esfera que envuelve cada paralelo con un segmento horizontal del disco (ver Figura \ref{fig:esfera_cociente_circunferencia})
+Para ver que cada espacio es homeomorfo a la esfera, daremos una aplicación cociente desde cada espacio a la esfera que haga las mismas identificaciones que la relación de equivalencia, y entonces apelaremos a la unicidad del espacio cociente. (\autoref{teo:unicidad_espacio_cociente})\\
+Para (a), vamos a definir una aplicación que ``envuelve'' cada segmento horizontal del disco en un paralelo de la esfera (ver \autoref{fig:esfera_cociente_circunferencia}).
 Formalmente, esta aplicación $\pi:\overline{\mathbb{B}}^2\to \mathbb{S}^2$ vienen dada por 
 $$\pi(x,y)=\left\{\begin{array}{lc}
 			(-\sqrt{1-y^2} \cos\dfrac{\pi x}{\sqrt{1-y^2}}, -\sqrt{1-y^2}, y), & y\neq \pm 1 \\
@@ -318,23 +338,18 @@ $$\pi(x,y)=\left\{\begin{array}{lc}
 
 \end{array}
 \right.$$
-Es claro que $\pi$ es continua y hace las mismas identificaciones que la relación de equivalencia. Por ser sobreyectiva, es una aplicación cociente (\emph{Teorema de la aplicación cerrada \ref{teo:aplicac_cerrada}}).
+Es claro que $\pi$ es continua y hace las mismas identificaciones que la relación de equivalencia. Por ser sobreyectiva, es una aplicación cociente (\autoref{teo:aplicac_cerrada}).
 
-Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo construido en la demostración de \ref{teo:convexo_homeom_esfera} que manda linealmente cada segmento radial entre el origen y la frontera de $S$ al segmento paralelo entre centro del disco y su frontera. Hagamos ahora $\beta=\pi \circ \alpha : S \to \mathbb{S}^2$, donde $\pi$ es la aplicación cociente del parágrafo anterior. Tenemos entonces que $\beta$ identifica $(x,y)$ y $(-x,y)$ cuando $(x,y)\in \partial S$, y por otro lado es inyectia, así que hace las mismas identificaciones que la aplicación cociente definida en (b), completando así la demostración (ver figura \ref{fig:esfera_cuadrado}). 
+Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo construido en la demostración de \autoref{teo:convexo_homeom_esfera} que manda linealmente cada segmento radial entre el origen y la frontera de $S$ al segmento paralelo entre centro del disco y su frontera. Hagamos ahora $\beta=\pi \circ \alpha : S \to \mathbb{S}^2$, donde $\pi$ es la aplicación cociente del parágrafo anterior. Tenemos entonces que $\beta$ identifica $(x,y)$ y $(-x,y)$ cuando $(x,y)\in \partial S$, pero por otro lado es inyectiva, así que hace las mismas identificaciones que la aplicación cociente definida en (b), completando así la demostración (ver \autoref{fig:esfera_cuadrado}). 
 \end{proof}
 
 
-
-
-
-
-
 \begin{prop}%%%%PROP: TORO COMO CUADRADO
-\label{teo:toro_cuadrado}
-El toro $\Toro$ es homeomorfo al espacio cociente resultante de la relación de equivalencia en el cuadrado $I\times I$ que identifica $(x,0)\sim (x,1)$ para todo $x\in I$, y $(0,y)\sim(1,y)$ para todo $y\in I$ (\ref{fig:toro_cuadrado}. 
+\label{prop:toro_cuadrado}
+El toro $\Toro$ es homeomorfo al espacio cociente resultante de la relación de equivalencia en el cuadrado $I\times I$ que identifica $(x,0)\sim (x,1)$ para todo $x\in I$, y $(0,y)\sim(1,y)$ para todo $y\in I$ (\autoref{fig:toro_cuadrado}). 
 \end{prop}
 \begin{proof}
-Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},e^{2\pi iv})$. Por el teorema de la aplicación cerrada (\ref{teo:aplicac_cerrada}), es una aplicación cociente. Al hacer las mismas identificaciones que la relación de equivalencia, por la unicidad del espacio cociente (Teorema \ref{teo:unicidad_espacio_cociente}) se obtiene el resultado.
+Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},e^{2\pi iv})$. Por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}), es una aplicación cociente. Al hacer las mismas identificaciones que la relación de equivalencia, por la unicidad del espacio cociente (\autoref{teo:unicidad_espacio_cociente}) se obtiene el resultado.
 \end{proof}
 
 \begin{figure}%%%%FIGURA: ESFERA CUADRADO
@@ -420,7 +435,7 @@ Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},
 
 
 \begin{prop}%%%%PROP: PLANO PROYECTIVO COMO CUADRADO
-\label{teo:proyectivo_cociente_cuadrado}
+\label{prop:proyectivo_cociente_cuadrado}
 El plano proyectivo $\mathbb{P}^2$ es homeomorfo a los siguientes espacios cociente:
 \begin{itemize}
 \item[(a)] El disco cerrado $\overline{\mathbb{B}}^2$ módulo la relación de equivalencia generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \partial \overline{\mathbb{B}}^2$.
@@ -429,8 +444,8 @@ El plano proyectivo $\mathbb{P}^2$ es homeomorfo a los siguientes espacios cocie
 \end{prop}
 \begin{proof}
 Sea $p:\mathbb{S}^2 \to \mathbb{P}^2$ la aplicación cociente dada por la relación de equivalencia $\sim$ generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \mathbb{S}^2$, que representa $\mathbb{P}^2$ como el cociente de una esfera. %AQUI FALTA UN POCO DE EXPLICACION, EJEMPLO 4.54 DEL LEE
-Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el disco al emisferio superior de la esfera por $F(x,y)=(x,y,\sqrt{1-x^2-y^2})$, entonces $p\circ F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2/\sim$ es sobreyectiva (---lo demuestro?) y es así una aplicación cociente por el teorema de la aplicación cerrada (\ref{teo:aplicac_cerrada}). La aplicación identifica únicamente $(x,y)\in \partial \overline{\mathbb{B}}^2$ con $(-x,-y)\in \partial \overline{\mathbb{B}}^2$, por lo que $\mathbb{P}^2$ es homeomorfo al espacio cociente resultante.
- Para la parte (b) hacemos como en la demostración de la Proposición \ref{teo:Esfera como cociente de disco y cuadrado} (b). 
+Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el disco al emisferio superior de la esfera por $F(x,y)=(x,y,\sqrt{1-x^2-y^2})$, entonces $p\circ F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2/\sim$ es sobreyectiva (---lo demuestro?) y es así una aplicación cociente por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}). La aplicación identifica únicamente $(x,y)\in \partial \overline{\mathbb{B}}^2$ con $(-x,-y)\in \partial \overline{\mathbb{B}}^2$, por lo que $\mathbb{P}^2$ es homeomorfo al espacio cociente resultante.
+Para la parte (b) hacemos como en la demostración de la \autoref{prop:Esfera como cociente de disco y cuadrado} (b). 
 \end{proof}
 
 
@@ -457,10 +472,10 @@ Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el d
 
 
 En las anteriores proposiciones hemos visto una o varias formas de representar superficies dadas ciertas construcciones geométricas. En estos casos hemos dado aplicaciones y demostraciones concretas para validar nuestros argumentos, pero a medida que aumenta la sofisticación es más útil guiarse visualmente por las figuras construidas. Por ello debemos formalizar un método para construir superficies identificando lados de figuras geométricas.
-Daremos por sabidas las definiciones básicas de símplices que dejaremos en el apéndice \ref{apendice simplices}.
+Daremos por sabidas las definiciones básicas de símplices y CW-complejos que dejaremos en el apéndice \autoref{apendice simplices}.
 
 \begin{defin}%%%DEF:Polígono
-Un \enfatiza{polígono} es un subconjunto de $\R^2$ que es homeomorfo a $\mathbb{S}^1$ y está formado por un número finito de $1$-símplices que se intersecan sólo en sus extremos. Los $0$-símplices y $1$-símplices del poígono son respectivamente sus \enfatiza{vértices} y sus \enfatiza{bordes}. Del lema \ref{lema cw} se sigue que un borde yace exactamente en dos vértices.
+Un \enfatiza{polígono} es un subconjunto de $\R^2$ que es homeomorfo a $\mathbb{S}^1$ y está formado por un número finito de $1$-símplices que se intersecan sólo en sus extremos. Los $0$-símplices y $1$-símplices del poígono son respectivamente sus \enfatiza{vértices} y sus \enfatiza{bordes}. Del lema \autoref{lemma:cw} se sigue que un borde yace exactamente en dos vértices.
 \end{defin}
 
 \begin{defin}%%%DEF:Región poligonal
@@ -471,7 +486,7 @@ A los vértices y lados del polígono de la frontera también los llamamos vért
 Veamos pues que identificando bordes de regiones poligonales de par en par obtenemos un espacio cociente que es siempre una superficie:
 
 \begin{prop}%%%PROP: Teorema poligonos
-\label{teo:poligonos}
+\label{prop:poligonos}
 Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1\amalg \dots \amalg P_k$, y supongamos dada una relación de equivalencia en $P$ que identifica algunos bordes de los polígonos con otros por homeomorfismos afines. Entonces se tiene:
 \begin{itemize}
 \item[(a)] El espacio cociente resultante es un CW-complejo $2$-dimensional cuyo $0$-esqueleto es la imagen del conjunto de vértices de $P$ por la aplicación cociente, y cuyo $1$-esqueleto es la imagen de la unión de los bordes de las regiones poligonales.
@@ -480,7 +495,7 @@ Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1\amalg \dots
 \end{prop}
 
 \begin{proof}
-...6.4 del Lee.
+%...6.4 del Lee.
 \end{proof}
 
 
@@ -489,26 +504,6 @@ Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1\amalg \dots
  
 \section{Representación de superficies}
 
-\begin{figure}[h]%%%%FIG: Representacion esfera proyectivo
-\centering
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.9]
-\draw [->-={at=0}, -<-={at=0.5}](-3,0) circle (2cm);
-\draw [->-={at=0}, ->-={at=0.5}](3,0) circle (2cm);
-\begin{scriptsize}
-\fill [color=black] (-3,2) circle (1.5pt);
-\fill [color=black] (-3,-2) circle (1.5pt);
-\fill [color=black] (3,2) circle (1.5pt);
-\fill [color=black] (3,-2) circle (1.5pt);
-\end{scriptsize}
-\draw (-5.8,0) node[anchor=west] {$ a $};
-\draw (-0.2,0) node[anchor=east] {$ a $};
-\draw (0.2,0) node[anchor=west] {$ a $};
-\draw (5.8,0) node[anchor=east] {$ a $};
-\draw (-2.9,-2.9) node[anchor=south] {$ \Esfera $};
-\draw (3.1,-2.9) node[anchor=south] {$ \Proyectivo $};
-\end{tikzpicture}
-\caption{Representaciones de la esfera y el plano proyectivo. \label{fig:representacion_esfera_proyectivo}}
-\end{figure}
 
 
 Como ya hemos dicho anteriormente, para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Representaremos todas las superficies como cocientes de regiones poligonales con $2n$ lados. 
@@ -546,7 +541,7 @@ Para un lado etiquetado $a$, el \textbf{\emph{vértice inicial}} es el primero e
 
 \begin{defin}%%%%DEF: representación de una superficie
 Una representación poligonal es una \textbf{\emph{representación de una superficie}} si para todo $a\in S$, $a$ ocurre exáctamente dos veces en $W_1,...,W_k$ como $a$ o como $a^{-1}$.
-Por la Proposición \ref{teo:poligonos}, la realización geométrica de una representación de una superficie es una superficie compacta.
+Por la Proposición \autoref{prop:poligonos}, la realización geométrica de una representación de una superficie es una superficie compacta.
 \end{defin}
 
 \begin{defin}%%%%DEF: representación de un espacio topológico
@@ -563,9 +558,9 @@ Veamos la representación de algunas superficies importantes.
 \begin{eje}%%%%PROP: representación de superficies importantes
 Se tiene que:
 \begin{itemize}
-\item[(a)] $\mathbb{S}^2=\langle a|aa^{-1}\rangle=\langle a,b| abb^{-1}a^{-1}\rangle$ (Proposición \ref{teo:Esfera como cociente de disco y cuadrado})
-\item[(b)] $\mathbb{P}^2= \langle a|aa \rangle = \langle a,b|abab \rangle$ (Proposición \ref{teo:proyectivo_cociente_cuadrado})
-\item[(c)] $\Toro=\langle a,b|aba^{-1}b^{-1}\rangle$ (Proposición \ref{teo:toro_cuadrado})
+\item[(a)] $\mathbb{S}^2=\langle a|aa^{-1}\rangle=\langle a,b| abb^{-1}a^{-1}\rangle$ (\autoref{prop:Esfera como cociente de disco y cuadrado})
+\item[(b)] $\mathbb{P}^2= \langle a|aa \rangle = \langle a,b|abab \rangle$ (\autoref{prop:proyectivo_cociente_cuadrado})
+\item[(c)] $\Toro=\langle a,b|aba^{-1}b^{-1}\rangle$ (\autoref{prop:toro_cuadrado})
 \end{itemize}
 \end{eje}
 
@@ -609,6 +604,27 @@ Se tiene que:
 
 \end{tikzpicture}
 \caption{Representación de superficies importantes.\label{fig:Representacion_superficies_importantes}}
+\end{figure}
+
+\begin{figure}[h]%%%%FIG: Representacion esfera proyectivo
+\centering
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.9]
+\draw [->-={at=0}, -<-={at=0.5}](-5,0) circle (2cm);
+\draw [->-={at=0}, ->-={at=0.5}](5,0) circle (2cm);
+\begin{scriptsize}
+\fill [color=black] (-5,2) circle (1.5pt);
+\fill [color=black] (-5,-2) circle (1.5pt);
+\fill [color=black] (5,2) circle (1.5pt);
+\fill [color=black] (5,-2) circle (1.5pt);
+\end{scriptsize}
+\draw (-7.8,0) node[anchor=west] {$ a $};
+\draw (-2.2,0) node[anchor=east] {$ a $};
+\draw (2.2,0) node[anchor=west] {$ a $};
+\draw (7.8,0) node[anchor=east] {$ a $};
+\draw (-4.9,-2.9) node[anchor=south] {$ \Esfera $};
+\draw (5.1,-2.9) node[anchor=south] {$ \Proyectivo $};
+\end{tikzpicture}
+\caption{Representaciones de la esfera y el plano proyectivo. \label{fig:representacion_esfera_proyectivo}}
 \end{figure}
 
 
@@ -851,4 +867,9 @@ Sea $F$ una aplicación continua de un espacio topológico compacto en un espaci
 \label{teo:unicidad_espacio_cociente}
 Supongamos $q_1:X\to Y_1$ y $q_2:X\to Y_2$ son aplicaciones cociente que hacen las mismas identificaciones, es decir, tales que $q_1(x)=q_1(x')$ si y solo si $q_2(x)=q_2(x')$. Entonces existe un único homeomorfismo $\phi:Y_1\to Y_2$ tal que $\phi \circ q_1=q_2$.
 \end{tma}
+
+
+
 \end{document}
+
+
