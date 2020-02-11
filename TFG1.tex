@@ -134,11 +134,7 @@ Manuel Alonso Morón\\[.1in]
 
 \section{Variedades}
 
-\subsection{Variedades y superficies}
-
-
 Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo son las variedades, que son los más relevantes desde el punto de vista de la geometría.
-
 
 \begin{defin}%%%%DEF: variedad topológica
 Una \textbf{\emph{variedad topológica}} (de ahora en adelante \emph{variedad}) es un espacio topológico Hausdorff, II AN y localmente homeomorfo a $R^n$, para algún $n\geq 0$.
@@ -553,10 +549,10 @@ Un espacion topológico que admite una representación con una sola cara es cone
 \end{obs}
 
 
-Veamos la representación de algunas superficies importantes.
+
 
 \begin{eje}%%%%PROP: representación de superficies importantes
-Se tiene que:
+Veamos la representación de algunas superficies importantes(ver \ref{fig:Representacion_superficies_importantes} y \ref{fig:representacion_esfera_proyectivo}).
 \begin{itemize}
 \item[(a)] $\mathbb{S}^2=\langle a|aa^{-1}\rangle=\langle a,b| abb^{-1}a^{-1}\rangle$ (\autoref{prop:Esfera como cociente de disco y cuadrado})
 \item[(b)] $\mathbb{P}^2= \langle a|aa \rangle = \langle a,b|abab \rangle$ (\autoref{prop:proyectivo_cociente_cuadrado})
@@ -628,7 +624,13 @@ Se tiene que:
 \end{figure}
 
 
+\begin{defin}%%%%DEF: Operaciones elementales sobre representaciones
 
+\end{defin}
+
+
+\begin{prop}%%%%PROP: Operaciones sobre representaciones
+\end{prop}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Suma conexa de variedades}
@@ -725,6 +727,18 @@ Los abiertos construidos, $\tilde{V} \subset X$, se pueden tomar en cantidad num
 %
 
 \chapter{Triangulación de superficies}
+
+Un hecho fundamental para la prueba del teorema de clasificación es que toda superficie es triangulable. Este teorema, probado por Radó, es largo y técnico de probar. Las demostraciones clásicas utilizan el \emph{teorema de Schönflies}, el cual no es fácil de probar. Intentaremos aquí dar una aproximación con el truco de Kirby para superficies \cite{hatcher_torus}.
+
+\
+
+\section{Teorema de Radó}
+
+\begin{tma}
+Toda superficie es triangulable.
+\end{tma}
+
+
 
 \chapter{La prueba ZIP de Conway}
 
@@ -868,7 +882,14 @@ Sea $F$ una aplicación continua de un espacio topológico compacto en un espaci
 Supongamos $q_1:X\to Y_1$ y $q_2:X\to Y_2$ son aplicaciones cociente que hacen las mismas identificaciones, es decir, tales que $q_1(x)=q_1(x')$ si y solo si $q_2(x)=q_2(x')$. Entonces existe un único homeomorfismo $\phi:Y_1\to Y_2$ tal que $\phi \circ q_1=q_2$.
 \end{tma}
 
+\chapter{CW-complejos}
 
+\begin{thebibliography}{9}
+\bibitem{hatcher_torus}
+A. Hatcher.
+\textit{The Kirby Torus Trick for Surfaces}, 2013.
+\\\url{http://front.math.ucdavis.edu/1312.3518}
+\end{thebibliography}
 
 \end{document}
 
