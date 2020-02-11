@@ -198,7 +198,6 @@ Para ello necesitaremos antes la siguiente proposición:
 
 \begin{figure}[h]%%%%FIG: CONVEXO ESFERA%
 \begin{center}
-\definecolor{uququq}{rgb}{0.25,0.25,0.25}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.65cm,y=0.65cm]
 \draw [shift={(7.74,-8.14)}] plot[domain=1.68:2.51,variable=\t]({1*14.71*cos(\t r)+0*14.71*sin(\t r)},{0*14.71*cos(\t r)+1*14.71*sin(\t r)});
 \draw [shift={(-0.34,-1.89)}] plot[domain=2.56:4.7,variable=\t]({1*4.5*cos(\t r)+0*4.5*sin(\t r)},{0*4.5*cos(\t r)+1*4.5*sin(\t r)});
@@ -219,7 +218,7 @@ Para ello necesitaremos antes la siguiente proposición:
 \draw (2.85,2.2) node[anchor=north west] {$B_{1-\lambda}(\lambda x_0)$};
 \begin{scriptsize}
 \fill [color=black] (10.97,0.11) circle (1.5pt);
-\fill [color=uququq] (0,0) circle (1.5pt);
+\fill [color=black] (0,0) circle (1.5pt);
 \fill [color=black] (3.74,0.04) circle (1.5pt);
 \fill [color=black] (0.08,0.79) circle (1.5pt);
 \fill [color=black] (3.8,0.56) circle (1.5pt);
@@ -257,7 +256,7 @@ $F$ es continua fuera del origen por serlo $f^{-1}$, y en el origen porque por s
 
 \begin{figure}[h]%%%%%%% FIGURA: ESFERA COCIENTE CIRCUNFERENCIA%%%%
 \begin{center}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.5cm,y=1.5cm]
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.5cm,y=1.5cm, scale=0.85]
 \draw [<-][shift={(0,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
 \draw (0,3) node[anchor=north] {$\pi$};
 \draw (2,1.5) arc[x radius=0.7, y radius=1.5, start angle=90, end angle=270];
@@ -299,6 +298,7 @@ $F$ es continua fuera del origen por serlo $f^{-1}$, y en el origen porque por s
 \end{figure}
 
 
+
 \begin{prop}%%%%PROP: ESFERA COCIENTE DISCO Y CUADRADO%%%%
 \label{teo:Esfera como cociente de disco y cuadrado}
 La esfera $\mathbb{S}^2$ es homeomorfa a los siguientes espacios cociente: 
@@ -324,18 +324,29 @@ Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo cons
 \end{proof}
 
 
-\definecolor{uququq}{rgb}{0.25,0.25,0.25}
-\definecolor{qqqqff}{rgb}{0,0,1}
-\begin{figure}[h]%%%%FIGURA: ESFERA CUADRADO
-\begin{center}
-\begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+
+
+
+
+
+\begin{prop}%%%%PROP: TORO COMO CUADRADO
+\label{teo:toro_cuadrado}
+El toro $\Toro$ es homeomorfo al espacio cociente resultante de la relación de equivalencia en el cuadrado $I\times I$ que identifica $(x,0)\sim (x,1)$ para todo $x\in I$, y $(0,y)\sim(1,y)$ para todo $y\in I$ (\ref{fig:toro_cuadrado}. 
+\end{prop}
+\begin{proof}
+Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},e^{2\pi iv})$. Por el teorema de la aplicación cerrada (\ref{teo:aplicac_cerrada}), es una aplicación cociente. Al hacer las mismas identificaciones que la relación de equivalencia, por la unicidad del espacio cociente (Teorema \ref{teo:unicidad_espacio_cociente}) se obtiene el resultado.
+\end{proof}
+
+\begin{figure}%%%%FIGURA: ESFERA CUADRADO
+\centering
+
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.9]
 \draw[-<-={at=0.125},->-={at=0.375}, -<<-={at=0.625}, ->>-={at=0.875} ](0,0) circle (2cm);
 \draw [-<-={at=0.5}] (-8,0)-- (-6,2);
 \draw [-<-={at=0.5}](-4,0)-- (-6,2);
 \draw [-<<-={at=0.5}](-8,0)-- (-6,-2);
 \draw [->>-={at=0.5}](-6,-2)-- (-4,0);
 \draw(6,0) circle (2cm);
-%\draw [rotate around={0:(6,0)},dash pattern=on 5pt off 5pt] (6,0) ellipse (2cm and 0.7cm);
 \draw (8,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=-180];
 \draw [dashed] (8,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=180];
 \draw [->] (-8.5,0) -- (-3.5,0);
@@ -351,39 +362,29 @@ Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo cons
 \draw (2.89,3.23) node[anchor=north west] {$ \pi $};
 \draw [->-={at=0.45}, -<<-={at=0.82}](6,2) arc[x radius=0.7, y radius=2, start angle=90, end angle=270];
 \begin{scriptsize}
-\fill [color=qqqqff] (0,2) circle (1.5pt);
-\fill [color=uququq] (-8,0) circle (1.5pt);
-\fill [color=uququq] (-4,0) circle (1.5pt);
-\fill [color=uququq] (-6,-2) circle (1.5pt);
-\fill [color=uququq] (-6,2) circle (1.5pt);
-\fill [color=uququq] (-2,0) circle (1.5pt);
-\fill [color=uququq] (2,0) circle (1.5pt);
-\fill [color=uququq] (0,-2) circle (1.5pt);
-\fill [color=uququq] (0,2) circle (1.5pt);
-\fill [color=uququq] (5.34,-0.66) circle (1.5pt);
+\fill [color=black] (0,2) circle (1.5pt);
+\fill [color=black] (-8,0) circle (1.5pt);
+\fill [color=black] (-4,0) circle (1.5pt);
+\fill [color=black] (-6,-2) circle (1.5pt);
+\fill [color=black] (-6,2) circle (1.5pt);
+\fill [color=black] (-2,0) circle (1.5pt);
+\fill [color=black] (2,0) circle (1.5pt);
+\fill [color=black] (0,-2) circle (1.5pt);
+\fill [color=black] (0,2) circle (1.5pt);
+\fill [color=black] (5.34,-0.66) circle (1.5pt);
 \end{scriptsize}
 \end{tikzpicture}
 
 \caption{La esfera como cociente de un cuadrado.\label{fig:esfera_cuadrado}}
 
-\end{center}
+
 \end{figure}
-
-
-\begin{prop}%%%%PROP: TORO COMO CUADRADO
-\label{teo:toro_cuadrado}
-El toro $\Toro$ es homeomorfo al espacio cociente resultante de la relación de equivalencia en el cuadrado $I\times I$ que identifica $(x,0)\sim (x,1)$ para todo $x\in I$, y $(0,y)\sim(1,y)$ para todo $y\in I$ (\ref{fig:toro_cuadrado}. 
-\end{prop}
-\begin{proof}
-Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},e^{2\pi iv})$. Por el teorema de la aplicación cerrada (\ref{teo:aplicac_cerrada}), es una aplicación cociente. Al hacer las mismas identificaciones que la relación de equivalencia, por la unicidad del espacio cociente (Teorema \ref{teo:unicidad_espacio_cociente}) se obtiene el resultado.
-\end{proof}
 
 
 \begin{figure}%%%%FIGURA: TORO COMO CUADRADO
 \begin{center}
-\definecolor{uququq}{rgb}{0.25,0.25,0.25}
-\definecolor{tttttt}{rgb}{0.2,0.2,0.2}
-\begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm, y=1cm, scale=0.9]
+
 \draw [->-={at=0.5}](-8,-2)-- (-8,2);
 \draw [->>-={at=0.5}](-8,2)-- (-4,2);
 \draw [-<-={at=0.5}](-4,2)-- (-4,-2);
@@ -404,13 +405,13 @@ Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},
 \draw [dashed](6,-1.5) arc[x radius=0.2, y radius=0.6, start angle=-90, end angle=90];
 \draw [-<-={at=0.63}] (6,-0.3) arc[x radius=0.2, y radius=0.6, start angle=90, end angle=270];
 \begin{scriptsize}
-\fill [color=tttttt] (-8,-2) circle (1.5pt);
-\fill [color=tttttt] (-8,2) circle (1.5pt);
-\fill [color=tttttt] (-4,2) circle (1.5pt);
-\fill [color=tttttt] (-4,-2) circle (1.5pt);
-\fill [color=uququq] (-2.5,0) circle (1.5pt);
-\fill [color=uququq] (1.5,0) circle (1.5pt);
-\fill [color=uququq] (5.8,-0.9) circle (1.5pt);
+\fill [color=black] (-8,-2) circle (1.5pt);
+\fill [color=black] (-8,2) circle (1.5pt);
+\fill [color=black] (-4,2) circle (1.5pt);
+\fill [color=black] (-4,-2) circle (1.5pt);
+\fill [color=black] (-2.5,0) circle (1.5pt);
+\fill [color=black] (1.5,0) circle (1.5pt);
+\fill [color=black] (5.8,-0.9) circle (1.5pt);
 \end{scriptsize}
 \end{tikzpicture}
 \end{center}
@@ -435,8 +436,7 @@ Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el d
 
 \begin{figure}[h]%%%%FIGURA: PLANO PROYECTIVO COMO CUADRADO
 \begin{center}
-\definecolor{uququq}{rgb}{0.25,0.25,0.25}
-\begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.9]
 \draw[-<-={at=0.5}, -<-={at=1}](-3,0) circle (2cm);
 \draw [-<-={at=0.5}] (4,2)-- (6,0);
 \draw [-<<-={at=0.5}](6,0)-- (4,-2);
@@ -445,8 +445,8 @@ Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el d
 \begin{scriptsize}
 \fill [color=black] (6,0) circle (1.5pt);
 \fill [color=black] (4,2) circle (1.5pt);
-\fill [color=uququq] (2,0) circle (1.5pt);
-\fill [color=uququq] (4,-2) circle (1.5pt);
+\fill [color=black] (2,0) circle (1.5pt);
+\fill [color=black] (4,-2) circle (1.5pt);
 \fill [color=black] (-3,-2) circle (1.5pt);
 \fill [color=black] (-3,2) circle (1.5pt);
 \end{scriptsize}
@@ -489,6 +489,26 @@ Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1\amalg \dots
  
 \section{Representación de superficies}
 
+\begin{figure}[h]%%%%FIG: Representacion esfera proyectivo
+\centering
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.9]
+\draw [->-={at=0}, -<-={at=0.5}](-3,0) circle (2cm);
+\draw [->-={at=0}, ->-={at=0.5}](3,0) circle (2cm);
+\begin{scriptsize}
+\fill [color=black] (-3,2) circle (1.5pt);
+\fill [color=black] (-3,-2) circle (1.5pt);
+\fill [color=black] (3,2) circle (1.5pt);
+\fill [color=black] (3,-2) circle (1.5pt);
+\end{scriptsize}
+\draw (-5.8,0) node[anchor=west] {$ a $};
+\draw (-0.2,0) node[anchor=east] {$ a $};
+\draw (0.2,0) node[anchor=west] {$ a $};
+\draw (5.8,0) node[anchor=east] {$ a $};
+\draw (-2.9,-2.9) node[anchor=south] {$ \Esfera $};
+\draw (3.1,-2.9) node[anchor=south] {$ \Proyectivo $};
+\end{tikzpicture}
+\caption{Representaciones de la esfera y el plano proyectivo. \label{fig:representacion_esfera_proyectivo}}
+\end{figure}
 
 
 Como ya hemos dicho anteriormente, para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Representaremos todas las superficies como cocientes de regiones poligonales con $2n$ lados. 
@@ -550,7 +570,7 @@ Se tiene que:
 \end{eje}
 
 
-\begin{figure}%%%%FIG: Representación de superficies impoirtantes
+\begin{figure}[h]%%%%FIG: Representación de superficies impoirtantes
 \centering
 \begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 \draw [-<-](0,2)-- (2,0);
@@ -650,9 +670,48 @@ $\overline{\Phi}$ es abierta: si tomamos un abierto básico saturado de $V_1\sqc
 Los abiertos construidos, $\tilde{V} \subset X$, se pueden tomar en cantidad numerable para formar una base de la topología, con lo cual $X$ es IIAN. También, dado un $q\in U_j'$, $j=1,2$, y un $p\in S$, se puede tomar un abierto $\tilde{V}$ entorno de $p$ disjunto de un entorno pequeño de $q$. Y si tomamos $p, p' \in S$ distintos, los abiertos $\tilde{V}$, $\tilde{V}'$ construidos partiendo de $V$, $V'\subset \partial B_1(0)$ disjuntos, serán disjuntos. Luego $X$ es Hausdorff.
 \end{proof}
 
-\begin{obs}%%%%OBS: Suma conexa variedad y esfera
-Si $V$ es una $n$-variedad, la suma conexa $V\# \mathbb{S}^n$ es homeomorfa a $V$, al menos si hacemos las elecciones correctas (Fig. \ref{fig:suma_toro_esfera}).
-\end{obs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+
+\chapter{Triangulación de superficies}
+
+\chapter{La prueba ZIP de Conway}
+
 
 \begin{figure}[h]%%%% FIG: suma conexa toro esfera
 \centering
@@ -686,9 +745,6 @@ Si $V$ es una $n$-variedad, la suma conexa $V\# \mathbb{S}^n$ es homeomorfa a $V
 \caption{Suma conexa de un toro y una esfera.\label{fig:suma_toro_esfera}}
 \end{figure}
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{figure}%%%FIG: CROSSCAP
@@ -775,81 +831,6 @@ Si $V$ es una $n$-variedad, la suma conexa $V\# \mathbb{S}^n$ es homeomorfa a $V
 \end{tikzpicture}
 \caption{Construcción del crosscap a partir de la representación pologonal del plano proyectivo. \label{fig:crosscap_paso_a_paso}}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{comment}%%%%REPRESENTACIONES DE S1 Y P2....SON UNA MIERDA MEJOR REPETIRLAS
-\begin{figure}
-
-\definecolor{uququq}{rgb}{0.25,0.25,0.25}
-
-
-
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-%\clip(-5.39,-4) rectangle (8.94,3.29);
-\draw(0,0) circle (2cm);
-\draw (-2.2,-0.2)-- (-1.99,0.2);
-\draw (-1.99,0.2)-- (-1.85,-0.2);
-\draw (1.85,-0.2)-- (1.99,0.2);
-\draw (1.99,0.2)-- (2.2,-0.2);
-\draw (2.5,0.15) node[anchor=north west] {$ a $};
-\draw (-2.5,0.15) node[anchor=north east] {$ a $};
-\draw (0.00,-2.3) node[anchor=north] {$ \mathbb{S}^2 $};
-\begin{scriptsize}
-\fill [color=uququq] (0,2) circle (1.5pt);
-\fill [color=uququq] (0,-2) circle (1.5pt);
-\end{scriptsize}
-\end{tikzpicture}
-
-
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
-%\clip(-4.3,-5.46) rectangle (18.82,6.3);
-\draw(0,0) circle (2cm);
-\draw (-2.2,-0.2)-- (-1.99,0.2);
-\draw (-1.99,0.2)-- (-1.85,-0.2);
-\draw (2.5,0.24) node[anchor=north west] {$ a $};
-\draw (-2.5,0.24) node[anchor=north east] {$ a $};
-\draw (0,-2.3) node[anchor=north] {$ \mathbb{P}^2 $};
-\draw (1.85,0.2)-- (1.99,-0.2);
-\draw (1.99,-0.2)-- (2.2,0.2);
-\begin{scriptsize}
-\fill [color=uququq] (0,2) circle (1.5pt);
-\fill [color=uququq] (0,-2) circle (1.5pt);
-\end{scriptsize}
-\end{tikzpicture}
-\caption{Representación poligonal de $\mathbb{S}^2 y \mathbb{P}^2$}
-\end{figure}
-
-\end{comment}
-
-
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-
 
 
 \appendix
