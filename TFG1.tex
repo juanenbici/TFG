@@ -564,7 +564,7 @@ Veamos la representación de algunas superficies importantes(ver \ref{fig:Repres
 
 \begin{figure}[h]%%%%FIG: Representación de superficies impoirtantes
 \centering
-\begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
 \draw [-<-](0,2)-- (2,0);
 \draw [-<-](2,0)-- (0,-2);
 \draw [-<-](0,-2)-- (-2,0);
@@ -605,7 +605,7 @@ Veamos la representación de algunas superficies importantes(ver \ref{fig:Repres
 
 \begin{figure}[h]%%%%FIG: Representacion esfera proyectivo
 \centering
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.9]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.8]
 \draw [->-={at=0}, -<-={at=0.5}](-5,0) circle (2cm);
 \draw [->-={at=0}, ->-={at=0.5}](5,0) circle (2cm);
 \begin{scriptsize}
@@ -614,16 +614,51 @@ Veamos la representación de algunas superficies importantes(ver \ref{fig:Repres
 \fill [color=black] (5,2) circle (1.5pt);
 \fill [color=black] (5,-2) circle (1.5pt);
 \end{scriptsize}
-\draw (-7.8,0) node[anchor=west] {$ a $};
-\draw (-2.2,0) node[anchor=east] {$ a $};
-\draw (2.2,0) node[anchor=west] {$ a $};
-\draw (7.8,0) node[anchor=east] {$ a $};
+\draw (-7.1,0) node[anchor=east] {$ a $};
+\draw (-2.9,0) node[anchor=west] {$ a $};
+\draw (2.9,0) node[anchor=east] {$ a $};
+\draw (7.1,0) node[anchor=west] {$ a $};
 \draw (-4.9,-2.9) node[anchor=south] {$ \Esfera $};
 \draw (5.1,-2.9) node[anchor=south] {$ \Proyectivo $};
 \end{tikzpicture}
 \caption{Representaciones de la esfera y el plano proyectivo. \label{fig:representacion_esfera_proyectivo}}
 \end{figure}
 
+Parece claro que una superficie puede tener varias presentaciones poligonales. Sea por ejemplo la presentación del toro $\Toro=\langle a,b|aba^{-1}b^{-1}\rangle$. Intuitivamente podemos ver que, subdividiendo los lados etiquetados con $b$, y reetiquetándolos con $c$ y $d$ (ver \ref{fig:ejemplo_operacion}), la superficie que representa la representación obtenida $\langle a,c,d| acda^{-1}c^{-1}d^{-1}\rangle$ será la misma.
+Vamos ahora a desarrollar unas reglas generales de transformación
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[use optics, x=1cm, y=1cm, scale=1.1]
+\draw [->-={at=0.125}, ->-={at=0.375}, -<-={at=0.625}, -<-={at=0.875}](-1,1) -- (-1,-1) -- (-3,-1) -- (-3, 1) -- (-1,1); 
+\draw [->-] (1,0)-- (1.57,-1);
+\draw [-<-] (1.57,-1)-- (2.73,-1);
+\draw [-<-] (2.73,-1)-- (3.31,0);
+\draw [-<-] (3.31,0)-- (2.73,1);
+\draw [->-] (2.73,1)-- (1.58,1);
+\draw [->-] (1.58,1)-- (1,0);
+
+\draw (-0.9,0) node[anchor= west] {$ b $};
+\draw (-3.1,0) node[anchor= east] {$ b $};
+\draw (-2,1.1) node[anchor= south] {$ a $};
+\draw (-2,-1.1) node[anchor= north] {$ a $};
+\draw (2.16,1.1) node[anchor= south] {$ a $};
+
+\draw (3.02,0.5) node[anchor= south west] {$ c $};
+\draw (3.02,-0.5) node[anchor= north west] {$ d $};
+
+\draw (2.15, -1.1) node[anchor= north] {$ a $};
+
+\draw (1.29,-0.5) node[anchor= north east] {$ d $};
+\draw (1.29,0.5) node[anchor= south east] {$ c $};
+\end{tikzpicture}
+
+\caption{Dos representaciones equivalentes de $\Toro$. \label{fig:ejemplo_operacion}}
+\end{figure}
+
+\begin{defin}%%%%DEF: Realizaciones geometricas topologicamente equivalentes
+
+\end{defin}
 
 \begin{defin}%%%%DEF: Operaciones elementales sobre representaciones
 
@@ -729,7 +764,7 @@ Los abiertos construidos, $\tilde{V} \subset X$, se pueden tomar en cantidad num
 
 \chapter{Triangulación de superficies}
 
-Un hecho fundamental para la prueba del teorema de clasificación es que toda superficie es triangulable. La demostración, atribuída a Radó en 1925 \cite{Rado}, utiliza el \emph{teorema de Schönflies}, cuya prueba es larga y técnica. Intentaremos aquí dar una aproximación con el truco de Kirby para superficies dado por Hatcher \cite{hatcher_torus}.
+Un hecho fundamental para la prueba del teorema de clasificación es que toda superficie es triangulable. La demostración, atribuída a Radó en 1925 \cite{rado}, utiliza el \emph{teorema de Schönflies}, cuya prueba es larga y técnica. Utilizaremos el truco de Kirby para superficies dado por Hatcher \cite{hatcher_torus}.
 
 \
 
