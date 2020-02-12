@@ -624,10 +624,10 @@ Veamos la representación de algunas superficies importantes(ver \ref{fig:Repres
 \caption{Representaciones de la esfera y el plano proyectivo. \label{fig:representacion_esfera_proyectivo}}
 \end{figure}
 
-Parece claro que una superficie puede tener varias presentaciones poligonales. Sea por ejemplo la presentación del toro $\Toro=\langle a,b|aba^{-1}b^{-1}\rangle$. Intuitivamente podemos ver que, subdividiendo los lados etiquetados con $b$, y reetiquetándolos con $c$ y $d$ (ver \ref{fig:ejemplo_operacion}), la superficie que representa la representación obtenida $\langle a,c,d| acda^{-1}c^{-1}d^{-1}\rangle$ será la misma.
-Vamos ahora a desarrollar unas reglas generales de transformación
+Parece claro que, además de $\Esfera$ y $\Proyectivo$, una superficie pueda tener varias presentaciones poligonales. Sea por ejemplo la presentación del toro $\Toro=\langle a,b|aba^{-1}b^{-1}\rangle$. Intuitivamente podemos ver que, subdividiendo los lados etiquetados con $b$ y reetiquetándolos con $c$ y $d$ (ver \ref{fig:ejemplo_operacion}), la superficie que representa la representación obtenida $\langle a,c,d| acda^{-1}c^{-1}d^{-1}\rangle$ será la misma.
+Vamos ahora a desarrollar unas reglas generales de transformación.
 
-\begin{figure}
+\begin{figure}%%%%FIG: ejemplo operacion
 \centering
 \begin{tikzpicture}[use optics, x=1cm, y=1cm, scale=1.1]
 \draw [->-={at=0.125}, ->-={at=0.375}, -<-={at=0.625}, -<-={at=0.875}](-1,1) -- (-1,-1) -- (-3,-1) -- (-3, 1) -- (-1,1); 
@@ -657,11 +657,16 @@ Vamos ahora a desarrollar unas reglas generales de transformación
 \end{figure}
 
 \begin{defin}%%%%DEF: Realizaciones geometricas topologicamente equivalentes
-
+Sean $\mathcal{P}_1$ y $\mathcal{P}_2$ dos representaciones tal que sus realizaciones geométricas son equivalentes. Entonces decimos que son \enfatiza{topológicamente equivalentes} y escribimos $\mathcal{P}_1 \approx \mathcal{P}_2$.
 \end{defin}
 
-\begin{defin}%%%%DEF: Operaciones elementales sobre representaciones
+Por cuestión de notación, en lo que sigue $S$ denotará una secuencia cualquiera de símbolos, $a,b,c,a_1,a_2,\dots$ símbolos de $S$, $e$ un símbolo que no sea de $S$ y $W_1, W_2$ palabras formadas por símbolos de $S$.
 
+\begin{defin}%%%%DEF: Operaciones elementales sobre representaciones
+Las siguientes operaciones se llaman \enfatiza{transformaciones elementales} de una presentación poligonal:
+\begin{itemize}
+\item \textit{Reetiquetado:} 
+\end{itemize}
 \end{defin}
 
 
