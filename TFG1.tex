@@ -190,9 +190,9 @@ Una \textbf{\emph{superficie}} es una $2$-variedad.
 
 \begin{eje}%%%%EJE: toro y esfera
 \begin{itemize}
-\item La esfera $\mathbb{S}^2=\{(x,y,z) \in \R^3 \mid x^2+y^2+z^2=1\}$.
+\item La esfera $\mathbb{S}^2=\{(x,y,z) \in \R^3\mid  x^2+y^2+z^2=1\}$.
 
-\item El toro $\mathbb{T}^2=\{(x,y,z)\in \R^3 \mid (\sqrt{x^2+y^2}-2)^2+z^2=1\}$.
+\item El toro $\mathbb{T}^2=\{(x,y,z)\in \R^3\mid  (\sqrt{x^2+y^2}-2)^2+z^2=1\}$.
 \end{itemize}
 
 \end{eje}
@@ -512,7 +512,7 @@ Sea $S$ un conjunto. Una \textbf{\textit{palabra en $S$}} es una $k$-tupla orden
 
 \begin{defin}%%%%DEF: Representación poligonal
 \label{def:rep_pol}
-Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,...,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b \mid aba^{-1}b^{-1}\rangle$. Permitimos el caso especial de $S=\{a\}$ y palabras de longitud $2$, es decir $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
+Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,...,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b\mid  aba^{-1}b^{-1}\rangle$. Permitimos el caso especial de $S=\{a\}$ y palabras de longitud $2$, es decir $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
 \end{defin}
 
 
@@ -530,6 +530,7 @@ Si $|\mathcal{P}|$ es una de las representaciones poligonales de un solo element
 
 Por notación, dadas dos palabras $W_1$ y $W_2$, $W_1W_2$ representará la palabra formada concatenando $W_1$ y $W_2$. Por otro lado, adoptaremos la convención de que $(a^{-1})^{-1}=a$.
 
+También lo que sigue $S$ denotará una secuencia cualquiera de símbolos, $a,b,c,a_1,a_2,\dots$ símbolos de $S$, $e$ un símbolo que no sea de $S$ y $W_1, W_2, \dots$ palabras formadas por símbolos de $S$.
 
 \begin{defin}%%%%DEF: caras, lados y vértices polígono
 Los interiores, los bordes y los vértices de cada región polgonal $P_i$ se llaman \textbf{\emph{caras, bordes y vértices de la presentación}}. El número de caras es el mismo que el número de palabras, y el número de bordes coincide con la suma de la longitud de las palabras.
@@ -555,9 +556,9 @@ Un espacion topológico que admite una representación con una sola cara es cone
 \begin{eje}%%%%PROP: representación de superficies importantes
 Veamos la representación de algunas superficies importantes(ver \ref{fig:Representacion_superficies_importantes} y \ref{fig:representacion_esfera_proyectivo}).
 \begin{itemize}
-\item[(a)] $\mathbb{S}^2=\langle a|aa^{-1}\rangle=\langle a,b| abb^{-1}a^{-1}\rangle$ (\autoref{prop:Esfera como cociente de disco y cuadrado})
-\item[(b)] $\mathbb{P}^2= \langle a|aa \rangle = \langle a,b|abab \rangle$ (\autoref{prop:proyectivo_cociente_cuadrado})
-\item[(c)] $\Toro=\langle a,b|aba^{-1}b^{-1}\rangle$ (\autoref{prop:toro_cuadrado})
+\item[(a)] $\mathbb{S}^2=\langle a\mid aa^{-1}\rangle=\langle a,b\mid  abb^{-1}a^{-1}\rangle$ (\autoref{prop:Esfera como cociente de disco y cuadrado})
+\item[(b)] $\mathbb{P}^2= \langle a\mid aa \rangle = \langle a,b\mid abab \rangle$ (\autoref{prop:proyectivo_cociente_cuadrado})
+\item[(c)] $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$ (\autoref{prop:toro_cuadrado})
 \end{itemize}
 \end{eje}
 
@@ -624,7 +625,7 @@ Veamos la representación de algunas superficies importantes(ver \ref{fig:Repres
 \caption{Representaciones de la esfera y el plano proyectivo. \label{fig:representacion_esfera_proyectivo}}
 \end{figure}
 
-Parece claro que, además de $\Esfera$ y $\Proyectivo$, una superficie pueda tener varias presentaciones poligonales. Sea por ejemplo la presentación del toro $\Toro=\langle a,b|aba^{-1}b^{-1}\rangle$. Intuitivamente podemos ver que, subdividiendo los lados etiquetados con $b$ y reetiquetándolos con $c$ y $d$ (ver \ref{fig:ejemplo_operacion}), la superficie que representa la representación obtenida $\langle a,c,d| acda^{-1}c^{-1}d^{-1}\rangle$ será la misma.
+Parece claro que, además de $\Esfera$ y $\Proyectivo$, una superficie pueda tener varias presentaciones poligonales. Sea por ejemplo la presentación del toro $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$. Intuitivamente podemos ver que, subdividiendo los lados etiquetados con $b$ y reetiquetándolos con $c$ y $d$ (ver \ref{fig:ejemplo_operacion}), la superficie que representa la representación obtenida $\langle a,c,d\mid  acda^{-1}c^{-1}d^{-1}\rangle$ será la misma.
 Vamos ahora a desarrollar unas reglas generales de transformación.
 
 \begin{figure}%%%%FIG: ejemplo operacion
@@ -660,12 +661,16 @@ Vamos ahora a desarrollar unas reglas generales de transformación.
 Sean $\mathcal{P}_1$ y $\mathcal{P}_2$ dos representaciones tal que sus realizaciones geométricas son equivalentes. Entonces decimos que son \enfatiza{topológicamente equivalentes} y escribimos $\mathcal{P}_1 \approx \mathcal{P}_2$.
 \end{defin}
 
-Por cuestión de notación, en lo que sigue $S$ denotará una secuencia cualquiera de símbolos, $a,b,c,a_1,a_2,\dots$ símbolos de $S$, $e$ un símbolo que no sea de $S$ y $W_1, W_2$ palabras formadas por símbolos de $S$.
+Vamos a definir ahora unas operaciones elementales sobre las representaciones poligonales. Veremos luego que estas dan lugar a representaciones equivalentes.
 
 \begin{defin}%%%%DEF: Operaciones elementales sobre representaciones
 Las siguientes operaciones se llaman \enfatiza{transformaciones elementales} de una presentación poligonal:
 \begin{itemize}
-\item \textit{Reetiquetado:} 
+\item \textit{Reetiquetado:} Cambiar todas las apariciones de un símbolo $a$ por otro símbolo que no está todavía en la representación, intercambiar todas las apariciones de dos símbolos $a$ y $b$ o intercambiar todas las apariciones de $a$ y $a^{-1}$.
+\item \textit{Subdividisión:} Cambiar todas las apariciones de $a$ por $ae$ y todas las de $a^{-1}$ por $e^{-1}a^{-1}$, donde $e$ es un símbolo que no está todavía en la presentación.
+\item \textit{Consolidación:} Si $a$ y $b$ aparecen siempre de forma adyacente, intercambiar $ab$ por $a$ y $b^{-1}a^{-1}$ por $a^{-1}$, siempre que esto de lugar a una o más palabras de longitud al menos $3$ o una sola palabra de longitud $2$.
+\item \textit{Reflexión:} $$\langle S\mid   a_1 \dots a_m, W_2,\dots,W_k\rangle \mapsto \langle S\mid   a_m^{-1}\dots a_1^{-1}, W_2, \dots ,W_k\rangle$$.
+\item \textit{Rotación:} $$\langle S\mid a_1a_2\dots a_m, W_2,\dots , W_k\rangle \mapsto \langle S\mid   a_2\dots a_ma_1, W_2,\dots , W_k\rangle $$
 \end{itemize}
 \end{defin}
 
@@ -716,7 +721,7 @@ Sean $V_1$ y $V_2$ variedades. Entonces $X=V_1\#V_2$ es una variedad.
 \end{prop}
 \begin{proof}
 Denotemos la proyección $\pi:M_1^o\sqcup M_2^o\to X$. Sea $S=\pi (S_1)=\pi (S_2)$. Tenemosdos abiertos $U_j=M_j^o-S_j$, $j=1,2$ saturados. Por tanto, $\pi :U_ j\to \pi (U_j)=U_j'$ es homeomorfismo. Esto implica que $X$ es localmente $\R^n$ en los puntos de $U_1'\cup U_2'$ . Además ahí la topología es Hausdorff y IIAN.
-Veamos ahora qué ocurre para un punto $p\in S$. Se tiene que $p=\pi (p_1)=\pi (p_2)$, $p_j\in S_j$, $j=1,2$, y $\varphi_j(p_j)=x_0 \in \partial B_1(0) \in \R^n$. Tomamos un entorno $V\subset \partial B_1(0)$ de $x_0$ en $\partial B_1(0)$, con lo que $\hat{V}=\{rx | r\in (1-\varepsilon , 1+\varepsilon ), x\in V\}$ es entorno de $x_0$ en $\R^n$, y $\hat{V}-B_1(0)=\{rx|r\in [1, 1+\varepsilon ), x \in V\}$. Sea $V_j=\varphi_j^{-1}(\hat{V}-B_1(0))\subset M_j^o$, que es entorno de $p_j$. Claramente $V_1\sqcup V_2$ es abierto saturado de $M_1^o\sqcup M_2^o$, luego $\tilde{V}=\pi (V_1\sqcup V_2)$ es entorno de $p$ en $X$. Veamos ahora que es homeomorfo a un abierto de $\R^n$. Sea
+Veamos ahora qué ocurre para un punto $p\in S$. Se tiene que $p=\pi (p_1)=\pi (p_2)$, $p_j\in S_j$, $j=1,2$, y $\varphi_j(p_j)=x_0 \in \partial B_1(0) \in \R^n$. Tomamos un entorno $V\subset \partial B_1(0)$ de $x_0$ en $\partial B_1(0)$, con lo que $\hat{V}=\{rx\mid   r\in (1-\varepsilon , 1+\varepsilon ), x\in V\}$ es entorno de $x_0$ en $\R^n$, y $\hat{V}-B_1(0)=\{rx\mid r\in [1, 1+\varepsilon ), x \in V\}$. Sea $V_j=\varphi_j^{-1}(\hat{V}-B_1(0))\subset M_j^o$, que es entorno de $p_j$. Claramente $V_1\sqcup V_2$ es abierto saturado de $M_1^o\sqcup M_2^o$, luego $\tilde{V}=\pi (V_1\sqcup V_2)$ es entorno de $p$ en $X$. Veamos ahora que es homeomorfo a un abierto de $\R^n$. Sea
 \begin{align*}
 \Phi : & V_1\sqcup V_2  \to  V\times (1-\varepsilon , 1+ \varepsilon ), \\
 & q_1\in V_1  \mapsto  (x,r), r=\norm{\varphi_1(q_1)}, x=\varphi_1(q_1)/r,\\
