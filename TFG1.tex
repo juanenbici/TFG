@@ -666,11 +666,15 @@ Vamos a definir ahora unas operaciones elementales sobre las representaciones po
 \begin{defin}%%%%DEF: Operaciones elementales sobre representaciones
 Las siguientes operaciones se llaman \enfatiza{transformaciones elementales} de una presentación poligonal:
 \begin{itemize}
-\item \textit{Reetiquetado:} Cambiar todas las apariciones de un símbolo $a$ por otro símbolo que no está todavía en la representación, intercambiar todas las apariciones de dos símbolos $a$ y $b$ o intercambiar todas las apariciones de $a$ y $a^{-1}$.
-\item \textit{Subdividisión:} Cambiar todas las apariciones de $a$ por $ae$ y todas las de $a^{-1}$ por $e^{-1}a^{-1}$, donde $e$ es un símbolo que no está todavía en la presentación.
-\item \textit{Consolidación:} Si $a$ y $b$ aparecen siempre de forma adyacente, intercambiar $ab$ por $a$ y $b^{-1}a^{-1}$ por $a^{-1}$, siempre que esto de lugar a una o más palabras de longitud al menos $3$ o una sola palabra de longitud $2$.
-\item \textit{Reflexión:} $$\langle S\mid   a_1 \dots a_m, W_2,\dots,W_k\rangle \mapsto \langle S\mid   a_m^{-1}\dots a_1^{-1}, W_2, \dots ,W_k\rangle$$.
-\item \textit{Rotación:} $$\langle S\mid a_1a_2\dots a_m, W_2,\dots , W_k\rangle \mapsto \langle S\mid   a_2\dots a_ma_1, W_2,\dots , W_k\rangle $$
+\item \textit{Reetiquetar:} Cambiar todas las apariciones de un símbolo $a$ por otro símbolo que no está todavía en la representación, intercambiar todas las apariciones de dos símbolos $a$ y $b$ o intercambiar todas las apariciones de $a$ y $a^{-1}$.
+\item \textit{Subdividir:} Cambiar todas las apariciones de $a$ por $ae$ y todas las de $a^{-1}$ por $e^{-1}a^{-1}$, donde $e$ es un símbolo que no está todavía en la presentación.
+\item \textit{Consolidar:} Si $a$ y $b$ aparecen siempre de forma adyacente, intercambiar $ab$ por $a$ y $b^{-1}a^{-1}$ por $a^{-1}$, siempre que esto de lugar a una o más palabras de longitud al menos $3$ o una sola palabra de longitud $2$.
+\item \textit{Reflejar:} $$\langle S\mid   a_1 \dots a_m, W_2,\dots,W_k\rangle \mapsto \langle S\mid   a_m^{-1}\dots a_1^{-1}, W_2, \dots ,W_k\rangle .$$
+\item \textit{Rotar:} $$\langle S\mid a_1a_2\dots a_m, W_2,\dots , W_k\rangle \mapsto \langle S\mid   a_2\dots a_ma_1, W_2,\dots , W_k\rangle .$$
+\item \textit{Cortar:} Si $W_1$ y $W_2$ tienen longitud al menos $2$, $$\langle S\mid W_1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1e, e^{-1}W_2, W_3,\dots W_k\rangle .$$
+\item \textit{Pegar:} $$\langle S,e\mid W_1e, e^-1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1W_2, W_3,\dots , W_k\rangle .$$
+\item \textit{Plegar:} Si $w_1$ tiene longitud al menos $3$, $$\langle S,e\mid W_1ee^{-1}, W_2,\dots W_k\rangle \mapsto \langle S\mid W_1, W_2,\dots , W_k\rangle .$$ Permitimos que $W_1$ tenga longitud $2$, siempre que la representación tenga una sola palabra.
+\item \textit{Desplegar:} $$\langle S\mid W_1, W_2,\dots , W_k\rangle \mapsto \langle S,e\mid W_1ee^{-1}, W_2,\dots , W_k\rangle .$$
 \end{itemize}
 \end{defin}
 
