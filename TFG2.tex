@@ -747,6 +747,77 @@ $\overline{\Phi}$ es abierta: si tomamos un abierto básico saturado de $V_1\sqc
 Los abiertos construidos, $\tilde{V} \subset X$, se pueden tomar en cantidad numerable para formar una base de la topología, con lo cual $X$ es IIAN. También, dado un $q\in U_j'$, $j=1,2$, y un $p\in S$, se puede tomar un abierto $\tilde{V}$ entorno de $p$ disjunto de un entorno pequeño de $q$. Y si tomamos $p, p' \in S$ distintos, los abiertos $\tilde{V}$, $\tilde{V}'$ construidos partiendo de $V$, $V'\subset \partial B_1(0)$ disjuntos, serán disjuntos. Luego $X$ es Hausdorff.
 \end{proof}
 
+
+\begin{eje}%%%%EJE: Asas y toros
+Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el espacio que se obtiene al ``pegarle'' un \textit{asa} a $S$. De forma más precisa, sea $S_0$ que denota a $S$ con dos perforaciones, es decir la superficie que queda al retirar dos discos cerrados disjuntos de $M$ (se dará una construcción más precisa en \autoref{def:perforacion}). Entonces $S_0$ y $\mathbb{S}^1\times I$ son ambas superficies con borde, y sus bordes son ambos homeomorfos a la union disjunta de dos circunferencias. Sea $\tilde{S}$ el espacio adjunción (\autoref{app:adjuncion}) obtenido pegando $S_0$ y $\mathbb{S}^1\times I$ por sus bordes. Este espacio cociente es homeomorfo a $S\# \Toro$. La razón, que se puede ver en la \autoref{fig:toro_asa}
+
+%%165%%
+\end{eje}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+%1
+
+
+\fill[gray!20] (-3.3, 0.2) -- (-3.3,0) arc[x radius=0.7, y radius=0.2, start angle=0, end angle=-180] (-4.7,0) -- (-4.7, 0.2)  [out=90, in=270] to (-5,1) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] arc[x radius=0.5, y radius=0.3, start angle=180, end angle=360]  arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] [out=270, in=90] to (-3.3,0.2) ;
+
+
+\draw (-3.3, 0.2) -- (-3.3,0) arc[x radius=0.7, y radius=0.2, start angle=0, end angle=-180] (-4.7,0) -- (-4.7, 0.2)  [out=90, in=270] to (-5,1) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] arc[x radius=0.5, y radius=0.3, start angle=180, end angle=360]  arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] [out=270, in=90] to (-3.3,0.2) ;
+
+
+
+
+
+
+\draw (-3,1) arc[x radius=1, y radius=0.8, start angle=0, end angle=180]; \draw [dashed] (-5,1)  arc [x radius=0.25, y radius=0.1, start angle=180, end angle=0];
+\draw (-4.5,1) arc [x radius=0.5, y radius=0.3, start angle=180, end angle=0];
+\draw (-3.5,1) [dashed] arc [x radius=0.25, y radius=0.1, start angle=180, end angle=0];
+
+\draw (-5.8,-0.5) [out=0, in=270] to (-4.7,0);
+\draw [dashed](-3.3,0) arc[x radius=0.7, y radius=0.2, start angle=0, end angle=180];
+\draw (-3.3,0) [out=270, in=180] to (-2.2,-0.5);
+
+%2
+
+
+
+\draw (1,1) arc[x radius=1, y radius=0.8, start angle=0, end angle=180];
+\draw [dashed] (-1,1)  arc [x radius=0.25, y radius=0.1, start angle=180, end angle=0];
+\draw (-0.5,1) arc [x radius=0.5, y radius=0.3, start angle=180, end angle=0];
+\draw (0.5,1) [dashed] arc [x radius=0.25, y radius=0.1, start angle=180, end angle=0];
+
+
+\fill[color=gray!20] (-0.5,1) arc[x radius=0.5, y radius=0.3, start angle=180, end angle=360] arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] [out=270, in=90] to (1.2,0) arc[x radius=1.2, y radius=0.3, start angle=0, end angle=-180] [out=90, in=270] to (-1,1) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360];
+\draw (-0.5,1) arc[x radius=0.5, y radius=0.3, start angle=180, end angle=360] arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] [out=270, in=90] to (1.2,0) arc[x radius=1.2, y radius=0.3, start angle=0, end angle=-180] [out=90, in=270] to (-1,1) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360];
+
+\draw (-1.8,-0.5) [out=0, in=270] to (-1.2,0);
+
+\draw [dashed] (1.2,0) arc[x radius=1.2, y radius=0.3, start angle=0, end angle=180];
+\draw (1.2,0) [out=270, in=180] to (1.8,-0.5);
+
+%3
+
+
+\draw (5.2,0) [out=270, in=180] to (5.8, -0.5);
+\draw (2.2,-0.5) [out=0, in=270] to (2.8, 0);
+\fill[gray!20](2.8,0) arc[x radius=1.2, y radius=0.3, start angle=180, end angle=540];
+\draw (2.8,0) arc[x radius=1.2, y radius=0.3, start angle=180, end angle=360];
+
+\fill[white] (3,0) -- (3, 0.5) arc[x radius=1, y radius=.8, start angle=180, end angle=0] -- +(0,-0.5) arc[x radius=0.25, y radius=.1, start angle=0, end angle=-180] -- +(0,.5) arc[x radius=0.5, y radius=0.3, start angle=0, end angle=180] -- +(0,-.5) arc[x radius=0.25, y radius=0.1, start angle=0, end angle=-180];
+
+\draw (3,0) -- (3, 0.5) arc[x radius=1, y radius=.8, start angle=180, end angle=0] -- +(0,-0.5) arc[x radius=0.25, y radius=.1, start angle=0, end angle=-180] -- +(0,.5) arc[x radius=0.5, y radius=0.3, start angle=0, end angle=180] -- +(0,-.5) arc[x radius=0.25, y radius=0.1, start angle=0, end angle=-180];
+
+\draw[dashed] (3,0) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=0] (5,0) arc[x radius=0.25, y radius=0.1, start angle=0, end angle=180];
+\draw[dash pattern=on 7.5pt off 2.2pt on 2.2pt off 2.2pt on 2.2pt off 2.2pt on 2.2pt off 1.8 pt on 28.4pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2.4pt] (2.8,0) arc[x radius=1.2, y radius=0.3, start angle=180, end angle=0];
+
+\draw (-2,1) node {$ \approx $};
+\draw (2,1) node {$ \approx $};
+
+\caption{Suma conexa de una superficie y un toro visto como pegar un \textit{asa}. \label{fig:toro_asa}}
+\end{tikzpicture}
+\end{figure}
+
 \begin{prop}
 Sean $M_1$ y $M_2$ superficies que tienen (---admiten mejor?---) respectivamente representaciones $\langle S_1\mid W_1\rangle $ y $\langle S_2\mid W_2\rangle $, donde $S_1$ y $S_2$ son conjuntos disjuntos y tal que cada presentación tiene una sola cara. Entonces $\langle S_1,S_2\mid W_1W_2\rangle$ es una presentación de la suma conexa $M_1 \# M_2$.
 \end{prop}
@@ -772,8 +843,30 @@ Toda superficie es triangulable.
 \chapter{La prueba ZIP de Conway}
 
 \begin{defin}%M%%%DEF: perforación
-Sea $S$ una superficie. Sea $p\in S$ y $U$ un entorno de $p$ en $S$. Sea $\phi :U\to \R^n$ un homeomorfismo tal que $\phi (p)=0$. Sea $B=\phi ^{-1}(B_1(0))$. Decimos que la nueva superficie $S^o=S\setminus B$ es $S$ \enfatiza{perforada}, y a $\partial B\subset S^o$ la llamamos \enfatiza{perforación}. Podemos repetir el proceso sobre $S^o$, obteniendo $S$ perforada con un número finito de perforaciones.
+\label{def:perforacion}
+Sea $S$ una superficie. Sea $p\in int(S)$ y $U$ un entorno de $p$ en $S$. Sea $\phi :U\to \R^n$ un homeomorfismo tal que $\phi (p)=0$. Sea $B=\phi ^{-1}(B_1(0))$. Decimos que la nueva superficie $S^o=S\setminus B$ es $S$ \enfatiza{perforada}, y a $\partial B\subset S^o$ la llamamos \enfatiza{perforación}. Podemos repetir el proceso sobre $S^o$ sucesivamente, obteniendo $S$ perforada con un número finito de perforaciones.
 \end{defin}
+
+\begin{obs}%M%%%OBS: Disco como esfera perforada
+Dados que los dos espacios son homeomorfos, podemos visualizar el disco cerrado $\overline{\mathbb{B}}^2$ como una esfera con una perforación (\autoref{fig:disco_esfera_perforada}).
+\end{obs}
+ 
+
+\begin{figure}%%%%FIG: Disco esfera perforada
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[rotate around={-14.04:(-1.34,0.02)}] (-1.34,0.02) ellipse (0.32cm and 0.24cm);
+\fill[color=gray!40][rotate around={-14.04:(3.33,1.31)}] (3.33,1.31) ellipse (0.32cm and 0.24cm);
+\draw[rotate around={-14.04:(3.33,1.31)}] (3.33,1.31) ellipse (0.32cm and 0.24cm);
+\draw(3,0) circle (2cm);
+\draw(1,0) arc[x radius=2, y radius=0.5, start angle=180, end angle=360];
+\draw[dashed](5,0) arc[x radius=2, y radius=0.5, start angle=0, end angle=180];
+\draw(0,0) node[anchor=north] {$ \approx $};
+%\draw [out=-14.04, in=0, looseness=2] (-1.28,0.26) to (-1.5,-2);
+%\draw [out=180, in=165.96, looseness=4] (-1.5,-2) to (-1.28,0.26);
+\end{tikzpicture}
+\caption{El disco cerrado como una esfera perforada.\label{fig:disco_esfera_perforada}}
+\end{figure}
 
 Conway utiliza las cremalleras (\textit{zips} en inglés) para describir cómo actúan las identificaciones topológicas. Cada cremallera actúa sobre una o dos perforaciones de una superficie. Están formadas por dos \textit{zips} (dos partes dentadas) fijadas la/s perforación/es y un \textit{zipper} (el deslizador). Al cerrar el \textit{zipper}, las \textit{zips} se juntan identificándose.
 
