@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.14)  19 FEB 2020 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.14)  19 FEB 2020 17:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1889,352 +1889,98 @@ Package babel Info: Redefining spanish shorthand "?
 LaTeX Warning: Reference `app:adjuncion' on page 11 undefined on input line 752
 .
 
-
-LaTeX Warning: Reference `fig:toro_asa' on page 11 undefined on input line 752.
-
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.817 ...ar un \textit{asa}. \label{fig:toro_asa}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.817 ...ar un \textit{asa}. \label{fig:toro_asa}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.817 ...ar un \textit{asa}. \label{fig:toro_asa}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.817 ...ar un \textit{asa}. \label{fig:toro_asa}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.817 ...ar un \textit{asa}. \label{fig:toro_asa}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.817 ...ar un \textit{asa}. \label{fig:toro_asa}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.817 ...ar un \textit{asa}. \label{fig:toro_asa}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.817 ...ar un \textit{asa}. \label{fig:toro_asa}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.817 ...ar un \textit{asa}. \label{fig:toro_asa}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Undefined control sequence.
-\endtikzpicture ...r@layerlist@globally \endscope 
-                                                  \let \pgf@baseline =\pgf@s...
-l.818 \end{tikzpicture}
-                       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Extra }, or forgotten \endgroup.
-\endpgfpicture ...globally \endgroup \hss \egroup 
-                                                  \pgf@restore@layerlist@fro...
-l.818 \end{tikzpicture}
-                       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.818 \end{tikzpicture}
-                       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Infinite glue shrinkage found in a paragraph.
-<inserted text> }
-                 
-l.818 \end{tikzpicture}
-                       
-The paragraph just ended includes some glue that has
-infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
-Such glue doesn't belong there---it allows a paragraph
-of any length to fit on one line. But it's safe to proceed,
-since the offensive shrinkability has been made finite.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.818 \end{tikzpicture}
-                       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Too many }'s.
-\endpgfpicture ...dpicture \endgroup \hss \egroup 
-                                                  \pgfsys@typesetpicturebox ...
-l.818 \end{tikzpicture}
-                       
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-! Extra \endgroup.
-\endpgfpicture ...setpicturebox \pgfpic \endgroup 
-                                                  
-l.818 \end{tikzpicture}
-                       
-Things are pretty mixed up, but I think the worst is over.
-
-! Extra \endgroup.
-\endtikzpicture ...lobal \endpgfpicture \endgroup 
-                                                  
-l.818 \end{tikzpicture}
-                       
-Things are pretty mixed up, but I think the worst is over.
-
-
-! LaTeX Error: \begin{document} ended by \end{tikzpicture}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.818 \end{tikzpicture}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.818 \end{tikzpicture}
-                       
-Things are pretty mixed up, but I think the worst is over.
-
-! Infinite glue shrinkage found in a paragraph.
-\@endfloatbox ->\par 
-                     \vskip \z@skip \@minipagefalse \outer@nobreak \egroup \...
-l.819 \end{figure}
-                  
-The paragraph just ended includes some glue that has
-infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
-Such glue doesn't belong there---it allows a paragraph
-of any length to fit on one line. But it's safe to proceed,
-since the offensive shrinkability has been made finite.
-
-! Too many }'s.
-\@endfloatbox ...pagefalse \outer@nobreak \egroup 
-                                                  \color@endbox 
-l.819 \end{figure}
-                  
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-! Extra \endgroup.
-\color@endgroup ->\endgraf \endgroup 
-                                     
-l.819 \end{figure}
-                  
-Things are pretty mixed up, but I think the worst is over.
-
-! Too many }'s.
-\color@endbox ->\color@endgroup \egroup 
-                                        
-l.819 \end{figure}
-                  
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-
-! LaTeX Error: \begin{document} ended by \end{figure}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.819 \end{figure}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.819 \end{figure}
-                  
-Things are pretty mixed up, but I think the worst is over.
-
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 [11]
 Cap\'{\i }tulo 2.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 829.
+(babel)             in language  on input line 830.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 835.
+(babel)             in language  on input line 836.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 835.
+(babel)             in language  on input line 836.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 835.
+(babel)             in language  on input line 836.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 835.
+(babel)             in language  on input line 836.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 835.
+(babel)             in language  on input line 836.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 835.
+(babel)             in language  on input line 836.
 Package hyperref Info: bookmark level for unknown tma defaults to 0 on input li
-ne 838.
+ne 839.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 [12
 
 ]
 Cap\'{\i }tulo 3.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 843.
+(babel)             in language  on input line 844.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2318,174 +2064,174 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 [13
 
 ]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
  [14]
 Ap\'{e}ndice A.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 992.
+(babel)             in language  on input line 998.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 [15
 
 ]
 Ap\'{e}ndice B.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1010.
+(babel)             in language  on input line 1016.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1012.
+(babel)             in language  on input line 1018.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1012.
+(babel)             in language  on input line 1018.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1012.
+(babel)             in language  on input line 1018.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1012.
+(babel)             in language  on input line 1018.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1012.
+(babel)             in language  on input line 1018.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1012.
+(babel)             in language  on input line 1018.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1012.
+(babel)             in language  on input line 1018.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1012.
+(babel)             in language  on input line 1018.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1012.
+(babel)             in language  on input line 1018.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1012.
+(babel)             in language  on input line 1018.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1012.
+(babel)             in language  on input line 1018.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1012.
+(babel)             in language  on input line 1018.
 [16
 
 ]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1037.
+(babel)             in language  on input line 1043.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1037.
+(babel)             in language  on input line 1043.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1037.
+(babel)             in language  on input line 1043.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1037.
+(babel)             in language  on input line 1043.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1037.
+(babel)             in language  on input line 1043.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1037.
+(babel)             in language  on input line 1043.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1037.
+(babel)             in language  on input line 1043.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1037.
+(babel)             in language  on input line 1043.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1037.
+(babel)             in language  on input line 1043.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1037.
+(babel)             in language  on input line 1043.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1037.
+(babel)             in language  on input line 1043.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1037.
+(babel)             in language  on input line 1043.
  [17
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1037.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1037.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1043.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1043.
  (./TFG2.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1037.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1037.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1043.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1043.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
 (rerunfilecheck)             Checksum: 1AE3E6797E424A4461AE9B54B15F4A4A;561.
@@ -2495,10 +2241,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 31365 strings out of 492982
- 746658 string characters out of 6134895
- 941891 words of memory out of 5000000
- 34251 multiletter control sequences out of 15000+600000
+ 31371 strings out of 492982
+ 746760 string characters out of 6134895
+ 943184 words of memory out of 5000000
+ 34256 multiletter control sequences out of 15000+600000
  8939 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,9n,104p,1731b,1272s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2518,10 +2264,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (21 pages, 309563 bytes).
+Output written on TFG2.pdf (21 pages, 311379 bytes).
 PDF statistics:
- 388 PDF objects out of 1000 (max. 8388607)
- 327 compressed objects within 4 object streams
- 112 named destinations out of 1000 (max. 500000)
+ 391 PDF objects out of 1000 (max. 8388607)
+ 330 compressed objects within 4 object streams
+ 113 named destinations out of 1000 (max. 500000)
  186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

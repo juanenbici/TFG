@@ -806,7 +806,7 @@ Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el e
 
 \fill[white] (3,0) -- (3, 0.5) arc[x radius=1, y radius=.8, start angle=180, end angle=0] -- +(0,-0.5) arc[x radius=0.25, y radius=.1, start angle=0, end angle=-180] -- +(0,.5) arc[x radius=0.5, y radius=0.3, start angle=0, end angle=180] -- +(0,-.5) arc[x radius=0.25, y radius=0.1, start angle=0, end angle=-180];
 
-\draw (3,0) -- (3, 0.5) arc[x radius=1, y radius=.8, start angle=180, end angle=0] -- +(0,-0.5) arc[x radius=0.25, y radius=.1, start angle=0, end angle=-180] -- +(0,.5) arc[x radius=0.5, y radius=0.3, start angle=0, end angle=180] -- +(0,-.5) arc[x radius=0.25, y radius=0.1, start angle=0, end angle=-180];
+\draw (3,0) -- (3, 0.5) arc[x radius=1, y radius=.8, start angle=180, end angle=0] -- +(0,-0.5) arc[x radius=0.25, y radius=.1, start angle=0, end angle=-180] -- +(0,.5) arc[x radius=0.5, y radius=0.35, start angle=0, end angle=180] -- +(0,-.5) arc[x radius=0.25, y radius=0.1, start angle=0, end angle=-180];
 
 \draw[dashed] (3,0) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=0] (5,0) arc[x radius=0.25, y radius=0.1, start angle=0, end angle=180];
 \draw[dash pattern=on 7.5pt off 2.2pt on 2.2pt off 2.2pt on 2.2pt off 2.2pt on 2.2pt off 1.8 pt on 28.4pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2.4pt] (2.8,0) arc[x radius=1.2, y radius=0.3, start angle=180, end angle=0];
@@ -814,8 +814,9 @@ Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el e
 \draw (-2,1) node {$ \approx $};
 \draw (2,1) node {$ \approx $};
 
-\caption{Suma conexa de una superficie y un toro visto como pegar un \textit{asa}. \label{fig:toro_asa}}
+
 \end{tikzpicture}
+\caption{Suma conexa de una superficie y un toro visto como pegar un \textit{asa}. \label{fig:toro_asa}}
 \end{figure}
 
 \begin{prop}
@@ -907,17 +908,20 @@ En la \textit{prueba ZIP}, Conway nos explica gráficamente las posibles formas 
 
 \begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 %1
+\fill[gray!10] (-5,5) -- (-7,3) -- (-5,1) -- (-3,3) -- cycle;
 \draw [->-](-5,5)-- (-7,3);
 \draw [-<<-](-5,5)-- (-3,3);
 \draw [-<-](-3,3)-- (-5,1);
 \draw [->>-](-7,3)-- (-5,1);
 
 %2
+\fill[gray!10] (-2,3.5) arc[ x radius=2, y radius=0.5, start angle=180, end angle=540];
 %\draw(0,3) circle (2cm);
 \draw [->>-={at=0.125},->-={at=0.375}, ->>-={at=0.625}, ->-={at=0.875}] (-2,3.5) arc[x radius=2, y radius=0.5, start angle=180, end angle=540];
 \draw [name path=C] (-2,3.5) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
 
 %3
+\fill [gray!10] (3, 3.5) [out=270, in=225, looseness=0.7] to (5,3.5) [out=45, in=90, looseness=0.7] to (7, 3.5) [out=-90, in=-45, looseness=0.7] to (5,3.5) [out=135, in=90, looseness=0.7] to (3, 3.5);
 %\draw[name path=A] (3,3.5) [-<-={at=0.25}, -<<-={at=0.75}](3,3.5) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
 %\draw [name path=B] (5,3.5) [-<<-={at=0.25}, -<-={at=0.75}] arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
 \draw [name path=C] (3,3.5) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
@@ -927,7 +931,8 @@ En la \textit{prueba ZIP}, Conway nos explica gráficamente las posibles formas 
 \draw [->-][out=-45, in=-90, looseness=0.7] (5,3.5) to (7,3.5);
 
 %3B
-
+\fill[gray!20] (-7,-3) [out=90, in=135, looseness=2.3] to (-5,-3) [out=135, in=90, looseness=0.7] to (-7,-3);
+\fill[gray!10] (-5,-3) [out=225, in=270, looseness=0.7] to (-7,-3) [out=90, in=135] to (-5,-3) ;
 
 \draw [name path=C] (-7,-3) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
 \draw [->>-][out=270, in=225, looseness=0.7] (-7, -3) to (-5,-3);
@@ -938,7 +943,8 @@ En la \textit{prueba ZIP}, Conway nos explica gráficamente las posibles formas 
 \draw [color=gray][out=-45, in=-90, looseness=0.7] (-5, -3) to (-3,-3);
 
 %4
-
+\fill[gray!10] (0,-3) [out=225, in=270, looseness=0.7] to (-2,-3) [out=90, in=135] to (0,-3) ;
+\fill[gray!20] (-2,-3) [out=90, in=180] to (0,-1.5)  -- (0, -3) [out=135, in=90, looseness=0.7] to (-2,-3);
 \draw [out=90,in=360] (2,-3) to (0,-1.5);
 \draw [out=180, in=90] (0, -1.5) to (-2,-3);
 \draw [->>-][out=270, in=225, looseness=0.7] (-2, -3) to (0,-3);
