@@ -54,6 +54,8 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Epsilon}{\mathcal{E}}
+\DeclareMathOperator{\interior}{int} %interior
+
 
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Comando para normas
 \newcommand{\Esfera}{\mathbb{S}^2}
@@ -517,20 +519,24 @@ Sea $S$ un conjunto. Una \textbf{\textit{palabra en $S$}} es una $k$-tupla orden
 
 \begin{defin}%%%%DEF: Representación poligonal
 \label{def:rep_pol}
-Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,...,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b\mid  aba^{-1}b^{-1}\rangle$. Permitimos el caso especial de $S=\{a\}$ y palabras de longitud $2$, es decir $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$ y longitud $1$, es decir $\langle a\mid a\rangle$ y $\langle a\mid a^{-1}\rangle$.
-\end{defin}
+Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,...,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b\mid  aba^{-1}b^{-1}\rangle$. 
 
+Permitimos el caso especial de que $S=\{a\}$ (u otro símbolo cualquiera) y que $\mathcal{P}$ tenga una sola palabra de longitud $2$, es decir, $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
+\begin{comment} o $1$ \end{comment} 
+ \begin{comment}, $\langle a\mid a\rangle$ y $\langle a\mid a^{-1}\rangle$ \end{comment}
+\end{defin}
 
 \begin{defin}%%%%DEF: Realización geométrica
 Toda representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $|\mathcal{P}|$, llamado \textbf{\textit{realización geométrica de $\mathcal{P}$}} . $|\mathcal{P}|$ se obtiene de la siguiente manera:
 \begin{itemize}
-\item[1.] Para cada $W_i\in \mathcal{P}$ de longitud $k$, sea $P_i$ la $k$-región poligonal centrada en el origen con lados de longitud 1, ángulos iguales y tal que un vértice yace sobre el eje $OY$.
+\item[1.] Para cada $W_i\in \mathcal{P}$ de longitud $k$, sea $P_i$ la $k$-región poligonal convexa centrada en el origen con lados de longitud 1, ángulos iguales y tal que un vértice yace sobre el eje $OY$.
 \item[2.] Se define una correspondencia uno a uno entre los símbolos de $W_ i$ y los bordes de $P_i$ en sentido contrario a las agujas del reloj, empezando por el que yace en el eje $OY$.
 \item[3.] Sea $|\mathcal{P}|$ el espacio cociente de $\coprod_i P_i$ determinado identificando bordes que tengan el mismo símbolo, conforme al homeomorfismo afín que hace coincidir los primeros vértices de lo bordes con una etiqueta dada $a$ y los últimos vertices de los que tienen la correspondiente etiqueta $a^{-1}$ (en el sentido contrario a las agujas del reloj).
+
 \end{itemize}
 
 
-Si $|\mathcal{P}|$ es una de las representaciones poligonales de un solo elemento, decimos que $|\mathcal{P}|$ es la esfera $\mathbb{S}^2$ si la palabra es $aa^{-1}$ o $a^{-1}a$, el plano proyectivo $\mathbb{P}^2$ si es $aa$ o $a^{-1}a^{-1}$, y el disco cerrado $\overline{\mathbb{B}}^2$ si es $a$ o $a^{-1}$.
+Si $\mathcal{P}$ es una de las representaciones poligonales de un solo elemento, definimos $|\mathcal{P}|$ como la esfera $\mathbb{S}^2$ si la palabra es $aa^{-1}$ o $a^{-1}a$, o como el plano proyectivo $\mathbb{P}^2$ si es $aa$ o $a^{-1}a^{-1}$.% También decimos que $|\mathcal{P}|$ es el disco cerrado $\overline{\mathbb{B}}^2$ si la palabra es $a$ o $a^{-1}$.
 \end{defin}
 
 Por notación, dadas dos palabras $W_1$ y $W_2$, $W_1W_2$ representará la palabra formada concatenando $W_1$ y $W_2$. Por otro lado, adoptaremos la convención de que $(a^{-1})^{-1}=a$.
@@ -845,7 +851,7 @@ Toda superficie es triangulable.
 
 \begin{defin}%M%%%DEF: perforación
 \label{def:perforacion}
-Sea $S$ una superficie. Sea $p\in int(S)$ y $U$ un entorno de $p$ en $S$. Sea $\phi :U\to \R^n$ un homeomorfismo tal que $\phi (p)=0$. Sea $B=\phi ^{-1}(B_1(0))$. Decimos que la nueva superficie $S^o=S\setminus B$ es $S$ \enfatiza{perforada}, y a $\partial B\subset S^o$ la llamamos \enfatiza{perforación}. Podemos repetir el proceso sobre $S^o$ sucesivamente, obteniendo $S$ perforada con un número finito de perforaciones.
+Sea $S$ una superficie. Sea $p\in \interior (S)$ y $U$ un entorno abierto de $p$ en $S$. Sea $\phi :U\to \R^n$ un homeomorfismo tal que $\phi (p)=0$. Sea $B=\phi ^{-1}(B_1(0))$. Decimos que la nueva superficie $S^o=S\setminus B$ es $S$ \enfatiza{perforada}, y a $\partial B\subset S^o$ la llamamos \enfatiza{perforación}. Podemos repetir el proceso sobre $S^o$ sucesivamente, obteniendo $S$ perforada con un número finito de perforaciones.
 \end{defin}
 
 \begin{obs}%M%%%OBS: Disco como esfera perforada
@@ -857,7 +863,7 @@ Dados que los dos espacios son homeomorfos, podemos visualizar el disco cerrado 
 \centering
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 \draw[rotate around={-14.04:(-1.34,0.02)}] (-1.34,0.02) ellipse (0.32cm and 0.24cm);
-\fill[color=gray!40][rotate around={-14.04:(3.33,1.31)}] (3.33,1.31) ellipse (0.32cm and 0.24cm);
+\fill[color=gray!20][rotate around={-14.04:(3.33,1.31)}] (3.33,1.31) ellipse (0.32cm and 0.24cm);
 \draw[rotate around={-14.04:(3.33,1.31)}] (3.33,1.31) ellipse (0.32cm and 0.24cm);
 \draw(3,0) circle (2cm);
 \draw(1,0) arc[x radius=2, y radius=0.5, start angle=180, end angle=360];
@@ -872,20 +878,28 @@ Dados que los dos espacios son homeomorfos, podemos visualizar el disco cerrado 
 Conway utiliza las cremalleras (\textit{zips} en inglés) para describir cómo actúan las identificaciones topológicas. Cada cremallera actúa sobre una o dos perforaciones de una superficie. Están formadas por dos \textit{zips} (dos partes dentadas) fijadas la/s perforación/es y un \textit{zipper} (el deslizador). Al cerrar el \textit{zipper}, las \textit{zips} se juntan identificándose.
 
 
-%%%% \begin{defin}%%%DEF: zips asociadas a una representación poligonal de una superficie
-%%%% Sea $S$ una superficie. Sea $|\mathcal{P}|$ la realización geométrica de una representación poligonal $P=\langle A\mid W_1,\dots W_n\rangle$ de la superficie. Para cada $W_i$, con $i=1,\dots n$, sea $\partial B_i$ una perforación sobre una esfera $\Esfera_i$, y sea $\phi _i$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B_i$. A la perforación $\partial B_i$ la llamamos \enfatiza{perforación} asociada a $W_i$, y a la imagen de $\phi _i$ la llamamos \enfatiza{cremallera} asociada a $W_i$.
-%%%% \end{defin}
- 
-En la \textit{prueba ZIP}, Conway nos explica gráficamente las posibles formas de unir cremalleras.
+\begin{defin}%%%DEF: zips asociadas a una representación poligonal de una superficie
+Sea $S$ una superficie. Sea $|\mathcal{P}|$ la realización geométrica de una representación poligonal $P=\langle A\mid W_1,\dots W_n\rangle$ de la superficie. Para cada $W_i$, con $i=1,\dots n$, sea $\partial B_i$ una perforación sobre una esfera $\Esfera_i$, y sea $\phi _i$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B_i$. A la perforación $\partial B_i$ la llamamos \enfatiza{perforación} asociada a $W_i$, y a la imagen de $\phi _i$ la llamamos \enfatiza{cremallera} asociada a $W_i$.
+\end{defin}
+
+En la \textit{prueba ZIP}, Conway nos explica gráficamente las posibles formas de unir cremalleras. 
+\begin{defin}%%%DEF: ZIP
+Sea $S$ una superficie. 
+\end{defin}
+
+\begin{defin}
+Sea $\langle a\mid aa^{-1}\rangle$ la representación poligonal de  $\Esfera$ una esfera con dos perforaciones 
+\end{defin}
 
 \begin{figure}[h]%%%% FIG: suma conexa toro esfera
 \centering
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.85]
+\fill [black!10] (0.5,0) arc[x radius=0.5, y radius=0.5, start angle=0, end angle=-180];
+\fill[color=black!15] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=360];
 \draw [rotate around={0:(-5.5,0)}] (-5.5,0) ellipse (2.5cm and 2cm);
 \draw(0,0) circle (0.5cm);
-\fill [black!10] (0.5,0) arc[x radius=0.5, y radius=0.5, start angle=0, end angle=-180];
-\filldraw [color=black, fill=black!15] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=-180];
-\filldraw [color=black, fill=black!15][dashed] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=180];
+\draw (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=-180];
+\draw [dashed] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=180];
 \draw [rotate around={0:(5.7,0)}] (5.7,0) ellipse (2.5cm and 2cm);
 \draw [dashed] (6.67,1.32) arc[x radius=0.45, y radius=0.22, start angle=0, end angle=180];
 \draw (6.67,1.32) arc[x radius=0.45, y radius=0.22, start angle=0, end angle=-180];

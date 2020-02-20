@@ -7,5 +7,5 @@
 \contentsline {chapter}{\numberline {2}Triangulaci\IeC {\'o}n de superficies}{12}{chapter.2}
 \contentsline {section}{\numberline {2.1}Teorema de Rad\IeC {\'o}}{12}{section.2.1}
 \contentsline {chapter}{\numberline {3}La prueba ZIP de Conway}{13}{chapter.3}
-\contentsline {chapter}{\numberline {A}Teoremas Usados}{15}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}CW-complejos}{16}{appendix.Alph2}
+\contentsline {chapter}{\numberline {A}Teoremas Usados}{16}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}CW-complejos}{17}{appendix.Alph2}
