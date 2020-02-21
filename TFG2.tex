@@ -35,6 +35,7 @@
 \usetikzlibrary{decorations,decorations.markings}
 \usepackage{pgfplots}
 \usetikzlibrary{intersections, pgfplots.fillbetween}
+\usetikzlibrary {arrows.meta}
 
 \usepackage{etoolbox}
 \usetikzlibrary{optics}
@@ -502,7 +503,38 @@ Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1\amalg \dots
 %...6.4 del Lee.
 \end{proof}
 
+\begin{eje}%%%%EJE: Botella Klein
+La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando los lados del cuadrado $I\times I$ de acuerdo a $(0,t)\sim (1,t)$ y $(t,0)\sim (1-t,1)$ para $0\leq t\leq 1$.  Para visualizar $K$, podemos pensar en pegar los lados izquierdo y derecho creando un cilindro, y luego hacer pasar el extremo superior por la parte inferior del cilindro, para finalmente pegar los dos extremos (ver \autoref{fig:klein}).
+\end{eje}
 
+\begin{figure}%%%%FIG: Klein
+\centering
+\begin{tikzpicture} [use optics]
+%\draw [help lines] (-6,-2) grid (6,2);
+%1
+\draw[-<<-={at=0.125}, -<-={at=0.375}, ->>-={at=0.625}, -<-={at=0.875}] (-5,-1) -- (-5,1) -- (-3,1) -- (-3, -1) -- (-5,-1);
+%2
+\draw[-<<-] (-1.7, -1.085)--+(0,2);
+\draw [-<-={at=0.43}, -<-={at=0.897}] (-2,-1) -- +(0,2) arc[x radius=0.5, y radius=0.1, start angle=180, end angle=360] -- +(0,-2) arc[x radius=0.5, y radius=0.1, start angle=0, end angle=-180];
+\draw [dashed] (-2,-1) arc[x radius=0.5, y radius=0.1, start angle=180, end angle=0];
+\draw (-2,1) arc[x radius=0.5, y radius=0.1, start angle=180, end angle=0];
+%3
+\draw [->-={at=0.535}, ->-={at=0.974}](0.2,-0.5) [out=80, in=180] to (1.64,1.5) [out=0, in=100] to (3,-1) arc [x radius=0.35, y radius=0.1, start angle=0, end angle=-180] [out=85, in=0] to (1.64,1) [out=180, in=95] to (0.75, -0.5) arc[x radius=0.275, y radius=0.1, start angle=0, end angle=-180];
+\draw [dashed] (0.2,-0.5) arc[x radius=0.275, y radius=0.1, start angle=180, end angle=0] (3,-1) arc[x radius=0.35, y radius=0.1, start angle=0, end angle=180];
+
+%4
+\draw [->-={at=0.07}][dash pattern= on 52.5pt off 2pt on 2pt off 2pt on 2pt off 2pt on 79.5pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2.2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 200pt]
+	(5,-1) arc[x radius=0.4, y radius=0.1, start angle=0, end angle=-180] [out=135, in= 270] to +(-0.2,0.6) [out=90, in=270] to +(0.5,1) [out=90, in=0] to (4.3,1) [out=180, in=90] to +(-0.2,-0.3) [out=270, in=135] to +(0.5, -0.8) [out=-65, in=-65] to +(-0.3,-0.2) [out=-80, in=80] to (4.2,-1) arc [x radius=0.4, y radius=0.1, start angle=180, end angle=0] ;
+
+\draw [dash pattern= on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 180pt ](5,-1)[out=100, in=-45] to (4.6,-0.1) [out=115, in=115] to +(-0.3,-0.2) [out=135, in=270] to +(-0.5,1) [out=90, in=180] to (4.4,1.3) [out=0, in=90] to +(0.4, -0.7) [out=-90, in=90] to +(0.4,-1) [out=-90, in=45] to (5,-1);
+
+
+\draw [-Stealth](-.4,1.5) arc[x radius=0.4, y radius=0.2, start angle=150, end angle=30];
+\draw [-Stealth](-2.8,1.5) arc[x radius=0.4, y radius=0.2, start angle=150, end angle=30];
+\draw [-Stealth](3,1.5) arc[x radius=0.4, y radius=0.2, start angle=150, end angle=30];
+\end{tikzpicture}
+\caption{Construcción de la botella de Klein.\label{fig:klein}}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
@@ -523,7 +555,7 @@ Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{
 
 Permitimos el caso especial de que $S=\{a\}$ (u otro símbolo cualquiera) y que $\mathcal{P}$ tenga una sola palabra de longitud $2$, es decir, $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
 \begin{comment} o $1$ \end{comment} 
- \begin{comment}, $\langle a\mid a\rangle$ y $\langle a\mid a^{-1}\rangle$ \end{comment}
+\begin{comment}, $\langle a\mid a\rangle$ y $\langle a\mid a^{-1}\rangle$ \end{comment}
 \end{defin}
 
 \begin{defin}%%%%DEF: Realización geométrica
@@ -878,18 +910,59 @@ Dados que los dos espacios son homeomorfos, podemos visualizar el disco cerrado 
 Conway utiliza las cremalleras (\textit{zips} en inglés) para describir cómo actúan las identificaciones topológicas. Cada cremallera actúa sobre una o dos perforaciones de una superficie. Están formadas por dos \textit{zips} (dos partes dentadas) fijadas la/s perforación/es y un \textit{zipper} (el deslizador). Al cerrar el \textit{zipper}, las \textit{zips} se juntan identificándose.
 
 
-\begin{defin}%%%DEF: zips asociadas a una representación poligonal de una superficie
+\begin{defin}%M%%%DEF: zips asociadas a una representación poligonal de una superficie
 Sea $S$ una superficie. Sea $|\mathcal{P}|$ la realización geométrica de una representación poligonal $P=\langle A\mid W_1,\dots W_n\rangle$ de la superficie. Para cada $W_i$, con $i=1,\dots n$, sea $\partial B_i$ una perforación sobre una esfera $\Esfera_i$, y sea $\phi _i$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B_i$. A la perforación $\partial B_i$ la llamamos \enfatiza{perforación} asociada a $W_i$, y a la imagen de $\phi _i$ la llamamos \enfatiza{cremallera} asociada a $W_i$.
 \end{defin}
 
 En la \textit{prueba ZIP}, Conway nos explica gráficamente las posibles formas de unir cremalleras. 
+
 \begin{defin}%%%DEF: ZIP
-Sea $S$ una superficie. 
+Sea $S$ una superficie compacta. Una \enfatiza{cremallera} es una identificación entre dos subconjuntos (abtos, cerrados??) de la frontera de $S$. A este par lo llamamos \enfatiza{par-zip}.
 \end{defin}
 
 \begin{defin}
+Sea $S$ una superficie. Definimos cuatro formas elementales de identificar pares \textit{zip} en perforaciones de 
+$S$-perforada (ver \autoref{fig:zip_elementales}):
+
+\begin{itemize}
+\item[1.] \enfatiza{Cap}: Los pares zip yacen cada uno sobre la mitad de una misma perforación con orientaciones opuestas.
+\item[2.] \enfatiza{Crosscap}: Los pares zip yacen cada uno sobre la mitad de una misma perforación con la misma orientación.
+\item[3.] \enfatiza{Handle}: Los pares zip yacen cada uno sobre una perforación distinta de S con orientaciones opuestas.
+\item[4.] \enfatiza{Crosshandle}: Los pares zip yacen cada uno sobre una perforación distinta de S con la misma orientación.
+\end{itemize}
+\end{defin}
+\begin{defin}
 Sea $\langle a\mid aa^{-1}\rangle$ la representación poligonal de  $\Esfera$ una esfera con dos perforaciones 
 \end{defin}
+
+\begin{figure}
+\centering
+
+
+\begin{tikzpicture} [use optics]
+
+%\draw [help lines, step=1mm](0,-2) grid (6,2);
+\draw (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\draw (3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\draw (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+\draw [dashed](2,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=0];
+\draw (2,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=360];
+\draw[-<-={at=0.48}] [dash pattern= on 50pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt] (2.4,-.5) [out=90, in=180] to (3.1,.685) [out=0, in=90] to (3.6,.3);
+\draw (2,-.1) [out=80, in=180] to (3,0.7) [out=0, in=100] to (4,-.1);
+%\draw (2.4,-.5)-- (3.6,.3);
+
+
+\fill [color=black] (-3.6,-.5) circle (1.pt);
+\fill [color=black] (-2.4,.3) circle (1.pt);
+\fill [color=black] (3.6,.3) circle (1.pt);
+\fill [color=black] (2.4,-.5) circle (1.pt);
+
+
+
+\end{tikzpicture}
+
+\end{figure}
+
 
 \begin{figure}[h]%%%% FIG: suma conexa toro esfera
 \centering
