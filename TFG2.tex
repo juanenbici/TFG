@@ -942,16 +942,18 @@ Sea $\langle a\mid aa^{-1}\rangle$ la representación poligonal de  $\Esfera$ un
 \begin{tikzpicture} [use optics]
 
 %\draw [help lines, step=1mm](0,-2) grid (6,2);
+
+\fill [color=gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
 \draw (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
 \draw (3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
-\draw (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+\draw [-<-={at=0.1}, ->-={at=0.6}] (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
 \draw [dashed](2,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=0];
 \draw (2,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=360];
 \draw[-<-={at=0.48}] [dash pattern= on 50pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt] (2.4,-.5) [out=90, in=180] to (3.1,.685) [out=0, in=90] to (3.6,.3);
 \draw (2,-.1) [out=80, in=180] to (3,0.7) [out=0, in=100] to (4,-.1);
 %\draw (2.4,-.5)-- (3.6,.3);
 
-
+\fill [color=gray!20] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
 \fill [color=black] (-3.6,-.5) circle (1.pt);
 \fill [color=black] (-2.4,.3) circle (1.pt);
 \fill [color=black] (3.6,.3) circle (1.pt);
