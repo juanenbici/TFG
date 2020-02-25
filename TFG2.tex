@@ -878,13 +878,44 @@ Los abiertos construidos, $\tilde{V} \subset X$, se pueden tomar en cantidad num
 \end{proof}
 
 
+
+
+\begin{eje}
+Sea $S$ una superficie. Entonces la suma conexa $S\# \Esfera$ es homeomorfa a $S$ (ver \autoref{fig:suma_toro_esfera}).
+\end{eje}
+
+\begin{figure}[h]%%%% FIG: suma conexa toro esfera
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.75]
+\fill [black!10] (0.5,0) arc[x radius=0.5, y radius=0.5, start angle=0, end angle=-180];
+\fill[color=black!15] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=360];
+\draw [rotate around={0:(-5.5,0)}] (-5.5,0) ellipse (2.5cm and 2cm);
+\draw(0,0) circle (0.5cm);
+\draw (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=-180];
+\draw [dashed] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=180];
+\draw [rotate around={0:(5.7,0)}] (5.7,0) ellipse (2.5cm and 2cm);
+\draw [dashed] (6.67,1.32) arc[x radius=0.45, y radius=0.22, start angle=0, end angle=180];
+\draw (6.67,1.32) arc[x radius=0.45, y radius=0.22, start angle=0, end angle=-180];
+\filldraw [color=black, fill=black!10] [rotate around={0:(-5,1.32)}] (-5.0,1.32) ellipse (0.45cm and 0.22cm);
+\draw (5.77,1.32) arc[x radius=0.45, y radius=0.45, start angle=180, end angle=0];
+\draw (-6.1,0) arc[x radius=0.4, y radius=0.2, start angle=180, end angle=0];
+\draw (-6.4,0.31) arc[x radius=0.7, y radius=0.4, start angle=180, end angle=360];
+\draw (-1.8,0.56) node[anchor=north west] {$\#$};
+\draw (1.22,0.56) node[anchor=north west] {$=$};
+\draw (5.1,0) arc[x radius=0.4, y radius=0.2, start angle=180, end angle=0];
+\draw (4.8,0.31) arc[x radius=0.7, y radius=0.4, start angle=180, end angle=360];
+\end{tikzpicture}
+\caption{Suma conexa de un toro y una esfera.\label{fig:suma_toro_esfera}}
+\end{figure}
+
+
 \begin{eje}%%%%EJE: Asas y toros
-Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el espacio que se obtiene al ``pegarle'' un \textit{asa} a $S$. De forma más precisa, sea $S_0$ que denota a $S$ con dos perforaciones, es decir la superficie que queda al retirar dos discos cerrados disjuntos de $M$ (se dará una construcción más precisa en \autoref{def:perforacion}). Entonces $S_0$ y $\mathbb{S}^1\times I$ son ambas superficies con borde, y sus bordes son ambos homeomorfos a la union disjunta de dos circunferencias. Sea $\tilde{S}$ el espacio adjunción (\autoref{app:adjuncion}) obtenido pegando $S_0$ y $\mathbb{S}^1\times I$ por sus bordes. Este espacio cociente es homeomorfo a $S\# \Toro$. La razón, que se puede ver en la \autoref{fig:toro_asa}
+Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el espacio que se obtiene al ``pegarle'' un \textit{asa} a $S$. De forma más precisa, sea $S_0$ que denota a $S$ con dos perforaciones, es decir la superficie que queda al retirar dos discos cerrados disjuntos de $M$ (se dará una construcción más precisa en \autoref{def:perforacion}). Entonces $S_0$ y $\mathbb{S}^1\times I$ son ambas superficies con borde, y sus bordes son ambos homeomorfos a la union disjunta de dos circunferencias. Sea $\tilde{S}$ el espacio adjunción (\autoref{app:adjuncion}) obtenido pegando $S_0$ y $\mathbb{S}^1\times I$ por sus bordes. Este espacio cociente es homeomorfo a $S\# \Toro$. La razón se puede ver en la \autoref{fig:toro_asa}, y es que podemos obtener un espacio homeomorfo a $S\# \Toro$ primero quitando un disco abierto de $S$, luego pegando un disco cerrado con dos discos abiertos quitados (es decir, la parte gris de la figura), y finalmente pegando a la frontera de la construcción el cilindro $\Esfera \times I$. Dado que la primera operación da resultado a un espacio homeomorfo a $S$ con dos discos abiertos quitados, el resultado es el mismo que si quitamos directamente a $S$ dos discos abiertos y entonces pegamos el cilindro a su frontera.
 
 %%165%%
 \end{eje}
 
-\begin{figure}
+\begin{figure}%%%%FIG: Toro-Asa
 \centering
 \begin{tikzpicture}
 %1
@@ -949,6 +980,7 @@ Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el e
 \caption{Suma conexa de una superficie y un toro visto como pegar un \textit{asa}. \label{fig:toro_asa}}
 \end{figure}
 
+
 \begin{prop}
 Sean $M_1$ y $M_2$ superficies que tienen (---admiten mejor?---) respectivamente representaciones $\langle S_1\mid W_1\rangle $ y $\langle S_2\mid W_2\rangle $, donde $S_1$ y $S_2$ son conjuntos disjuntos y tal que cada presentación tiene una sola cara. Entonces $\langle S_1,S_2\mid W_1W_2\rangle$ es una presentación de la suma conexa $M_1 \# M_2$.
 \end{prop}
@@ -972,6 +1004,8 @@ Toda superficie es triangulable.
 
 
 \chapter{La prueba ZIP de Conway}
+
+\section{Cremalleras}
 
 \begin{defin}%M%%%DEF: perforación
 \label{def:perforacion}
@@ -999,18 +1033,16 @@ Dados que los dos espacios son homeomorfos, podemos visualizar el disco cerrado 
 \caption{El disco cerrado como una esfera perforada.\label{fig:disco_esfera_perforada}}
 \end{figure}
 
-Conway utiliza las cremalleras (\textit{zips} en inglés) para describir cómo actúan las identificaciones topológicas. Cada cremallera actúa sobre una o dos perforaciones de una superficie. Están formadas por dos \textit{zips} (dos partes dentadas) fijadas la/s perforación/es y un \textit{zipper} (el deslizador). Al cerrar el \textit{zipper}, las \textit{zips} se juntan identificándose.
 
+Conway utiliza las cremalleras (\textit{zips} en inglés) para describir cómo actúan las identificaciones topológicas. Cada cremallera actúa sobre una o dos perforaciones de una superficie. Están formadas por dos \textit{zips} (dos partes dentadas) fijadas la/s perforación/es y un \textit{zipper} (el deslizador). Al cerrar el \textit{zipper}, las \textit{zips} se juntan identificándose. Trato de dar una definición rigurosa:
 
-\begin{defin}%M%%%DEF: zips asociadas a una representación poligonal de una superficie
-Sea $S$ una superficie. Sea $|\mathcal{P}|$ la realización geométrica de una representación poligonal $P=\langle A\mid W_1,\dots W_n\rangle$ de la superficie. Para cada $W_i$, con $i=1,\dots n$, sea $\partial B_i$ una perforación sobre una esfera $\Esfera_i$, y sea $\phi _i$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B_i$. A la perforación $\partial B_i$ la llamamos \enfatiza{perforación} asociada a $W_i$, y a la imagen de $\phi _i$ la llamamos \enfatiza{cremallera} asociada a $W_i$.
-\end{defin}
-
-En la \textit{prueba ZIP}, Conway nos explica gráficamente las posibles formas de unir cremalleras. 
 
 \begin{defin}%%%DEF: ZIP
 Sea $S$ una superficie compacta. Una \enfatiza{cremallera} es una identificación entre dos subconjuntos (abtos, cerrados??) de la frontera de $S$. A este par lo llamamos \enfatiza{par-zip}.
 \end{defin}
+
+
+En la \textit{prueba ZIP}, Conway nos explica gráficamente las posibles formas de unir cremalleras. 
 
 \begin{defin}
 Sea $S$ una superficie. Definimos cuatro formas elementales de identificar pares \textit{zip} en perforaciones de 
@@ -1161,29 +1193,13 @@ $S$-perforada (ver \autoref{fig:zip_elementales}):
 \caption{Construcción del \textit{crosshandle}.\label{fig:crosshandle}}
 \end{figure}
 
-\begin{figure}[h]%%%% FIG: suma conexa toro esfera
-\centering
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.85]
-\fill [black!10] (0.5,0) arc[x radius=0.5, y radius=0.5, start angle=0, end angle=-180];
-\fill[color=black!15] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=360];
-\draw [rotate around={0:(-5.5,0)}] (-5.5,0) ellipse (2.5cm and 2cm);
-\draw(0,0) circle (0.5cm);
-\draw (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=-180];
-\draw [dashed] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=180];
-\draw [rotate around={0:(5.7,0)}] (5.7,0) ellipse (2.5cm and 2cm);
-\draw [dashed] (6.67,1.32) arc[x radius=0.45, y radius=0.22, start angle=0, end angle=180];
-\draw (6.67,1.32) arc[x radius=0.45, y radius=0.22, start angle=0, end angle=-180];
-\filldraw [color=black, fill=black!10] [rotate around={0:(-5,1.32)}] (-5.0,1.32) ellipse (0.45cm and 0.22cm);
-\draw (5.77,1.32) arc[x radius=0.45, y radius=0.45, start angle=180, end angle=0];
-\draw (-6.1,0) arc[x radius=0.4, y radius=0.2, start angle=180, end angle=0];
-\draw (-6.4,0.31) arc[x radius=0.7, y radius=0.4, start angle=180, end angle=360];
-\draw (-1.8,0.56) node[anchor=north west] {$\#$};
-\draw (1.22,0.56) node[anchor=north west] {$=$};
-\draw (5.1,0) arc[x radius=0.4, y radius=0.2, start angle=180, end angle=0];
-\draw (4.8,0.31) arc[x radius=0.7, y radius=0.4, start angle=180, end angle=360];
-\end{tikzpicture}
-\caption{Suma conexa de un toro y una esfera.\label{fig:suma_toro_esfera}}
-\end{figure}
+
+
+\begin{defin}%M%%%DEF: zips asociadas a una representación poligonal de una superficie
+Sea $S$ una superficie. Sea $|\mathcal{P}|$ la realización geométrica de una representación poligonal $P=\langle A\mid W_1,\dots W_n\rangle$ de la superficie. Para cada $W_i$, con $i=1,\dots n$, sea $\partial B_i$ una perforación sobre una esfera $\Esfera_i$, y sea $\phi _i$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B_i$. A la perforación $\partial B_i$ la llamamos \enfatiza{perforación} asociada a $W_i$, y a la imagen de $\phi _i$ la llamamos \enfatiza{cremallera} asociada a $W_i$.
+\end{defin}
+
+
 
 
 
