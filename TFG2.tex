@@ -597,7 +597,7 @@ Un espacion topológico que admite una representación con una sola cara es cone
 
 
 \begin{eje}%%%%PROP: representación de superficies importantes
-Veamos la representación de algunas superficies importantes(ver \autoref{fig:Representacion_superficies_importantes} y \autoref{fig:representacion_esfera_proyectivo}).
+Veamos la representación de algunas superficies importantes (ver \autoref{fig:Representacion_superficies_importantes} y \autoref{fig:representacion_esfera_proyectivo}).
 \begin{itemize}
 \item[(a)] $\mathbb{S}^2=\langle a\mid aa^{-1}\rangle=\langle a,b\mid  abb^{-1}a^{-1}\rangle$ (\autoref{prop:Esfera como cociente de disco y cuadrado})
 \item[(b)] $\mathbb{P}^2= \langle a\mid aa \rangle = \langle a,b\mid abab \rangle$ (\autoref{prop:proyectivo_cociente_cuadrado})
@@ -666,6 +666,98 @@ Veamos la representación de algunas superficies importantes(ver \autoref{fig:Re
 \draw (5.1,-2.9) node[anchor=south] {$ \Proyectivo $};
 \end{tikzpicture}
 \caption{Representaciones de la esfera y el plano proyectivo. \label{fig:representacion_esfera_proyectivo}}
+\end{figure}
+
+
+De ahora en adelante visualizaremos el plano proyectivo como un \enfatiza{crosscap}, cuya construcción se sigue en la \autoref{fig:crosscap_paso_a_paso}.
+\begin{figure}%%%FIG: CROSSCAP
+\centering
+
+\begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+%1
+\fill[gray!10] (-5,5) -- (-7,3) -- (-5,1) -- (-3,3) -- cycle;
+\draw [->-](-5,5)-- (-7,3);
+\draw [-<<-](-5,5)-- (-3,3);
+\draw [-<-](-3,3)-- (-5,1);
+\draw [->>-](-7,3)-- (-5,1);
+
+%2
+\fill[gray!10] (-2,3.5) arc[ x radius=2, y radius=0.5, start angle=180, end angle=540];
+%\draw(0,3) circle (2cm);
+\draw [->>-={at=0.125},->-={at=0.375}, ->>-={at=0.625}, ->-={at=0.875}] (-2,3.5) arc[x radius=2, y radius=0.5, start angle=180, end angle=540];
+\draw [name path=C] (-2,3.5) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
+
+%3
+\fill [gray!10] (3, 3.5) [out=270, in=225, looseness=0.7] to (5,3.5) [out=45, in=90, looseness=0.7] to (7, 3.5) [out=-90, in=-45, looseness=0.7] to (5,3.5) [out=135, in=90, looseness=0.7] to (3, 3.5);
+%\draw[name path=A] (3,3.5) [-<-={at=0.25}, -<<-={at=0.75}](3,3.5) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+%\draw [name path=B] (5,3.5) [-<<-={at=0.25}, -<-={at=0.75}] arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+\draw [name path=C] (3,3.5) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
+\draw [->>-][out=270, in=225, looseness=0.7] (3, 3.5) to (5,3.5);
+\draw [-<<-][out=45, in=90, looseness=0.7] (5,3.5) to (7,3.5);
+\draw [-<-][out=90, in=135, looseness=0.7] (3, 3.5) to (5,3.5);
+\draw [->-][out=-45, in=-90, looseness=0.7] (5,3.5) to (7,3.5);
+
+%3B
+\fill[gray!20] (-7,-3) [out=90, in=135, looseness=2.3] to (-5,-3) [out=135, in=90, looseness=0.7] to (-7,-3);
+\fill[gray!10] (-5,-3) [out=225, in=270, looseness=0.7] to (-7,-3) [out=90, in=135] to (-5,-3) ;
+
+\draw [name path=C] (-7,-3) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
+\draw [->>-][out=270, in=225, looseness=0.7] (-7, -3) to (-5,-3);
+\draw [-<<-, dashed][out=45, in=90, looseness=0.7] (-5,-3) to (-3,-3);
+\draw [-<-][out=90, in=135, looseness=2.3] (-7, -3) to (-5,-3);
+\draw [->-][out=45, in=90, looseness=2.3] (-5,-3) to (-3,-3);
+\draw [color=gray, dashed][out=90, in=135, looseness=0.7] (-7, -3) to (-5,-3);
+\draw [color=gray][out=-45, in=-90, looseness=0.7] (-5, -3) to (-3,-3);
+
+%4
+\fill[gray!10] (0,-3) [out=225, in=270, looseness=0.7] to (-2,-3) [out=90, in=135] to (0,-3) ;
+\fill[gray!20] (-2,-3) [out=90, in=180] to (0,-1.5)  -- (0, -3) [out=135, in=90, looseness=0.7] to (-2,-3);
+\draw [out=90,in=360] (2,-3) to (0,-1.5);
+\draw [out=180, in=90] (0, -1.5) to (-2,-3);
+\draw [->>-][out=270, in=225, looseness=0.7] (-2, -3) to (0,-3);
+\draw [dashed] [-<<-][out=45, in=90, looseness=0.7] (0, -3) to (2,-3);
+%\draw (-5,-3) [->>-] arc[x radius=1, y radius=0.5, start angle=180, end angle=360];
+\draw (-2,-3) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
+\draw [->-](0,-3)-- (0,-1.5);
+\draw [color=gray, dashed][out=90, in=135, looseness=0.7] (-2, -3) to (0,-3);
+\draw [color=gray][out=-45, in=-90, looseness=0.7] (0, -3) to (2,-3);
+
+
+
+
+%5
+\draw [-<<-] (5,-3)-- (5,-1.5);
+\draw (3,-3) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
+\draw [out=90,in=360] (7,-3) to (5,-1.5);
+\draw [out=180, in=90] (5, -1.5) to (3,-3);
+\draw [color=gray][out=270, in=225, looseness=0.7] (3,-3) to (5,-3);
+\draw [color=gray][dashed][out=45, in=90, looseness=0.7] (5,-3) to (7,-3);
+\draw [color=gray][dashed][out=90, in=135, looseness=0.7] (3,-3) to (5,-3);
+\draw [color=gray][out=-45, in=-90, looseness=0.7] (5,-3) to (7,-3);
+
+\begin{scriptsize}
+\fill [color=black] (-7,3) circle (1.5pt);
+\fill [color=black] (-5,5) circle (1.5pt);
+\fill [color=black] (-3,3) circle (1.5pt);
+\fill [color=black] (-5,1) circle (1.5pt);
+\fill [color=black] (-2,3.5) circle (1.5pt);
+\fill [color=black] (3,3.5) circle (1.5pt);
+\fill [color=black] (7,3.5) circle (1.5pt);
+\fill [color=black] (5,3.5) circle (1.5pt);
+\fill [color=black] (2,3.5) circle (1.5pt);
+\fill [color=black] (0,4) circle (1.5pt);
+\fill [color=black] (0,3) circle (1.5pt);
+\fill [color=black] (2,-3) circle (1.5pt);
+\fill [color=black] (-2,-3) circle (1.5pt);
+\fill [color=black] (0,-3) circle (1.5pt);
+\fill [color=black] (5,-1.5) circle (1.5pt);
+\fill [color=black] (5,-3) circle (1.5pt);
+\fill [color=black] (-7,-3) circle (1.5pt);
+\fill [color=black] (-5,-3) circle (1.5pt);
+\fill [color=black] (-3,-3) circle (1.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+\caption{Construcción del crosscap a partir de la representación pologonal del plano proyectivo. \label{fig:crosscap_paso_a_paso}}
 \end{figure}
 
 Parece claro que, además de $\Esfera$ y $\Proyectivo$, una superficie pueda tener varias presentaciones poligonales. Sea por ejemplo la presentación del toro $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$. Intuitivamente podemos ver que, subdividiendo los lados etiquetados con $b$ y reetiquetándolos con $c$ y $d$ (ver \autoref{fig:ejemplo_operacion}), la superficie que representa la representación obtenida $\langle a,c,d\mid  acda^{-1}c^{-1}d^{-1}\rangle$ será la misma.
@@ -925,25 +1017,23 @@ Sea $S$ una superficie. Definimos cuatro formas elementales de identificar pares
 $S$-perforada (ver \autoref{fig:zip_elementales}):
 
 \begin{itemize}
-\item[1.] \enfatiza{Cap}: Los pares zip yacen cada uno sobre la mitad de una misma perforación con orientaciones opuestas.
-\item[2.] \enfatiza{Crosscap}: Los pares zip yacen cada uno sobre la mitad de una misma perforación con la misma orientación.
-\item[3.] \enfatiza{Handle}: Los pares zip yacen cada uno sobre una perforación distinta de S con orientaciones opuestas.
-\item[4.] \enfatiza{Crosshandle}: Los pares zip yacen cada uno sobre una perforación distinta de S con la misma orientación.
+\item[1.] \enfatiza{Cap}: Los pares zip yacen cada uno sobre la mitad de una misma perforación con orientaciones opuestas (\autoref{fig:cap}).
+\item[2.] \enfatiza{Crosscap}: Los pares zip yacen cada uno sobre la mitad de una misma perforación con la misma orientación (\autoref{fig:crosscap}).
+\item[3.] \enfatiza{Handle}: Los pares zip yacen cada uno sobre una perforación distinta de S con orientaciones opuestas (\autoref{fig:handle}).
+\item[4.] \enfatiza{Crosshandle}: Los pares zip yacen cada uno sobre una perforación distinta de S con la misma orientación (\autoref{fig:crosshandle}).
 \end{itemize}
 \end{defin}
-\begin{defin}
-Sea $\langle a\mid aa^{-1}\rangle$ la representación poligonal de  $\Esfera$ una esfera con dos perforaciones 
-\end{defin}
 
-\begin{figure}
+
+
+\begin{figure}%%%%FIG: Cap
 \centering
-
-
 \begin{tikzpicture} [use optics]
-
 %\draw [help lines, step=1mm](0,-2) grid (6,2);
-
 \fill [color=gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\fill [gray!10](3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\fill [gray!20] (2,-.1) [out=80, in=180] to (3,0.7) [out=0, in=100] to (4,-.1) arc[x radius=1, y radius=0.5, start angle=0, end angle=-180];
+\fill [white] (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
 \draw (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
 \draw (3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
 \draw [-<-={at=0.1}, ->-={at=0.6}] (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
@@ -953,18 +1043,123 @@ Sea $\langle a\mid aa^{-1}\rangle$ la representación poligonal de  $\Esfera$ un
 \draw (2,-.1) [out=80, in=180] to (3,0.7) [out=0, in=100] to (4,-.1);
 %\draw (2.4,-.5)-- (3.6,.3);
 
-\fill [color=gray!20] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
 \fill [color=black] (-3.6,-.5) circle (1.pt);
 \fill [color=black] (-2.4,.3) circle (1.pt);
 \fill [color=black] (3.6,.3) circle (1.pt);
 \fill [color=black] (2.4,-.5) circle (1.pt);
 
-
-
 \end{tikzpicture}
-
+\caption{Construcción del \textit{cap}.\label{fig:cap}}
 \end{figure}
 
+
+
+\begin{figure}%%%%FIG: Crosscap
+\centering
+\begin{tikzpicture} [use optics]
+%\draw [help lines, step=1mm](0,-2) grid (6,2);
+\fill [color=gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\fill [gray!10](3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\fill [white] (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+\fill [gray!20](2,-.1) [out=90,in=180] to (3.1,2)[out=0, in=90] to (4,-.1)  arc[x radius=1, y radius=0.5, start angle=0, end angle=-180];
+\draw (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\draw[dash pattern= on 103pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt  on 2pt off 2pt  on 2pt off 3pt  on 150pt] (3,-1.5) -- (5,0) -- (3,1) -- (1,0);
+\draw (1,0) -- (3,-1.5);
+\draw [-<-={at=0.4}, -<-={at=0.9}] (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+\draw [dashed](2,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=0];
+\draw (2,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=360];
+\draw (2,-.1) [out=90,in=180] to (3.1,2)[out=0, in=90] to (4,-.1);
+\draw (3.1,2) -- (3.1,0.7);
+
+\fill [color=black] (-3.6,.3) circle (1.pt);
+\fill [color=black] (-2.4,-.5) circle (1.pt);
+
+%\fill [color=black] (-4,-.1) circle (1.pt);
+%\fill [color=black] (-2,-.1) circle (1.pt);
+
+%\fill [color=black] (-3.6,-.5) circle (1.pt);
+%\fill [color=black] (-2.4,.3) circle (1.pt);
+
+
+\draw (2.17,1.15) [out=-80, in=-135, looseness=0.6] to (3.1,1.2) [out=-45, in=-90, looseness=0.6] to (3.9,1.2);
+\draw [dashed] (2.17,1.15) [out=90, in=135, looseness=0.6] to (3.1,1.2) [out=45, in=90, looseness=0.6] to (3.9,1.2);
+\end{tikzpicture}
+\caption{Construcción del \textit{crosscap}.\label{fig:crosscap}}
+\end{figure}
+
+
+\begin{figure}%%%%FIG: Handle
+\centering
+
+\begin{tikzpicture} [use optics]
+%\draw [help lines, step=1mm](-6,-2) grid (6,2);
+
+\fill [gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\fill [white](-4.4,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=540];
+\fill [white](-1.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=360];
+\fill [gray!10](3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\fill [gray!20](1.6,-.05) [out=90, in=180] to (3,2) [out=0, in=90] to (4.4,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180]  [out=90, in=0] to (3,1.2) [out=180, in=90] to (2.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180] ;
+
+\draw (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\draw [dash pattern= on 19pt off 2 pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt  on 2pt off 2pt on 2pt off 2pt  on 1pt off 1pt on 24pt](5,0) -- (3,1);
+\draw [dash pattern= on 12pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 50pt ](3,1) -- (1,0);
+\draw (1,0) -- (3,-1.5) -- (5,0);
+\draw [-<-={at=0}](-4.4,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=540];
+\draw [->-={at=0}](-1.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=360];
+
+\draw (1.6,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=360];
+\draw  (4.4,-.05)arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180];
+\draw [dashed](1.6,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=0];
+\draw  [dashed](4.4,-.05)arc [x radius=0.5, y radius=0.25, start angle=0, end angle=180];
+
+\draw (1.6,-.05) [out=90, in=180] to (3,2) [out=0, in=90] to (4.4,-.05);
+\draw (2.6,-.05) [out=90, in=180] to (3,1.2) [out=0, in=90]to (3.4,-.05);
+\draw [->-](3,1.2) [out=180, in=180, looseness=0.7] to (3,2);
+\draw [dashed] (3,1.2)[out=0, in=0, looseness=0.7] to (3,2);
+\fill (-3.4,-.05) circle (1pt);
+\fill (-2.6,-.05) circle (1pt);
+\end{tikzpicture}
+
+\caption{Construcción del \textit{handle}. \label{fig:handle}}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{tikzpicture} [use optics]
+%\draw [help lines, step=1mm](-6,-2) grid (6,2);
+
+\fill [gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\fill [white](-4.4,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=540];
+\fill [white](-1.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=360];
+\fill [gray!10](3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\fill [gray!20](1.6,-.05) [out=90, in=180] to (3,2) [out=0, in=90] to (4.4,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180]  [out=90, in=0] to (3,1.2) [out=180, in=90] to (2.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180] ;
+
+\draw (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\draw [dash pattern= on 19pt off 2 pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt  on 2pt off 2pt on 2pt off 2pt  on 1pt off 1pt on 24pt](5,0) -- (3,1);
+\draw [dash pattern= on 12pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 50pt ](3,1) -- (1,0);
+\draw (1,0) -- (3,-1.5) -- (5,0);
+\draw [-<-={at=0}](-4.4,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=540];
+\draw [-<-={at=0}](-1.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=360];
+
+\draw (1.6,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=360];
+\draw  (4.4,-.05)arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180];
+\draw [dashed](1.6,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=0];
+\draw  [dashed](4.4,-.05)arc [x radius=0.5, y radius=0.25, start angle=0, end angle=180];
+
+\draw (2.1,1.56) [out=-90, in=-135, looseness=0.5] to (3, 1.56) [out=-45, in=-90, looseness=0.5] to (3.9, 1.56);
+\draw [dashed] (2.1,1.56) [out=90, in=135, looseness=0.5] to (3, 1.56) [out=45, in=90, looseness=0.5] to (3.9, 1.56);
+\draw (1.6,-.05) [out=90, in=180] to (3,2) [out=0, in=90] to (4.4,-.05);
+\draw (2.6,-.05) [out=90, in=180] to (3,1.2) [out=0, in=90]to (3.4,-.05);
+%\draw (3,1.2) [out=180, in=180, looseness=0.2] to (3,2);
+\draw (3,1.2)-- (3,2);
+%\draw [dashed] (3,1.2)[out=0, in=0, looseness=0.7] to (3,2);
+\fill (-3.4,-.05) circle (1pt);
+\fill (-2.6,-.05) circle (1pt);
+
+\end{tikzpicture}
+\caption{Construcción del \textit{crosshandle}.\label{fig:crosshandle}}
+\end{figure}
 
 \begin{figure}[h]%%%% FIG: suma conexa toro esfera
 \centering
@@ -992,95 +1187,8 @@ Sea $\langle a\mid aa^{-1}\rangle$ la representación poligonal de  $\Esfera$ un
 
 
 
-\begin{figure}%%%FIG: CROSSCAP
-\centering
-
-\begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-%1
-\fill[gray!10] (-5,5) -- (-7,3) -- (-5,1) -- (-3,3) -- cycle;
-\draw [->-](-5,5)-- (-7,3);
-\draw [-<<-](-5,5)-- (-3,3);
-\draw [-<-](-3,3)-- (-5,1);
-\draw [->>-](-7,3)-- (-5,1);
-
-%2
-\fill[gray!10] (-2,3.5) arc[ x radius=2, y radius=0.5, start angle=180, end angle=540];
-%\draw(0,3) circle (2cm);
-\draw [->>-={at=0.125},->-={at=0.375}, ->>-={at=0.625}, ->-={at=0.875}] (-2,3.5) arc[x radius=2, y radius=0.5, start angle=180, end angle=540];
-\draw [name path=C] (-2,3.5) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
-
-%3
-\fill [gray!10] (3, 3.5) [out=270, in=225, looseness=0.7] to (5,3.5) [out=45, in=90, looseness=0.7] to (7, 3.5) [out=-90, in=-45, looseness=0.7] to (5,3.5) [out=135, in=90, looseness=0.7] to (3, 3.5);
-%\draw[name path=A] (3,3.5) [-<-={at=0.25}, -<<-={at=0.75}](3,3.5) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
-%\draw [name path=B] (5,3.5) [-<<-={at=0.25}, -<-={at=0.75}] arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
-\draw [name path=C] (3,3.5) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
-\draw [->>-][out=270, in=225, looseness=0.7] (3, 3.5) to (5,3.5);
-\draw [-<<-][out=45, in=90, looseness=0.7] (5,3.5) to (7,3.5);
-\draw [-<-][out=90, in=135, looseness=0.7] (3, 3.5) to (5,3.5);
-\draw [->-][out=-45, in=-90, looseness=0.7] (5,3.5) to (7,3.5);
-
-%3B
-\fill[gray!20] (-7,-3) [out=90, in=135, looseness=2.3] to (-5,-3) [out=135, in=90, looseness=0.7] to (-7,-3);
-\fill[gray!10] (-5,-3) [out=225, in=270, looseness=0.7] to (-7,-3) [out=90, in=135] to (-5,-3) ;
-
-\draw [name path=C] (-7,-3) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
-\draw [->>-][out=270, in=225, looseness=0.7] (-7, -3) to (-5,-3);
-\draw [-<<-, dashed][out=45, in=90, looseness=0.7] (-5,-3) to (-3,-3);
-\draw [-<-][out=90, in=135, looseness=2.3] (-7, -3) to (-5,-3);
-\draw [->-][out=45, in=90, looseness=2.3] (-5,-3) to (-3,-3);
-\draw [color=gray, dashed][out=90, in=135, looseness=0.7] (-7, -3) to (-5,-3);
-\draw [color=gray][out=-45, in=-90, looseness=0.7] (-5, -3) to (-3,-3);
-
-%4
-\fill[gray!10] (0,-3) [out=225, in=270, looseness=0.7] to (-2,-3) [out=90, in=135] to (0,-3) ;
-\fill[gray!20] (-2,-3) [out=90, in=180] to (0,-1.5)  -- (0, -3) [out=135, in=90, looseness=0.7] to (-2,-3);
-\draw [out=90,in=360] (2,-3) to (0,-1.5);
-\draw [out=180, in=90] (0, -1.5) to (-2,-3);
-\draw [->>-][out=270, in=225, looseness=0.7] (-2, -3) to (0,-3);
-\draw [dashed] [-<<-][out=45, in=90, looseness=0.7] (0, -3) to (2,-3);
-%\draw (-5,-3) [->>-] arc[x radius=1, y radius=0.5, start angle=180, end angle=360];
-\draw (-2,-3) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
-\draw [->-](0,-3)-- (0,-1.5);
-\draw [color=gray, dashed][out=90, in=135, looseness=0.7] (-2, -3) to (0,-3);
-\draw [color=gray][out=-45, in=-90, looseness=0.7] (0, -3) to (2,-3);
 
 
-
-
-%5
-\draw [-<<-] (5,-3)-- (5,-1.5);
-\draw (3,-3) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
-\draw [out=90,in=360] (7,-3) to (5,-1.5);
-\draw [out=180, in=90] (5, -1.5) to (3,-3);
-\draw [color=gray][out=270, in=225, looseness=0.7] (3,-3) to (5,-3);
-\draw [color=gray][dashed][out=45, in=90, looseness=0.7] (5,-3) to (7,-3);
-\draw [color=gray][dashed][out=90, in=135, looseness=0.7] (3,-3) to (5,-3);
-\draw [color=gray][out=-45, in=-90, looseness=0.7] (5,-3) to (7,-3);
-
-\begin{scriptsize}
-\fill [color=black] (-7,3) circle (1.5pt);
-\fill [color=black] (-5,5) circle (1.5pt);
-\fill [color=black] (-3,3) circle (1.5pt);
-\fill [color=black] (-5,1) circle (1.5pt);
-\fill [color=black] (-2,3.5) circle (1.5pt);
-\fill [color=black] (3,3.5) circle (1.5pt);
-\fill [color=black] (7,3.5) circle (1.5pt);
-\fill [color=black] (5,3.5) circle (1.5pt);
-\fill [color=black] (2,3.5) circle (1.5pt);
-\fill [color=black] (0,4) circle (1.5pt);
-\fill [color=black] (0,3) circle (1.5pt);
-\fill [color=black] (2,-3) circle (1.5pt);
-\fill [color=black] (-2,-3) circle (1.5pt);
-\fill [color=black] (0,-3) circle (1.5pt);
-\fill [color=black] (5,-1.5) circle (1.5pt);
-\fill [color=black] (5,-3) circle (1.5pt);
-\fill [color=black] (-7,-3) circle (1.5pt);
-\fill [color=black] (-5,-3) circle (1.5pt);
-\fill [color=black] (-3,-3) circle (1.5pt);
-\end{scriptsize}
-\end{tikzpicture}
-\caption{Construcción del crosscap a partir de la representación pologonal del plano proyectivo. \label{fig:crosscap_paso_a_paso}}
-\end{figure}
 
 
 \appendix
