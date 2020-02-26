@@ -880,9 +880,9 @@ Los abiertos construidos, $\tilde{V} \subset X$, se pueden tomar en cantidad num
 
 
 
-\begin{eje}
-Sea $S$ una superficie. Entonces la suma conexa $S\# \Esfera$ es homeomorfa a $S$ (ver \autoref{fig:suma_toro_esfera}).
-\end{eje}
+\begin{obs}
+Sea $S$ una superficie. Entonces la suma conexa $S\# \Esfera$ es homeomorfa a $S$ (\autoref{fig:suma_toro_esfera}).\label{obs:suma_esfera}
+\end{obs}
 
 \begin{figure}[h]%%%% FIG: suma conexa toro esfera
 \centering
@@ -909,11 +909,11 @@ Sea $S$ una superficie. Entonces la suma conexa $S\# \Esfera$ es homeomorfa a $S
 \end{figure}
 
 
-\begin{eje}%%%%EJE: Asas y toros
-Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el espacio que se obtiene al ``pegarle'' un \textit{asa} a $S$. De forma más precisa, sea $S_0$ que denota a $S$ con dos perforaciones, es decir la superficie que queda al retirar dos discos cerrados disjuntos de $M$ (se dará una construcción más precisa en \autoref{def:perforacion}). Entonces $S_0$ y $\mathbb{S}^1\times I$ son ambas superficies con borde, y sus bordes son ambos homeomorfos a la union disjunta de dos circunferencias. Sea $\tilde{S}$ el espacio adjunción (\autoref{app:adjuncion}) obtenido pegando $S_0$ y $\mathbb{S}^1\times I$ por sus bordes. Este espacio cociente es homeomorfo a $S\# \Toro$. La razón se puede ver en la \autoref{fig:toro_asa}, y es que podemos obtener un espacio homeomorfo a $S\# \Toro$ primero quitando un disco abierto de $S$, luego pegando un disco cerrado con dos discos abiertos quitados (es decir, la parte gris de la figura), y finalmente pegando a la frontera de la construcción el cilindro $\Esfera \times I$. Dado que la primera operación da resultado a un espacio homeomorfo a $S$ con dos discos abiertos quitados, el resultado es el mismo que si quitamos directamente a $S$ dos discos abiertos y entonces pegamos el cilindro a su frontera.
+\begin{obs}%%%%EJE: Asas y toros
+Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el espacio que se obtiene al ``pegarle'' un \textit{asa} a $S$. De forma más precisa, sea $S_0$ que denota a $S$ con dos perforaciones, es decir la superficie que queda al retirar dos discos cerrados disjuntos de $M$ (se dará una construcción más precisa en \autoref{def:perforacion}). Entonces $S_0$ y $\mathbb{S}^1\times I$ son ambas superficies con borde, y sus bordes son ambos homeomorfos a la union disjunta de dos circunferencias. Sea $\tilde{S}$ el espacio adjunción (\autoref{app:adjuncion}) obtenido pegando $S_0$ y $\mathbb{S}^1\times I$ por sus bordes. Este espacio cociente es homeomorfo a $S\# \Toro$. La razón se puede ver en la \autoref{fig:toro_asa}, y es que podemos obtener un espacio homeomorfo a $S\# \Toro$ primero quitando un disco abierto de $S$, luego pegando un disco cerrado con dos discos abiertos quitados (es decir, la parte gris de la figura), y finalmente pegando a la frontera de la construcción el cilindro $\Esfera \times I$. Dado que la primera operación da resultado a un espacio homeomorfo a $S$ con dos discos abiertos quitados, el resultado es el mismo que si quitamos directamente a $S$ dos discos abiertos y entonces pegamos el cilindro a su frontera. \label{obs:toro_asa}
 
 %%165%%
-\end{eje}
+\end{obs}
 
 \begin{figure}%%%%FIG: Toro-Asa
 \centering
@@ -1017,11 +1017,13 @@ Dados que los dos espacios son homeomorfos, podemos visualizar el disco cerrado 
 \end{obs}
  
 
-\begin{figure}%%%%FIG: Disco esfera perforada
+\begin{figure}[h]%%%%FIG: Disco esfera perforada
 \centering
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\fill[gray!20](3,0) circle (2cm);
+\fill[color=gray!20][rotate around={-14.04:(-1.34,0.02)}] (-1.34,0.02) ellipse (0.32cm and 0.24cm);
+\fill[color=white][rotate around={-14.04:(3.33,1.31)}] (3.33,1.31) ellipse (0.32cm and 0.24cm);
 \draw[rotate around={-14.04:(-1.34,0.02)}] (-1.34,0.02) ellipse (0.32cm and 0.24cm);
-\fill[color=gray!20][rotate around={-14.04:(3.33,1.31)}] (3.33,1.31) ellipse (0.32cm and 0.24cm);
 \draw[rotate around={-14.04:(3.33,1.31)}] (3.33,1.31) ellipse (0.32cm and 0.24cm);
 \draw(3,0) circle (2cm);
 \draw(1,0) arc[x radius=2, y radius=0.5, start angle=180, end angle=360];
@@ -1046,7 +1048,7 @@ En la \textit{prueba ZIP}, Conway nos explica gráficamente las posibles formas 
 
 \begin{defin}
 Sea $S$ una superficie. Definimos cuatro formas elementales de identificar pares \textit{zip} en perforaciones de 
-$S$-perforada (ver \autoref{fig:zip_elementales}):
+$S$-perforada:
 
 \begin{itemize}
 \item[1.] \enfatiza{Cap}: Los pares zip yacen cada uno sobre la mitad de una misma perforación con orientaciones opuestas (\autoref{fig:cap}).
@@ -1056,9 +1058,27 @@ $S$-perforada (ver \autoref{fig:zip_elementales}):
 \end{itemize}
 \end{defin}
 
+Sea $S$ una superficie conexa tal que admite una representación poligonal de una sola cara $P=\langle A\mid W\rangle$, y sea $|\mathcal{P}|$ su realización geométrica. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sonre $\partial B$ de la imagen de $\phi$, obtenemos la suma conexa $S\# \Esfera$, es decir, $S$ (\autoref{obs:suma_esfera}). 
+
+Sean ahora $S$ y $S'$ superficies conexas. Entonces, hacer una perforación sobre $S'$ es lo mismo que hacer la suma conexa de una esfera $\Esfera$ con una perforación $S'$. Por tanto, hacer una perforación sobre $S'$ asociada a $S$ da lugar a la suma conexa $S\# S'$.
+ 
+
+\begin{prop}
+Sea $S$ una superficie. Los siguientes espacios son homeomorfos:
+\begin{itemize}
+\item[a)] $S$ con un cap y $S$.
+\item[b)] $S$ con un crosscap y $S\# \Proyectivo$.
+\item[c)] $S$ con un handle y $S\# \Toro$.
+\item[d)] $S$ con un crosshandle y $S\# K$ (siendo $K$ la botella de Klein). 
+\end{itemize}
+\end{prop}
+\begin{proof}
+a) y b) son consecuencia directa de lo anterior. Para c), utilizamos la \autoref{obs:toro_asa}, y para d) utilizar una construcción parecida a c) ((habría que especificar más?)).
+\end{proof}
 
 
-\begin{figure}%%%%FIG: Cap
+
+\begin{figure}[p] %%%%FIG: Cap
 \centering
 \begin{tikzpicture} [use optics]
 %\draw [help lines, step=1mm](0,-2) grid (6,2);
@@ -1086,7 +1106,7 @@ $S$-perforada (ver \autoref{fig:zip_elementales}):
 
 
 
-\begin{figure}%%%%FIG: Crosscap
+\begin{figure}[h] %%%%FIG: Crosscap
 \centering
 \begin{tikzpicture} [use optics]
 %\draw [help lines, step=1mm](0,-2) grid (6,2);
@@ -1120,7 +1140,7 @@ $S$-perforada (ver \autoref{fig:zip_elementales}):
 \end{figure}
 
 
-\begin{figure}%%%%FIG: Handle
+\begin{figure}[h] %%%%FIG: Handle
 \centering
 
 \begin{tikzpicture} [use optics]
@@ -1156,9 +1176,9 @@ $S$-perforada (ver \autoref{fig:zip_elementales}):
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[h] 
 \centering
-\begin{tikzpicture} [use optics]
+\begin{tikzpicture}[use optics]
 %\draw [help lines, step=1mm](-6,-2) grid (6,2);
 
 \fill [gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
@@ -1193,6 +1213,12 @@ $S$-perforada (ver \autoref{fig:zip_elementales}):
 \caption{Construcción del \textit{crosshandle}.\label{fig:crosshandle}}
 \end{figure}
 
+\begin{prop}
+Si $S$ es una superficie compacta y conexa, $S$ admite una representación de una sola cara.
+\end{prop}
+
+
+A la perforación $\partial B_i$ la llamamos \enfatiza{perforación} asociada a $W_i$, y a la imagen por $\phi _i$ de cada par de segmentos $a$ la llamamos \enfatiza{cremallera} asociada a $a\in W_i$.
 
 
 \begin{defin}%M%%%DEF: zips asociadas a una representación poligonal de una superficie
