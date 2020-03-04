@@ -995,6 +995,43 @@ Un hecho fundamental para la prueba del teorema de clasificación es que toda su
 
 \
 
+\section{Triangulación}
+
+
+\begin{defin}
+
+Sea $\sigma$ un $k$-símplice. Cada símplice cubierto por un subconjunto no vacío de vértices de $\sigma$ se llama \enfatiza{cara de $sigma$}. Las caras que no son iguales a $\sigma$ se llaman \enfatiza{caras propias}. Las caras $0$-dimensionales de $\sigma$ son sus vértices, y a las caras $1$-dimensionales se les llama \enfatiza{lados}. Las caras $(k-1)$-dimensionales de un $k$-símplice se llaman 
+\end{defin}
+
+\begin{defin}%%%%DEF: Complejo simplicial
+Un \enfatiza{complejo simplicial} es una colección $K$ de símplices en algún espacio euclídeo $\R ^n$, que satisface las siguientes condiciones:
+\begin{itemize}
+\item[(i)] Si $\sigma \in K $, entonces toda cara de $\sigma$ está en $K$
+\item[(ii)] La intersección de dos símplices cualesquiera en $K$ es o bien vacía o bien una cara de cada uno.
+\item[(iii)] $K$ es una colección finitamente local.
+\end{itemize}
+\end{defin}
+%La tercera condición implica que $K$ es numerable, pues todo punto de $\R ^n$ tiene un entorno intersecando al menos un número finito de símplices de $K$, y este recubrimiento abierto de $\R ^n$ tiene un subrecubrimiento numerable. A nosotros los símplices que más nos interesan son los \enfatiza{complejos simpliciales finitos}, que son los que contienen únicamente un número finito de símplices. Para estos complejos, la condición (iii) es redundante.
+
+Si $K$ un complejo simplicial en $\R ^n$, llamamos \enfatiza{dimensión de $K$} a la dimensión máxima de los símplices en $K$. Esta no es mayor que $n$.
+Un subconjunto $K'\subseteq K$ se dice que es un \enfatiza{subcomlejo de $K$} si para todo $\sigma \in K'$, toda cara de $\sigma$ está en $K'$. Un subcomplejo es un complejo simplicial en sí.
+Para todo $k\leq n$, el conjunto de todos los símplices de $K$ de dimensión menor o igual que $k$ es un subcomplejo llamado \enfatiza{$k$-esqueleto de $K$}.
+
+
+
+\begin{defin}%%%%DEF: Polyhedron
+Sea un complejo simplicial $K$ en $\R ^n$. La unión de todos los símplices en $K$ junto con la topología heredada de $\R ^n$ es un espacio topológico que denotamos por $|K|$ y que llamamos \enfatiza{polyedrhon de K}.
+\end{defin}
+\begin{defin}%%%%DEF: Triangulación
+Sea $X$ un espacio topológico. Llamamos \enfatiza{triangulación de $X$} a un homeomorfismo entre $X$ y el polyhedron de algún complejo simplicial.
+\end{defin}
+
+\begin{defin}%%%%DEF: Superficie triangulable
+Toda superficie que admita una triangulación se dice \enfatiza{triangulable}.
+\end{defin}
+
+
+
 \section{Teorema de Radó}
 
 \begin{tma}
@@ -1009,11 +1046,11 @@ Toda superficie es triangulable.
 
 \begin{defin}%M%%%DEF: perforación
 \label{def:perforacion}
-Sea $S$ una superficie. Sea $p\in \interior (S)$ y $U$ un entorno abierto de $p$ en $S$. Sea $\phi :U\to \R^n$ un homeomorfismo tal que $\phi (p)=0$. Sea $B=\phi ^{-1}(B_1(0))$. Decimos que la nueva superficie $S^o=S\setminus B$ es $S$ \enfatiza{perforada}, y a $\partial B\subset S^o$ la llamamos \enfatiza{perforación}. Podemos repetir el proceso sobre $S^o$ sucesivamente, obteniendo $S$ perforada con un número finito de perforaciones.
+Sea $S$ una superficie. Sea $p\in \interior (S)$ y $U$ un entorno abierto de $p$ en $S$. Sea $\phi :U\to \R^n$ un homeomorfismo tal que $\phi (p)=0$. Sea $B=\phi ^{-1}(B_1(0))$. Decimos que la nueva superficie $S^o=S\setminus B$ es $S$ \enfatiza{$1$-perforada}, y a $\partial B\subset S^o$ la llamamos \enfatiza{perforación}. Podemos repetir el proceso sobre $S^o$ sucesivamente, obteniendo $S$ $n$-perforada con un número finito $n\in \N$ de perforaciones.
 \end{defin}
 
 \begin{obs}%M%%%OBS: Disco como esfera perforada
-Dados que los dos espacios son homeomorfos, podemos visualizar el disco cerrado $\overline{\mathbb{B}}^2$ como una esfera con una perforación (\autoref{fig:disco_esfera_perforada}).
+Dado que los dos espacios son homeomorfos, podemos visualizar el disco cerrado $\overline{\mathbb{B}}^2$ como una esfera con una perforación (\autoref{fig:disco_esfera_perforada}).
 \end{obs}
  
 
@@ -1048,7 +1085,7 @@ En la \textit{prueba ZIP}, Conway nos explica gráficamente las posibles formas 
 
 \begin{defin}
 Sea $S$ una superficie. Definimos cuatro formas elementales de identificar pares \textit{zip} en perforaciones de 
-$S$-perforada:
+$S$ perforada:
 
 \begin{itemize}
 \item[1.] \enfatiza{Cap}: Los pares zip yacen cada uno sobre la mitad de una misma perforación con orientaciones opuestas (\autoref{fig:cap}).
@@ -1058,7 +1095,7 @@ $S$-perforada:
 \end{itemize}
 \end{defin}
 
-Sea $S$ una superficie conexa tal que admite una representación poligonal de una sola cara $P=\langle A\mid W\rangle$, y sea $|\mathcal{P}|$ su realización geométrica. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sonre $\partial B$ de la imagen de $\phi$, obtenemos la suma conexa $S\# \Esfera$, es decir, $S$ (\autoref{obs:suma_esfera}). 
+Sea $S$ una superficie conexa tal que admite una representación poligonal de una sola cara $P=\langle A\mid W\rangle$, y sea $|\mathcal{P}|$ su realización geométrica. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$, obtenemos la suma conexa $S\# \Esfera$, es decir, $S$ (\autoref{obs:suma_esfera}). 
 
 Sean ahora $S$ y $S'$ superficies conexas. Entonces, hacer una perforación sobre $S'$ es lo mismo que hacer la suma conexa de una esfera $\Esfera$ con una perforación $S'$. Por tanto, hacer una perforación sobre $S'$ asociada a $S$ da lugar a la suma conexa $S\# S'$.
  
@@ -1075,6 +1112,9 @@ Sea $S$ una superficie. Los siguientes espacios son homeomorfos:
 \begin{proof}
 a) y b) son consecuencia directa de lo anterior. Para c), utilizamos la \autoref{obs:toro_asa}, y para d) utilizar una construcción parecida a c) ((habría que especificar más?)).
 \end{proof}
+
+
+
 
 
 
@@ -1213,17 +1253,40 @@ a) y b) son consecuencia directa de lo anterior. Para c), utilizamos la \autoref
 \caption{Construcción del \textit{crosshandle}.\label{fig:crosshandle}}
 \end{figure}
 
-\begin{prop}
-Si $S$ es una superficie compacta y conexa, $S$ admite una representación de una sola cara.
-\end{prop}
 
 
-A la perforación $\partial B_i$ la llamamos \enfatiza{perforación} asociada a $W_i$, y a la imagen por $\phi _i$ de cada par de segmentos $a$ la llamamos \enfatiza{cremallera} asociada a $a\in W_i$.
 
 
-\begin{defin}%M%%%DEF: zips asociadas a una representación poligonal de una superficie
-Sea $S$ una superficie. Sea $|\mathcal{P}|$ la realización geométrica de una representación poligonal $P=\langle A\mid W_1,\dots W_n\rangle$ de la superficie. Para cada $W_i$, con $i=1,\dots n$, sea $\partial B_i$ una perforación sobre una esfera $\Esfera_i$, y sea $\phi _i$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B_i$. A la perforación $\partial B_i$ la llamamos \enfatiza{perforación} asociada a $W_i$, y a la imagen de $\phi _i$ la llamamos \enfatiza{cremallera} asociada a $W_i$.
+
+\section{Teorema de Clasificación}
+
+\begin{defin}%%%%DEF: Ordinaria
+Una superficie se dice ordinaria si es homeomorfa a una colección finita de esferas cada una con un número finito de \textit{handles}, \textit{crosshandles}, \textit{crosscaps} y perforaciones.
 \end{defin}
+
+\begin{tma}[Teorema de clasificación, versión preeliminar] %%%%TEO: Clasificación preeliminar
+
+Toda superficie compacta es ordinaria.
+
+\end{tma}
+
+\begin{proof}
+
+\end{proof}
+
+
+
+%\begin{prop}
+%Si $S$ es una superficie compacta y conexa, $S$ admite una representación de una sola cara.
+%\end{prop}
+
+
+%A la perforación $\partial B_i$ la llamamos \enfatiza{perforación} asociada a $W_i$, y a la imagen por $\phi _i$ de cada par de segmentos $a$ la llamamos \enfatiza{cremallera} asociada a $a\in W_i$.
+
+
+%\begin{defin}%M%%%DEF: zips asociadas a una representación poligonal de una superficie
+%Sea $S$ una superficie. Sea $|\mathcal{P}|$ la realización geométrica de una representación poligonal $P=\langle A\mid W_1,\dots W_n\rangle$ de la superficie. Para cada $W_i$, con $i=1,\dots n$, sea $\partial B_i$ una perforación sobre una esfera $\Esfera_i$, y sea $\phi _i$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B_i$. A la perforación $\partial B_i$ la llamamos \enfatiza{perforación} asociada a $W_i$, y a la imagen de $\phi _i$ la llamamos \enfatiza{cremallera} asociada a $W_i$.
+%\end{defin}
 
 
 
@@ -1254,6 +1317,11 @@ Supongamos $q_1:X\to Y_1$ y $q_2:X\to Y_2$ son aplicaciones cociente que hacen l
 
 \chapter{CW-complejos}
 
+\chapter{Definiciones}
+
+\begin{defin}%%%%DEF: Finitamente local
+Una colección de subconjuntos de un espacio topológico $X$ se dice \enfatiza{localmente finita} si cada punto del espacio tiene un entorno que interseca sólo un número finito de subconjuntos de la colección.
+\end{defin}
 \begin{thebibliography}{9}
 
 \bibitem{lee1}

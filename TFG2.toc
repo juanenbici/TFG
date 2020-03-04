@@ -5,8 +5,11 @@
 \contentsline {section}{\numberline {1.2}Representaci\IeC {\'o}n de superficies}{7}{section.1.2}
 \contentsline {section}{\numberline {1.3}Suma conexa de variedades}{11}{section.1.3}
 \contentsline {chapter}{\numberline {2}Triangulaci\IeC {\'o}n de superficies}{14}{chapter.2}
-\contentsline {section}{\numberline {2.1}Teorema de Rad\IeC {\'o}}{14}{section.2.1}
-\contentsline {chapter}{\numberline {3}La prueba ZIP de Conway}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Cremalleras}{15}{section.3.1}
-\contentsline {chapter}{\numberline {A}Teoremas Usados}{18}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}CW-complejos}{19}{appendix.Alph2}
+\contentsline {section}{\numberline {2.1}Triangulaci\IeC {\'o}n}{14}{section.2.1}
+\contentsline {section}{\numberline {2.2}Teorema de Rad\IeC {\'o}}{15}{section.2.2}
+\contentsline {chapter}{\numberline {3}La prueba ZIP de Conway}{16}{chapter.3}
+\contentsline {section}{\numberline {3.1}Cremalleras}{16}{section.3.1}
+\contentsline {section}{\numberline {3.2}Teorema de Clasificaci\IeC {\'o}n}{17}{section.3.2}
+\contentsline {chapter}{\numberline {A}Teoremas Usados}{19}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}CW-complejos}{20}{appendix.Alph2}
+\contentsline {chapter}{\numberline {C}Definiciones}{21}{appendix.Alph3}
