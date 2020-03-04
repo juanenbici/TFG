@@ -995,12 +995,43 @@ Un hecho fundamental para la prueba del teorema de clasificación es que toda su
 
 \
 
-\section{Triangulación}
+\section{Complejos simpliciales y triangulación}
 
+Para poder dar una definición rigurosa de triangulación de variedades necesitamos la noción de \textit{complejos simpliciales}. Estos están formados por \textit{símplices}, que son puntos, segmentos, triángulos rellenos, tetraedros sólidos y sus análogos en dimensiones superiores.
+
+\begin{defin}%%%%DEF: Posición general
+Sean $v_0,\dots v_k$ $k+1$ puntos distintos de $\R^n$. Decimos que $\{ v_0,\dots ,v_k\}$ están en \enfatiza{posición general} si $c_0,\dots c_k$ son números reales tales que  $$\sum_{i=0}^{k}c_iv_i=0 \text{ y } \sum_{i=0}^kc_i=0,$$ entonces $c_0=\dots =c_k=0$.
+\end{defin}
+
+
+\begin{defin}%%%%DEF: Símplice
+Sean $\{ v_0,\dots ,v_n\}$ un conjunto de $k+1$ puntos de $\R^n$ en posición general. El \enfatiza{símplice} generado por ellos, que denotamos por $[ \, v_0,\dots ,v_k ] \,$, es el conjunto $$[ \, v_0,\dots ,v_k] \, =\left\{  \sum_{i=0}^{k}t_iv_i \mid t_i\geq 0,\, \sum_{i=0}^{k}t_i=1 \right\}, $$ con la topología heredada. Cada uno de los $v_i$ se llama \enfatiza{vértice} del símplice. Al entero $k$ se le llama \enfatiza{dimensión}, y diremos que $[ \, v_0,\dots ,v_k] \,$ es un \enfatiza{$k$-símplice}. 
+\end{defin}
+
+\begin{eje}
+Un $0$-símplice es un punto, un 1-símplice es un segmento, un $2$-símplice es un triángulo junto a su interior, un $3$-símplice es un tetraedro sólido, y así sucesivamente (ver \autoref{fig:simplices}).
+\end{eje}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=1.2]
+
+\fill[gray!20] (1,0) -- (1.5,0.87) -- (2,0) --cycle;
+\draw (1,0) -- (1.5,0.87) -- (2,0) -- cycle;
+\draw (-1,0.2) -- (0,0.5);
+\fill (-1,0.2) circle (2pt);
+\fill (0,0.5) circle (2pt);
+\fill (-2,0.6) circle (2pt);
+\fill (1,0) circle (2pt);
+\fill (1.5, 0.87) circle (2pt);
+\fill (2,0) circle (2pt);
+\end{tikzpicture}
+\caption{Símplices.\label{fig:simplices}}
+\end{figure}
 
 \begin{defin}
 
-Sea $\sigma$ un $k$-símplice. Cada símplice cubierto por un subconjunto no vacío de vértices de $\sigma$ se llama \enfatiza{cara de $sigma$}. Las caras que no son iguales a $\sigma$ se llaman \enfatiza{caras propias}. Las caras $0$-dimensionales de $\sigma$ son sus vértices, y a las caras $1$-dimensionales se les llama \enfatiza{lados}. Las caras $(k-1)$-dimensionales de un $k$-símplice se llaman 
+Sea $\sigma$ un $k$-símplice. Cada símplice generado por un subconjunto no vacío de vértices de $\sigma$ se llama \enfatiza{cara de $\sigma$}. Las caras que no son iguales a $\sigma$ se llaman \enfatiza{caras propias}. Las caras $0$-dimensionales de $\sigma$ son sus vértices, y a las caras $1$-dimensionales se les llama \enfatiza{lados}. Las caras $(k-1)$-dimensionales de un $k$-símplice se llaman bordes, y a su unión la llamamos \enfatiza{frontera}. Definimos el \enfatiza{interior} como $\sigma$ menos su frontera. 
 \end{defin}
 
 \begin{defin}%%%%DEF: Complejo simplicial
@@ -1084,8 +1115,8 @@ Sea $S$ una superficie compacta. Una \enfatiza{cremallera} es una identificació
 En la \textit{prueba ZIP}, Conway nos explica gráficamente las posibles formas de unir cremalleras. 
 
 \begin{defin}
-Sea $S$ una superficie. Definimos cuatro formas elementales de identificar pares \textit{zip} en perforaciones de 
-$S$ perforada:
+Sea $S$ una superficie. Definimos cuatro formas elementales de identificar pares-\textit{zip} en perforaciones de 
+$S$ $1$ o $2$-perforada:
 
 \begin{itemize}
 \item[1.] \enfatiza{Cap}: Los pares zip yacen cada uno sobre la mitad de una misma perforación con orientaciones opuestas (\autoref{fig:cap}).
