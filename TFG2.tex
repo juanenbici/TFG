@@ -43,6 +43,7 @@
 \usetikzlibrary{arrows}
 \usetikzlibrary{babel}
 \usepackage{hyperref}
+\usepackage[all]{hypcap}
 
 
 \usepackage{sectsty} % Personalizar titulos secciones
@@ -997,7 +998,7 @@ Un hecho fundamental para la prueba del teorema de clasificación es que toda su
 
 \section{Complejos simpliciales y triangulación}
 
-Para poder dar una definición rigurosa de triangulación de variedades necesitamos la noción de \textit{complejos simpliciales}. Estos están formados por \textit{símplices}, que son puntos, segmentos, triángulos rellenos, tetraedros sólidos y sus análogos en dimensiones superiores.
+Para poder dar una definición rigurosa de triangulación de variedades necesitamos la noción de \textit{complejos simpliciales}. Estos son construcciones formadas por \textit{símplices}, que son una generalización de los triángulos. En esta primera parte me baso en las definiciones de Munkres \cite{munkres}.
 
 \begin{defin}%%%%DEF: Posición general
 Sean $v_0,\dots v_k$ $k+1$ puntos distintos de $\R^n$. Decimos que $\{ v_0,\dots ,v_k\}$ están en \enfatiza{posición general} si $c_0,\dots c_k$ son números reales tales que  $$\sum_{i=0}^{k}c_iv_i=0 \text{ y } \sum_{i=0}^kc_i=0,$$ entonces $c_0=\dots =c_k=0$.
@@ -1005,42 +1006,51 @@ Sean $v_0,\dots v_k$ $k+1$ puntos distintos de $\R^n$. Decimos que $\{ v_0,\dots
 
 
 \begin{defin}%%%%DEF: Símplice
-Sean $\{ v_0,\dots ,v_n\}$ un conjunto de $k+1$ puntos de $\R^n$ en posición general. El \enfatiza{símplice} generado por ellos, que denotamos por $[ \, v_0,\dots ,v_k ] \,$, es el conjunto $$[ \, v_0,\dots ,v_k] \, =\left\{  \sum_{i=0}^{k}t_iv_i \mid t_i\geq 0,\, \sum_{i=0}^{k}t_i=1 \right\}, $$ con la topología heredada. Cada uno de los $v_i$ se llama \enfatiza{vértice} del símplice. Al entero $k$ se le llama \enfatiza{dimensión}, y diremos que $[ \, v_0,\dots ,v_k] \,$ es un \enfatiza{$k$-símplice}. 
+Sean $\{ v_0,\dots ,v_n\}$ un conjunto de $k+1$ puntos de $\R^n$ en posición general. El \enfatiza{símplice} generado por ellos, que denotamos por $[ \, v_0,\dots ,v_k ] \,$, es el conjunto $$[ \, v_0,\dots ,v_k] \, =\left\{  \sum_{i=0}^{k}t_iv_i \mid t_i\geq 0,\, \sum_{i=0}^{k}t_i=1 \right\}, $$ con la topología heredada. Para todo punto $x=\sum_it_iv_i\in [ \, v_0,\dots ,v_k] \,$, llamamos a los $t_i$ \enfatiza{coordenadas baricéntricas de $x$}. Cada uno de los $v_i$ se llama \enfatiza{vértice} del símplice. Al entero $k$ se le llama \enfatiza{dimensión}, y diremos que $[ \, v_0,\dots ,v_k] \,$ es un \enfatiza{$k$-símplice}. 
 \end{defin}
 
 \begin{eje}
-Un $0$-símplice es un punto, un 1-símplice es un segmento, un $2$-símplice es un triángulo junto a su interior, un $3$-símplice es un tetraedro sólido, y así sucesivamente (ver \autoref{fig:simplices}).
+Un $0$-símplice es un punto, un 1-símplice es un segmento, un $2$-símplice es un triángulo junto a su interior, un $3$-símplice es un tetraedro sólido, y así sucesivamente (\autoref{fig:simplices}).
 \end{eje}
 
 \begin{figure}
 \centering
-\begin{tikzpicture}[scale=1.2]
+\begin{tikzpicture}[scale=1.4]
 
 \fill[gray!20] (1,0) -- (1.5,0.87) -- (2,0) --cycle;
 \draw (1,0) -- (1.5,0.87) -- (2,0) -- cycle;
 \draw (-1,0.2) -- (0,0.5);
-\fill (-1,0.2) circle (2pt);
-\fill (0,0.5) circle (2pt);
-\fill (-2,0.6) circle (2pt);
-\fill (1,0) circle (2pt);
-\fill (1.5, 0.87) circle (2pt);
-\fill (2,0) circle (2pt);
+\fill[gray!20] (3,0.5) -- (3.5,0.9)--(4,0.5)--(3.5,0)--cycle;
+\draw (3,0.5) -- (3.5,0.9)--(4,0.5)--(3.5,0)--cycle;
+\draw (3.5,0.9)--+(0,-.9);
+\draw [dashed](3,.5)--+(1,0);
+\fill (3,.5) circle (1.5pt);
+\fill (4,.5) circle (1.5pt);
+\fill (3.5,.9) circle (1.5pt);
+\fill (3.5,0) circle (1.5pt);
+\fill (-1,0.2) circle (1.5pt);
+\fill (0,0.5) circle (1.5pt);
+\fill (-2,0.6) circle (1.5pt);
+\fill (1,0) circle (1.5pt);
+\fill (1.5, 0.87) circle (1.5pt);
+\fill (2,0) circle (1.5pt);
 \end{tikzpicture}
-\caption{Símplices.\label{fig:simplices}}
+\caption{$k$-símplices, $k=0,\dots ,3$.\label{fig:simplices}}
 \end{figure}
 
-\begin{defin}
+
 
 Sea $\sigma$ un $k$-símplice. Cada símplice generado por un subconjunto no vacío de vértices de $\sigma$ se llama \enfatiza{cara de $\sigma$}. Las caras que no son iguales a $\sigma$ se llaman \enfatiza{caras propias}. Las caras $0$-dimensionales de $\sigma$ son sus vértices, y a las caras $1$-dimensionales se les llama \enfatiza{lados}. Las caras $(k-1)$-dimensionales de un $k$-símplice se llaman bordes, y a su unión la llamamos \enfatiza{frontera}. Definimos el \enfatiza{interior} como $\sigma$ menos su frontera. 
-\end{defin}
+
 
 \begin{defin}%%%%DEF: Complejo simplicial
 Un \enfatiza{complejo simplicial} es una colección $K$ de símplices en algún espacio euclídeo $\R ^n$, que satisface las siguientes condiciones:
 \begin{itemize}
 \item[(i)] Si $\sigma \in K $, entonces toda cara de $\sigma$ está en $K$
-\item[(ii)] La intersección de dos símplices cualesquiera en $K$ es o bien vacía o bien una cara de cada uno.
-\item[(iii)] $K$ es una colección finitamente local.
+\item[(ii)] La intersección de dos símplices cualesquiera en $K$ es o bien vacía o bien una cara de ambos.
+%\item[(iii)] $K$ es una colección finitamente local.
 \end{itemize}
+\label{def:complex}
 \end{defin}
 %La tercera condición implica que $K$ es numerable, pues todo punto de $\R ^n$ tiene un entorno intersecando al menos un número finito de símplices de $K$, y este recubrimiento abierto de $\R ^n$ tiene un subrecubrimiento numerable. A nosotros los símplices que más nos interesan son los \enfatiza{complejos simpliciales finitos}, que son los que contienen únicamente un número finito de símplices. Para estos complejos, la condición (iii) es redundante.
 
@@ -1048,13 +1058,74 @@ Si $K$ un complejo simplicial en $\R ^n$, llamamos \enfatiza{dimensión de $K$} 
 Un subconjunto $K'\subseteq K$ se dice que es un \enfatiza{subcomlejo de $K$} si para todo $\sigma \in K'$, toda cara de $\sigma$ está en $K'$. Un subcomplejo es un complejo simplicial en sí.
 Para todo $k\leq n$, el conjunto de todos los símplices de $K$ de dimensión menor o igual que $k$ es un subcomplejo llamado \enfatiza{$k$-esqueleto de $K$}.
 
+La \autoref{fig:complex} muestra un complejo simplicial en $\R^2$. En cambio en la \autoref{fig:not_complex} los símplices representados no forman un complejo, pues no se respeta la condición (ii) de la \autoref{def:complex}.
+
+%%
+%%
+%%
+
+%Aquí se puede coger la definición de polítopo de munkres, pero quizas es un poco inutil
+%%
+%%
+%%
 
 
-\begin{defin}%%%%DEF: Polyhedron
-Sea un complejo simplicial $K$ en $\R ^n$. La unión de todos los símplices en $K$ junto con la topología heredada de $\R ^n$ es un espacio topológico que denotamos por $|K|$ y que llamamos \enfatiza{polyedrhon de K}.
+\begin{defin}%%%%DEF: Poliedro
+Sea un complejo simplicial $K$ en $\R ^n$. La unión de todos los símplices en $K$ junto con la topología heredada de $\R ^n$ es un espacio topológico que denotamos por $|K|$ y que llamamos \enfatiza{poliedro de K}.
 \end{defin}
+
+
+
+\begin{figure}%%%%FIG: Complejos y no complejos
+   \begin{minipage}{0.48\textwidth}
+   \centering
+	\begin{tikzpicture}
+	\fill[gray!20](-2.96,0)--(-2.46,1.19)--(-1,1.32)--(-1.45,0)--cycle;
+	\fill[gray!20] (-0.05,0.66)--(1.03,1.41)--(1.55,0.64)--cycle;
+	\draw (-3.98,-.3)--(-2.96,0)--(-2.46,1.19)--(-1.45,0)--(-1,1.32)--(-2.46,1.19);
+	\draw(-2.96,0)--(-1.45,0);
+	\draw (-1,1.32)--(-0.05,0.66)--(1.03,1.41)--(1.55,0.64)--(-0.05,0.66)--(-0.22,-0.45)--(1.14,-0.28)--(1.55,0.64);
+	\draw (-1.11,-0.46)--(-0.56,-0.17);
+	\fill [color=black] (-3.98,-0.3) circle (1.5pt);
+	\fill [color=black] (-2.96,0) circle (1.5pt);
+	\fill [color=black] (-2.46,1.19) circle (1.5pt);
+	\fill [color=black] (-1.45,0) circle (1.5pt);
+	\fill [color=black] (-1,1.32) circle (1.5pt);
+	\fill [color=black] (-0.05,0.66) circle (1.5pt);
+	\fill [color=black] (1.03,1.41) circle (1.5pt);
+	\fill [color=black] (1.55,0.64) circle (1.5pt);
+	\fill [color=black] (1.14,-0.28) circle (1.5pt);
+	\fill [color=black] (-0.22,-0.45) circle (1.5pt);
+	\fill [color=black] (-1.11,-0.46) circle (1.5pt);
+	\fill [color=black] (-0.56,-0.17) circle (1.5pt);
+
+	\end{tikzpicture}
+	\caption{Un complejo simplicial en $\R^2$\label{fig:complex}}
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\textwidth}
+     \centering
+    \begin{tikzpicture}[scale=0.5]
+	\fill[gray!20] (-1.82,0.46)--(1.04,3.14)--(2.33,0.67)--cycle;
+	\fill[gray!20] (1.67,1.94)--(2.94,-0.5)--(5,3)--cycle;
+	\draw (1.04,3.14)-- (2.94,-0.5);
+	\draw (1.04,3.14)-- (-1.82,0.46);
+	\draw (-1.82,0.46)-- (2.33,0.67);
+	\draw (2.94,-0.5)-- (5,3);
+	\draw (5,3)-- (1.67,1.94);
+	\fill [color=black] (1.04,3.14) circle (3pt);
+	\fill [color=black] (2.94,-0.5) circle (3pt);
+	\fill [color=black] (-1.82,0.46) circle (3pt);
+	\fill [color=black] (2.33,0.67) circle (3pt);
+	\fill [color=black] (5,3) circle (3pt);
+	\fill [color=black] (1.67,1.94) circle (3pt);
+	\end{tikzpicture}
+	\caption{Símplices que no forman un complejo.\label{fig:not_complex}}
+    
+   \end{minipage}
+\end{figure}
+
 \begin{defin}%%%%DEF: Triangulación
-Sea $X$ un espacio topológico. Llamamos \enfatiza{triangulación de $X$} a un homeomorfismo entre $X$ y el polyhedron de algún complejo simplicial.
+Sea $X$ un espacio topológico. Llamamos \enfatiza{triangulación de $X$} a un homeomorfismo entre $X$ y el poliedro de algún complejo simplicial.
 \end{defin}
 
 \begin{defin}%%%%DEF: Superficie triangulable
@@ -1065,8 +1136,8 @@ Toda superficie que admita una triangulación se dice \enfatiza{triangulable}.
 
 \section{Teorema de Radó}
 
-\begin{tma}
-Toda superficie es triangulable.
+\begin{tma}[Teorema de Radó]
+Toda superficie es triangulable por un poliedro de un complejo simplicial 2-dimensional, en donde cada $1$-símplice es una cara de exáctamente dos $2$-símplices.\label{teo:rado}
 \end{tma}
 
 
@@ -1295,14 +1366,14 @@ a) y b) son consecuencia directa de lo anterior. Para c), utilizamos la \autoref
 Una superficie se dice ordinaria si es homeomorfa a una colección finita de esferas cada una con un número finito de \textit{handles}, \textit{crosshandles}, \textit{crosscaps} y perforaciones.
 \end{defin}
 
-\begin{tma}[Teorema de clasificación, versión preeliminar] %%%%TEO: Clasificación preeliminar
+\begin{tma}[Teorema de clasificación, versión preeliminar] %M%%%TEO: Clasificación preeliminar
 
 Toda superficie compacta es ordinaria.
 
 \end{tma}
 
 \begin{proof}
-
+Sea $S$ una superficie compacta. Sabemos, por el \nameref{teo:rado}, que $S$ está triangulada por un poliedro $|K|$ asociado a un complejo simplicial $K=\left\{\sigma_1,\dots ,\sigma_j \mid \sigma_i \text{ es un símplice para todo } i=,1\dots ,j\right\}$, tal que cada 1-símplice es una cara de exáctamente dos 2-símplices. Cada 2-símplice es homeomorfo a una esfera con una perforación ???? 
 \end{proof}
 
 
@@ -1374,6 +1445,10 @@ A. Hatcher.
 T. Radó.
 \textit{Über den Begriff der Riemannschen Fläche, Acta Sci}. Math. Szeged. 2 1925,
 101–121.
+
+\bibitem{munkres}
+J. R. Munkres.
+\textit{Elements of Agebraic Topology}. Addison-Wesley, 1984.
 
 
 \end{thebibliography}
