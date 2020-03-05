@@ -10,6 +10,6 @@
 \contentsline {chapter}{\numberline {3}La prueba ZIP de Conway}{17}{chapter.3}
 \contentsline {section}{\numberline {3.1}Cremalleras}{17}{section.3.1}
 \contentsline {section}{\numberline {3.2}Teorema de Clasificaci\IeC {\'o}n}{18}{section.3.2}
-\contentsline {chapter}{\numberline {A}Teoremas Usados}{20}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}CW-complejos}{21}{appendix.Alph2}
-\contentsline {chapter}{\numberline {C}Definiciones}{22}{appendix.Alph3}
+\contentsline {chapter}{\numberline {A}Teoremas Usados}{21}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}CW-complejos}{22}{appendix.Alph2}
+\contentsline {chapter}{\numberline {C}Definiciones}{23}{appendix.Alph3}

@@ -183,16 +183,6 @@ Una \textbf{\emph{superficie}} es una $2$-variedad.
 	\end{center}
 \end{figure}
 
-\
-
-
-\
-
-\
-
-
-
-
 \begin{eje}%%%%EJE: toro y esfera
 \begin{itemize}
 \item La esfera $\mathbb{S}^2=\{(x,y,z) \in \R^3\mid  x^2+y^2+z^2=1\}$.
@@ -1148,7 +1138,7 @@ Toda superficie es triangulable por un poliedro de un complejo simplicial 2-dime
 
 \begin{defin}%M%%%DEF: perforación
 \label{def:perforacion}
-Sea $S$ una superficie. Sea $p\in \interior (S)$ y $U$ un entorno abierto de $p$ en $S$. Sea $\phi :U\to \R^n$ un homeomorfismo tal que $\phi (p)=0$. Sea $B=\phi ^{-1}(B_1(0))$. Decimos que la nueva superficie $S^o=S\setminus B$ es $S$ \enfatiza{$1$-perforada}, y a $\partial B\subset S^o$ la llamamos \enfatiza{perforación}. Podemos repetir el proceso sobre $S^o$ sucesivamente, obteniendo $S$ $n$-perforada con un número finito $n\in \N$ de perforaciones.
+Sea $S$ una superficie (con o sin borde). Sea $p\in \interior (S)$ y $U$ un entorno abierto de $p$ en $S$. Sea $\phi :U\to \R^n$ un homeomorfismo tal que $\phi (p)=0$. Sea $B=\phi ^{-1}(B_1(0))$. Decimos que la nueva superficie con borde $S^o=S\setminus B$ es $S$ \enfatiza{$1$-perforada}, y a $\partial B\subset S^o$ la llamamos \enfatiza{perforación}. Podemos repetir el proceso sobre $S^o$ sucesivamente, obteniendo $S$ $n$-perforada con un número finito $n\in \N$ de perforaciones.
 \end{defin}
 
 \begin{obs}%M%%%OBS: Disco como esfera perforada
@@ -1366,6 +1356,14 @@ a) y b) son consecuencia directa de lo anterior. Para c), utilizamos la \autoref
 Una superficie se dice ordinaria si es homeomorfa a una colección finita de esferas cada una con un número finito de \textit{handles}, \textit{crosshandles}, \textit{crosscaps} y perforaciones.
 \end{defin}
 
+
+\begin{lema}%%%%LEMA: Superficie ordinaria zips
+Sea $S$ una superficie con borde con un par-zip tal que cada cremallera está en una parte de su borde. Entonces, si $S$ es ordinaria antes de identificar las cremalleras, es ordinaria también después.\label{lema:superficie_ordinaria}
+\end{lema}
+\begin{proof}
+Consideramos el caso en que las dos cremalleras ocupan cada una una perforación. Entonces al identificarlas se tiene un \textit{handle} (\autoref{fig:handle}) o un \textit{crosshandle} (\autoref{fig:crosshandle}), dependiendo de sus respectivas orientaciones. Si los dos
+\end{proof}
+
 \begin{tma}[Teorema de clasificación, versión preeliminar] %M%%%TEO: Clasificación preeliminar
 
 Toda superficie compacta es ordinaria.
@@ -1373,7 +1371,7 @@ Toda superficie compacta es ordinaria.
 \end{tma}
 
 \begin{proof}
-Sea $S$ una superficie compacta. Sabemos, por el \nameref{teo:rado}, que $S$ está triangulada por un poliedro $|K|$ asociado a un complejo simplicial $K=\left\{\sigma_1,\dots ,\sigma_j\right\}$, donde cada $\sigma_i \text{ es un símplice para todo } i=1\dots ,j$, y tal que cada 1-símplice es una cara de exáctamente dos 2-símplices. Ahora bien, el complejo simplicial lo podemos construir a partir de 
+Sea $S$ una superficie compacta. Sabemos, por el \nameref{teo:rado}, que $S$ está triangulada por un poliedro $|K|$ asociado a un complejo simplicial $K$ tal que cada 1-símplice que contiene puntos interiores de $S$ es una cara de exáctamente dos 2-símplices, y cada 1-símplice que contiene puntos del borde de $S$ es cara de exáctamente un 2-símplice. Si sobre los primeros 1-símplices ponemos una cremallera distinta, en los 2-símplices habrá algunos 1-símplices que se identifiquen. Llamemos $K_2=\left\{\sigma_1,\dots ,\sigma_j\right\}$, donde cada $\sigma_i \text{ es un 2-símplice para todo } i=1\dots ,j$. $K_2$ es una superficie ordinaria, pues cada $\sigma_i$ es homeomorfo a una esfera perforada. Si identificamos ahora las cremalleras una a una, por el \autoref{lema:superficie_ordinaria} y por inducción, la superficie resultante es ordinaria.
 \end{proof}
 
 
