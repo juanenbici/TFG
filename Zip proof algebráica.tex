@@ -1,0 +1,398 @@
+\documentclass[10pt]{report}
+\usepackage[utf8]{inputenc}
+
+\usepackage[spanish]{babel} % Idioma
+\selectlanguage{spanish}
+\usepackage{graphicx} %imagenes
+\usepackage{verbatim} % Para comment
+
+
+\usepackage{appendix} %Para el apéndice
+
+
+\usepackage{ragged2e} %para alinear texto izqda y derecha
+
+
+
+\usepackage{geometry}
+%\geometry{ % Margenes
+%  a4paper,
+ % left=20mm,
+ % right=20mm,
+  %top=20mm,
+ % bottom=20mm
+%}
+%\setlength{\parindent}{0pt} % Quitar indentado parrafos automatico
+
+\usepackage{amsmath} % Movidas útiles
+\usepackage{amssymb} % Simbolos mates
+\usepackage{amsthm} % Personalizar teoremas (mas abajo continuacion)
+\usepackage{thmtools} % Mas movidas teoremas
+
+\usepackage{tikz} % Para pictures
+\usetikzlibrary{decorations.markings,arrows} %decoracion en tikz
+\usetikzlibrary{shadows,arrows,positioning,shapes.geometric}
+\usetikzlibrary{decorations,decorations.markings}
+\usepackage{pgfplots}
+\usetikzlibrary{intersections, pgfplots.fillbetween}
+\usetikzlibrary {arrows.meta}
+
+\usepackage{etoolbox}
+\usetikzlibrary{optics}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{babel}
+\usepackage{hyperref}
+\usepackage[all]{hypcap}
+
+
+\usepackage{sectsty} % Personalizar titulos secciones
+%\sectionfont{\underline} % Titulo seccion subrayado
+
+% Comandos simbolos utiles 
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Epsilon}{\mathcal{E}}
+\DeclareMathOperator{\interior}{int} %interior
+
+
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Comando para normas
+\newcommand{\Esfera}{\mathbb{S}^2}
+\newcommand{\Toro}{\mathbb{T}^2}
+\newcommand{\Proyectivo}{\mathbb{P}^2}
+\newcommand{\enfatiza}[1]{\textbf{\textit{#1}}}
+
+% Estilos teoremas (Mejorable)
+\theoremstyle{definition}
+\newtheorem{defin}{Definición}[section]
+\newtheorem{tma}[defin]{Teorema}
+\newtheorem*{tma*}{Teorema}
+\newtheorem{corol}[defin]{Corolario}
+\newtheorem{prop}[defin]{Proposición}
+\newtheorem{lema}[defin]{Lema}
+%\newcommand{\demo}{Demostración.\\}
+%\newcommand{\ok}{\hfill$\square$}
+%\theoremstyle{remark}
+\newtheorem{obs}[defin]{Observación}
+\newtheorem{eje}[defin]{Ejemplo}
+\graphicspath{ {images/} }
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \newpage}
+
+
+% Cabeceras
+\renewcommand{\title}{ZIP}
+\newcommand{\subtitle}{Trabajo fin de grado}
+\renewcommand{\maketitle}{{\Large{\textbf{\title}}}\\\\{\Large \subtitle}\\\rule{17cm}{0.4pt}\\}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%PORTADA%%%%%%%%%%%
+
+%%% PORTADA%%%%%%
+\begin{titlepage} %Creo que esto es para la numeración de páginas
+\begin{center} %Que todo quede centradito
+
+% Todo esto de abajo habría que retocarlo pero así sirve de ejemplo
+\huge\textsc{Universidad Complutense de Madrid}\\[0.2in]
+\includegraphics[scale=0.8]{comlu}\\[0.1in] %Introduce la imagen y la reescala, inserta un pequeño hueco con lo de debajo
+
+\Large{Facultad de Matemáticas}\\[0.5in] %inserta un hueco mayor con lo de abajo
+ %la linea horizontal
+\Large{Trabajo de Fin de Grado}\\[.1in]
+\Huge {Un tratamiento riguroso de la prueba ZIP}\\[0.2in]
+
+
+
+\vfill %Llenar verticalmente
+\Large {Juan Valero Oliet}\\[0.5in]
+\vfill 
+Dirigido por:\\
+Manuel Alonso Morón\\[.1in]
+\Large{Junio de 2020}
+\end{center}
+
+\end{titlepage}
+
+
+\afterpage{\blankpage}
+
+%%%%%%%%%%%%%PORTADA%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{roman} 
+
+\tableofcontents
+\listoffigures
+
+
+
+
+
+
+
+\chapter{La prueba ZIP de Conway}
+
+\section{Cremalleras}
+
+\begin{defin}%M%%%DEF: perforación
+\label{def:perforacion}
+Sea $S$ una superficie (con o sin borde). Sea $p\in \interior (S)$ y $U$ un entorno abierto de $p$ en $S$. Sea $\phi :U\to \R^n$ un homeomorfismo tal que $\phi (p)=0$. Sea $B=\phi ^{-1}(B_1(0))$. Decimos que la nueva superficie con borde $S^o=S\setminus B$ es $S$ \enfatiza{$1$-perforada}, y a $\partial B\subset S^o$ la llamamos \enfatiza{perforación}. Podemos repetir el proceso sobre $S^o$ sucesivamente, obteniendo $S$ $n$-perforada con un número finito $n\in \N$ de perforaciones.
+\end{defin}
+
+\begin{obs}%M%%%OBS: Disco como esfera perforada
+Dado que los dos espacios son homeomorfos, podemos visualizar el disco cerrado $\overline{\mathbb{B}}^2$ como una esfera con una perforación (\autoref{fig:disco_esfera_perforada}).
+\end{obs}
+ 
+
+\begin{figure}[h]%%%%FIG: Disco esfera perforada
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\fill[gray!20](3,0) circle (2cm);
+\fill[color=gray!20][rotate around={-14.04:(-1.34,0.02)}] (-1.34,0.02) ellipse (0.32cm and 0.24cm);
+\fill[color=white][rotate around={-14.04:(3.33,1.31)}] (3.33,1.31) ellipse (0.32cm and 0.24cm);
+\draw[rotate around={-14.04:(-1.34,0.02)}] (-1.34,0.02) ellipse (0.32cm and 0.24cm);
+\draw[rotate around={-14.04:(3.33,1.31)}] (3.33,1.31) ellipse (0.32cm and 0.24cm);
+\draw(3,0) circle (2cm);
+\draw(1,0) arc[x radius=2, y radius=0.5, start angle=180, end angle=360];
+\draw[dashed](5,0) arc[x radius=2, y radius=0.5, start angle=0, end angle=180];
+\draw(0,0) node[anchor=north] {$ \approx $};
+%\draw [out=-14.04, in=0, looseness=2] (-1.28,0.26) to (-1.5,-2);
+%\draw [out=180, in=165.96, looseness=4] (-1.5,-2) to (-1.28,0.26);
+\end{tikzpicture}
+\caption{El disco cerrado como una esfera perforada.\label{fig:disco_esfera_perforada}}
+\end{figure}
+
+
+Conway utiliza las cremalleras (\textit{zips} en inglés) para describir cómo actúan las identificaciones topológicas. Cada cremallera actúa sobre una o dos perforaciones de una superficie. Están formadas por dos \textit{zips} (dos partes dentadas) fijadas la/s perforación/es y un \textit{zipper} (el deslizador). Al cerrar el \textit{zipper}, las \textit{zips} se juntan identificándose. Trato de dar una definición rigurosa:
+
+
+\begin{defin}%%%DEF: ZIP
+Sea $S$ una superficie compacta. Una \enfatiza{cremallera} es una identificación entre dos subconjuntos (abtos, cerrados??) de la frontera de $S$. A este par lo llamamos \enfatiza{par-zip}.
+\end{defin}
+
+
+En la \textit{prueba ZIP}, Conway nos explica gráficamente las posibles formas de unir cremalleras. 
+
+\begin{defin}
+Sea $S$ una superficie. Definimos cuatro formas elementales de identificar pares-\textit{zip} en perforaciones de 
+$S$ $1$ o $2$-perforada:
+
+\begin{itemize}
+\item[1.] \enfatiza{Cap}: Los pares zip yacen cada uno sobre la mitad de una misma perforación con orientaciones opuestas (\autoref{fig:cap}).
+\item[2.] \enfatiza{Crosscap}: Los pares zip yacen cada uno sobre la mitad de una misma perforación con la misma orientación (\autoref{fig:crosscap}).
+\item[3.] \enfatiza{Handle}: Los pares zip yacen cada uno sobre una perforación distinta de S con orientaciones opuestas (\autoref{fig:handle}).
+\item[4.] \enfatiza{Crosshandle}: Los pares zip yacen cada uno sobre una perforación distinta de S con la misma orientación (\autoref{fig:crosshandle}).
+\end{itemize}
+\end{defin}
+
+Sea $S$ una superficie conexa tal que admite una representación poligonal de una sola cara $P=\langle A\mid W\rangle$, y sea $|\mathcal{P}|$ su realización geométrica. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$, obtenemos la suma conexa $S\# \Esfera$, es decir, $S$ (\autoref{obs:suma_esfera}). 
+
+Sean ahora $S$ y $S'$ superficies conexas. Entonces, hacer una perforación sobre $S'$ es lo mismo que hacer la suma conexa de una esfera $\Esfera$ con una perforación $S'$. Por tanto, hacer una perforación sobre $S'$ asociada a $S$ da lugar a la suma conexa $S\# S'$.
+ 
+
+\begin{prop}
+Sea $S$ una superficie. Los siguientes espacios son homeomorfos:
+\begin{itemize}
+\item[a)] $S$ con un cap y $S$.
+\item[b)] $S$ con un crosscap y $S\# \Proyectivo$.
+\item[c)] $S$ con un handle y $S\# \Toro$.
+\item[d)] $S$ con un crosshandle y $S\# K$ (siendo $K$ la botella de Klein). 
+\end{itemize}
+\end{prop}
+\begin{proof}
+a) y b) son consecuencia directa de lo anterior. Para c), utilizamos la \autoref{obs:toro_asa}, y para d) utilizar una construcción parecida a c) ((habría que especificar más?)).
+\end{proof}
+
+
+
+
+
+
+\begin{figure}[p] %%%%FIG: Cap
+\centering
+\begin{tikzpicture} [use optics]
+%\draw [help lines, step=1mm](0,-2) grid (6,2);
+\fill [color=gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\fill [gray!10](3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\fill [gray!20] (2,-.1) [out=80, in=180] to (3,0.7) [out=0, in=100] to (4,-.1) arc[x radius=1, y radius=0.5, start angle=0, end angle=-180];
+\fill [white] (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+\draw (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\draw (3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\draw [-<-={at=0.1}, ->-={at=0.6}] (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+\draw [dashed](2,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=0];
+\draw (2,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=360];
+\draw[-<-={at=0.48}] [dash pattern= on 50pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt] (2.4,-.5) [out=90, in=180] to (3.1,.685) [out=0, in=90] to (3.6,.3);
+\draw (2,-.1) [out=80, in=180] to (3,0.7) [out=0, in=100] to (4,-.1);
+%\draw (2.4,-.5)-- (3.6,.3);
+
+\fill [color=black] (-3.6,-.5) circle (1.pt);
+\fill [color=black] (-2.4,.3) circle (1.pt);
+\fill [color=black] (3.6,.3) circle (1.pt);
+\fill [color=black] (2.4,-.5) circle (1.pt);
+
+\end{tikzpicture}
+\caption{Construcción del \textit{cap}.\label{fig:cap}}
+\end{figure}
+
+
+
+\begin{figure}[h] %%%%FIG: Crosscap
+\centering
+\begin{tikzpicture} [use optics]
+%\draw [help lines, step=1mm](0,-2) grid (6,2);
+\fill [color=gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\fill [gray!10](3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\fill [white] (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+\fill [gray!20](2,-.1) [out=90,in=180] to (3.1,2)[out=0, in=90] to (4,-.1)  arc[x radius=1, y radius=0.5, start angle=0, end angle=-180];
+\draw (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\draw[dash pattern= on 103pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt  on 2pt off 2pt  on 2pt off 3pt  on 150pt] (3,-1.5) -- (5,0) -- (3,1) -- (1,0);
+\draw (1,0) -- (3,-1.5);
+\draw [-<-={at=0.4}, -<-={at=0.9}] (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+\draw [dashed](2,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=0];
+\draw (2,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=360];
+\draw (2,-.1) [out=90,in=180] to (3.1,2)[out=0, in=90] to (4,-.1);
+\draw (3.1,2) -- (3.1,0.7);
+
+\fill [color=black] (-3.6,.3) circle (1.pt);
+\fill [color=black] (-2.4,-.5) circle (1.pt);
+
+%\fill [color=black] (-4,-.1) circle (1.pt);
+%\fill [color=black] (-2,-.1) circle (1.pt);
+
+%\fill [color=black] (-3.6,-.5) circle (1.pt);
+%\fill [color=black] (-2.4,.3) circle (1.pt);
+
+
+\draw (2.17,1.15) [out=-80, in=-135, looseness=0.6] to (3.1,1.2) [out=-45, in=-90, looseness=0.6] to (3.9,1.2);
+\draw [dashed] (2.17,1.15) [out=90, in=135, looseness=0.6] to (3.1,1.2) [out=45, in=90, looseness=0.6] to (3.9,1.2);
+\end{tikzpicture}
+\caption{Construcción del \textit{crosscap}.\label{fig:crosscap}}
+\end{figure}
+
+
+\begin{figure}[h] %%%%FIG: Handle
+\centering
+
+\begin{tikzpicture} [use optics]
+%\draw [help lines, step=1mm](-6,-2) grid (6,2);
+
+\fill [gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\fill [white](-4.4,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=540];
+\fill [white](-1.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=360];
+\fill [gray!10](3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\fill [gray!20](1.6,-.05) [out=90, in=180] to (3,2) [out=0, in=90] to (4.4,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180]  [out=90, in=0] to (3,1.2) [out=180, in=90] to (2.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180] ;
+
+\draw (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\draw [dash pattern= on 19pt off 2 pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt  on 2pt off 2pt on 2pt off 2pt  on 1pt off 1pt on 24pt](5,0) -- (3,1);
+\draw [dash pattern= on 12pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 50pt ](3,1) -- (1,0);
+\draw (1,0) -- (3,-1.5) -- (5,0);
+\draw [-<-={at=0}](-4.4,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=540];
+\draw [->-={at=0}](-1.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=360];
+
+\draw (1.6,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=360];
+\draw  (4.4,-.05)arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180];
+\draw [dashed](1.6,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=0];
+\draw  [dashed](4.4,-.05)arc [x radius=0.5, y radius=0.25, start angle=0, end angle=180];
+
+\draw (1.6,-.05) [out=90, in=180] to (3,2) [out=0, in=90] to (4.4,-.05);
+\draw (2.6,-.05) [out=90, in=180] to (3,1.2) [out=0, in=90]to (3.4,-.05);
+\draw [->-](3,1.2) [out=180, in=180, looseness=0.7] to (3,2);
+\draw [dashed] (3,1.2)[out=0, in=0, looseness=0.7] to (3,2);
+\fill (-3.4,-.05) circle (1pt);
+\fill (-2.6,-.05) circle (1pt);
+\end{tikzpicture}
+
+\caption{Construcción del \textit{handle}. \label{fig:handle}}
+\end{figure}
+
+
+\begin{figure}[h] 
+\centering
+\begin{tikzpicture}[use optics]
+%\draw [help lines, step=1mm](-6,-2) grid (6,2);
+
+\fill [gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\fill [white](-4.4,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=540];
+\fill [white](-1.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=360];
+\fill [gray!10](3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\fill [gray!20](1.6,-.05) [out=90, in=180] to (3,2) [out=0, in=90] to (4.4,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180]  [out=90, in=0] to (3,1.2) [out=180, in=90] to (2.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180] ;
+
+\draw (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\draw [dash pattern= on 19pt off 2 pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt  on 2pt off 2pt on 2pt off 2pt  on 1pt off 1pt on 24pt](5,0) -- (3,1);
+\draw [dash pattern= on 12pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 50pt ](3,1) -- (1,0);
+\draw (1,0) -- (3,-1.5) -- (5,0);
+\draw [-<-={at=0}](-4.4,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=540];
+\draw [-<-={at=0}](-1.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=360];
+
+\draw (1.6,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=360];
+\draw  (4.4,-.05)arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180];
+\draw [dashed](1.6,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=0];
+\draw  [dashed](4.4,-.05)arc [x radius=0.5, y radius=0.25, start angle=0, end angle=180];
+
+\draw (2.1,1.56) [out=-90, in=-135, looseness=0.5] to (3, 1.56) [out=-45, in=-90, looseness=0.5] to (3.9, 1.56);
+\draw [dashed] (2.1,1.56) [out=90, in=135, looseness=0.5] to (3, 1.56) [out=45, in=90, looseness=0.5] to (3.9, 1.56);
+\draw (1.6,-.05) [out=90, in=180] to (3,2) [out=0, in=90] to (4.4,-.05);
+\draw (2.6,-.05) [out=90, in=180] to (3,1.2) [out=0, in=90]to (3.4,-.05);
+%\draw (3,1.2) [out=180, in=180, looseness=0.2] to (3,2);
+\draw (3,1.2)-- (3,2);
+%\draw [dashed] (3,1.2)[out=0, in=0, looseness=0.7] to (3,2);
+\fill (-3.4,-.05) circle (1pt);
+\fill (-2.6,-.05) circle (1pt);
+
+\end{tikzpicture}
+\caption{Construcción del \textit{crosshandle}.\label{fig:crosshandle}}
+\end{figure}
+
+
+
+\section{Teorema de Clasificación}
+
+\begin{defin}%%%%DEF: Ordinaria
+Una superficie se dice ordinaria si es homeomorfa a una colección finita de esferas cada una con un número finito de \textit{handles}, \textit{crosshandles}, \textit{crosscaps} y perforaciones.
+\end{defin}
+
+
+\begin{lema}%%%%LEMA: Superficie ordinaria zips
+Sea $S$ una superficie con borde con un par-zip tal que cada cremallera está en una parte de su borde. Entonces, si $S$ es ordinaria antes de identificar las cremalleras, es ordinaria también después.\label{lema:superficie_ordinaria}
+\end{lema}
+\begin{proof}
+Consideramos el caso en que las dos cremalleras ocupan cada una una perforación en su totailidad. Entonces al identificarlas se tiene un \textit{handle} (\autoref{fig:handle}) o un \textit{crosshandle} (\autoref{fig:crosshandle}), dependiendo de sus respectivas orientaciones. Si las dos perforaciones pertenecen a componentes conexas distintas de $S$, entonces identificando obtenemos el espacio adjunción de las dos componentes. (MEJORAR). 
+
+Consideramos ahora el caso en el que las dos cremalleras yacen sobre la misma perforación y la cubren totalmente. Identificándolas nos da o bien un \textit{cap} (\autoref{fig:cap}) o bien un \textit{crosscap} (\autoref{fig:crosscap}), dependiendo de sus respectivas orientaciones.
+
+Finalmente, consideramos los varios casos en que las cremalleras no ocupan perforaciones en su totalidad. (A PARTIR DE AQUI NO SE MUY BIEN COMO ORIENTARLO... CON OPERACIONES ELEMENTALES O COMO HACE EL???) 
+\end{proof}
+
+\begin{tma}[Teorema de clasificación, versión preeliminar] %M%%%TEO: Clasificación preeliminar
+Toda superficie compacta es ordinaria.
+\end{tma}
+\begin{proof}
+Sea $S$ una superficie compacta. Sabemos, por el \nameref{teo:rado}, que $S$ está triangulada por un poliedro $|K|$ asociado a un complejo simplicial $K$ tal que cada 1-símplice que contiene puntos interiores de $S$ es una cara de exáctamente dos 2-símplices, y cada 1-símplice que contiene puntos del borde de $S$ es cara de exáctamente un 2-símplice. Si sobre los primeros 1-símplices ponemos una cremallera distinta, en los 2-símplices habrá algunos 1-símplices que se identifiquen. Llamemos $K_2=\left\{\sigma_1,\dots ,\sigma_j\right\}$, donde cada $\sigma_i \text{ es un 2-símplice para todo } i=1\dots ,j$. $K_2$ es una superficie ordinaria, pues cada $\sigma_i$ es homeomorfo a una esfera perforada. Si identificamos ahora las cremalleras una a una, por el \autoref{lema:superficie_ordinaria} y por inducción, la superficie resultante es ordinaria.
+\end{proof}
+
+
+
+%\begin{prop}
+%Si $S$ es una superficie compacta y conexa, $S$ admite una representación de una sola cara.
+%\end{prop}
+
+
+%A la perforación $\partial B_i$ la llamamos \enfatiza{perforación} asociada a $W_i$, y a la imagen por $\phi _i$ de cada par de segmentos $a$ la llamamos \enfatiza{cremallera} asociada a $a\in W_i$.
+
+
+%\begin{defin}%M%%%DEF: zips asociadas a una representación poligonal de una superficie
+%Sea $S$ una superficie. Sea $|\mathcal{P}|$ la realización geométrica de una representación poligonal $P=\langle A\mid W_1,\dots W_n\rangle$ de la superficie. Para cada $W_i$, con $i=1,\dots n$, sea $\partial B_i$ una perforación sobre una esfera $\Esfera_i$, y sea $\phi _i$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B_i$. A la perforación $\partial B_i$ la llamamos \enfatiza{perforación} asociada a $W_i$, y a la imagen de $\phi _i$ la llamamos \enfatiza{cremallera} asociada a $W_i$.
+%\end{defin}
+
+
+
+
+\end{document}
