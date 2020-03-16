@@ -6,11 +6,11 @@
 \contentsline {section}{\numberline {1.3}Suma conexa de variedades}{11}{section.1.3}
 \contentsline {chapter}{\numberline {2}Triangulaci\IeC {\'o}n de superficies}{14}{chapter.2}
 \contentsline {section}{\numberline {2.1}Complejos simpliciales y triangulaci\IeC {\'o}n}{14}{section.2.1}
-\contentsline {section}{\numberline {2.2}Teorema de Rad\IeC {\'o}}{16}{section.2.2}
-\contentsline {chapter}{\numberline {3}La prueba ZIP de Conway}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}Cremalleras}{17}{section.3.1}
-\contentsline {section}{\numberline {3.2}Estructura algebr\IeC {\'a}ica}{19}{section.3.2}
-\contentsline {section}{\numberline {3.3}Teorema de Clasificaci\IeC {\'o}n}{20}{section.3.3}
-\contentsline {chapter}{\numberline {A}Teoremas Usados}{22}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}CW-complejos}{23}{appendix.Alph2}
-\contentsline {chapter}{\numberline {C}Definiciones}{24}{appendix.Alph3}
+\contentsline {section}{\numberline {2.2}Teorema de Rad\IeC {\'o}}{15}{section.2.2}
+\contentsline {chapter}{\numberline {3}La prueba ZIP de Conway}{16}{chapter.3}
+\contentsline {section}{\numberline {3.1}Cremalleras}{16}{section.3.1}
+\contentsline {section}{\numberline {3.2}Estructura algebr\IeC {\'a}ica}{17}{section.3.2}
+\contentsline {section}{\numberline {3.3}Teorema de Clasificaci\IeC {\'o}n}{19}{section.3.3}
+\contentsline {chapter}{\numberline {A}Teoremas Usados}{21}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}CW-complejos}{22}{appendix.Alph2}
+\contentsline {chapter}{\numberline {C}Definiciones}{23}{appendix.Alph3}

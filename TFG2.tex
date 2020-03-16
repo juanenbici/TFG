@@ -86,7 +86,7 @@
     \thispagestyle{empty}%
     \newpage}
 
-
+\usepackage{subcaption} %para hacer subfigures
 % Cabeceras
 \renewcommand{\title}{ZIP}
 \newcommand{\subtitle}{Trabajo fin de grado}
@@ -1209,8 +1209,9 @@ a) y b) son consecuencia directa de lo anterior. Para c), utilizamos la \autoref
 
 
 
+\begin{figure}
 
-\begin{figure}[h] %%%%FIG: Cap
+\begin{subfigure}{1\textwidth} %%%%FIG: Cap
 \centering
 \begin{tikzpicture} [use optics]
 %\draw [help lines, step=1mm](0,-2) grid (6,2);
@@ -1234,11 +1235,11 @@ a) y b) son consecuencia directa de lo anterior. Para c), utilizamos la \autoref
 
 \end{tikzpicture}
 \caption{Construcción del \textit{cap}.\label{fig:cap}}
-\end{figure}
+\end{subfigure}
 
 
 
-\begin{figure}[h] %%%%FIG: Crosscap
+\begin{subfigure}{1\textwidth} %%%%FIG: Crosscap
 \centering
 \begin{tikzpicture} [use optics]
 %\draw [help lines, step=1mm](0,-2) grid (6,2);
@@ -1269,10 +1270,10 @@ a) y b) son consecuencia directa de lo anterior. Para c), utilizamos la \autoref
 \draw [dashed] (2.17,1.15) [out=90, in=135, looseness=0.6] to (3.1,1.2) [out=45, in=90, looseness=0.6] to (3.9,1.2);
 \end{tikzpicture}
 \caption{Construcción del \textit{crosscap}.\label{fig:crosscap}}
-\end{figure}
+\end{subfigure}
 
 
-\begin{figure}[h] %%%%FIG: Handle
+\begin{subfigure}{1\textwidth} %%%%FIG: Handle
 \centering
 
 \begin{tikzpicture} [use optics]
@@ -1305,10 +1306,10 @@ a) y b) son consecuencia directa de lo anterior. Para c), utilizamos la \autoref
 \end{tikzpicture}
 
 \caption{Construcción del \textit{handle}. \label{fig:handle}}
-\end{figure}
+\end{subfigure}
 
 
-\begin{figure}[h] 
+\begin{subfigure}{1\textwidth} 
 \centering
 \begin{tikzpicture}[use optics]
 %\draw [help lines, step=1mm](-6,-2) grid (6,2);
@@ -1343,13 +1344,13 @@ a) y b) son consecuencia directa de lo anterior. Para c), utilizamos la \autoref
 
 \end{tikzpicture}
 \caption{Construcción del \textit{crosshandle}.\label{fig:crosshandle}}
+\end{subfigure}
 \end{figure}
 
 
 
-
 \section{Estructura algebráica}
-Veamos un método para representar las perforaciones y cremalleras sobre colecciones de esferas, y definamos unas operaciones sobre estas representaciones que nos den espacios topológicos equivalentes, tal como hicimos en el Capítulo 1. ---referencia al yutuber------ 
+Veamos un método para representar las perforaciones y cremalleras sobre colecciones de esferas, y definamos unas operaciones sobre estas representaciones que nos den espacios topológicos equivalentes, tal como hicimos en el Capítulo 1. ---referencia aJJJWW------ 
 
 Sean $\Esfera_1,\dots ,\Esfera_k$ esferas con perforaciones, algunas con pares-zip. Para cada esfera, etiquetamos las cremalleras asociadas a un mismo par-zip con el mismo símbolo. Para las partes de perforaciones que no tengan cremallera, las etiquetamos cada una con un símbolo distinto. A cada perforación le asociaremos una palabra, formada a partir de las etiquetas que acabamos de crear. Empezamos arbitrariamente por una, digamos $a$, y si esta está asociada a una cremallera, escribiremos $a$ o $a^{-1}$ dependiendo de si su orientación se corresponde con la de las agujas del reloj; si no está asociada a una cremallera escribiremos simplemente $a$. Recorreremos la perforación en orden en sentido contrario de las agujas del reloj reptiendo el proceso anterior hasta llegar a la anterior etiqueta de la que hemos partido.
 Cada esfera la representaremos por la yuxtaposición de las palabras entre paréntesis asociadas a las perforaciones, y una usperficie formada por varias esferas la escribiremos como la suma de sus representaciones.
@@ -1360,7 +1361,7 @@ Sea una esfera perforada como la de la izquierda de la \autoref{fig:rep_perf}. H
 
 \begin{figure}%%%%FIG: Representación esferas
 \centering
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
 
 \fill[gray!10](-3,0) circle (3cm);
 \fill[gray!10] (5,0) circle (3cm);
