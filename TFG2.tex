@@ -809,8 +809,39 @@ Las siguientes operaciones se llaman \enfatiza{transformaciones elementales} de 
 Las operaciones elementales sobre representaciones poligonales dan lugar a representaciones poligonales equivalentes.
 \end{prop}
 \begin{proof}
-El caso de reetiquetar es trivial. Los casos subdividir/consolidar, cortar/pegar y plegar/desplegar son inversos, con lo que bastará probar uno de cada par.  
+Los casos de Reetiquetar, subdividir y rotar son cambios puramente formales que no afectan al espacio cociente. Los casos subdividir/consolidar, cortar/pegar y plegar/desplegar son inversos, con lo que basta probar uno de cada par. 
+Empecemos con la operación de cortar. Sean $P_1, P_2$ dos regiones poligonales convexas etiquetadas por las palabras $W_1e$ y $e^{-1}W_2$ y sea $P'$ la region poligonal etiquetada por $W_1 W_2$. Supongamos de momento que no hay más palabras en las respectivas presentaciones. Si $\pi :P_1\sqcup P_2\to M$ y $\pi' :P'\to M'$ representan respectivamente las aplicaciones cocientes. El segmento que va desde el vértice final de $W_1$ en $P'$ a su vértice inicial yace en $P'$ por convexidad, y lo etiquetamos con $e$. Por el \autoref{lema:celdas}, existe una aplicación continua $f:P_1\sqcup P_2\to P'$ que lleva cada lado de $P_1$ o $P_2$ a su correspondiente en $P'$, y cuya restricción a cada $P_i$ es un homeomorfismo sobre su imagen. Por el \autoref{teo:aplicac_cerrada}, $f$ es una aplicación cociente. Dado que $f$ identifica únicamente los lados $e$ y $e^{-1}$, la aplicación cociente $\pi '\circ f$ y $\pi$ hacen exactamente las mismas identificaciones, y por tanto los espacios cociente $M$ y $M'$ son homeomorfos. 
+En el caso de que hubiese otras palabras $W_3,\dots ,W_k$, simplemente extendemos $f$ como la identidad en sus respectivas presentaciones poligonales y procedemos como antes.
+
+Para el plegado, ignoramos como antes palabras adicionales $W_2,\dots W_k$. Supongamos para empezar que $W_1=abcd$ tiene longitud exáctamente 4. Sea $P$ una región poligonal convexa con lados etiquetados por $abee^{-1}cd$. Si cortamos a lo largo de $f$ como en \autoref{fig:operaciones} obtenemos $abef$ y $f^{-1}e^{-1}cd$. Consolidamos $ef$ en $h$, obteniendo así $ah^{-1}$ y $bch$. Pegamos por $h$ y obtenemos así $abcd$. ((Lo he cambiado para evitar hablar de simplex que los introduzco más tarde. Vale igualmente?))
+Si $W_1$ tiene longitud 2 o 3, podemos subdividir para alargar la longitud de la palabra a 4, plegar, y finalmente consolidar de nuevo.
 \end{proof}
+
+\begin{figure}
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}[use optics, scale=0.3]
+\draw [<->] (-.5,0)--(.5,0);
+\draw (-4.79,4.04)--(-6.79,3.04)--(-6.79,-2.96)--(-4.79,-3.96)--(-3,0)--cycle;
+\draw[dashed] (-4.79,-3.96)--(-4.79, 4.04);
+\draw[->-={at=0.775}] (5,4)--(3,3)--(3,-3)--(5,-4)-- cycle; 
+\draw[-<-={at=0.249}] (7,4)--(7,-4)--(8.79,-0) --cycle;
+\draw (-6.79,0) node[anchor=east] {$W_1$}; 
+\draw (-3,0) node[anchor=west]{$W_2$};
+\draw (3,0) node[anchor=east] {$W_1$};
+\draw (5,0.8) node[anchor=west] {$e$};
+\draw (7,-1) node[anchor=east] {$e$};
+\draw (8.79,0) node[anchor=west] {$W_2$};
+\end{tikzpicture}
+\caption{Cortado/Pegado\label{fig:cortar}}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}[use optics, scale=0.5]
+\draw (2,0)--(3,0);
+\end{tikzpicture}
+\end{subfigure}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Suma conexa de variedades}
@@ -1131,6 +1162,10 @@ Toda superficie es triangulable por un poliedro de un complejo simplicial 2-dime
 \end{tma}
 
 
+\chapter{Teorema de Clasificación}
+En esta sección daremos una demostración del teorema de clasificación b
+
+\section{Demostración clásica}
 
 \chapter{La prueba ZIP de Conway}
 
@@ -1169,7 +1204,7 @@ Conway utiliza las cremalleras (\textit{zips} en inglés) para describir cómo a
 
 
 \begin{defin}%%%DEF: ZIP
-Sea $S$ una superficie compacta. Una \enfatiza{cremallera} es una identificación entre dos subconjuntos (abtos, cerrados??) de la frontera de $S$. A este par lo llamamos \enfatiza{par-zip}.
+Sea $S$ una superficie compacta. Una \enfatiza{cremallera} es una identificación entre dos subconjuntos (cerrados??) de la frontera de $S$. A este par lo llamamos \enfatiza{par-zip}.
 \end{defin}
 
 
@@ -1202,7 +1237,7 @@ Sea $S$ una superficie. Los siguientes espacios son homeomorfos:
 \end{itemize}
 \end{prop}
 \begin{proof}
-a) y b) son consecuencia directa de lo anterior. Para c), utilizamos la \autoref{obs:toro_asa}, y para d) utilizar una construcción parecida a c) ((habría que especificar más?)).
+a) y b) son consecuencia directa del parrafo que precede la preposición. Para c), utilizamos la \autoref{obs:toro_asa}, y para d) utilizar una construcción parecida a c) ((habría que especificar más?)).
 \end{proof}
 
 
