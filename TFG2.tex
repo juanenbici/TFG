@@ -765,6 +765,7 @@ Vamos ahora a desarrollar unas reglas generales de transformación.
 \draw [->-] (2.73,1)-- (1.58,1);
 \draw [->-] (1.58,1)-- (1,0);
 
+\draw [<->] (-.1,0)--+(0.5,0);
 \draw (-0.9,0) node[anchor= west] {$ b $};
 \draw (-3.1,0) node[anchor= east] {$ b $};
 \draw (-2,1.1) node[anchor= south] {$ a $};
@@ -780,27 +781,94 @@ Vamos ahora a desarrollar unas reglas generales de transformación.
 \draw (1.29,0.5) node[anchor= south east] {$ c $};
 \end{tikzpicture}
 
-\caption{Dos representaciones equivalentes de $\Toro$. \label{fig:ejemplo_operacion}}
+\caption{Dos representaciones equivalentes de $\Toro$ mediante la operación subdividir/consolidar. \label{fig:ejemplo_operacion}}
 \end{figure}
 
 \begin{defin}%%%%DEF: Realizaciones geometricas topologicamente equivalentes
 Sean $\mathcal{P}_1$ y $\mathcal{P}_2$ dos representaciones tal que sus realizaciones geométricas son equivalentes. Entonces decimos que son \enfatiza{topológicamente equivalentes} y escribimos $\mathcal{P}_1 \approx \mathcal{P}_2$.
 \end{defin}
 
+\begin{figure}
+\begin{subfigure}{0.5\textwidth}
+\centering
+\begin{tikzpicture}[use optics]
+\draw [->-] (-2.15,0.84) -- (-2.71,0.47);
+\draw [->-] (-2.71,0.47)--(-3.03,-.35);
+\draw [-<-] (-3.03,-.35) -- (-1.67, -0.76);
+\draw [-<-] (-1.67, -0.76) -- (-1.46,0.29);
+\draw [->-] (-1.46,0.29) -- (-2.15,0.84);
+
+\draw [->-] (2.15,0.84) -- (2.71,0.47);
+\draw [->-] (2.71,0.47)--(3.03,-.35);
+\draw [-<-] (3.03,-.35) -- (1.67, -0.76);
+\draw [-<-] (1.67, -0.76) -- (1.46,0.29);
+\draw [->-] (1.46,0.29) -- (2.15,0.84);
+
+\draw (-2.42,0.66) node[anchor=south east] {$a$};
+\draw (-2.87,0.06) node [anchor=east] {$b$};
+\draw (-2.35,-0.56) node[anchor= north east] {$c$};
+\draw (-1.56,-.24) node [anchor= west] {$d$};
+\draw (-1.81,.57) node [anchor= south west] {$e$};
+\draw (2.42,0.66) node[anchor=south west] {$a$};
+\draw (2.87,0.06) node [anchor=west] {$b$};
+\draw (2.35,-0.56) node[anchor= north west] {$c$};
+\draw (1.56,-.24) node [anchor= east] {$d$};
+\draw (1.81,.57) node [anchor= south east] {$e$};
+
+\draw [<->] (-0.25,0)--+(.5,0);
+\end{tikzpicture}
+\caption{Reflejar.\label{fig:reflejar}}
+\end{subfigure} 
+\begin{subfigure}{.5\textwidth}
+\centering
+\begin{tikzpicture}[use optics]
+\draw [->-] (-2.15,0.84) -- (-2.71,0.47);
+\draw [->-] (-2.71,0.47)--(-3.03,-.35);
+\draw [-<-] (-3.03,-.35) -- (-1.67, -0.76);
+\draw [-<-] (-1.67, -0.76) -- (-1.46,0.29);
+\draw [->-] (-1.46,0.29) -- (-2.15,0.84);
+
+\draw [-<-](1.67,.76)--(1.46,-.29);
+\draw [->-](1.46,-.29) -- (2.15,-.84);
+\draw [->-](2.15,-.84)--(2.71,-.47);
+\draw [->-](2.71,-.47)--(3.03,.35);
+\draw [-<-](3.03,.35)--(1.67,.76);
+
+\draw [<->] (-0.25,0)--+(.5,0);
+
+\draw (-2.42,0.66) node[anchor=south east] {$a$};
+\draw (-2.87,0.06) node [anchor=east] {$b$};
+\draw (-2.35,-0.56) node[anchor= north east] {$c$};
+\draw (-1.56,-.24) node [anchor= west] {$d$};
+\draw (-1.81,.57) node [anchor= south west] {$e$};
+
+\draw (2.43035, -0.65644) node[anchor=north west] {$a$};
+\draw (2.86796, -0.05807) node [anchor=west] {$b$};
+\draw (2.34997, 0.55816) node[anchor= south west] {$c$};
+\draw (1.56406, 0.23665) node [anchor= east] {$d$};
+\draw (1.80519, -0.56713) node [anchor= north east] {$e$};
+
+
+
+\end{tikzpicture}
+\caption{Rotar.\label{fig:rotar}}
+\end{subfigure}
+\end{figure}
+
 Vamos a definir ahora unas operaciones elementales sobre las representaciones poligonales. Veremos luego que estas dan lugar a representaciones equivalentes.
 
 \begin{defin}%%%%DEF: Operaciones elementales sobre representaciones
 Las siguientes operaciones se llaman \enfatiza{transformaciones elementales} de una presentación poligonal:
 \begin{itemize}
-\item \textit{Reetiquetar:} Cambiar todas las apariciones de un símbolo $a$ por otro símbolo que no está todavía en la representación, intercambiar todas las apariciones de dos símbolos $a$ y $b$ o intercambiar todas las apariciones de $a$ y $a^{-1}$.
-\item \textit{Subdividir:} Cambiar todas las apariciones de $a$ por $ae$ y todas las de $a^{-1}$ por $e^{-1}a^{-1}$, donde $e$ es un símbolo que no está todavía en la presentación.
-\item \textit{Consolidar:} Si $a$ y $b$ aparecen siempre de forma adyacente, intercambiar $ab$ por $a$ y $b^{-1}a^{-1}$ por $a^{-1}$, siempre que esto de lugar a una o más palabras de longitud al menos $3$ o una sola palabra de longitud $2$.
-\item \textit{Reflejar:} $$\langle S\mid   a_1 \dots a_m, W_2,\dots,W_k\rangle \mapsto \langle S\mid   a_m^{-1}\dots a_1^{-1}, W_2, \dots ,W_k\rangle .$$
-\item \textit{Rotar:} $$\langle S\mid a_1a_2\dots a_m, W_2,\dots , W_k\rangle \mapsto \langle S\mid   a_2\dots a_ma_1, W_2,\dots , W_k\rangle .$$
-\item \textit{Cortar:} Si $W_1$ y $W_2$ tienen longitud al menos $2$, $$\langle S\mid W_1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1e, e^{-1}W_2, W_3,\dots W_k\rangle .$$
-\item \textit{Pegar:} $$\langle S,e\mid W_1e, e^-1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1W_2, W_3,\dots , W_k\rangle .$$
-\item \textit{Plegar:} Si $w_1$ tiene longitud al menos $3$, $$\langle S,e\mid W_1ee^{-1}, W_2,\dots W_k\rangle \mapsto \langle S\mid W_1, W_2,\dots , W_k\rangle .$$ Permitimos que $W_1$ tenga longitud $2$, siempre que la representación tenga una sola palabra.
-\item \textit{Desplegar:} $$\langle S\mid W_1, W_2,\dots , W_k\rangle \mapsto \langle S,e\mid W_1ee^{-1}, W_2,\dots , W_k\rangle .$$
+\item \enfatiza{Reetiquetar}: Cambiar todas las apariciones de un símbolo $a$ por otro símbolo que no está todavía en la representación, intercambiar todas las apariciones de dos símbolos $a$ y $b$ o intercambiar todas las apariciones de $a$ y $a^{-1}$.
+\item \enfatiza{Subdividir} (\autoref{fig:ejemplo_operacion}): Cambiar todas las apariciones de $a$ por $ae$ y todas las de $a^{-1}$ por $e^{-1}a^{-1}$, donde $e$ es un símbolo que no está todavía en la presentación.
+\item \enfatiza{Consolidar} (\autoref{fig:ejemplo_operacion}): Si $a$ y $b$ aparecen siempre de forma adyacente, intercambiar $ab$ por $a$ y $b^{-1}a^{-1}$ por $a^{-1}$, siempre que esto de lugar a una o más palabras de longitud al menos $3$ o una sola palabra de longitud $2$.
+\item \enfatiza{Reflejar} (\autoref{fig:reflejar}): $$\langle S\mid   a_1 \dots a_m, W_2,\dots,W_k\rangle \mapsto \langle S\mid   a_m^{-1}\dots a_1^{-1}, W_2, \dots ,W_k\rangle .$$
+\item \enfatiza{Rotar} (\autoref{fig:rotar}): $$\langle S\mid a_1a_2\dots a_m, W_2,\dots , W_k\rangle \mapsto \langle S\mid   a_2\dots a_ma_1, W_2,\dots , W_k\rangle .$$
+\item \enfatiza{Cortar} (\autoref{fig:cortar}): Si $W_1$ y $W_2$ tienen longitud al menos $2$, $$\langle S\mid W_1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1e, e^{-1}W_2, W_3,\dots W_k\rangle .$$ 
+\item \enfatiza{Pegar} (\autoref{fig:cortar}): $$\langle S,e\mid W_1e, e^-1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1W_2, W_3,\dots , W_k\rangle .$$
+\item \enfatiza{Plegar} (\autoref{fig:plegar}): Si $w_1$ tiene longitud al menos $3$, $$\langle S,e\mid W_1ee^{-1}, W_2,\dots W_k\rangle \mapsto \langle S\mid W_1, W_2,\dots , W_k\rangle .$$ Permitimos que $W_1$ tenga longitud $2$, siempre que la representación tenga una sola palabra.
+\item \enfatiza{Desplegar} (\autoref{fig:plegar}): $$\langle S\mid W_1, W_2,\dots , W_k\rangle \mapsto \langle S,e\mid W_1ee^{-1}, W_2,\dots , W_k\rangle .$$
 \end{itemize}
 \end{defin}
 
@@ -813,7 +881,7 @@ Los casos de Reetiquetar, subdividir y rotar son cambios puramente formales que 
 Empecemos con la operación de cortar. Sean $P_1, P_2$ dos regiones poligonales convexas etiquetadas por las palabras $W_1e$ y $e^{-1}W_2$ y sea $P'$ la region poligonal etiquetada por $W_1 W_2$. Supongamos de momento que no hay más palabras en las respectivas presentaciones. Si $\pi :P_1\sqcup P_2\to M$ y $\pi' :P'\to M'$ representan respectivamente las aplicaciones cocientes. El segmento que va desde el vértice final de $W_1$ en $P'$ a su vértice inicial yace en $P'$ por convexidad, y lo etiquetamos con $e$. Por el \autoref{lema:celdas}, existe una aplicación continua $f:P_1\sqcup P_2\to P'$ que lleva cada lado de $P_1$ o $P_2$ a su correspondiente en $P'$, y cuya restricción a cada $P_i$ es un homeomorfismo sobre su imagen. Por el \autoref{teo:aplicac_cerrada}, $f$ es una aplicación cociente. Dado que $f$ identifica únicamente los lados $e$ y $e^{-1}$, la aplicación cociente $\pi '\circ f$ y $\pi$ hacen exactamente las mismas identificaciones, y por tanto los espacios cociente $M$ y $M'$ son homeomorfos. 
 En el caso de que hubiese otras palabras $W_3,\dots ,W_k$, simplemente extendemos $f$ como la identidad en sus respectivas presentaciones poligonales y procedemos como antes.
 
-Para el plegado, ignoramos como antes palabras adicionales $W_2,\dots W_k$. Supongamos para empezar que $W_1=abcd$ tiene longitud exáctamente 4. Sea $P$ una región poligonal convexa con lados etiquetados por $abee^{-1}cd$. Si cortamos a lo largo de $f$ como en \autoref{fig:operaciones} obtenemos $abef$ y $f^{-1}e^{-1}cd$. Consolidamos $ef$ en $h$, obteniendo así $ah^{-1}$ y $bch$. Pegamos por $h$ y obtenemos así $abcd$. ((Lo he cambiado para evitar hablar de simplex que los introduzco más tarde. Vale igualmente?))
+Para el plegado, ignoramos como antes palabras adicionales $W_2,\dots W_k$. Supongamos para empezar que $W_1=abcd$ tiene longitud exáctamente 4. Sea $P$ una región poligonal convexa con lados etiquetados por $abee^{-1}cd$. Si cortamos a lo largo de el segmento $f$ que une el vértice inicial de $a$ con el vértice final de $e$ y obtenemos así $abef$ y $f^{-1}e^{-1}cd$. Consolidamos $ef$ en $h$, obteniendo así $ah^{-1}$ y $bch$. Pegamos por $h$ y obtenemos así $abcd$. ((Lo he cambiado para evitar hablar de simplex que los introduzco más tarde. Vale igualmente?))
 Si $W_1$ tiene longitud 2 o 3, podemos subdividir para alargar la longitud de la palabra a 4, plegar, y finalmente consolidar de nuevo.
 \end{proof}
 
@@ -833,13 +901,33 @@ Si $W_1$ tiene longitud 2 o 3, podemos subdividir para alargar la longitud de la
 \draw (7,-1) node[anchor=east] {$e$};
 \draw (8.79,0) node[anchor=west] {$W_2$};
 \end{tikzpicture}
-\caption{Cortado/Pegado\label{fig:cortar}}
+\caption{Cortar/Pegar\label{fig:cortar}}
 \end{subfigure}
 \begin{subfigure}{0.5\textwidth}
 \centering
-\begin{tikzpicture}[use optics, scale=0.5]
-\draw (2,0)--(3,0);
+\begin{tikzpicture}[use optics, scale=1.2]
+\draw [->-](0.5, 1.53884)--(-0.30902, 0.95106);
+\draw [->-](-0.30902, 0.95106)--(0,0);
+\draw [->-](0,0)--(1,0);
+\draw [->-](1,0)--(1.30902, 0.95106);
+\draw [-<-](1.30902, 0.95106)--(0.5, 1.53884);
+\draw [->-](3.11256, 0)--(4.88896, 0.000);
+\draw [->-](4.88896, 0.000)--(4, 1.53884);
+\draw [->-](4, 1.53884)--(3.11256, 0);
+\draw [->-](4,1.54)--(4,.5);
+\draw (0.1,1.24) node[anchor=south east] {$a$};
+\draw (-.15, 0.48) node[anchor=north east] {$b$};
+\draw (.5,0) node[anchor=north] {$c$};
+\draw (1.15,0.48) node [anchor=north west] {$e$};
+\draw (.9, 1.24) node [anchor=south west] {$e$};
+\draw (3.56, 0.77) node[anchor=south east] {$a$};
+\draw (4,0) node [anchor=north] {$b$};
+\draw (4.44,.77) node[anchor=south west] {$c$};
+\draw (4,.8) node[anchor=west] {$e$};
+\filldraw (4,.5) circle (1pt);
+\filldraw (1.30902, 0.95106) circle (1pt);
 \end{tikzpicture}
+\caption{Plegar/Desplegar\label{fig:plegar}}
 \end{subfigure}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
