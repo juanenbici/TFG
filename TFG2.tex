@@ -171,7 +171,7 @@ Una \textbf{\emph{superficie}} es una $2$-variedad.
 
 \begin{figure}[h]%%%%FIG: Toro y esfera
 	\begin{center}
-		\begin{tikzpicture}
+		\begin{tikzpicture}[scale=0.8]
 			\draw (0,0) circle (2cm);
 			\draw (2,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=-180];
 			\draw [dashed] (2,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=180];
@@ -202,11 +202,38 @@ Para el teorema de clasificación necesitamos un método uniforme de representac
 Para ello necesitaremos antes la siguiente proposición:
 
 
-\begin{figure}[h]%%%%FIG: CONVEXO ESFERA%
+
+
+
+\begin{prop}% TEOREMA 5.1 LEE%%%% CONVEXO HOMEOM ESFERA
+\label{teo:convexo_homeom_esfera} 
+Si $D\subseteq \R^n$ es un conjunto compacto y convexo con interior no vacío, entonces $D$ es homeomorfo a $\overline{\mathbb{B}}^n.$ De hecho, dado $p\in \mathring{D}$, entonces existe un homeomorfismo $F:\overline{\mathbb{B}}^n\to D$ que envía $0$ a $p$, $\overline{\mathbb{B}}^n$ a $\mathring{D}$, y $\mathbb{S}^{n-1}$ a $\partial D$.
+\end{prop}
+\begin{proof}
+Sea $p\in D$ un punto de su interior. Si reemplazamos $D$ por su imagen mediante la traslación $x\mapsto x-p$, que es un homeomorfismo de $\R^n$ en sí mismo, podemos asumir que $p=0\in \mathring{D}$. Entonces existe un $\varepsilon >0 $ tal que la bola $B_{\varepsilon}(0)$ está contenida en $D$. Usando la dilatación $x\mapsto x/\varepsilon$, podemos asumir que $\mathbb{B}^n = B_ 1(0) \subseteq D$.
+La clave de la demostración es la siguiente: \emph{cada semirecta cerrada empezando en el origen interseca $\partial
+D$ en exactamente un punto}. Sea $R$ una semirecta así. Dado que $D$ es compacto, su intersección con $R$ es compacta. Por tanto existe un punto $x_0$ en su intersección tal que en él su distancia al origen asume el máximo. Es claro %lo es?
+que pertenece a la frontera de $D$. Para ver que el punto es único, veamos que el segmento que une $0$ y $x_0$ está formado enteramente por puntos interiores de $D$ excepto por el $x_0$ mismo. Cualquier punto en este segmento distinto de $x_o$ se puede escribir de la forma $\lambda x_0 $ para $0\leq \lambda <1. $ Supongamos $z\in B_{1-\lambda}(\lambda x_0)$, y sea $y=(z-\lambda x_0)/(1-\lambda )$. Como $|z-\lambda x_0|<|1-\lambda|$ se tiene que $|y|<1$, y por tanto $y\in B_ 1(0)\subseteq D$ (ver \autoref{fig:convexo_esfera}). Como $y$ y $x_0$ están en $D$ y $z=\lambda x_0 + (1-\lambda )y$, se sigue de la convexidad que $\in D$. Por tanto la bola abierta $B_{1-\lambda}(\lambda x_0)$ está contenida en $D$, lo que implica que $\lambda x_0$ es un punto interior.
+
+Definimos ahora la aplicación $f:\partial D \to \mathbb{S}^{n-1}$ por 
+$$f(x)=\frac{x}{|x|}$$
+
+$f(x)$ es el punto donde el segmento desde el origen hasta $x$ interseca la esfera unidad. Como $f$ es la restricción de una función continua, es continua, y por el parágrafo anterior es biyectiva. Dado que $\partial D$ es compacta, $f$ es un homeomorfismo por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}).
+
+Finalmente definimos $F:\overline{\mathbb{S}}^n \to D$ por 
+$$F(x)= \left\{\begin{array}{lc}
+				|x|f^{-1}\left(\dfrac{x}{|x|}\right), & x\neq 0;
+				\\0, & x=0.
+
+\end{array}
+\right. $$
+$F$ es continua fuera del origen por serlo $f^{-1}$, y en el origen porque por ser $f^{-1}$ acotada $F(x) \to 0$ cuando $x\to 0$. Geometricamente, $F$ manda cada segmento radial que conecta 0 con un punto de $\mathbb{S}^{n-1}$ al segmento radial desde $0$ hasta el punto $f^{-1}(w)\in \partial D$. Por convexidad, $F$ toma valores en $D$. La aplicación $F$ es inyectiva, pues puntos de distintas semirectas van a parar a distintas semirectas, y cada segmento radial va linealmente a su imagen. Es sobreyectiva pues cada punto $y \in D$ está en una semirecta empezando en 0. Por el teorema de la aplicación cerrada, $F$ es un homeomorfismo.
+\end{proof}
+\begin{figure}%%%%FIG: CONVEXO ESFERA%
 
 \begin{center}
 
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.65cm,y=0.65cm]
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.65cm,y=0.65cm, scale=0.8]
 \draw [shift={(7.74,-8.14)}] plot[domain=1.68:2.51,variable=\t]({1*14.71*cos(\t r)+0*14.71*sin(\t r)},{0*14.71*cos(\t r)+1*14.71*sin(\t r)});
 \draw [shift={(-0.34,-1.89)}] plot[domain=2.56:4.7,variable=\t]({1*4.5*cos(\t r)+0*4.5*sin(\t r)},{0*4.5*cos(\t r)+1*4.5*sin(\t r)});
 \draw [shift={(6.31,-14.62)}] plot[domain=1.46:2.25,variable=\t]({1*10.61*cos(\t r)+0*10.61*sin(\t r)},{0*10.61*cos(\t r)+1*10.61*sin(\t r)});
@@ -239,36 +266,9 @@ Para ello necesitaremos antes la siguiente proposición:
 
 \end{figure}
 
-
-\begin{prop}% TEOREMA 5.1 LEE%%%% CONVEXO HOMEOM ESFERA
-\label{teo:convexo_homeom_esfera} 
-Si $D\subseteq \R^n$ es un conjunto compacto y convexo con interior no vacío, entonces $D$ es homeomorfo a $\overline{\mathbb{B}}^n.$ De hecho, dado $p\in \mathring{D}$, entonces existe un homeomorfismo $F:\overline{\mathbb{B}}^n\to D$ que envía $0$ a $p$, $\overline{\mathbb{B}}^n$ a $\mathring{D}$, y $\mathbb{S}^{n-1}$ a $\partial D$.
-\end{prop}
-\begin{proof}
-Sea $p\in D$ un punto de su interior. Si reemplazamos $D$ por su imagen mediante la traslación $x\mapsto x-p$, que es un homeomorfismo de $\R^n$ en sí mismo, podemos asumir que $p=0\in \mathring{D}$. Entonces existe un $\varepsilon >0 $ tal que la bola $B_{\varepsilon}(0)$ está contenida en $D$. Usando la dilatación $x\mapsto x/\varepsilon$, podemos asumir que $\mathbb{B}^n = B_ 1(0) \subseteq D$.
-La clave de la demostración es la siguiente: \emph{cada semirecta cerrada empezando en el origen interseca $\partial
-D$ en exactamente un punto}. Sea $R$ una semirecta así. Dado que $D$ es compacto, su intersección con $R$ es compacta. Por tanto existe un punto $x_0$ en su intersección tal que en él su distancia al origen asume el máximo. Es claro %lo es?
-que pertenece a la frontera de $D$. Para ver que el punto es único, veamos que el segmento que une $0$ y $x_0$ está formado enteramente por puntos interiores de $D$ excepto por el $x_0$ mismo. Cualquier punto en este segmento distinto de $x_o$ se puede escribir de la forma $\lambda x_0 $ para $0\leq \lambda <1. $ Supongamos $z\in B_{1-\lambda}(\lambda x_0)$, y sea $y=(z-\lambda x_0)/(1-\lambda )$. Como $|z-\lambda x_0|<|1-\lambda|$ se tiene que $|y|<1$, y por tanto $y\in B_ 1(0)\subseteq D$ (ver \autoref{fig:convexo_esfera}). Como $y$ y $x_0$ están en $D$ y $z=\lambda x_0 + (1-\lambda )y$, se sigue de la convexidad que $\in D$. Por tanto la bola abierta $B_{1-\lambda}(\lambda x_0)$ está contenida en $D$, lo que implica que $\lambda x_0$ es un punto interior.
-
-Definimos ahora la aplicación $f:\partial D \to \mathbb{S}^{n-1}$ por 
-$$f(x)=\frac{x}{|x|}$$
-
-$f(x)$ es el punto donde el segmento desde el origen hasta $x$ interseca la esfera unidad. Como $f$ es la restricción de una función continua, es continua, y por el parágrafo anterior es biyectiva. Dado que $\partial D$ es compacta, $f$ es un homeomorfismo por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}).
-
-Finalmente definimos $F:\overline{\mathbb{S}}^n \to D$ por 
-$$F(x)= \left\{\begin{array}{lc}
-				|x|f^{-1}\left(\dfrac{x}{|x|}\right), & x\neq 0;
-				\\0, & x=0.
-
-\end{array}
-\right. $$
-$F$ es continua fuera del origen por serlo $f^{-1}$, y en el origen porque por ser $f^{-1}$ acotada $F(x) \to 0$ cuando $x\to 0$. Geometricamente, $F$ manda cada segmento radial que conecta 0 con un punto de $\mathbb{S}^{n-1}$ al segmento radial desde $0$ hasta el punto $f^{-1}(w)\in \partial D$. Por convexidad, $F$ toma valores en $D$. La aplicación $F$ es inyectiva, pues puntos de distintas semirectas van a parar a distintas semirectas, y cada segmento radial va linealmente a su imagen. Es sobreyectiva pues cada punto $y \in D$ está en una semirecta empezando en 0. Por el teorema de la aplicación cerrada, $F$ es un homeomorfismo.
-\end{proof}
-
-
 \begin{figure}[h]%%%%%%% FIGURA: ESFERA COCIENTE CIRCUNFERENCIA%%%%
 \begin{center}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.5cm,y=1.5cm, scale=0.85]
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.5cm,y=1.5cm, scale=0.7]
 \draw [<-][shift={(0,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
 \draw (0,3) node[anchor=north] {$\pi$};
 \draw (2,1.5) arc[x radius=0.7, y radius=1.5, start angle=90, end angle=270];
@@ -337,19 +337,10 @@ Es claro que $\pi$ es continua y hace las mismas identificaciones que la relaci�
 Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo construido en la demostración de \autoref{teo:convexo_homeom_esfera} que manda linealmente cada segmento radial entre el origen y la frontera de $S$ al segmento paralelo entre centro del disco y su frontera. Hagamos ahora $\beta=\pi \circ \alpha : S \to \mathbb{S}^2$, donde $\pi$ es la aplicación cociente del parágrafo anterior. Tenemos entonces que $\beta$ identifica $(x,y)$ y $(-x,y)$ cuando $(x,y)\in \partial S$, pero por otro lado es inyectiva, así que hace las mismas identificaciones que la aplicación cociente definida en (b), completando así la demostración (ver \autoref{fig:esfera_cuadrado}). 
 \end{proof}
 
-
-\begin{prop}%%%%PROP: TORO COMO CUADRADO
-\label{prop:toro_cuadrado}
-El toro $\Toro$ es homeomorfo al espacio cociente resultante de la relación de equivalencia en el cuadrado $I\times I$ que identifica $(x,0)\sim (x,1)$ para todo $x\in I$, y $(0,y)\sim(1,y)$ para todo $y\in I$ (\autoref{fig:toro_cuadrado}). 
-\end{prop}
-\begin{proof}
-Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},e^{2\pi iv})$. Por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}), es una aplicación cociente. Al hacer las mismas identificaciones que la relación de equivalencia, por la unicidad del espacio cociente (\autoref{teo:unicidad_espacio_cociente}) se obtiene el resultado.
-\end{proof}
-
-\begin{figure}%%%%FIGURA: ESFERA CUADRADO
+\begin{figure}[h]%%%%FIGURA: ESFERA CUADRADO
 \centering
 
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.9]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.7]
 \draw[-<-={at=0.125},->-={at=0.375}, -<<-={at=0.625}, ->>-={at=0.875} ](0,0) circle (2cm);
 \draw [-<-={at=0.5}] (-8,0)-- (-6,2);
 \draw [-<-={at=0.5}](-4,0)-- (-6,2);
@@ -389,10 +380,19 @@ Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},
 
 \end{figure}
 
+\begin{prop}%%%%PROP: TORO COMO CUADRADO
+\label{prop:toro_cuadrado}
+El toro $\Toro$ es homeomorfo al espacio cociente resultante de la relación de equivalencia en el cuadrado $I\times I$ que identifica $(x,0)\sim (x,1)$ para todo $x\in I$, y $(0,y)\sim(1,y)$ para todo $y\in I$ (\autoref{fig:toro_cuadrado}). 
+\end{prop}
+\begin{proof}
+Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},e^{2\pi iv})$. Por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}), es una aplicación cociente. Al hacer las mismas identificaciones que la relación de equivalencia, por la unicidad del espacio cociente (\autoref{teo:unicidad_espacio_cociente}) se obtiene el resultado.
+\end{proof}
+
+
 
 \begin{figure}%%%%FIGURA: TORO COMO CUADRADO
 \begin{center}
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm, y=1cm, scale=0.9]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm, y=1cm, scale=0.7]
 
 \draw [->-={at=0.5}](-8,-2)-- (-8,2);
 \draw [->>-={at=0.5}](-8,2)-- (-4,2);
@@ -445,7 +445,7 @@ Para la parte (b) hacemos como en la demostración de la \autoref{prop:Esfera co
 
 \begin{figure}[h]%%%%FIGURA: PLANO PROYECTIVO COMO CUADRADO
 \begin{center}
-\begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.9]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.6]
 \draw[-<-={at=0.5}, -<-={at=1}](-3,0) circle (2cm);
 \draw [-<-={at=0.5}] (4,2)-- (6,0);
 \draw [-<<-={at=0.5}](6,0)-- (4,-2);
@@ -498,7 +498,7 @@ Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1\amalg \dots
 La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando los lados del cuadrado $I\times I$ de acuerdo a $(0,t)\sim (1,t)$ y $(t,0)\sim (1-t,1)$ para $0\leq t\leq 1$.  Para visualizar $K$, podemos pensar en pegar los lados izquierdo y derecho creando un cilindro, y luego hacer pasar el extremo superior por la parte inferior del cilindro, para finalmente pegar los dos extremos (ver \autoref{fig:klein}).
 \end{eje}
 
-\begin{figure}%%%%FIG: Klein
+\begin{figure}[b]%%%%FIG: Klein
 \centering
 \begin{tikzpicture} [use optics]
 %\draw [help lines] (-6,-2) grid (6,2);

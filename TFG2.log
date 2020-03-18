@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.14)  18 MAR 2020 18:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.14)  18 MAR 2020 19:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1526,63 +1526,60 @@ l.193 \end{eje}
                 [1
 
 ]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 244.
+ine 209.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 229.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 229.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 229.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 229.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 229.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 229.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 229.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 229.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 229.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 229.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 229.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 258.
-[2]
+(babel)             in language  on input line 229.
+ [2]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 329.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 329.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 329.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 329.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 329.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 329.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 329.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 329.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 329.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 329.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 329.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 329.
+(babel)             in language  on input line 334.
 [3]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1594,143 +1591,39 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-
-Overfull \hbox (5.71938pt too wide) in paragraph at lines 385--386
- [][] 
- []
-
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-
-Overfull \hbox (6.86938pt too wide) in paragraph at lines 425--426
- [] 
- []
-
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 435.
+(babel)             in language  on input line 386.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 435.
+(babel)             in language  on input line 386.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 435.
+(babel)             in language  on input line 386.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 435.
+(babel)             in language  on input line 386.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 435.
+(babel)             in language  on input line 386.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 435.
+(babel)             in language  on input line 386.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 435.
+(babel)             in language  on input line 386.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 435.
+(babel)             in language  on input line 386.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 435.
+(babel)             in language  on input line 386.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 435.
+(babel)             in language  on input line 386.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 435.
+(babel)             in language  on input line 386.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 435.
-[4]
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 435.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 435.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 435.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 435.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 435.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 435.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 435.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 435.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 435.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 435.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 435.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 435.
- [5]
-Missing character: There is no [ in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no j in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no > in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no ] in font nullfont!
+(babel)             in language  on input line 386.
+ [4]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1739,34 +1632,34 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
 
-LaTeX Warning: Reference `apendice simplices' on page 6 undefined on input line
+LaTeX Warning: Reference `apendice simplices' on page 5 undefined on input line
  469.
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 487.
+(babel)             in language  on input line 470.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 487.
+(babel)             in language  on input line 470.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 487.
+(babel)             in language  on input line 470.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 487.
+(babel)             in language  on input line 470.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 487.
+(babel)             in language  on input line 470.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 487.
+(babel)             in language  on input line 470.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 487.
+(babel)             in language  on input line 470.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 487.
+(babel)             in language  on input line 470.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 487.
+(babel)             in language  on input line 470.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 487.
+(babel)             in language  on input line 470.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 487.
+(babel)             in language  on input line 470.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 487.
-[6]
+(babel)             in language  on input line 470.
+[5]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1789,66 +1682,84 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 535.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 535.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 578.
+(babel)             in language  on input line 540.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 578.
+(babel)             in language  on input line 540.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 578.
+(babel)             in language  on input line 540.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 578.
+(babel)             in language  on input line 540.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 578.
+(babel)             in language  on input line 540.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 578.
+(babel)             in language  on input line 540.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 578.
+(babel)             in language  on input line 540.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 578.
+(babel)             in language  on input line 540.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 578.
+(babel)             in language  on input line 540.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 578.
+(babel)             in language  on input line 540.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 578.
+(babel)             in language  on input line 540.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 578.
-[7]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+(babel)             in language  on input line 540.
+ [6]
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 586.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 586.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 586.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 586.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 586.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 586.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 586.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 586.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 586.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 586.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 586.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 586.
+ [7]
 
 LaTeX Warning: Reference `app:adjuncion' on page 8 undefined on input line 623.
 
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 624.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 624.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 624.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 624.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 624.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 624.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 624.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 624.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 624.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 624.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 624.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 624.
+(babel)             in language  on input line 699.
 [8]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 699.
@@ -2666,15 +2577,9 @@ LaTeX Info: Redefining \% on input line 24.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1661.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1661.
 
+Package rerunfilecheck Info: File `TFG2.out' has not changed.
+(rerunfilecheck)             Checksum: EBD0D1096873DEC0FF73AF4AA7E7A7EF;1041.
 
-
-Package rerunfilecheck Warning: File `TFG2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `TFG2.out':
-(rerunfilecheck)             Before: 0F66DA78E35F0DD6074BD98107DFFAF9;1041
-(rerunfilecheck)             After:  EBD0D1096873DEC0FF73AF4AA7E7A7EF;1041.
 
 LaTeX Warning: There were undefined references.
 
@@ -2683,44 +2588,35 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 33204 strings out of 492982
- 783350 string characters out of 6134895
- 989407 words of memory out of 5000000
- 36010 multiletter control sequences out of 15000+600000
+ 33197 strings out of 492982
+ 783233 string characters out of 6134895
+ 989396 words of memory out of 5000000
+ 36006 multiletter control sequences out of 15000+600000
  9583 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,10n,104p,1731b,1296s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{obs.1.3.4} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{obs.1.3.3} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.3} has been referenced but does not exist
-, replaced by a fixed one
-
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (30 pages, 372847 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on TFG2.pdf (30 pages, 372817 bytes).
 PDF statistics:
- 567 PDF objects out of 1000 (max. 8388607)
- 493 compressed objects within 5 object streams
- 174 named destinations out of 1000 (max. 500000)
+ 564 PDF objects out of 1000 (max. 8388607)
+ 490 compressed objects within 5 object streams
+ 171 named destinations out of 1000 (max. 500000)
  242 words of extra memory for PDF output out of 10000 (max. 10000000)
 
