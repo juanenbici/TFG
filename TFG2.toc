@@ -11,8 +11,12 @@
 \contentsline {section}{\numberline {3.2}Demostraci\IeC {\'o}n cl\IeC {\'a}sica}{17}{section.3.2}
 \contentsline {chapter}{\numberline {4}La prueba ZIP de Conway}{18}{chapter.4}
 \contentsline {section}{\numberline {4.1}Cremalleras}{18}{section.4.1}
-\contentsline {section}{\numberline {4.2}Estructura algebr\IeC {\'a}ica}{19}{section.4.2}
+\contentsline {section}{\numberline {4.2}Representaci\IeC {\'o}n de superficies con cremalleras}{19}{section.4.2}
 \contentsline {section}{\numberline {4.3}Teorema de Clasificaci\IeC {\'o}n}{21}{section.4.3}
 \contentsline {chapter}{\numberline {A}Teoremas Usados}{23}{appendix.Alph1}
 \contentsline {chapter}{\numberline {B}CW-complejos}{24}{appendix.Alph2}
-\contentsline {chapter}{\numberline {C}Definiciones}{25}{appendix.Alph3}
+\contentsline {chapter}{\numberline {C}Espacios adjunci\IeC {\'o}n}{25}{appendix.Alph3}
+\contentsline {chapter}{\numberline {D}Homolog\IeC {\'\i }a}{26}{appendix.Alph4}
+\contentsline {chapter}{\numberline {E}Orientabilidad}{27}{appendix.Alph5}
+\contentsline {chapter}{\numberline {F}Espacios cociente}{28}{appendix.Alph6}
+\contentsline {chapter}{\numberline {G}Definiciones}{29}{appendix.Alph7}

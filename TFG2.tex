@@ -56,7 +56,7 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Epsilon}{\mathcal{E}}
-\DeclareMathOperator{\interior}{int} %interior
+\DeclareMathOperator{\interior}{Int} %interior
 
 
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Comando para normas
@@ -138,7 +138,7 @@ Manuel Alonso Morón\\[.1in]
 \pagenumbering{arabic} 
 En este capítulo doy las definiciones y resultados preeliminares para la representación y clasificación de superficies. Me basaré principalmente en los libros de J. M. Lee \cite{lee1} y V. Muñoz - J. J. Madrigal \cite{juanjo}.
 
-\section{Variedades}
+\section{Variedades}\label{sec:variedades}
 
 Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo son las variedades, y en concreto las superficies. Definámoslas.
 
@@ -848,12 +848,14 @@ Toda superficie es triangulable por un poliedro de un complejo simplicial 2-dime
 
 
 \chapter{Teorema de Clasificación}
-En esta sección daremos una demostración del teorema de clasificación b
+En esta sección daremos una demostración clásica del teorema de clasificación de superficies compactas, que fue probado por primera vez en 1907 por Max Dehn y Poul Heegaard \cite{dehn}. Me baso en la demostración de Lee \cite{lee1}, que a su vez se basa en la de Seifert y Threlfall \cite{seifert}.
+
+
 \section{Representación de superficies}
 
 
 
-Como ya hemos dicho anteriormente, para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Representaremos todas las superficies como cocientes de regiones poligonales con $2n$ lados. 
+Como adelantamos en \autoref{sec:variedades}, para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Representaremos todas las superficies como cocientes de regiones poligonales con $2n$ lados. 
 
 
 \begin{defin}%%%%DEF: palabra
@@ -1491,7 +1493,7 @@ a) y b) son consecuencia directa del parrafo que precede la preposición. Para c
 
 
 
-\section{Estructura algebráica}
+\section{Representación de superficies con cremalleras}
 Veamos un método para representar las perforaciones y cremalleras sobre colecciones de esferas, y definamos unas operaciones sobre estas representaciones que nos den espacios topológicos equivalentes, tal como hicimos en el Capítulo 1. ---referencia aJJJWW------ 
 
 Sean $\Esfera_1,\dots ,\Esfera_k$ esferas con perforaciones, algunas con pares-zip. Para cada esfera, etiquetamos las cremalleras asociadas a un mismo par-zip con el mismo símbolo. Para las partes de perforaciones que no tengan cremallera, las etiquetamos cada una con un símbolo distinto. A cada perforación le asociaremos una palabra, formada a partir de las etiquetas que acabamos de crear. Empezamos arbitrariamente por una, digamos $a$, y si esta está asociada a una cremallera, escribiremos $a$ o $a^{-1}$ dependiendo de si su orientación se corresponde con la de las agujas del reloj; si no está asociada a una cremallera escribiremos simplemente $a$. Recorreremos la perforación en orden en sentido contrario de las agujas del reloj reptiendo el proceso anterior hasta llegar a la anterior etiqueta de la que hemos partido.
@@ -1623,6 +1625,48 @@ Supongamos $q_1:X\to Y_1$ y $q_2:X\to Y_2$ son aplicaciones cociente que hacen l
 \end{tma}
 
 \chapter{CW-complejos}
+Utilizo la definición inductiva de CW-complejo dada por Hatcher \cite{hatcher} y algunas propiedades expuestas por Lee \cite{lee1}.
+
+
+\begin{defin}
+Una \enfatiza{n-celda abierta} es un espacio topológico homeomorfo a la bola abierta unidad $\mathbb{B}^n$, y una \enfatiza{n-celda} cerrada es un espacio homemorfo a $\overline{\mathbb{B}}^n$. 
+\end{defin}
+
+Toda bola en $\R^n$ es una n-celda, y el \autoref{teo:convexo_homeom_esfera} nos da otros muchos ejemplos: un intervalo cerrado es una 1-celda cerrada, toda región poligonal es una 2-celda cerrada, y un tetraedro sólido es una 3-celda cerrada. Lsd 0-celdas son los conjuntos unitarios.
+
+\begin{obs}
+Sea $D$ una $n$-celda. Entonces $D$ es una variedad con borde por serlo $\overline{\mathbb{B}}^n$. Denotamos por $\partial D$ e $\interior{D}$ respectivamente a las imágenes de $\mathbb{S}^{n-1}$ y $\mathbb{B}^n$ por un homeomorfismo $F:\overline{\mathbb{B}}^n\to D$, tal que $\partial D$ es homeomorfo a $\mathbb{S}^{n-1}$ e $\interior{D}$ es una $n$-celda abierta.
+\end{obs}
+
+\begin{defin}
+Un \enfatiza{CW-complejo} es un espacio topológico $X$ construido de la siguiente manera:
+\begin{itemize}
+\item[(1)] Empezamos con un espacio discreto $X^0$, cuyos puntos consideramos 0-celdas.
+\item[(2)] Inductivamente, formamos el \enfatiza{$n$-esqueleto} $X^n$ a partir de $X^{n-1}$ pegando una colección (que puede ser vacía) de $n$-celdas.
+\item[(3)] Definimos $X=\bigcup_n X^n$, y definimos la siguiente topología, que es coherente con la familia $\left\{X^n\right\}$: un conjunto $A\subset X$ es abierto (o cerrado) si y solo si $A\cap X^n$ es abierto (o cerrado) en $X^n$, para todo $n$. 
+\end{itemize}
+\end{defin}
+
+\begin{defin}
+Si $X=X^n$ para algún $n$, entonces se dice que $X$ es de dimensión finita, y decimos que la dimensión de $X$ es $n$.
+\end{defin}
+
+\begin{prop}
+Sea $X$ un CW-complejo con un conjunto numerable de celdas. Si $X$ es localmente euclídeo, entonces es una variedad.
+\end{prop}
+
+\begin{prop}
+Si $M$ es una $n$-variedad no vacía y un CW-complejo, entonces $n$ es también la dimensión de $M$ como CW-complejo.
+\end{prop}
+
+
+\chapter{Espacios adjunción}
+
+\chapter{Homología}
+
+\chapter{Orientabilidad}
+
+\chapter{Espacios cociente}
 
 \chapter{Definiciones}
 
@@ -1655,7 +1699,18 @@ T. Radó.
 J. R. Munkres.
 \textit{Elements of Agebraic Topology}. Addison-Wesley, 1984.
 
+\bibitem{hatcher}
+A. Hatcher.
+\textit{Algebraic Topology}. 2001. 
+\\\url{http://pi.math.cornell.edu/~hatcher/AT/ATpage.html}
 
+\bibitem{dehn}
+M. Dehn, P. Heegard.
+\textit{Analysis situs}, Enzyklopädie der Math. Wiss. 1907, 153-220.
+
+
+\bibitem{seifert}
+H. Seifert, W. Threlfall. \textit{A Textbook of Topology}, 1era edición. Academic, New York, 1980.
 \end{thebibliography}
 
 \end{document}
