@@ -2,21 +2,22 @@
 \babel@toc {spanish}{}
 \contentsline {chapter}{\numberline {1}Definiciones preeliminares}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Variedades}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Suma conexa de variedades}{5}{section.1.2}
-\contentsline {chapter}{\numberline {2}Triangulaci\IeC {\'o}n de superficies}{8}{chapter.2}
-\contentsline {section}{\numberline {2.1}Complejos simpliciales y triangulaci\IeC {\'o}n}{8}{section.2.1}
-\contentsline {section}{\numberline {2.2}Teorema de Rad\IeC {\'o}}{9}{section.2.2}
-\contentsline {chapter}{\numberline {3}Teorema de Clasificaci\IeC {\'o}n}{10}{chapter.3}
-\contentsline {section}{\numberline {3.1}Representaci\IeC {\'o}n de superficies}{10}{section.3.1}
+\contentsline {section}{\numberline {1.2}Variedades con borde}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Suma conexa de variedades}{3}{section.1.3}
+\contentsline {chapter}{\numberline {2}Triangulaci\IeC {\'o}n de superficies}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}Complejos simpliciales y triangulaci\IeC {\'o}n}{6}{section.2.1}
+\contentsline {section}{\numberline {2.2}Teorema de Rad\IeC {\'o}}{7}{section.2.2}
+\contentsline {chapter}{\numberline {3}Teorema de Clasificaci\IeC {\'o}n}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Representaci\IeC {\'o}n de superficies}{8}{section.3.1}
 \contentsline {section}{\numberline {3.2}Demostraci\IeC {\'o}n cl\IeC {\'a}sica}{15}{section.3.2}
-\contentsline {chapter}{\numberline {4}La prueba ZIP de Conway}{16}{chapter.4}
-\contentsline {section}{\numberline {4.1}Cremalleras}{16}{section.4.1}
-\contentsline {section}{\numberline {4.2}Representaci\IeC {\'o}n de superficies con cremalleras}{17}{section.4.2}
-\contentsline {section}{\numberline {4.3}Teorema de Clasificaci\IeC {\'o}n}{19}{section.4.3}
-\contentsline {chapter}{\numberline {A}Teoremas Usados}{21}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}CW-complejos}{22}{appendix.Alph2}
-\contentsline {chapter}{\numberline {C}Espacios adjunci\IeC {\'o}n}{25}{appendix.Alph3}
-\contentsline {chapter}{\numberline {D}Homolog\IeC {\'\i }a}{26}{appendix.Alph4}
-\contentsline {chapter}{\numberline {E}Orientabilidad}{27}{appendix.Alph5}
-\contentsline {chapter}{\numberline {F}Espacios cociente}{28}{appendix.Alph6}
-\contentsline {chapter}{\numberline {G}Definiciones}{29}{appendix.Alph7}
+\contentsline {chapter}{\numberline {4}La prueba ZIP de Conway}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Cremalleras}{17}{section.4.1}
+\contentsline {section}{\numberline {4.2}Representaci\IeC {\'o}n de superficies con cremalleras}{18}{section.4.2}
+\contentsline {section}{\numberline {4.3}Teorema de Clasificaci\IeC {\'o}n}{20}{section.4.3}
+\contentsline {chapter}{\numberline {A}Teoremas Usados}{22}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}CW-complejos}{23}{appendix.Alph2}
+\contentsline {chapter}{\numberline {C}Espacios adjunci\IeC {\'o}n}{26}{appendix.Alph3}
+\contentsline {chapter}{\numberline {D}Homolog\IeC {\'\i }a}{27}{appendix.Alph4}
+\contentsline {chapter}{\numberline {E}Orientabilidad}{28}{appendix.Alph5}
+\contentsline {chapter}{\numberline {F}Espacios cociente}{29}{appendix.Alph6}
+\contentsline {chapter}{\numberline {G}Definiciones}{30}{appendix.Alph7}

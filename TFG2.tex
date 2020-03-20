@@ -139,10 +139,10 @@ Manuel Alonso Morón\\[.1in]
 En este capítulo doy las definiciones y resultados preeliminares para la representación y clasificación de superficies. Me basaré principalmente en los libros de J. M. Lee \cite{lee1} y V. Muñoz - J. J. Madrigal \cite{juanjo}.\\
 \section{Variedades}\label{sec:variedades}
 Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo son las variedades, y en concreto las superficies. Definámoslas.
-\begin{defin}%%%%DEF: variedad topológica
+\begin{defin}\label{def:variedad}%%%%DEF: variedad topológica
 Una \textbf{\emph{variedad topológica}} (de ahora en adelante \emph{variedad}) es un espacio topológico Hausdorff, II AN y localmente homeomorfo a $R^n$, para algún $n\geq 0$.
 \end{defin}
-Sea $M$ una variedad, $p\in M$. Si $U\subseteq M$ es un entorno de $p$ que es homeomorfo a un abierto $U'$ de $\R^n$, decimos que $U$ es un \enfatiza{dominio coordenado}, y llamamos \enfatiza{carta} a un homeomorfismo $\varphi :U\to U'$.
+Sea $M$ una variedad, $p\in M$. Si $U\subseteq M$ es un entorno de $p$ que es homeomorfo a un abierto $U'$ de $\R^n$, decimos que $U$ es un \enfatiza{dominio coordenado}, llamamos \enfatiza{aplicación coordenada} a cualquier homeomorfismo $\varphi :U\to U'$ y decimos que el par $(U,\varphi )$ es una \enfatiza{carta para $M$}.
 \begin{obs}%%%%OBS: toda propiedad local de Rn se pasa a las variedades
 Como la propiedad ``ser localmente homeomorfo a $\R^n$'' es local, toda propiedad local de $\R^n$ se traslada a una variedad. Así, las variedades son localmente compactas, I AN, localmente conexas, localmente conexas por caminos y localmente simplemente conexas.
 \end{obs}%COPIADO lo de abajo, cambiar las palabras!!!!!!!!!!!!
@@ -157,7 +157,8 @@ Sea $M$ una $n$-variedad, y sea $V$ un subconjunto abierto de $M$. Para todo $p\
 \begin{eje}%%%%EJE: variedades.
 \begin{itemize}
 \item Las 0-variedades son espacios discretos numerables. La única 0-variedad conexa es un punto.
-\item Existen dos 1-variedades conexas salvo homeomorfismo: la recta $\R$ y el círculo $\mathbb{S}^1=\left\{(x,y)\in \R^2\mid x^2+y^2=1\right\}=\left\{z=e^{2\pi i\theta}\in \C \mid \theta \in \left[0,1\right] \right\}=\left\{ z\in \C \mid |z|=1\right\}$.
+\item Existen dos 1-variedades conexas salvo homeomorfismo: la recta $\R$ y el círculo $\mathbb{S}^1\\
+=\left\{(x,y)\in \R^2\mid x^2+y^2=1\right\}=\left\{z=e^{2\pi i\theta}\in \C \mid \theta \in \left[0,1\right] \right\}=\left\{ z\in \C \mid |z|=1\right\}$.
 \end{itemize}
 \end{eje}
 \begin{defin}%%%%DEF: SUPERFICIE
@@ -165,304 +166,88 @@ Una \textbf{\emph{superficie}} es una $2$-variedad.
 \end{defin}
 \begin{eje}%%%%EJE: toro y esfera
 \begin{itemize}
-\item La esfera $\mathbb{S}^2=\{(x,y,z) \in \R^3\mid  x^2+y^2+z^2=1\}$.
-\item El toro $\mathbb{T}^2=\{(x,y,z)\in \R^3\mid  (\sqrt{x^2+y^2}-2)^2+z^2=1\}$.
+\item La esfera $\mathbb{S}^2=\{(x,y,z) \in \R^3\mid  x^2+y^2+z^2=1\}$ (\autoref{fig:esfera}).
+\item El toro $\mathbb{T}^2=\{(x,y,z)\in \R^3\mid  (\sqrt{x^2+y^2}-2)^2+z^2=1\}$ (\autoref{fig:toro}).
 \end{itemize}
 \end{eje}
 \begin{figure}%%%%FIG: Toro y esfera
-	\begin{center}
-		\begin{tikzpicture}[scale=0.8]
-			\draw (0,0) circle (2cm);
-			\draw (2,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=-180];
-			\draw [dashed] (2,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=180];
-			\draw (6,-0.1) ellipse (2.9cm and 1.4 cm);
-			\draw (7.5,0.1) arc[x radius=1.5, y radius=0.4, start angle=0, end angle=-180];
-			\draw (7.3,-0.1) arc[x radius=1.3, y radius=0.3, start angle=0, end angle=180]; 
-		\end{tikzpicture}
-	\caption{$\mathbb{S}^2$ y $\mathbb{T}^2$}
-	\end{center}
-\end{figure}
-
-
-%%%%%%%%%%%%%
-%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%
-
-
-Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Trataremos de dar una forma de representarlas como polígonos, y veremos que toda superficie compacta se puede representar en el plano como el cociente de un polígono por una relación de equivalencia que identifica sus lados dos a dos. Empecemos viendo tres ejemplos elementales: la esfera $\Esfera$, el plano proyectivo $\Proyectivo$ y el toro $\Toro$. Como veremos, estas superficies son fundamentales pues toda superficie compacta se puede construir a partir de ellas. 
-
-\begin{prop}%%%%PROP: ESFERA COCIENTE DISCO Y CUADRADO%%%%
-\label{prop:Esfera como cociente de disco y cuadrado}
-La esfera $\mathbb{S}^2$ es homeomorfa a los siguientes espacios cociente: 
-%%%%%%%%%%o cocientes??????????%%%%%
-\begin{itemize}
-\item[(a)] El disco cerrado $\overline{\mathbb{B}}^2\subseteq \mathbb{R}^2$ módulo la relación de equivalencia generada por $(x,y)\sim (-x,y)$, si $(x,y)\in \partial \overline{\mathbb{B}}^2$
-\item[(b)] El cuadrado $S=\{(x,y):|x|+|y|\leq 1\}$ módulo la relación de equivalencia generada por $(x,y)\sim(-x,y)$ si $(x,y)\in \partial S$.
-\end{itemize}
-\end{prop}
-\begin{proof}
-Para ver que cada espacio es homeomorfo a la esfera, daremos una aplicación cociente desde cada espacio a la esfera que haga las mismas identificaciones que la relación de equivalencia, y entonces apelaremos a la unicidad del espacio cociente. (\autoref{teo:unicidad_espacio_cociente})\\
-Para (a), vamos a definir una aplicación que ``envuelve'' cada segmento horizontal del disco en un paralelo de la esfera (ver \autoref{fig:esfera_cociente_circunferencia}).
-Formalmente, esta aplicación $\pi:\overline{\mathbb{B}}^2\to \mathbb{S}^2$ vienen dada por 
-$$\pi(x,y)=\left\{\begin{array}{lc}
-			(-\sqrt{1-y^2} \cos\dfrac{\pi x}{\sqrt{1-y^2}}, -\sqrt{1-y^2}, y), & y\neq \pm 1 \\
-			\\(0,0,y), & y=\pm1 
-
-\end{array}
-\right.$$
-Es claro que $\pi$ es continua y hace las mismas identificaciones que la relación de equivalencia. Por ser sobreyectiva, es una aplicación cociente (\autoref{teo:aplicac_cerrada}).
-
-Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo construido en la demostración de \autoref{teo:convexo_homeom_esfera} que manda linealmente cada segmento radial entre el origen y la frontera de $S$ al segmento paralelo entre centro del disco y su frontera. Hagamos ahora $\beta=\pi \circ \alpha : S \to \mathbb{S}^2$, donde $\pi$ es la aplicación cociente del parágrafo anterior. Tenemos entonces que $\beta$ identifica $(x,y)$ y $(-x,y)$ cuando $(x,y)\in \partial S$, pero por otro lado es inyectiva, así que hace las mismas identificaciones que la aplicación cociente definida en (b), completando así la demostración (ver \autoref{fig:esfera_cuadrado}). 
-\end{proof}
-\begin{figure}%%%%%%% FIGURA: ESFERA COCIENTE CIRCUNFERENCIA%%%%
-\begin{center}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.5cm,y=1.5cm, scale=0.7]
-\draw [<-][shift={(0,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
-\draw (0,3) node[anchor=north] {$\pi$};
-\draw (2,1.5) arc[x radius=0.7, y radius=1.5, start angle=90, end angle=270];
-\draw [->] (2,0) -- (0.87,-1.68);
-\draw(2,0) circle (2.25cm);
-\draw(-2,0) circle (2.25cm);
-\draw (-3.12,1)-- (-0.88,1);
-\draw (-3.41,0.5)-- (-0.59,0.5);
-\draw (-3.41,-0.5)-- (-0.59,-0.5);
-\draw (-3.12,-1)-- (-0.88,-1);
-\draw [->] (2,0) -- (2,2);
-\draw [dashed] (3.1,1) arc[x radius=1.1, y radius=0.2, start angle=0, end angle=180];
-\draw (3.1,1) arc[x radius=1.1, y radius=0.2, start angle=0, end angle=-180];
-\draw [dashed] (3.4,0.5) arc[x radius=1.4, y radius=0.2, start angle=0, end angle=180];
-\draw (3.4,0.5) arc[x radius=1.4, y radius=0.2, start angle=0, end angle=-180];
-\draw [dashed] (3.5,0) arc[x radius=1.5, y radius=0.2, start angle=0, end angle=180];
-\draw (3.5,0) arc[x radius=1.5, y radius=0.2, start angle=0, end angle=-180];
-\draw [dashed] (3.4,-0.5) arc[x radius=1.4, y radius=0.2, start angle=0, end angle=180];
-\draw (3.4,-0.5) arc[x radius=1.4, y radius=0.2, start angle=0, end angle=-180];
-\draw [dashed] (3.10,-1) arc[x radius=1.10, y radius=0.2, start angle=0, end angle=180];
-\draw (3.10,-1) arc[x radius=1.10, y radius=0.2, start angle=0, end angle=-180];
-\draw (-3.5,0)-- (-0.5,0);
-\draw (-0.6,0.1)--(-0.5,0)--(-0.4,0.1);
-\draw (-3.6,0.13)--(-3.5,0)--(-3.4,0.13);
-\draw [->] (2,0) -- (4,0);
-\begin{scriptsize}
-\fill [color=black] (-2,1.5) circle (2.0pt);
-\fill [color=black] (-2,-1.5) circle (2.0pt);
-\fill [color=black] (2,1.5) circle (2.0pt);
-\fill [color=black] (2,-1.5) circle (2.0pt);
-\fill [color=black] (-2,1.5) circle (2.0pt);
-%\fill [color=black] (1.3,-0.17) circle (2.0pt);
-\draw (1.2,-0.07)--(1.3,-0.17)--(1.4,-0.07);
-\end{scriptsize}
-\end{tikzpicture}
-\end{center}
-
-\caption{La esfera como cociente del disco $\overline{\mathbb{B}}^2$.\label{fig:esfera_cociente_circunferencia}}
-\end{figure}
-
-\begin{figure}%%%%FIGURA: ESFERA CUADRADO
+\begin{subfigure}{.5\textwidth}
 \centering
-
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.7]
-\draw[-<-={at=0.125},->-={at=0.375}, -<<-={at=0.625}, ->>-={at=0.875} ](0,0) circle (2cm);
-\draw [-<-={at=0.5}] (-8,0)-- (-6,2);
-\draw [-<-={at=0.5}](-4,0)-- (-6,2);
-\draw [-<<-={at=0.5}](-8,0)-- (-6,-2);
-\draw [->>-={at=0.5}](-6,-2)-- (-4,0);
-\draw(6,0) circle (2cm);
-\draw (8,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=-180];
-\draw [dashed] (8,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=180];
-\draw [->] (-8.5,0) -- (-3.5,0);
-\draw [->] (-6,-2.5) -- (-6,2.5);
-\draw [->] (-2.5,0) -- (2.5,0);
-\draw [->] (0,-2.5) -- (0,2.5);
-\draw [->] (3.5,0) -- (8.5,0);
-\draw [->] (6,0) -- (6,2.5);
-\draw [->] (6,0) -- (4.51,-2.5);
-\draw [<-][shift={(-3,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
-\draw [<-] [shift={(3,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
-\draw (-3.1,3.21) node[anchor=north west] {$ \alpha $};
-\draw (2.89,3.23) node[anchor=north west] {$ \pi $};
-\draw [->-={at=0.45}, -<<-={at=0.82}](6,2) arc[x radius=0.7, y radius=2, start angle=90, end angle=270];
-\begin{scriptsize}
-\fill [color=black] (0,2) circle (1.5pt);
-\fill [color=black] (-8,0) circle (1.5pt);
-\fill [color=black] (-4,0) circle (1.5pt);
-\fill [color=black] (-6,-2) circle (1.5pt);
-\fill [color=black] (-6,2) circle (1.5pt);
-\fill [color=black] (-2,0) circle (1.5pt);
-\fill [color=black] (2,0) circle (1.5pt);
-\fill [color=black] (0,-2) circle (1.5pt);
-\fill [color=black] (0,2) circle (1.5pt);
-\fill [color=black] (5.34,-0.66) circle (1.5pt);
-\end{scriptsize}
+\begin{tikzpicture}[scale=0.8]
+\draw (0,0) circle (2cm);
+\draw (2,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=-180];
+\draw [dashed] (2,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=180];
 \end{tikzpicture}
-
-\caption{La esfera como cociente de un cuadrado.\label{fig:esfera_cuadrado}}
-
-
+\caption{$\Esfera$\label{fig:esfera}}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+\centering
+\begin{tikzpicture}
+\draw (6,-0.1) ellipse (2.9cm and 1.4 cm);
+\draw (7.5,0.1) arc[x radius=1.5, y radius=0.4, start angle=0, end angle=-180];
+\draw (7.3,-0.1) arc[x radius=1.3, y radius=0.3, start angle=0, end angle=180]; 
+\end{tikzpicture}
+\caption{$\Toro\label{fig:toro}$}
+\end{subfigure}	
+\caption{Ejemplos de superficies.}
 \end{figure}
 
-\begin{prop}%%%%PROP: TORO COMO CUADRADO
-\label{prop:toro_cuadrado}
-El toro $\Toro$ es homeomorfo al espacio cociente resultante de la relación de equivalencia en el cuadrado $I\times I$ que identifica $(x,0)\sim (x,1)$ para todo $x\in I$, y $(0,y)\sim(1,y)$ para todo $y\in I$ (\autoref{fig:toro_cuadrado}). 
-\end{prop}
-\begin{proof}
-Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},e^{2\pi iv})$. Por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}), es una aplicación cociente. Al hacer las mismas identificaciones que la relación de equivalencia, por la unicidad del espacio cociente (\autoref{teo:unicidad_espacio_cociente}) se obtiene el resultado.
-\end{proof}
-
-
-
-\begin{figure}%%%%FIGURA: TORO COMO CUADRADO
-\begin{center}
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm, y=1cm, scale=0.7]
-
-\draw [->-={at=0.5}](-8,-2)-- (-8,2);
-\draw [->>-={at=0.5}](-8,2)-- (-4,2);
-\draw [-<-={at=0.5}](-4,2)-- (-4,-2);
-\draw [->>-={at=0.5}](-8,-2)-- (-4,-2);
-\draw (-2,1)-- (2,1);
-%\draw (-2,1)-- (-2,-1);
-%\draw (2,1)-- (2,-1);
-\draw (2,-1)-- (-2,-1);
-%\draw [-<-={at=0.6]}](2,1) arc[x radius=0.5, y radius=1, start angle=90, end angle=270];
-%\draw (2,1) arc[x radius=0.5, y radius=1, start angle=90, end angle=-90];
-\draw [-<-={at=0.6]}](-2,1) arc[x radius=0.5, y radius=1, start angle=90, end angle=270];
-\draw [dashed] (-2,1) arc[x radius=0.5, y radius=1, start angle=90, end angle=-90];
-\filldraw [-<-={at=0.55]}][color=black, fill=black!0] [rotate around={0:(2,0)}] (2,0) ellipse (0.5cm and 1cm);
-\draw [->>-={at=0.5}](-2.5,0)-- (1.5,0);
-\draw [rotate around={0:(6,0)}] (6,0) ellipse (3cm and 1.5cm);
-\draw (7.4,0.1) arc[x radius=1.5, y radius=0.4, start angle=0, end angle=-180];
-\draw (7.2,-0.1) arc[x radius=1.3, y radius=0.3, start angle=0, end angle=180]; 
-\draw [dashed](6,-1.5) arc[x radius=0.2, y radius=0.6, start angle=-90, end angle=90];
-\draw [-<-={at=0.63}] (6,-0.3) arc[x radius=0.2, y radius=0.6, start angle=90, end angle=270];
-\begin{scriptsize}
-\fill [color=black] (-8,-2) circle (1.5pt);
-\fill [color=black] (-8,2) circle (1.5pt);
-\fill [color=black] (-4,2) circle (1.5pt);
-\fill [color=black] (-4,-2) circle (1.5pt);
-\fill [color=black] (-2.5,0) circle (1.5pt);
-\fill [color=black] (1.5,0) circle (1.5pt);
-\fill [color=black] (5.8,-0.9) circle (1.5pt);
-\end{scriptsize}
-\end{tikzpicture}
-\end{center}
-\caption{El toro como cociente de un cuadrado.\label{fig:toro_cuadrado}}
-\end{figure}
-
-
-\begin{prop}%%%%PROP: PLANO PROYECTIVO COMO CUADRADO
-\label{prop:proyectivo_cociente_cuadrado}
-El plano proyectivo $\mathbb{P}^2$ es homeomorfo a los siguientes espacios cociente:
-\begin{itemize}
-\item[(a)] El disco cerrado $\overline{\mathbb{B}}^2$ módulo la relación de equivalencia generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \partial \overline{\mathbb{B}}^2$.
-\item[(b)] La región cuadrada $S=\{(x,y):|x|+|y|\leq 1\} $ módulo la relación de equivalencia generada por $(x,y)\sim (-x,-y) $ para todo $(x,y)\in \partial S$.
-\end{itemize}
-\end{prop}
-\begin{proof}
-Sea $p:\mathbb{S}^2 \to \mathbb{P}^2$ la aplicación cociente dada por la relación de equivalencia $\sim$ generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \mathbb{S}^2$, que representa $\mathbb{P}^2$ como el cociente de una esfera. %AQUI FALTA UN POCO DE EXPLICACION, EJEMPLO 4.54 DEL LEE
-Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el disco al emisferio superior de la esfera por $F(x,y)=(x,y,\sqrt{1-x^2-y^2})$, entonces $p\circ F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2/\sim$ es sobreyectiva (---lo demuestro?) y es así una aplicación cociente por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}). La aplicación identifica únicamente $(x,y)\in \partial \overline{\mathbb{B}}^2$ con $(-x,-y)\in \partial \overline{\mathbb{B}}^2$, por lo que $\mathbb{P}^2$ es homeomorfo al espacio cociente resultante.
-Para la parte (b) hacemos como en la demostración de la \autoref{prop:Esfera como cociente de disco y cuadrado} (b). 
-\end{proof}
-
-
-\begin{figure}[h]%%%%FIGURA: PLANO PROYECTIVO COMO CUADRADO
-\begin{center}
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.6]
-\draw[-<-={at=0.5}, -<-={at=1}](-3,0) circle (2cm);
-\draw [-<-={at=0.5}] (4,2)-- (6,0);
-\draw [-<<-={at=0.5}](6,0)-- (4,-2);
-\draw [-<-={at=0.5}](4,-2)-- (2,0);
-\draw [-<<-={at=0.5}](2,0)-- (4,2);
-\begin{scriptsize}
-\fill [color=black] (6,0) circle (1.5pt);
-\fill [color=black] (4,2) circle (1.5pt);
-\fill [color=black] (2,0) circle (1.5pt);
-\fill [color=black] (4,-2) circle (1.5pt);
-\fill [color=black] (-3,-2) circle (1.5pt);
-\fill [color=black] (-3,2) circle (1.5pt);
-\end{scriptsize}
-\end{tikzpicture}
-\caption{Representación de $\mathbb{P}^2$ como un espacio cociente.\label{fig:plano_proyectivo_cuadrado}}
-\end{center}
-\end{figure}
-
-
-En las anteriores proposiciones hemos visto una o varias formas de representar superficies dadas ciertas construcciones geométricas. En estos casos hemos dado aplicaciones y demostraciones concretas para validar nuestros argumentos, pero a medida que aumenta la sofisticación es más útil guiarse visualmente por las figuras construidas. Por ello debemos formalizar un método para construir superficies identificando lados de figuras geométricas.
-Daremos por sabidas las definiciones básicas de símplices y CW-complejos que dejaremos en el apéndice \autoref{apendice simplices}.
-
-\begin{defin}%%%DEF:Polígono
-Un \enfatiza{polígono} es un subconjunto de $\R^2$ que es homeomorfo a $\mathbb{S}^1$ y está formado por un número finito de segmentos, que llamaremos \enfatiza{bordes} y que se intersecan sólo en sus extremos, que llamaremos \enfatiza{vértices}. %Los $0$-símplices y $1$-símplices del poígono son respectivamente sus \enfatiza{vértices} y sus \enfatiza{bordes}. Del lema \autoref{lemma:cw} se sigue que un borde yace exactamente en dos vértices.
+\section{Variedades con borde}
+Hay una serie de espacios topológicos que no son variedades pero que tienen interés desde el punto de vista geométrico y son útiles a la hora de estudiarlas. Por ejemplo, la bola cerrada $\overline{\mathbb{B}}^n$ no es una variedad, puesto que para los puntos de su frontera no hay entornos homeomorfos a abiertos de $\R^n$. Vamos a definir por tanto una clase de espacios que extienda a las variedades pero que admita la existencia de algún tipo de ``\textit{bordes}'':
+\begin{defin}
+Una \enfatiza{variedad con borde $n$-dimensional} $M$ (o $n$-variedad con borde) es un espacio topológico  Hausdorff y II AN tal que todo punto $p\in M$ tiene un entorno $U$ homeomorfo a un abierto $U'\subset \mathbb{H}^n=
+\left\{(x_1,\dots ,x_n)\in \R^n\mid x_n\geq 0\right\}$.
 \end{defin}
-
-\begin{defin}%%%DEF:Región poligonal
-
-Una \enfatiza{región poligonal} es un subconjunto compacto de $\R^2$ cuyo interior es homeomorfo al disco $\mathbb{B}^2$ y cuya frontera es un polígono.
-%Una \enfatiza{región poligonal} es un subconjunto compacto de $\R^2$ cuyo interior es una bola coordenada y cuya frontera es un polígono.
-A los vértices y lados del polígono de la frontera también los llamamos vértices y lados de la región poligonal.
-\end{defin} 
-
-Veamos pues que identificando bordes de regiones poligonales de par en par obtenemos un espacio cociente que es siempre una superficie:
-
-\begin{prop}%%%PROP: Teorema poligonos
-\label{prop:poligonos}
-Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1\amalg \dots \amalg P_k$, y supongamos dada una relación de equivalencia en $P$ que identifica algunos bordes de los polígonos con otros por homeomorfismos afines. Entonces se tiene:
+Si $M$ una n-variedad con borde, $p\in M$ y $\varphi :U\to U'\subset \mathbb{H}^n$ un homeomorfismo como en la definición. Como en el caso de variedades, decimos que $U$ es un \enfatiza{dominio coordenado}, que $\varphi$ es una \enfatiza{aplicación coordenada} para $M$ y que el par $(U,\varphi )$ es una \enfatiza{carta para $M$}.\\
+Si denotamos $\varphi (p)=a=(a_1,\dots ,a_n)$, podemos distinguir entre dos tipos de puntos:
 \begin{itemize}
-\item[(a)] El espacio cociente resultante es un CW-complejo $2$-dimensional cuyo $0$-esqueleto es la imagen del conjunto de vértices de $P$ por la aplicación cociente, y cuyo $1$-esqueleto es la imagen de la unión de los bordes de las regiones poligonales.
-\item[(b)] Si la relación de equivalencia identifica cada borde de cada $P_i$ con exactamente otro borde de un $P_j$ (no necesariamente $i\neq j$), entonces el espacio cociente resultante es una superficie compacta.
-\end{itemize}
-\end{prop}
 
+\item[1.] \textit{Puntos interiores:} Si $a_n>0$, entonces podemos tomar una bola $B_{\varepsilon}(a)\subset U'$ y $V=\varphi^{-1}(V')$, por lo que $V$ es un entorno de $p$ homeomorfo a un abierto de $\R^n$. Decimos por tanto que $p$ es un \enfatiza{punto interior de $M$}, y denotamos por $\interior{M}$ al conjunto de puntos interiores de $M$.
+\item[2.] \textit{Puntos borde:} Si $a_n=0$ para todo $n$, entonces podemos tomar una semibola $V'=B_{\varepsilon}^{+}=B_{\varepsilon}(a)\cap \mathbb{H}^n$, y $V=\varphi^{-1}(V')$. Decimos que $p$ es un \enfatiza{punto borde de $M$}. Al conjunto de todos los puntos borde de $M$ lo denotamos por $\partial M$.
+\end{itemize}
+\begin{prop}%%%%PROP: interior y borde de una variedad con borde
+Sea $M$ una variedad con borde, entonces $\interior{M}$ es un abierto de M, y es en si mismo una $n$-variedad.
+\end{prop}
 \begin{proof}
-%...6.4 del Lee.
+
+\end{proof}
+\begin{prop}%%%%PROP: invarianza del borde
+Si $M$ es una $n$-variedad con borde, entonces un punto $p\in M$ no puede ser un punto interior y un punto borde al mismo tiempo. O lo que es lo mismo, $M=\interior{M} \cup \partial M$, con $\interior{M} \cap \partial M=\emptyset$.
+\end{prop}
+\begin{proof}
+
+\end{proof}
+\begin{corol}
+Si $M$ es una $n$-variedad con borde, entonces $\partial M$ es un cerrado en $M$, $\partial M$ es una $(n-1)$-variedad. Por otro lado, $M$ es una variedad si y solo si $\partial M=\emptyset$.
+\end{corol}
+\begin{proof}
+
 \end{proof}
 
-\begin{eje}%%%%EJE: Botella Klein
-La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando los lados del cuadrado $I\times I$ de acuerdo a $(0,t)\sim (1,t)$ y $(t,0)\sim (1-t,1)$ para $0\leq t\leq 1$.  Para visualizar $K$, podemos pensar en pegar los lados izquierdo y derecho creando un cilindro, y luego hacer pasar el extremo superior por la parte inferior del cilindro, para finalmente pegar los dos extremos (ver \autoref{fig:klein}).
+Hacemos incapié en que los conceptos de \textit{variedad} y \textit{variedad con borde} son distintos. Una variedad con borde puede ser o no una variedad, pues puede tener el borde vacío. En cambio, una variedad es siempre una variedad con borde en la que todo punto es un punto interior. Para evitar confusiones, si el contexto lo pide, utilizaremos \enfatiza{variedad sin borde} para referirnos a una variedad en el sentido de la \autoref{def:variedad}.\\
+Veamos algunos ejemplos no triviales de variedades con borde:
+\begin{eje}
+\begin{itemize}
+\item[(1)] El cilindro $Cil=\left\{(x,y,z)\in \R^3 \mid x^2+y^2=1,\, z\in \left[ 0,1\right] \right\}$.
+\item[(2)] La banda de Möbius\\
+
+\begin{align*}
+Mob=
+& \left\{ \left(\left(1+\left(y-\frac{1}{2}\right)\cos \left(\pi x\right)\right), \, \left(1+\left(y-\frac{1}{2}\right)\cos \left(\pi x\right)\right)\sin \left( 2 \pi x\right), \right. \right.\\
+& \left. \left. \left( y-\frac{1}{2} \right)\sin \left( \pi x\right)\right) \mid x\in \left[0,1\right], \, y\in \left[0,1\right] \right\} \, .
+\end{align*}
+\end{itemize}
 \end{eje}
-
-\begin{figure}[b]%%%%FIG: Klein
-\centering
-\begin{tikzpicture} [use optics]
-%\draw [help lines] (-6,-2) grid (6,2);
-%1
-\draw[-<<-={at=0.125}, -<-={at=0.375}, ->>-={at=0.625}, -<-={at=0.875}] (-5,-1) -- (-5,1) -- (-3,1) -- (-3, -1) -- (-5,-1);
-%2
-\draw[-<<-] (-1.7, -1.085)--+(0,2);
-\draw [-<-={at=0.43}, -<-={at=0.897}] (-2,-1) -- +(0,2) arc[x radius=0.5, y radius=0.1, start angle=180, end angle=360] -- +(0,-2) arc[x radius=0.5, y radius=0.1, start angle=0, end angle=-180];
-\draw [dashed] (-2,-1) arc[x radius=0.5, y radius=0.1, start angle=180, end angle=0];
-\draw (-2,1) arc[x radius=0.5, y radius=0.1, start angle=180, end angle=0];
-%3
-\draw [->-={at=0.535}, ->-={at=0.974}](0.2,-0.5) [out=80, in=180] to (1.64,1.5) [out=0, in=100] to (3,-1) arc [x radius=0.35, y radius=0.1, start angle=0, end angle=-180] [out=85, in=0] to (1.64,1) [out=180, in=95] to (0.75, -0.5) arc[x radius=0.275, y radius=0.1, start angle=0, end angle=-180];
-\draw [dashed] (0.2,-0.5) arc[x radius=0.275, y radius=0.1, start angle=180, end angle=0] (3,-1) arc[x radius=0.35, y radius=0.1, start angle=0, end angle=180];
-
-%4
-\draw [->-={at=0.07}][dash pattern= on 52.5pt off 2pt on 2pt off 2pt on 2pt off 2pt on 79.5pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2.2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 200pt]
-	(5,-1) arc[x radius=0.4, y radius=0.1, start angle=0, end angle=-180] [out=135, in= 270] to +(-0.2,0.6) [out=90, in=270] to +(0.5,1) [out=90, in=0] to (4.3,1) [out=180, in=90] to +(-0.2,-0.3) [out=270, in=135] to +(0.5, -0.8) [out=-65, in=-65] to +(-0.3,-0.2) [out=-80, in=80] to (4.2,-1) arc [x radius=0.4, y radius=0.1, start angle=180, end angle=0] ;
-
-\draw [dash pattern= on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 180pt ](5,-1)[out=100, in=-45] to (4.6,-0.1) [out=115, in=115] to +(-0.3,-0.2) [out=135, in=270] to +(-0.5,1) [out=90, in=180] to (4.4,1.3) [out=0, in=90] to +(0.4, -0.7) [out=-90, in=90] to +(0.4,-1) [out=-90, in=45] to (5,-1);
-
-
-\draw [-Stealth](-.4,1.5) arc[x radius=0.4, y radius=0.2, start angle=150, end angle=30];
-\draw [-Stealth](-2.8,1.5) arc[x radius=0.4, y radius=0.2, start angle=150, end angle=30];
-\draw [-Stealth](3,1.5) arc[x radius=0.4, y radius=0.2, start angle=150, end angle=30];
-\end{tikzpicture}
-\caption{Construcción de la botella de Klein.\label{fig:klein}}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Suma conexa de variedades}
 
-
-Sean $V_1$ y $V_2$ dos $n$-variedades conexas. Dados $p_1\in V_1$ y $p_2\in V_2$ sean $U_1^{p_1}\subset V_1$, $U_2^{p_2}\subset V_2$  entornos de $p_1$ y $p_2$ respectivamente, y sean $\phi_1:U_1\to\R^n$ y $\phi_2:U_2\to\R^n$ dos homeomorfismos tales que $\phi_1(p_1)=0$ y $\phi_2(p_2)=0$. Si llamamos $B_1=\phi_1^{-1}(B_1(0))\subset V_1$ y $B_2=\phi_2^{-1}(B_1(0))\subset V_2$, consideremos $V_1^o=V_1-B_1$, $V_2^o=V_2-B_2$ y $V_1^o \sqcup V_2^o$ con la topología unión disjunta.
+OJO:TAMBIEN SE PUEDE DAR EN FUNCION DE ESPACIOS ADJUNCION
+Sean $V_1$ y $V_2$ dos $n$-variedades conexas. Dados $p_1\in V_1$ y $p_2\in V_2$ sean $U_1^{p_1}\subset V_1$, $U_2^{p_2}\subset V_2$  entornos abiertos de $p_1$ y $p_2$ respectivamente, y sean $\phi_1:U_1\to\R^n$ y $\phi_2:U_2\to\R^n$ dos homeomorfismos tales que $\phi_1(p_1)=0$ y $\phi_2(p_2)=0$. Si llamamos $B_1=\phi_1^{-1}(B_1(0))\subset V_1$ y $B_2=\phi_2^{-1}(B_1(0))\subset V_2$, consideremos $V_1^o=V_1-B_1$, $V_2^o=V_2-B_2$ y $V_1^o \sqcup V_2^o$ con la topología unión disjunta.
 Se define la relación de equivalencia $\sim$ en la que si $x_1\in S_1=\phi_1^{-1}(\partial B_1(0))$, $x_2\in S_2=\phi_2^{-1}(\partial B_1(0))$, entonces $x_1\sim x_2$ si y sólo si $\phi_1(x_1)=\phi_2(x_2)$, y se considera el cociente 
 
-$$X=\frac{V_1^o\sqcup V_2^o}{\sim}.$$\\
+$$M=\frac{V_1^o\sqcup V_2^o}{\sim}.$$\\
 
 \begin{defin}%%%% DEF: suma conexa
-A $X$ así definido se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, y se denota por $X=V_1\#V_2$.
+A $M$ así definida se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, y se denota por $M=V_1\#V_2$.
 \end{defin}
 
 
@@ -491,7 +276,7 @@ A $X$ así definido se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, 
 
 
 \begin{prop}%%%% PROP: suma conexa es variedad.
-Sean $V_1$ y $V_2$ variedades. Entonces $X=V_1\#V_2$ es una variedad.
+Sean $V_1$ y $V_2$ variedades. Entonces $M=V_1\#V_2$ es una variedad.
 \end{prop}
 \begin{proof}
 Denotemos la proyección $\pi:M_1^o\sqcup M_2^o\to X$. Sea $S=\pi (S_1)=\pi (S_2)$. Tenemosdos abiertos $U_j=M_j^o-S_j$, $j=1,2$ saturados. Por tanto, $\pi :U_ j\to \pi (U_j)=U_j'$ es homeomorfismo. Esto implica que $X$ es localmente $\R^n$ en los puntos de $U_1'\cup U_2'$ . Además ahí la topología es Hausdorff y IIAN.
@@ -774,7 +559,263 @@ En esta sección daremos una demostración clásica del teorema de clasificació
 
 \section{Representación de superficies}
 
+Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Trataremos de dar una forma de representarlas como polígonos, y veremos que toda superficie compacta se puede representar en el plano como el cociente de un polígono por una relación de equivalencia que identifica sus lados dos a dos. Empecemos viendo tres ejemplos elementales: la esfera $\Esfera$, el plano proyectivo $\Proyectivo$ y el toro $\Toro$. Como veremos, estas superficies son fundamentales pues toda superficie compacta se puede construir a partir de ellas. 
 
+\begin{prop}%%%%PROP: ESFERA COCIENTE DISCO Y CUADRADO%%%%
+\label{prop:Esfera como cociente de disco y cuadrado}
+La esfera $\mathbb{S}^2$ es homeomorfa a los siguientes espacios cociente: 
+%%%%%%%%%%o cocientes??????????%%%%%
+\begin{itemize}
+\item[(a)] El disco cerrado $\overline{\mathbb{B}}^2\subseteq \mathbb{R}^2$ módulo la relación de equivalencia generada por $(x,y)\sim (-x,y)$, si $(x,y)\in \partial \overline{\mathbb{B}}^2$
+\item[(b)] El cuadrado $S=\{(x,y):|x|+|y|\leq 1\}$ módulo la relación de equivalencia generada por $(x,y)\sim(-x,y)$ si $(x,y)\in \partial S$.
+\end{itemize}
+\end{prop}
+\begin{proof}
+Para ver que cada espacio es homeomorfo a la esfera, daremos una aplicación cociente desde cada espacio a la esfera que haga las mismas identificaciones que la relación de equivalencia, y entonces apelaremos a la unicidad del espacio cociente. (\autoref{teo:unicidad_espacio_cociente})\\
+Para (a), vamos a definir una aplicación que ``envuelve'' cada segmento horizontal del disco en un paralelo de la esfera (ver \autoref{fig:esfera_cociente_circunferencia}).
+Formalmente, esta aplicación $\pi:\overline{\mathbb{B}}^2\to \mathbb{S}^2$ vienen dada por 
+$$\pi(x,y)=\left\{\begin{array}{lc}
+			(-\sqrt{1-y^2} \cos\dfrac{\pi x}{\sqrt{1-y^2}}, -\sqrt{1-y^2}, y), & y\neq \pm 1 \\
+			\\(0,0,y), & y=\pm1 
+
+\end{array}
+\right.$$
+Es claro que $\pi$ es continua y hace las mismas identificaciones que la relación de equivalencia. Por ser sobreyectiva, es una aplicación cociente (\autoref{teo:aplicac_cerrada}).
+
+Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo construido en la demostración de \autoref{teo:convexo_homeom_esfera} que manda linealmente cada segmento radial entre el origen y la frontera de $S$ al segmento paralelo entre centro del disco y su frontera. Hagamos ahora $\beta=\pi \circ \alpha : S \to \mathbb{S}^2$, donde $\pi$ es la aplicación cociente del parágrafo anterior. Tenemos entonces que $\beta$ identifica $(x,y)$ y $(-x,y)$ cuando $(x,y)\in \partial S$, pero por otro lado es inyectiva, así que hace las mismas identificaciones que la aplicación cociente definida en (b), completando así la demostración (ver \autoref{fig:esfera_cuadrado}). 
+\end{proof}
+\begin{figure}%%%%%%% FIGURA: ESFERA COCIENTE CIRCUNFERENCIA%%%%
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.5cm,y=1.5cm, scale=0.7]
+\draw [<-][shift={(0,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
+\draw (0,3) node[anchor=north] {$\pi$};
+\draw (2,1.5) arc[x radius=0.7, y radius=1.5, start angle=90, end angle=270];
+\draw [->] (2,0) -- (0.87,-1.68);
+\draw(2,0) circle (2.25cm);
+\draw(-2,0) circle (2.25cm);
+\draw (-3.12,1)-- (-0.88,1);
+\draw (-3.41,0.5)-- (-0.59,0.5);
+\draw (-3.41,-0.5)-- (-0.59,-0.5);
+\draw (-3.12,-1)-- (-0.88,-1);
+\draw [->] (2,0) -- (2,2);
+\draw [dashed] (3.1,1) arc[x radius=1.1, y radius=0.2, start angle=0, end angle=180];
+\draw (3.1,1) arc[x radius=1.1, y radius=0.2, start angle=0, end angle=-180];
+\draw [dashed] (3.4,0.5) arc[x radius=1.4, y radius=0.2, start angle=0, end angle=180];
+\draw (3.4,0.5) arc[x radius=1.4, y radius=0.2, start angle=0, end angle=-180];
+\draw [dashed] (3.5,0) arc[x radius=1.5, y radius=0.2, start angle=0, end angle=180];
+\draw (3.5,0) arc[x radius=1.5, y radius=0.2, start angle=0, end angle=-180];
+\draw [dashed] (3.4,-0.5) arc[x radius=1.4, y radius=0.2, start angle=0, end angle=180];
+\draw (3.4,-0.5) arc[x radius=1.4, y radius=0.2, start angle=0, end angle=-180];
+\draw [dashed] (3.10,-1) arc[x radius=1.10, y radius=0.2, start angle=0, end angle=180];
+\draw (3.10,-1) arc[x radius=1.10, y radius=0.2, start angle=0, end angle=-180];
+\draw (-3.5,0)-- (-0.5,0);
+\draw (-0.6,0.1)--(-0.5,0)--(-0.4,0.1);
+\draw (-3.6,0.13)--(-3.5,0)--(-3.4,0.13);
+\draw [->] (2,0) -- (4,0);
+\begin{scriptsize}
+\fill [color=black] (-2,1.5) circle (2.0pt);
+\fill [color=black] (-2,-1.5) circle (2.0pt);
+\fill [color=black] (2,1.5) circle (2.0pt);
+\fill [color=black] (2,-1.5) circle (2.0pt);
+\fill [color=black] (-2,1.5) circle (2.0pt);
+%\fill [color=black] (1.3,-0.17) circle (2.0pt);
+\draw (1.2,-0.07)--(1.3,-0.17)--(1.4,-0.07);
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+\caption{La esfera como cociente del disco $\overline{\mathbb{B}}^2$.\label{fig:esfera_cociente_circunferencia}}
+\end{figure}
+
+\begin{figure}%%%%FIGURA: ESFERA CUADRADO
+\centering
+
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.7]
+\draw[-<-={at=0.125},->-={at=0.375}, -<<-={at=0.625}, ->>-={at=0.875} ](0,0) circle (2cm);
+\draw [-<-={at=0.5}] (-8,0)-- (-6,2);
+\draw [-<-={at=0.5}](-4,0)-- (-6,2);
+\draw [-<<-={at=0.5}](-8,0)-- (-6,-2);
+\draw [->>-={at=0.5}](-6,-2)-- (-4,0);
+\draw(6,0) circle (2cm);
+\draw (8,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=-180];
+\draw [dashed] (8,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=180];
+\draw [->] (-8.5,0) -- (-3.5,0);
+\draw [->] (-6,-2.5) -- (-6,2.5);
+\draw [->] (-2.5,0) -- (2.5,0);
+\draw [->] (0,-2.5) -- (0,2.5);
+\draw [->] (3.5,0) -- (8.5,0);
+\draw [->] (6,0) -- (6,2.5);
+\draw [->] (6,0) -- (4.51,-2.5);
+\draw [<-][shift={(-3,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
+\draw [<-] [shift={(3,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
+\draw (-3.1,3.21) node[anchor=north west] {$ \alpha $};
+\draw (2.89,3.23) node[anchor=north west] {$ \pi $};
+\draw [->-={at=0.45}, -<<-={at=0.82}](6,2) arc[x radius=0.7, y radius=2, start angle=90, end angle=270];
+\begin{scriptsize}
+\fill [color=black] (0,2) circle (1.5pt);
+\fill [color=black] (-8,0) circle (1.5pt);
+\fill [color=black] (-4,0) circle (1.5pt);
+\fill [color=black] (-6,-2) circle (1.5pt);
+\fill [color=black] (-6,2) circle (1.5pt);
+\fill [color=black] (-2,0) circle (1.5pt);
+\fill [color=black] (2,0) circle (1.5pt);
+\fill [color=black] (0,-2) circle (1.5pt);
+\fill [color=black] (0,2) circle (1.5pt);
+\fill [color=black] (5.34,-0.66) circle (1.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+
+\caption{La esfera como cociente de un cuadrado.\label{fig:esfera_cuadrado}}
+
+
+\end{figure}
+
+\begin{prop}%%%%PROP: TORO COMO CUADRADO
+\label{prop:toro_cuadrado}
+El toro $\Toro$ es homeomorfo al espacio cociente resultante de la relación de equivalencia en el cuadrado $I\times I$ que identifica $(x,0)\sim (x,1)$ para todo $x\in I$, y $(0,y)\sim(1,y)$ para todo $y\in I$ (\autoref{fig:toro_cuadrado}). 
+\end{prop}
+\begin{proof}
+Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},e^{2\pi iv})$. Por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}), es una aplicación cociente. Al hacer las mismas identificaciones que la relación de equivalencia, por la unicidad del espacio cociente (\autoref{teo:unicidad_espacio_cociente}) se obtiene el resultado.
+\end{proof}
+
+
+
+\begin{figure}%%%%FIGURA: TORO COMO CUADRADO
+\begin{center}
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm, y=1cm, scale=0.7]
+
+\draw [->-={at=0.5}](-8,-2)-- (-8,2);
+\draw [->>-={at=0.5}](-8,2)-- (-4,2);
+\draw [-<-={at=0.5}](-4,2)-- (-4,-2);
+\draw [->>-={at=0.5}](-8,-2)-- (-4,-2);
+\draw (-2,1)-- (2,1);
+%\draw (-2,1)-- (-2,-1);
+%\draw (2,1)-- (2,-1);
+\draw (2,-1)-- (-2,-1);
+%\draw [-<-={at=0.6]}](2,1) arc[x radius=0.5, y radius=1, start angle=90, end angle=270];
+%\draw (2,1) arc[x radius=0.5, y radius=1, start angle=90, end angle=-90];
+\draw [-<-={at=0.6]}](-2,1) arc[x radius=0.5, y radius=1, start angle=90, end angle=270];
+\draw [dashed] (-2,1) arc[x radius=0.5, y radius=1, start angle=90, end angle=-90];
+\filldraw [-<-={at=0.55]}][color=black, fill=black!0] [rotate around={0:(2,0)}] (2,0) ellipse (0.5cm and 1cm);
+\draw [->>-={at=0.5}](-2.5,0)-- (1.5,0);
+\draw [rotate around={0:(6,0)}] (6,0) ellipse (3cm and 1.5cm);
+\draw (7.4,0.1) arc[x radius=1.5, y radius=0.4, start angle=0, end angle=-180];
+\draw (7.2,-0.1) arc[x radius=1.3, y radius=0.3, start angle=0, end angle=180]; 
+\draw [dashed](6,-1.5) arc[x radius=0.2, y radius=0.6, start angle=-90, end angle=90];
+\draw [-<-={at=0.63}] (6,-0.3) arc[x radius=0.2, y radius=0.6, start angle=90, end angle=270];
+\begin{scriptsize}
+\fill [color=black] (-8,-2) circle (1.5pt);
+\fill [color=black] (-8,2) circle (1.5pt);
+\fill [color=black] (-4,2) circle (1.5pt);
+\fill [color=black] (-4,-2) circle (1.5pt);
+\fill [color=black] (-2.5,0) circle (1.5pt);
+\fill [color=black] (1.5,0) circle (1.5pt);
+\fill [color=black] (5.8,-0.9) circle (1.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\caption{El toro como cociente de un cuadrado.\label{fig:toro_cuadrado}}
+\end{figure}
+
+
+\begin{prop}%%%%PROP: PLANO PROYECTIVO COMO CUADRADO
+\label{prop:proyectivo_cociente_cuadrado}
+El plano proyectivo $\mathbb{P}^2$ es homeomorfo a los siguientes espacios cociente:
+\begin{itemize}
+\item[(a)] El disco cerrado $\overline{\mathbb{B}}^2$ módulo la relación de equivalencia generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \partial \overline{\mathbb{B}}^2$.
+\item[(b)] La región cuadrada $S=\{(x,y):|x|+|y|\leq 1\} $ módulo la relación de equivalencia generada por $(x,y)\sim (-x,-y) $ para todo $(x,y)\in \partial S$.
+\end{itemize}
+\end{prop}
+\begin{proof}
+Sea $p:\mathbb{S}^2 \to \mathbb{P}^2$ la aplicación cociente dada por la relación de equivalencia $\sim$ generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \mathbb{S}^2$, que representa $\mathbb{P}^2$ como el cociente de una esfera. %AQUI FALTA UN POCO DE EXPLICACION, EJEMPLO 4.54 DEL LEE
+Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el disco al emisferio superior de la esfera por $F(x,y)=(x,y,\sqrt{1-x^2-y^2})$, entonces $p\circ F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2/\sim$ es sobreyectiva (---lo demuestro?) y es así una aplicación cociente por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}). La aplicación identifica únicamente $(x,y)\in \partial \overline{\mathbb{B}}^2$ con $(-x,-y)\in \partial \overline{\mathbb{B}}^2$, por lo que $\mathbb{P}^2$ es homeomorfo al espacio cociente resultante.
+Para la parte (b) hacemos como en la demostración de la \autoref{prop:Esfera como cociente de disco y cuadrado} (b). 
+\end{proof}
+
+
+\begin{figure}[h]%%%%FIGURA: PLANO PROYECTIVO COMO CUADRADO
+\begin{center}
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.6]
+\draw[-<-={at=0.5}, -<-={at=1}](-3,0) circle (2cm);
+\draw [-<-={at=0.5}] (4,2)-- (6,0);
+\draw [-<<-={at=0.5}](6,0)-- (4,-2);
+\draw [-<-={at=0.5}](4,-2)-- (2,0);
+\draw [-<<-={at=0.5}](2,0)-- (4,2);
+\begin{scriptsize}
+\fill [color=black] (6,0) circle (1.5pt);
+\fill [color=black] (4,2) circle (1.5pt);
+\fill [color=black] (2,0) circle (1.5pt);
+\fill [color=black] (4,-2) circle (1.5pt);
+\fill [color=black] (-3,-2) circle (1.5pt);
+\fill [color=black] (-3,2) circle (1.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+\caption{Representación de $\mathbb{P}^2$ como un espacio cociente.\label{fig:plano_proyectivo_cuadrado}}
+\end{center}
+\end{figure}
+
+
+En las anteriores proposiciones hemos visto una o varias formas de representar superficies dadas ciertas construcciones geométricas. En estos casos hemos dado aplicaciones y demostraciones concretas para validar nuestros argumentos, pero a medida que aumenta la sofisticación es más útil guiarse visualmente por las figuras construidas. Por ello debemos formalizar un método para construir superficies identificando lados de figuras geométricas.
+Daremos por sabidas las definiciones básicas de símplices y CW-complejos que dejaremos en el apéndice \autoref{apendice simplices}.
+
+\begin{defin}%%%DEF:Polígono
+Un \enfatiza{polígono} es un subconjunto de $\R^2$ que es homeomorfo a $\mathbb{S}^1$ y está formado por un número finito de segmentos, que llamaremos \enfatiza{bordes} y que se intersecan sólo en sus extremos, que llamaremos \enfatiza{vértices}. %Los $0$-símplices y $1$-símplices del poígono son respectivamente sus \enfatiza{vértices} y sus \enfatiza{bordes}. Del lema \autoref{lemma:cw} se sigue que un borde yace exactamente en dos vértices.
+\end{defin}
+
+\begin{defin}%%%DEF:Región poligonal
+
+Una \enfatiza{región poligonal} es un subconjunto compacto de $\R^2$ cuyo interior es homeomorfo al disco $\mathbb{B}^2$ y cuya frontera es un polígono.
+%Una \enfatiza{región poligonal} es un subconjunto compacto de $\R^2$ cuyo interior es una bola coordenada y cuya frontera es un polígono.
+A los vértices y lados del polígono de la frontera también los llamamos vértices y lados de la región poligonal.
+\end{defin} 
+
+Veamos pues que identificando bordes de regiones poligonales de par en par obtenemos un espacio cociente que es siempre una superficie:
+
+\begin{prop}%%%PROP: Teorema poligonos
+\label{prop:poligonos}
+Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1\amalg \dots \amalg P_k$, y supongamos dada una relación de equivalencia en $P$ que identifica algunos bordes de los polígonos con otros por homeomorfismos afines. Entonces se tiene:
+\begin{itemize}
+\item[(a)] El espacio cociente resultante es un CW-complejo $2$-dimensional cuyo $0$-esqueleto es la imagen del conjunto de vértices de $P$ por la aplicación cociente, y cuyo $1$-esqueleto es la imagen de la unión de los bordes de las regiones poligonales.
+\item[(b)] Si la relación de equivalencia identifica cada borde de cada $P_i$ con exactamente otro borde de un $P_j$ (no necesariamente $i\neq j$), entonces el espacio cociente resultante es una superficie compacta.
+\end{itemize}
+\end{prop}
+
+\begin{proof}
+%...6.4 del Lee.
+\end{proof}
+
+\begin{eje}%%%%EJE: Botella Klein
+La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando los lados del cuadrado $I\times I$ de acuerdo a $(0,t)\sim (1,t)$ y $(t,0)\sim (1-t,1)$ para $0\leq t\leq 1$.  Para visualizar $K$, podemos pensar en pegar los lados izquierdo y derecho creando un cilindro, y luego hacer pasar el extremo superior por la parte inferior del cilindro, para finalmente pegar los dos extremos (ver \autoref{fig:klein}).
+\end{eje}
+
+\begin{figure}[b]%%%%FIG: Klein
+\centering
+\begin{tikzpicture} [use optics]
+%\draw [help lines] (-6,-2) grid (6,2);
+%1
+\draw[-<<-={at=0.125}, -<-={at=0.375}, ->>-={at=0.625}, -<-={at=0.875}] (-5,-1) -- (-5,1) -- (-3,1) -- (-3, -1) -- (-5,-1);
+%2
+\draw[-<<-] (-1.7, -1.085)--+(0,2);
+\draw [-<-={at=0.43}, -<-={at=0.897}] (-2,-1) -- +(0,2) arc[x radius=0.5, y radius=0.1, start angle=180, end angle=360] -- +(0,-2) arc[x radius=0.5, y radius=0.1, start angle=0, end angle=-180];
+\draw [dashed] (-2,-1) arc[x radius=0.5, y radius=0.1, start angle=180, end angle=0];
+\draw (-2,1) arc[x radius=0.5, y radius=0.1, start angle=180, end angle=0];
+%3
+\draw [->-={at=0.535}, ->-={at=0.974}](0.2,-0.5) [out=80, in=180] to (1.64,1.5) [out=0, in=100] to (3,-1) arc [x radius=0.35, y radius=0.1, start angle=0, end angle=-180] [out=85, in=0] to (1.64,1) [out=180, in=95] to (0.75, -0.5) arc[x radius=0.275, y radius=0.1, start angle=0, end angle=-180];
+\draw [dashed] (0.2,-0.5) arc[x radius=0.275, y radius=0.1, start angle=180, end angle=0] (3,-1) arc[x radius=0.35, y radius=0.1, start angle=0, end angle=180];
+
+%4
+\draw [->-={at=0.07}][dash pattern= on 52.5pt off 2pt on 2pt off 2pt on 2pt off 2pt on 79.5pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2.2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 200pt]
+	(5,-1) arc[x radius=0.4, y radius=0.1, start angle=0, end angle=-180] [out=135, in= 270] to +(-0.2,0.6) [out=90, in=270] to +(0.5,1) [out=90, in=0] to (4.3,1) [out=180, in=90] to +(-0.2,-0.3) [out=270, in=135] to +(0.5, -0.8) [out=-65, in=-65] to +(-0.3,-0.2) [out=-80, in=80] to (4.2,-1) arc [x radius=0.4, y radius=0.1, start angle=180, end angle=0] ;
+
+\draw [dash pattern= on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 180pt ](5,-1)[out=100, in=-45] to (4.6,-0.1) [out=115, in=115] to +(-0.3,-0.2) [out=135, in=270] to +(-0.5,1) [out=90, in=180] to (4.4,1.3) [out=0, in=90] to +(0.4, -0.7) [out=-90, in=90] to +(0.4,-1) [out=-90, in=45] to (5,-1);
+
+
+\draw [-Stealth](-.4,1.5) arc[x radius=0.4, y radius=0.2, start angle=150, end angle=30];
+\draw [-Stealth](-2.8,1.5) arc[x radius=0.4, y radius=0.2, start angle=150, end angle=30];
+\draw [-Stealth](3,1.5) arc[x radius=0.4, y radius=0.2, start angle=150, end angle=30];
+\end{tikzpicture}
+\caption{Construcción de la botella de Klein.\label{fig:klein}}
+\end{figure}
 
 Como adelantamos en \autoref{sec:variedades}, para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Representaremos todas las superficies como cocientes de regiones poligonales con $2n$ lados. 
 
