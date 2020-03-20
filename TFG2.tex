@@ -193,7 +193,7 @@ Una \textbf{\emph{superficie}} es una $2$-variedad.
 \end{figure}
 
 \section{Variedades con borde}
-Hay una serie de espacios topológicos que no son variedades pero que tienen interés desde el punto de vista geométrico y son útiles a la hora de estudiarlas. Por ejemplo, la bola cerrada $\overline{\mathbb{B}}^n$ no es una variedad, puesto que para los puntos de su frontera no hay entornos homeomorfos a abiertos de $\R^n$. Vamos a definir por tanto una clase de espacios que extienda a las variedades pero que admita la existencia de algún tipo de ``\textit{bordes}'':
+Hay una serie de espacios topológicos que no son variedades pero que tienen interés desde el punto de vista geométrico y son útiles a la hora de estudiarlas. Por ejemplo, la bola cerrada $\overline{\mathbb{B}}^n$ no es una variedad, puesto que para los puntos de su frontera no hay entornos homeomorfos a abiertos de $\R^n$. Vamos a definir por tanto una clase de espacios que extienda a las variedades pero que admita la existencia de algún tipo de \textit{bordes}:
 \begin{defin}
 Una \enfatiza{variedad con borde $n$-dimensional} $M$ (o $n$-variedad con borde) es un espacio topológico  Hausdorff y II AN tal que todo punto $p\in M$ tiene un entorno $U$ homeomorfo a un abierto $U'\subset \mathbb{H}^n=
 \left\{(x_1,\dots ,x_n)\in \R^n\mid x_n\geq 0\right\}$.
@@ -206,7 +206,7 @@ Si denotamos $\varphi (p)=a=(a_1,\dots ,a_n)$, podemos distinguir entre dos tipo
 \item[2.] \textit{Puntos borde:} Si $a_n=0$ para todo $n$, entonces podemos tomar una semibola $V'=B_{\varepsilon}^{+}=B_{\varepsilon}(a)\cap \mathbb{H}^n$, y $V=\varphi^{-1}(V')$. Decimos que $p$ es un \enfatiza{punto borde de $M$}. Al conjunto de todos los puntos borde de $M$ lo denotamos por $\partial M$.
 \end{itemize}
 \begin{prop}%%%%PROP: interior y borde de una variedad con borde
-Sea $M$ una variedad con borde, entonces $\interior{M}$ es un abierto de M, y es en si mismo una $n$-variedad.
+Sea $M$ una variedad con borde, entonces $\interior{M}$ es un abierto de M, y es en sí mismo una $n$-variedad.
 \end{prop}
 \begin{proof}
 
@@ -228,16 +228,40 @@ Hacemos incapié en que los conceptos de \textit{variedad} y \textit{variedad co
 Veamos algunos ejemplos no triviales de variedades con borde:
 \begin{eje}
 \begin{itemize}
-\item[(1)] El cilindro $Cil=\left\{(x,y,z)\in \R^3 \mid x^2+y^2=1,\, z\in \left[ 0,1\right] \right\}$.
-\item[(2)] La banda de Möbius\\
-
+\item[(1)] El cilindro  (\autoref{fig:cilindro}): $$Cil=\left\{(x,y,z)\in \R^3 \mid x^2+y^2=1,\, z\in \left[ 0,1\right] \right\} \,.$$
+\item[(2)] La banda de Möbius (\autoref{fig:mobius}):
 \begin{align*}
 Mob=
 & \left\{ \left(\left(1+\left(y-\frac{1}{2}\right)\cos \left(\pi x\right)\right), \, \left(1+\left(y-\frac{1}{2}\right)\cos \left(\pi x\right)\right)\sin \left( 2 \pi x\right), \right. \right.\\
 & \left. \left. \left( y-\frac{1}{2} \right)\sin \left( \pi x\right)\right) \mid x\in \left[0,1\right], \, y\in \left[0,1\right] \right\} \, .
-\end{align*}
+\end{align*}.
 \end{itemize}
 \end{eje}
+
+\begin{figure}[b]%%%%FIG: Cilindro y Möbius
+\begin{subfigure}{.5\textwidth}
+\centering
+\begin{tikzpicture}[scale=1.5]
+\draw (-.5,0) arc [x radius=1, y radius=.3, start angle=180, end angle=360] -- +(0,1) arc[x radius=1, y radius=.3, start angle=0, end angle=180] -- +(0,-1);
+\draw [dashed] (-.5,0) arc[x radius=1, y radius=.3, start angle=180, end angle=0];
+\draw (1.5,1) arc[x radius=1, y radius=.3, start angle=0, end angle=-180];
+\end{tikzpicture}
+\caption{Cilindro.\label{fig:cilindro}}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+\centering
+\begin{tikzpicture}[scale=1.7]
+%\draw [help lines, step=1mm] (-2,-2) grid (2,2);
+%\draw [gray](-2,0) -- (2,0);
+%\draw [gray](0,-2) -- (0,2);
+%\draw[looseness=1] (.65,-.05) [out=135, in=0] to (-.2, .175) [out=180, in=90] to(-.5,-.0) [out=-90, in=180] to (0,-.2) [out=0, in=-90] to (.7,.1) [out=90, in=0] to (-.,.45) [out=180, in=90] to (-.8,0) [out=-90, in=180] to (.2,-.5) [out=0, in=-100] to (.75,-.25) [out=95, in=-80] to (.7,.15) ;
+\draw (1,.7)[out=-90, in=45] to (.95,.6) [out=-135,in=0] to (-.5, -.0) [out=180, in=-20] to (-1,.1) -- (-1,.7) arc [x radius=1, y radius=0.2, start angle=180, end angle=0] -- (1,.1) [out=-160, in=-10] to (-.3,0.006);
+\draw (-.0,.05) [out=160, in=-45] to (-.95,.6) [out=135, in=-90] to (-1,.7);
+\draw (-.7,.39) arc [x radius=.7, y radius=.1, start angle=180, end angle=-4];
+\end{tikzpicture}
+\caption{Banda de Möbius.\label{fig:mobius}}
+\end{subfigure}
+\end{figure}
 \section{Suma conexa de variedades}
 
 OJO:TAMBIEN SE PUEDE DAR EN FUNCION DE ESPACIOS ADJUNCION
@@ -251,7 +275,7 @@ A $M$ así definida se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, 
 \end{defin}
 
 
-\begin{figure}[h]%%%%FIG: 2-toro
+\begin{figure}[t]%%%%FIG: 2-toro
 \centering
 \begin{tikzpicture}
 \draw (0.23,1.85) arc[x radius=2, y radius=1.4, start angle=150, end angle=-150];
