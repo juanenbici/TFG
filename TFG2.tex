@@ -132,7 +132,8 @@ Manuel Alonso Morón\\[.1in]
 \listoffigures
 
 
-
+\section*{Notación}
+$I$ representará el intervalo $\left[ 0,1\right]$.
 \chapter{Definiciones preeliminares}
 \pagenumbering{arabic} 
 \setcounter{page}{1}
@@ -223,9 +224,8 @@ Si $M$ es una $n$-variedad con borde, entonces $\partial M$ es un cerrado en $M$
 \begin{proof}
 
 \end{proof}
-
 Hacemos incapié en que los conceptos de \textit{variedad} y \textit{variedad con borde} son distintos. Una variedad con borde puede ser o no una variedad, pues puede tener el borde vacío. En cambio, una variedad es siempre una variedad con borde en la que todo punto es un punto interior. Para evitar confusiones, si el contexto lo pide, utilizaremos \enfatiza{variedad sin borde} para referirnos a una variedad en el sentido de la \autoref{def:variedad}.\\
-Veamos algunos ejemplos no triviales de variedades con borde:
+Veamos algunos ejemplos no triviales de superficies con borde:
 \begin{eje}
 \begin{itemize}
 \item[(1)] El cilindro  (\autoref{fig:cilindro}): $$Cil=\left\{(x,y,z)\in \R^3 \mid x^2+y^2=1,\, z\in \left[ 0,1\right] \right\} \,.$$
@@ -578,10 +578,10 @@ Toda superficie es triangulable por un poliedro de un complejo simplicial 2-dime
 
 
 \chapter{Teorema de Clasificación}
-En esta sección daremos una demostración clásica del teorema de clasificación de superficies compactas, que fue probado por primera vez en 1907 por Max Dehn y Poul Heegaard \cite{dehn}. Me baso en la demostración de Lee \cite{lee1}, que a su vez se basa en la de Seifert y Threlfall \cite{seifert}.
+En esta sección daremos una demostración clásica del teorema de clasificación de superficies compactas, que fue probado por primera vez en 1907 por Max Dehn y Poul Heegaard \cite{dehn}. Me baso en la demostración de Lee \cite{lee1}, que a su vez se basa en la de Seifert y Threlfall \cite{seifert}, la cual adapto también a las superficies con borde.
 
 
-\section{Representación de superficies}
+\section{Superficies como cocientes}
 
 Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Trataremos de dar una forma de representarlas como polígonos, y veremos que toda superficie compacta se puede representar en el plano como el cociente de un polígono por una relación de equivalencia que identifica sus lados dos a dos. Empecemos viendo tres ejemplos elementales: la esfera $\Esfera$, el plano proyectivo $\Proyectivo$ y el toro $\Toro$. Como veremos, estas superficies son fundamentales pues toda superficie compacta se puede construir a partir de ellas. 
 
@@ -797,10 +797,11 @@ Veamos pues que identificando bordes de regiones poligonales de par en par obten
 
 \begin{prop}%%%PROP: Teorema poligonos
 \label{prop:poligonos}
-Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1\amalg \dots \amalg P_k$, y supongamos dada una relación de equivalencia en $P$ que identifica algunos bordes de los polígonos con otros por homeomorfismos afines. Entonces se tiene:
+Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1,\dots ,P_k$, y supongamos dada una relación de equivalencia en $P$ que identifica algunos bordes de los polígonos con otros por homeomorfismos afines. Entonces se tiene:
 \begin{itemize}
 \item[(a)] El espacio cociente resultante es un CW-complejo $2$-dimensional cuyo $0$-esqueleto es la imagen del conjunto de vértices de $P$ por la aplicación cociente, y cuyo $1$-esqueleto es la imagen de la unión de los bordes de las regiones poligonales.
 \item[(b)] Si la relación de equivalencia identifica cada borde de cada $P_i$ con exactamente otro borde de un $P_j$ (no necesariamente $i\neq j$), entonces el espacio cociente resultante es una superficie compacta.
+\item[(c)] Si para algunos $P_i$ la relación de equivalencia identifica algún borde suyo con exáctamente otro borde de un $P_j$ (no necesariamente $i\neq j$), y para los bordes restantes no hay ninguna identificación, entonces el espacio cociente resultante es una superficie con borde.
 \end{itemize}
 \end{prop}
 
@@ -840,7 +841,11 @@ La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando los l
 \end{tikzpicture}
 \caption{Construcción de la botella de Klein.\label{fig:klein}}
 \end{figure}
+\begin{eje}
+El cilindro $Cil$ es la superficie con borde que se obtiene al identificar los lados de un cuadrado $I\times I$ dada la relación de equivalencia $(0,y)\sim (1,y),$ con $y\in I$ (\autoref{fig:ident_cil}). La banda de Möbius $Mob$ es la superficie con borde que se obtiene identificando los lados del cuadrado $I\times I$ de acuerdo a la relación $(0,y)\sim (1,1-y)$, $y\in I$ (\autoref{fig:ident_mob}).
+\end{eje}
 
+\section{Representación de superficies}
 Vamos ahora a dar un método uniforme para representar todas las superficies y las superficies con borde como regiones poligonales del plano. A su vez asociaremos a cada región poligonal una secuencia de símbolos llamada palabra.
 
 
@@ -850,7 +855,7 @@ Sea $S$ un conjunto. Una \textbf{\textit{palabra en $S$}} es una $k$-tupla orden
 
 \begin{defin}%%%%DEF: Representación poligonal
 \label{def:rep_pol}
-Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,...,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b\mid  aba^{-1}b^{-1}\rangle$. 
+Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,\dots ,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b\mid  aba^{-1}b^{-1}\rangle$. 
 
 Permitimos el caso especial de que $S=\{a\}$ (u otro símbolo cualquiera) y que $\mathcal{P}$ tenga una sola palabra de longitud $2$, es decir, $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
 \begin{comment} o $1$ \end{comment} 
@@ -1600,7 +1605,7 @@ Sea $S$ una superficie compacta. Sabemos, por el \nameref{teo:rado}, que $S$ est
 
 
 \appendix
-\chapter{Teoremas Usados}
+\chapter{Algunos teoremas de topología importantes}
 
 \begin{tma}[Lema de la aplicación cerrada]
 \label{teo:aplicac_cerrada}
