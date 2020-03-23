@@ -192,7 +192,7 @@ Una \textbf{\emph{superficie}} es una $2$-variedad.
 \caption{Ejemplos de superficies.}
 \end{figure}
 
-\section{Variedades con borde}
+\section{Variedades con borde}\label{sec:borde}
 Hay una serie de espacios topológicos que no son variedades pero que tienen interés desde el punto de vista geométrico y son útiles a la hora de estudiarlas. Por ejemplo, la bola cerrada $\overline{\mathbb{B}}^n$ no es una variedad, puesto que para los puntos de su frontera no hay entornos homeomorfos a abiertos de $\R^n$. Vamos a definir por tanto una clase de espacios que extienda a las variedades pero que admita la existencia de algún tipo de \textit{bordes}:
 \begin{defin}
 Una \enfatiza{variedad con borde $n$-dimensional} $M$ (o $n$-variedad con borde) es un espacio topológico  Hausdorff y II AN tal que todo punto $p\in M$ tiene un entorno $U$ homeomorfo a un abierto $U'\subset \mathbb{H}^n=
@@ -432,7 +432,7 @@ Un hecho fundamental para la prueba del teorema de clasificación es que toda su
 
 \
 
-\section{Complejos simpliciales y triangulación}
+\section{Complejos simpliciales y triangulación}\label{sec:simplices}
 
 Para poder dar una definición rigurosa de triangulación de variedades necesitamos la noción de \textit{complejos simpliciales}. Estos son construcciones formadas por \textit{símplices}, que son una generalización de los triángulos. En esta primera parte me baso en las definiciones de Munkres \cite{munkres}.
 
@@ -780,7 +780,7 @@ Para la parte (b) hacemos como en la demostración de la \autoref{prop:Esfera co
 
 
 En las anteriores proposiciones hemos visto una o varias formas de representar superficies dadas ciertas construcciones geométricas. En estos casos hemos dado aplicaciones y demostraciones concretas para validar nuestros argumentos, pero a medida que aumenta la sofisticación es más útil guiarse visualmente por las figuras construidas. Por ello debemos formalizar un método para construir superficies identificando lados de figuras geométricas.
-Daremos por sabidas las definiciones básicas de símplices y CW-complejos que dejaremos en el apéndice \autoref{apendice simplices}.
+Daremos por sabidas las definiciones básicas de símplices (\autoref{sec:simplices}) y CW-complejos (\autoref{sec:CW}).
 
 \begin{defin}%%%DEF:Polígono
 Un \enfatiza{polígono} es un subconjunto de $\R^2$ que es homeomorfo a $\mathbb{S}^1$ y está formado por un número finito de segmentos, que llamaremos \enfatiza{bordes} y que se intersecan sólo en sus extremos, que llamaremos \enfatiza{vértices}. %Los $0$-símplices y $1$-símplices del poígono son respectivamente sus \enfatiza{vértices} y sus \enfatiza{bordes}. Del lema \autoref{lemma:cw} se sigue que un borde yace exactamente en dos vértices.
@@ -841,7 +841,7 @@ La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando los l
 \caption{Construcción de la botella de Klein.\label{fig:klein}}
 \end{figure}
 
-Como adelantamos en \autoref{sec:variedades}, para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Representaremos todas las superficies como cocientes de regiones poligonales con $2n$ lados. 
+Vamos ahora a dar un método uniforme para representar todas las superficies y las superficies con borde como regiones poligonales del plano. A su vez asociaremos a cada región poligonal una secuencia de símbolos llamada palabra.
 
 
 \begin{defin}%%%%DEF: palabra
@@ -880,23 +880,24 @@ Para un lado etiquetado $a$, el \textbf{\emph{vértice inicial}} es el primero e
 \end{defin}
 
 \begin{defin}%%%%DEF: representación de una superficie
-Una representación poligonal es una \textbf{\emph{representación de una superficie}} si para todo $a\in S$, $a$ ocurre exáctamente dos veces en $W_1,...,W_k$ como $a$ o como $a^{-1}$.
-Por la \autoref{prop:poligonos}, la realización geométrica de una representación de una superficie es una superficie compacta.
+Sea $\mathcal{P} =\langle S\mid W_1,\dots ,W_k\rangle$ una representación poligonal. 
+\begin{itemize}
+\item[(i)] Decimos que $\mathcal{P}$ es una \enfatiza{representación de una superficie} si para todo $a\in S$, $a$ ocurre exáctamente dos veces en $W_1,...,W_k$ como $a$ o como $a^{-1}$.
+\item[(ii)] Si en cambio en la representación poligonal cada símbolo $a\in S$ ocurre una o dos veces en $W_1,\dots ,W_k$ como $a$ o $a^{-1}$, diremos que $\mathcal{P}$ es una \enfatiza{representación de una superficie con borde}. 
+\end{itemize}
 \end{defin}
-
+\begin{obs}%M%%%:OBS: Representación superficie con/sin borde
+Por la \autoref{prop:poligonos}, la realización geométrica de una representación de una superficie es una superficie compacta, y la realización geométrica de una representación de una superficie con borde es una superficie con borde.\\
+En el apartado (ii) de la definición anterior dejamos la posibilidad de que cada símbolo aparezca exáctamente dos veces, como en (i). Esto no es ninguna ambigüedad pues como se expuso en la \autoref{sec:borde} una superficie sin borde es siempre una superficie con borde, y una superficie con borde tal que tiene borde vacío es una superficie sin borde.
+\end{obs}
 \begin{defin}%%%%DEF: representación de un espacio topológico
 Si $X$ es un espacio topológico y $\mathcal{P}$ una representación poligonal cuya realización geométrica es homeomorfa a $\mathcal{P}$, decimos que $\mathcal{P}$ es una \textbf{\emph{representación de $X$}}.
 \end{defin}
-
 \begin{obs}%%%%OBS: representación de una sola cara implica conexo
 Un espacion topológico que admite una representación con una sola cara es conexo, pues es homeomorfo al cociente de una región poligonal conexa. Con más de una cara, puede ser o no conexo.
 \end{obs}
-
-
-
-
 \begin{eje}%%%%PROP: representación de superficies importantes
-Veamos la representación de algunas superficies importantes (ver \autoref{fig:Representacion_superficies_importantes} y \autoref{fig:representacion_esfera_proyectivo}).
+Veamos las representaciones de algunas superficies importantes (ver \autoref{fig:Representacion_superficies_importantes} y \autoref{fig:representacion_esfera_proyectivo}).
 \begin{itemize}
 \item[(a)] $\mathbb{S}^2=\langle a\mid aa^{-1}\rangle=\langle a,b\mid  abb^{-1}a^{-1}\rangle$ (\autoref{prop:Esfera como cociente de disco y cuadrado})
 \item[(b)] $\mathbb{P}^2= \langle a\mid aa \rangle = \langle a,b\mid abab \rangle$ (\autoref{prop:proyectivo_cociente_cuadrado})
@@ -904,7 +905,14 @@ Veamos la representación de algunas superficies importantes (ver \autoref{fig:R
 \end{itemize}
 \end{eje}
 
-
+\begin{eje}%M%%%:PROP: representación de superficies con borde
+Veamos las representaciones de algunas superficies con borde (\autoref{fig:representacion_borde}):
+\begin{itemize}
+\item[(a)] $\overline{\mathbb{B}}^2=\langle a,b,c\mid abc\rangle$ (\autoref{prop:rep_disco}).
+\item[(b)] $Mob=\langle a,b,c\mid abac\rangle$ (\autoref{prop:rep_moebius}).
+\item[(c)] $Cil=\langle a,b,c\mid aba^{-1}c\rangle$ (\autoref{prop:rep_mobius}).
+\end{itemize}
+\end{eje}
 \begin{figure}[h]%%%%FIG: Representación de superficies impoirtantes
 \centering
 \begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
@@ -1244,11 +1252,11 @@ Si $W_1$ tiene longitud 2 o 3, podemos subdividir para alargar la longitud de la
 
 
 \begin{prop}
-Sean $M_1$ y $M_2$ superficies que tienen (---admiten mejor?---) respectivamente representaciones $\langle S_1\mid W_1\rangle $ y $\langle S_2\mid W_2\rangle $, donde $S_1$ y $S_2$ son conjuntos disjuntos y tal que cada presentación tiene una sola cara. Entonces $\langle S_1,S_2\mid W_1W_2\rangle$ es una presentación de la suma conexa $M_1 \# M_2$.
+Sean $M_1$ y $M_2$ superficies que admiten respectivamente representaciones $\langle S_1\mid W_1\rangle $ y $\langle S_2\mid W_2\rangle $, donde $S_1$ y $S_2$ son conjuntos disjuntos y tal que cada presentación tiene una sola cara. Entonces $\langle S_1,S_2\mid W_1W_2\rangle$ es una presentación de la suma conexa $M_1 \# M_2$.
 \end{prop}
 
 \begin{proof}
-
+Consideramos la presentación
 \end{proof}
 
 
@@ -1615,7 +1623,7 @@ Sean $U\subset \R^n$ y $V\subset \R^m$ abiertos homeomorfos. Entonces $n=m$.
 \end{tma}
 
 
-\chapter{CW-complejos}
+\chapter{CW-complejos}\label{sec:CW}
 Utilizo la definición inductiva de CW-complejo dada por Hatcher \cite{hatcher} y algunas propiedades expuestas por Lee \cite{lee1}.
 
 
