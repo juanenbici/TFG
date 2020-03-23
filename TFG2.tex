@@ -1,7 +1,7 @@
 \documentclass[10pt]{report}
 \usepackage[utf8]{inputenc}
 
-\usepackage[spanish]{babel} % Idioma
+\usepackage[spanish, es-lcroman]{babel} % Idioma
 \selectlanguage{spanish}
 \usepackage{graphicx} %imagenes
 \usepackage{verbatim} % Para comment
@@ -37,8 +37,11 @@
 \usepackage{pgf,tikz}
 \usetikzlibrary{arrows}
 \usetikzlibrary{babel}
-\usepackage{hyperref}
+
+\usepackage[hidelinks]{hyperref}
 \usepackage[all]{hypcap}
+
+\usepackage{tocbibind}%para poner la bibliografía en el toc, poner entre corchetes nottoc o notlof para quitar toc y lof
 
 
 \usepackage{sectsty} % Personalizar titulos secciones
@@ -88,7 +91,8 @@
 \renewcommand{\maketitle}{{\Large{\textbf{\title}}}\\\\{\Large \subtitle}\\\rule{17cm}{0.4pt}\\}
 
 
-\pagenumbering{roman} 
+\pagenumbering{roman}
+\setcounter{page}{1}
 
 
 \begin{document}
@@ -126,24 +130,35 @@ Manuel Alonso Morón\\[.1in]
 
 %%%%%%%%%%%%%PORTADA%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
+\begin{comment}
+\section*{Resumen}\addcontentsline{toc}{chapter}{\numberline{}Resumen}
+\clearpage
+\section*{Abstract}\addcontentsline{toc}{chapter}{\numberline{}Abstract}
+\clearpage
+\section*{Introducción}\addcontentsline{toc}{chapter}{\numberline{}Introducción}
+\clearpage
+\section*{Notación}\addcontentsline{toc}{chapter}{\numberline{}Notación}
+$I$ representará el intervalo $\left[ 0,1\right]$.
+\clearpage
+\end{comment}
 \tableofcontents
+\clearpage
 \listoffigures
 
 
-\section*{Notación}
-$I$ representará el intervalo $\left[ 0,1\right]$.
-\chapter{Definiciones preeliminares}
+
+
+
+\chapter{Variedades y superficies}
 \pagenumbering{arabic} 
 \setcounter{page}{1}
-En este capítulo doy las definiciones y resultados preeliminares para la representación y clasificación de superficies. Me basaré principalmente en los libros de J. M. Lee \cite{lee1} y V. Muñoz - J. J. Madrigal \cite{juanjo}.\\
+En este capítulo doy las definiciones y resultados básicos sobre variedades y superficies. Me basaré principalmente en los libros de J. M. Lee \cite{lee1} y V. Muñoz - J. J. Madrigal \cite{juanjo}.\\
 \section{Variedades}\label{sec:variedades}
 Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo son las variedades, y en concreto las superficies. Definámoslas.
 \begin{defin}\label{def:variedad}%%%%DEF: variedad topológica
 Una \textbf{\emph{variedad topológica}} (de ahora en adelante \emph{variedad}) es un espacio topológico Hausdorff, II AN y localmente homeomorfo a $R^n$, para algún $n\geq 0$.
 \end{defin}
-Sea $M$ una variedad, $p\in M$. Si $U\subseteq M$ es un entorno de $p$ que es homeomorfo a un abierto $U'$ de $\R^n$, decimos que $U$ es un \enfatiza{dominio coordenado}, llamamos \enfatiza{aplicación coordenada} a cualquier homeomorfismo $\varphi :U\to U'$ y decimos que el par $(U,\varphi )$ es una \enfatiza{carta para $M$}.
+Sea $M$ una variedad, y sea $p\in M$. Si $U\subseteq M$ es un entorno de $p$ que es homeomorfo a un abierto $U'$ de $\R^n$, decimos que $U$ es un \enfatiza{dominio coordenado}, llamamos \enfatiza{aplicación coordenada} a cualquier homeomorfismo $\varphi :U\to U'$ y decimos que el par $(U,\varphi )$ es una \enfatiza{carta para $M$}.
 \begin{obs}%%%%OBS: toda propiedad local de Rn se pasa a las variedades
 Como la propiedad ``ser localmente homeomorfo a $\R^n$'' es local, toda propiedad local de $\R^n$ se traslada a una variedad. Así, las variedades son localmente compactas, I AN, localmente conexas, localmente conexas por caminos y localmente simplemente conexas.
 \end{obs}%COPIADO lo de abajo, cambiar las palabras!!!!!!!!!!!!
@@ -226,7 +241,7 @@ Si $M$ es una $n$-variedad con borde, entonces $\partial M$ es un cerrado en $M$
 \end{proof}
 Hacemos incapié en que los conceptos de \textit{variedad} y \textit{variedad con borde} son distintos. Una variedad con borde puede ser o no una variedad, pues puede tener el borde vacío. En cambio, una variedad es siempre una variedad con borde en la que todo punto es un punto interior. Para evitar confusiones, si el contexto lo pide, utilizaremos \enfatiza{variedad sin borde} para referirnos a una variedad en el sentido de la \autoref{def:variedad}.\\
 Veamos algunos ejemplos no triviales de superficies con borde:
-\begin{eje}
+\begin{eje}\label{rep:borde}
 \begin{itemize}
 \item[(1)] El cilindro  (\autoref{fig:cilindro}): $$Cil=\left\{(x,y,z)\in \R^3 \mid x^2+y^2=1,\, z\in \left[ 0,1\right] \right\} \,.$$
 \item[(2)] La banda de Möbius (\autoref{fig:mobius}):
@@ -578,7 +593,7 @@ Toda superficie es triangulable por un poliedro de un complejo simplicial 2-dime
 
 
 \chapter{Teorema de Clasificación}
-En esta sección daremos una demostración clásica del teorema de clasificación de superficies compactas, que fue probado por primera vez en 1907 por Max Dehn y Poul Heegaard \cite{dehn}. Me baso en la demostración de Lee \cite{lee1}, que a su vez se basa en la de Seifert y Threlfall \cite{seifert}, la cual adapto también a las superficies con borde.
+En esta sección daremos una demostración clásica del teorema de clasificación de superficies compactas, que fue probado por primera vez en 1907 por Max Dehn y Poul Heegaard \cite{dehn}.  En las primeras dos secciones utilizo las nociones que da Lee \cite{lee1} sobre la representación de superficies, y las amplío a la representación de superficies con borde. En la tercera sección demuestro el teorema basándome en la prueba de Lee \cite{lee1}, que a su vez se basa en la demostración clásica de Seifert y Threlfall \cite{seifert}. Finalmente clasifico las superficies con borde, siguiendo la idea de Massey \cite{massey}.
 
 
 \section{Superficies como cocientes}
@@ -842,7 +857,7 @@ La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando los l
 \caption{Construcción de la botella de Klein.\label{fig:klein}}
 \end{figure}
 \begin{eje}
-El cilindro $Cil$ es la superficie con borde que se obtiene al identificar los lados de un cuadrado $I\times I$ dada la relación de equivalencia $(0,y)\sim (1,y),$ con $y\in I$ (\autoref{fig:ident_cil}). La banda de Möbius $Mob$ es la superficie con borde que se obtiene identificando los lados del cuadrado $I\times I$ de acuerdo a la relación $(0,y)\sim (1,1-y)$, $y\in I$ (\autoref{fig:ident_mob}).
+Veamos ahora como obtener las figuras del \autoref{eje:rep_borde}. El cilindro $Cil$ es la superficie con borde que se obtiene al identificar los lados de un cuadrado $I\times I$ dada la relación de equivalencia $(0,y)\sim (1,y),$ con $y\in I$ (\autoref{fig:ident_cil}). La banda de Möbius $Mob$ es la superficie con borde que se obtiene identificando los lados del cuadrado $I\times I$ de acuerdo a la relación $(0,y)\sim (1,1-y)$, $y\in I$ (\autoref{fig:ident_mob}).
 \end{eje}
 
 \section{Representación de superficies}
@@ -1256,12 +1271,12 @@ Si $W_1$ tiene longitud 2 o 3, podemos subdividir para alargar la longitud de la
 
 
 
-\begin{prop}
+\begin{prop}%%%%PROP: representación suma conexa
 Sean $M_1$ y $M_2$ superficies que admiten respectivamente representaciones $\langle S_1\mid W_1\rangle $ y $\langle S_2\mid W_2\rangle $, donde $S_1$ y $S_2$ son conjuntos disjuntos y tal que cada presentación tiene una sola cara. Entonces $\langle S_1,S_2\mid W_1W_2\rangle$ es una presentación de la suma conexa $M_1 \# M_2$.
 \end{prop}
 
 \begin{proof}
-Consideramos la presentación
+Consideramos la representación $\mathcal{P}_1=\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1},abc\rangle$ (\autoref{fig:suma_conexa_rep_pol_a}). Pegando a lo largo de $a$ y doblando dos veces, tenemos que $\mathcal{P}_1$ es una representación equivalente a $\langle S_1\mid W_1\rangle$ y por tanto es una representación de $M_1$. Llamemos $B_1$ a la imagen en $M_1$ del interior de la región poligonal cuyo borde es $abc$. Veamos que existe un entorno $B'$ de $B_1$ en $M_1$ y un homeomorfismo $\phi :B'\to \R^2$ que manda $B_1$ a $\mathbb{B}^2$ y $\overline{B}$ a $\overline{\mathbb{B}}^2$. Una forma de verlo lo sugiere la \autoref{fig:suma_conexa_rep_pol}): sean 
 \end{proof}
 
 
@@ -1730,6 +1745,7 @@ Si $M$ es una $n$-variedad no vacía y un CW-complejo, entonces $n$ es también 
 \end{prop}
 
 
+\begin{comment}
 \chapter{Espacios adjunción}
 
 \chapter{Homología}
@@ -1743,7 +1759,9 @@ Si $M$ es una $n$-variedad no vacía y un CW-complejo, entonces $n$ es también 
 \begin{defin}%%%%DEF: Finitamente local
 Una colección de subconjuntos de un espacio topológico $X$ se dice \enfatiza{localmente finita} si cada punto del espacio tiene un entorno que interseca sólo un número finito de subconjuntos de la colección.
 \end{defin}
-\begin{thebibliography}{9}
+\end{comment}
+
+\begin{thebibliography}{99}
 
 \bibitem{lee1}
 J. M. Lee.
@@ -1780,7 +1798,10 @@ M. Dehn, P. Heegard.
 
 
 \bibitem{seifert}
-H. Seifert, W. Threlfall. \textit{A Textbook of Topology}, 1era edición. Academic, New York, 1980.
+H. Seifert, W. Threlfall. \textit{A Textbook of Topology}, 1era edición. Academic, New York. 1980.
+
+\bibitem{massey}
+W. S. Massey. \textit{Algebraic Topology, an introduction}, Springer - Verlag. 1970.
 \end{thebibliography}
 
 \end{document}

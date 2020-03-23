@@ -1,32 +1,27 @@
 \babel@toc {spanish}{}
 \babel@toc {spanish}{}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplos de superficies.\relax }}{2}{figure.caption.4}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Suma conexa de toros.\relax }}{4}{figure.caption.6}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Suma conexa de un toro y una esfera.\relax }}{5}{figure.caption.7}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Suma conexa de una superficie y un toro visto como pegar un \textit {asa}. \relax }}{6}{figure.caption.8}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplos de superficies.\relax }}{2}{figure.caption.3}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Suma conexa de toros.\relax }}{4}{figure.caption.5}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Suma conexa de un toro y una esfera.\relax }}{5}{figure.caption.6}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Suma conexa de una superficie y un toro visto como pegar un \textit {asa}. \relax }}{6}{figure.caption.7}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces $k$-s\IeC {\'\i }mplices, $k=0,\dots ,3$.\relax }}{8}{figure.caption.9}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Un complejo simplicial en $\mathbb {R}^2$\relax }}{8}{figure.caption.10}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces S\IeC {\'\i }mplices que no forman un complejo.\relax }}{8}{figure.caption.10}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces $k$-s\IeC {\'\i }mplices, $k=0,\dots ,3$.\relax }}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Un complejo simplicial en $\mathbb {R}^2$\relax }}{8}{figure.caption.9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces S\IeC {\'\i }mplices que no forman un complejo.\relax }}{8}{figure.caption.9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces La esfera como cociente del disco $\overline {\mathbb {B}}^2$.\relax }}{10}{figure.caption.11}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces La esfera como cociente de un cuadrado.\relax }}{10}{figure.caption.12}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces El toro como cociente de un cuadrado.\relax }}{11}{figure.caption.13}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Representaci\IeC {\'o}n de $\mathbb {P}^2$ como un espacio cociente.\relax }}{11}{figure.caption.14}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Construcci\IeC {\'o}n de la botella de Klein.\relax }}{12}{figure.caption.15}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Representaci\IeC {\'o}n de superficies importantes.\relax }}{14}{figure.caption.16}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Representaciones de la esfera y el plano proyectivo. \relax }}{14}{figure.caption.17}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Construcci\IeC {\'o}n del crosscap a partir de la representaci\IeC {\'o}n pologonal del plano proyectivo. \relax }}{15}{figure.caption.18}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Dos representaciones equivalentes de $\mathbb {T}^2$ mediante la operaci\IeC {\'o}n subdividir/consolidar. \relax }}{16}{figure.caption.19}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces La esfera como cociente del disco $\overline {\mathbb {B}}^2$.\relax }}{10}{figure.caption.10}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces La esfera como cociente de un cuadrado.\relax }}{10}{figure.caption.11}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces El toro como cociente de un cuadrado.\relax }}{11}{figure.caption.12}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Representaci\IeC {\'o}n de $\mathbb {P}^2$ como un espacio cociente.\relax }}{11}{figure.caption.13}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Construcci\IeC {\'o}n de la botella de Klein.\relax }}{12}{figure.caption.14}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Representaci\IeC {\'o}n de superficies importantes.\relax }}{14}{figure.caption.15}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Representaciones de la esfera y el plano proyectivo. \relax }}{15}{figure.caption.16}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Construcci\IeC {\'o}n del crosscap a partir de la representaci\IeC {\'o}n pologonal del plano proyectivo. \relax }}{16}{figure.caption.17}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Dos representaciones equivalentes de $\mathbb {T}^2$ mediante la operaci\IeC {\'o}n subdividir/consolidar. \relax }}{16}{figure.caption.18}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces El disco cerrado como una esfera perforada.\relax }}{19}{figure.caption.22}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces \autoref {eje:rep_perf} \relax }}{22}{figure.caption.24}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Demostraci\IeC {\'o}n de que s\IeC {\'o}lo hay un punto de la frontera en la semirecta.\relax }}{26}{figure.caption.25}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces El disco cerrado como una esfera perforada.\relax }}{18}{figure.caption.21}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \autoref {eje:rep_perf} \relax }}{21}{figure.caption.23}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Demostraci\IeC {\'o}n de que s\IeC {\'o}lo hay un punto de la frontera en la semirecta.\relax }}{25}{figure.caption.24}

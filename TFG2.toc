@@ -1,6 +1,8 @@
 \babel@toc {spanish}{}
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {1}Definiciones preeliminares}{1}{chapter.1}
+\contentsline {chapter}{\'{I}ndice general}{ii}{chapter*.1}
+\contentsline {chapter}{\'{I}ndice de figuras}{iii}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Variedades y superficies}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Variedades}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Variedades con borde}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Suma conexa de variedades}{4}{section.1.3}
@@ -11,14 +13,10 @@
 \contentsline {section}{\numberline {3.1}Superficies como cocientes}{9}{section.3.1}
 \contentsline {section}{\numberline {3.2}Representaci\IeC {\'o}n de superficies}{12}{section.3.2}
 \contentsline {section}{\numberline {3.3}Demostraci\IeC {\'o}n cl\IeC {\'a}sica}{17}{section.3.3}
-\contentsline {chapter}{\numberline {4}La prueba ZIP de Conway}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Cremalleras}{19}{section.4.1}
-\contentsline {section}{\numberline {4.2}Representaci\IeC {\'o}n de superficies con cremalleras}{20}{section.4.2}
-\contentsline {section}{\numberline {4.3}Teorema de Clasificaci\IeC {\'o}n}{22}{section.4.3}
-\contentsline {chapter}{\numberline {A}Algunos teoremas de topolog\IeC {\'\i }a importantes}{24}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}CW-complejos}{25}{appendix.Alph2}
-\contentsline {chapter}{\numberline {C}Espacios adjunci\IeC {\'o}n}{28}{appendix.Alph3}
-\contentsline {chapter}{\numberline {D}Homolog\IeC {\'\i }a}{29}{appendix.Alph4}
-\contentsline {chapter}{\numberline {E}Orientabilidad}{30}{appendix.Alph5}
-\contentsline {chapter}{\numberline {F}Espacios cociente}{31}{appendix.Alph6}
-\contentsline {chapter}{\numberline {G}Definiciones}{32}{appendix.Alph7}
+\contentsline {chapter}{\numberline {4}La prueba ZIP de Conway}{18}{chapter.4}
+\contentsline {section}{\numberline {4.1}Cremalleras}{18}{section.4.1}
+\contentsline {section}{\numberline {4.2}Representaci\IeC {\'o}n de superficies con cremalleras}{19}{section.4.2}
+\contentsline {section}{\numberline {4.3}Teorema de Clasificaci\IeC {\'o}n}{21}{section.4.3}
+\contentsline {chapter}{\numberline {A}Algunos teoremas de topolog\IeC {\'\i }a importantes}{23}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}CW-complejos}{24}{appendix.Alph2}
+\contentsline {chapter}{Bibliograf\'{\i }a}{27}{appendix*.25}
