@@ -55,7 +55,7 @@
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Epsilon}{\mathcal{E}}
 \DeclareMathOperator{\interior}{Int} %interior
-
+\DeclareMathOperator{\dimension}{dim} %dimension
 
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Comando para normas
 \newcommand{\Esfera}{\mathbb{S}^2}
@@ -138,6 +138,7 @@ Manuel Alonso Morón\\[.1in]
 \section*{Introducción}\addcontentsline{toc}{chapter}{\numberline{}Introducción}
 \clearpage
 \section*{Notación}\addcontentsline{toc}{chapter}{\numberline{}Notación}
+
 $I$ representará el intervalo $\left[ 0,1\right]$.
 \clearpage
 \end{comment}
@@ -159,12 +160,13 @@ Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo 
 Una \textbf{\emph{variedad topológica}} (de ahora en adelante \emph{variedad}) es un espacio topológico Hausdorff, II AN y localmente homeomorfo a $R^n$, para algún $n\geq 0$.
 \end{defin}
 Sea $M$ una variedad, y sea $p\in M$. Si $U\subseteq M$ es un entorno de $p$ que es homeomorfo a un abierto $U'$ de $\R^n$, decimos que $U$ es un \enfatiza{dominio coordenado}, llamamos \enfatiza{aplicación coordenada} a cualquier homeomorfismo $\varphi :U\to U'$ y decimos que el par $(U,\varphi )$ es una \enfatiza{carta para $M$}.\\
-A un dominio coordenado que es homeomorfo a una bola de $\R^n$ se le llama \enfatiza{bola coordenada} (si $n=2$, decimos \enfatiza{disco coordenado}). Si $p\in M$ y $U$ es un dominio coordenado que contiene a $p$, decimos que $U$ es un \enfatiza{entorno Euclídeo} de $p$.  
+A un dominio coordenado que es homeomorfo a una bola de $\R^n$ se le llama \enfatiza{bola coordenada} (si $n=2$, decimos \enfatiza{disco coordenado}). Si $p\in M$ y $U$ es un dominio coordenado que contiene a $p$, decimos que $U$ es un \enfatiza{entorno Euclídeo} de $p$.\\
+No siempre se tiene que la adherencia de una bola coordenada sea homeomorfa a una bola cerrada Euclidea. Por tanto, decimos que una bola coordenada $B\subseteq M$ es una \enfatiza{bola coordenada regular} si existe un entorno $B'$ de $\overline{B}$ y un homeomorfismo $\varphi:B'\to B_{r'}(x)\subseteq \R^n$ que lleva $B$ a $B_r(x)$ y $\overline{B}$ a $\overline{B}_r(x)$ para algún $r'>r>0$ y para algún $x\in \R^n$.
 \begin{obs}%%%%OBS: toda propiedad local de Rn se pasa a las variedades
 Como la propiedad ``ser localmente homeomorfo a $\R^n$'' es local, toda propiedad local de $\R^n$ se traslada a una variedad. Así, las variedades son localmente compactas, I AN, localmente conexas, localmente conexas por caminos y localmente simplemente conexas.
 \end{obs}%COPIADO lo de abajo, cambiar las palabras!!!!!!!!!!!!
-El \textit{Teorema de Invarianza del Dominio} (\autoref{teo:inv_dom}) dice que si $W\subset \R^n$ y $W'\subset \R^m$ son abiertos y existe $\phi: W \rightarrow W'$ homeomorfismo, entonces $n=m$. Esto implica que, dado un  $p\in M$ de una variedad, hay un único $n=n(p)$ tal que un entorno $U^p$ es homeomorfo a un abierto $U'\subset \R^n$. Llamamos $n(p)$ la \enfatiza{dimensión en p}. Como para todo punto $q\in U$ podemos tomar $U$ como entorno de $q$, se tiene por tanto $n(q)=n(p)$. Luego en toda la componente conexa de $p$, el $n$ que aparece es el mismo, y lo llamaremos \enfatiza{dimensión} de dicha componente conexa. Si escribimos $M=\amalg M_i$, con $M_i$ componentes conexas de $M$, todas las $M_i$ son variedades, y si todas las $M_i$ tienen la misma dimensión $n$, entonces escribimos $n=dim M$ , y decimos que $M$ es una \enfatiza{n-variedad}.\\
-El ejemplo más trivial de $n$-variedad es $\R^n$, pero también lo es cualquier abierto suyo. De hecho, podemos generalizar esto:
+El \textit{Teorema de Invarianza del Dominio} (\autoref{teo:inv_dom}) dice que si $W\subset \R^n$ y $W'\subset \R^m$ son abiertos y existe $\phi: W \rightarrow W'$ homeomorfismo, entonces $n=m$. Esto implica que, dado un  $p\in M$ de una variedad, hay un único $n=n(p)$ tal que un entorno $U^p$ es homeomorfo a un abierto $U'\subset \R^n$. Llamamos $n(p)$ la \enfatiza{dimensión en p}. Como para todo punto $q\in U$ podemos tomar $U$ como entorno de $q$, se tiene por tanto $n(q)=n(p)$. Luego en toda la componente conexa de $p$, el $n$ que aparece es el mismo, y lo llamaremos \enfatiza{dimensión} de dicha componente conexa. Si escribimos $M=\amalg M_i$, con $M_i$ componentes conexas de $M$, todas las $M_i$ son variedades, y si todas las $M_i$ tienen la misma dimensión $n$, entonces escribimos $n=\dimension{M}$ , y decimos que $M$ es una \enfatiza{n-variedad}.\\
+El ejemplo más trivial de $n$-variedad es $\R^n$, pero también lo es cualquier abierto suyo. De hecho, esto se puede generalizar:
 \begin{prop}%%%%PROP: abierto variedad abierto
 Todo subconjunto abierto de una $n$-variedad es una $n$-variedad.
 \end{prop}
@@ -212,10 +214,11 @@ Una \textbf{\emph{superficie}} es una $2$-variedad.
 \section{Variedades con borde}\label{sec:borde}
 Hay una serie de espacios topológicos que no son variedades pero que tienen interés desde el punto de vista geométrico y son útiles a la hora de estudiarlas. Por ejemplo, la bola cerrada $\overline{\mathbb{B}}^n$ no es una variedad, puesto que para los puntos de su frontera no hay entornos homeomorfos a abiertos de $\R^n$. Vamos a definir por tanto una clase de espacios que extienda a las variedades pero que admita la existencia de algún tipo de \textit{bordes}:
 \begin{defin}
-Una \enfatiza{variedad con borde $n$-dimensional} $M$ (o $n$-variedad con borde) es un espacio topológico  Hausdorff y II AN tal que todo punto $p\in M$ tiene un entorno $U$ homeomorfo a un abierto $U'\subset \mathbb{H}^n=
+Una \enfatiza{variedad con borde n-dimensional} $M$ (o $n$-variedad con borde) es un espacio topológico  Hausdorff y II AN tal que todo punto $p\in M$ tiene un entorno $U$ homeomorfo a un abierto $U'\subset \mathbb{H}^n=
 \left\{(x_1,\dots ,x_n)\in \R^n\mid x_n\geq 0\right\}$.
 \end{defin}
 Si $M$ una n-variedad con borde, $p\in M$ y $\varphi :U\to U'\subset \mathbb{H}^n$ un homeomorfismo como en la definición. Como en el caso de variedades, decimos que $U$ es un \enfatiza{dominio coordenado}, que $\varphi$ es una \enfatiza{aplicación coordenada} para $M$ y que el par $(U,\varphi )$ es una \enfatiza{carta para $M$}.\\
+Como en la \autoref{sec:variedades}, decimos que $B\subseteq M$ es una \enfatiza{semibola coordenada regular} si existe un abierto $B'$ que contiene a $\overline{B}$ y y un homeomorfismo de $B'$ a $B_{r'}(0)\cap \mathbb{H}^n$ que lleva $B$ a $B_r(0)\cap \mathbb{H}^n$ y $\overline{B}$ a $\overline{B}_r(0)\cap \overline{H}^n$ para algún $0<r<r'$.
 Si denotamos $\varphi (p)=a=(a_1,\dots ,a_n)$, podemos distinguir entre dos tipos de puntos:
 \begin{itemize}
 
@@ -822,7 +825,14 @@ Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1,\dots ,P_k$
 \end{prop}
 
 \begin{proof}
-%...6.4 del Lee.
+Sea $M$ el espacio cociente, sea $\pi :P\to M$ la aplicación cociente y sean $M_0, \, M_1, \, M_2=M$ respectivamente las imágenes por $\pi$ de los vértices, los bordes y las regiones poligonales. Por la propia definición de $P$, $M_0$ es un espacio discreto, y para $K=1,2$, $M_k$ se obtiene a partir de $M_{k-1}$ pegando un número finito de $k$-celdas. Por tanto $M$ es un CW-complejo por la \autoref{def:cw}.\\
+Para probar (b), si demostramos que $M$ es localmente homeomorfa a un espacio euclideo, entonces, por la \autoref{prop:cw_variedad}, $M$ será una superficie.\\
+Por un lado las 2-celdas son abiertos en $M$ por definición, y por lo tanto son entornos euclideos de cada uno de sus puntos.\\
+Un punto $s$ de una 1-celda tiene exáctamente dos preimágenes $x_1$ y $x_2$, cada una en el interior de un borde distinto $A_i, \, i=1,2$. Supongamos sin pérdida de generalidad que estos dos bordes pertenecen respectivamente a $P_1$ y $P_2$ ($P_1$ puede ser igual a $P_2$), y denotemos por $h:A_2\to A_1$ es un homeomorfismo. Dado que cada $P_i$ es una variedad con borde, y $x_1,\, x_2$ son puntos borde, podemos elegir cartas coordenadas $(U_i,\varphi_i )$ para $P_i$ tal que $x_i\in U_i$. Denotamos $\widehat{U}_i=\varphi_i(U_i)\subseteq \mathbb{H}^2, \, i=1,2$ y podemos asumir, contrayendo los $U_i$ si es necesario, que $h(U_2\cap A_2)=U_1\cap A_1$, y que $\widehat{U}_i=U_i'\times [0,\varepsilon)$ para un $\varepsilon >0$ y unos subconjuntos $U_i'\subset \R$ como se muestra en la \autoref{fig:6_4}. Así pues podemos escribir las aplicaciones coordenadas como $\varphi_i(x_i)=(\varphi_{(i,0)}(x_i),\varphi_{(i,1)}(x_i))$, con $\varphi_{(i,0)}:U_i\to U_i'$ y $\varphi_{(i,1)}:U_i\to [0,\varepsilon)$ aplicaciones continuas. Que cada $x_i$ sea un punto borde significa que $\varphi_{(i,1)}(x_i)=0$.\\
+Queremos ensamblar estas dos cartas con una aplicación cuya imagen sea un abierto de $\R^2$, pegándolas por los puntos que se corresponden en $A_1$ y $A_2$. El problema es que las aplicaciones $\varphi_i$ no tienen por qué llevar puntos borde que se corresponden al mismo punto imagen, y por tanto tenemos que ajustarlo. Se tiene que las dos restricciones $\varphi_{(i,0)}|_{U_i\cap A_i}: U_i\cap A_i\to U_{i}'$ son homeomorfismos, y definimos así el homeomorfismo $\beta:U_2'\to U_1'$ por $$\beta=(\varphi_{(1,0)}|_{U_1\cap A_1})\circ h\circ (\varphi_{(2,0)}|_{U_2\cap A_2})^{-1}\, .$$ 
+Sea ahora $B:\widehat{U}_2\to \R^2$ la aplicación $$B(x_{(2,1)},x_{(2,2)})=\left(\beta (x_{(2,1)}), -x_{(2,2)})\, .$$
+Geométricamente, $B$ junta los puntos borde de acuerdo con $\beta$, y ``da la vuelta'' a cada segmento vertical por encima de el borde a un segmento debajo del punto imagen (como en \autoref{fig:6_4}). 
+\section{!!!!!!}
 \end{proof}
 
 \begin{eje}%%%%EJE: Botella Klein
@@ -862,7 +872,7 @@ Veamos ahora como obtener las figuras del \autoref{eje:rep_borde}. El cilindro $
 \end{eje}
 
 \section{Representación de superficies}
-Vamos ahora a dar un método uniforme para representar todas las superficies y las superficies con borde como regiones poligonales del plano. A su vez asociaremos a cada región poligonal una secuencia de símbolos llamada palabra.
+Vamos ahora a dar un método uniforme para representar todas las superficies y las superficies con borde como regiones poligonales del plano. A su vez asociaremos a cada región poligonal, y por tanto a cada superficie, una secuencia de símbolos llamada palabra. 
 
 
 \begin{defin}%%%%DEF: palabra
@@ -1290,7 +1300,8 @@ Ahora, fijémonos en la demostración de la \autoref{prop:poligonos} (b). Cuando
 
 
 
-\section{Demostración clásica}
+\section{Teorema de clasificación de superficies compactas}
+\section{Teorema de clasificación de superficies con borde}
 
 \chapter{La prueba ZIP de Conway}
 
@@ -1329,7 +1340,7 @@ Conway utiliza las cremalleras (\textit{zips} en inglés) para describir cómo a
 
 
 \begin{defin}%%%DEF: ZIP
-Sea $S$ una superficie compacta. Una \enfatiza{cremallera} es una identificación entre dos subconjuntos (cerrados??) de la frontera de $S$. A este par lo llamamos \enfatiza{par-zip}.
+Sea $S$ una superficie compacta. Una \enfatiza{cremallera} es una identificación entre dos subconjuntos cerrados del borde de $S$. A este par lo llamamos \enfatiza{par-zip}.
 \end{defin}
 
 
@@ -1337,7 +1348,7 @@ En la \textit{prueba ZIP}, Conway nos explica gráficamente las posibles formas 
 
 \begin{defin}
 Sea $S$ una superficie. Definimos cuatro formas elementales de identificar pares-\textit{zip} en perforaciones de 
-$S$ $1$ o $2$-perforada:
+$S$ perforada:
 
 \begin{itemize}
 \item[1.] \enfatiza{Cap}: Los pares zip yacen cada uno sobre la mitad de una misma perforación con orientaciones opuestas (\autoref{fig:cap}).
@@ -1726,7 +1737,7 @@ Esto nos muestra que un intervalo cerrado es una 1-celda cerrada, toda región p
 Sea $D$ una $n$-celda. Entonces $D$ es una variedad con borde por serlo $\overline{\mathbb{B}}^n$. Denotamos por $\partial D$ e $\interior{D}$ respectivamente a las imágenes de $\mathbb{S}^{n-1}$ y $\mathbb{B}^n$ por un homeomorfismo $F:\overline{\mathbb{B}}^n\to D$, tal que $\partial D$ es homeomorfo a $\mathbb{S}^{n-1}$ e $\interior{D}$ es una $n$-celda abierta.
 \end{obs}
 
-\begin{defin}
+\begin{defin}\label{def:cw}%%%%DEF: CW
 Un \enfatiza{CW-complejo} es un espacio topológico $X$ construido de la siguiente manera:
 \begin{itemize}
 \item[(1)] Empezamos con un espacio discreto $X^0$, cuyos puntos consideramos 0-celdas.
@@ -1739,8 +1750,8 @@ Un \enfatiza{CW-complejo} es un espacio topológico $X$ construido de la siguien
 Si $X=X^n$ para algún $n$, entonces se dice que $X$ es de dimensión finita, y decimos que la dimensión de $X$ es $n$.
 \end{defin}
 
-\begin{prop}
-Sea $X$ un CW-complejo con un conjunto numerable de celdas. Si $X$ es localmente euclídeo, entonces es una variedad.
+\begin{prop}\label{prop:cw_variedad}%%%%PROP: CW complejo variedad
+Sea $X$ un CW-complejo con un conjunto numerable de celdas. Si $X$ es localmente homeomorfo a un espacio euclídeo, entonces es una variedad.
 \end{prop}
 
 \begin{prop}
@@ -1761,6 +1772,10 @@ Si $M$ es una $n$-variedad no vacía y un CW-complejo, entonces $n$ es también 
 
 \begin{defin}%%%%DEF: Finitamente local
 Una colección de subconjuntos de un espacio topológico $X$ se dice \enfatiza{localmente finita} si cada punto del espacio tiene un entorno que interseca sólo un número finito de subconjuntos de la colección.
+\end{defin}
+
+\begin{defin}
+es coherente
 \end{defin}
 \end{comment}
 
