@@ -1,6 +1,0 @@
-\babel@toc {spanish}{}
-\babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {1}La prueba ZIP de Conway}{\es@scroman {iv}}{chapter.1}
-\contentsline {section}{\numberline {1.1}Cremalleras}{\es@scroman {iv}}{section.1.1}
-\contentsline {section}{\numberline {1.2}Estructura algebr\IeC {\'a}ica}{\es@scroman {v}}{section.1.2}
-\contentsline {section}{\numberline {1.3}Teorema de Clasificaci\IeC {\'o}n}{\es@scroman {vi}}{section.1.3}
