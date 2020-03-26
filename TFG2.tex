@@ -579,6 +579,12 @@ Sea un complejo simplicial $K$ en $\R ^n$. La unión de todos los símplices en 
    \end{minipage}
 \end{figure}
 
+\begin{defin}
+Una \enfatiza{aplicación afín} es una aplicación $F:\R^n \to \R^m$ tal que $F(x)=c+A(x)$, donde $c\in \R^m$ es un vector fijo y $A(x)$ es una aplicación lineal.
+\end{defin}
+\begin{defin}
+Sean $K, \, L$ complejos simpliciales. Una \enfatiza{aplicación simplicial} es una aplicación continua $f:|K|\to |L|$ cuya restricción a cada símplice $\theta \in K$ coincide con una aplicación afín que lleva $\theta$ a algún símplice en $L$.
+\end{defin}
 \begin{defin}%%%%DEF: Triangulación
 Sea $X$ un espacio topológico. Llamamos \enfatiza{triangulación de $X$} a un homeomorfismo entre $X$ y el poliedro de algún complejo simplicial.
 \end{defin}
@@ -816,11 +822,11 @@ Veamos pues que identificando bordes de regiones poligonales de par en par obten
 
 \begin{prop}%%%PROP: Teorema poligonos
 \label{prop:poligonos}
-Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1,\dots ,P_k$, y supongamos dada una relación de equivalencia en $P$ que identifica algunos bordes de los polígonos con otros por homeomorfismos afines. Entonces se tiene:
+Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1\amalg \dots \amalg P_k$, y supongamos dada una relación de equivalencia en $P$ que identifica algunos bordes de los polígonos con otros por homeomorfismos afines. Entonces se tiene:
 \begin{itemize}
 \item[(a)] El espacio cociente resultante es un CW-complejo $2$-dimensional cuyo $0$-esqueleto es la imagen del conjunto de vértices de $P$ por la aplicación cociente, y cuyo $1$-esqueleto es la imagen de la unión de los bordes de las regiones poligonales.
 \item[(b)] Si la relación de equivalencia identifica cada borde de cada $P_i$ con exactamente otro borde de un $P_j$ (no necesariamente $i\neq j$), entonces el espacio cociente resultante es una superficie compacta.
-\item[(c)] Si para algunos $P_i$ la relación de equivalencia identifica algún borde suyo con exáctamente otro borde de un $P_j$ (no necesariamente $i\neq j$), y para los bordes restantes no hay ninguna identificación, entonces el espacio cociente resultante es una superficie con borde.
+\item[(c)] Si para algunos $P_i$ la relación de equivalencia identifica algún borde suyo con exáctamente otro borde de un $P_j$ (no necesariamente $i\neq j$), y para los bordes restantes no hay ninguna identificación, entonces el espacio cociente resultante es una superficie con borde compacta.
 \end{itemize}
 \end{prop}
 
@@ -839,13 +845,14 @@ Definimos ahora $\tilde{\Phi}:U\amalg V\to \R^2$ por $$\tilde{\Phi}(y)=\begin{ca
 \varphi(y), & y\in U,\\
 B\circ \psi (y), & y\in V.\\
 \end{cases}$$
-Dado que $U\amalg V$ es un abierto saturado de $M$, la restricción $\pi|_{U\amalg V}$ es una aplicación cociente en el entorno de $d$ $\pi (U\amalg V)$, y por \autoref{ec:1} $\tilde{\Phi}$ pasa al cociente y define una aplicación continua e inyectiva $\Phi :q(U\amalg V)\to \R^2$. Como $\varphi$, $\psi$ y $B$ son homeomorfismos entre sus dominios y sus imágenes, podemos definir la inversa de $\Phi$ de la siguiente manera:
+Dado que $U\amalg V$ es un abierto saturado de $M$, la restricción $\pi|_{U\amalg V}$ es una aplicación cociente en el entorno de $d$ $\pi (U\amalg V)$, y por (\ref{ec:1}) $\tilde{\Phi}$ pasa al cociente y define una aplicación continua e inyectiva $\Phi :q(U\amalg V)\to \R^2$. Como $\varphi$, $\psi$ y $B$ son homeomorfismos entre sus dominios y sus imágenes, podemos definir la inversa de $\Phi$ de la siguiente manera:
 $$\Phi ^{-1}(s)= \begin{cases} 
 q\circ \varphi ^{-1}(s), & s_2\geq 0, \\
 q\circ \psi ^{-1} \circ B^{-1}(s), & s_2\leq 0.\\
  \end{cases}$$
 Dado que las dos partes de la función son iguales donde coinciden, la aplicación es continua, y por tanto $\Phi$ es un homeomorfismo. Así pues, $U\amalg V$ es un entorno Euclideo de $d$.\\
-La preimagen de una 0-celda $v$ es un conjunto de vértices $\left\{v_1,\dots ,v_k\right\} \subseteq P$. Para cada uno de estos vértices podemos elegir un $\varepsilon>0$ tal que el disco $B_{\varepsilon}(v_i)$ no contenga ningun vértice de la región poligonal $P_j$ a la que pertenece $v_i$ a parte de sí mismo, y tal que no interseca más bordes que los que lo contienen. $B_{\varepsilon}(v_i)\cap P_j$ es homeomorfo a un subconjunto de $\R^2$ definido por la intersección de dos semiplanos cuyas fronteras coinciden en un único punto y tal que el ángulo que forman es de $2\pi /k$. Podemos ahora hacer una aplicación que envíe cada una de las regiones asociadas a cada $v_i$, $i_1,\dots k$ a un conjunto que contenga un entorno del origen y que respete las identificaciones entre los bordes de los $P_j$. Esta aplicación está definida sobre un conjunto saturado de $P$, de la cual podemos sacar un homeomorfismo de $v$ a un entorno del origen de $\R^2$. 
+La preimagen de una 0-celda $v$ es un conjunto de vértices $\left\{v_1,\dots ,v_k\right\} \subseteq P$. Para cada uno de estos vértices podemos elegir un $\varepsilon>0$ tal que el disco $B_{\varepsilon}(v_i)$ no contenga ningun vértice de la región poligonal $P_j$ a la que pertenece $v_i$ a parte de sí mismo, y tal que no interseca más bordes que los que lo contienen. $B_{\varepsilon}(v_i)\cap P_j$ es homeomorfo a un subconjunto de $\R^2$ definido por la intersección de dos semiplanos cuyas fronteras coinciden en un único punto y tal que el ángulo que forman es de $2\pi /k$. Podemos ahora hacer una aplicación que envíe cada una de las regiones asociadas a cada $v_i$, $i_1,\dots k$ a un conjunto que contenga un entorno del origen y que respete las identificaciones entre los bordes de los $P_j$. Esta aplicación está definida sobre un conjunto saturado de $P$, de la cual podemos sacar un homeomorfismo de $v$ a un entorno del origen de $\R^2$.
+Finalmente, para probar (c), cada polígono es en sí una superficie con borde. El interior de los lados que se identifican son localmente euclídeos por la proposición anterior, y para los puntos extremos podemos encontrar una semibola coordenada con una construcción similar. Por otro lado, para los puntos de los lados que no se identifican podemos encontrar semibolas coordenadas (las mismas de antes de pasar al cociente). Cómo los CW complejos son IIAN y Hausdorff por la \autoref{prop:cw_variedad}, se tiene el resultado.
 \end{proof}
 
 \begin{eje}%%%%EJE: Botella Klein
@@ -1300,8 +1307,9 @@ Sean $M_1$ y $M_2$ superficies que admiten respectivamente representaciones $\la
 \end{prop}
 
 \begin{proof}
-Consideramos la representación $\mathcal{P}_1=\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1},abc\rangle$ (\autoref{fig:suma_conexa_rep_pol_a}). Pegando a lo largo de $a$ y doblando dos veces, tenemos que $\mathcal{P}_1$ es una representación equivalente a $\langle S_1\mid W_1\rangle$ y por tanto es una representación de $M_1$. Llamemos $B_1$ a la imagen en $M_1$ del interior de la región poligonal cuyo borde es $abc$. Veamos que existe un entorno $B'$ de $B_1$ en $M_1$ y un homeomorfismo $\phi :B'\to \R^2$ que manda $B_1$ a $\mathbb{B}^2$ y $\overline{B}$ a $\overline{\mathbb{B}}^2$. Una forma de verlo lo sugiere la \autoref{fig:suma_conexa_rep_pol}: sean $P_1$, $Q$ y $P_1'$ regiones poligonales convexas etiquetadas respectivamente por las palabras $W_1c^{-1}b^{-1}a^{-1}$, $abc$ y $W_1$. Si triangulamos las regiones poligonales como en la  \autoref{fig:suma_conexa_rep_pol}, obtenemos una aplicación simplicial $f:P_1\amalg Q\to P_1'$ que lleva $Q$ a el triángulo $Q'\subseteq P_1'$, que comparte una vértice $v$ con $P_1'$. La composición $P_1\amalg Q\to P_1'\to M_1$ respeta las identificaciones hechas por la aplicación cociente $P_1'\to M_1$, por lo que se tiene un homeomorfismo de $M_1$ llevando $B_1$ a la imagen de $Q'$.\\
-Ahora, fijémonos en la demostración de la \autoref{prop:poligonos} (b). Cuando construimos un entorno Euclídeo de un vértice, ensamblamos ``wedges'' a los varios vértices en un disco coordenado. Aplicando esa construcción al vértice $v$, llevamos $Q'$ a un conjunto que es homeomorfo a un disco cerrado en el plano (\autoref{fig:disco_regular}), y  entonces extendemos ese homeomorfismo a un disco abierto que lo contiene.
+Consideramos la representación $\mathcal{P}_1=\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1},abc\rangle$ (\autoref{fig:suma_conexa_rep_pol_a}). Pegando a lo largo de $a$ y doblando dos veces, tenemos que $\mathcal{P}_1$ es una representación equivalente a $\langle S_1\mid W_1\rangle$ y por tanto es una representación de $M_1$. Llamemos $B_1$ a la imagen en $M_1$ del interior de la región poligonal cuyo borde es $abc$. Veamos que $B_1$ es un disco coordenado regular, es decir, que existe un entorno $B'$ de $B_1$ en $M_1$ y un homeomorfismo $\phi :B'\to \R^2$ que manda $B_1$ a $\mathbb{B}^2$ y $\overline{B}$ a $\overline{\mathbb{B}}^2$. Una forma de verlo lo sugiere la \autoref{fig:suma_conexa_rep_pol}: sean $P_1$, $Q$ y $P_1'$ regiones poligonales convexas etiquetadas respectivamente por las palabras $W_1c^{-1}b^{-1}a^{-1}$, $abc$ y $W_1$. Si triangulamos las regiones poligonales como en la  \autoref{fig:suma_conexa_rep_pol}, obtenemos una aplicación simplicial $f:P_1\amalg Q\to P_1'$ que lleva $Q$ a el triángulo $Q'\subseteq P_1'$, que comparte una vértice $v$ con $P_1'$. La composición $P_1\amalg Q\to P_1'\to M_1$ respeta las identificaciones hechas por la aplicación cociente $P_1'\to M_1$, por lo que se tiene un homeomorfismo de $M_1$ llevando $B_1$ a la imagen de $Q'$.\\
+Ahora, fijémonos en la demostración de la \autoref{prop:poligonos} (b). Cuando construimos el entorno Euclídeo de un vértice, ensamblábamos las regiones del plano de los varios vértices en un mismo disco coordenado. Aplicando esa construcción al vértice $v$, llevamos $Q'$ a un conjunto que es homeomorfo a un disco cerrado en el plano (\autoref{fig:disco_regular}), y  entonces extendemos ese homeomorfismo a un disco abierto que lo contiene.\\
+Se sigue de este resultado que la realización geométrica de $\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1}\rangle$ es homeomorfa a $M_1'=M_1\setminus B_1$, y $\partial B_1$ es la imagen de los bordes $c^{-1}b^{-1}a^{-1}$. Un argumento similar demuestra que $\langle S_2,a,b,c\mid abcW_2\rangle$ es una presentación de $M_2$ menos un disco coordenado$M_2'=M_2\setminus B_1$. Por tanto se tiene que $\langle S_1,S_2,a,b,c\mid W_1,c^{-1}b^{-1}a^{-1},abcW_2\rangle$ es una presentación de $M_1'\amalg M_2'$ con los bordes de los respectivos discos identificados, es decir, $M_1\# M_2$. Finalmente, pegando por $a$ y doblando dos veces, se obtiene la presentación $\langle S_1,S_2\mid W_1W_2\rangle$.
 \end{proof}
 
 
