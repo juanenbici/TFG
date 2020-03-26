@@ -824,15 +824,28 @@ Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1,\dots ,P_k$
 \end{itemize}
 \end{prop}
 
-\begin{proof}
-Sea $M$ el espacio cociente, sea $\pi :P\to M$ la aplicación cociente y sean $M_0, \, M_1, \, M_2=M$ respectivamente las imágenes por $\pi$ de los vértices, los bordes y las regiones poligonales. Por la propia definición de $P$, $M_0$ es un espacio discreto, y para $K=1,2$, $M_k$ se obtiene a partir de $M_{k-1}$ pegando un número finito de $k$-celdas. Por tanto $M$ es un CW-complejo por la \autoref{def:cw}.\\
+\begin{proof} 
+Sea $M$ el espacio cociente, sea $\pi :P\to M$ la aplicación cociente y sean $M_0, \, M_1, \, M_2=M$ respectivamente las imágenes por $\pi$ de los vértices, los bordes y las regiones poligonales. Por la propia definición de $P$, $M_0$ es un espacio discreto, y para $k=1,2$, $M_k$ se obtiene a partir de $M_{k-1}$ pegando un número finito de $k$-celdas. Por tanto $M$ es un CW-complejo (\autoref{def:cw}).\\
 Para probar (b), si demostramos que $M$ es localmente homeomorfa a un espacio euclideo, entonces, por la \autoref{prop:cw_variedad}, $M$ será una superficie.\\
 Por un lado las 2-celdas son abiertos en $M$ por definición, y por lo tanto son entornos euclideos de cada uno de sus puntos.\\
-Un punto $s$ de una 1-celda tiene exáctamente dos preimágenes $x_1$ y $x_2$, cada una en el interior de un borde distinto $A_i, \, i=1,2$. Supongamos sin pérdida de generalidad que estos dos bordes pertenecen respectivamente a $P_1$ y $P_2$ ($P_1$ puede ser igual a $P_2$), y denotemos por $h:A_2\to A_1$ es un homeomorfismo. Dado que cada $P_i$ es una variedad con borde, y $x_1,\, x_2$ son puntos borde, podemos elegir cartas coordenadas $(U_i,\varphi_i )$ para $P_i$ tal que $x_i\in U_i$. Denotamos $\widehat{U}_i=\varphi_i(U_i)\subseteq \mathbb{H}^2, \, i=1,2$ y podemos asumir, contrayendo los $U_i$ si es necesario, que $h(U_2\cap A_2)=U_1\cap A_1$, y que $\widehat{U}_i=U_i'\times [0,\varepsilon)$ para un $\varepsilon >0$ y unos subconjuntos $U_i'\subset \R$ como se muestra en la \autoref{fig:6_4}. Así pues podemos escribir las aplicaciones coordenadas como $\varphi_i(x_i)=(\varphi_{(i,0)}(x_i),\varphi_{(i,1)}(x_i))$, con $\varphi_{(i,0)}:U_i\to U_i'$ y $\varphi_{(i,1)}:U_i\to [0,\varepsilon)$ aplicaciones continuas. Que cada $x_i$ sea un punto borde significa que $\varphi_{(i,1)}(x_i)=0$.\\
-Queremos ensamblar estas dos cartas con una aplicación cuya imagen sea un abierto de $\R^2$, pegándolas por los puntos que se corresponden en $A_1$ y $A_2$. El problema es que las aplicaciones $\varphi_i$ no tienen por qué llevar puntos borde que se corresponden al mismo punto imagen, y por tanto tenemos que ajustarlo. Se tiene que las dos restricciones $\varphi_{(i,0)}|_{U_i\cap A_i}: U_i\cap A_i\to U_{i}'$ son homeomorfismos, y definimos así el homeomorfismo $\beta:U_2'\to U_1'$ por $$\beta=(\varphi_{(1,0)}|_{U_1\cap A_1})\circ h\circ (\varphi_{(2,0)}|_{U_2\cap A_2})^{-1}\, .$$ 
-Sea ahora $B:\widehat{U}_2\to \R^2$ la aplicación $$B(x_{(2,1)},x_{(2,2)})=\left(\beta (x_{(2,1)}), -x_{(2,2)})\, .$$
-Geométricamente, $B$ junta los puntos borde de acuerdo con $\beta$, y ``da la vuelta'' a cada segmento vertical por encima de el borde a un segmento debajo del punto imagen (como en \autoref{fig:6_4}). 
-\section{!!!!!!}
+Sea $D$ una 1-celda, y sea $d\in D$. Veamos que $d$ tiene un entorno Euclideo. Por un lado, $d$ tiene exáctamente dos preimágenes $x$ e $y$, cada una en el interior de un borde distinto $D_1$ y $D_2$. Supongamos sin pérdida de generalidad que estos dos bordes pertenecen respectivamente a $P_1$ y $P_2$ ($P_1$ puede ser igual a $P_2$), y denotemos por $h:D_2\to D_1$ un homeomorfismo tal que $h(y)=x$. Dado que cada $P_i$ es una variedad con borde, y $x,y$ son puntos borde, podemos elegir cartas coordenadas $(U,\varphi)$  para $P_1$ y $(V,\psi)$ para $P_2$ tal que $x\in U$, $y\in V$. Denotamos $\widehat{U}=\varphi(U),\widehat{V}=\psi(V)\subseteq \mathbb{H}^2$ y podemos asumir, contrayendo $U$ y $V$ si es necesario, que $h(V\cap D_2)=U\cap D_1$, y que $\widehat{U}=U_0\times [0,\varepsilon)$, $\widehat{V}=V_0\times [0,\varepsilon)$  para un $\varepsilon >0$ y unos subconjuntos $U_0, V_0 \subset \R$ como se muestra en la \autoref{fig:6_4}. Así pues podemos escribir las aplicaciones coordenadas como $\varphi(x)=(\varphi_0(x),\varphi_1(x))$, $\psi(x)=(\psi_0(y),\psi_1(y))$ con $\varphi_0:U\to U_0$, $\varphi_1:U\to [0,\varepsilon)$, $\psi_0:V\to V_0$ y $\psi_1:V\to [0,\varepsilon)$ aplicaciones continuas. Que $x$ e $y$ sean puntos borde significa que $\varphi_1(x)=\psi_1(y)=0$.\\
+Queremos ensamblar estas dos cartas con una aplicación cuya imagen sea un abierto de $\R^2$, pegándolas por los puntos que se corresponden en $D_1$ y $D_2$. El problema es que las aplicaciones $\varphi$ y $\psi$ no tienen por qué llevar puntos borde que se correspondan al mismo punto imagen, y por tanto tenemos que ajustarlo. Se tiene que las dos restricciones $\varphi_0|_U\cap D_1: U\cap D_1\to U_0$ y $\psi_0|_V\cap D_2:V\cap D_2\to V_0$ son homeomorfismos, y definimos así el homeomorfismo $\beta:V_0\to U_0$ por $$\beta=(\varphi_0|_{U\cap D_1})\circ h\circ (\psi_0|_{V\cap D_2})^{-1}\, .$$ 
+Sea ahora $B:\widehat{V}\to \R^2$ la aplicación $$B(y_1,y_2)=\left(\beta (y_1), -y_2\right)\, .$$
+Geométricamente, $B$ actúa como un espejo, juntando los puntos borde de acuerdo con $\beta$, y dando la vuelta al segmento que está por encima de él, llevándolo a un segmento por debajo (como en \autoref{fig:6_4}). Esta construcción nos asegura que 
+\begin{equation}\label{ec:1}
+B\circ \psi(y)=\left(\beta \circ \psi_0(y),0\right)=\left(\varphi_0 \circ h(y),0\right)=\varphi \circ h(y).
+\end{equation}
+Definimos ahora $\tilde{\Phi}:U\amalg V\to \R^2$ por $$\tilde{\Phi}(y)=\begin{cases}
+\varphi(y), & y\in U,\\
+B\circ \psi (y), & y\in V.\\
+\end{cases}$$
+Dado que $U\amalg V$ es un abierto saturado de $M$, la restricción $\pi|_{U\amalg V}$ es una aplicación cociente en el entorno de $d$ $\pi (U\amalg V)$, y por \autoref{ec:1} $\tilde{\Phi}$ pasa al cociente y define una aplicación continua e inyectiva $\Phi :q(U\amalg V)\to \R^2$. Como $\varphi$, $\psi$ y $B$ son homeomorfismos entre sus dominios y sus imágenes, podemos definir la inversa de $\Phi$ de la siguiente manera:
+$$\Phi ^{-1}(s)= \begin{cases} 
+q\circ \varphi ^{-1}(s), & s_2\geq 0, \\
+q\circ \psi ^{-1} \circ B^{-1}(s), & s_2\leq 0.\\
+ \end{cases}$$
+Dado que las dos partes de la función son iguales donde coinciden, la aplicación es continua, y por tanto $\Phi$ es un homeomorfismo. Así pues, $U\amalg V$ es un entorno Euclideo de $d$.\\
+La preimagen de una 0-celda $v$ es un conjunto de vértices $\left\{v_1,\dots ,v_k\right\} \subseteq P$. Para cada uno de estos vértices podemos elegir un $\varepsilon>0$ tal que el disco $B_{\varepsilon}(v_i)$ no contenga ningun vértice de la región poligonal $P_j$ a la que pertenece $v_i$ a parte de sí mismo, y tal que no interseca más bordes que los que lo contienen. $B_{\varepsilon}(v_i)\cap P_j$ es homeomorfo a un subconjunto de $\R^2$ definido por la intersección de dos semiplanos cuyas fronteras coinciden en un único punto y tal que el ángulo que forman es de $2\pi /k$. Podemos ahora hacer una aplicación que envíe cada una de las regiones asociadas a cada $v_i$, $i_1,\dots k$ a un conjunto que contenga un entorno del origen y que respete las identificaciones entre los bordes de los $P_j$. Esta aplicación está definida sobre un conjunto saturado de $P$, de la cual podemos sacar un homeomorfismo de $v$ a un entorno del origen de $\R^2$. 
 \end{proof}
 
 \begin{eje}%%%%EJE: Botella Klein
@@ -1656,7 +1669,9 @@ Supongamos $q_1:X\to Y_1$ y $q_2:X\to Y_2$ son aplicaciones cociente que hacen l
 Sean $U\subset \R^n$ y $V\subset \R^m$ abiertos homeomorfos. Entonces $n=m$.
 \end{tma}
 
-
+\begin{tma}[Lema de pegado]
+Sean $A,B$ dos subconjuntos abiertos (o cerrados) de un espacio topológico $X$, tal que $X=A\cap B$, y sea $Y$ otro espacio topológico. Si la restricción de $f:X\to Y$ a $A$ y $B$ es continua, entonces $f$ es continua.
+\end{tma}
 \chapter{CW-complejos}\label{sec:CW}
 Utilizo la definición inductiva de CW-complejo dada por Hatcher \cite{hatcher} y algunas propiedades expuestas por Lee \cite{lee1}.
 
