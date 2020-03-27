@@ -233,17 +233,22 @@ Sea $M$ una variedad con borde, entonces $\interior{M}$ es un abierto de $M$, y 
 Sea, para cada $x\in \interior{M}$, $(U_x,\psi_x)$ una carta para $x$, donde $U_x$ es un abierto localmente homeomorfo a un espacio Euclídeo. Se tiene que $\interior{M}=\bigcup_{x\in M} U_x$, por lo que es un abierto, y además localmente Euclídeo, lo que implica que es variedad.
 \end{proof}
 \begin{prop}%%%%PROP: invarianza del borde
-Si $M$ es una superficie con borde, entonces un punto $p\in M$ no puede ser un punto interior y un punto borde al mismo tiempo. O lo que es lo mismo, $M=\interior{M} \cup \partial M$, con $\interior{M} \cap \partial M=\emptyset$.
+Si $M$ es una $n$variedad con borde, entonces un punto $p\in M$ no puede ser un punto interior y un punto borde al mismo tiempo. O lo que es lo mismo, $M=\interior{M} \cup \partial M$, con $\interior{M} \cap \partial M=\emptyset$.
 \end{prop}
 \begin{proof}
-Supongamos que $p\in M$ es tanto un punto interior como un punto borde de $M$. Entonces existen $(U,\varphi)$ tal que $\varphi (U)\subseteq \interior{\mathbb{H}^2}$ y $(V,\psi)$ tal que $\psi (V)\subseteq \mathbb{H}^2$, donde $\psi (p)=s\in \partial \mathbb{H}^2$. 
+Voy a dar la demostración en el caso de que $n=2$. El caso general incluye conceptos de homología que no voy a tratar en este trabajo.\\
+Supongamos que $p\in M$ es tanto un punto interior como un punto borde de $M$. Entonces existen $(U,\varphi)$ tal que $\varphi (U)\subseteq \interior{\mathbb{H}^2}$ y $(V,\psi)$ tal que $\psi (V)\subseteq \mathbb{H}^2$, donde $\psi (p)=s\in \partial \mathbb{H}^2$. Llamando $W=U\cap V$, se tiene que $\varphi (W)$ es homeomorfo a $\psi (V)$. \\
+Ahora bien, si llamamos $s=\varphi (p)$, podemos elegir un $\varepsilon >0$ tal que $B_{\varepsilon}(s)\cap \mathbb{H}^2 \subseteq \psi (W)$. Sea $U'=\psi^{-1}\left( B_{\varepsilon}(s) \cap \mathbb{H}^2\right)$; utilizando que un abierto de $\R^2$ menos un punto suyo no es simplemente conexo, tenemos que $\varphi (U')\setminus \{\varphi (p) \}$ es no simplemente conexo. Por otro lado, $U'\setminus {p}$ es homeomorfo a $X:=B_{\varepsilon}(s)\cap \mathbb{H}^2 \setminus \{ s\}$.\\
+Sea $x_0\in B_{\varepsilon}(s)\cap \interior{\mathbb{H}^2}$, definimos $F: X\times \left[ 0,1\right] \to X$ por $F(x,t)=x_0 + (1-t)(x-x_0)$, que nos indica que $\{x_0\}$ es un retracto por deformación fuerte de $X$. Por tanto, $X$ es simplemente conexo, lo que implica que también lo son $U'\setminus \{p\}$ y $\varphi(U')\setminus \{ \varphi (p)\}$, pero esto es una contradicción.
 \end{proof}
-La propiedad anterior se puede generalizar para una $n$-variedad con borde, aunque no procede demostrarlo. -¿Cómo ponerlo mejor?-
-\begin{corol}
-Si $M$ es una $n$-variedad con borde, entonces $\partial M$ es un cerrado en $M$, $\partial M$ es una $(n-1)$-variedad. Por otro lado, $M$ es una variedad si y solo si $\partial M=\emptyset$.
-\end{corol}
-\begin{proof}
 
+\begin{corol}
+Si $M$ es una $n$-variedad con borde, entonces $\partial M$ es un cerrado en $M$\begin{comment}, $\partial M$ es una $(n-1)$-variedad\end{comment}
+. Por otro lado, $M$ es una variedad si y solo si $\partial M=\emptyset$.
+\end{corol}
+
+\begin{proof}
+Por el teorema de la invarianza del borde, $\partial M= M\setminus \interior{M}$, y siendo $\interior{M}$ abierto, $\partial M$ es por tanto cerrado. Si $M$ es una variedad, entonces todo punto está en el dominio de una carta interior, por lo que $M=\interior{M}$, y se sigue de la invarianza del borde que $\partial M=\emptyset$. Si suponemos ahora que $M=\partial M$, entonces $M=\interior{M}$, que es una variedad.
 \end{proof}
 \begin{figure}[t]%%%%FIG: Cilindro y Möbius
 \begin{subfigure}{.5\textwidth}
@@ -1679,6 +1684,7 @@ Una aplicación $q:X\to Y$ continua y sobreyectiva es una aplicación cociente s
 \end{prop}
 
 \begin{prop}[Propiedades de las aplicaciones cociente]
+Se tienen las siguientes propiedades:
 \begin{itemize}
 \item La composición de aplicaciones cociente es una aplicación cociente.
 \item Una aplicación cociente sobreyectiva es un homeomorfismo.
