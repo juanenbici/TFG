@@ -19,5 +19,6 @@
 \contentsline {section}{\numberline {4.2}Representaci\IeC {\'o}n de superficies con cremalleras}{22}{section.4.2}
 \contentsline {section}{\numberline {4.3}Teorema de Clasificaci\IeC {\'o}n}{24}{section.4.3}
 \contentsline {chapter}{\numberline {A}Algunos teoremas de topolog\IeC {\'\i }a importantes}{26}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}CW-complejos}{27}{appendix.Alph2}
-\contentsline {chapter}{Bibliograf\'{\i }a}{30}{appendix*.25}
+\contentsline {section}{\numberline {A.1}Cocientes topol\IeC {\'o}gicos}{26}{section.Alph1.1}
+\contentsline {chapter}{\numberline {B}CW-complejos}{28}{appendix.Alph2}
+\contentsline {chapter}{Bibliograf\'{\i }a}{31}{appendix*.25}

@@ -154,6 +154,7 @@ $I$ representará el intervalo $\left[ 0,1\right]$.
 \pagenumbering{arabic} 
 \setcounter{page}{1}
 En este capítulo doy las definiciones y resultados básicos sobre variedades y superficies. Me basaré principalmente en los libros de J. M. Lee \cite{lee1} y V. Muñoz - J. J. Madrigal \cite{juanjo}.\\
+
 \section{Variedades}\label{sec:variedades}
 Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo son las variedades, y en concreto las superficies. Definámoslas.
 \begin{defin}\label{def:variedad}%%%%DEF: variedad topológica
@@ -226,38 +227,25 @@ Si denotamos $\varphi (p)=a=(a_1,\dots ,a_n)$, podemos distinguir entre dos tipo
 \item[2.] \textit{Puntos borde:} Si $a_n=0$ para todo $n$, entonces podemos tomar una semibola $V'=B_{\varepsilon}^{+}=B_{\varepsilon}(a)\cap \mathbb{H}^n$, y $V=\varphi^{-1}(V')$. Decimos que $p$ es un \enfatiza{punto borde de $M$}. Al conjunto de todos los puntos borde de $M$ lo denotamos por $\partial M$.
 \end{itemize}
 \begin{prop}%%%%PROP: interior y borde de una variedad con borde
-Sea $M$ una variedad con borde, entonces $\interior{M}$ es un abierto de M, y es en sí mismo una $n$-variedad.
+Sea $M$ una variedad con borde, entonces $\interior{M}$ es un abierto de $M$, y es en sí mismo una $n$-variedad.
 \end{prop}
 \begin{proof}
-
+Sea, para cada $x\in \interior{M}$, $(U_x,\psi_x)$ una carta para $x$, donde $U_x$ es un abierto localmente homeomorfo a un espacio Euclídeo. Se tiene que $\interior{M}=\bigcup_{x\in M} U_x$, por lo que es un abierto, y además localmente Euclídeo, lo que implica que es variedad.
 \end{proof}
 \begin{prop}%%%%PROP: invarianza del borde
-Si $M$ es una $n$-variedad con borde, entonces un punto $p\in M$ no puede ser un punto interior y un punto borde al mismo tiempo. O lo que es lo mismo, $M=\interior{M} \cup \partial M$, con $\interior{M} \cap \partial M=\emptyset$.
+Si $M$ es una superficie con borde, entonces un punto $p\in M$ no puede ser un punto interior y un punto borde al mismo tiempo. O lo que es lo mismo, $M=\interior{M} \cup \partial M$, con $\interior{M} \cap \partial M=\emptyset$.
 \end{prop}
 \begin{proof}
-
+Supongamos que $p\in M$ es tanto un punto interior como un punto borde de $M$. Entonces existen $(U,\varphi)$ tal que $\varphi (U)\subseteq \interior{\mathbb{H}^2}$ y $(V,\psi)$ tal que $\psi (V)\subseteq \mathbb{H}^2$, donde $\psi (p)=s\in \partial \mathbb{H}^2$. 
 \end{proof}
+La propiedad anterior se puede generalizar para una $n$-variedad con borde, aunque no procede demostrarlo. -¿Cómo ponerlo mejor?-
 \begin{corol}
 Si $M$ es una $n$-variedad con borde, entonces $\partial M$ es un cerrado en $M$, $\partial M$ es una $(n-1)$-variedad. Por otro lado, $M$ es una variedad si y solo si $\partial M=\emptyset$.
 \end{corol}
 \begin{proof}
 
 \end{proof}
-Hacemos incapié en que los conceptos de \textit{variedad} y \textit{variedad con borde} son distintos. Una variedad con borde puede ser o no una variedad, pues puede tener el borde vacío. En cambio, una variedad es siempre una variedad con borde en la que todo punto es un punto interior. Para evitar confusiones, si el contexto lo pide, utilizaremos \enfatiza{variedad sin borde} para referirnos a una variedad en el sentido de la \autoref{def:variedad}.\\
-Veamos algunos ejemplos no triviales de superficies con borde:
-\begin{eje}\label{rep:borde}
-\begin{itemize}
-\item[(1)] El cilindro  (\autoref{fig:cilindro}): $$Cil=\left\{(x,y,z)\in \R^3 \mid x^2+y^2=1,\, z\in \left[ 0,1\right] \right\} \,.$$
-\item[(2)] La banda de Möbius (\autoref{fig:mobius}):
-\begin{align*}
-Mob=
-& \left\{ \left(\left(1+\left(y-\frac{1}{2}\right)\cos \left(\pi x\right)\right), \, \left(1+\left(y-\frac{1}{2}\right)\cos \left(\pi x\right)\right)\sin \left( 2 \pi x\right), \right. \right.\\
-& \left. \left. \left( y-\frac{1}{2} \right)\sin \left( \pi x\right)\right) \mid x\in \left[0,1\right], \, y\in \left[0,1\right] \right\} \, .
-\end{align*}.
-\end{itemize}
-\end{eje}
-
-\begin{figure}[b]%%%%FIG: Cilindro y Möbius
+\begin{figure}[t]%%%%FIG: Cilindro y Möbius
 \begin{subfigure}{.5\textwidth}
 \centering
 \begin{tikzpicture}[scale=1.5]
@@ -281,6 +269,21 @@ Mob=
 \caption{Banda de Möbius.\label{fig:mobius}}
 \end{subfigure}
 \end{figure}
+Hacemos incapié en que los conceptos de \textit{variedad} y \textit{variedad con borde} son distintos. Una variedad con borde puede ser o no una variedad, pues puede tener el borde vacío. En cambio, una variedad es siempre una variedad con borde en la que todo punto es un punto interior. Para evitar confusiones, si el contexto lo pide, utilizaremos \enfatiza{variedad sin borde} para referirnos a una variedad en el sentido de la \autoref{def:variedad}.\\
+Veamos algunos ejemplos no triviales de superficies con borde:
+\begin{eje}\label{rep:borde}
+\begin{itemize}
+\item[(1)] El cilindro  (\autoref{fig:cilindro}): $$Cil=\left\{(x,y,z)\in \R^3 \mid x^2+y^2=1,\, z\in \left[ 0,1\right] \right\} \,.$$
+\item[(2)] La banda de Möbius (\autoref{fig:mobius}):
+\begin{align*}
+Mob=
+& \left\{ \left(\left(1+\left(y-\frac{1}{2}\right)\cos \left(\pi x\right)\right), \, \left(1+\left(y-\frac{1}{2}\right)\cos \left(\pi x\right)\right)\sin \left( 2 \pi x\right), \right. \right.\\
+& \left. \left. \left( y-\frac{1}{2} \right)\sin \left( \pi x\right)\right) \mid x\in \left[0,1\right], \, y\in \left[0,1\right] \right\} \, .
+\end{align*}.
+\end{itemize}
+\end{eje}
+
+
 \section{Suma conexa de variedades}
 
 OJO:TAMBIEN SE PUEDE DAR EN FUNCION DE ESPACIOS ADJUNCION
@@ -322,7 +325,7 @@ A $M$ así definida se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, 
 Sean $V_1$ y $V_2$ variedades. Entonces $M=V_1\#V_2$ es una variedad.
 \end{prop}
 \begin{proof}
-Denotemos la proyección $\pi:M_1^o\amalg M_2^o\to X$. Sea $S=\pi (S_1)=\pi (S_2)$. Tenemosdos abiertos $U_j=M_j^o-S_j$, $j=1,2$ saturados. Por tanto, $\pi :U_ j\to \pi (U_j)=U_j'$ es homeomorfismo. Esto implica que $X$ es localmente $\R^n$ en los puntos de $U_1'\cup U_2'$ . Además ahí la topología es Hausdorff y IIAN.
+Denotemos la proyección $\pi:M_1^o\amalg M_2^o\to X$. Sea $S=\pi (S_1)=\pi (S_2)$. Tenemos dos abiertos $U_j=M_j^o-S_j$, $j=1,2$ saturados. Por tanto, $\pi :U_ j\to \pi (U_j)=U_j'$ es homeomorfismo. Esto implica que $X$ es localmente homeomorfo a  $\R^n$ en los puntos de $U_1'\cup U_2'$ . Además es Hausdorff y IIAN.
 Veamos ahora qué ocurre para un punto $p\in S$. Se tiene que $p=\pi (p_1)=\pi (p_2)$, $p_j\in S_j$, $j=1,2$, y $\varphi_j(p_j)=x_0 \in \partial B_1(0) \in \R^n$. Tomamos un entorno $V\subset \partial B_1(0)$ de $x_0$ en $\partial B_1(0)$, con lo que $\hat{V}=\{rx\mid   r\in (1-\varepsilon , 1+\varepsilon ), x\in V\}$ es entorno de $x_0$ en $\R^n$, y $\hat{V}-B_1(0)=\{rx\mid r\in [1, 1+\varepsilon ), x \in V\}$. Sea $V_j=\varphi_j^{-1}(\hat{V}-B_1(0))\subset M_j^o$, que es entorno de $p_j$. Claramente $V_1\amalg V_2$ es abierto saturado de $M_1^o\amalg M_2^o$, luego $\tilde{V}=\pi (V_1\amalg V_2)$ es entorno de $p$ en $X$. Veamos ahora que es homeomorfo a un abierto de $\R^n$. Sea
 \begin{align*}
 \Phi : & V_1\amalg V_2  \to  V\times (1-\varepsilon , 1+ \varepsilon ), \\
@@ -603,12 +606,13 @@ Toda superficie es triangulable por un poliedro de un complejo simplicial 2-dime
 
 
 \chapter{Teorema de Clasificación}
-En esta sección daremos una demostración clásica del teorema de clasificación de superficies compactas, que fue probado por primera vez en 1907 por Max Dehn y Poul Heegaard \cite{dehn}.  En las primeras dos secciones utilizo las nociones que da Lee \cite{lee1} sobre la representación de superficies, y las amplío a la representación de superficies con borde. En la tercera sección demuestro el teorema basándome en la prueba de Lee \cite{lee1}, que a su vez se basa en la demostración clásica de Seifert y Threlfall \cite{seifert}. Finalmente clasifico las superficies con borde, siguiendo la idea de Massey \cite{massey}.
+En esta sección daremos una demostración clásica del teorema de clasificación de superficies compactas, que fue probado por primera vez en 1907 por Max Dehn y Poul Heegaard \cite{dehn}. En las primeras dos secciones utilizo las nociones que da Lee \cite{lee1} sobre la representación de superficies, y las amplío a la representación de superficies con borde. En la tercera sección demuestro el teorema basándome en la prueba de Lee \cite{lee1}, que a su vez se basa en la demostración clásica de Seifert y Threlfall \cite{seifert}. Finalmente clasifico las superficies con borde, siguiendo la idea de Massey \cite{massey}.
 
 
 \section{Superficies como cocientes}
 
-Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Trataremos de dar una forma de representarlas como polígonos, y veremos que toda superficie compacta se puede representar en el plano como el cociente de un polígono por una relación de equivalencia que identifica sus lados dos a dos. Empecemos viendo tres ejemplos elementales: la esfera $\Esfera$, el plano proyectivo $\Proyectivo$ y el toro $\Toro$. Como veremos, estas superficies son fundamentales pues toda superficie compacta se puede construir a partir de ellas. 
+Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Trataremos de dar una forma de representarlas como polígonos, y veremos que toda superficie compacta se puede representar en el plano como el cociente de un polígono por una relación de equivalencia que identifica sus lados dos a dos.\\
+Veamos tres ejemplos elementales: la esfera $\Esfera$, el plano proyectivo $\Proyectivo$ y el toro $\Toro$. Como veremos, estas superficies son fundamentales pues toda superficie compacta se puede construir a partir de ellas. 
 
 \begin{prop}%%%%PROP: ESFERA COCIENTE DISCO Y CUADRADO%%%%
 \label{prop:Esfera como cociente de disco y cuadrado}
@@ -1657,8 +1661,35 @@ Sea $S$ una superficie compacta. Sabemos, por el \nameref{teo:rado}, que $S$ est
 \appendix
 \chapter{Algunos teoremas de topología importantes}
 
-\begin{tma}[Lema de la aplicación cerrada]
-\label{teo:aplicac_cerrada}
+
+\section{Cocientes topológicos}
+Empecemos recordando las nociones básicas de cocientes topológicos.
+\begin{defin}
+Sea $X$ un espacio topológico e $Y$ un conjunto. Sea $f:X\to Y$ una aplicación sobreyectiva. Definimos la \enfatiza{topología cociente} sobre $Y$ inducida por $f$ de la siguiente manera: $V\subseteq Y$ es abierto si y solo si $f^{-1}(V)$ es abierto e n$X$.
+\end{defin}
+\begin{defin}
+Si $X$ e $Y$ son espacios topológicos, decimos que  $q:X\to Y$ es una \enfatiza{aplicación cociente} o \enfatiza{identificación} si es sobreyectiva e $Y$ tiene la topología cociente inducida por $q$.
+\end{defin}
+Se deduce de la definición que una aplicación cociente es siempre continua.\\
+Sea ahora $X$ un espacio topológico y $\sim$ una relación de equivalencia en $X$. Si $X/\sim$ es el conjunto de las clases de equivalencia, sea $q:X\to X/\sim$ la aplicación que lleva cada $x\in X$ a su clase de equivalencia. Entonces decimos que $X/\sim$ junto con la topología cociente inducida por $q$ es un \enfatiza{espacio cociente} de $X$ por la relación de equivalencia $\sim$.\\
+Estudiemos ahora condiciones bajo las cuales una aplicación entre dos espacios topológicos es una aplicación cociente.\\
+Sean $X$ e $Y$ espacios topológicos y sea $q:X\to Y$ una aplicación. Si $y\in Y$ decimos que un subconjunto del tipo $q^{-1}(y)\subseteq X$ es una \enfatiza{fibra} de $q$. Un conjunto $U\subseteq X$ tal que existe un $V\subseteq Y$ con $U=q^{-1}(V)$ decimos que es \enfatiza{saturado con respecto de q}.
+\begin{prop}
+Una aplicación $q:X\to Y$ continua y sobreyectiva es una aplicación cociente si y solo si lleva abiertos saturados a abiertos saturados.
+\end{prop}
+
+\begin{prop}[Propiedades de las aplicaciones cociente]
+\begin{itemize}
+\item La composición de aplicaciones cociente es una aplicación cociente.
+\item Una aplicación cociente sobreyectiva es un homeomorfismo.
+\item Si $q:X\to Y$ es una aplicación cociente y $U\subseteq X$ es un abierto (o cerrado) saturado, entonces la restricción $q|_U:U\to q(U)$ es una aplicación cociente.
+\end{itemize}
+\end{prop}
+\begin{prop}
+Si $q:X\to Y$ es una aplicación continua, sobreyectiva y abierta o cerrada, entonces es una aplicación cociente.
+\end{prop}
+
+\begin{tma}[Lema de la aplicación cerrada]\label{teo:aplicac_cerrada}
 Sea $F$ una aplicación continua de un espacio topológico compacto en un espacio topológico Hausdorff. Entonces:
 \begin{itemize}
 \item[(a)]$F$ es una aplicación cerrada.
@@ -1673,9 +1704,9 @@ Sea $F$ una aplicación continua de un espacio topológico compacto en un espaci
 Supongamos $q_1:X\to Y_1$ y $q_2:X\to Y_2$ son aplicaciones cociente que hacen las mismas identificaciones, es decir, tales que $q_1(x)=q_1(x')$ si y solo si $q_2(x)=q_2(x')$. Entonces existe un único homeomorfismo $\phi:Y_1\to Y_2$ tal que $\phi \circ q_1=q_2$.
 \end{tma}
 
-\begin{tma}[Invarianza del dominio]\label{teo:inv_dom}
-Sean $U\subset \R^n$ y $V\subset \R^m$ abiertos homeomorfos. Entonces $n=m$.
-\end{tma}
+\begin{prop}[Pasando al cociente]
+Supongamos que $q:X\to Y$ es una aplicación cociente, $Z$ es un espacio topológico y $f:X\to Z$ es una aplicación continua tal que si $q(x)=q(x')$, entonces $f(x)=f(x')$. Entonces existe una única aplicación continua $\tilde{f}:Y\to Z$ tal que $f=\tilde{f} \circ q$.
+\end{prop}
 
 \begin{tma}[Lema de pegado]
 Sean $A,B$ dos subconjuntos abiertos (o cerrados) de un espacio topológico $X$, tal que $X=A\cap B$, y sea $Y$ otro espacio topológico. Si la restricción de $f:X\to Y$ a $A$ y $B$ es continua, entonces $f$ es continua.
