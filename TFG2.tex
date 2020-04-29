@@ -120,7 +120,7 @@
 \vfill 
 Dirigido por:\\
 Manuel Alonso Morón\\[.1in]
-\Large{Junio de 2020}
+\Large{}%junio de 2020
 \end{center}
 
 \end{titlepage}
@@ -166,7 +166,7 @@ No siempre se tiene que la adherencia de una bola coordenada sea homeomorfa a un
 \begin{obs}%%%%OBS: toda propiedad local de Rn se pasa a las variedades
 Como la propiedad ``ser localmente homeomorfo a $\R^n$'' es local, toda propiedad local de $\R^n$ se traslada a una variedad. Así, las variedades son localmente compactas, I AN, localmente conexas, localmente conexas por caminos y localmente simplemente conexas.
 \end{obs}%COPIADO lo de abajo, cambiar las palabras!!!!!!!!!!!!
-El \textit{Teorema de Invarianza del Dominio} (\autoref{teo:inv_dom}) dice que si $W\subset \R^n$ y $W'\subset \R^m$ son abiertos y existe $\phi: W \rightarrow W'$ homeomorfismo, entonces $n=m$. Esto implica que, dado un  $p\in M$ de una variedad, hay un único $n=n(p)$ tal que un entorno $U^p$ es homeomorfo a un abierto $U'\subset \R^n$. Llamamos $n(p)$ la \enfatiza{dimensión en p}. Como para todo punto $q\in U$ podemos tomar $U$ como entorno de $q$, se tiene por tanto $n(q)=n(p)$. Luego en toda la componente conexa de $p$, el $n$ que aparece es el mismo, y lo llamaremos \enfatiza{dimensión} de dicha componente conexa. Si escribimos $M=\amalg M_i$, con $M_i$ componentes conexas de $M$, todas las $M_i$ son variedades, y si todas las $M_i$ tienen la misma dimensión $n$, entonces escribimos $n=\dimension{M}$ , y decimos que $M$ es una \enfatiza{n-variedad}.\\
+El \textit{Teorema de Invarianza del Dominio} dice que si $W\subset \R^n$ y $W'\subset \R^m$ son abiertos y existe $\phi: W \rightarrow W'$ homeomorfismo, entonces $n=m$. Esto implica que, dado un  $p\in M$ de una variedad, hay un único $n=n(p)$ tal que un entorno $U^p$ es homeomorfo a un abierto $U'\subset \R^n$. Llamamos $n(p)$ la \enfatiza{dimensión en p}. Como para todo punto $q\in U$ podemos tomar $U$ como entorno de $q$, se tiene por tanto $n(q)=n(p)$. Luego en toda la componente conexa de $p$, el $n$ que aparece es el mismo, y lo llamaremos \enfatiza{dimensión} de dicha componente conexa. Si escribimos $M=\amalg M_i$, con $M_i$ componentes conexas de $M$, todas las $M_i$ son variedades, y si todas las $M_i$ tienen la misma dimensión $n$, entonces escribimos $n=\dimension{M}$ , y decimos que $M$ es una \enfatiza{n-variedad}.\\
 El ejemplo más trivial de $n$-variedad es $\R^n$, pero también lo es cualquier abierto suyo. De hecho, esto se puede generalizar:
 \begin{prop}%%%%PROP: abierto variedad abierto
 Todo subconjunto abierto de una $n$-variedad es una $n$-variedad.
@@ -276,7 +276,7 @@ Por el teorema de la invarianza del borde, $\partial M= M\setminus \interior{M}$
 \end{figure}
 Hacemos incapié en que los conceptos de \textit{variedad} y \textit{variedad con borde} son distintos. Una variedad con borde puede ser o no una variedad, pues puede tener el borde vacío. En cambio, una variedad es siempre una variedad con borde en la que todo punto es un punto interior. Para evitar confusiones, si el contexto lo pide, utilizaremos \enfatiza{variedad sin borde} para referirnos a una variedad en el sentido de la \autoref{def:variedad}.\\
 Veamos algunos ejemplos no triviales de superficies con borde:
-\begin{eje}\label{rep:borde}
+\begin{eje}\label{eje:rep_borde}
 \begin{itemize}
 \item[(1)] El cilindro  (\autoref{fig:cilindro}): $$Cil=\left\{(x,y,z)\in \R^3 \mid x^2+y^2=1,\, z\in \left[ 0,1\right] \right\} \,.$$
 \item[(2)] La banda de Möbius (\autoref{fig:mobius}):
@@ -290,18 +290,14 @@ Mob=
 
 
 \section{Suma conexa de variedades}
-
-OJO:TAMBIEN SE PUEDE DAR EN FUNCION DE ESPACIOS ADJUNCION
 Sean $V_1$ y $V_2$ dos $n$-variedades conexas. Dados $p_1\in V_1$ y $p_2\in V_2$ sean $U_1^{p_1}\subset V_1$, $U_2^{p_2}\subset V_2$  entornos abiertos de $p_1$ y $p_2$ respectivamente, y sean $\phi_1:U_1\to\R^n$ y $\phi_2:U_2\to\R^n$ dos homeomorfismos tales que $\phi_1(p_1)=0$ y $\phi_2(p_2)=0$. Si llamamos $B_1=\phi_1^{-1}(B_1(0))\subset V_1$ y $B_2=\phi_2^{-1}(B_1(0))\subset V_2$, consideremos $V_1^o=V_1-B_1$, $V_2^o=V_2-B_2$ y $V_1^o \amalg V_2^o$ con la topología unión disjunta.
 Se define la relación de equivalencia $\sim$ en la que si $x_1\in S_1=\phi_1^{-1}(\partial B_1(0))$, $x_2\in S_2=\phi_2^{-1}(\partial B_1(0))$, entonces $x_1\sim x_2$ si y sólo si $\phi_1(x_1)=\phi_2(x_2)$, y se considera el cociente 
 
-$$M=\frac{V_1^o\amalg V_2^o}{\sim}.$$\\
+$$M=\frac{V_1^o\amalg V_2^o}{\sim}.$$
 
 \begin{defin}%%%% DEF: suma conexa
 A $M$ así definida se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, y se denota por $M=V_1\#V_2$.
 \end{defin}
-
-
 \begin{figure}[t]%%%%FIG: 2-toro
 \centering
 \begin{tikzpicture}
@@ -320,12 +316,6 @@ A $M$ así definida se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, 
 \end{tikzpicture}
 \caption{Suma conexa de toros.}
 \end{figure}
-
-
-
-
-
-
 \begin{prop}%%%% PROP: suma conexa es variedad.
 Sean $V_1$ y $V_2$ variedades. Entonces $M=V_1\#V_2$ es una variedad.
 \end{prop}
@@ -868,7 +858,7 @@ Finalmente, para probar (c), cada polígono es en sí una superficie con borde. 
 La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando los lados del cuadrado $I\times I$ de acuerdo a $(0,t)\sim (1,t)$ y $(t,0)\sim (1-t,1)$ para $0\leq t\leq 1$.  Para visualizar $K$, podemos pensar en pegar los lados izquierdo y derecho creando un cilindro, y luego hacer pasar el extremo superior por la parte inferior del cilindro, para finalmente pegar los dos extremos (ver \autoref{fig:klein}).
 \end{eje}
 
-\begin{figure}[b]%%%%FIG: Klein
+\begin{figure}[t]%%%%FIG: Klein
 \centering
 \begin{tikzpicture} [use optics]
 %\draw [help lines] (-6,-2) grid (6,2);
@@ -896,7 +886,7 @@ La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando los l
 \end{tikzpicture}
 \caption{Construcción de la botella de Klein.\label{fig:klein}}
 \end{figure}
-\begin{eje}
+\begin{eje}\label{eje:rep_mobius}
 Veamos ahora como obtener las figuras del \autoref{eje:rep_borde}. El cilindro $Cil$ es la superficie con borde que se obtiene al identificar los lados de un cuadrado $I\times I$ dada la relación de equivalencia $(0,y)\sim (1,y),$ con $y\in I$ (\autoref{fig:ident_cil}). La banda de Möbius $Mob$ es la superficie con borde que se obtiene identificando los lados del cuadrado $I\times I$ de acuerdo a la relación $(0,y)\sim (1,1-y)$, $y\in I$ (\autoref{fig:ident_mob}).
 \end{eje}
 
@@ -956,7 +946,7 @@ Si $X$ es un espacio topológico y $\mathcal{P}$ una representación poligonal c
 \begin{obs}%%%%OBS: representación de una sola cara implica conexo
 Un espacion topológico que admite una representación con una sola cara es conexo, pues es homeomorfo al cociente de una región poligonal conexa. Con más de una cara, puede ser o no conexo.
 \end{obs}
-\begin{eje}%%%%PROP: representación de superficies importantes
+\begin{eje}\label{eje:rep_sup_importantes}%%%%PROP: representación de superficies importantes
 Veamos las representaciones de algunas superficies importantes (ver \autoref{fig:Representacion_superficies_importantes} y \autoref{fig:representacion_esfera_proyectivo}).
 \begin{itemize}
 \item[(a)] $\mathbb{S}^2=\langle a\mid aa^{-1}\rangle=\langle a,b\mid  abb^{-1}a^{-1}\rangle$ (\autoref{prop:Esfera como cociente de disco y cuadrado})
@@ -968,9 +958,9 @@ Veamos las representaciones de algunas superficies importantes (ver \autoref{fig
 \begin{eje}%M%%%:PROP: representación de superficies con borde
 Veamos las representaciones de algunas superficies con borde (\autoref{fig:representacion_borde}):
 \begin{itemize}
-\item[(a)] $\overline{\mathbb{B}}^2=\langle a,b,c\mid abc\rangle$ (\autoref{prop:rep_disco}).
-\item[(b)] $Mob=\langle a,b,c\mid abac\rangle$ (\autoref{prop:rep_moebius}).
-\item[(c)] $Cil=\langle a,b,c\mid aba^{-1}c\rangle$ (\autoref{prop:rep_mobius}).
+\item[(a)] $\overline{\mathbb{B}}^2=\langle a,b,c\mid abc\rangle$.
+\item[(b)] $Mob=\langle a,b,c\mid abac\rangle$ (\autoref{eje:rep_mobius}).
+\item[(c)] $Cil=\langle a,b,c\mid aba^{-1}c\rangle$ (\autoref{eje:rep_mobius}).
 \end{itemize}
 \end{eje}
 \begin{figure}[h]%%%%FIG: Representación de superficies impoirtantes
@@ -1254,7 +1244,7 @@ Las operaciones elementales sobre representaciones poligonales dan lugar a repre
 \end{prop}
 \begin{proof}
 Los casos de reetiquetar, subdividir y rotar son cambios puramente formales que no afectan al espacio cociente. Los casos subdividir/consolidar, cortar/pegar y plegar/desplegar son inversos, con lo que basta probar uno de cada par. 
-Empecemos con la operación de cortar. Sean $P_1, P_2$ dos regiones poligonales convexas etiquetadas por las palabras $W_1e$ y $e^{-1}W_2$ y sea $P'$ la region poligonal etiquetada por $W_1 W_2$. Supongamos de momento que no hay más palabras en las respectivas presentaciones. Si $\pi :P_1\amalg P_2\to M$ y $\pi' :P'\to M'$ representan respectivamente las aplicaciones cocientes. El segmento que va desde el vértice final de $W_1$ en $P'$ a su vértice inicial yace en $P'$ por convexidad, y lo etiquetamos con $e$. Por el \autoref{lema:celdas}, existe una aplicación continua $f:P_1\amalg P_2\to P'$ que lleva cada lado de $P_1$ o $P_2$ a su correspondiente en $P'$, y cuya restricción a cada $P_i$ es un homeomorfismo sobre su imagen. Por el \autoref{teo:aplicac_cerrada}, $f$ es una aplicación cociente. Dado que $f$ identifica únicamente los lados $e$ y $e^{-1}$, la aplicación cociente $\pi '\circ f$ y $\pi$ hacen exactamente las mismas identificaciones, y por tanto los espacios cociente $M$ y $M'$ son homeomorfos. 
+Empecemos con la operación de cortar. Sean $P_1, P_2$ dos regiones poligonales convexas etiquetadas por las palabras $W_1e$ y $e^{-1}W_2$ y sea $P'$ la region poligonal etiquetada por $W_1 W_2$. Supongamos de momento que no hay más palabras en las respectivas presentaciones. Si $\pi :P_1\amalg P_2\to M$ y $\pi' :P'\to M'$ representan respectivamente las aplicaciones cocientes. El segmento que va desde el vértice final de $W_1$ en $P'$ a su vértice inicial yace en $P'$ por convexidad, y lo etiquetamos con $e$. Por el \autoref{lema:celdas}, existe una aplicación continua $f:P_1\amalg P_2\to P'$ que lleva cada lado de $P_1$ o $P_2$ a su correspondiente lado en $P'$, y cuya restricción a cada $P_i$ es un homeomorfismo sobre su imagen. Por el \autoref{teo:aplicac_cerrada}, $f$ es una aplicación cociente. Dado que $f$ identifica únicamente los lados $e$ y $e^{-1}$, la aplicación cociente $\pi '\circ f$ y $\pi$ hacen exactamente las mismas identificaciones, y por tanto los espacios cociente $M$ y $M'$ son homeomorfos. 
 En el caso de que hubiese otras palabras $W_3,\dots ,W_k$, simplemente extendemos $f$ como la identidad en sus respectivas presentaciones poligonales y procedemos como antes.
 
 Para el plegado, ignoramos como antes palabras adicionales $W_2,\dots W_k$. Supongamos para empezar que $W_1=abcd$ tiene longitud exáctamente 4. Sea $P$ una región poligonal convexa con lados etiquetados por $abee^{-1}cd$. Si cortamos a lo largo de el segmento $f$ que une el vértice inicial de $a$ con el vértice final de $e$ y obtenemos así $abef$ y $f^{-1}e^{-1}cd$. Consolidamos $ef$ en $h$, obteniendo así $ah^{-1}$ y $bch$. Pegamos por $h$ y obtenemos así $abcd$. ((Lo he cambiado para evitar hablar de simplex que los introduzco más tarde. Vale igualmente?))
@@ -1331,6 +1321,76 @@ Se sigue de este resultado que la realización geométrica de $\langle S_1,a,b,c
 
 
 \section{Teorema de clasificación de superficies compactas}
+
+\begin{prop}\label{prop:superficie_tiene_representacion}%%%PROP: representacion poligonal
+Toda superficie compacta admite una representación poligonal.
+\end{prop}
+\begin{proof}
+Sea $M$ una superficie compacta. Por el Teorema de Radó, $M$ es homeomorfa al poliedro $|K|$ de un complejo simplicial $K$ de dimensión 2, en donde todo 1-símplice es una cara de exáctamente dos 2-símplices.
+Sea $\mathcal{P}$ la representación poligonal de una superficie que consta de una palabra de longitud 3 por cada 2-símplice, y cuyos bordes tienen las mismas etiquetas si y solo si corresponden al mismo 1-símplice. Veamos que la realización geométrica de $\mathcal{P}$ es homeomorfa al poliedro (de?) $K$.
+Si ponemos $P=P_1\amalg \dots \amalg P_k$ que denota al conjunto de la unión disjunta de los 2-símplices de $K$, entonces tenemos las aplicaciones cociente $\pi_K :P\to |K|$ y $\pi_{\mathcal{P}} :P\to |\mathcal{P}|$. Hay que ver por tanto que hacen las mimas identificaciones. Sabemos que las ambas aplicaciones son inyectivas en el interior de los 2-símplices, identifican vértices sólo con vertices y hacen las mismas identificaciones en los bordes. Falta por tanto demostrar que $\pi_K$ y $\pi_{\mathcal{P}}$ identifican los vértices sólo de acuerdo a la relación generada por la identificación de los lados.
+Supongamos que $v\in K$ es un vértice. Se tiene que $v$ pertenece a un 1-símplice, pues si no sería un punto aislado de $|K|$, lo que contradice que $|K|$ sea una variedad. El Teorema de Radó nos garantiza que este 1-símplice es una cara de exáctamente dos 2-símplices. Definimos una relación de equivalencia sobre los dos 2-símplices que contienen $v$: si $\sigma , \sigma '$ son dos 2-símplices que contienen a $v$, decimos que están \enfatiza{contectados por borde en v} si hay una secuencia de 2-símplices que contienen a $v$ $\sigma =\sigma_1 ,\dots ,\sigma_k =\sigma '$ ta lque cada $\sigma_i$ comparte un borde con $\sigma_{i+1}$  para todo $i=1,\dots , k-1$. Vamos a comprobar que sólo hay una relación de equivalencia por contradicción. Supongamos que podemos agrupar los 2-símplices que contienen a $v$ en dos conjuntos disjuntos $\{ \sigma_1 ,\dots ,\sigma_k \}$ y $\{ \tau_1 ,\dots ,\tau_m \}$ tales que todo $\sigma_i$ está conectado con todo $\sigma_j$ pero ningún $\tau_i$ está conectado con ningún $\sigma_j$.  Sea $\varepsilon >0$ tal que la bola $B_{\varepsilon}(v)$ interseca sólo los símplices que contienen a $v$.  Se tiene entonces que $B_{\varepsilon}(v)\cap |K|$ es un abierto de $|K|$ y por tanto una superficie, por lo que $v$ tiene un entorno $W\subseteq B_{\varepsilon}(v)\cap |K|$ que es homeomorfo a $\R^2$, por lo que $W\setminus \{ v \}$ es conexo. 
+Pero si ponemos ahora $$U=W\cap (\sigma_1 \cup \dots \cup \sigma_k )\setminus \{ v \}$$
+$$V=W\cap (\tau_1 \cup \dots \cup \tau_m )\setminus \{ v \}$$ entonces $U$ y $V$ son dos abiertos de $|K|$ tal cuya intersección con cada símplice es abierta en el símplice, y $W=U\cap V$ es una desconexión de $W$. Pero esto es una contradicción.
+\end{proof}
+
+Como venimos diciendo desde el principio del presente trabajo nuestras superficies fundamentales son el toro $\Toro$, la esfera $ \Esfera$, y el plano proyectivo  $\Proyectivo$. ¿Qué pasa con las otras superficies que hemos visto, como la botella de Klein o la suma conexa de toros y planos proyectivos? La respuesta la obtenemos de los dos siguientes lemas.
+
+\begin{lema}
+La botella de Klein es homeomorfa a $\Proyectivo \# \Proyectivo$.
+\end{lema}
+\begin{proof}
+Vamos a demostrarlo haciendo transformaciones elementales en la representación de la botella de Klein vista en el \autoref{eje:rep_sup_importantes}. 
+Siguiendo la figura \autoref{fig:klein_proyectivo}, tenemos
+\begin{align*}
+\langle a,b| abab^{-1}\rangle & & \\
+\approx & \, \langle a,b,c|abc, c^{-1}ab^{-1}\rangle &\text{(cortar por } c\text{)}\\
+\approx & \, \langle a,b,c,|bca,a^{-1}cb\rangle &\text{(rotar y reflejar)}\\
+\approx & \, \langle b,c|bbcc\rangle &\text{(pegar por } a \text{ y rotar)}
+\end{align*}
+Y esto es la presentación poligonal de la suma conexa de dos planos proyectivos.
+\end{proof}
+
+\begin{lema}
+La suma conexa $\Toro \# \Proyectivo$ es homeomorfa a $\Proyectivo \# \Proyectivo \# \Proyectivo$.
+\end{lema}
+\begin{proof}
+Partimos de una representación poligonal de $K\# \Proyectivo$, que es, por el lema anterior, una presentación de $\Proyectivo \# \Proyectivo \# \Proyectivo$ y procedemos haciendo transformaciones elementales:
+\begin{align*}
+\langle a,b,c | abab^{-1}cc \rangle &&\\
+\approx &\, \langle a,b,c,d | abd^{-1}c,d^{-1}c^{-1}ba^{-1} \rangle &\text{(cortar por } d\text{)}\\
+\approx &\, \langle a,b,d | a,b,d^{-1}ba^{-1}d^{-1}\rangle & \text{(pegar por } c\text{)}\\
+\approx &\, \langle a,b,d,e | deb^{-1}, abea^{-1}d^{-1}\rangle & \text{(cortar por }e\text{ y reflejar)}\\
+\approx &\, \langle adeea^{-1}d^{-1}\rangle & \text{(pegar por } b \text{)} \\
+\approx  &\, \langle a,d,e | a^{-1}d^{-1}adee\rangle & \text{(rotar)}
+\end{align*}
+Esta última es, tal como queríamos, una representación de $\Toro \# \Proyectivo$.
+\end{proof}
+
+Podemos ahora enunciar y demostrar nuestro teorema. Diremos que dos bordes identificados de una representación poligonal son \enfatiza{complementarios} si aparecen tanto en la forma $a$ como en la de $a^{-1}$, y diremos que son \enfatiza{torcidos} si aparecen como $a,\dots ,a$ o como $a^{-1},\dots a^{-1}$. ((Quizás esto interrumpe un poco el discurso. Ponerlo en la demo mejor?))
+
+\begin{tma}[Teorema de Clasificación de Superficies Compactas]\label{teo:csc}
+Toda superficie compacta y conexa no vacía es homeomorfa a alguna de las siguientes superficies:
+\begin{itemize}
+\item[(a)] La esfera $\Esfera$.
+\item[(b)] Una suma conexa $\Toro \# \dots \# \Toro$ de copias del toro.
+\item[(c)] Una suma conexa $\Proyectivo \,  \# \dots\, \# \Proyectivo$ de copias del plano proyectivo. 
+\end{itemize}
+\end{tma}
+\begin{proof}
+Sea $M$ una superficie junto con una representación poligonal suya, que existe por la \autoref{prop:superficie_tiene_representacion}. Probaremos el teorema haciendo transformaciones elementales sobre esta representación hasta llegar a una de las estándar.
+
+\underline{PASO 1}: \textit{M admite una representación con una sola cara.} 
+
+\end{proof}
+
+
+
+
+
+
+
+
 \section{Teorema de clasificación de superficies con borde}
 
 \chapter{La prueba ZIP de Conway}
@@ -1552,11 +1612,15 @@ a) y b) son consecuencia directa del parrafo que precede la preposición. Para c
 
 
 \section{Representación de superficies con cremalleras}
-Veamos un método para representar las perforaciones y cremalleras sobre colecciones de esferas, y definamos unas operaciones sobre estas representaciones que nos den espacios topológicos equivalentes, tal como hicimos en el Capítulo 1. Formalizo la idea dada por Wildberger \cite{wildberger}.
+Veamos un método para representar las perforaciones y cremalleras sobre colecciones de esferas, y definamos unas operaciones sobre estas representaciones que nos den espacios topológicos equivalentes, tal como hicimos en el Capítulo 1. La idea es de Wildberger \cite{wildberger}.
 
-Sean $\Esfera_1,\dots ,\Esfera_k$ esferas con perforaciones, algunas con pares-zip. Para cada esfera, etiquetamos las cremalleras asociadas a un mismo par-zip con el mismo símbolo. Para las partes de perforaciones que no tengan cremallera, las etiquetamos cada una con un símbolo distinto. A cada perforación le asociaremos una palabra, formada a partir de las etiquetas que acabamos de crear. Empezamos arbitrariamente por una, digamos $a$, y si esta está asociada a una cremallera, escribiremos $a$ o $a^{-1}$ dependiendo de si su orientación se corresponde con la de las agujas del reloj; si no está asociada a una cremallera escribiremos simplemente $a$. Recorreremos la perforación en orden en sentido contrario de las agujas del reloj reptiendo el proceso anterior hasta llegar a la anterior etiqueta de la que hemos partido.
-Cada esfera la representaremos por la yuxtaposición de las palabras entre paréntesis asociadas a las perforaciones, y una usperficie formada por varias esferas la escribiremos como la suma de sus representaciones.
+Sean $\Esfera_1,\dots ,\Esfera_k$ esferas con perforaciones, algunas con pares-zip. 
+\begin{itemize}
 
+\item Para cada esfera, etiquetamos las cremalleras asociadas a un mismo par-zip con el mismo símbolo. Para las partes de perforaciones que no tengan cremallera, las etiquetamos cada una con un símbolo distinto. 
+\item A cada perforación le asociaremos una palabra, formada a partir de las etiquetas que acabamos de crear. Empezamos arbitrariamente por una, digamos $a$, y si esta está asociada a una cremallera, escribiremos $a$ o $a^{-1}$ dependiendo de si su orientación se corresponde con la de las agujas del reloj; si no está asociada a una cremallera escribiremos simplemente $a$. Recorreremos la perforación en orden en sentido contrario de las agujas del reloj reptiendo el proceso anterior hasta llegar a la anterior etiqueta de la que hemos partido.
+\item Cada esfera la representaremos por la yuxtaposición de las palabras entre paréntesis asociadas a las perforaciones, y una usperficie formada por varias esferas la escribiremos como la suma de sus representaciones.
+\end{itemize}
 \begin{eje}\label{eje:rep_perf}
 Sea una esfera perforada como la de la izquierda de la \autoref{fig:rep_perf}. Hay dos pares-zip, uno de ellos con las cremalleras en la misma perforación y el otro en perforaciones distintas. Etiquetamos las primeras por $a$ y las segundas por $b$ y etiquetamos el resto de segmentos de las perforaciones sin cremallera por $x,y,z$. Por tanto, una representación de nuestra esfera sería $$(a^{-1}xab)(by)(z)$$
 \end{eje}
@@ -1631,7 +1695,8 @@ Consideramos el caso en que las dos cremalleras ocupan cada una una perforación
 
 Consideramos ahora el caso en el que las dos cremalleras yacen sobre la misma perforación y la cubren totalmente. Identificándolas nos da o bien un \textit{cap} (\autoref{fig:cap}) o bien un \textit{crosscap} (\autoref{fig:crosscap}), dependiendo de sus respectivas orientaciones.
 
-Finalmente, consideramos los varios casos en que las cremalleras no ocupan perforaciones en su totalidad. (A PARTIR DE AQUI NO SE MUY BIEN COMO ORIENTARLO... CON OPERACIONES ELEMENTALES O COMO HACE EL???) 
+Finalmente, consideramos los varios casos en que las cremalleras no ocupan perforaciones en su totalidad. 
+%(A PARTIR DE AQUI NO SE MUY BIEN COMO ORIENTARLO... CON OPERACIONES ELEMENTALES O COMO HACE EL???) 
 \end{proof}
 
 \begin{tma}[Teorema de clasificación, versión preeliminar] %M%%%TEO: Clasificación preeliminar
