@@ -1351,7 +1351,7 @@ Siguiendo la figura \autoref{fig:klein_proyectivo}, tenemos
 Y esto es la presentación poligonal de la suma conexa de dos planos proyectivos.
 \end{proof}
 
-\begin{lema}
+\begin{lema}\label{lema:toro_proyectivo}
 La suma conexa $\Toro \# \Proyectivo$ es homeomorfa a $\Proyectivo \# \Proyectivo \# \Proyectivo$.
 \end{lema}
 \begin{proof}
@@ -1380,10 +1380,25 @@ Toda superficie compacta y conexa no vacía es homeomorfa a alguna de las siguie
 \begin{proof}
 Sea $M$ una superficie junto con una representación poligonal suya, que existe por la \autoref{prop:superficie_tiene_representacion}. Probaremos el teorema haciendo transformaciones elementales sobre esta representación hasta llegar a una de las estándar.
 
-\underline{PASO 1}: \textit{M admite una representación con una sola cara.} 
+\underline{PASO 1}: \textit{M admite una representación con una sola cara.} Si en la representación poligonal de $M$ aparecen dos o más caras, por ser $M$ conexa algún borde de una cara de $M$ tiene que estar identificado con otro borde de otra cara de $M$. Si no fuese así, $M$ sería la unión de los cocientes de sus caras, y dado que cada uno de esos cocientes es abierto y cerrado, desconectarían $M$. Por tanto, a través de sucesivos pegados, con rotaciones y reflexiones si es necesario, podemos reducir el número de caras hasta una.
 
+\underline{PASO 2}: \textit{O bien M es homeomorfa a la esfera, o bien M admite una presentación en la cual no hay pares complementarios adyacentes.} Podemos ir eliminando los pares complementarios adyacentes haciendo sucesivos pegados. O bien los eliminamos todos, o bien nos queda $\langle a\mid aa^{-1}\rangle$, lo que implica que $M$ es homeomorfa a la esfera.
+
+\underline{PASO 3}: \textit{M admite una representación en la que todos los pares torcidos son adyacentes.} Si en la representación de $M$ hay un par torcido no adyacente, podemos transformar la representación con rotaciones hasta una de la forma $VaWa$, donde $V$ y $W$ son palabras no vacías. Guiándonos por la \autoref{fig:PASO3} podemos ahora efectuar sobre $VaWa$ sucesivas transformaciones (cortar a lo largo de $b$, reflejar, pegar a lo largo de $a$) hasta llegar a la representación $VW^{-1}bb$, donde $W^{-1}$ denota la reflexión de $W$. Hemos por tanto sustituido el par torcido $a$,$a$ por el par torcido $b$,$b$, que es adyacente. Al hacer esta operación no hemos separado pares adyacentes. Se pueden haber creado nuevos pares torcidos al reflejar $W$, pero hemos reducido el número total de pares no adyacentes en al menos una unidad. Por tanto, al cabo de un número finito de pasos, no hay más pares torcidos no adyacentes. Si se han creado nuevos pares adyacentes complementarios, repetimos el Paso 2, que no aumenta el número de pares no adyacentes.
+
+\underline{PASO 4}: \textit{M admite una representación en la que todos los vértices se identifican en un único punto.} Sea $v$ una clase de vértices. Si existe otra clase de vértices que no se identifican con $v$, entonces existirá un lado que una $v$ y la otra clase de vértices. Etiquetémoslos por $a$ y $w$ respectivamente, tal como se muestra en la \autoref{fig:PASO4a}. El otro lado que junta con $a$ en su vértice $v$ no puede estar identificado con $a$, pues si fuese su complementario, lo habríamos eliminado en el Paso 2, y si formase con $a$ un par torcido, entonces la aplicación cociente identificaría también los otros dos vértices de cada $a$, y estamos asumiendo lo contrario. Por lo tanto llamamos a este otro lado $b$, y a su otro vértice $x$, el cual puede estar identificado con $v$, con $w$ o con ninguno de los dos.
+
+En algún lugar de la representación poligonal hay un lado que se identifica con $b$, de la forma $b$ o $b^{-1}$. Supongamos que aparece en la forma $b^{-1}$ (el otro caso implica como diferencia sólo una reflexión, que indicaremos cuándo ha de hacerse). Podemos escribir la representación como $baXb^{-1}Y$, donde $X$ e $Y$ son palabras desconocidas y al menos una es no vacía. Ahora, cortando a lo largo de $c$ y pegando a lo largo de $b$ (efectuando aquí la reflexión necesaria si el lado aparecía como $b$) como se muestra en la \autoref{fig_PASO4b}, llegamos a una representación en la cual el número de vértices con etiqueta $v$ ha disminuído, mientras que en cambio el número de vértices con la etiqueta $w$ ha aumentado. Si se han introducido nuevos pares complementarios adyacentes, volvemos a aplicar el Paso 2 de nuevo para quitarlos. Esta operación puede hacer disminuir los vértices etiquetados por $v$ (por ejemplo por la operación de plegado) pero nunca aumentarlos. Repitiendo la secuencia un número finito de veces, podemos finalmente eliminar totalmente la clase de vértices $v$. Iterando el proceso podemos quedarnos finalmente con una sola clase de vértices.
+
+\underline{PASO 5}: \textit{Si la presentación tiene un par complementario $a$, $a^{-1}$, entonces tiene otro par complementario $b$,  $b^{-1}$ que aparece intercalado con el primero, en la forma $a,\dots , b, \dots ,a^{-1}, \dots , b^{-1} $.} Si no es así, entonces la presentación es de la forma $aXa^{-1}Y$, donde $X$ e $Y$ contienen sólo pares complementarios o pares torcidos adyacentes. ((Hä???)) Por lo tanto cada borde en $X$ se identifica con otro borde en $X$, y lo mismo pasa en $Y$. Esto implica que los vértices finales de $a$ y $a^{-1}$, que tocan únicamente $X$, se identifican por tanto sólo con vértices de $X$, y que los vértices iniciales de $a$ y $a^{-1}$ se identifican sólo con vértices de $Y$. Esto es una contradicción, puesto que todos los vértices se identifican unos con otros por el Paso 4.
+
+\underline{PASO 6}: \textit{M admite una presentación en la que todos los pares complementarios intercalados aparecen juntos con ningún otro borde entre ellos: $aba^{-1}b^{-1}$.} Si la representación poligonal está formada a partir de la palabra $WaXbYa^{-1}Zb^{-1}$, hacemos, como en la figura \autoref{fig:PASO6}, las siguientes transformaciones: cortamos a lo largo de $c$, pegamos por $a$, cortamos a lo largo de $d$, y pegamos finalmente por $b$. Obtenemos así la palabra $cdc^{-1}d^{-1}WZYX$, sustituyendo por tanto los dos pares adyacentes por un nuevo par intercalado $cdc^{-1}d^{-1}$, sin separar otros lados que previamente eran adyacentes ((y sin crear nuevos pares torcidos)). Por lo tanto, repitiendo el proceso un número de veces se obtiene el resultado.
+
+\underline{PASO 7}: \textit{M es homeomorfa a la suma conexa de uno o más toros o a la suma conexa de uno o más planos proyectivos.} Este es el paso que finaliza la demostración.  Recapitulando lo hecho en los pasos anteriores, tenemos una representación de $M$ (que llamaremos \textit{representación estándar}) en la cual todos los pares torcidos aparecen uno junto al otro y todos los pares complementarios aparecen intercalados en grupos de dos, en la forma $aba^{-1}b^{-1}$. Por tanto esta es la representación de una suma conexa de toros (representados por los bloques $aba^{-1}b^{-1}$) y de planos proyectivos (representados por los $cc$). Si sólo aparecen o bien toros o bien planos proyectivos, hemos terminado.
+Nos queda el caso en el que aparecen tanto pares torcidos como pares complementarios. Si es así, algún par complementario aparece junto a un par torcido, es decir por la palabra $aba^{-1}b^{-1}ccX$ o $ccaba^{-1}b^{-1}X$. En los dos casos, tenemos la suma conexa de un toro, un plano proyectivo, y lo que represente la palabra $X$. Pero por el \autoref{lema:toro_proyectivo}, $\Toro \# \Proyectivo = \Proyectivo \# \Proyectivo \# \Proyectivo$, por lo que podemos eliminar un toro de la suma conexa. Iterando un número finito de veces, eliminamos todas las apariciones de los bloques de pares complementarios, es decir, de los $\Toro$, completando así la demostración.
 \end{proof}
 
+\clearpage
 
 
 
@@ -1392,6 +1407,17 @@ Sea $M$ una superficie junto con una representación poligonal suya, que existe 
 
 
 \section{Teorema de clasificación de superficies con borde}
+Podemos dar ahora una clasificación de las superficies con borde, que nos servirá para comparar resultados con la prueba ZIP, donde se da directamente una clasificación de las superficies con borde.
+Empecemos viendo un ejemplo:
+
+\begin{eje}
+Sea $M$ una superficie. Si retiramos una serie de discos abiertos disjuntos (una definición precisa de este procedimiento se dará en \autoref{def:perforacion}), entonces obtenemos una superficie con borde.
+\end{eje}
+
+
+
+
+
 
 \chapter{La prueba ZIP de Conway}
 
