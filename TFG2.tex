@@ -226,14 +226,14 @@ Si denotamos $\varphi (p)=a=(a_1,\dots ,a_n)$, podemos distinguir entre dos tipo
 \item[1.] \textit{Puntos interiores:} Si $a_n>0$, entonces podemos tomar una bola $B_{\varepsilon}(a)\subset U'$ y $V=\varphi^{-1}(V')$, por lo que $V$ es un entorno de $p$ homeomorfo a un abierto de $\R^n$. Decimos por tanto que $p$ es un \enfatiza{punto interior de $M$}, y denotamos por $\interior{M}$ al conjunto de puntos interiores de $M$.
 \item[2.] \textit{Puntos borde:} Si $a_n=0$ para todo $n$, entonces podemos tomar una semibola $V'=B_{\varepsilon}^{+}=B_{\varepsilon}(a)\cap \mathbb{H}^n$, y $V=\varphi^{-1}(V')$. Decimos que $p$ es un \enfatiza{punto borde de $M$}. Al conjunto de todos los puntos borde de $M$ lo denotamos por $\partial M$.
 \end{itemize}
-\begin{prop}%%%%PROP: interior y borde de una variedad con borde
-Sea $M$ una variedad con borde, entonces $\interior{M}$ es un abierto de $M$, y es en sí mismo una $n$-variedad.
+\begin{prop}\label{prop:int_variedad}%%%%PROP: interior y borde de una variedad con borde
+Sea $M$ una $n$-variedad con borde, entonces $\interior{M}$ es un abierto de $M$, y es en sí mismo una $n$-variedad.
 \end{prop}
 \begin{proof}
 Sea, para cada $x\in \interior{M}$, $(U_x,\psi_x)$ una carta para $x$, donde $U_x$ es un abierto localmente homeomorfo a un espacio Euclídeo. Se tiene que $\interior{M}=\bigcup_{x\in M} U_x$, por lo que es un abierto, y además localmente Euclídeo, lo que implica que es variedad.
 \end{proof}
-\begin{prop}%%%%PROP: invarianza del borde
-Si $M$ es una $n$variedad con borde, entonces un punto $p\in M$ no puede ser un punto interior y un punto borde al mismo tiempo. O lo que es lo mismo, $M=\interior{M} \cup \partial M$, con $\interior{M} \cap \partial M=\emptyset$.
+\begin{prop}[Invarianza del borde]%%%%PROP: invarianza del borde
+Si $M$ es una $n$-variedad con borde, entonces un punto $p\in M$ no puede ser un punto interior y un punto borde al mismo tiempo. O lo que es lo mismo, $M=\interior{M} \cup \partial M$, con $\interior{M} \cap \partial M=\emptyset$.
 \end{prop}
 \begin{proof}
 Voy a dar la demostración en el caso de que $n=2$. El caso general incluye conceptos de homología que no voy a tratar en este trabajo.\\
@@ -242,13 +242,19 @@ Ahora bien, si llamamos $s=\varphi (p)$, podemos elegir un $\varepsilon >0$ tal 
 Sea $x_0\in B_{\varepsilon}(s)\cap \interior{\mathbb{H}^2}$, definimos $F: X\times \left[ 0,1\right] \to X$ por $F(x,t)=x_0 + (1-t)(x-x_0)$, que nos indica que $\{x_0\}$ es un retracto por deformación fuerte de $X$. Por tanto, $X$ es simplemente conexo, lo que implica que también lo son $U'\setminus \{p\}$ y $\varphi(U')\setminus \{ \varphi (p)\}$, pero esto es una contradicción.
 \end{proof}
 
-\begin{corol}
-Si $M$ es una $n$-variedad con borde, entonces $\partial M$ es un cerrado en $M$\begin{comment}, $\partial M$ es una $(n-1)$-variedad\end{comment}
-. Por otro lado, $M$ es una variedad si y solo si $\partial M=\emptyset$.
+\begin{corol}\label{corol:borde_n-1_variedad}
+Si $M$ es una $n$-variedad con borde, entonces:
+\begin{itemize}
+\item[(i)]  $\partial M$ es un cerrado en $M$.
+\item[(ii)] $\partial M$ es una $(n-1)$-variedad. 
+\item[(iii)] $M$ es una variedad si y solo si $\partial M=\emptyset$.
+\end{itemize}
 \end{corol}
 
 \begin{proof}
-Por el teorema de la invarianza del borde, $\partial M= M\setminus \interior{M}$, y siendo $\interior{M}$ abierto, $\partial M$ es por tanto cerrado. Si $M$ es una variedad, entonces todo punto está en el dominio de una carta interior, por lo que $M=\interior{M}$, y se sigue de la invarianza del borde que $\partial M=\emptyset$. Si suponemos ahora que $M=\partial M$, entonces $M=\interior{M}$, que es una variedad.
+Por el teorema de la invarianza del borde, $\partial M= M\setminus \interior{M}$, y siendo $\interior{M}$ abierto, $\partial M$ es por tanto cerrado, lo que demuestra (i). 
+Para (ii), sea $p\in \partial M$. Tomamos $U$ un entorno suyo en $M$, y sea $\varphi :V\to V'=B_{\varepsilon}(a)\cap \mathbb{H}^n$ tal que $\varphi(p)=a$. Así pues, $\varphi^{-1} (\{(x_1,\dots ,x_n)\in V' \mid x_{n}>0\})\subseteq \interior M$  y $\varphi^{-1} (\{(x_1,\dots ,x_{n-1},0)\in V'\})\subseteq \partial M$. Por lo tanto $\partial M\cap V=\varphi^{-1} (\{(x_1,\dots ,x_{n-1},0)\in V'\})=W$ es un abierto de $\partial M$, y $\varphi : W\to W'=B_{\varepsilon}(a)\cap (\R^{n-1} \times \{ 0\} )$ es un homeomorfismo con un abierto de $\R^{n-1}$, lo que implica que $\partial M$ es una $(n-1)$-variedad.
+Finalmente para probar (iii), si suponemos que $M$ una variedad, entonces todo punto está en el dominio de una carta interior, por lo que $M=\interior{M}$, y se sigue de la invarianza del borde que $\partial M=\emptyset$. Si suponemos ahora que $M=\partial M$, entonces $M=\interior{M}$, que es una variedad por la \autoref{prop:int_variedad}.
 \end{proof}
 \begin{figure}[t]%%%%FIG: Cilindro y Möbius
 \begin{subfigure}{.5\textwidth}
@@ -1408,25 +1414,39 @@ Nos queda el caso en el que aparecen tanto pares torcidos como pares complementa
 
 \section{Teorema de clasificación de superficies con borde}
 Podemos dar ahora una clasificación de las superficies con borde, que nos servirá para comparar resultados con la prueba ZIP, donde se da directamente una clasificación de las superficies con borde.
-Empecemos viendo un ejemplo:
+Empecemos viendo una definición:
+\begin{defin}%M%%%DEF: perforación
+\label{def:perforacion}
+Sea $S$ una superficie (con o sin borde). Sea $p\in \interior (S)$ y $U$ un entorno abierto de $p$ en $S$. Sea $\phi :U\to \R^n$ un homeomorfismo tal que $\phi (p)=0$. Sea $B=\phi ^{-1}(B_1(0))$. Decimos que la nueva superficie con borde $S^o=S\setminus B$ es $S$ \enfatiza{$1$-perforada}, y a $\partial B\subset S^o$ la llamamos \enfatiza{perforación}. Podemos repetir el proceso sobre $S^o$ sucesivamente, obteniendo $S$ $n$-perforada con un número finito $n\in \N$ de perforaciones.
+\end{defin}
 
 \begin{eje}
 Sea $M$ una superficie. Si retiramos una serie de discos abiertos disjuntos (una definición precisa de este procedimiento se dará en \autoref{def:perforacion}), entonces obtenemos una superficie con borde.
 \end{eje}
 
+\begin{prop}
+Toda superficie con borde compacta admite una representación poligonal.
+\end{prop}
+\begin{proof}
 
+\end{proof}
 
-
+\begin{eje}
+\begin{itemize}
+\item [(a)] \textit{Esfera con k perforaciones.} 
+$$\langle a, c_1,\dots ,c_k, B_1, \dots ,B_k \mid aa^{-1}c_1B_1c_1^{-1}\dots c_kB_kc_k^{-1}\rangle$$ 
+\item[(b)] \textit{Suma conexa de n toros con k perforaciones.}
+$$\langle a_1,\dots ,a_n, b_1,\dots ,b_n, c_1,\dots ,c_k, B_1,\dots ,B_k\mid a_1b_1a_1^{-1}b_1^{-1}\dots a_nb_na_n^{-1}b_n^{-1}c_1B_1c_1^{-1}\dots c_kB_kc_k^{-1}\rangle$$
+\item[(c)] \textit{Suma conexa de n planos proyectivos con k perforaciones.} 
+$$\langle a_1,\dots ,a_n, c_1,\dots ,c_k, B_1,\dots ,B_k\mid a_1a_1\dots a_na_nc_1B_1c_1^{-1}\dots c_kB_kc_k^{-1} \rangle$$
+\end{itemize}
+\end{eje}
 
 
 \chapter{La prueba ZIP de Conway}
 
 \section{Cremalleras}
 
-\begin{defin}%M%%%DEF: perforación
-\label{def:perforacion}
-Sea $S$ una superficie (con o sin borde). Sea $p\in \interior (S)$ y $U$ un entorno abierto de $p$ en $S$. Sea $\phi :U\to \R^n$ un homeomorfismo tal que $\phi (p)=0$. Sea $B=\phi ^{-1}(B_1(0))$. Decimos que la nueva superficie con borde $S^o=S\setminus B$ es $S$ \enfatiza{$1$-perforada}, y a $\partial B\subset S^o$ la llamamos \enfatiza{perforación}. Podemos repetir el proceso sobre $S^o$ sucesivamente, obteniendo $S$ $n$-perforada con un número finito $n\in \N$ de perforaciones.
-\end{defin}
 
 \begin{obs}%M%%%OBS: Disco como esfera perforada
 Dado que los dos espacios son homeomorfos, podemos visualizar el disco cerrado $\overline{\mathbb{B}}^2$ como una esfera con una perforación (\autoref{fig:disco_esfera_perforada}).
