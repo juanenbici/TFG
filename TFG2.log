@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.8)  12 MAY 2020 18:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.8)  12 MAY 2020 19:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1113,14 +1113,6 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
  [11]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1128,67 +1120,17 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [12]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [12
 
-LaTeX Warning: Reference `fig:6_4' on page 13 undefined on input line 843.
-
-
-LaTeX Warning: Reference `fig:6_4' on page 13 undefined on input line 846.
-
-[13]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-
-
-LaTeX Warning: Reference `fig:ident_cil' on page 14 undefined on input line 897
-.
-
-
-LaTeX Warning: Reference `fig:ident_mob' on page 14 undefined on input line 897
-.
-
-[14] [15]
-
-LaTeX Warning: Reference `fig:representacion_borde' on page 16 undefined on inp
-ut line 966.
-
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+]
 Missing character: There is no [ in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -1268,6 +1210,64 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
+ [13
+
+]
+
+LaTeX Warning: Reference `fig:6_4' on page 14 undefined on input line 939.
+
+
+LaTeX Warning: Reference `fig:6_4' on page 14 undefined on input line 942.
+
+[14]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+
+LaTeX Warning: Reference `fig:ident_cil' on page 15 undefined on input line 993
+.
+
+
+LaTeX Warning: Reference `fig:ident_mob' on page 15 undefined on input line 993
+.
+
+[15] [16]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [17] [18]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1299,16 +1299,17 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1197--1261
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1255--1319
 []$[]$ $[]$ 
  []
 
-[16] [17]
+[19
 
-LaTeX Warning: Reference `lema:celdas' on page 18 undefined on input line 1286.
+]
+
+LaTeX Warning: Reference `lema:celdas' on page 20 undefined on input line 1344.
 
 
-[18] [19]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1321,67 +1322,67 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1294--1337
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1352--1395
 []$[]$ $[]$ 
  []
 
 
 LaTeX Warning: Reference `fig:suma_conexa_rep_pol_a' on page 20 undefined on in
-put line 1348.
+put line 1406.
 
 
 LaTeX Warning: Reference `fig:suma_conexa_rep_pol' on page 20 undefined on inpu
-t line 1348.
+t line 1406.
 
 
 LaTeX Warning: Reference `fig:suma_conexa_rep_pol' on page 20 undefined on inpu
-t line 1348.
+t line 1406.
 
 
 LaTeX Warning: Reference `fig:disco_regular' on page 20 undefined on input line
- 1349.
+ 1407.
 
-[20]
+[20] [21]
 Package hyperref Info: bookmark level for unknown lema defaults to 0 on input l
-ine 1379.
+ine 1437.
 
 
-LaTeX Warning: Reference `fig:klein_proyectivo' on page 21 undefined on input l
-ine 1383.
-
-[21]
-
-LaTeX Warning: Reference `fig:PASO3' on page 22 undefined on input line 1426.
-
-
-LaTeX Warning: Reference `fig:PASO4a' on page 22 undefined on input line 1428.
+LaTeX Warning: Reference `fig:klein_proyectivo' on page 22 undefined on input l
+ine 1441.
 
 [22]
 
-LaTeX Warning: Reference `fig_PASO4b' on page 23 undefined on input line 1430.
+LaTeX Warning: Reference `fig:PASO3' on page 23 undefined on input line 1484.
 
 
-LaTeX Warning: Reference `fig:PASO6' on page 23 undefined on input line 1434.
+LaTeX Warning: Reference `fig:PASO4a' on page 23 undefined on input line 1486.
 
-[23] [24]
 
-LaTeX Warning: Reference `prop:sub_IIAN' on page 25 undefined on input line 146
-8.
+LaTeX Warning: Reference `fig_PASO4b' on page 23 undefined on input line 1488.
+
+[23]
+
+LaTeX Warning: Reference `fig:PASO6' on page 24 undefined on input line 1492.
+
+[24]
+
+LaTeX Warning: Reference `prop:sub_IIAN' on page 25 undefined on input line 152
+6.
 
 
 LaTeX Warning: Reference `fig:baricentrica' on page 25 undefined on input line 
-1479.
+1537.
 
 [25
 
 ]
 
 LaTeX Warning: Reference `fig:triangulacion_perf' on page 26 undefined on input
- line 1485.
+ line 1543.
 
 
 LaTeX Warning: Reference `fig:toro_perforado' on page 26 undefined on input lin
-e 1491.
+e 1549.
 
 [26] [27]
 Cap\'{\i }tulo 4.
@@ -1426,16 +1427,16 @@ Package microtype Info: Loading generic protrusion settings for font family
  [38
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2073.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2073.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2131.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2131.
  (./TFG2.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2073.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2073.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2131.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2131.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
 (rerunfilecheck)             Checksum: 3188DE8F30EBD3AD5F098C2EAD15B32A;1549.
@@ -1449,8 +1450,8 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
  ) 
 Here is how much of TeX's memory you used:
  35792 strings out of 492167
- 827320 string characters out of 6131559
- 1104850 words of memory out of 5000000
+ 827313 string characters out of 6131559
+ 1064010 words of memory out of 5000000
  39180 multiletter control sequences out of 15000+600000
  15739 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1464,22 +1465,22 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts
 c/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
 usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
-></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.p
-fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symb
-ols/msbm10.pfb>
-Output written on TFG2.pdf (42 pages, 472934 bytes).
+-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on TFG2.pdf (42 pages, 482002 bytes).
 PDF statistics:
- 773 PDF objects out of 1000 (max. 8388607)
- 684 compressed objects within 7 object streams
+ 777 PDF objects out of 1000 (max. 8388607)
+ 687 compressed objects within 7 object streams
  256 named destinations out of 1000 (max. 500000)
  15138 words of extra memory for PDF output out of 17280 (max. 10000000)
 

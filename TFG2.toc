@@ -11,8 +11,8 @@
 \contentsline {section}{\numberline {2.2}Teorema de Radó}{9}{section.2.2}% 
 \contentsline {chapter}{\numberline {3}Teorema de Clasificación}{10}{chapter.3}% 
 \contentsline {section}{\numberline {3.1}Superficies como cocientes}{10}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Representación de superficies}{15}{section.3.2}% 
-\contentsline {section}{\numberline {3.3}Teorema de clasificación de superficies compactas}{20}{section.3.3}% 
+\contentsline {section}{\numberline {3.2}Representación de superficies}{16}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Teorema de clasificación de superficies compactas}{21}{section.3.3}% 
 \contentsline {section}{\numberline {3.4}Teorema de clasificación de superficies con borde}{25}{section.3.4}% 
 \contentsline {chapter}{\numberline {4}La prueba ZIP de Conway}{28}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Cremalleras}{28}{section.4.1}% 

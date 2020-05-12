@@ -733,7 +733,7 @@ El toro $\Toro$ es homeomorfo al espacio cociente resultante de la relación de 
 Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},e^{2\pi iv})$. Por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}), es una aplicación cociente. Al hacer las mismas identificaciones que la relación de equivalencia, por la unicidad del espacio cociente (\autoref{teo:unicidad_espacio_cociente}) se obtiene el resultado.
 \end{proof}
 
-
+\clearpage
 
 \begin{figure}%%%%FIGURA: TORO COMO CUADRADO
 \begin{center}
@@ -783,7 +783,7 @@ El plano proyectivo $\mathbb{P}^2$ es homeomorfo a los siguientes espacios cocie
 \end{prop}
 \begin{proof}
 Sea $p:\mathbb{S}^2 \to \mathbb{P}^2$ la aplicación cociente dada por la relación de equivalencia $\sim$ generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \mathbb{S}^2$, que representa $\mathbb{P}^2$ como el cociente de una esfera. %AQUI FALTA UN POCO DE EXPLICACION, EJEMPLO 4.54 DEL LEE
-Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el disco al emisferio superior de la esfera por $F(x,y)=(x,y,\sqrt{1-x^2-y^2})$, entonces $p\circ F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2/\sim$ es sobreyectiva (---lo demuestro?) y es así una aplicación cociente por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}). La aplicación identifica únicamente $(x,y)\in \partial \overline{\mathbb{B}}^2$ con $(-x,-y)\in \partial \overline{\mathbb{B}}^2$, por lo que $\mathbb{P}^2$ es homeomorfo al espacio cociente resultante.
+Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el disco al emisferio superior de la esfera por $F(x,y)=(x,y,\sqrt{1-x^2-y^2})$, entonces $p\circ F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2/\sim$ es sobreyectiva ((lo demuestro?)) y es así una aplicación cociente por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}). La aplicación identifica únicamente $(x,y)\in \partial \overline{\mathbb{B}}^2$ con $(-x,-y)\in \partial \overline{\mathbb{B}}^2$, por lo que $\mathbb{P}^2$ es homeomorfo al espacio cociente resultante.
 Para la parte (b) hacemos como en la demostración de la \autoref{prop:Esfera como cociente de disco y cuadrado} (b). 
 \end{proof}
 
@@ -808,6 +808,102 @@ Para la parte (b) hacemos como en la demostración de la \autoref{prop:Esfera co
 \caption{Representación de $\mathbb{P}^2$ como un espacio cociente.\label{fig:plano_proyectivo_cuadrado}}
 \end{center}
 \end{figure}
+
+De ahora en adelante visualizaremos el plano proyectivo como el \enfatiza{crosscap}, cuya construcción se sigue en la siguiente figura.
+\clearpage
+
+
+
+\begin{figure}[h]%%%FIG: CROSSCAP
+\centering
+
+\begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+%1
+\fill[gray!10] (-5,5) -- (-7,3) -- (-5,1) -- (-3,3) -- cycle;
+\draw [->-](-5,5)-- (-7,3);
+\draw [-<<-](-5,5)-- (-3,3);
+\draw [-<-](-3,3)-- (-5,1);
+\draw [->>-](-7,3)-- (-5,1);
+
+%2
+\fill[gray!10] (-2,3.5) arc[ x radius=2, y radius=0.5, start angle=180, end angle=540];
+%\draw(0,3) circle (2cm);
+\draw [->>-={at=0.125},->-={at=0.375}, ->>-={at=0.625}, ->-={at=0.875}] (-2,3.5) arc[x radius=2, y radius=0.5, start angle=180, end angle=540];
+\draw [name path=C] (-2,3.5) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
+
+%3
+\fill [gray!10] (3, 3.5) [out=270, in=225, looseness=0.7] to (5,3.5) [out=45, in=90, looseness=0.7] to (7, 3.5) [out=-90, in=-45, looseness=0.7] to (5,3.5) [out=135, in=90, looseness=0.7] to (3, 3.5);
+%\draw[name path=A] (3,3.5) [-<-={at=0.25}, -<<-={at=0.75}](3,3.5) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+%\draw [name path=B] (5,3.5) [-<<-={at=0.25}, -<-={at=0.75}] arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+\draw [name path=C] (3,3.5) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
+\draw [->>-][out=270, in=225, looseness=0.7] (3, 3.5) to (5,3.5);
+\draw [-<<-][out=45, in=90, looseness=0.7] (5,3.5) to (7,3.5);
+\draw [-<-][out=90, in=135, looseness=0.7] (3, 3.5) to (5,3.5);
+\draw [->-][out=-45, in=-90, looseness=0.7] (5,3.5) to (7,3.5);
+
+%3B
+\fill[gray!20] (-7,-3) [out=90, in=135, looseness=2.3] to (-5,-3) [out=135, in=90, looseness=0.7] to (-7,-3);
+\fill[gray!10] (-5,-3) [out=225, in=270, looseness=0.7] to (-7,-3) [out=90, in=135] to (-5,-3) ;
+
+\draw [name path=C] (-7,-3) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
+\draw [->>-][out=270, in=225, looseness=0.7] (-7, -3) to (-5,-3);
+\draw [-<<-, dashed][out=45, in=90, looseness=0.7] (-5,-3) to (-3,-3);
+\draw [-<-][out=90, in=135, looseness=2.3] (-7, -3) to (-5,-3);
+\draw [->-][out=45, in=90, looseness=2.3] (-5,-3) to (-3,-3);
+\draw [color=gray, dashed][out=90, in=135, looseness=0.7] (-7, -3) to (-5,-3);
+\draw [color=gray][out=-45, in=-90, looseness=0.7] (-5, -3) to (-3,-3);
+
+%4
+\fill[gray!10] (0,-3) [out=225, in=270, looseness=0.7] to (-2,-3) [out=90, in=135] to (0,-3) ;
+\fill[gray!20] (-2,-3) [out=90, in=180] to (0,-1.5)  -- (0, -3) [out=135, in=90, looseness=0.7] to (-2,-3);
+\draw [out=90,in=360] (2,-3) to (0,-1.5);
+\draw [out=180, in=90] (0, -1.5) to (-2,-3);
+\draw [->>-][out=270, in=225, looseness=0.7] (-2, -3) to (0,-3);
+\draw [dashed] [-<<-][out=45, in=90, looseness=0.7] (0, -3) to (2,-3);
+%\draw (-5,-3) [->>-] arc[x radius=1, y radius=0.5, start angle=180, end angle=360];
+\draw (-2,-3) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
+\draw [->-](0,-3)-- (0,-1.5);
+\draw [color=gray, dashed][out=90, in=135, looseness=0.7] (-2, -3) to (0,-3);
+\draw [color=gray][out=-45, in=-90, looseness=0.7] (0, -3) to (2,-3);
+
+
+
+
+%5
+\draw [-<<-] (5,-3)-- (5,-1.5);
+\draw (3,-3) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
+\draw [out=90,in=360] (7,-3) to (5,-1.5);
+\draw [out=180, in=90] (5, -1.5) to (3,-3);
+\draw [color=gray][out=270, in=225, looseness=0.7] (3,-3) to (5,-3);
+\draw [color=gray][dashed][out=45, in=90, looseness=0.7] (5,-3) to (7,-3);
+\draw [color=gray][dashed][out=90, in=135, looseness=0.7] (3,-3) to (5,-3);
+\draw [color=gray][out=-45, in=-90, looseness=0.7] (5,-3) to (7,-3);
+
+\begin{scriptsize}
+\fill [color=black] (-7,3) circle (1.5pt);
+\fill [color=black] (-5,5) circle (1.5pt);
+\fill [color=black] (-3,3) circle (1.5pt);
+\fill [color=black] (-5,1) circle (1.5pt);
+\fill [color=black] (-2,3.5) circle (1.5pt);
+\fill [color=black] (3,3.5) circle (1.5pt);
+\fill [color=black] (7,3.5) circle (1.5pt);
+\fill [color=black] (5,3.5) circle (1.5pt);
+\fill [color=black] (2,3.5) circle (1.5pt);
+\fill [color=black] (0,4) circle (1.5pt);
+\fill [color=black] (0,3) circle (1.5pt);
+\fill [color=black] (2,-3) circle (1.5pt);
+\fill [color=black] (-2,-3) circle (1.5pt);
+\fill [color=black] (0,-3) circle (1.5pt);
+\fill [color=black] (5,-1.5) circle (1.5pt);
+\fill [color=black] (5,-3) circle (1.5pt);
+\fill [color=black] (-7,-3) circle (1.5pt);
+\fill [color=black] (-5,-3) circle (1.5pt);
+\fill [color=black] (-3,-3) circle (1.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+\caption{ \label{fig:crosscap_paso_a_paso}}
+\end{figure}
+
 
 
 En las anteriores proposiciones hemos visto una o varias formas de representar superficies dadas ciertas construcciones geométricas. En estos casos hemos dado aplicaciones y demostraciones concretas para validar nuestros argumentos, pero a medida que aumenta la sofisticación es más útil guiarse visualmente por las figuras construidas. Por ello debemos formalizar un método para construir superficies identificando lados de figuras geométricas.
@@ -953,6 +1049,7 @@ Si $X$ es un espacio topológico y $\mathcal{P}$ una representación poligonal c
 \begin{obs}%%%%OBS: representación de una sola cara implica conexo
 Un espacion topológico que admite una representación con una sola cara es conexo, pues es homeomorfo al cociente de una región poligonal conexa. Con más de una cara, puede ser o no conexo.
 \end{obs}
+
 \begin{eje}\label{eje:rep_sup_importantes}%%%%PROP: representación de superficies importantes
 Veamos las representaciones de algunas superficies importantes (ver \autoref{fig:Representacion_superficies_importantes} y \autoref{fig:representacion_esfera_proyectivo}).
 \begin{itemize}
@@ -962,88 +1059,65 @@ Veamos las representaciones de algunas superficies importantes (ver \autoref{fig
 \end{itemize}
 \end{eje}
 
+
+
 \begin{eje}%M%%%:PROP: representación de superficies con borde
-Veamos las representaciones de algunas superficies con borde (\autoref{fig:representacion_borde}):
+Veamos las representaciones de algunas superficies con borde (\autoref{fig:rep_sup_borde}):
 \begin{itemize}
 \item[(a)] $\overline{\mathbb{B}}^2=\langle a,b,c\mid abc\rangle$.
 \item[(b)] $Mob=\langle a,b,c\mid abac\rangle$ (\autoref{eje:rep_mobius}).
 \item[(c)] $Cil=\langle a,b,c\mid aba^{-1}c\rangle$ (\autoref{eje:rep_mobius}).
 \end{itemize}
 \end{eje}
-\begin{figure}[h]%%%%FIG: Representación de superficies impoirtantes
+
+\begin{figure}[t]%%%%FIG: Representación de superficies impoirtantes
+\centering
+\begin{subfigure}{0.3\textwidth}
 \centering
 \begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
 \draw [-<-](0,2)-- (2,0);
 \draw [-<-](2,0)-- (0,-2);
 \draw [-<-](0,-2)-- (-2,0);
 \draw [-<-](-2,0)-- (0,2);
-
-\draw [-<-](3,0)-- (5,2);
-\draw [->-](5,2)-- (7,0);
-\draw [->-](7,0)-- (5,-2);
-\draw [-<-](5,-2)-- (3,0);
-
-\draw [-<-](-3,0)-- (-5,2);
-\draw [-<-](-5,-2)-- (-3,0);
-\draw [-<-](-5,-2)-- (-7,0);
-\draw [-<-](-7,0)-- (-5,2);
-
-\draw (-4,1) node[anchor=south west] {$ a $};
-\draw (-4,-1) node[anchor=north west] {$ b $};
-\draw (-6,1) node[anchor=south east] {$ a $};
-\draw (-6,-1) node[anchor=north east] {$ b $};
-
 \draw (1,1) node[anchor=south west] {$ b $};
 \draw (1,-1) node[anchor=north west] {$ a $};
 \draw (-1,1) node[anchor=south east] {$ a $};
 \draw (-1,-1) node[anchor=north east] {$ b $};
-
+\end{tikzpicture}
+\caption{El plano proyectivo $\Proyectivo$.}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
+\draw [-<-](3,0)-- (5,2);
+\draw [->-](5,2)-- (7,0);
+\draw [->-](7,0)-- (5,-2);
+\draw [-<-](5,-2)-- (3,0);
 \draw (6,1) node[anchor=south west] {$ b $};
 \draw (6,-1) node[anchor=north west] {$ a $};
 \draw (4,1) node[anchor=south east] {$ a $};
 \draw (4,-1) node[anchor=north east] {$ b $};
-
-\draw (5.1,-2.6) node[anchor=south] {$ \Toro $};
-\draw (0.1,-2.6) node[anchor=south] {$ \Proyectivo $};
-\draw (-4.9,-2.6) node[anchor=south] {$ \Esfera $};
-
 \end{tikzpicture}
+\caption{El toro $\Toro$.}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
+\draw [-<-](-3,0)-- (-5,2);
+\draw [-<-](-5,-2)-- (-3,0);
+\draw [-<-](-5,-2)-- (-7,0);
+\draw [-<-](-7,0)-- (-5,2);
+\draw (-4,1) node[anchor=south west] {$ a $};
+\draw (-4,-1) node[anchor=north west] {$ b $};
+\draw (-6,1) node[anchor=south east] {$ a $};
+\draw (-6,-1) node[anchor=north east] {$ b $};
+\end{tikzpicture}
+\caption{La esfera $\Esfera$.}
+\end{subfigure}
 \caption{Representación de superficies importantes.\label{fig:Representacion_superficies_importantes}}
 \end{figure}
 
-\begin{figure}%%%%FIG: Representación superficies con borde
-\centering
-\begin{subfigure}{0.3\textwidth}
-\centering
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
-\draw [->-] (-2,0)-- (2,0);
-\draw [->-] (2,0)-- (0,3.46);
-\draw [->-] (0,3.46)-- (-2,0);
-\draw (-1,1.73) node[anchor=south east] {$a$};
-\draw (0,0) node[anchor=north] {$b$};
-\draw (1,1.73) node[anchor=south west] {$c$};
-\end{tikzpicture}
-\caption{El disco $\overline{\mathbb{B}^2}$}
-\end{subfigure}
-\begin{subfigure}{0.3\textwidth}
-\centering
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
-\draw [-<-](0,2)-- (2,0);
-\draw [-<-](2,0)-- (0,-2);
-\draw [-<-](0,-2)-- (-2,0);
-\draw [-<-](-2,0)-- (0,2);
-\draw (1,1) node[anchor=south west] {$ c $};
-\draw (1,-1) node[anchor=north west] {$ a $};
-\draw (-1,1) node[anchor=south east] {$ a $};
-\draw (-1,-1) node[anchor=north east] {$ b $};
-\end{tikzpicture}
-\caption{La banda de Möbius.}
-\end{subfigure}
-\caption{Figuras}
-\end{figure}
-
-
-\begin{figure}[h]%%%%FIG: Representacion esfera proyectivo
+\begin{figure}%%%%FIG: Representacion esfera proyectivo
 \centering
 \begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.8]
 \draw [-<-={at=0}, ->-={at=0.5}](-5,0) circle (2cm);
@@ -1064,97 +1138,81 @@ Veamos las representaciones de algunas superficies con borde (\autoref{fig:repre
 \caption{Representaciones de la esfera y el plano proyectivo. \label{fig:representacion_esfera_proyectivo}}
 \end{figure}
 
-
-De ahora en adelante visualizaremos el plano proyectivo como un \enfatiza{crosscap}, cuya construcción se sigue en la \autoref{fig:crosscap_paso_a_paso}.
-\begin{figure}%%%FIG: CROSSCAP
+\begin{figure}%%%%FIG: Representación superficies con borde
 \centering
-
-\begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-%1
-\fill[gray!10] (-5,5) -- (-7,3) -- (-5,1) -- (-3,3) -- cycle;
-\draw [->-](-5,5)-- (-7,3);
-\draw [-<<-](-5,5)-- (-3,3);
-\draw [-<-](-3,3)-- (-5,1);
-\draw [->>-](-7,3)-- (-5,1);
-
-%2
-\fill[gray!10] (-2,3.5) arc[ x radius=2, y radius=0.5, start angle=180, end angle=540];
-%\draw(0,3) circle (2cm);
-\draw [->>-={at=0.125},->-={at=0.375}, ->>-={at=0.625}, ->-={at=0.875}] (-2,3.5) arc[x radius=2, y radius=0.5, start angle=180, end angle=540];
-\draw [name path=C] (-2,3.5) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
-
-%3
-\fill [gray!10] (3, 3.5) [out=270, in=225, looseness=0.7] to (5,3.5) [out=45, in=90, looseness=0.7] to (7, 3.5) [out=-90, in=-45, looseness=0.7] to (5,3.5) [out=135, in=90, looseness=0.7] to (3, 3.5);
-%\draw[name path=A] (3,3.5) [-<-={at=0.25}, -<<-={at=0.75}](3,3.5) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
-%\draw [name path=B] (5,3.5) [-<<-={at=0.25}, -<-={at=0.75}] arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
-\draw [name path=C] (3,3.5) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
-\draw [->>-][out=270, in=225, looseness=0.7] (3, 3.5) to (5,3.5);
-\draw [-<<-][out=45, in=90, looseness=0.7] (5,3.5) to (7,3.5);
-\draw [-<-][out=90, in=135, looseness=0.7] (3, 3.5) to (5,3.5);
-\draw [->-][out=-45, in=-90, looseness=0.7] (5,3.5) to (7,3.5);
-
-%3B
-\fill[gray!20] (-7,-3) [out=90, in=135, looseness=2.3] to (-5,-3) [out=135, in=90, looseness=0.7] to (-7,-3);
-\fill[gray!10] (-5,-3) [out=225, in=270, looseness=0.7] to (-7,-3) [out=90, in=135] to (-5,-3) ;
-
-\draw [name path=C] (-7,-3) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
-\draw [->>-][out=270, in=225, looseness=0.7] (-7, -3) to (-5,-3);
-\draw [-<<-, dashed][out=45, in=90, looseness=0.7] (-5,-3) to (-3,-3);
-\draw [-<-][out=90, in=135, looseness=2.3] (-7, -3) to (-5,-3);
-\draw [->-][out=45, in=90, looseness=2.3] (-5,-3) to (-3,-3);
-\draw [color=gray, dashed][out=90, in=135, looseness=0.7] (-7, -3) to (-5,-3);
-\draw [color=gray][out=-45, in=-90, looseness=0.7] (-5, -3) to (-3,-3);
-
-%4
-\fill[gray!10] (0,-3) [out=225, in=270, looseness=0.7] to (-2,-3) [out=90, in=135] to (0,-3) ;
-\fill[gray!20] (-2,-3) [out=90, in=180] to (0,-1.5)  -- (0, -3) [out=135, in=90, looseness=0.7] to (-2,-3);
-\draw [out=90,in=360] (2,-3) to (0,-1.5);
-\draw [out=180, in=90] (0, -1.5) to (-2,-3);
-\draw [->>-][out=270, in=225, looseness=0.7] (-2, -3) to (0,-3);
-\draw [dashed] [-<<-][out=45, in=90, looseness=0.7] (0, -3) to (2,-3);
-%\draw (-5,-3) [->>-] arc[x radius=1, y radius=0.5, start angle=180, end angle=360];
-\draw (-2,-3) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
-\draw [->-](0,-3)-- (0,-1.5);
-\draw [color=gray, dashed][out=90, in=135, looseness=0.7] (-2, -3) to (0,-3);
-\draw [color=gray][out=-45, in=-90, looseness=0.7] (0, -3) to (2,-3);
-
-
-
-
-%5
-\draw [-<<-] (5,-3)-- (5,-1.5);
-\draw (3,-3) arc[x radius=2, y radius=2.5, start angle=180, end angle=360];
-\draw [out=90,in=360] (7,-3) to (5,-1.5);
-\draw [out=180, in=90] (5, -1.5) to (3,-3);
-\draw [color=gray][out=270, in=225, looseness=0.7] (3,-3) to (5,-3);
-\draw [color=gray][dashed][out=45, in=90, looseness=0.7] (5,-3) to (7,-3);
-\draw [color=gray][dashed][out=90, in=135, looseness=0.7] (3,-3) to (5,-3);
-\draw [color=gray][out=-45, in=-90, looseness=0.7] (5,-3) to (7,-3);
-
-\begin{scriptsize}
-\fill [color=black] (-7,3) circle (1.5pt);
-\fill [color=black] (-5,5) circle (1.5pt);
-\fill [color=black] (-3,3) circle (1.5pt);
-\fill [color=black] (-5,1) circle (1.5pt);
-\fill [color=black] (-2,3.5) circle (1.5pt);
-\fill [color=black] (3,3.5) circle (1.5pt);
-\fill [color=black] (7,3.5) circle (1.5pt);
-\fill [color=black] (5,3.5) circle (1.5pt);
-\fill [color=black] (2,3.5) circle (1.5pt);
-\fill [color=black] (0,4) circle (1.5pt);
-\fill [color=black] (0,3) circle (1.5pt);
-\fill [color=black] (2,-3) circle (1.5pt);
-\fill [color=black] (-2,-3) circle (1.5pt);
-\fill [color=black] (0,-3) circle (1.5pt);
-\fill [color=black] (5,-1.5) circle (1.5pt);
-\fill [color=black] (5,-3) circle (1.5pt);
-\fill [color=black] (-7,-3) circle (1.5pt);
-\fill [color=black] (-5,-3) circle (1.5pt);
-\fill [color=black] (-3,-3) circle (1.5pt);
-\end{scriptsize}
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
+\draw [->-] (-2,0)-- (2,0);
+\draw [->-] (2,0)-- (0,3.46);
+\draw [->-] (0,3.46)-- (-2,0);
+\draw (-1,1.73) node[anchor=south east] {$a$};
+\draw (0,0) node[anchor=north] {$b$};
+\draw (1,1.73) node[anchor=south west] {$c$};
 \end{tikzpicture}
-\caption{Construcción del crosscap a partir de la representación pologonal del plano proyectivo. \label{fig:crosscap_paso_a_paso}}
+\caption{El disco $\overline{\mathbb{B}}^2$.}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
+\draw [-<-](0,2)-- (2,0);
+\draw [-<-](2,0)-- (0,-2);
+\draw [-<-](0,-2)-- (-2,0);
+\draw [-<-](-2,0)-- (0,2);
+\draw (1,1) node[anchor=south west] {$ c $};
+\draw (1,-1) node[anchor=north west] {$ a $};
+\draw (-1,1) node[anchor=south east] {$ a $};
+\draw (-1,-1) node[anchor=north east] {$ b $};
+\end{tikzpicture}
+\caption{La banda de Möbius $Mob$.}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
+\draw [-<-](0,2)-- (2,0);
+\draw [-<-](2,0)-- (0,-2);
+\draw [-<-](0,-2)-- (-2,0);
+\draw [-<-](-2,0)-- (0,2);
+\draw (1,1) node[anchor=south west] {$ c $};
+\draw (1,-1) node[anchor=north west] {$ a $};
+\draw (-1,1) node[anchor=south east] {$ a $};
+\draw (-1,-1) node[anchor=north east] {$ b $};
+\end{tikzpicture}
+\caption{El cilindro $Cil$.}
+\end{subfigure}
+\caption{Representación de superficies con borde.}\label{fig:rep_sup_borde}
 \end{figure}
+\clearpage
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+
+
+
+\
+
+\
+
+\
+
+\
+
+
 
 Parece claro que, además de $\Esfera$ y $\Proyectivo$, una superficie pueda tener varias presentaciones poligonales. Sea por ejemplo la presentación del toro $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$. Intuitivamente podemos ver que, subdividiendo los lados etiquetados con $b$ y reetiquetándolos con $c$ y $d$ (ver \autoref{fig:ejemplo_operacion}), la superficie que representa la representación obtenida $\langle a,c,d\mid  acda^{-1}c^{-1}d^{-1}\rangle$ será la misma.
 Vamos ahora a desarrollar unas reglas generales de transformación.
