@@ -291,6 +291,7 @@ Mob=
 & \left\{ \left(\left(1+\left(y-\frac{1}{2}\right)\cos \left(\pi x\right)\right), \, \left(1+\left(y-\frac{1}{2}\right)\cos \left(\pi x\right)\right)\sin \left( 2 \pi x\right), \right. \right.\\
 & \left. \left. \left( y-\frac{1}{2} \right)\sin \left( \pi x\right)\right) \mid x\in \left[0,1\right], \, y\in \left[0,1\right] \right\} \, .
 \end{align*}.
+\item[(3)] Una toro con una perforación.
 \end{itemize}
 \end{eje}
 
@@ -1420,36 +1421,38 @@ Empecemos viendo una definición:
 Sea $S$ una superficie (con o sin borde). Sea $p\in \interior (S)$ y $U$ un entorno abierto de $p$ en $S$. Sea $\phi :U\to \R^n$ un homeomorfismo tal que $\phi (p)=0$. Sea $B=\phi ^{-1}(B_1(0))$. Decimos que la nueva superficie con borde $S^o=S\setminus B$ es $S$ \enfatiza{$1$-perforada}, y a $\partial B\subset S^o$ la llamamos \enfatiza{perforación}. Podemos repetir el proceso sobre $S^o$ sucesivamente, obteniendo $S$ $n$-perforada con un número finito $n\in \N$ de perforaciones.
 \end{defin}
 
+Vimos, en el ejemplo \autoref{eje:rep_borde} que un toro con una perforación es una superficie con borde. Veamos una propiedad muy interesante:
+
 \begin{prop}\label{prop:borde_perforaciones}
 Toda superficie con borde compacta es homeomorfa a una superficie compacta con perforaciones.
 \end{prop}
 \begin{proof}
 Sea $M$ una superficie compacta. Vamos a demostrar que el borde $\partial M$ es homeomorfo a una unión disjunta de circunferencias $\mathbb{S}^1$. Por el \autoref{corol:borde_n-1_variedad} se tiene que $\partial M$ es una 1-variedad. Salvo homeomorfismo, las 1-variedades conexas son $\R$ y $\mathbb{S}^1$. Por ser $\partial M$ un subconjunto cerrado de un compacto, es también compacto, y por tanto se tiene que cada componente conexa de $\partial M$ es homeomorfa a $\mathbb{S}^1$.
-Por otro lado, vamos a ver que \textit{pegando} discos a las componentes de $\partial M$ se obtiene una superficie sin borde. Sean $S=\amalg_i \overline{\mathbb{B}}_i^2$ y $f:\partial S=\amalg_i \mathbb{S}^1\to \partial M$ un homeomorfismo. Considerando $f$ como una función de $\partial S$ en $M$, definimos la relación de equivalencia $\sim$ en la unión disjunta $M\amalg \S$ generada por $a\sim f(a)$, y denotamos el espacio cociente resultante por $X=(M\amalg S)/\sim$. Tenemos que ver que $X$ es IIAN, Haussdorf y localmente Euclídeo de dimensión $n$. Empecemos con esto último. 
 
-Sea $\q:M\amalg S\to X$ la aplicación cociente, y sea $B=q(\partial M\cup \partial S)$. Notamos que $\interior M\amalg \interior S$ es un abierto saturado de $M\amalg S$, por lo que podemos restringir $q$ a una aplicación cociente que va de $\interior M\amalg \interior S$ en $X\setminus B$. Dado que esta restricción es inyectiva, es un homeomorfismo, y por tanto $X\setminus B$ es localmente Euclídeo de dimensión $n$. Por tanto nos queda considerar los puntos en $B$, pero esto se obtiene por el mismo argumento que usamos en la demostración de \autoref{prop:poligonos}. 
+Por otro lado, vamos a ver que \textit{pegando} discos a las componentes de $\partial M$ se obtiene una superficie sin borde. Sean $S=\amalg_i \overline{\mathbb{B}}_i^2$ y $f:\partial S=\amalg_i \mathbb{S}^1\to \partial M$ un homeomorfismo. Considerando $f$ como una función de $\partial S$ en $M$, definimos la relación de equivalencia $\sim$ en la unión disjunta $M\amalg S$ generada por $a\sim f(a)$, y denotamos el espacio cociente resultante por $M*=(M\amalg S)/\sim$. Tenemos que ver que $M*$ es IIAN, Haussdorf y localmente Euclídeo de dimensión $2$. Empecemos con esto último. 
 
-Por otro lado, el espacio cociente $X$ es IIAN por la proposición \autoref{prop:sub_IIAN}. Para probar que es Haussdorf, hay que ver que las fibras de $q$ se pueden separar por abiertos saturados. 
+Sea $q:M\amalg S\to M*$ la aplicación cociente, y sea $B=q(\partial M\cup \partial S)$. Notamos que $\interior M\amalg \interior S$ es un abierto saturado de $M\amalg S$, por lo que podemos restringir $q$ a una aplicación cociente que va de $\interior M\amalg \interior S$ en $M*\setminus B$. Dado que esta restricción es inyectiva, es un homeomorfismo, y por tanto $M*\setminus B$ es localmente Euclídeo de dimensión $2$. Por tanto nos queda considerar los puntos en $B$, pero esto lo tenemos por un argumento análogo al que usamos en la demostración de \autoref{prop:poligonos}. 
 
-
-
+Por otro lado, el espacio cociente $M*$ es IIAN por la proposición \autoref{prop:sub_IIAN}. Para probar que es Haussdorf, hay que ver que las fibras de $q$ se pueden separar por abiertos saturados. Pero esto siempre es posible escogiendo bolas coordenadas suficientemente pequeñas. Así pues, $M*$ es una superficie. 
 \end{proof}
 
-
-
-
-
-
-\begin{eje}
-Sea $M$ una superficie. Si retiramos una serie de discos abiertos disjuntos (una definición precisa de este procedimiento se dará en \autoref{def:perforacion}), entonces obtenemos una superficie con borde.
-\end{eje}
+Dada una superficie con borde compacta $M$, denotaremos por $M*$ la superficie compacta sin borde obtenida mediante el proceso anterior, que llamaremos \enfatiza{pegar} un disco cerrado a cada componente conexa de $\partial M$. Si en cambio empezamos por una superficie compacta sin borde $M*$ y construimos una superficie con borde haciendo perforaciones, ¿Van a ser homeomorfas las superficies resultantes de hacer las perforaciones en lugares distintos? La respuesta es afirmativa, pero antes necesitamos ver la siguiente proposición:
 
 \begin{prop}
 Toda superficie con borde compacta admite una representación poligonal.
 \end{prop}
 \begin{proof}
-
+Sea $M$ una superficie con borde compacta. Sabemos que $M$ es triangulable por el poliedro de un complejo simplicial en el cual hay dos clases de 1-símplices: los 1-símplices cuyo interior se corresponde a puntos interiores y los 1-símplices que se corresponden a componentes del borde de $M$. Podemos suponer que la triangulación satisface que ningún 1-símplice tiene los dos vértices contenidos en el borde a menos que esté contenido completamente en el borde, y un 2-símplice no tiene más de un 1-símplice contenido en el borde.
 \end{proof}
+
+\begin{tma}[Clasificación de superficies con borde compactas]
+Sean $M_1$ y $M_2$ superficies con borde compactas tales que $\partial M_1$ y $\partial M_2$ tienen el mismo número de componentes. Entonces $M_1$ y $M_2$ son homeomorfas si y solo si las superficies $M_1*$ y $M_2*$  son homeomorfas.
+\end{tma}
+\begin{proof}
+Supongamos que 
+\end{proof}
+
+
 
 \begin{eje}
 \begin{itemize}

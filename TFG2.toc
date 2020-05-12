@@ -14,11 +14,11 @@
 \contentsline {section}{\numberline {3.2}Representación de superficies}{15}{section.3.2}% 
 \contentsline {section}{\numberline {3.3}Teorema de clasificación de superficies compactas}{20}{section.3.3}% 
 \contentsline {section}{\numberline {3.4}Teorema de clasificación de superficies con borde}{24}{section.3.4}% 
-\contentsline {chapter}{\numberline {4}La prueba ZIP de Conway}{25}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Cremalleras}{25}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Representación de superficies con cremalleras}{26}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Teorema de Clasificación}{28}{section.4.3}% 
-\contentsline {chapter}{\numberline {A}Algunos teoremas de topología importantes}{30}{appendix.Alph1}% 
-\contentsline {section}{\numberline {A.1}Cocientes topológicos}{30}{section.Alph1.1}% 
-\contentsline {chapter}{\numberline {B}CW-complejos}{32}{appendix.Alph2}% 
-\contentsline {chapter}{Bibliograf\'{\i }a}{35}{appendix*.25}% 
+\contentsline {chapter}{\numberline {4}La prueba ZIP de Conway}{26}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Cremalleras}{26}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Representación de superficies con cremalleras}{27}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Teorema de Clasificación}{29}{section.4.3}% 
+\contentsline {chapter}{\numberline {A}Algunos teoremas de topología importantes}{31}{appendix.Alph1}% 
+\contentsline {section}{\numberline {A.1}Cocientes topológicos}{31}{section.Alph1.1}% 
+\contentsline {chapter}{\numberline {B}CW-complejos}{33}{appendix.Alph2}% 
+\contentsline {chapter}{Bibliograf\'{\i }a}{36}{appendix*.25}% 
