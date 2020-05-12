@@ -936,7 +936,7 @@ Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1\amalg \dots
 Sea $M$ el espacio cociente, sea $\pi :P\to M$ la aplicación cociente y sean $M_0, \, M_1, \, M_2=M$ respectivamente las imágenes por $\pi$ de los vértices, los bordes y las regiones poligonales. Por la propia definición de $P$, $M_0$ es un espacio discreto, y para $k=1,2$, $M_k$ se obtiene a partir de $M_{k-1}$ pegando un número finito de $k$-celdas. Por tanto $M$ es un CW-complejo (\autoref{def:cw}).\\
 Para probar (b), si demostramos que $M$ es localmente homeomorfa a un espacio euclideo, entonces, por la \autoref{prop:cw_variedad}, $M$ será una superficie.\\
 Por un lado las 2-celdas son abiertos en $M$ por definición, y por lo tanto son entornos euclideos de cada uno de sus puntos.\\
-Sea $D$ una 1-celda, y sea $d\in D$. Veamos que $d$ tiene un entorno Euclideo. Por un lado, $d$ tiene exáctamente dos preimágenes $x$ e $y$, cada una en el interior de un borde distinto $D_1$ y $D_2$. Supongamos sin pérdida de generalidad que estos dos bordes pertenecen respectivamente a $P_1$ y $P_2$ ($P_1$ puede ser igual a $P_2$), y denotemos por $h:D_2\to D_1$ un homeomorfismo tal que $h(y)=x$. Dado que cada $P_i$ es una variedad con borde, y $x,y$ son puntos borde, podemos elegir cartas coordenadas $(U,\varphi)$  para $P_1$ y $(V,\psi)$ para $P_2$ tal que $x\in U$, $y\in V$. Denotamos $\widehat{U}=\varphi(U),\widehat{V}=\psi(V)\subseteq \mathbb{H}^2$ y podemos asumir, contrayendo $U$ y $V$ si es necesario, que $h(V\cap D_2)=U\cap D_1$, y que $\widehat{U}=U_0\times [0,\varepsilon)$, $\widehat{V}=V_0\times [0,\varepsilon)$  para un $\varepsilon >0$ y unos subconjuntos $U_0, V_0 \subset \R$ como se muestra en la \autoref{fig:6_4}. Así pues podemos escribir las aplicaciones coordenadas como $\varphi(x)=(\varphi_0(x),\varphi_1(x))$, $\psi(x)=(\psi_0(y),\psi_1(y))$ con $\varphi_0:U\to U_0$, $\varphi_1:U\to [0,\varepsilon)$, $\psi_0:V\to V_0$ y $\psi_1:V\to [0,\varepsilon)$ aplicaciones continuas. Que $x$ e $y$ sean puntos borde significa que $\varphi_1(x)=\psi_1(y)=0$.\\
+Sea $D$ una 1-celda, y sea $d\in D$. Veamos que $d$ tiene un entorno Euclideo. Por un lado, $d$ tiene exáctamente dos preimágenes $x$ e $y$, cada una en el interior de un borde distinto $D_1$ y $D_2$. Supongamos sin pérdida de generalidad que estos dos bordes pertenecen respectivamente a $P_1$ y $P_2$ ($P_1$ puede ser igual a $P_2$), y denotemos por $h:D_2\to D_1$ un homeomorfismo tal que $h(y)=x$. Dado que cada $P_i$ es una variedad con borde, y $x,y$ son puntos borde, podemos elegir cartas coordenadas $(U,\varphi)$  para $P_1$ y $(V,\psi)$ para $P_2$ tal que $x\in U$, $y\in V$. Denotamos $\widehat{U}=\varphi(U),\widehat{V}=\psi(V)\subseteq \mathbb{H}^2$ y podemos asumir, contrayendo $U$ y $V$ si es necesario, que $h(V\cap D_2)=U\cap D_1$, y que $\widehat{U}=U_0\times [0,\varepsilon)$, $\widehat{V}=V_0\times [0,\varepsilon)$  para un $\varepsilon >0$ y unos subconjuntos $U_0, V_0 \subset \R$ como se muestra en la \autoref{fig:6.4}. Así pues podemos escribir las aplicaciones coordenadas como $\varphi(x)=(\varphi_0(x),\varphi_1(x))$, $\psi(x)=(\psi_0(y),\psi_1(y))$ con $\varphi_0:U\to U_0$, $\varphi_1:U\to [0,\varepsilon)$, $\psi_0:V\to V_0$ y $\psi_1:V\to [0,\varepsilon)$ aplicaciones continuas. Que $x$ e $y$ sean puntos borde significa que $\varphi_1(x)=\psi_1(y)=0$.\\
 Queremos ensamblar estas dos cartas con una aplicación cuya imagen sea un abierto de $\R^2$, pegándolas por los puntos que se corresponden en $D_1$ y $D_2$. El problema es que las aplicaciones $\varphi$ y $\psi$ no tienen por qué llevar puntos borde que se correspondan al mismo punto imagen, y por tanto tenemos que ajustarlo. Se tiene que las dos restricciones $\varphi_0|_U\cap D_1: U\cap D_1\to U_0$ y $\psi_0|_V\cap D_2:V\cap D_2\to V_0$ son homeomorfismos, y definimos así el homeomorfismo $\beta:V_0\to U_0$ por $$\beta=(\varphi_0|_{U\cap D_1})\circ h\circ (\psi_0|_{V\cap D_2})^{-1}\, .$$ 
 Sea ahora $B:\widehat{V}\to \R^2$ la aplicación $$B(y_1,y_2)=\left(\beta (y_1), -y_2\right)\, .$$
 Geométricamente, $B$ actúa como un espejo, juntando los puntos borde de acuerdo con $\beta$, y dando la vuelta al segmento que está por encima de él, llevándolo a un segmento por debajo (como en \autoref{fig:6_4}). Esta construcción nos asegura que 
@@ -956,7 +956,78 @@ Dado que las dos partes de la función son iguales donde coinciden, la aplicaci�
 La preimagen de una 0-celda $v$ es un conjunto de vértices $\left\{v_1,\dots ,v_k\right\} \subseteq P$. Para cada uno de estos vértices podemos elegir un $\varepsilon>0$ tal que el disco $B_{\varepsilon}(v_i)$ no contenga ningun vértice de la región poligonal $P_j$ a la que pertenece $v_i$ a parte de sí mismo, y tal que no interseca más bordes que los que lo contienen. $B_{\varepsilon}(v_i)\cap P_j$ es homeomorfo a un subconjunto de $\R^2$ definido por la intersección de dos semiplanos cuyas fronteras coinciden en un único punto y tal que el ángulo que forman es de $2\pi /k$. Podemos ahora hacer una aplicación que envíe cada una de las regiones asociadas a cada $v_i$, $i_1,\dots k$ a un conjunto que contenga un entorno del origen y que respete las identificaciones entre los bordes de los $P_j$. Esta aplicación está definida sobre un conjunto saturado de $P$, de la cual podemos sacar un homeomorfismo de $v$ a un entorno del origen de $\R^2$.
 Finalmente, para probar (c), cada polígono es en sí una superficie con borde. El interior de los lados que se identifican son localmente euclídeos por la proposición anterior, y para los puntos extremos podemos encontrar una semibola coordenada con una construcción similar. Por otro lado, para los puntos de los lados que no se identifican podemos encontrar semibolas coordenadas (las mismas de antes de pasar al cociente). Cómo los CW complejos son IIAN y Hausdorff por la \autoref{prop:cw_variedad}, se tiene el resultado.
 \end{proof}
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.5]
+%\clip(-15.330160097387678,-13.834559140936781) rectangle (29.900136203459667,16.920192433770143);
+\draw [dashed, shift={(-8.120466412995146,8.354581757803452)},fill=black,fill opacity=0.10000000149011612] (0,0) -- (-117.75854060106003:1.387432401866483) arc (-117.75854060106003:11.093723011557817:1.387432401866483) -- cycle;
+\draw [dashed, shift={(-1.7579751439008828,5.15614020090742)},fill=black,fill opacity=0.10000000149011612] (0,0) -- (126.29777621005324:1.387432401866483) arc (126.29777621005324:175.30713749441017:1.387432401866483) -- cycle;
+\draw [dashed, shift={(-0.7749302637196742,-4.954712812271268)}, fill=black,fill opacity=0.10000000149011612] (0,0) -- (90.70690247273468:1.387432401866483) arc (90.70690247273468:130.45547367349133:1.387432401866483) -- cycle;
+\draw [dashed, shift={(-5,0)},fill=black,fill opacity=0.10000000149011612] (0,0) -- (-49.54452632650868:1.387432401866483) arc (-49.54452632650868:25.10774294664457:1.387432401866483) -- cycle;
+\draw   (-5,0)-- (-0.7749302637196742,-4.954712812271268);
+\draw   (-0.7749302637196742,-4.954712812271268)-- (-0.86,1.94);
+\draw   (-0.86,1.94)-- (-5,0);
+\draw   (-6.3664823334069975,5.534450492583295)-- (-1.7579751439008828,5.15614020090742);
+\draw   (-1.7579751439008828,5.15614020090742)-- (-4.612498253818849,9.042418651759586);
+\draw   (-4.612498253818849,9.042418651759586)-- (-8.120466412995146,8.354581757803452);
+\draw   (-8.120466412995146,8.354581757803452)-- (-9.840058647885487,5.087356511511806);
+\draw   (-9.840058647885487,5.087356511511806)-- (-8.670735928160054,1.8889149546157749);
+\draw   (-8.670735928160054,1.8889149546157749)-- (-6.3664823334069975,5.534450492583295);
+\draw   (7.949566411767295,8.090769939874141)-- (7.949566411767295,6.090769939874141);
+\draw   (7.949566411767295,6.090769939874141)-- (9.949566411767293,6.090769939874141);
+\draw   (7.949566411767295,4.090769939874141)-- (7.949566411767295,2.090769939874141);
+\draw   (7.949566411767295,2.090769939874141)-- (9.949566411767293,2.090769939874141);
+\draw   (7.949566411767295,0)-- (7.949566411767295,-1.909230060125859);
+\draw   (7.949566411767295,-1.909230060125859)-- (9.949566411767293,-1.909230060125859);
+\draw   (7.949566411767295,-3.909230060125859)-- (7.949566411767295,-5.909230060125859);
+\draw   (7.949566411767295,-5.909230060125859)-- (9.949566411767293,-5.909230060125859);
+\draw [shift={(7.949566411767295,6.090769939874141)}, fill=black, opacity=0.10000000149011612]  plot[domain=0:1.5707963267948966,variable=\t]({1*1*cos(\t r)+0*1*sin(\t r)},{0*1*cos(\t r)+1*1*sin(\t r)})--(0,0);
+\draw [shift={(7.949566411767295,2.090769939874141)}, fill=black, opacity=0.10000000149011612]  plot[domain=0:1.5707963267948966,variable=\t]({1*1*cos(\t r)+0*1*sin(\t r)},{0*1*cos(\t r)+1*1*sin(\t r)})--(0,0);
+\draw [shift={(7.949566411767295,-5.909230060125859)}, fill=black, opacity=0.10000000149011612]  plot[domain=0:1.5707963267948966,variable=\t]({1*1*cos(\t r)+0*1*sin(\t r)},{0*1*cos(\t r)+1*1*sin(\t r)})--(0,0);
+\draw [shift={(7.949566411767295,-1.909230060125859)}, fill=black, opacity=0.10000000149011612]  plot[domain=0:1.5707963267948966,variable=\t]({1*1*cos(\t r)+0*1*sin(\t r)},{0*1*cos(\t r)+1*1*sin(\t r)})--(0,0);
 
+
+\draw [shift={(7.949566411767295,6.090769939874141)}, dashed]  plot[domain=0:1.5707963267948966,variable=\t]({1*1*cos(\t r)+0*1*sin(\t r)},{0*1*cos(\t r)+1*1*sin(\t r)});
+\draw [shift={(7.949566411767295,2.090769939874141)}, dashed]  plot[domain=0:1.5707963267948966,variable=\t]({1*1*cos(\t r)+0*1*sin(\t r)},{0*1*cos(\t r)+1*1*sin(\t r)});
+\draw [shift={(7.949566411767295,-5.909230060125859)},dashed]  plot[domain=0:1.5707963267948966,variable=\t]({1*1*cos(\t r)+0*1*sin(\t r)},{0*1*cos(\t r)+1*1*sin(\t r)});
+\draw [shift={(7.949566411767295,-1.909230060125859)}, dashed]  plot[domain=0:1.5707963267948966,variable=\t]({1*1*cos(\t r)+0*1*sin(\t r)},{0*1*cos(\t r)+1*1*sin(\t r)});
+
+\draw  [fill=black,opacity=0.10000000149011612]  (16,0) circle (1.2148083407586547cm);
+\draw   (14,0)-- (18,0);
+\draw   (16,2)-- (16,-2);
+\draw   [dashed] (16,0) circle (1.2148083407586547cm);
+\draw [fill=black] (-5,0) circle ( 4pt);
+\draw [fill=black] (-0.7749302637196742,-4.954712812271268) circle ( 4pt);
+\draw [fill=black] (-0.86,1.94) circle ( 4pt);
+\draw [fill=black] (-6.3664823334069975,5.534450492583295) circle ( 4pt);
+\draw [fill=black] (-1.7579751439008828,5.15614020090742) circle ( 4pt);
+\draw [fill=black] (-4.612498253818849,9.042418651759586) circle ( 4pt);
+\draw [fill=black] (-8.120466412995146,8.354581757803452) circle ( 4pt);
+\draw [fill=black] (-9.840058647885487,5.087356511511806) circle ( 4pt);
+\draw [fill=black] (-8.670735928160054,1.8889149546157749) circle ( 4pt);
+%\draw [fill=black] (7.949566411767295,8.090769939874141) circle ( 4pt);
+\draw [fill=black] (7.949566411767295,6.090769939874141) circle ( 4pt);
+%\draw [fill=black] (9.949566411767293,6.090769939874141) circle ( 4pt);
+%\draw [fill=black] (7.949566411767295,4.090769939874141) circle ( 4pt);
+\draw [fill=black] (7.949566411767295,2.090769939874141) circle ( 4pt);
+%\draw [fill=black] (9.949566411767293,2.090769939874141) circle ( 4pt);
+%\draw [fill=black] (7.949566411767295,0) circle ( 4pt);
+\draw [fill=black] (7.949566411767295,-1.909230060125859) circle ( 4pt);
+%\draw [fill=black] (9.949566411767293,-1.909230060125859) circle ( 4pt);
+%\draw [fill=black] (7.949566411767295,-3.909230060125859) circle ( 4pt);
+\draw [fill=black] (7.949566411767295,-5.909230060125859) circle ( 4pt);
+%\draw [fill=black] (9.949566411767293,-5.909230060125859) circle ( 4pt);
+\draw [fill=black] (16,0) circle (4pt);
+
+
+\draw [->] (-7.2,9.27) [out=45, in=150] to (-1.3,9) [out=-30,in=180] to (6,6.8); 
+\draw [->] (0,5) [out=0, in= 180] to (6,2.4);
+\draw [->] (-4,2) [out=45, in=180] to (-.4, 3.5) [out=0, in=180] to (6,-1.6);
+\draw [->] (0,-4.5) [out=0, in=180] to (6,-5.6);
+\draw [->] (11,0) [out=45, in=135] to (14,1);
+\end{tikzpicture}
+\caption{Entorno euclídeo de un vértice.\label{fig:6.4}}
+\end{figure}
 \begin{eje}%%%%EJE: Botella Klein
 La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando los lados del cuadrado $I\times I$ de acuerdo a $(0,t)\sim (1,t)$ y $(t,0)\sim (1-t,1)$ para $0\leq t\leq 1$.  Para visualizar $K$, podemos pensar en pegar los lados izquierdo y derecho creando un cilindro, y luego hacer pasar el extremo superior por la parte inferior del cilindro, para finalmente pegar los dos extremos (ver \autoref{fig:klein}).
 \end{eje}
@@ -1058,17 +1129,10 @@ Veamos las representaciones de algunas superficies importantes (ver \autoref{fig
 \item[(c)] $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$ (\autoref{prop:toro_cuadrado})
 \end{itemize}
 \end{eje}
+\clearpage
 
 
 
-\begin{eje}%M%%%:PROP: representación de superficies con borde
-Veamos las representaciones de algunas superficies con borde (\autoref{fig:rep_sup_borde}):
-\begin{itemize}
-\item[(a)] $\overline{\mathbb{B}}^2=\langle a,b,c\mid abc\rangle$.
-\item[(b)] $Mob=\langle a,b,c\mid abac\rangle$ (\autoref{eje:rep_mobius}).
-\item[(c)] $Cil=\langle a,b,c\mid aba^{-1}c\rangle$ (\autoref{eje:rep_mobius}).
-\end{itemize}
-\end{eje}
 
 \begin{figure}[t]%%%%FIG: Representación de superficies impoirtantes
 \centering
@@ -1183,43 +1247,48 @@ Veamos las representaciones de algunas superficies con borde (\autoref{fig:rep_s
 \caption{Representación de superficies con borde.}\label{fig:rep_sup_borde}
 \end{figure}
 \clearpage
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-
-
-
-\
-
-\
-
-\
-
-\
-
+\begin{eje}%M%%%:PROP: representación de superficies con borde
+Podemos dar también las representaciones de algunas superficies con borde (\autoref{fig:rep_sup_borde}):
+\begin{itemize}
+\item[(a)] $\overline{\mathbb{B}}^2=\langle a,b,c\mid abc\rangle$.
+\item[(b)] $Mob=\langle a,b,c\mid abac\rangle$ (\autoref{eje:rep_mobius}).
+\item[(c)] $Cil=\langle a,b,c\mid aba^{-1}c\rangle$ (\autoref{eje:rep_mobius}).
+\end{itemize}
+\end{eje}
 
 
 Parece claro que, además de $\Esfera$ y $\Proyectivo$, una superficie pueda tener varias presentaciones poligonales. Sea por ejemplo la presentación del toro $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$. Intuitivamente podemos ver que, subdividiendo los lados etiquetados con $b$ y reetiquetándolos con $c$ y $d$ (ver \autoref{fig:ejemplo_operacion}), la superficie que representa la representación obtenida $\langle a,c,d\mid  acda^{-1}c^{-1}d^{-1}\rangle$ será la misma.
-Vamos ahora a desarrollar unas reglas generales de transformación.
+Vamos ahora a desarrollar unas reglas generales de transformación que nos den figuras equivalentes.
 
-\begin{figure}%%%%FIG: ejemplo operacion
+
+
+\begin{defin}%%%%DEF: Realizaciones geometricas topologicamente equivalentes
+Sean $\mathcal{P}_1$ y $\mathcal{P}_2$ dos representaciones tal que sus realizaciones geométricas son homeomorfas. Entonces decimos que son \enfatiza{topológicamente equivalentes} y escribimos $\mathcal{P}_1 \approx \mathcal{P}_2$.
+\end{defin}
+
+
+
+
+Vamos a definir ahora unas operaciones elementales sobre las representaciones poligonales. Veremos luego que estas dan lugar a representaciones equivalentes.
+
+\begin{defin}%%%%DEF: Operaciones elementales sobre representaciones
+Las siguientes operaciones se llaman \enfatiza{transformaciones elementales} de una presentación poligonal:
+\begin{itemize}
+\item \enfatiza{Reetiquetar}: Cambiar todas las apariciones de un símbolo $a$ por otro símbolo que no está todavía en la representación, intercambiar todas las apariciones de dos símbolos $a$ y $b$ o intercambiar todas las apariciones de $a$ y $a^{-1}$.
+\item \enfatiza{Subdividir} (\autoref{fig:ejemplo_operacion}): Cambiar todas las apariciones de $a$ por $ae$ y todas las de $a^{-1}$ por $e^{-1}a^{-1}$, donde $e$ es un símbolo que no está todavía en la presentación.
+\item \enfatiza{Consolidar} (\autoref{fig:ejemplo_operacion}): Si $a$ y $b$ aparecen siempre de forma adyacente, intercambiar $ab$ por $a$ y $b^{-1}a^{-1}$ por $a^{-1}$, siempre que esto de lugar a una o más palabras de longitud al menos $3$ o una sola palabra de longitud $2$.
+\item \enfatiza{Reflejar} (\autoref{fig:reflejar}): $$\langle S\mid   a_1 \dots a_m, W_2,\dots,W_k\rangle \mapsto \langle S\mid   a_m^{-1}\dots a_1^{-1}, W_2, \dots ,W_k\rangle .$$
+\item \enfatiza{Rotar} (\autoref{fig:rotar}): $$\langle S\mid a_1a_2\dots a_m, W_2,\dots , W_k\rangle \mapsto \langle S\mid   a_2\dots a_ma_1, W_2,\dots , W_k\rangle .$$
+\item \enfatiza{Cortar} (\autoref{fig:cortar}): Si $W_1$ y $W_2$ tienen longitud al menos $2$, $$\langle S\mid W_1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1e, e^{-1}W_2, W_3,\dots W_k\rangle .$$ 
+\item \enfatiza{Pegar} (\autoref{fig:cortar}): $$\langle S,e\mid W_1e, e^-1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1W_2, W_3,\dots , W_k\rangle .$$
+\item \enfatiza{Plegar} (\autoref{fig:plegar}): Si $w_1$ tiene longitud al menos $3$, $$\langle S,e\mid W_1ee^{-1}, W_2,\dots W_k\rangle \mapsto \langle S\mid W_1, W_2,\dots , W_k\rangle .$$ Permitimos que $W_1$ tenga longitud $2$, siempre que la representación tenga una sola palabra.
+\item \enfatiza{Desplegar} (\autoref{fig:plegar}): $$\langle S\mid W_1, W_2,\dots , W_k\rangle \mapsto \langle S,e\mid W_1ee^{-1}, W_2,\dots , W_k\rangle .$$
+\end{itemize}
+\end{defin}
+
+\begin{figure}[h]%%%%FIG: ejemplo operacion
 \centering
-\begin{tikzpicture}[use optics, x=1cm, y=1cm, scale=1.1]
+\begin{tikzpicture}[use optics, x=1cm, y=1cm, scale=0.8]
 \draw [->-={at=0.125}, ->-={at=0.375}, -<-={at=0.625}, -<-={at=0.875}](-1,1) -- (-1,-1) -- (-3,-1) -- (-3, 1) -- (-1,1); 
 \draw [->-] (1,0)-- (1.57,-1);
 \draw [-<-] (1.57,-1)-- (2.73,-1);
@@ -1244,14 +1313,10 @@ Vamos ahora a desarrollar unas reglas generales de transformación.
 \draw (1.29,0.5) node[anchor= south east] {$ c $};
 \end{tikzpicture}
 
-\caption{Dos representaciones equivalentes de $\Toro$ mediante la operación subdividir/consolidar. \label{fig:ejemplo_operacion}}
+\caption{Subdividir/consolidar. \label{fig:ejemplo_operacion}}
 \end{figure}
 
-\begin{defin}%%%%DEF: Realizaciones geometricas topologicamente equivalentes
-Sean $\mathcal{P}_1$ y $\mathcal{P}_2$ dos representaciones tal que sus realizaciones geométricas son equivalentes. Entonces decimos que son \enfatiza{topológicamente equivalentes} y escribimos $\mathcal{P}_1 \approx \mathcal{P}_2$.
-\end{defin}
-
-\begin{figure}
+\begin{figure}[h]
 \begin{subfigure}{0.5\textwidth}
 \centering
 \begin{tikzpicture}[use optics]
@@ -1311,44 +1376,13 @@ Sean $\mathcal{P}_1$ y $\mathcal{P}_2$ dos representaciones tal que sus realizac
 \draw (1.56406, 0.23665) node [anchor= east] {$d$};
 \draw (1.80519, -0.56713) node [anchor= north east] {$e$};
 
-
-
 \end{tikzpicture}
 \caption{Rotar.\label{fig:rotar}}
 \end{subfigure}
 \end{figure}
 
-Vamos a definir ahora unas operaciones elementales sobre las representaciones poligonales. Veremos luego que estas dan lugar a representaciones equivalentes.
 
-\begin{defin}%%%%DEF: Operaciones elementales sobre representaciones
-Las siguientes operaciones se llaman \enfatiza{transformaciones elementales} de una presentación poligonal:
-\begin{itemize}
-\item \enfatiza{Reetiquetar}: Cambiar todas las apariciones de un símbolo $a$ por otro símbolo que no está todavía en la representación, intercambiar todas las apariciones de dos símbolos $a$ y $b$ o intercambiar todas las apariciones de $a$ y $a^{-1}$.
-\item \enfatiza{Subdividir} (\autoref{fig:ejemplo_operacion}): Cambiar todas las apariciones de $a$ por $ae$ y todas las de $a^{-1}$ por $e^{-1}a^{-1}$, donde $e$ es un símbolo que no está todavía en la presentación.
-\item \enfatiza{Consolidar} (\autoref{fig:ejemplo_operacion}): Si $a$ y $b$ aparecen siempre de forma adyacente, intercambiar $ab$ por $a$ y $b^{-1}a^{-1}$ por $a^{-1}$, siempre que esto de lugar a una o más palabras de longitud al menos $3$ o una sola palabra de longitud $2$.
-\item \enfatiza{Reflejar} (\autoref{fig:reflejar}): $$\langle S\mid   a_1 \dots a_m, W_2,\dots,W_k\rangle \mapsto \langle S\mid   a_m^{-1}\dots a_1^{-1}, W_2, \dots ,W_k\rangle .$$
-\item \enfatiza{Rotar} (\autoref{fig:rotar}): $$\langle S\mid a_1a_2\dots a_m, W_2,\dots , W_k\rangle \mapsto \langle S\mid   a_2\dots a_ma_1, W_2,\dots , W_k\rangle .$$
-\item \enfatiza{Cortar} (\autoref{fig:cortar}): Si $W_1$ y $W_2$ tienen longitud al menos $2$, $$\langle S\mid W_1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1e, e^{-1}W_2, W_3,\dots W_k\rangle .$$ 
-\item \enfatiza{Pegar} (\autoref{fig:cortar}): $$\langle S,e\mid W_1e, e^-1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1W_2, W_3,\dots , W_k\rangle .$$
-\item \enfatiza{Plegar} (\autoref{fig:plegar}): Si $w_1$ tiene longitud al menos $3$, $$\langle S,e\mid W_1ee^{-1}, W_2,\dots W_k\rangle \mapsto \langle S\mid W_1, W_2,\dots , W_k\rangle .$$ Permitimos que $W_1$ tenga longitud $2$, siempre que la representación tenga una sola palabra.
-\item \enfatiza{Desplegar} (\autoref{fig:plegar}): $$\langle S\mid W_1, W_2,\dots , W_k\rangle \mapsto \langle S,e\mid W_1ee^{-1}, W_2,\dots , W_k\rangle .$$
-\end{itemize}
-\end{defin}
-
-
-\begin{prop}%%%%PROP: Operaciones sobre representaciones
-Las operaciones elementales sobre representaciones poligonales dan lugar a representaciones poligonales equivalentes.
-\end{prop}
-\begin{proof}
-Los casos de reetiquetar, subdividir y rotar son cambios puramente formales que no afectan al espacio cociente. Los casos subdividir/consolidar, cortar/pegar y plegar/desplegar son inversos, con lo que basta probar uno de cada par. 
-Empecemos con la operación de cortar. Sean $P_1, P_2$ dos regiones poligonales convexas etiquetadas por las palabras $W_1e$ y $e^{-1}W_2$ y sea $P'$ la region poligonal etiquetada por $W_1 W_2$. Supongamos de momento que no hay más palabras en las respectivas presentaciones. Si $\pi :P_1\amalg P_2\to M$ y $\pi' :P'\to M'$ representan respectivamente las aplicaciones cocientes. El segmento que va desde el vértice final de $W_1$ en $P'$ a su vértice inicial yace en $P'$ por convexidad, y lo etiquetamos con $e$. Por el \autoref{lema:celdas}, existe una aplicación continua $f:P_1\amalg P_2\to P'$ que lleva cada lado de $P_1$ o $P_2$ a su correspondiente lado en $P'$, y cuya restricción a cada $P_i$ es un homeomorfismo sobre su imagen. Por el \autoref{teo:aplicac_cerrada}, $f$ es una aplicación cociente. Dado que $f$ identifica únicamente los lados $e$ y $e^{-1}$, la aplicación cociente $\pi '\circ f$ y $\pi$ hacen exactamente las mismas identificaciones, y por tanto los espacios cociente $M$ y $M'$ son homeomorfos. 
-En el caso de que hubiese otras palabras $W_3,\dots ,W_k$, simplemente extendemos $f$ como la identidad en sus respectivas presentaciones poligonales y procedemos como antes.
-
-Para el plegado, ignoramos como antes palabras adicionales $W_2,\dots W_k$. Supongamos para empezar que $W_1=abcd$ tiene longitud exáctamente 4. Sea $P$ una región poligonal convexa con lados etiquetados por $abee^{-1}cd$. Si cortamos a lo largo de el segmento $f$ que une el vértice inicial de $a$ con el vértice final de $e$ y obtenemos así $abef$ y $f^{-1}e^{-1}cd$. Consolidamos $ef$ en $h$, obteniendo así $ah^{-1}$ y $bch$. Pegamos por $h$ y obtenemos así $abcd$. ((Lo he cambiado para evitar hablar de simplex que los introduzco más tarde. Vale igualmente?))
-Si $W_1$ tiene longitud 2 o 3, podemos subdividir para alargar la longitud de la palabra a 4, plegar, y finalmente consolidar de nuevo.
-\end{proof}
-
-\begin{figure}
+\begin{figure}[h]
 \begin{subfigure}{0.5\textwidth}
 \centering
 \begin{tikzpicture}[use optics, scale=0.3]
@@ -1364,7 +1398,7 @@ Si $W_1$ tiene longitud 2 o 3, podemos subdividir para alargar la longitud de la
 \draw (7,-1) node[anchor=east] {$e$};
 \draw (8.79,0) node[anchor=west] {$W_2$};
 \end{tikzpicture}
-\caption{Cortar/Pegar\label{fig:cortar}}
+\caption{Cortar/Pegar.\label{fig:cortar}}
 \end{subfigure}
 \begin{subfigure}{0.5\textwidth}
 \centering
@@ -1390,9 +1424,22 @@ Si $W_1$ tiene longitud 2 o 3, podemos subdividir para alargar la longitud de la
 \filldraw (4,.5) circle (1pt);
 \filldraw (1.30902, 0.95106) circle (1pt);
 \end{tikzpicture}
-\caption{Plegar/Desplegar\label{fig:plegar}}
+\caption{Plegar/Desplegar.\label{fig:plegar}}
 \end{subfigure}
 \end{figure}
+
+\begin{prop}%%%%PROP: Operaciones sobre representaciones
+Las operaciones elementales sobre representaciones poligonales dan lugar a representaciones poligonales equivalentes.
+\end{prop}
+\begin{proof}
+Los casos de reetiquetar, subdividir y rotar son cambios puramente formales que no afectan al espacio cociente. Los casos subdividir/consolidar, cortar/pegar y plegar/desplegar son inversos, con lo que basta probar uno de cada par. 
+Empecemos con la operación de cortar. Sean $P_1, P_2$ dos regiones poligonales convexas etiquetadas por las palabras $W_1e$ y $e^{-1}W_2$ y sea $P'$ la region poligonal etiquetada por $W_1 W_2$. Supongamos de momento que no hay más palabras en las respectivas presentaciones. Si $\pi :P_1\amalg P_2\to M$ y $\pi' :P'\to M'$ representan respectivamente las aplicaciones cocientes. El segmento que va desde el vértice final de $W_1$ en $P'$ a su vértice inicial yace en $P'$ por convexidad, y lo etiquetamos con $e$. Por el \autoref{lema:celdas}, existe una aplicación continua $f:P_1\amalg P_2\to P'$ que lleva cada lado de $P_1$ o $P_2$ a su correspondiente lado en $P'$, y cuya restricción a cada $P_i$ es un homeomorfismo sobre su imagen. Por el \autoref{teo:aplicac_cerrada}, $f$ es una aplicación cociente. Dado que $f$ identifica únicamente los lados $e$ y $e^{-1}$, la aplicación cociente $\pi '\circ f$ y $\pi$ hacen exactamente las mismas identificaciones, y por tanto los espacios cociente $M$ y $M'$ son homeomorfos. 
+En el caso de que hubiese otras palabras $W_3,\dots ,W_k$, simplemente extendemos $f$ como la identidad en sus respectivas presentaciones poligonales y procedemos como antes.
+
+Para el plegado, ignoramos como antes palabras adicionales $W_2,\dots W_k$. Supongamos para empezar que $W_1=abcd$ tiene longitud exáctamente 4. Sea $P$ una región poligonal convexa con lados etiquetados por $abee^{-1}cd$. Si cortamos a lo largo de el segmento $f$ que une el vértice inicial de $a$ con el vértice final de $e$ y obtenemos así $abef$ y $f^{-1}e^{-1}cd$. Consolidamos $ef$ en $h$, obteniendo así $ah^{-1}$ y $bch$. Pegamos por $h$ y obtenemos así $abcd$. ((Lo he cambiado para evitar hablar de simplex que los introduzco más tarde. Vale igualmente?))
+Si $W_1$ tiene longitud 2 o 3, podemos subdividir para alargar la longitud de la palabra a 4, plegar, y finalmente consolidar de nuevo.
+\end{proof}
+
 
 
 
@@ -1408,6 +1455,64 @@ Ahora, fijémonos en la demostración de la \autoref{prop:poligonos} (b). Cuando
 Se sigue de este resultado que la realización geométrica de $\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1}\rangle$ es homeomorfa a $M_1'=M_1\setminus B_1$, y $\partial B_1$ es la imagen de los bordes $c^{-1}b^{-1}a^{-1}$. Un argumento similar demuestra que $\langle S_2,a,b,c\mid abcW_2\rangle$ es una presentación de $M_2$ menos un disco coordenado$M_2'=M_2\setminus B_1$. Por tanto se tiene que $\langle S_1,S_2,a,b,c\mid W_1,c^{-1}b^{-1}a^{-1},abcW_2\rangle$ es una presentación de $M_1'\amalg M_2'$ con los bordes de los respectivos discos identificados, es decir, $M_1\# M_2$. Finalmente, pegando por $a$ y doblando dos veces, se obtiene la presentación $\langle S_1,S_2\mid W_1W_2\rangle$.
 \end{proof}
 
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[use optics, scale=0.5]
+\draw [dashed] (-6,-3) [out=135, in=-90] to (-8,0) [out=90, in=-135] to (-6,3);
+\draw [->-={at=0.25}, ->-={at=0.5}, ->-={at=0.75}] (-6,3) -- (-4,4)--(-2,2)--(-2,-2)--(-4,-4)--(-6,-3);
+\draw [dashed] (-6,3) -- (-2,2) -- (-6,0) -- (-2,-2) -- (-6,-3) -- cycle;
+
+\filldraw [black!10] (3.5,1) -- (2,-3) -- (5,-3) -- cycle;
+\draw [->-] (3.5,1) -- (2,-3);
+\draw [->-] (2,-3) -- (5,-3);
+\draw [->-] (5,-3) -- (3.5,1);
+
+\draw [dashed] (14,4) [out=-155, in=90] to (10,0) [out=-90, in=155] to (14,-4) -- cycle;
+\draw [dashed] (14,4) -- (18,1) -- (14,0) -- (18,-1) -- (14,-4);
+\filldraw [black!10] (18,1) -- (22,0) -- (18,-1) -- cycle;
+\draw [-<-](18,1) -- (22,0);
+\draw [-<-] (22,0) -- (18,-1);
+\draw [-<-](18, -1) -- (18,1);
+\draw (14,4) --(22,0) -- (14,-4);
+ 
+\filldraw (-4,4) circle (2pt);
+\filldraw (3.5,1) circle (2pt);
+\filldraw (22,0) circle (2pt);
+\filldraw (-4,-4) circle (2pt);
+
+\draw (-4,4) node[anchor=south] {$v$};
+\draw (-4,-4) node[anchor=north] {$v$};
+\draw (3.5,1) node [anchor=south] {$v$};
+\draw (22,0) node [anchor=west] {$v$};
+
+\draw (-3,3) node [anchor=south west] {$a$};
+\draw (-2,0) node [anchor=west] {$b$};
+\draw (-3,-3) node [anchor= north west ] {$c$};
+
+\draw (2.75,-1) node [anchor=south east] {$a$};
+\draw (3.5,-3) node[anchor=north] {$b$};
+\draw (4.25, -1) node[anchor=south west] {$c$};
+
+\draw (18,0) node [anchor=east] {$b$};
+\draw (20,-.5) node [anchor=north east] {$c$};
+\draw (20,.5) node [anchor = south east] {$a$};
+
+\draw[->] (6,0) -- (8,0);
+
+\draw [->] (20,-3) [out=60, in=-30] to (19,0);
+
+\draw (20,-3) node [anchor=north east] {$Q'$};
+\draw (14,-6) node [anchor=north]{$P_1'$};
+\draw (3.5,-5) node [anchor=north] {$Q$};
+\draw (-4,-6) node [anchor=north]{$P_1$};
+\draw (7,0) node [anchor=south]{$f$};
+\draw (11,3) node [anchor=south east]{$W$};
+\draw (-6,3) node [anchor=south east]{$W$};
+
+\end{tikzpicture}
+\caption{La representación $\mathcal{P}_1=\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1},abc\rangle$.\label{fig:suma_conexa_rep_pol_a}}
+\end{figure}
 
 %%%%%
 %%%%
