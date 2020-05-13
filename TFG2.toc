@@ -21,4 +21,4 @@
 \contentsline {chapter}{\numberline {A}Algunos teoremas de topología importantes}{36}{appendix.Alph1}% 
 \contentsline {section}{\numberline {A.1}Cocientes topológicos}{36}{section.Alph1.1}% 
 \contentsline {chapter}{\numberline {B}CW-complejos}{38}{appendix.Alph2}% 
-\contentsline {chapter}{Bibliograf\'{\i }a}{41}{appendix*.34}% 
+\contentsline {chapter}{Bibliograf\'{\i }a}{41}{appendix*.35}% 
