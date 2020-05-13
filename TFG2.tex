@@ -902,7 +902,7 @@ De ahora en adelante visualizaremos el plano proyectivo como el \enfatiza{crossc
 \fill [color=black] (-3,-3) circle (1.5pt);
 \end{scriptsize}
 \end{tikzpicture}
-\caption{ \label{fig:crosscap_paso_a_paso}}
+\caption{Crosscap.\label{fig:crosscap_paso_a_paso}}
 \end{figure}
 
 
@@ -1962,6 +1962,27 @@ Por otro lado, el espacio cociente $M^*$ es IIAN por la proposición \autoref{pr
 \end{proof}
 
 Dada una superficie con borde compacta $M$, denotaremos por $M^*$ la superficie compacta sin borde obtenida mediante el proceso anterior, que llamaremos \enfatiza{pegar} un disco cerrado a cada componente conexa de $\partial M$. Si en cambio empezamos por una superficie compacta sin borde $M^*$ y construimos una superficie con borde haciendo perforaciones, ¿Van a ser homeomorfas las superficies resultantes de hacer las perforaciones en lugares distintos? La respuesta es afirmativa, pero antes necesitamos ver la siguiente proposición:
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[use optics, scale=2,>=angle 60]
+
+\draw (.5,1.5) -- +(1,0) -- (1.5,.5)--cycle ;
+\draw [dashed] (1.5,.5)[out=-90, in=-45] to (0,0) [out=135, in=180] to (.5,1.5) ;
+\draw (0,0) node [anchor= north east] {$\partial M$};
+
+\draw [shift={(3,0)}] (.5,1.5) -- +(1,0) -- (1.5,.5)--cycle ;
+\draw [shift={(3,0)}, dashed] (1.5,.5)[out=-90, in=-45] to (0,0) [out=135, in=180] to (.5,1.5) ;
+\draw [shift={(3,0)}] (0,0) node [anchor= north east] {$\partial M$};
+\draw [shift={(3,0)}] (1.5,1.5) -- (1,1);
+\draw [shift={(3,0)}] (.5,1.5)--(1.5,1);
+\draw [shift={(3,0)}]  (1.5,.5) -- (1,1.5);
+
+\draw [->](2,1.7) [out=30, in=150] to  (3,1.7);
+
+\end{tikzpicture}
+\caption{Subdivisión baricéntrica de un 2-símplice que tiene dos lados en $\partial M$.\label{fig:baricentrica}}
+\end{figure}
 
 \begin{prop}\label{prop:sup_borde_rep}
 Toda superficie con borde compacta admite una representación poligonal.
