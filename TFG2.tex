@@ -1591,6 +1591,74 @@ Siguiendo la figura \autoref{fig:klein_proyectivo}, tenemos
 Y esto es la presentación poligonal de la suma conexa de dos planos proyectivos.
 \end{proof}
 
+\begin{figure}
+\centering
+
+\begin{tikzpicture}[use optics,scale=1.5, >=angle 60]
+\draw [->-] (0,0)--(1,0);
+\draw [-<-] (1,0)--(1,1);
+\draw [->-] (1,1)--(0,1);
+\draw [->-] (0,1) -- (0,0);
+\draw [dashed] (0,0)--(1,1);
+
+\draw [->-] (2,0) -- (3,1);
+\draw [->-] (3,1)--(2,1);
+\draw [->-] (2,1)--(2,0);
+
+\draw [->-] (2.5,0)--(3.5,0);
+\draw [-<-] (3.5,0)--(3.5,1);
+\draw [-<-] (3.5,1) -- (2.5,0);
+
+\draw [->-] (4.5,0)--(5.5,0);
+\draw [->-] (5.5,0) -- (5,.87);
+\draw [->-] (5,.87)--(4.5,0);
+
+\draw [->-] (6,0)--(7,0);
+\draw [->-] (7,0) -- (6.5,.87);
+\draw [->-] (6.5,.87)--(6,0);
+
+\draw [->-](8,0) -- (9,0);
+\draw [->-] (9,0)--(9,1);
+\draw [->-] (9,1) -- (8,1);
+\draw [->-](8,1)--(8,0);
+\draw [-<-] (8,1) -- (9,0);
+
+\draw [->] (1.25,0.75) [out=45,in=135] to (1.75,0.75);
+\draw [->] (3.85,.75) [out=45,in=135] to (4.35,.75);
+\draw [->] (7.2,.75) [out=45,in=135] to (7.7,.75);
+
+\draw (0,.5) node [anchor=east] {$b$};
+\draw (0.5,0) node [anchor=north]{$a$};
+\draw (1,.5) node [anchor=west] {$b$};
+\draw (.5,1) node [anchor=south]{$a$};
+
+\draw (2,.5) node[anchor=east]{$b$};
+\draw (2.3,.43) node [anchor=north west] {$c$};
+\draw (2.5,1) node [anchor=south] {$a$};
+
+\draw (3,0) node [anchor=north]{$a$};
+\draw (3.5,.55) node [anchor=west] {$b$};
+\draw (3,.43) node [anchor=south east] {$c$};
+
+\draw (4.75,.43) node [anchor=south east] {$b$};
+\draw (5,0) node[anchor= north] {$c$};
+\draw (5.25,.43)node[anchor=south west] {$a$};
+
+\draw (6.25,.43) node[anchor=south east] {$a$};
+\draw (6.5,0) node[anchor=north] {$c$};
+\draw (6.75,.43) node [anchor=south west] {$b$};
+
+\draw (8,.5) node[anchor=east] {$b$};
+\draw (8.5,0)node[anchor=north] {$c$};
+\draw (9,.5) node [anchor=west] {$c$};
+\draw (8.5,1) node[anchor=south] {$b$};
+
+\draw (8.5,.5)node [anchor=south west] {$a$};
+
+\end{tikzpicture}
+\caption{Transformación de la bottella de Klein en $\Proyectivo$.\label{fig:klein_proyectivo}}
+\end{figure}
+
 \begin{lema}\label{lema:toro_proyectivo}
 La suma conexa $\Toro \# \Proyectivo$ es homeomorfa a $\Proyectivo \# \Proyectivo \# \Proyectivo$.
 \end{lema}
@@ -1638,6 +1706,230 @@ En algún lugar de la representación poligonal hay un lado que se identifica co
 Nos queda el caso en el que aparecen tanto pares torcidos como pares complementarios. Si es así, algún par complementario aparece junto a un par torcido, es decir por la palabra $aba^{-1}b^{-1}ccX$ o $ccaba^{-1}b^{-1}X$. En los dos casos, tenemos la suma conexa de un toro, un plano proyectivo, y lo que represente la palabra $X$. Pero por el \autoref{lema:toro_proyectivo}, $\Toro \# \Proyectivo = \Proyectivo \# \Proyectivo \# \Proyectivo$, por lo que podemos eliminar un toro de la suma conexa. Iterando un número finito de veces, eliminamos todas las apariciones de los bloques de pares complementarios, es decir, de los $\Toro$, completando así la demostración.
 \end{proof}
 
+
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[use optics,scale=1.5, >= angle 60]
+\draw [->-](0,0)--(1,0);
+\draw [-<-](0,1)--(1,1);
+\draw [dashed] (0,1) [out=-120, in= 120] to (0,0);
+\draw [dashed] (1,1) [out=-60, in=60] to (1,0);
+\draw [dash pattern=on 2pt off 2pt] (1,0)--(0,1);
+
+\draw [->-](2,0) -- (3,0);
+\draw [->-](3,0)-- (2,1);
+\draw [dashed] (2,1) [out=-120, in=120] to (2,0);
+
+\draw [->-] (3.5,0) -- (2.5,1);
+\draw [-<-] (2.5,1) -- (3.5,1);
+\draw [dashed] (3.5,1) [out=-60, in=60] to (3.5,0);
+
+
+\draw [->-] (4.5,1) -- (4.5,0);
+\draw [-<-] (4.5,1) -- (5.5,0);
+\draw [dashed] (5.5, 0) [out=-120, in=-60] to (4.5,0);
+\draw [->-] (6,0) -- (5,1);
+\draw [-<-] (5,1) -- (6,1);
+\draw [dashed] (6,1) [out=-60, in=60] to (6,0);
+
+\draw [->-] (8,1) -- (7,1);
+\draw [->-] (7,1) -- (7,0);
+\draw [dashed] (7,0) [out=0, in=-90] to (8,1);
+\draw [dash pattern= on 2pt off 2pt] (7,1) -- (7.71,.3);
+
+\draw (0.5,0) node [anchor=north] {$a$};
+\draw (.5,1) node [anchor=south] {$a$};
+\draw (-.1,.8) node [anchor=east] {$V$};
+\draw (1.1,.2) node [anchor=west] {$W$};
+
+\draw (2.5,0) node [anchor=north] {$a$};
+\draw (3,1) node [anchor=south] {$a$};
+\draw (1.9,.8) node [anchor=east] {$V$};
+\draw (3.6,.2) node [anchor=west] {$W$};
+\draw (3,.5) node [anchor=north] {$b$};
+\draw (2.5,.5) node [anchor=south]{$b$};
+
+\draw (4.5,.5) node [anchor=east] {$b$};
+\draw (5,0.5) node [anchor=south] {$a$};
+\draw (5.5,.5) node [anchor=north] {$a$};
+\draw (5.5,1) node [anchor=south] {$b$};
+\draw (5.2,-.25) node [anchor=north] {$V$};
+\draw (6.1,.8) node [anchor=west] {$W^{-1}$};
+
+\draw (7,.5) node [anchor=east] {$b$};
+\draw (7.5,1) node [anchor=south] {$b$};
+\draw (7.71, .3) node [anchor= north west] {$VW^{-1}$};
+
+\draw [->] (1.2,1.1) [out=45, in=135] to (1.8,1.1);
+\draw [->] (3.7,1.1) [out=45, in=135] to (4.3,1.1);
+\draw [->] (6.2,1.1) [out=45, in=135] to (6.8,1.1);
+
+\end{tikzpicture}
+\caption{Hacer que los pares torcidos sean adyacentes.\label{fig:PASO3}}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[use optics, scale=2, >=angle 60]
+\draw [-<-] (0,0) -- (1,0);
+\draw [dashed] (1,0) [out=60, in=-60] to (1,2.5);
+\draw [dashed] (0,0) [out=120, in=-120] to (0,2.5);
+\draw [-<-] (0,2.5) -- (0.5,3.3);
+\draw [-<-] (1,2.5) -- (0,2.5);
+\draw [->-] (1,2.5) -- (.5,3.3);
+\filldraw (0,2.5) circle (1pt) node[anchor=south east]{$w$};
+\filldraw (1,2.5) circle (1pt) node [anchor=south west]{$x$};
+\filldraw (.5,3.3) circle (1pt);
+\filldraw (0,0) circle (1pt) node [anchor=north east]{$v$};
+\filldraw (1,0) circle (1pt) node [anchor=north west]{$x$};
+\draw (.5,3.32) node [anchor=south] {$v$};
+
+\draw [->-] (3,.8) -- (3.5,0);
+\draw [->-] (3.5,0) -- (4,.8);
+\draw [->-] (4,.8) -- (3,.8);
+\draw [dashed] (3,.8) [out=120, in=-120] to (3,3.3);
+\draw [dashed] (4,.8) [out=60, in=-60] to (4,3.3);
+\draw [->-] (3,3.3)--(4,3.3);
+\filldraw (3,3.3) circle (1pt) node[anchor=south east]{$w$};
+\filldraw (4,3.3) circle (1pt)  node[anchor=south west]{$x$};
+\filldraw (3,.8) circle (1pt)node [anchor=north east]{$v$};
+\filldraw (4,.8) circle (1pt) node [anchor=north west]{$w$};
+\filldraw (3.5,0) circle (1pt);
+\draw (3.5,-.02) node [anchor=north] {$w$};
+
+\draw [->] (1.5,2.3) -- (2.3,2.3);
+
+\draw (-.4,1.75) node [anchor=east] {$X$};
+\draw (1.4,1.75) node [anchor=west] {$Y$};
+\draw (.5,0) node [anchor=north] {$b$};
+\draw (.5,2.5) node [anchor=north] {$c$};
+\draw (0.25,2.9) node[anchor=south east]{$a$};
+\draw (0.75,2.9) node [anchor=south west]{$b$};
+
+
+\draw (3.5,3.32) node [anchor=south] {$c$};
+\draw (2.6,1.25) node [anchor=east] {$X$};
+\draw (4.6,1.25) node [anchor=west]{$Y$};
+\draw (3.25,.4) node [anchor=north east]{$a$};
+\draw (3.75,.4) node [anchor=north west]{$b$};
+\draw (3.5,.8) node [anchor=south]{$b$};
+
+
+
+\end{tikzpicture}
+\caption{Reduciendo el número de vértices equivalentes a $v$.\label{fig:PASO4a}}
+\end{figure}
+
+\begin{figure}
+\begin{tikzpicture}[use optics, scale=1]
+
+
+%1
+\draw [dashed] (-.71,1.71)--(-.71,.71);
+\draw [->-] (-.71,.71) -- (0,0);
+\draw [dashed] (0,0)--(1,0);
+\draw [-<-](1,0)--(1.71,.71);
+\draw [dashed] (1.71,.71)--(1.71,1.71);
+\draw [-<-] (1.71,1.71) -- (1,2.41);
+\draw [dashed] (1,2.41) -- (0,2.41);
+\draw [->-] (0,2.41) -- (-.71,1.71);
+\draw [dash pattern=on 2pt off 2pt] (-.71,.71)--(1,2.41);
+
+\draw (-.35,.35) node [anchor=north east]{$b$};
+\draw (.5,0) node [anchor=north] {$Y$};
+\draw (1.35,.35) node [anchor=north west]{$a$};
+\draw (1.71,1.21) node [anchor= west]{$Z$};
+\draw (1.35,2.06) node [anchor=south west]{$b$};
+\draw (.5,2.41) node [anchor=south]{$W$};
+\draw (-.35,2.06) node [anchor=south east]{$a$};
+\draw (-.71,1.21) node [anchor=east] {$X$};
+
+%2
+\draw [dashed, shift={(4,-.3)}] (-.71,.71) -- (0,0);
+\draw [->-, shift={(4,-.3)}] (0,0)--(1,0);
+\draw [dashed, shift={(4,-.3)}](1,0)--(1.71,.71);
+\draw [-<-, shift={(4,-.3)}] (-.71,.71) -- (1.71,.71);
+
+
+\draw [dashed, shift={(4,.3)}] (1.71,.71)--(1.71,1.71);
+\draw [-<-, shift={(4,.3)}] (1.71,1.71) -- (1,2.41);
+\draw [-<-, shift={(4,.3)}] (1,2.41) -- (0,2.41);
+\draw [->-, shift={(4,.3)}] (0,2.41) -- (-.71,1.71);
+\draw [dashed, shift={(4,.3)}] (-.71,1.71)--(-.71,.71);
+\draw [-<-, shift={(4,.3)}] (-.71,.71) -- (1.71,.71);
+
+
+\draw [ shift={(4,-.3)}](-.35,.35) node [anchor=north east]{$X$};
+\draw [ shift={(4,-.3)}](.5,0) node [anchor=north] {$c$};
+\draw [ shift={(4,-.3)}](1.35,.35) node [anchor=north west]{$W$};
+\draw [ shift={(4,-.3)}](.5, .71) node [anchor= south east] {$a$};
+
+\draw [ shift={(4,.3)}](1.71,1.21) node [anchor= west]{$Z$};
+\draw [ shift={(4,.3)}](1.35,2.06) node [anchor=south west]{$b$};
+\draw [ shift={(4,.3)}](.5,2.41) node [anchor=south]{$c$};
+\draw [ shift={(4,.3)}](-.35,2.06) node [anchor=south east]{$b$};
+\draw [ shift={(4,.3)}](-.71,1.21) node [anchor=east] {$Y$};
+\draw [ shift={(4,.3)}](.5,.71) node [anchor= north west]{$a$};
+
+
+
+%3
+\draw [->-, shift={(8,0)}] (-.71,1.71)--(-.71,.71);
+\draw [dashed, shift={(8,0)}] (-.71,.71) -- (0,0);
+\draw [dashed, shift={(8,0)}] (0,0)--(1,0);
+\draw [->-, shift={(8,0)}](1,0)--(1.71,.71);
+\draw [dashed, shift={(8,0)}] (1.71,.71)--(1.71,1.71);
+\draw [dashed, shift={(8,0)}] (1.71,1.71) -- (1,2.41);
+\draw [-<-, shift={(8,0)}] (1,2.41) -- (0,2.41);
+\draw [-<-, shift={(8,0)}] (0,2.41) -- (-.71,1.71);
+\draw [dash pattern = on 2pt off 2pt, shift={(8,0)}] (1.71,0.71)--(0,2.41);
+
+
+\draw[shift={(8,0)}] (-.35,.35) node [anchor=north east]{$Y$};
+\draw [shift={(8,0)}](.5,0) node [anchor=north] {$X$};
+\draw [shift={(8,0)}](1.35,.35) node [anchor=north west]{$c$};
+\draw [shift={(8,0)}](1.71,1.21) node [anchor= west]{$W$};
+\draw [shift={(8,0)}](1.35,2.06) node [anchor=south west]{$Z$};
+\draw [shift={(8,0)}](.5,2.41) node [anchor=south]{$b$};
+\draw [shift={(8,0)}](-.35,2.06) node [anchor=south east]{$c$};
+\draw [shift={(8,0)}] (-.71,1.21) node [anchor=east] {$b$};
+
+%4
+\draw [-<-, shift={(12,-.3)}] (-.71,.71) -- (0,0);
+\draw [dashed, shift={(12,-.3)}] (0,0)--(1,0);
+\draw [dashed, shift={(12,-.3)}](1,0)--(1.71,.71);
+\draw [->-, shift={(12,-.3)}] (-.71,.71) -- (1.71,.71);
+
+
+\draw [dashed, shift={(12,.3)}] (1.71,.71)--(1.71,1.71);
+\draw [dashed, shift={(12,.3)}] (1.71,1.71) -- (1,2.41);
+\draw [->-, shift={(12,.3)}] (1,2.41) -- (0,2.41);
+\draw [->-, shift={(12,.3)}] (0,2.41) -- (-.71,1.71);
+\draw [-<-, shift={(12,.3)}] (-.71,1.71)--(-.71,.71);
+\draw [->-, shift={(12,.3)}] (-.71,.71) -- (1.71,.71);
+
+
+\draw [ shift={(12,-.3)}](-.35,.35) node [anchor=north east]{$d$};
+\draw [ shift={(12,-.3)}](.5,0) node [anchor=north] {$W$};
+\draw [ shift={(12,-.3)}](1.35,.35) node [anchor=north west]{$Z$};
+\draw [ shift={(12,-.3)}](.5, .71) node [anchor= south east] {$b$};
+
+\draw [ shift={(12,.3)}](1.71,1.21) node [anchor= west]{$Y$};
+\draw [ shift={(12,.3)}](1.35,2.06) node [anchor=south west]{$X$};
+\draw [ shift={(12,.3)}](.5,2.41) node [anchor=south]{$c$};
+\draw [ shift={(12,.3)}](-.35,2.06) node [anchor=south east]{$d$};
+\draw [ shift={(12,.3)}](-.71,1.21) node [anchor=east] {$c$};
+\draw [ shift={(12,.3)}](.5,.71) node [anchor= north west]{$b$};
+
+\draw [->] (2,3) [out=45, in=135] to (3,3);
+\draw [->,shift={(4,0)}] (2,3) [out=45, in=135] to (3,3);
+\draw [->, shift={(8,0)}] (2,3) [out=45, in=135] to (3,3);
+
+
+\end{tikzpicture}
+\caption{Poniendo los pares complementarios juntos. \label{fig:PASO4b}}
+\end{figure}
 \clearpage
 
 
