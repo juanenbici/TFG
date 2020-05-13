@@ -212,6 +212,7 @@ Una \textbf{\emph{superficie}} es una $2$-variedad.
 \caption{Ejemplos de superficies.}
 \end{figure}
 
+
 \section{Variedades con borde}\label{sec:borde}
 Hay una serie de espacios topológicos que no son variedades pero que tienen interés desde el punto de vista geométrico y son útiles a la hora de estudiarlas. Por ejemplo, la bola cerrada $\overline{\mathbb{B}}^n$ no es una variedad, puesto que para los puntos de su frontera no hay entornos homeomorfos a abiertos de $\R^n$. Vamos a definir por tanto una clase de espacios que extienda a las variedades pero que admita la existencia de algún tipo de \textit{bordes}:
 \begin{defin}
@@ -1032,7 +1033,11 @@ Finalmente, para probar (c), cada polígono es en sí una superficie con borde. 
 La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando los lados del cuadrado $I\times I$ de acuerdo a $(0,t)\sim (1,t)$ y $(t,0)\sim (1-t,1)$ para $0\leq t\leq 1$.  Para visualizar $K$, podemos pensar en pegar los lados izquierdo y derecho creando un cilindro, y luego hacer pasar el extremo superior por la parte inferior del cilindro, para finalmente pegar los dos extremos (ver \autoref{fig:klein}).
 \end{eje}
 
-\begin{figure}[t]%%%%FIG: Klein
+\begin{eje}\label{eje:rep_mobius}
+Veamos ahora como obtener las figuras del \autoref{eje:rep_borde}. El cilindro $Cil$ es la superficie con borde que se obtiene al identificar los lados de un cuadrado $I\times I$ dada la relación de equivalencia $(0,y)\sim (1,y),$ con $y\in I$ (\autoref{fig:ident_cil}). La banda de Möbius $Mob$ es la superficie con borde que se obtiene identificando los lados del cuadrado $I\times I$ de acuerdo a la relación $(0,y)\sim (1,1-y)$, $y\in I$ (\autoref{fig:ident_mob}).
+\end{eje}
+
+\begin{figure}[h]%%%%FIG: Klein
 \centering
 \begin{tikzpicture} [use optics]
 %\draw [help lines] (-6,-2) grid (6,2);
@@ -1060,10 +1065,43 @@ La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando los l
 \end{tikzpicture}
 \caption{Construcción de la botella de Klein.\label{fig:klein}}
 \end{figure}
-\begin{eje}\label{eje:rep_mobius}
-Veamos ahora como obtener las figuras del \autoref{eje:rep_borde}. El cilindro $Cil$ es la superficie con borde que se obtiene al identificar los lados de un cuadrado $I\times I$ dada la relación de equivalencia $(0,y)\sim (1,y),$ con $y\in I$ (\autoref{fig:ident_cil}). La banda de Möbius $Mob$ es la superficie con borde que se obtiene identificando los lados del cuadrado $I\times I$ de acuerdo a la relación $(0,y)\sim (1,1-y)$, $y\in I$ (\autoref{fig:ident_mob}).
-\end{eje}
+\begin{figure}[h]
+\centering
+\begin{subfigure}{0.5\textwidth}
+\centering
 
+\begin{tikzpicture}[use optics, scale=.9]
+\draw (-3,1)--(-1,1);
+\draw [->-](-1,1)--(-1,-1);
+\draw  (-1,-1)--(-3,-1);
+\draw [-<-] (-3,-1)--(-3,1);
+\draw (1,1) arc [x radius=0.8, y radius=0.2, start angle=180, end angle=0];
+\draw [dashed](1,-1) arc [x radius= 0.8, y radius= 0.2, start angle=180, end angle=0];
+\draw (1,1) arc [x radius=0.8, y radius=0.2, start angle= 180, end angle= 360] -- +(0,-2) arc [x radius=0.8, y radius=0.2, start angle=0, end angle=-180] -- cycle;
+\draw [->-] (2.04,0.81) -- +(0,-2);
+\end{tikzpicture}
+\caption{El cilindro $Cil$.}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+\centering
+\begin{tikzpicture}[use optics, scale=1.8]
+\draw [->-](-2,1)--(-2,0);
+\draw (-2,0)--(-3,0);
+\draw [->-](-3,0)--(-3,1);
+\draw (-3,1)--(-2,1);
+
+
+\draw (1,.7)[out=-90, in=45] to (.95,.6) [out=-135,in=0] to (-.5, -.0) [out=180, in=-20] to (-1,.1) -- (-1,.7) arc [x radius=1, y radius=0.2, start angle=180, end angle=0] -- (1,.1) [out=-160, in=-10] to (-.3,0.006);
+\draw (-.0,.05) [out=160, in=-45] to (-.95,.6) [out=135, in=-90] to (-1,.7);
+\draw (-.7,.39) arc [x radius=.7, y radius=.1, start angle=180, end angle=-4];
+\draw [-<-] (0,0.9)--(0,.49);
+
+\end{tikzpicture}
+\caption{La banda de Möbius $Mob$.}
+\end{subfigure}
+\caption{Superficies con borde como cocientes topológicos.}
+\end{figure}
+\clearpage
 \section{Representación de superficies}
 Vamos ahora a dar un método uniforme para representar todas las superficies y las superficies con borde como regiones poligonales del plano. A su vez asociaremos a cada región poligonal, y por tanto a cada superficie, una secuencia de símbolos llamada palabra. 
 
