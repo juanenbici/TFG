@@ -2003,7 +2003,7 @@ Ahora sólo falta aplicar sobre $\mathcal{P}$ el resto de la demostración de la
 
 \begin{figure}
 \centering
-\begin{tikzpicture}[use optics,>=angle 60]
+\begin{tikzpicture}[use optics,>=angle 60,scale=.8]
 \draw (.38,1.23) node {$B_i$};
 \draw [->](.59,1.4) [out=10,in=170] to (1.55,1.59);
 \draw [->](.1,1) [out=-120, in=0] to (-.66,.65);
@@ -2094,7 +2094,7 @@ Ahora sólo falta aplicar sobre $\mathcal{P}$ el resto de la demostración de la
 \draw [ ] (1.636430866755836,4.113844716482269)-- (0.6320518458852555,2.465147078449431);
 \draw [ ] (0.6320518458852555,2.465147078449431)-- (-0.2965249847309415,4.473905120190591);
 \end{tikzpicture}
-\caption{O\label{fig:triangulacion_perf}}
+\caption{Triangulación cerca de una componente del borde de $M$.\label{fig:triangulacion_perf}}
 \end{figure}
 \begin{eje}
 Veamos las representaciones estándar de las superficies fundamentales perforadas. Para ello, hacemos un corte $c_i$ desde un mismo vértice a cada perforación asociada a la componente $B_i$, de forma que estos no se solapen con las perforaciones. En la \autoref{fig:toro_perforado} podemos ver un ejemplo de la representación estándar de un toro con dos perforaciones.
@@ -2108,6 +2108,55 @@ $$\langle a_1,\dots ,a_n, c_1,\dots ,c_k, B_1,\dots ,B_k\mid a_1a_1\dots a_na_nc
 \end{itemize}
 \end{eje}
 
+\begin{figure}
+\centering
+\begin{subfigure}{.4\linewidth}
+\centering
+\begin{tikzpicture}[use optics, >=angle 60, scale=1.5]
+
+\fill[line width=1.2pt,fill=black,fill opacity=0.1] (0,0) -- (0.9238207149966959,0.3828253995531037) -- (1.3063621711370152,1.3067637277623212) -- (0.9235367715839117,2.230584442759017) -- (-0.00040155662530578324,2.6131258988993364) -- (-0.9242222716220017,2.230300499346233) -- (-1.3067637277623212,1.3063621711370155) -- (-0.9239383282092178,0.38254145614031965) -- cycle;
+
+\draw  [->-]  (0,0) -- (0.9238207149966959,0.3828253995531037)node[midway,below] {$b_2$};
+\draw  [->-](0.9238207149966959,0.3828253995531037)-- (1.3063621711370152,1.3067637277623212)node[midway,below] {$a_2$};
+\draw  [-<-](1.3063621711370152,1.3067637277623212)-- (0.9235367715839117,2.230584442759017)node[midway,below] {$b_2$};
+\draw  [-<-](0.9235367715839117,2.230584442759017)-- (-0.00040155662530578324,2.6131258988993364)node[midway,below] {$a_2$};
+\draw  [->-](-0.00040155662530578324,2.6131258988993364)-- (-0.9242222716220017,2.230300499346233)node[midway,below] {$b_1$};
+\draw  [->-](-0.9242222716220017,2.230300499346233)-- (-1.3067637277623212,1.3063621711370155)node[midway,below] {$a_1$};
+\draw  [-<-](-1.3067637277623212,1.3063621711370155)-- (-0.9239383282092178,0.38254145614031965)node[midway,below] {$b_1$};
+\draw  [-<-](-0.9239383282092178,0.38254145614031965)-- (0,0)node[midway,below] {$a_1$};
+\draw  [-<-](0,0)-- (-0.5128819104663424,1.2073243438172108);
+\draw  [-<-](0,0)-- (0.4909162594319499,1.202150126446601);
+
+\filldraw[white]  (-0.5,1.5) circle (0.2929590130705814cm);
+\filldraw [white] (0.5,1.5) circle (0.2979883580250803cm);
+\draw  [->-={at=0.25}](-0.5,1.5) circle (0.2929590130705814cm);
+\draw  [->-={at=0.25}](0.5,1.5) circle (0.2979883580250803cm);
+\end{tikzpicture}
+\caption{ }
+\end{subfigure}
+\begin{subfigure}{.4\linewidth}
+\centering
+\begin{tikzpicture}[use optics]
+\fill[ shift={(3,0)},fill=black,fill opacity=0.1] (0,0) -- (1,0) -- (1.8660254037844386,0.5) -- (2.366025403784439,1.3660254037844388) -- (2.366025403784439,2.3660254037844384) -- (1.8660254037844393,3.232050807568877) -- (1,3.7320508075688776) -- (0,3.7320508075688776) -- (-0.8660254037844384,3.2320508075688785) -- (-1.3660254037844388,2.3660254037844393) -- (-1.3660254037844393,1.3660254037844402) -- (-0.8660254037844393,0.5) -- cycle;
+
+\draw [ shift={(3,0)}, ->- ] (0,0)-- (1,0)node[midway,below] {$c_1$};
+\draw [ shift={(3,0)},-<-] (1,0)-- (1.8660254037844386,0.5)node[midway,below] {$c_2$};
+\draw [ shift={(3,0)},->-] (1.8660254037844386,0.5)-- (2.366025403784439,1.3660254037844388)node[midway,below] {$c_2$};
+\draw [ shift={(3,0)},->-] (2.366025403784439,1.3660254037844388)-- (2.366025403784439,2.3660254037844384)node[midway,below] {$b_2$};
+\draw [ shift={(3,0)},->-] (2.366025403784439,2.3660254037844384)-- (1.8660254037844393,3.232050807568877)node[midway,below] {$a_2$};
+\draw [ shift={(3,0)},-<-] (1.8660254037844393,3.232050807568877)-- (1,3.7320508075688776)node[midway,below] {$b_2$};
+\draw [ shift={(3,0)},-<-] (1,3.7320508075688776)-- (0,3.7320508075688776)node[midway,below] {$a_2$};
+\draw [ shift={(3,0)},->-] (0,3.7320508075688776)-- (-0.8660254037844384,3.2320508075688785)node[midway,below] {$b_1$};
+\draw [ shift={(3,0)},->-] (-0.8660254037844384,3.2320508075688785)-- (-1.3660254037844388,2.3660254037844393)node[midway,below] {$a_1$};
+\draw [ shift={(3,0)},-<-] (-1.3660254037844388,2.3660254037844393)-- (-1.3660254037844393,1.3660254037844402)node[midway,below] {$b_1$};
+\draw [ shift={(3,0)},-<-] (-1.3660254037844393,1.3660254037844402)-- (-0.8660254037844393,0.5)node[midway,below] {$a_1$};
+\draw [ shift={(3,0)},-<-] (-0.8660254037844393,0.5)-- (0,0) node[midway,below] {$c_1$};
+
+\end{tikzpicture}
+\caption{ }
+\end{subfigure}
+\caption{La superficie $\Toro \# \Toro$  con dos perforaciones.}
+\end{figure}
 
 \begin{tma}[Clasificación de superficies con borde compactas]
 Sean $M_1$ y $M_2$ superficies con borde compactas tales que $\partial M_1$ y $\partial M_2$ tienen el mismo número de componentes. Entonces $M_1$ y $M_2$ son homeomorfas si y solo si las superficies $M_1^*$ y $M_2^*$  son homeomorfas.
