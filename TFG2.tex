@@ -297,13 +297,13 @@ Mob=
 \end{eje}
 
 \section{Suma conexa de variedades}
-Sean $V_1$ y $V_2$ dos $n$-variedades conexas. Dados $p_1\in V_1$ y $p_2\in V_2$ sean $U_1^{p_1}\subset V_1$, $U_2^{p_2}\subset V_2$  entornos abiertos de $p_1$ y $p_2$ respectivamente, y sean $\phi_1:U_1\to\R^n$ y $\phi_2:U_2\to\R^n$ dos homeomorfismos tales que $\phi_1(p_1)=0$ y $\phi_2(p_2)=0$. Si llamamos $B_1=\phi_1^{-1}(B_1(0))\subset V_1$ y $B_2=\phi_2^{-1}(B_1(0))\subset V_2$, consideremos $V_1^o=V_1-B_1$, $V_2^o=V_2-B_2$ y $V_1^o \amalg V_2^o$ con la topología unión disjunta.
+Sean $M_1$ y $M_2$ dos $n$-variedades conexas. Dados $p_1\in M_1$ y $p_2\in M_2$ sean $U_1^{p_1}\subset M_1$, $U_2^{p_2}\subset M_2$  entornos abiertos de $p_1$ y $p_2$ respectivamente, y sean $\phi_1:U_1\to\R^n$ y $\phi_2:U_2\to\R^n$ dos homeomorfismos tales que $\phi_1(p_1)=0$ y $\phi_2(p_2)=0$. Si llamamos $B_1=\phi_1^{-1}(B_1(0))\subset M_1$ y $B_2=\phi_2^{-1}(B_1(0))\subset M_2$, consideremos $M_1^o=M_1\setminus B_1$, $M_2^o=M_2\setminus B_2$ y $M_1^o \amalg M_2^o$ con la topología unión disjunta.
 Se define la relación de equivalencia $\sim$ en la que si $x_1\in S_1=\phi_1^{-1}(\partial B_1(0))$, $x_2\in S_2=\phi_2^{-1}(\partial B_1(0))$, entonces $x_1\sim x_2$ si y sólo si $\phi_1(x_1)=\phi_2(x_2)$, y se considera el cociente 
 
-$$M=\frac{V_1^o\amalg V_2^o}{\sim}.$$
+$$M=\frac{M_1^o\amalg M_2^o}{\sim}.$$
 
 \begin{defin}%%%% DEF: suma conexa
-A $M$ así definida se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, y se denota por $M=V_1\#V_2$.
+A $M$ así definida se le llama \textbf{\textit{suma conexa}} de $M_1$ y $M_2$, y se denota por $M=M_1\#M_2$.
 \end{defin}
 \begin{figure}[t]%%%%FIG: 2-toro
 \centering
@@ -325,19 +325,19 @@ A $M$ así definida se le llama \textbf{\textit{suma conexa}} de $V_1$ y $V_2$, 
 \end{figure}
 
 \begin{prop}%%%% PROP: suma conexa es variedad.
-Sean $V_1$ y $V_2$ variedades. Entonces $M=V_1\#V_2$ es una variedad.
+Sean $M_1$ y $M_2$ variedades. Entonces $M=M_1\#M_2$ es una variedad.
 \end{prop}
 \begin{proof}
 Denotemos la proyección $\pi:M_1^o\amalg M_2^o\to X$. Sea $S=\pi (S_1)=\pi (S_2)$. Tenemos dos abiertos $U_j=M_j^o-S_j$, $j=1,2$ saturados. Por tanto, $\pi :U_ j\to \pi (U_j)=U_j'$ es homeomorfismo. Esto implica que $X$ es localmente homeomorfo a  $\R^n$ en los puntos de $U_1'\cup U_2'$ . Además es Hausdorff y IIAN.
-Veamos ahora qué ocurre para un punto $p\in S$. Se tiene que $p=\pi (p_1)=\pi (p_2)$, $p_j\in S_j$, $j=1,2$, y $\varphi_j(p_j)=x_0 \in \partial B_1(0) \in \R^n$. Tomamos un entorno $V\subset \partial B_1(0)$ de $x_0$ en $\partial B_1(0)$, con lo que $\hat{V}=\{rx\mid   r\in (1-\varepsilon , 1+\varepsilon ), x\in V\}$ es entorno de $x_0$ en $\R^n$, y $\hat{V}-B_1(0)=\{rx\mid r\in [1, 1+\varepsilon ), x \in V\}$. Sea $V_j=\varphi_j^{-1}(\hat{V}-B_1(0))\subset M_j^o$, que es entorno de $p_j$. Claramente $V_1\amalg V_2$ es abierto saturado de $M_1^o\amalg M_2^o$, luego $\tilde{V}=\pi (V_1\amalg V_2)$ es entorno de $p$ en $X$. Veamos ahora que es homeomorfo a un abierto de $\R^n$. Sea
+Veamos ahora qué ocurre para un punto $p\in S$. Se tiene que $p=\pi (p_1)=\pi (p_2)$, $p_j\in S_j$, $j=1,2$, y $\varphi_j(p_j)=x_0 \in \partial B_1(0) \in \R^n$. Tomamos un entorno $V\subset \partial B_1(0)$ de $x_0$ en $\partial B_1(0)$, con lo que $\hat{V}=\{rx\mid   r\in (1-\varepsilon , 1+\varepsilon ), x\in V\}$ es entorno de $x_0$ en $\R^n$, y $\hat{V}-B_1(0)=\{rx\mid r\in [1, 1+\varepsilon ), x \in V\}$. Sea $V_j=\varphi_j^{-1}(\hat{V}-B_1(0))\subset M_j^o$, que es entorno de $p_j$. Claramente $ M_1\amalg M_2$ es abierto saturado de $M_1^o\amalg M_2^o$, luego $\tilde{V}=\pi ( M_1\amalg M_2)$ es entorno de $p$ en $X$. Veamos ahora que es homeomorfo a un abierto de $\R^n$. Sea
 \begin{align*}
-\Phi : & V_1\amalg V_2  \to  V\times (1-\varepsilon , 1+ \varepsilon ), \\
-& q_1\in V_1  \mapsto  (x,r), r=\norm{\varphi_1(q_1)}, x=\varphi_1(q_1)/r,\\
-& q_2\in V_2  \mapsto  (x,2-r), r= \norm{\varphi_2(q_2)}, x= \varphi_2(q_2)/r.
+\Phi : &  M_1\amalg M_2  \to  V\times (1-\varepsilon , 1+ \varepsilon ), \\
+& q_1\in  M_1  \mapsto  (x,r), r=\norm{\varphi_1(q_1)}, x=\varphi_1(q_1)/r,\\
+& q_2\in M_2  \mapsto  (x,2-r), r= \norm{\varphi_2(q_2)}, x= \varphi_2(q_2)/r.
 \end{align*}
-Por tanto, $\Phi : V_1 \to V \times [1, 1+\varepsilon)$ y $\Phi : V_2 \to V \times (1- \varepsilon, 1]$ son homeomorfismos. Además, $q_1 \sim q_2$ si y sólo si $\Phi(q_1)=\Phi(q_2)$. De este modo, $\Phi$ induce una aplicación continua y biyectiva $$\overline{\Phi} : \tilde{V} \to V \times (1- \varepsilon, 1+ \varepsilon)$$
+Por tanto, $\Phi :  M_1 \to V \times [1, 1+\varepsilon)$ y $\Phi : M_2 \to V \times (1- \varepsilon, 1]$ son homeomorfismos. Además, $q_1 \sim q_2$ si y sólo si $\Phi(q_1)=\Phi(q_2)$. De este modo, $\Phi$ induce una aplicación continua y biyectiva $$\overline{\Phi} : \tilde{V} \to V \times (1- \varepsilon, 1+ \varepsilon)$$
 
-$\overline{\Phi}$ es abierta: si tomamos un abierto básico saturado de $V_1\amalg V_2$, o bien está totalmente incluido en $V_1-S_1$ o en $V_2-S_2$, en cuyo caso su imagen es un abierto de $V\times (1-\varepsilon ,1)$ o $V\times (1,1+\varepsilon )$, o bien interseca a $S_1$ y $S_2$. En ese caso se puede asumir que es un abierto de la forma $W_1\amalg W_2$, construido como antes y donde hemos partido de un $W\subset V \subset \partial B_1(0)$. Entonces $\overline{\Phi} (\tilde{W})= W \times (1-\delta , 1+\delta )$ con $0<\delta \leq \varepsilon$, $\tilde{W} = \pi (W_1 \amalg W_2)$. Luego $\overline{\Phi}$ es un homeomorfismo, y $\tilde{V}$ es homeomorfo a un abierto de $\R^n$.
+$\overline{\Phi}$ es abierta: si tomamos un abierto básico saturado de $ M_1\amalg M_2$, o bien está totalmente incluido en $ M_1-S_1$ o en $M_2-S_2$, en cuyo caso su imagen es un abierto de $V\times (1-\varepsilon ,1)$ o $V\times (1,1+\varepsilon )$, o bien interseca a $S_1$ y $S_2$. En ese caso se puede asumir que es un abierto de la forma $W_1\amalg W_2$, construido como antes y donde hemos partido de un $W\subset V \subset \partial B_1(0)$. Entonces $\overline{\Phi} (\tilde{W})= W \times (1-\delta , 1+\delta )$ con $0<\delta \leq \varepsilon$, $\tilde{W} = \pi (W_1 \amalg W_2)$. Luego $\overline{\Phi}$ es un homeomorfismo, y $\tilde{V}$ es homeomorfo a un abierto de $\R^n$.
 
 Los abiertos construidos, $\tilde{V} \subset X$, se pueden tomar en cantidad numerable para formar una base de la topología, con lo cual $X$ es IIAN. También, dado un $q\in U_j'$, $j=1,2$, y un $p\in S$, se puede tomar un abierto $\tilde{V}$ entorno de $p$ disjunto de un entorno pequeño de $q$. Y si tomamos $p, p' \in S$ distintos, los abiertos $\tilde{V}$, $\tilde{V}'$ construidos partiendo de $V$, $V'\subset \partial B_1(0)$ disjuntos, serán disjuntos. Luego $X$ es Hausdorff.
 \end{proof}
@@ -1488,7 +1488,7 @@ Sean $M_1$ y $M_2$ superficies que admiten respectivamente representaciones $\la
 \end{prop}
 
 \begin{proof}
-Consideramos la representación $\mathcal{P}_1=\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1},abc\rangle$ (\autoref{fig:suma_conexa_rep_pol_a}). Pegando a lo largo de $a$ y doblando dos veces, tenemos que $\mathcal{P}_1$ es una representación equivalente a $\langle S_1\mid W_1\rangle$ y por tanto es una representación de $M_1$. Llamemos $B_1$ a la imagen en $M_1$ del interior de la región poligonal cuyo borde es $abc$. Veamos que $B_1$ es un disco coordenado regular, es decir, que existe un entorno $B'$ de $B_1$ en $M_1$ y un homeomorfismo $\phi :B'\to \R^2$ que manda $B_1$ a $\mathbb{B}^2$ y $\overline{B}$ a $\overline{\mathbb{B}}^2$. Una forma de verlo lo sugiere la \autoref{fig:suma_conexa_rep_pol}: sean $P_1$, $Q$ y $P_1'$ regiones poligonales convexas etiquetadas respectivamente por las palabras $W_1c^{-1}b^{-1}a^{-1}$, $abc$ y $W_1$. Si triangulamos las regiones poligonales como en la  \autoref{fig:suma_conexa_rep_pol}, obtenemos una aplicación simplicial $f:P_1\amalg Q\to P_1'$ que lleva $Q$ a el triángulo $Q'\subseteq P_1'$, que comparte una vértice $v$ con $P_1'$. La composición $P_1\amalg Q\to P_1'\to M_1$ respeta las identificaciones hechas por la aplicación cociente $P_1'\to M_1$, por lo que se tiene un homeomorfismo de $M_1$ llevando $B_1$ a la imagen de $Q'$.\\
+Consideramos la representación $\mathcal{P}_1=\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1},abc\rangle$ (\autoref{fig:suma_conexa_rep_pol}). Pegando a lo largo de $a$ y doblando dos veces, tenemos que $\mathcal{P}_1$ es una representación equivalente a $\langle S_1\mid W_1\rangle$ y por tanto es una representación de $M_1$. Llamemos $B_1$ a la imagen en $M_1$ del interior de la región poligonal cuyo borde es $abc$. Veamos que $B_1$ es un disco coordenado regular, es decir, que existe un entorno $B'$ de $B_1$ en $M_1$ y un homeomorfismo $\phi :B'\to \R^2$ que manda $B_1$ a $\mathbb{B}^2$ y $\overline{B}$ a $\overline{\mathbb{B}}^2$. Una forma de verlo lo sugiere la \autoref{fig:suma_conexa_rep_pol}: sean $P_1$, $Q$ y $P_1'$ regiones poligonales convexas etiquetadas respectivamente por las palabras $W_1c^{-1}b^{-1}a^{-1}$, $abc$ y $W_1$. Si triangulamos las regiones poligonales como en la  \autoref{fig:suma_conexa_rep_pol}, obtenemos una aplicación simplicial $f:P_1\amalg Q\to P_1'$ que lleva $Q$ a el triángulo $Q'\subseteq P_1'$, que comparte una vértice $v$ con $P_1'$. La composición $P_1\amalg Q\to P_1'\to M_1$ respeta las identificaciones hechas por la aplicación cociente $P_1'\to M_1$, por lo que se tiene un homeomorfismo de $M_1$ llevando $B_1$ a la imagen de $Q'$.\\
 Ahora, fijémonos en la demostración de la \autoref{prop:poligonos} (b). Cuando construimos el entorno Euclídeo de un vértice, ensamblábamos las regiones del plano de los varios vértices en un mismo disco coordenado. Aplicando esa construcción al vértice $v$, llevamos $Q'$ a un conjunto que es homeomorfo a un disco cerrado en el plano (\autoref{fig:disco_regular}), y  entonces extendemos ese homeomorfismo a un disco abierto que lo contiene.\\
 Se sigue de este resultado que la realización geométrica de $\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1}\rangle$ es homeomorfa a $M_1'=M_1\setminus B_1$, y $\partial B_1$ es la imagen de los bordes $c^{-1}b^{-1}a^{-1}$. Un argumento similar demuestra que $\langle S_2,a,b,c\mid abcW_2\rangle$ es una presentación de $M_2$ menos un disco coordenado$M_2'=M_2\setminus B_1$. Por tanto se tiene que $\langle S_1,S_2,a,b,c\mid W_1,c^{-1}b^{-1}a^{-1},abcW_2\rangle$ es una presentación de $M_1'\amalg M_2'$ con los bordes de los respectivos discos identificados, es decir, $M_1\# M_2$. Finalmente, pegando por $a$ y doblando dos veces, se obtiene la presentación $\langle S_1,S_2\mid W_1W_2\rangle$.
 \end{proof}
@@ -1549,7 +1549,7 @@ Se sigue de este resultado que la realización geométrica de $\langle S_1,a,b,c
 \draw (-6,3) node [anchor=south east]{$W$};
 
 \end{tikzpicture}
-\caption{La representación $\mathcal{P}_1=\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1},abc\rangle$.\label{fig:suma_conexa_rep_pol_a}}
+\caption{La representación $\mathcal{P}_1=\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1},abc\rangle$.\label{fig:suma_conexa_rep_pol}}
 \end{figure}
 
 %%%%%
@@ -1677,7 +1677,7 @@ Esta última es, tal como queríamos, una representación de $\Toro \# \Proyecti
 
 Podemos ahora enunciar y demostrar nuestro teorema. Diremos que dos bordes identificados de una representación poligonal son \enfatiza{complementarios} si aparecen tanto en la forma $a$ como en la de $a^{-1}$, y diremos que son \enfatiza{torcidos} si aparecen como $a,\dots ,a$ o como $a^{-1},\dots a^{-1}$. ((Quizás esto interrumpe un poco el discurso. Ponerlo en la demo mejor?))
 
-\begin{tma}[Teorema de Clasificación de Superficies Compactas]\label{teo:csc}
+\begin{tma}[Clasificación de Superficies Compactas]\label{teo:csc}
 Toda superficie compacta y conexa no vacía es homeomorfa a alguna de las siguientes superficies:
 \begin{itemize}
 \item[(a)] La esfera $\Esfera$.
@@ -1766,7 +1766,7 @@ Nos queda el caso en el que aparecen tanto pares torcidos como pares complementa
 \draw [->] (6.2,1.1) [out=45, in=135] to (6.8,1.1);
 
 \end{tikzpicture}
-\caption{Hacer que los pares torcidos sean adyacentes.\label{fig:PASO3}}
+\caption{Haciendo que los pares torcidos sean adyacentes.\label{fig:PASO3}}
 \end{figure}
 
 \begin{figure}
@@ -2097,7 +2097,7 @@ Ahora sólo falta aplicar sobre $\mathcal{P}$ el resto de la demostración de la
 \caption{Triangulación cerca de una componente del borde de $M$.\label{fig:triangulacion_perf}}
 \end{figure}
 \begin{eje}
-Veamos las representaciones estándar de las superficies fundamentales perforadas. Para ello, hacemos un corte $c_i$ desde un mismo vértice a cada perforación asociada a la componente $B_i$, de forma que estos no se solapen con las perforaciones. En la \autoref{fig:toro_perforado} podemos ver un ejemplo de la representación estándar de un toro con dos perforaciones.
+Veamos las representaciones estándar de las superficies fundamentales perforadas. Para ello, hacemos un corte $c_i$ desde un mismo vértice a cada perforación asociada a la componente $B_i$, de forma que estos no se solapen con las perforaciones. En la \autoref{fig:toro_perforado} podemos ver un ejemplo de la representación estándar de la suma conexa de dos toros con dos perforaciones.
 \begin{itemize}
 \item [(a)] \textit{Esfera con k perforaciones.} 
 $$\langle a, c_1,\dots ,c_k, B_1, \dots ,B_k \mid aa^{-1}c_1B_1c_1^{-1}\dots c_kB_kc_k^{-1}\rangle$$ 
@@ -2108,54 +2108,66 @@ $$\langle a_1,\dots ,a_n, c_1,\dots ,c_k, B_1,\dots ,B_k\mid a_1a_1\dots a_na_nc
 \end{itemize}
 \end{eje}
 
-\begin{figure}
+\begin{figure}[b]
 \centering
-\begin{subfigure}{.4\linewidth}
+\begin{subfigure}{1\linewidth}
 \centering
-\begin{tikzpicture}[use optics, >=angle 60, scale=1.5]
+\begin{tikzpicture}[use optics, >=angle 60, scale=2]
 
-\fill[line width=1.2pt,fill=black,fill opacity=0.1] (0,0) -- (0.9238207149966959,0.3828253995531037) -- (1.3063621711370152,1.3067637277623212) -- (0.9235367715839117,2.230584442759017) -- (-0.00040155662530578324,2.6131258988993364) -- (-0.9242222716220017,2.230300499346233) -- (-1.3067637277623212,1.3063621711370155) -- (-0.9239383282092178,0.38254145614031965) -- cycle;
+\fill[  ,fill=black,fill opacity=0.1] (0,0) -- (0.9238207149966959,0.3828253995531037) -- (1.3063621711370152,1.3067637277623212) -- (0.9235367715839117,2.230584442759017) -- (-0.00040155662530578324,2.6131258988993364) -- (-0.9242222716220017,2.230300499346233) -- (-1.3067637277623212,1.3063621711370155) -- (-0.9239383282092178,0.38254145614031965) -- cycle;
 
 \draw  [->-]  (0,0) -- (0.9238207149966959,0.3828253995531037)node[midway,below] {$b_2$};
-\draw  [->-](0.9238207149966959,0.3828253995531037)-- (1.3063621711370152,1.3067637277623212)node[midway,below] {$a_2$};
-\draw  [-<-](1.3063621711370152,1.3067637277623212)-- (0.9235367715839117,2.230584442759017)node[midway,below] {$b_2$};
-\draw  [-<-](0.9235367715839117,2.230584442759017)-- (-0.00040155662530578324,2.6131258988993364)node[midway,below] {$a_2$};
-\draw  [->-](-0.00040155662530578324,2.6131258988993364)-- (-0.9242222716220017,2.230300499346233)node[midway,below] {$b_1$};
-\draw  [->-](-0.9242222716220017,2.230300499346233)-- (-1.3067637277623212,1.3063621711370155)node[midway,below] {$a_1$};
-\draw  [-<-](-1.3067637277623212,1.3063621711370155)-- (-0.9239383282092178,0.38254145614031965)node[midway,below] {$b_1$};
+\draw  [->-](0.9238207149966959,0.3828253995531037)-- (1.3063621711370152,1.3067637277623212)node[midway, anchor=west] {$a_2$};
+\draw  [-<-](1.3063621711370152,1.3067637277623212)-- (0.9235367715839117,2.230584442759017)node[midway,anchor=west] {$b_2$};
+\draw  [-<-](0.9235367715839117,2.230584442759017)-- (-0.00040155662530578324,2.6131258988993364)node[midway,anchor=south west] {$a_2$};
+\draw  [->-](-0.00040155662530578324,2.6131258988993364)-- (-0.9242222716220017,2.230300499346233)node[midway,anchor=south east] {$b_1$};
+\draw  [->-](-0.9242222716220017,2.230300499346233)-- (-1.3067637277623212,1.3063621711370155)node[midway,anchor=east] {$a_1$};
+\draw  [-<-](-1.3067637277623212,1.3063621711370155)-- (-0.9239383282092178,0.38254145614031965)node[midway,anchor=east] {$b_1$};
 \draw  [-<-](-0.9239383282092178,0.38254145614031965)-- (0,0)node[midway,below] {$a_1$};
-\draw  [-<-](0,0)-- (-0.5128819104663424,1.2073243438172108);
-\draw  [-<-](0,0)-- (0.4909162594319499,1.202150126446601);
+\draw  [-<-](0,0)-- (-0.5128819104663424,1.2073243438172108) node [midway, anchor=east] {$c_1$};
+\draw  [-<-](0,0)-- (0.4909162594319499,1.202150126446601)node [midway, anchor=west] {$c_2$};
 
-\filldraw[white]  (-0.5,1.5) circle (0.2929590130705814cm);
+\filldraw[white]  (-0.5,1.5)circle (0.2929590130705814cm);
 \filldraw [white] (0.5,1.5) circle (0.2979883580250803cm);
 \draw  [->-={at=0.25}](-0.5,1.5) circle (0.2929590130705814cm);
 \draw  [->-={at=0.25}](0.5,1.5) circle (0.2979883580250803cm);
+\draw (-0.27,1.5) node [anchor=east] {$B_1$};
+\draw (0.27,1.5) node [anchor=west] {$B_2$};
+
+\filldraw (0,0) circle (1pt);
 \end{tikzpicture}
 \caption{ }
 \end{subfigure}
-\begin{subfigure}{.4\linewidth}
+\begin{subfigure}{1\linewidth}
 \centering
-\begin{tikzpicture}[use optics]
-\fill[ shift={(3,0)},fill=black,fill opacity=0.1] (0,0) -- (1,0) -- (1.8660254037844386,0.5) -- (2.366025403784439,1.3660254037844388) -- (2.366025403784439,2.3660254037844384) -- (1.8660254037844393,3.232050807568877) -- (1,3.7320508075688776) -- (0,3.7320508075688776) -- (-0.8660254037844384,3.2320508075688785) -- (-1.3660254037844388,2.3660254037844393) -- (-1.3660254037844393,1.3660254037844402) -- (-0.8660254037844393,0.5) -- cycle;
+\begin{tikzpicture}[use optics,scale=2]
 
-\draw [ shift={(3,0)}, ->- ] (0,0)-- (1,0)node[midway,below] {$c_1$};
-\draw [ shift={(3,0)},-<-] (1,0)-- (1.8660254037844386,0.5)node[midway,below] {$c_2$};
-\draw [ shift={(3,0)},->-] (1.8660254037844386,0.5)-- (2.366025403784439,1.3660254037844388)node[midway,below] {$c_2$};
-\draw [ shift={(3,0)},->-] (2.366025403784439,1.3660254037844388)-- (2.366025403784439,2.3660254037844384)node[midway,below] {$b_2$};
-\draw [ shift={(3,0)},->-] (2.366025403784439,2.3660254037844384)-- (1.8660254037844393,3.232050807568877)node[midway,below] {$a_2$};
-\draw [ shift={(3,0)},-<-] (1.8660254037844393,3.232050807568877)-- (1,3.7320508075688776)node[midway,below] {$b_2$};
-\draw [ shift={(3,0)},-<-] (1,3.7320508075688776)-- (0,3.7320508075688776)node[midway,below] {$a_2$};
-\draw [ shift={(3,0)},->-] (0,3.7320508075688776)-- (-0.8660254037844384,3.2320508075688785)node[midway,below] {$b_1$};
-\draw [ shift={(3,0)},->-] (-0.8660254037844384,3.2320508075688785)-- (-1.3660254037844388,2.3660254037844393)node[midway,below] {$a_1$};
-\draw [ shift={(3,0)},-<-] (-1.3660254037844388,2.3660254037844393)-- (-1.3660254037844393,1.3660254037844402)node[midway,below] {$b_1$};
-\draw [ shift={(3,0)},-<-] (-1.3660254037844393,1.3660254037844402)-- (-0.8660254037844393,0.5)node[midway,below] {$a_1$};
-\draw [ shift={(3,0)},-<-] (-0.8660254037844393,0.5)-- (0,0) node[midway,below] {$c_1$};
 
+
+\fill[  fill=black,fill opacity=0.1] (0,0) -- (0.6,0) -- (1.1405813207414512,0.2603302434705348) -- (1.5146752018566914,0.7294291329513525) -- (1.6481877622304801,1.3143858802604464) -- (1.5146752018566916,1.8993426275695406) -- (1.1405813207414515,2.3684415170503583) -- (0.6,2.6287717605208933) -- (0,2.628771760520894) -- (-0.5405813207414512,2.3684415170503588) -- (-0.9146752018566913,1.899342627569541) -- (-1.0481877622304798,1.314385880260447) -- (-0.9146752018566915,0.7294291329513529) -- (-0.5405813207414516,0.260330243470535) -- cycle;
+
+
+\draw [ -<- ] (0,0)-- (0.6,0) node [anchor=north, midway] {$c_1$};
+\draw [ -<- ] (0.6,0)-- (1.1405813207414512,0.2603302434705348)node [anchor=north, midway] {$B_1$};
+\draw [ ->- ] (1.1405813207414512,0.2603302434705348)-- (1.5146752018566914,0.7294291329513525) node [anchor=north west, midway] {$c_1$};
+\draw [ -<- ] (1.5146752018566914,0.7294291329513525)-- (1.6481877622304801,1.3143858802604464) node [midway, anchor=west] {$c_2$};
+\draw [ -<- ] (1.6481877622304801,1.3143858802604464)-- (1.5146752018566916,1.8993426275695406) node [midway, anchor=west] {$B_2$};
+\draw [ ->- ] (1.5146752018566916,1.8993426275695406)-- (1.1405813207414515,2.3684415170503583) node [anchor=south west, midway]  {$c_2$};
+\draw [ ->- ] (1.1405813207414515,2.3684415170503583)-- (0.6,2.6287717605208933)node [midway, anchor=south] {$b_2$};
+\draw [  ->-] (0.6,2.6287717605208933)-- (0,2.628771760520894)node [midway, anchor=south] {$a_2$};
+\draw [ -<- ] (0,2.628771760520894)-- (-0.5405813207414512,2.3684415170503588)node [midway, anchor=south] {$b_2$};
+\draw [ -<- ] (-0.5405813207414512,2.3684415170503588)-- (-0.9146752018566913,1.899342627569541)node [anchor= south east, midway] {$a_2$};
+\draw [ ->- ] (-0.9146752018566913,1.899342627569541)-- (-1.0481877622304798,1.314385880260447)node [midway, anchor=east]{$b_1$};
+\draw [ ->- ] (-1.0481877622304798,1.314385880260447)-- (-0.9146752018566915,0.7294291329513529) node [anchor=east, midway] {$a_1$};
+\draw [  -<-] (-0.9146752018566915,0.7294291329513529)-- (-0.5405813207414516,0.260330243470535) node [anchor=north east, midway]{$b_1$};
+\draw [ -<- ] (-0.5405813207414516,0.260330243470535)-- (0,0)node [anchor=north, midway] {$a_1$};
+
+\filldraw (0,0) circle (1pt);
+\filldraw (1.5146752018566916,1.8993426275695406)  circle (1pt);
 \end{tikzpicture}
 \caption{ }
 \end{subfigure}
-\caption{La superficie $\Toro \# \Toro$  con dos perforaciones.}
+\caption{La superficie $\Toro \# \Toro$  con dos perforaciones.\label{fig:toro_perforado}}
 \end{figure}
 
 \begin{tma}[Clasificación de superficies con borde compactas]

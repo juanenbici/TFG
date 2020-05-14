@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.8)  13 MAY 2020 22:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.8)  14 MAY 2020 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1333,14 +1333,6 @@ LaTeX Warning: Reference `lema:celdas' on page 21 undefined on input line 1474.
 
 [21]
 
-LaTeX Warning: Reference `fig:suma_conexa_rep_pol' on page 22 undefined on inpu
-t line 1491.
-
-
-LaTeX Warning: Reference `fig:suma_conexa_rep_pol' on page 22 undefined on inpu
-t line 1491.
-
-
 LaTeX Warning: Reference `fig:disco_regular' on page 22 undefined on input line
  1492.
 
@@ -1443,12 +1435,9 @@ LaTeX Warning: Reference `prop:sub_IIAN' on page 28 undefined on input line 196
 
 [28
 
-]
-
-LaTeX Warning: Reference `fig:toro_perforado' on page 29 undefined on input lin
-e 2100.
-
-[29]
+] [29]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1516,16 +1505,16 @@ Package microtype Info: Loading generic protrusion settings for font family
  [42
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2731.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2731.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2743.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2743.
  (./TFG2.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2731.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2731.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2743.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2743.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
 (rerunfilecheck)             Checksum: EC361863BDC2B6C10E8D307320B3A744;1549.
@@ -1535,13 +1524,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 36039 strings out of 492167
- 832870 string characters out of 6131559
- 1079736 words of memory out of 5000000
- 39413 multiletter control sequences out of 15000+600000
+ 36050 strings out of 492167
+ 833093 string characters out of 6131559
+ 1078805 words of memory out of 5000000
+ 39424 multiletter control sequences out of 15000+600000
  15739 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,12n,104p,1851b,1375s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,12n,104p,1851b,1369s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{eje.1.2.5} has been referenced but does not exist
 , replaced by a fixed one
 
@@ -1563,10 +1552,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (46 pages, 502534 bytes).
+Output written on TFG2.pdf (46 pages, 502986 bytes).
 PDF statistics:
- 824 PDF objects out of 1000 (max. 8388607)
- 729 compressed objects within 8 object streams
+ 827 PDF objects out of 1000 (max. 8388607)
+ 732 compressed objects within 8 object streams
  270 named destinations out of 1000 (max. 500000)
  15138 words of extra memory for PDF output out of 17280 (max. 10000000)
 
