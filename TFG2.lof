@@ -3,37 +3,37 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplos de superficies.\relax }}{2}{figure.caption.3}% 
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Suma conexa de toros.\relax }}{5}{figure.caption.5}% 
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Suma conexa de un toro y una esfera.\relax }}{6}{figure.caption.6}% 
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Suma conexa de una superficie y un toro visto como pegar un \textit {asa}. \relax }}{6}{figure.caption.7}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces $k$-símplices, $k=0,\dots ,3$.\relax }}{8}{figure.caption.8}% 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Un complejo simplicial en $\mathbb {R}^2$\relax }}{8}{figure.caption.9}% 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Símplices que no forman un complejo.\relax }}{8}{figure.caption.9}% 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces $k$-símplices, $k=0,\dots ,3$.\relax }}{7}{figure.caption.6}% 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Un complejo simplicial en $\mathbb {R}^2$\relax }}{7}{figure.caption.7}% 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Símplices que no forman un complejo.\relax }}{7}{figure.caption.7}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces La esfera como cociente del disco $\overline {\mathbb {B}}^2$.\relax }}{11}{figure.caption.10}% 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces La esfera como cociente de un cuadrado.\relax }}{11}{figure.caption.11}% 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces El toro como cociente de un cuadrado.\relax }}{12}{figure.caption.12}% 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Representación de $\mathbb {P}^2$ como un espacio cociente.\relax }}{12}{figure.caption.13}% 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Crosscap.\relax }}{13}{figure.caption.14}% 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Entorno euclídeo de un vértice.\relax }}{15}{figure.caption.15}% 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Construcción de la botella de Klein.\relax }}{16}{figure.caption.16}% 
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Superficies con borde como cocientes topológicos.\relax }}{16}{figure.caption.17}% 
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Representación de superficies importantes.\relax }}{19}{figure.caption.18}% 
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Representaciones de la esfera y el plano proyectivo. \relax }}{19}{figure.caption.19}% 
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Representación de superficies con borde.\relax }}{19}{figure.caption.20}% 
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Subdividir/consolidar. \relax }}{21}{figure.caption.21}% 
-\contentsline {figure}{\numberline {3.15}{\ignorespaces La representación $\mathcal {P}_1=\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1},abc\rangle $.\relax }}{23}{figure.caption.24}% 
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Transformación de la bottella de Klein en $\mathbb {P}^2$.\relax }}{24}{figure.caption.25}% 
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Haciendo que los pares torcidos sean adyacentes.\relax }}{26}{figure.caption.26}% 
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Reduciendo el número de vértices equivalentes a $v$.\relax }}{27}{figure.caption.27}% 
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Poniendo los pares complementarios juntos. \relax }}{27}{figure.caption.28}% 
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Subdivisión baricéntrica de un 2-símplice que tiene dos lados en $\partial M$.\relax }}{29}{figure.caption.29}% 
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Triangulación cerca de una componente del borde de $M$.\relax }}{30}{figure.caption.30}% 
-\contentsline {figure}{\numberline {3.22}{\ignorespaces La superficie $\mathbb {T}^2\# \mathbb {T}^2$ con dos perforaciones.\relax }}{31}{figure.caption.31}% 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces La esfera como cociente del disco $\overline {\mathbb {B}}^2$.\relax }}{10}{figure.caption.8}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces La esfera como cociente de un cuadrado.\relax }}{10}{figure.caption.9}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces El toro como cociente de un cuadrado.\relax }}{11}{figure.caption.10}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Representación de $\mathbb {P}^2$ como un espacio cociente.\relax }}{11}{figure.caption.11}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Crosscap.\relax }}{12}{figure.caption.12}% 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Entorno euclídeo de un vértice.\relax }}{15}{figure.caption.13}% 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Construcción de la botella de Klein.\relax }}{16}{figure.caption.14}% 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Superficies con borde como cocientes topológicos.\relax }}{16}{figure.caption.15}% 
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Representación de superficies importantes.\relax }}{19}{figure.caption.16}% 
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Representaciones de la esfera y el plano proyectivo. \relax }}{19}{figure.caption.17}% 
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Representación de superficies con borde.\relax }}{19}{figure.caption.18}% 
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Subdividir/consolidar. \relax }}{20}{figure.caption.19}% 
+\contentsline {figure}{\numberline {3.15}{\ignorespaces La representación $\mathcal {P}_1=\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1},abc\rangle $.\relax }}{22}{figure.caption.22}% 
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Transformación de la bottella de Klein en $\mathbb {P}^2$.\relax }}{25}{figure.caption.23}% 
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Haciendo que los pares torcidos sean adyacentes.\relax }}{27}{figure.caption.24}% 
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Reduciendo el número de vértices equivalentes a $v$.\relax }}{27}{figure.caption.25}% 
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Poniendo los pares complementarios juntos. \relax }}{28}{figure.caption.26}% 
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Subdivisión baricéntrica de un 2-símplice que tiene dos lados en $\partial M$.\relax }}{30}{figure.caption.27}% 
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Triangulación cerca de una componente del borde de $M$.\relax }}{31}{figure.caption.28}% 
+\contentsline {figure}{\numberline {3.22}{\ignorespaces La superficie $\mathbb {T}^2\# \mathbb {T}^2$ con dos perforaciones.\relax }}{32}{figure.caption.29}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces El disco cerrado como una esfera perforada.\relax }}{32}{figure.caption.32}% 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Construcciones elementales con cremalleras.\relax }}{34}{figure.caption.33}% 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Representación de una esfera con perforaciones y cremalleras. \relax }}{35}{figure.caption.34}% 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Construcciones elementales con cremalleras.\relax }}{34}{figure.caption.30}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces El disco cerrado como una esfera perforada.\relax }}{35}{figure.caption.31}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Suma conexa de un toro y una esfera.\relax }}{35}{figure.caption.32}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Suma conexa de una superficie y un toro visto como pegar un \textit {asa}. \relax }}{36}{figure.caption.33}% 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Representación de una esfera con perforaciones y cremalleras. \relax }}{37}{figure.caption.34}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Demostración de que sólo hay un punto de la frontera en la semirecta.\relax }}{40}{figure.caption.35}% 
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Demostración de que sólo hay un punto de la frontera en la semirecta.\relax }}{41}{figure.caption.35}% 

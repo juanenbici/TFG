@@ -185,6 +185,7 @@ Sea $M$ una $n$-variedad, y sea $V$ un subconjunto abierto de $M$. Para todo $p\
 Una \textbf{\emph{superficie}} es una $2$-variedad.
 \end{defin}
 \begin{eje}%%%%EJE: toro y esfera
+Son superficies:
 \begin{itemize}
 \item La esfera $\mathbb{S}^2=\{(x,y,z) \in \R^3\mid  x^2+y^2+z^2=1\}$ (\autoref{fig:esfera}).
 \item El toro $\mathbb{T}^2=\{(x,y,z)\in \R^3\mid  (\sqrt{x^2+y^2}-2)^2+z^2=1\}$ (\autoref{fig:toro}).
@@ -292,7 +293,7 @@ Mob=
 & \left\{ \left(\left(1+\left(y-\frac{1}{2}\right)\cos \left(\pi x\right)\right), \, \left(1+\left(y-\frac{1}{2}\right)\cos \left(\pi x\right)\right)\sin \left( 2 \pi x\right), \right. \right.\\
 & \left. \left. \left( y-\frac{1}{2} \right)\sin \left( \pi x\right)\right) \mid x\in \left[0,1\right], \, y\in \left[0,1\right] \right\} \, .
 \end{align*}.
-\item[(3)] Una toro con dos perforaciones.
+\item[(3)] Una toro con dos ``perforaciones''.
 \end{itemize}
 \end{eje}
 
@@ -342,119 +343,13 @@ $\overline{\Phi}$ es abierta: si tomamos un abierto básico saturado de $ M_1\am
 Los abiertos construidos, $\tilde{V} \subset X$, se pueden tomar en cantidad numerable para formar una base de la topología, con lo cual $X$ es IIAN. También, dado un $q\in U_j'$, $j=1,2$, y un $p\in S$, se puede tomar un abierto $\tilde{V}$ entorno de $p$ disjunto de un entorno pequeño de $q$. Y si tomamos $p, p' \in S$ distintos, los abiertos $\tilde{V}$, $\tilde{V}'$ construidos partiendo de $V$, $V'\subset \partial B_1(0)$ disjuntos, serán disjuntos. Luego $X$ es Hausdorff.
 \end{proof}
 
-
-
-
-\begin{obs}
-Sea $S$ una superficie. Entonces la suma conexa $S\# \Esfera$ es homeomorfa a $S$ (\autoref{fig:suma_toro_esfera}).\label{obs:suma_esfera}
-\end{obs}
-
-\begin{figure}[h]%%%% FIG: suma conexa toro esfera
-\centering
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.75]
-\fill [black!10] (0.5,0) arc[x radius=0.5, y radius=0.5, start angle=0, end angle=-180];
-\fill[color=black!15] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=360];
-\draw [rotate around={0:(-5.5,0)}] (-5.5,0) ellipse (2.5cm and 2cm);
-\draw(0,0) circle (0.5cm);
-\draw (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=-180];
-\draw [dashed] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=180];
-\draw [rotate around={0:(5.7,0)}] (5.7,0) ellipse (2.5cm and 2cm);
-\draw [dashed] (6.67,1.32) arc[x radius=0.45, y radius=0.22, start angle=0, end angle=180];
-\draw (6.67,1.32) arc[x radius=0.45, y radius=0.22, start angle=0, end angle=-180];
-\filldraw [color=black, fill=black!10] [rotate around={0:(-5,1.32)}] (-5.0,1.32) ellipse (0.45cm and 0.22cm);
-\draw (5.77,1.32) arc[x radius=0.45, y radius=0.45, start angle=180, end angle=0];
-\draw (-6.1,0) arc[x radius=0.4, y radius=0.2, start angle=180, end angle=0];
-\draw (-6.4,0.31) arc[x radius=0.7, y radius=0.4, start angle=180, end angle=360];
-\draw (-1.8,0.56) node[anchor=north west] {$\#$};
-\draw (1.22,0.56) node[anchor=north west] {$=$};
-\draw (5.1,0) arc[x radius=0.4, y radius=0.2, start angle=180, end angle=0];
-\draw (4.8,0.31) arc[x radius=0.7, y radius=0.4, start angle=180, end angle=360];
-\end{tikzpicture}
-\caption{Suma conexa de un toro y una esfera.\label{fig:suma_toro_esfera}}
-\end{figure}
-
-
-\begin{obs}%%%%EJE: Asas y toros
-Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el espacio que se obtiene al ``pegarle'' un \textit{asa} a $S$. De forma más precisa, sea $S_0$ que denota a $S$ con dos perforaciones, es decir la superficie que queda al retirar dos discos cerrados disjuntos de $M$ (se dará una construcción más precisa en \autoref{def:perforacion}). Entonces $S_0$ y $\mathbb{S}^1\times I$ son ambas superficies con borde, y sus bordes son ambos homeomorfos a la union disjunta de dos circunferencias. Sea $\tilde{S}$ el espacio adjunción (\autoref{app:adjuncion}) obtenido pegando $S_0$ y $\mathbb{S}^1\times I$ por sus bordes. Este espacio cociente es homeomorfo a $S\# \Toro$. La razón se puede ver en la \autoref{fig:toro_asa}, y es que podemos obtener un espacio homeomorfo a $S\# \Toro$ primero quitando un disco abierto de $S$, luego pegando un disco cerrado con dos discos abiertos quitados (es decir, la parte gris de la figura), y finalmente pegando a la frontera de la construcción el cilindro $\Esfera \times I$. Dado que la primera operación da resultado a un espacio homeomorfo a $S$ con dos discos abiertos quitados, el resultado es el mismo que si quitamos directamente a $S$ dos discos abiertos y entonces pegamos el cilindro a su frontera. \label{obs:toro_asa}
-
-%%165%%
-\end{obs}
-
-\begin{figure}%%%%FIG: Toro-Asa
-\centering
-\begin{tikzpicture}
-%1
-
-
-\fill[gray!20] (-3.3, 0.2) -- (-3.3,0) arc[x radius=0.7, y radius=0.2, start angle=0, end angle=-180] (-4.7,0) -- (-4.7, 0.2)  [out=90, in=270] to (-5,1) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] arc[x radius=0.5, y radius=0.3, start angle=180, end angle=360]  arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] [out=270, in=90] to (-3.3,0.2) ;
-
-
-\draw (-3.3, 0.2) -- (-3.3,0) arc[x radius=0.7, y radius=0.2, start angle=0, end angle=-180] (-4.7,0) -- (-4.7, 0.2)  [out=90, in=270] to (-5,1) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] arc[x radius=0.5, y radius=0.3, start angle=180, end angle=360]  arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] [out=270, in=90] to (-3.3,0.2) ;
-
-
-
-
-
-
-\draw (-3,1) arc[x radius=1, y radius=0.8, start angle=0, end angle=180]; \draw [dashed] (-5,1)  arc [x radius=0.25, y radius=0.1, start angle=180, end angle=0];
-\draw (-4.5,1) arc [x radius=0.5, y radius=0.3, start angle=180, end angle=0];
-\draw (-3.5,1) [dashed] arc [x radius=0.25, y radius=0.1, start angle=180, end angle=0];
-
-\draw (-5.8,-0.5) [out=0, in=270] to (-4.7,0);
-\draw [dashed](-3.3,0) arc[x radius=0.7, y radius=0.2, start angle=0, end angle=180];
-\draw (-3.3,0) [out=270, in=180] to (-2.2,-0.5);
-
-%2
-
-
-
-\draw (1,1) arc[x radius=1, y radius=0.8, start angle=0, end angle=180];
-\draw [dashed] (-1,1)  arc [x radius=0.25, y radius=0.1, start angle=180, end angle=0];
-\draw (-0.5,1) arc [x radius=0.5, y radius=0.3, start angle=180, end angle=0];
-\draw (0.5,1) [dashed] arc [x radius=0.25, y radius=0.1, start angle=180, end angle=0];
-
-
-\fill[color=gray!20] (-0.5,1) arc[x radius=0.5, y radius=0.3, start angle=180, end angle=360] arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] [out=270, in=90] to (1.2,0) arc[x radius=1.2, y radius=0.3, start angle=0, end angle=-180] [out=90, in=270] to (-1,1) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360];
-\draw (-0.5,1) arc[x radius=0.5, y radius=0.3, start angle=180, end angle=360] arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] [out=270, in=90] to (1.2,0) arc[x radius=1.2, y radius=0.3, start angle=0, end angle=-180] [out=90, in=270] to (-1,1) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360];
-
-\draw (-1.8,-0.5) [out=0, in=270] to (-1.2,0);
-
-\draw [dashed] (1.2,0) arc[x radius=1.2, y radius=0.3, start angle=0, end angle=180];
-\draw (1.2,0) [out=270, in=180] to (1.8,-0.5);
-
-%3
-
-
-\draw (5.2,0) [out=270, in=180] to (5.8, -0.5);
-\draw (2.2,-0.5) [out=0, in=270] to (2.8, 0);
-\fill[gray!20](2.8,0) arc[x radius=1.2, y radius=0.3, start angle=180, end angle=540];
-\draw (2.8,0) arc[x radius=1.2, y radius=0.3, start angle=180, end angle=360];
-
-\fill[white] (3,0) -- (3, 0.5) arc[x radius=1, y radius=.8, start angle=180, end angle=0] -- +(0,-0.5) arc[x radius=0.25, y radius=.1, start angle=0, end angle=-180] -- +(0,.5) arc[x radius=0.5, y radius=0.3, start angle=0, end angle=180] -- +(0,-.5) arc[x radius=0.25, y radius=0.1, start angle=0, end angle=-180];
-
-\draw (3,0) -- (3, 0.5) arc[x radius=1, y radius=.8, start angle=180, end angle=0] -- +(0,-0.5) arc[x radius=0.25, y radius=.1, start angle=0, end angle=-180] -- +(0,.5) arc[x radius=0.5, y radius=0.35, start angle=0, end angle=180] -- +(0,-.5) arc[x radius=0.25, y radius=0.1, start angle=0, end angle=-180];
-
-\draw[dashed] (3,0) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=0] (5,0) arc[x radius=0.25, y radius=0.1, start angle=0, end angle=180];
-\draw[dash pattern=on 7.5pt off 2.2pt on 2.2pt off 2.2pt on 2.2pt off 2.2pt on 2.2pt off 1.8 pt on 28.4pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2.4pt] (2.8,0) arc[x radius=1.2, y radius=0.3, start angle=180, end angle=0];
-
-\draw (-2,1) node {$ \approx $};
-\draw (2,1) node {$ \approx $};
-
-
-\end{tikzpicture}
-\caption{Suma conexa de una superficie y un toro visto como pegar un \textit{asa}. \label{fig:toro_asa}}
-\end{figure}
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \chapter{Triangulación de superficies}
 
-Un hecho fundamental para la prueba del teorema de clasificación es que toda superficie es triangulable. La demostración, atribuída a Radó en 1925 \cite{rado}, utiliza el \emph{teorema de Schönflies}, cuya prueba es larga y técnica. Utilizaremos el truco de Kirby para superficies dado por Hatcher \cite{hatcher_torus}.
-
+Un hecho fundamental para la prueba del teorema de clasificación es que toda superficie es triangulable. La demostración, atribuída a Radó en 1925 \cite{rado}, utiliza el \emph{teorema de Schönflies}, cuya prueba es larga y técnica. \begin{comment} Utilizaremos el truco de Kirby para superficies dado por Hatcher \cite{hatcher_torus}.
+\end{comment}
 \
 
 \section{Complejos simpliciales y triangulación}\label{sec:simplices}
@@ -501,11 +396,11 @@ Un $0$-símplice es un punto, un 1-símplice es un segmento, un $2$-símplice es
 
 
 
-Sea $\sigma$ un $k$-símplice. Cada símplice generado por un subconjunto no vacío de vértices de $\sigma$ se llama \enfatiza{cara de $\sigma$}. Las caras que no son iguales a $\sigma$ se llaman \enfatiza{caras propias}. Las caras $0$-dimensionales de $\sigma$ son sus vértices, y a las caras $1$-dimensionales se les llama \enfatiza{lados}. Las caras $(k-1)$-dimensionales de un $k$-símplice se llaman bordes, y a su unión la llamamos \enfatiza{frontera}. Definimos el \enfatiza{interior} como $\sigma$ menos su frontera. 
+Sea $\sigma$ un $k$-símplice. Cada símplice generado por un subconjunto no vacío de vértices de $\sigma$ se llama \enfatiza{cara de $\sigma$}. Las caras que no son iguales a $\sigma$ se llaman \enfatiza{caras propias}. Las caras $0$-dimensionales de $\sigma$ son sus vértices, y a las caras $1$-dimensionales se les llama \enfatiza{lados}. Las caras $(k-1)$-dimensionales de un $k$-símplice se llaman \enfatiza{bordes}, y a su unión la llamamos \enfatiza{frontera}. Definimos el \enfatiza{interior} como $\sigma$ menos su frontera. 
 
 
 \begin{defin}%%%%DEF: Complejo simplicial
-Un \enfatiza{complejo simplicial} es una colección $K$ de símplices en algún espacio euclídeo $\R ^n$, que satisface las siguientes condiciones:
+Un \enfatiza{complejo simplicial} es una colección $K$ de símplices en un espacio euclídeo $\R ^n$, que satisface las siguientes condiciones:
 \begin{itemize}
 \item[(i)] Si $\sigma \in K $, entonces toda cara de $\sigma$ está en $K$
 \item[(ii)] La intersección de dos símplices cualesquiera en $K$ es o bien vacía o bien una cara de ambos.
@@ -517,7 +412,7 @@ Un \enfatiza{complejo simplicial} es una colección $K$ de símplices en algún 
 
 Si $K$ un complejo simplicial en $\R ^n$, llamamos \enfatiza{dimensión de $K$} a la dimensión máxima de los símplices en $K$. Esta no es mayor que $n$.
 Un subconjunto $K'\subseteq K$ se dice que es un \enfatiza{subcomlejo de $K$} si para todo $\sigma \in K'$, toda cara de $\sigma$ está en $K'$. Un subcomplejo es un complejo simplicial en sí.
-Para todo $k\leq n$, el conjunto de todos los símplices de $K$ de dimensión menor o igual que $k$ es un subcomplejo llamado \enfatiza{$k$-esqueleto de $K$}.
+Para todo $k\leq n$, el conjunto de todos los símplices de $K$ de dimensión menor o igual que $k$ es un subcomplejo llamado \enfatiza{k-esqueleto de $K$}.
 
 La \autoref{fig:complex} muestra un complejo simplicial en $\R^2$. En cambio en la \autoref{fig:not_complex} los símplices representados no forman un complejo, pues no se respeta la condición (ii) de la \autoref{def:complex}.
 
@@ -596,7 +491,7 @@ Sea $X$ un espacio topológico. Llamamos \enfatiza{triangulación de $X$} a un h
 \end{defin}
 
 \begin{defin}%%%%DEF: Superficie triangulable
-Toda superficie que admita una triangulación se dice \enfatiza{triangulable}.
+Toda variedad (con borde y sin borde) que admita una triangulación se dice \enfatiza{triangulable}.
 \end{defin}
 
 
@@ -607,6 +502,11 @@ Toda superficie que admita una triangulación se dice \enfatiza{triangulable}.
 Toda superficie es triangulable por un poliedro de un complejo simplicial 2-dimensional, en donde cada $1$-símplice es una cara de exáctamente dos $2$-símplices.\label{teo:rado}
 \end{tma}
 
+\begin{tma}
+Toda superficie con borde es triangulable por un poliedro de un complejo simplicial 2-dimensional, en donde hay dos tipos de 1-símplices: los que están totalmente contenidos en el borde, y los que se corresponden con puntos interiores. Los primeros son cara de exactamente un 2-símplice, y los últimos exactamente de dos 2-símplices.
+\end{tma}
+
+\clearpage
 
 \chapter{Teorema de Clasificación}
 En esta sección daremos una demostración clásica del teorema de clasificación de superficies compactas, que fue probado por primera vez en 1907 por Max Dehn y Poul Heegaard \cite{dehn}. En las primeras dos secciones utilizo las nociones que da Lee \cite{lee1} sobre la representación de superficies, y las amplío a la representación de superficies con borde. En la tercera sección demuestro el teorema basándome en la prueba de Lee \cite{lee1}, que a su vez se basa en la demostración clásica de Seifert y Threlfall \cite{seifert}. Finalmente clasifico las superficies con borde, siguiendo la idea de Massey \cite{massey}.
@@ -628,7 +528,7 @@ La esfera $\mathbb{S}^2$ es homeomorfa a los siguientes espacios cociente:
 \end{prop}
 \begin{proof}
 Para ver que cada espacio es homeomorfo a la esfera, daremos una aplicación cociente desde cada espacio a la esfera que haga las mismas identificaciones que la relación de equivalencia, y entonces apelaremos a la unicidad del espacio cociente. (\autoref{teo:unicidad_espacio_cociente})\\
-Para (a), vamos a definir una aplicación que ``envuelve'' cada segmento horizontal del disco en un paralelo de la esfera (ver \autoref{fig:esfera_cociente_circunferencia}).
+Para (a), vamos a definir una aplicación que ``envuelve'' cada paralelo de la esfera con un segmento horizontal del disco (ver \autoref{fig:esfera_cociente_circunferencia}).
 Formalmente, esta aplicación $\pi:\overline{\mathbb{B}}^2\to \mathbb{S}^2$ vienen dada por 
 $$\pi(x,y)=\left\{\begin{array}{lc}
 			(-\sqrt{1-y^2} \cos\dfrac{\pi x}{\sqrt{1-y^2}}, -\sqrt{1-y^2}, y), & y\neq \pm 1 \\
@@ -638,7 +538,7 @@ $$\pi(x,y)=\left\{\begin{array}{lc}
 \right.$$
 Es claro que $\pi$ es continua y hace las mismas identificaciones que la relación de equivalencia. Por ser sobreyectiva, es una aplicación cociente (\autoref{teo:aplicac_cerrada}).
 
-Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo construido en la demostración de \autoref{teo:convexo_homeom_esfera} que manda linealmente cada segmento radial entre el origen y la frontera de $S$ al segmento paralelo entre centro del disco y su frontera. Hagamos ahora $\beta=\pi \circ \alpha : S \to \mathbb{S}^2$, donde $\pi$ es la aplicación cociente del parágrafo anterior. Tenemos entonces que $\beta$ identifica $(x,y)$ y $(-x,y)$ cuando $(x,y)\in \partial S$, pero por otro lado es inyectiva, así que hace las mismas identificaciones que la aplicación cociente definida en (b), completando así la demostración (ver \autoref{fig:esfera_cuadrado}). 
+Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo construido a partir de la aplicación dada en la demostración de \autoref{teo:convexo_homeom_esfera} que manda linealmente cada segmento radial entre el origen y la frontera de $S$ a un segmento paralelo a este, que une el centro del disco y su frontera. Hagamos ahora $\beta=\pi \circ \alpha : S \to \mathbb{S}^2$, donde $\pi$ es la aplicación cociente del parágrafo anterior. Tenemos entonces que $\beta$ identifica $(x,y)$ y $(-x,y)$ cuando $(x,y)\in \partial S$, y por otro lado es inyectiva, así que hace las mismas identificaciones que la aplicación cociente definida en (b), completando así la demostración (ver \autoref{fig:esfera_cuadrado}). 
 \end{proof}
 \begin{figure}%%%%%%% FIGURA: ESFERA COCIENTE CIRCUNFERENCIA%%%%
 \begin{center}
@@ -783,9 +683,9 @@ El plano proyectivo $\mathbb{P}^2$ es homeomorfo a los siguientes espacios cocie
 \end{itemize}
 \end{prop}
 \begin{proof}
-Sea $p:\mathbb{S}^2 \to \mathbb{P}^2$ la aplicación cociente dada por la relación de equivalencia $\sim$ generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \mathbb{S}^2$, que representa $\mathbb{P}^2$ como el cociente de una esfera. %AQUI FALTA UN POCO DE EXPLICACION, EJEMPLO 4.54 DEL LEE
-Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el disco al emisferio superior de la esfera por $F(x,y)=(x,y,\sqrt{1-x^2-y^2})$, entonces $p\circ F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2/\sim$ es sobreyectiva ((lo demuestro?)) y es así una aplicación cociente por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}). La aplicación identifica únicamente $(x,y)\in \partial \overline{\mathbb{B}}^2$ con $(-x,-y)\in \partial \overline{\mathbb{B}}^2$, por lo que $\mathbb{P}^2$ es homeomorfo al espacio cociente resultante.
-Para la parte (b) hacemos como en la demostración de la \autoref{prop:Esfera como cociente de disco y cuadrado} (b). 
+Sea la relación de equivalencia $\sim$ generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \mathbb{S}^2$, que representa $\mathbb{P}^2$ como el cociente de una esfera en la cual se identifican polos opuestos, y sea $p:\mathbb{S}^2 \to \mathbb{P}^2$ su aplicación cociente. %AQUI FALTA UN POCO DE EXPLICACION, EJEMPLO 4.54 DEL LEE
+Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el disco al emisferio norte de la esfera mediante la aplicación $F(x,y)=(x,y,\sqrt{1-x^2-y^2})$, entonces $p\circ F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2/\sim$ es sobreyectiva por serlo $p$ y $F$, y es por tanto una aplicación cociente por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}). La aplicación identifica únicamente $(x,y)\in \partial \overline{\mathbb{B}}^2$ con $(-x,-y)\in \partial \overline{\mathbb{B}}^2$, por lo que $\mathbb{P}^2$ es homeomorfo al espacio cociente resultante.
+Para la parte (b) utilizamos un argumento análogo al de la demostración de la \autoref{prop:Esfera como cociente de disco y cuadrado} (b) 
 \end{proof}
 
 
@@ -907,8 +807,8 @@ De ahora en adelante visualizaremos el plano proyectivo como el \enfatiza{crossc
 
 
 
-En las anteriores proposiciones hemos visto una o varias formas de representar superficies dadas ciertas construcciones geométricas. En estos casos hemos dado aplicaciones y demostraciones concretas para validar nuestros argumentos, pero a medida que aumenta la sofisticación es más útil guiarse visualmente por las figuras construidas. Por ello debemos formalizar un método para construir superficies identificando lados de figuras geométricas.
-Daremos por sabidas las definiciones básicas de símplices (\autoref{sec:simplices}) y CW-complejos (\autoref{sec:CW}).
+En las anteriores proposiciones hemos visto una o varias formas de representar superficies dadas ciertas construcciones geométricas. En estos casos hemos dado aplicaciones y demostraciones concretas para validar nuestros argumentos, pero a medida que aumenta la sofisticación es más útil guiarse visualmente por las figuras construidas. Por ello debemos formalizar un método para construir superficies identificando lados de figuras geométricas del plano.
+Daremos por sabidas las definiciones básicas de símplices CW-complejos, que dejamos en el \autoref{sec:CW}.
 
 \begin{defin}%%%DEF:Polígono
 Un \enfatiza{polígono} es un subconjunto de $\R^2$ que es homeomorfo a $\mathbb{S}^1$ y está formado por un número finito de segmentos, que llamaremos \enfatiza{bordes} y que se intersecan sólo en sus extremos, que llamaremos \enfatiza{vértices}. %Los $0$-símplices y $1$-símplices del poígono son respectivamente sus \enfatiza{vértices} y sus \enfatiza{bordes}. Del lema \autoref{lemma:cw} se sigue que un borde yace exactamente en dos vértices.
@@ -940,7 +840,7 @@ Por un lado las 2-celdas son abiertos en $M$ por definición, y por lo tanto son
 Sea $D$ una 1-celda, y sea $d\in D$. Veamos que $d$ tiene un entorno Euclideo. Por un lado, $d$ tiene exáctamente dos preimágenes $x$ e $y$, cada una en el interior de un borde distinto $D_1$ y $D_2$. Supongamos sin pérdida de generalidad que estos dos bordes pertenecen respectivamente a $P_1$ y $P_2$ ($P_1$ puede ser igual a $P_2$), y denotemos por $h:D_2\to D_1$ un homeomorfismo tal que $h(y)=x$. Dado que cada $P_i$ es una variedad con borde, y $x,y$ son puntos borde, podemos elegir cartas coordenadas $(U,\varphi)$  para $P_1$ y $(V,\psi)$ para $P_2$ tal que $x\in U$, $y\in V$. Denotamos $\widehat{U}=\varphi(U),\widehat{V}=\psi(V)\subseteq \mathbb{H}^2$ y podemos asumir, contrayendo $U$ y $V$ si es necesario, que $h(V\cap D_2)=U\cap D_1$, y que $\widehat{U}=U_0\times [0,\varepsilon)$, $\widehat{V}=V_0\times [0,\varepsilon)$  para un $\varepsilon >0$ y unos subconjuntos $U_0, V_0 \subset \R$ como se muestra en la \autoref{fig:6.4}. Así pues podemos escribir las aplicaciones coordenadas como $\varphi(x)=(\varphi_0(x),\varphi_1(x))$, $\psi(x)=(\psi_0(y),\psi_1(y))$ con $\varphi_0:U\to U_0$, $\varphi_1:U\to [0,\varepsilon)$, $\psi_0:V\to V_0$ y $\psi_1:V\to [0,\varepsilon)$ aplicaciones continuas. Que $x$ e $y$ sean puntos borde significa que $\varphi_1(x)=\psi_1(y)=0$.\\
 Queremos ensamblar estas dos cartas con una aplicación cuya imagen sea un abierto de $\R^2$, pegándolas por los puntos que se corresponden en $D_1$ y $D_2$. El problema es que las aplicaciones $\varphi$ y $\psi$ no tienen por qué llevar puntos borde que se correspondan al mismo punto imagen, y por tanto tenemos que ajustarlo. Se tiene que las dos restricciones $\varphi_0|_U\cap D_1: U\cap D_1\to U_0$ y $\psi_0|_V\cap D_2:V\cap D_2\to V_0$ son homeomorfismos, y definimos así el homeomorfismo $\beta:V_0\to U_0$ por $$\beta=(\varphi_0|_{U\cap D_1})\circ h\circ (\psi_0|_{V\cap D_2})^{-1}\, .$$ 
 Sea ahora $B:\widehat{V}\to \R^2$ la aplicación $$B(y_1,y_2)=\left(\beta (y_1), -y_2\right)\, .$$
-Geométricamente, $B$ actúa como un espejo, juntando los puntos borde de acuerdo con $\beta$, y dando la vuelta al segmento que está por encima de él, llevándolo a un segmento por debajo (como en \autoref{fig:6_4}). Esta construcción nos asegura que 
+Geométricamente, $B$ actúa como un espejo, juntando los puntos borde de acuerdo con $\beta$, y dando la vuelta al segmento que está por encima de él, llevándolo a un segmento por debajo (como en la Figura AUN POR HACER \autoref{fig:6a4a.}). Esta construcción nos asegura que 
 \begin{equation}\label{ec:1}
 B\circ \psi(y)=\left(\beta \circ \psi_0(y),0\right)=\left(\varphi_0 \circ h(y),0\right)=\varphi \circ h(y).
 \end{equation}
@@ -955,9 +855,10 @@ q\circ \psi ^{-1} \circ B^{-1}(s), & s_2\leq 0.\\
  \end{cases}$$
 Dado que las dos partes de la función son iguales donde coinciden, la aplicación es continua, y por tanto $\Phi$ es un homeomorfismo. Así pues, $U\amalg V$ es un entorno Euclideo de $d$.\\
 La preimagen de una 0-celda $v$ es un conjunto de vértices $\left\{v_1,\dots ,v_k\right\} \subseteq P$. Para cada uno de estos vértices podemos elegir un $\varepsilon>0$ tal que el disco $B_{\varepsilon}(v_i)$ no contenga ningun vértice de la región poligonal $P_j$ a la que pertenece $v_i$ a parte de sí mismo, y tal que no interseca más bordes que los que lo contienen. $B_{\varepsilon}(v_i)\cap P_j$ es homeomorfo a un subconjunto de $\R^2$ definido por la intersección de dos semiplanos cuyas fronteras coinciden en un único punto y tal que el ángulo que forman es de $2\pi /k$. Podemos ahora hacer una aplicación que envíe cada una de las regiones asociadas a cada $v_i$, $i_1,\dots k$ a un conjunto que contenga un entorno del origen y que respete las identificaciones entre los bordes de los $P_j$. Esta aplicación está definida sobre un conjunto saturado de $P$, de la cual podemos sacar un homeomorfismo de $v$ a un entorno del origen de $\R^2$.
-Finalmente, para probar (c), cada polígono es en sí una superficie con borde. El interior de los lados que se identifican son localmente euclídeos por la proposición anterior, y para los puntos extremos podemos encontrar una semibola coordenada con una construcción similar. Por otro lado, para los puntos de los lados que no se identifican podemos encontrar semibolas coordenadas (las mismas de antes de pasar al cociente). Cómo los CW complejos son IIAN y Hausdorff por la \autoref{prop:cw_variedad}, se tiene el resultado.
+
+Finalmente, para probar (c), volvemos a ver cada polígono como una superficie con borde. El interior de las 1-celdas que provienen de lados que se identifican son localmente euclídeos por la demostración del apartado anterior. Para los puntos vértices de estas 2-celdas podemos encontrar una bola o una semibola coordenada con una construcción similar a la de la demostración anterior, dependiendo de si los vértices están contenidos en el borde o no. Por otro lado, para los puntos de las 1-celdas que tienen sólo una preimagen podemos encontrar como semibolas coordenadas las mismas de antes de pasar al cociente. Por tanto se tiene que el espacio cociente resultante es una superficie con borde.
 \end{proof}
-\begin{figure}[h]
+\begin{figure}
 \centering
 \begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.5]
 %\clip(-15.330160097387678,-13.834559140936781) rectangle (29.900136203459667,16.920192433770143);
@@ -1029,6 +930,7 @@ Finalmente, para probar (c), cada polígono es en sí una superficie con borde. 
 \end{tikzpicture}
 \caption{Entorno euclídeo de un vértice.\label{fig:6.4}}
 \end{figure}
+\clearpage
 \begin{eje}%%%%EJE: Botella Klein
 La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando los lados del cuadrado $I\times I$ de acuerdo a $(0,t)\sim (1,t)$ y $(t,0)\sim (1-t,1)$ para $0\leq t\leq 1$.  Para visualizar $K$, podemos pensar en pegar los lados izquierdo y derecho creando un cilindro, y luego hacer pasar el extremo superior por la parte inferior del cilindro, para finalmente pegar los dos extremos (ver \autoref{fig:klein}).
 \end{eje}
@@ -1080,7 +982,7 @@ Veamos ahora como obtener las figuras del \autoref{eje:rep_borde}. El cilindro $
 \draw (1,1) arc [x radius=0.8, y radius=0.2, start angle= 180, end angle= 360] -- +(0,-2) arc [x radius=0.8, y radius=0.2, start angle=0, end angle=-180] -- cycle;
 \draw [->-] (2.04,0.81) -- +(0,-2);
 \end{tikzpicture}
-\caption{El cilindro $Cil$.}
+\caption{El cilindro $Cil$.\label{fig:ident_cil}}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
 \centering
@@ -1097,7 +999,7 @@ Veamos ahora como obtener las figuras del \autoref{eje:rep_borde}. El cilindro $
 \draw [-<-] (0,0.9)--(0,.49);
 
 \end{tikzpicture}
-\caption{La banda de Möbius $Mob$.}
+\caption{La banda de Möbius $Mob$.\label{fig:ident_mob}}
 \end{subfigure}
 \caption{Superficies con borde como cocientes topológicos.}
 \end{figure}
@@ -1112,7 +1014,7 @@ Sea $S$ un conjunto. Una \textbf{\textit{palabra en $S$}} es una $k$-tupla orden
 
 \begin{defin}%%%%DEF: Representación poligonal
 \label{def:rep_pol}
-Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,\dots ,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b\mid  aba^{-1}b^{-1}\rangle$. 
+Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,\dots ,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ en $S$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b\mid  aba^{-1}b^{-1}\rangle$. 
 
 Permitimos el caso especial de que $S=\{a\}$ (u otro símbolo cualquiera) y que $\mathcal{P}$ tenga una sola palabra de longitud $2$, es decir, $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
 \begin{comment} o $1$ \end{comment} 
@@ -1134,10 +1036,10 @@ Si $\mathcal{P}$ es una de las representaciones poligonales de un solo elemento,
 
 Por notación, dadas dos palabras $W_1$ y $W_2$, $W_1W_2$ representará la palabra formada concatenando $W_1$ y $W_2$. Por otro lado, adoptaremos la convención de que $(a^{-1})^{-1}=a$.
 
-También lo que sigue $S$ denotará una secuencia cualquiera de símbolos, $a,b,c,a_1,a_2,\dots$ símbolos de $S$, $e$ un símbolo que no sea de $S$ y $W_1, W_2, \dots$ palabras formadas por símbolos de $S$.
+También en lo que sigue $S$ denotará una secuencia cualquiera de símbolos, $a,b,c,a_1,a_2,\dots$ símbolos de $S$, $e$ un símbolo que no sea de $S$ y $W_1, W_2, \dots$ palabras formadas por símbolos de $S$.
 
 \begin{defin}%%%%DEF: caras, lados y vértices polígono
-Los interiores, los bordes y los vértices de cada región polgonal $P_i$ se llaman \textbf{\emph{caras, bordes y vértices de la presentación}}. El número de caras es el mismo que el número de palabras, y el número de bordes coincide con la suma de la longitud de las palabras.
+Los interiores, los bordes y los vértices de cada región polgonal $P_i$ se llaman \textbf{\emph{caras, bordes y vértices de la representación}}. El número de caras es el mismo que el número de palabras, y el número de bordes coincide con la suma de la longitud de las palabras.
 Para un lado etiquetado $a$, el \textbf{\emph{vértice inicial}} es el primero en el sentido contrario de las agujas del reloj, y el otro es el \textbf{\emph{vértice final}}. Para un lado etiquetado $a^{-1}$, estas definiciones se invierten. 
 \end{defin}
 
@@ -1165,6 +1067,15 @@ Veamos las representaciones de algunas superficies importantes (ver \autoref{fig
 \item[(a)] $\mathbb{S}^2=\langle a\mid aa^{-1}\rangle=\langle a,b\mid  abb^{-1}a^{-1}\rangle$ (\autoref{prop:Esfera como cociente de disco y cuadrado})
 \item[(b)] $\mathbb{P}^2= \langle a\mid aa \rangle = \langle a,b\mid abab \rangle$ (\autoref{prop:proyectivo_cociente_cuadrado})
 \item[(c)] $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$ (\autoref{prop:toro_cuadrado})
+\end{itemize}
+\end{eje}
+
+\begin{eje}%M%%%:PROP: representación de superficies con borde
+Podemos dar también las representaciones de algunas superficies con borde (\autoref{fig:rep_sup_borde}):
+\begin{itemize}
+\item[(a)] $\overline{\mathbb{B}}^2=\langle a,b,c\mid abc\rangle$.
+\item[(b)] $Mob=\langle a,b,c\mid abac\rangle$ (\autoref{eje:rep_mobius}).
+\item[(c)] $Cil=\langle a,b,c\mid aba^{-1}c\rangle$ (\autoref{eje:rep_mobius}).
 \end{itemize}
 \end{eje}
 \clearpage
@@ -1285,44 +1196,6 @@ Veamos las representaciones de algunas superficies importantes (ver \autoref{fig
 \caption{Representación de superficies con borde.}\label{fig:rep_sup_borde}
 \end{figure}
 \clearpage
-\begin{eje}%M%%%:PROP: representación de superficies con borde
-Podemos dar también las representaciones de algunas superficies con borde (\autoref{fig:rep_sup_borde}):
-\begin{itemize}
-\item[(a)] $\overline{\mathbb{B}}^2=\langle a,b,c\mid abc\rangle$.
-\item[(b)] $Mob=\langle a,b,c\mid abac\rangle$ (\autoref{eje:rep_mobius}).
-\item[(c)] $Cil=\langle a,b,c\mid aba^{-1}c\rangle$ (\autoref{eje:rep_mobius}).
-\end{itemize}
-\end{eje}
-
-
-Parece claro que, además de $\Esfera$ y $\Proyectivo$, una superficie pueda tener varias presentaciones poligonales. Sea por ejemplo la presentación del toro $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$. Intuitivamente podemos ver que, subdividiendo los lados etiquetados con $b$ y reetiquetándolos con $c$ y $d$ (ver \autoref{fig:ejemplo_operacion}), la superficie que representa la representación obtenida $\langle a,c,d\mid  acda^{-1}c^{-1}d^{-1}\rangle$ será la misma.
-Vamos ahora a desarrollar unas reglas generales de transformación que nos den figuras equivalentes.
-
-
-
-\begin{defin}%%%%DEF: Realizaciones geometricas topologicamente equivalentes
-Sean $\mathcal{P}_1$ y $\mathcal{P}_2$ dos representaciones tal que sus realizaciones geométricas son homeomorfas. Entonces decimos que son \enfatiza{topológicamente equivalentes} y escribimos $\mathcal{P}_1 \approx \mathcal{P}_2$.
-\end{defin}
-
-
-
-
-Vamos a definir ahora unas operaciones elementales sobre las representaciones poligonales. Veremos luego que estas dan lugar a representaciones equivalentes.
-
-\begin{defin}%%%%DEF: Operaciones elementales sobre representaciones
-Las siguientes operaciones se llaman \enfatiza{transformaciones elementales} de una presentación poligonal:
-\begin{itemize}
-\item \enfatiza{Reetiquetar}: Cambiar todas las apariciones de un símbolo $a$ por otro símbolo que no está todavía en la representación, intercambiar todas las apariciones de dos símbolos $a$ y $b$ o intercambiar todas las apariciones de $a$ y $a^{-1}$.
-\item \enfatiza{Subdividir} (\autoref{fig:ejemplo_operacion}): Cambiar todas las apariciones de $a$ por $ae$ y todas las de $a^{-1}$ por $e^{-1}a^{-1}$, donde $e$ es un símbolo que no está todavía en la presentación.
-\item \enfatiza{Consolidar} (\autoref{fig:ejemplo_operacion}): Si $a$ y $b$ aparecen siempre de forma adyacente, intercambiar $ab$ por $a$ y $b^{-1}a^{-1}$ por $a^{-1}$, siempre que esto de lugar a una o más palabras de longitud al menos $3$ o una sola palabra de longitud $2$.
-\item \enfatiza{Reflejar} (\autoref{fig:reflejar}): $$\langle S\mid   a_1 \dots a_m, W_2,\dots,W_k\rangle \mapsto \langle S\mid   a_m^{-1}\dots a_1^{-1}, W_2, \dots ,W_k\rangle .$$
-\item \enfatiza{Rotar} (\autoref{fig:rotar}): $$\langle S\mid a_1a_2\dots a_m, W_2,\dots , W_k\rangle \mapsto \langle S\mid   a_2\dots a_ma_1, W_2,\dots , W_k\rangle .$$
-\item \enfatiza{Cortar} (\autoref{fig:cortar}): Si $W_1$ y $W_2$ tienen longitud al menos $2$, $$\langle S\mid W_1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1e, e^{-1}W_2, W_3,\dots W_k\rangle .$$ 
-\item \enfatiza{Pegar} (\autoref{fig:cortar}): $$\langle S,e\mid W_1e, e^-1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1W_2, W_3,\dots , W_k\rangle .$$
-\item \enfatiza{Plegar} (\autoref{fig:plegar}): Si $w_1$ tiene longitud al menos $3$, $$\langle S,e\mid W_1ee^{-1}, W_2,\dots W_k\rangle \mapsto \langle S\mid W_1, W_2,\dots , W_k\rangle .$$ Permitimos que $W_1$ tenga longitud $2$, siempre que la representación tenga una sola palabra.
-\item \enfatiza{Desplegar} (\autoref{fig:plegar}): $$\langle S\mid W_1, W_2,\dots , W_k\rangle \mapsto \langle S,e\mid W_1ee^{-1}, W_2,\dots , W_k\rangle .$$
-\end{itemize}
-\end{defin}
 
 \begin{figure}[h]%%%%FIG: ejemplo operacion
 \centering
@@ -1354,7 +1227,38 @@ Las siguientes operaciones se llaman \enfatiza{transformaciones elementales} de 
 \caption{Subdividir/consolidar. \label{fig:ejemplo_operacion}}
 \end{figure}
 
-\begin{figure}[h]
+
+Parece claro que, además de $\Esfera$ y $\Proyectivo$, una superficie pueda tener varias presentaciones poligonales. Sea por ejemplo la presentación del toro $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$. Intuitivamente podemos ver que, subdividiendo los lados etiquetados con $b$ y reetiquetándolos con $c$ y $d$ (ver \autoref{fig:ejemplo_operacion}), la superficie que representa la representación obtenida $\langle a,c,d\mid  acda^{-1}c^{-1}d^{-1}\rangle$ será la misma.
+Vamos ahora a desarrollar unas reglas generales de transformación que nos den figuras equivalentes.
+
+
+
+\begin{defin}%%%%DEF: Realizaciones geometricas topologicamente equivalentes
+Sean $\mathcal{P}_1$ y $\mathcal{P}_2$ dos representaciones tal que sus realizaciones geométricas son homeomorfas. Entonces decimos que son \enfatiza{topológicamente equivalentes} y escribimos $\mathcal{P}_1 \approx \mathcal{P}_2$.
+\end{defin}
+
+
+
+
+Vamos a definir ahora unas operaciones elementales sobre las representaciones poligonales. Veremos luego que estas dan lugar a representaciones equivalentes.
+
+\begin{defin}%%%%DEF: Operaciones elementales sobre representaciones
+Las siguientes operaciones se llaman \enfatiza{transformaciones elementales} de una presentación poligonal:
+\begin{itemize}
+\item \enfatiza{Reetiquetar}: Cambiar todas las apariciones de un símbolo $a$ por otro símbolo que no está todavía en la representación, intercambiar todas las apariciones de dos símbolos $a$ y $b$ o intercambiar todas las apariciones de $a$ y $a^{-1}$.
+\item \enfatiza{Subdividir} (\autoref{fig:ejemplo_operacion}): Cambiar todas las apariciones de $a$ por $ae$ y todas las de $a^{-1}$ por $e^{-1}a^{-1}$, donde $e$ es un símbolo que no está todavía en la presentación.
+\item \enfatiza{Consolidar} (\autoref{fig:ejemplo_operacion}): Si $a$ y $b$ aparecen siempre de forma adyacente, intercambiar $ab$ por $a$ y $b^{-1}a^{-1}$ por $a^{-1}$, siempre que esto de lugar a una o más palabras de longitud al menos $3$ o una sola palabra de longitud $2$.
+\item \enfatiza{Reflejar} (\autoref{fig:reflejar}): $$\langle S\mid   a_1 \dots a_m, W_2,\dots,W_k\rangle \mapsto \langle S\mid   a_m^{-1}\dots a_1^{-1}, W_2, \dots ,W_k\rangle .$$
+\item \enfatiza{Rotar} (\autoref{fig:rotar}): $$\langle S\mid a_1a_2\dots a_m, W_2,\dots , W_k\rangle \mapsto \langle S\mid   a_2\dots a_ma_1, W_2,\dots , W_k\rangle .$$
+\item \enfatiza{Cortar} (\autoref{fig:cortar}): Si $W_1$ y $W_2$ tienen longitud al menos $2$, $$\langle S\mid W_1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1e, e^{-1}W_2, W_3,\dots W_k\rangle .$$ 
+\item \enfatiza{Pegar} (\autoref{fig:cortar}): $$\langle S,e\mid W_1e, e^-1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1W_2, W_3,\dots , W_k\rangle .$$
+\item \enfatiza{Plegar} (\autoref{fig:plegar}): Si $w_1$ tiene longitud al menos $3$, $$\langle S,e\mid W_1ee^{-1}, W_2,\dots W_k\rangle \mapsto \langle S\mid W_1, W_2,\dots , W_k\rangle .$$ Permitimos que $W_1$ tenga longitud $2$, siempre que la representación tenga una sola palabra.
+\item \enfatiza{Desplegar} (\autoref{fig:plegar}): $$\langle S\mid W_1, W_2,\dots , W_k\rangle \mapsto \langle S,e\mid W_1ee^{-1}, W_2,\dots , W_k\rangle .$$
+\end{itemize}
+\end{defin}
+
+
+\begin{figure}
 \begin{subfigure}{0.5\textwidth}
 \centering
 \begin{tikzpicture}[use optics]
@@ -1420,7 +1324,7 @@ Las siguientes operaciones se llaman \enfatiza{transformaciones elementales} de 
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}
 \begin{subfigure}{0.5\textwidth}
 \centering
 \begin{tikzpicture}[use optics, scale=0.3]
@@ -1552,13 +1456,20 @@ Se sigue de este resultado que la realización geométrica de $\langle S_1,a,b,c
 \caption{La representación $\mathcal{P}_1=\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1},abc\rangle$.\label{fig:suma_conexa_rep_pol}}
 \end{figure}
 
-%%%%%
-%%%%
-%%%%
-%%%%%
+\begin{eje}
+Con la proposición anterior podemos aumentar nuestra lista de superficies conocidas. A estas representaciones las llamaremos representaciones \enfatiza{estándar}.
+\begin{itemize}
+\item [(a)] \textit{Esfera} 
+$$\langle a \mid aa^{-1} \rangle$$
+\item[(b)] \textit{Suma conexa de n toros.}
+$$\langle a_1,\dots ,a_n, b_1,\dots ,b_n\mid a_1b_1a_1^{-1}b_1^{-1}\dots a_nb_na_n^{-1}b_n^{-1}\rangle$$ 
+\item[(c)] \textit{Suma conexa de n planos proyectivos.} 
+$$\langle a_1,\dots ,a_n\mid a_1a_1\dots a_na_n\rangle$$
+\end{itemize}
+\end{eje}
 
 
-
+\clearpage
 
 \section{Teorema de clasificación de superficies compactas}
 
@@ -1696,9 +1607,9 @@ Sea $M$ una superficie junto con una representación poligonal suya, que existe 
 
 \underline{PASO 4}: \textit{M admite una representación en la que todos los vértices se identifican en un único punto.} Sea $v$ una clase de vértices. Si existe otra clase de vértices que no se identifican con $v$, entonces existirá un lado que una $v$ y la otra clase de vértices. Etiquetémoslos por $a$ y $w$ respectivamente, tal como se muestra en la \autoref{fig:PASO4a}. El otro lado que junta con $a$ en su vértice $v$ no puede estar identificado con $a$, pues si fuese su complementario, lo habríamos eliminado en el Paso 2, y si formase con $a$ un par torcido, entonces la aplicación cociente identificaría también los otros dos vértices de cada $a$, y estamos asumiendo lo contrario. Por lo tanto llamamos a este otro lado $b$, y a su otro vértice $x$, el cual puede estar identificado con $v$, con $w$ o con ninguno de los dos.
 
-En algún lugar de la representación poligonal hay un lado que se identifica con $b$, de la forma $b$ o $b^{-1}$. Supongamos que aparece en la forma $b^{-1}$ (el otro caso implica como diferencia sólo una reflexión, que indicaremos cuándo ha de hacerse). Podemos escribir la representación como $baXb^{-1}Y$, donde $X$ e $Y$ son palabras desconocidas y al menos una es no vacía. Ahora, cortando a lo largo de $c$ y pegando a lo largo de $b$ (efectuando aquí la reflexión necesaria si el lado aparecía como $b$) como se muestra en la \autoref{fig_PASO4b}, llegamos a una representación en la cual el número de vértices con etiqueta $v$ ha disminuído, mientras que en cambio el número de vértices con la etiqueta $w$ ha aumentado. Si se han introducido nuevos pares complementarios adyacentes, volvemos a aplicar el Paso 2 de nuevo para quitarlos. Esta operación puede hacer disminuir los vértices etiquetados por $v$ (por ejemplo por la operación de plegado) pero nunca aumentarlos. Repitiendo la secuencia un número finito de veces, podemos finalmente eliminar totalmente la clase de vértices $v$. Iterando el proceso podemos quedarnos finalmente con una sola clase de vértices.
+En algún lugar de la representación poligonal hay un lado que se identifica con $b$, de la forma $b$ o $b^{-1}$. Supongamos que aparece en la forma $b^{-1}$ (el otro caso implica como diferencia sólo una reflexión, que indicaremos cuándo ha de hacerse). Podemos escribir la representación como $baXb^{-1}Y$, donde $X$ e $Y$ son palabras desconocidas y al menos una es no vacía. Ahora, cortando a lo largo de $c$ y pegando a lo largo de $b$ (efectuando aquí la reflexión necesaria si el lado aparecía como $b$) como se muestra en la \autoref{fig:PASO4b}, llegamos a una representación en la cual el número de vértices con etiqueta $v$ ha disminuído, mientras que en cambio el número de vértices con la etiqueta $w$ ha aumentado. Si se han introducido nuevos pares complementarios adyacentes, volvemos a aplicar el Paso 2 de nuevo para quitarlos. Esta operación puede hacer disminuir los vértices etiquetados por $v$ (por ejemplo por la operación de plegado) pero nunca aumentarlos. Repitiendo la secuencia un número finito de veces, podemos finalmente eliminar totalmente la clase de vértices $v$. Iterando el proceso podemos quedarnos finalmente con una sola clase de vértices.
 
-\underline{PASO 5}: \textit{Si la presentación tiene un par complementario $a$, $a^{-1}$, entonces tiene otro par complementario $b$,  $b^{-1}$ que aparece intercalado con el primero, en la forma $a,\dots , b, \dots ,a^{-1}, \dots , b^{-1} $.} Si no es así, entonces la presentación es de la forma $aXa^{-1}Y$, donde $X$ e $Y$ contienen sólo pares complementarios o pares torcidos adyacentes. ((Hä???)) Por lo tanto cada borde en $X$ se identifica con otro borde en $X$, y lo mismo pasa en $Y$. Esto implica que los vértices finales de $a$ y $a^{-1}$, que tocan únicamente $X$, se identifican por tanto sólo con vértices de $X$, y que los vértices iniciales de $a$ y $a^{-1}$ se identifican sólo con vértices de $Y$. Esto es una contradicción, puesto que todos los vértices se identifican unos con otros por el Paso 4.
+\underline{PASO 5}: \textit{Si la presentación tiene un par complementario $a$, $a^{-1}$, entonces tiene otro par complementario $b$,  $b^{-1}$ que aparece intercalado con el primero, en la forma $a,\dots , b, \dots ,a^{-1}, \dots , b^{-1} $.} Si no es así, entonces la presentación es de la forma $aXa^{-1}Y$, donde $X$ e $Y$ contienen sólo pares complementarios o pares torcidos adyacentes. ((???)) Por lo tanto cada borde en $X$ se identifica con otro borde en $X$, y lo mismo pasa en $Y$. Esto implica que los vértices finales de $a$ y $a^{-1}$, que tocan únicamente $X$, se identifican por tanto sólo con vértices de $X$, y que los vértices iniciales de $a$ y $a^{-1}$ se identifican sólo con vértices de $Y$. Esto es una contradicción, puesto que todos los vértices se identifican unos con otros por el Paso 4.
 
 \underline{PASO 6}: \textit{M admite una presentación en la que todos los pares complementarios intercalados aparecen juntos con ningún otro borde entre ellos: $aba^{-1}b^{-1}$.} Si la representación poligonal está formada a partir de la palabra $WaXbYa^{-1}Zb^{-1}$, hacemos, como en la figura \autoref{fig:PASO6}, las siguientes transformaciones: cortamos a lo largo de $c$, pegamos por $a$, cortamos a lo largo de $d$, y pegamos finalmente por $b$. Obtenemos así la palabra $cdc^{-1}d^{-1}WZYX$, sustituyendo por tanto los dos pares adyacentes por un nuevo par intercalado $cdc^{-1}d^{-1}$, sin separar otros lados que previamente eran adyacentes ((y sin crear nuevos pares torcidos)). Por lo tanto, repitiendo el proceso un número de veces se obtiene el resultado.
 
@@ -2187,29 +2098,6 @@ Sea $M$ una superficie con borde compacta, y sea una representación suya como l
 
 \section{Cremalleras}
 
-\begin{obs}%M%%%OBS: Disco como esfera perforada
-Dado que los dos espacios son homeomorfos, podemos visualizar el disco cerrado $\overline{\mathbb{B}}^2$ como una esfera con una perforación (\autoref{fig:disco_esfera_perforada}).
-\end{obs}
- 
-
-\begin{figure}[h]%%%%FIG: Disco esfera perforada
-\centering
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-\fill[gray!20](3,0) circle (2cm);
-\fill[color=gray!20][rotate around={-14.04:(-1.34,0.02)}] (-1.34,0.02) ellipse (0.32cm and 0.24cm);
-\fill[color=white][rotate around={-14.04:(3.33,1.31)}] (3.33,1.31) ellipse (0.32cm and 0.24cm);
-\draw[rotate around={-14.04:(-1.34,0.02)}] (-1.34,0.02) ellipse (0.32cm and 0.24cm);
-\draw[rotate around={-14.04:(3.33,1.31)}] (3.33,1.31) ellipse (0.32cm and 0.24cm);
-\draw(3,0) circle (2cm);
-\draw(1,0) arc[x radius=2, y radius=0.5, start angle=180, end angle=360];
-\draw[dashed](5,0) arc[x radius=2, y radius=0.5, start angle=0, end angle=180];
-\draw(0,0) node[anchor=north] {$ \approx $};
-%\draw [out=-14.04, in=0, looseness=2] (-1.28,0.26) to (-1.5,-2);
-%\draw [out=180, in=165.96, looseness=4] (-1.5,-2) to (-1.28,0.26);
-\end{tikzpicture}
-\caption{El disco cerrado como una esfera perforada.\label{fig:disco_esfera_perforada}}
-\end{figure}
-
 
 Conway utiliza las cremalleras (\textit{zips} en inglés) para describir cómo actúan las identificaciones topológicas. Cada cremallera actúa sobre una o dos perforaciones de una superficie. Están formadas por dos \textit{zips} (dos partes dentadas) fijadas la/s perforación/es y un \textit{zipper} (el deslizador). Al cerrar el \textit{zipper}, las \textit{zips} se juntan identificándose. Trato de dar una definición rigurosa:
 
@@ -2233,30 +2121,8 @@ $S$ perforada:
 \end{itemize}
 \end{defin}
 
-Sea $S$ una superficie conexa tal que admite una representación poligonal de una sola cara $P=\langle A\mid W\rangle$, y sea $|\mathcal{P}|$ su realización geométrica. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$, obtenemos la suma conexa $S\# \Esfera$, es decir, $S$ (\autoref{obs:suma_esfera}). 
-
-Sean ahora $S$ y $S'$ superficies conexas. Entonces, hacer una perforación sobre $S'$ es lo mismo que hacer la suma conexa de una esfera $\Esfera$ con una perforación $S'$. Por tanto, hacer una perforación sobre $S'$ asociada a $S$ da lugar a la suma conexa $S\# S'$.
- 
-
-\begin{prop}
-Sea $S$ una superficie. Los siguientes espacios son homeomorfos:
-\begin{itemize}
-\item[a)] $S$ con un cap y $S$.
-\item[b)] $S$ con un crosscap y $S\# \Proyectivo$.
-\item[c)] $S$ con un handle y $S\# \Toro$.
-\item[d)] $S$ con un crosshandle y $S\# K$ (siendo $K$ la botella de Klein). 
-\end{itemize}
-\end{prop}
-\begin{proof}
-a) y b) son consecuencia directa del parrafo que precede la preposición. Para c), utilizamos la \autoref{obs:toro_asa}, y para d) utilizar una construcción parecida a c) ((habría que especificar más?)).
-\end{proof}
-
-
-
-
 
 \begin{figure}
-
 \begin{subfigure}{1\textwidth} %%%%FIG: Cap
 \centering
 \begin{tikzpicture} [use optics]
@@ -2393,6 +2259,149 @@ a) y b) son consecuencia directa del parrafo que precede la preposición. Para c
 \end{subfigure}
 \caption{Construcciones elementales con cremalleras.}
 \end{figure}
+\clearpage
+%
+%
+%
+%
+%
+
+\begin{figure}[h]%%%%FIG: Disco esfera perforada
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\fill[gray!20](3,0) circle (2cm);
+\fill[color=gray!20][rotate around={-14.04:(-1.34,0.02)}] (-1.34,0.02) ellipse (0.32cm and 0.24cm);
+\fill[color=white][rotate around={-14.04:(3.33,1.31)}] (3.33,1.31) ellipse (0.32cm and 0.24cm);
+\draw[rotate around={-14.04:(-1.34,0.02)}] (-1.34,0.02) ellipse (0.32cm and 0.24cm);
+\draw[rotate around={-14.04:(3.33,1.31)}] (3.33,1.31) ellipse (0.32cm and 0.24cm);
+\draw(3,0) circle (2cm);
+\draw(1,0) arc[x radius=2, y radius=0.5, start angle=180, end angle=360];
+\draw[dashed](5,0) arc[x radius=2, y radius=0.5, start angle=0, end angle=180];
+\draw(0,0) node[anchor=north] {$ \approx $};
+%\draw [out=-14.04, in=0, looseness=2] (-1.28,0.26) to (-1.5,-2);
+%\draw [out=180, in=165.96, looseness=4] (-1.5,-2) to (-1.28,0.26);
+\end{tikzpicture}
+\caption{El disco cerrado como una esfera perforada.\label{fig:disco_esfera_perforada}}
+\end{figure}
+
+\begin{obs}\label{obs:suma_esfera}
+Sea $S$ una superficie conexa y $P=\langle A\mid W\rangle$ una representación poligonal suya de una sola cara (recordemos que esto siempre se puede dar), y sea $|\mathcal{P}|$ su realización geométrica. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$, obtenemos la misma superficie $S$. Esto se da puesto que una esfera perforada es homeomorfa al disco cerrado (\autoref{fig:disco_esfera_perforada}), y por tanto tenemos que hacer la construcción anterior es equivalente a partir de su representación poligonal y generar su realización geométrica. Pero esto también nos indica que $S\# \Esfera=S$. (Ver \autoref{fig:suma_toro_esfera}).
+Por el mismo argumento vemos también que hacer una perforación sobre $S'$, con el borde con etiquetas asociadas a una representación poligonal de $S$ e identifacarlas da lugar a la suma conexa $S\# S'$. 
+\end{obs}
+
+\begin{obs}\label{obs:asa}%%%%EJE: Asas y toros
+Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el espacio que se obtiene al pegarle un \textit{handle} a $S$. De forma más precisa, sea $S_0$ que denota a $S$ con dos perforaciones. Entonces $S_0$ y $\mathbb{S}^1\times I$ son ambas superficies con borde que está formado por dos componentes conexas, que como sabemos  son ambas homeomorfas a la union disjunta de dos copias de $\mathbb{S}^1$. Sea $\tilde{S}$ el espacio obtenido pegando $S_0$ y $\mathbb{S}^1\times I$ por sus bordes con un proceso análogo al de la \autoref{prop:borde_perforaciones}. Este espacio cociente es homeomorfo a $S\# \Toro$. La razón se puede ver en la \autoref{fig:toro_asa}, y es que podemos obtener un espacio homeomorfo a $S\# \Toro$ primero quitando un disco abierto de $S$, luego pegando un disco cerrado con dos discos abiertos quitados (es decir, la parte gris de la figura), y finalmente pegando al borde de la construcción el cilindro $\Esfera \times I$. Dado que la primera operación da resultado a un espacio homeomorfo a $S$ con dos discos abiertos quitados, el resultado es el mismo que si quitamos directamente a $S$ dos discos abiertos y entonces pegamos el cilindro a su frontera. 
+%%165%%
+\end{obs}
+
+
+\begin{figure}[h]%%%% FIG: suma conexa toro esfera
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.75]
+\fill [black!10] (0.5,0) arc[x radius=0.5, y radius=0.5, start angle=0, end angle=-180];
+\fill[color=black!15] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=360];
+\draw [rotate around={0:(-5.5,0)}] (-5.5,0) ellipse (2.5cm and 2cm);
+\draw(0,0) circle (0.5cm);
+\draw (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=-180];
+\draw [dashed] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=180];
+\draw [rotate around={0:(5.7,0)}] (5.7,0) ellipse (2.5cm and 2cm);
+\draw [dashed] (6.67,1.32) arc[x radius=0.45, y radius=0.22, start angle=0, end angle=180];
+\draw (6.67,1.32) arc[x radius=0.45, y radius=0.22, start angle=0, end angle=-180];
+\filldraw [color=black, fill=black!10] [rotate around={0:(-5,1.32)}] (-5.0,1.32) ellipse (0.45cm and 0.22cm);
+\draw (5.77,1.32) arc[x radius=0.45, y radius=0.45, start angle=180, end angle=0];
+\draw (-6.1,0) arc[x radius=0.4, y radius=0.2, start angle=180, end angle=0];
+\draw (-6.4,0.31) arc[x radius=0.7, y radius=0.4, start angle=180, end angle=360];
+\draw (-1.8,0.56) node[anchor=north west] {$\#$};
+\draw (1.22,0.56) node[anchor=north west] {$=$};
+\draw (5.1,0) arc[x radius=0.4, y radius=0.2, start angle=180, end angle=0];
+\draw (4.8,0.31) arc[x radius=0.7, y radius=0.4, start angle=180, end angle=360];
+\end{tikzpicture}
+\caption{Suma conexa de un toro y una esfera.\label{fig:suma_toro_esfera}}
+\end{figure}
+
+
+
+
+\begin{figure}%%%%FIG: Toro-Asa
+\centering
+\begin{tikzpicture}
+%1
+
+
+\fill[gray!20] (-3.3, 0.2) -- (-3.3,0) arc[x radius=0.7, y radius=0.2, start angle=0, end angle=-180] (-4.7,0) -- (-4.7, 0.2)  [out=90, in=270] to (-5,1) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] arc[x radius=0.5, y radius=0.3, start angle=180, end angle=360]  arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] [out=270, in=90] to (-3.3,0.2) ;
+
+
+\draw (-3.3, 0.2) -- (-3.3,0) arc[x radius=0.7, y radius=0.2, start angle=0, end angle=-180] (-4.7,0) -- (-4.7, 0.2)  [out=90, in=270] to (-5,1) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] arc[x radius=0.5, y radius=0.3, start angle=180, end angle=360]  arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] [out=270, in=90] to (-3.3,0.2) ;
+
+
+
+
+
+
+\draw (-3,1) arc[x radius=1, y radius=0.8, start angle=0, end angle=180]; \draw [dashed] (-5,1)  arc [x radius=0.25, y radius=0.1, start angle=180, end angle=0];
+\draw (-4.5,1) arc [x radius=0.5, y radius=0.3, start angle=180, end angle=0];
+\draw (-3.5,1) [dashed] arc [x radius=0.25, y radius=0.1, start angle=180, end angle=0];
+
+\draw (-5.8,-0.5) [out=0, in=270] to (-4.7,0);
+\draw [dashed](-3.3,0) arc[x radius=0.7, y radius=0.2, start angle=0, end angle=180];
+\draw (-3.3,0) [out=270, in=180] to (-2.2,-0.5);
+
+%2
+
+
+
+\draw (1,1) arc[x radius=1, y radius=0.8, start angle=0, end angle=180];
+\draw [dashed] (-1,1)  arc [x radius=0.25, y radius=0.1, start angle=180, end angle=0];
+\draw (-0.5,1) arc [x radius=0.5, y radius=0.3, start angle=180, end angle=0];
+\draw (0.5,1) [dashed] arc [x radius=0.25, y radius=0.1, start angle=180, end angle=0];
+
+
+\fill[color=gray!20] (-0.5,1) arc[x radius=0.5, y radius=0.3, start angle=180, end angle=360] arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] [out=270, in=90] to (1.2,0) arc[x radius=1.2, y radius=0.3, start angle=0, end angle=-180] [out=90, in=270] to (-1,1) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360];
+\draw (-0.5,1) arc[x radius=0.5, y radius=0.3, start angle=180, end angle=360] arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360] [out=270, in=90] to (1.2,0) arc[x radius=1.2, y radius=0.3, start angle=0, end angle=-180] [out=90, in=270] to (-1,1) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=360];
+
+\draw (-1.8,-0.5) [out=0, in=270] to (-1.2,0);
+
+\draw [dashed] (1.2,0) arc[x radius=1.2, y radius=0.3, start angle=0, end angle=180];
+\draw (1.2,0) [out=270, in=180] to (1.8,-0.5);
+
+%3
+
+
+\draw (5.2,0) [out=270, in=180] to (5.8, -0.5);
+\draw (2.2,-0.5) [out=0, in=270] to (2.8, 0);
+\fill[gray!20](2.8,0) arc[x radius=1.2, y radius=0.3, start angle=180, end angle=540];
+\draw (2.8,0) arc[x radius=1.2, y radius=0.3, start angle=180, end angle=360];
+
+\fill[white] (3,0) -- (3, 0.5) arc[x radius=1, y radius=.8, start angle=180, end angle=0] -- +(0,-0.5) arc[x radius=0.25, y radius=.1, start angle=0, end angle=-180] -- +(0,.5) arc[x radius=0.5, y radius=0.3, start angle=0, end angle=180] -- +(0,-.5) arc[x radius=0.25, y radius=0.1, start angle=0, end angle=-180];
+
+\draw (3,0) -- (3, 0.5) arc[x radius=1, y radius=.8, start angle=180, end angle=0] -- +(0,-0.5) arc[x radius=0.25, y radius=.1, start angle=0, end angle=-180] -- +(0,.5) arc[x radius=0.5, y radius=0.35, start angle=0, end angle=180] -- +(0,-.5) arc[x radius=0.25, y radius=0.1, start angle=0, end angle=-180];
+
+\draw[dashed] (3,0) arc[x radius=0.25, y radius=0.1, start angle=180, end angle=0] (5,0) arc[x radius=0.25, y radius=0.1, start angle=0, end angle=180];
+\draw[dash pattern=on 7.5pt off 2.2pt on 2.2pt off 2.2pt on 2.2pt off 2.2pt on 2.2pt off 1.8 pt on 28.4pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2.4pt] (2.8,0) arc[x radius=1.2, y radius=0.3, start angle=180, end angle=0];
+
+\draw (-2,1) node {$ \approx $};
+\draw (2,1) node {$ \approx $};
+
+
+\end{tikzpicture}
+\caption{Suma conexa de una superficie y un toro visto como pegar un \textit{asa}. \label{fig:toro_asa}}
+\end{figure}
+
+
+
+\begin{prop}
+Sea $S$ una superficie. Los siguientes espacios son homeomorfos:
+\begin{itemize}
+\item[a)] $S$ con un cap y $S$.
+\item[b)] $S$ con un crosscap y $S\# \Proyectivo$.
+\item[c)] $S$ con un handle y $S\# \Toro$.
+\item[d)] $S$ con un crosshandle y $S\# K$ (siendo $K$ la botella de Klein). 
+\end{itemize}
+\end{prop}
+\begin{proof}
+a) y b) son consecuencia directa de la \autoref{obs:suma_esfera}. Para c), utilizamos la \autoref{obs:asa}, utilzando para d) una construcción análoga. ((habría que especificar más?)).
+\end{proof}
+
 
 
 
@@ -2468,20 +2477,20 @@ Sea una esfera perforada como la de la izquierda de la \autoref{fig:rep_perf}. H
 \section{Teorema de Clasificación}
 
 \begin{defin}%%%%DEF: Ordinaria
-Una superficie se dice ordinaria si es homeomorfa a una colección finita de esferas cada una con un número finito de \textit{handles}, \textit{crosshandles}, \textit{crosscaps} y perforaciones.
+Una superficie con borde se dice ordinaria si es homeomorfa a una colección finita de esferas cada una con un número finito de \textit{handles}, \textit{crosshandles}, \textit{crosscaps} y perforaciones.
 \end{defin}
 
 
 \begin{lema}%%%%LEMA: Superficie ordinaria zips
-Sea $S$ una superficie con borde con un par-zip tal que cada cremallera está en una parte de su borde. Entonces, si $S$ es ordinaria antes de identificar las cremalleras, es ordinaria también después.\label{lema:superficie_ordinaria}
+Sea $S$ una superficie con borde con un par-zip tal que cada cremallera está en una componente conexa de su borde. Entonces, si $S$ es ordinaria antes de identificar las cremalleras, es ordinaria también después.\label{lema:superficie_ordinaria}
 \end{lema}
 \begin{proof}
-Consideramos el caso en que las dos cremalleras ocupan cada una una perforación en su totailidad. Entonces al identificarlas se tiene un \textit{handle} (\autoref{fig:handle}) o un \textit{crosshandle} (\autoref{fig:crosshandle}), dependiendo de sus respectivas orientaciones. Si las dos perforaciones pertenecen a componentes conexas distintas de $S$, entonces identificando obtenemos el espacio adjunción de las dos componentes. (MEJORAR). 
+Consideramos el caso en que las dos cremalleras ocupan cada una una perforación en su totailidad. Entonces al identificarlas se tiene un \textit{handle} (\autoref{fig:handle}) o un \textit{crosshandle} (\autoref{fig:crosshandle}), dependiendo de sus respectivas orientaciones. Si las dos perforaciones pertenecen a componentes conexas de $S$ distintas, entonces identificando obtenemos la suma conexa de las dos componentes. 
 
 Consideramos ahora el caso en el que las dos cremalleras yacen sobre la misma perforación y la cubren totalmente. Identificándolas nos da o bien un \textit{cap} (\autoref{fig:cap}) o bien un \textit{crosscap} (\autoref{fig:crosscap}), dependiendo de sus respectivas orientaciones.
 
 Finalmente, consideramos los varios casos en que las cremalleras no ocupan perforaciones en su totalidad. 
-%(A PARTIR DE AQUI NO SE MUY BIEN COMO ORIENTARLO... CON OPERACIONES ELEMENTALES O COMO HACE EL???) 
+
 \end{proof}
 
 \begin{tma}[Teorema de clasificación, versión preeliminar] %M%%%TEO: Clasificación preeliminar
