@@ -2103,7 +2103,7 @@ Conway utiliza las cremalleras (\textit{zips} en inglés) para describir cómo a
 
 
 \begin{defin}%%%DEF: ZIP
-Sea $S$ una superficie compacta. Una \enfatiza{cremallera} es una identificación entre dos subconjuntos cerrados del borde de $S$. A este par lo llamamos \enfatiza{par-zip}.
+Sea $S$ una superficie con borde compacta. Una \enfatiza{cremallera} es una identificación entre dos subconjuntos cerrados del borde de $S$. A este par lo llamamos \enfatiza{par-zip}.
 \end{defin}
 
 
@@ -2289,11 +2289,12 @@ Sea $S$ una superficie conexa y $P=\langle A\mid W\rangle$ una representación p
 Por el mismo argumento vemos también que hacer una perforación sobre $S'$, con el borde con etiquetas asociadas a una representación poligonal de $S$ e identifacarlas da lugar a la suma conexa $S\# S'$. 
 \end{obs}
 
+\begin{comment}
 \begin{obs}\label{obs:asa}%%%%EJE: Asas y toros
-Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el espacio que se obtiene al pegarle un \textit{handle} a $S$. De forma más precisa, sea $S_0$ que denota a $S$ con dos perforaciones. Entonces $S_0$ y $\mathbb{S}^1\times I$ son ambas superficies con borde que está formado por dos componentes conexas, que como sabemos  son ambas homeomorfas a la union disjunta de dos copias de $\mathbb{S}^1$. Sea $\tilde{S}$ el espacio obtenido pegando $S_0$ y $\mathbb{S}^1\times I$ por sus bordes con un proceso análogo al de la \autoref{prop:borde_perforaciones}. Este espacio cociente es homeomorfo a $S\# \Toro$. La razón se puede ver en la \autoref{fig:toro_asa}, y es que podemos obtener un espacio homeomorfo a $S\# \Toro$ primero quitando un disco abierto de $S$, luego pegando un disco cerrado con dos discos abiertos quitados (es decir, la parte gris de la figura), y finalmente pegando al borde de la construcción el cilindro $\Esfera \times I$. Dado que la primera operación da resultado a un espacio homeomorfo a $S$ con dos discos abiertos quitados, el resultado es el mismo que si quitamos directamente a $S$ dos discos abiertos y entonces pegamos el cilindro a su frontera. 
+Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el espacio que se obtiene al pegarle un \textit{handle} a $S$. De forma más precisa, sea $S_0$ que denota a $S$ con dos perforaciones. Entonces $S_0$ y $\mathbb{S}^1\times I$ son ambas superficies con borde, el cual está formado por dos componentes conexas, que como sabemos  son ambas homeomorfas a la union disjunta de dos copias de $\mathbb{S}^1$. Sea $\tilde{S}$ el espacio obtenido pegando $S_0$ y $\mathbb{S}^1\times I$ por sus bordes con un proceso análogo al de la \autoref{prop:borde_perforaciones}. Este espacio cociente es homeomorfo a $S\# \Toro$. La razón se puede ver en la \autoref{fig:toro_asa}, y es que podemos obtener un espacio homeomorfo a $S\# \Toro$ primero quitando un disco abierto de $S$, luego pegando un disco cerrado con dos discos abiertos quitados (es decir, la parte gris de la figura), y finalmente pegando al borde de la construcción el cilindro $\Esfera \times I$. Dado que la primera operación da resultado a un espacio homeomorfo a $S$ con dos discos abiertos quitados, el resultado es el mismo que si quitamos directamente a $S$ dos discos abiertos y entonces pegamos el cilindro a su frontera. 
 %%165%%
 \end{obs}
-
+\end{comment}
 
 \begin{figure}[h]%%%% FIG: suma conexa toro esfera
 \centering
@@ -2387,9 +2388,41 @@ Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el e
 \caption{Suma conexa de una superficie y un toro visto como pegar un \textit{asa}. \label{fig:toro_asa}}
 \end{figure}
 
-
-
 \begin{prop}
+\begin{itemize}
+
+\item[(a)] La esfera con un handle es homeomorfa al toro $\Toro$.
+\item [(b)] La esfera con un crosshandle es homeomorfa a la botella de Klein $K$.
+
+\end{itemize}
+\end{prop}
+\begin{proof}
+Sea la representación de la esfera con un par-zip asociado al handle (ver \autoref{fig:handle_toro}) $$\langle a,c_1,c_2,z\mid aa^{-1} c_1^{-1}zc_1c_2^{-1}z^{-1}c_1\rangle.$$ Doblamos por $a$ y nos queda
+\[
+\langle c_1,c_2,z\mid c_1^{-1}zc_1c_2^{-1}z^{-1}c_2\rangle
+\]
+y podemos finalmente reetiquetar $e=c_2c_1^{-1}$ para obtener la representación de $\Toro$ 
+
+\[
+\langle e,z\mid eze^{-1}z^{-1}\rangle
+\]
+
+Similarmente, para demostrar (b), sea la representación de la esfera con un par-zip asociado al crosshandle (ver \autoref{fig:crosshandle_klein}) $$\langle a,c_1,c_2,z\mid aa^{-1} c_1^{-1}zc_1c_2^{-1}zc_1\rangle.$$ Doblamos por $a$ y nos queda
+\[
+\langle c_1,c_2,z\mid c_1^{-1}zc_1c_2^{-1}zc_2\rangle
+\]
+y reetiquetando $e=c_2c_1^{-1}$, obtenemos finalmente la representación de la botella de Klein
+
+\[
+\langle e,z\mid eze^{-1}z\rangle
+\]
+
+
+\end{proof}
+
+
+
+\begin{corol}
 Sea $S$ una superficie. Los siguientes espacios son homeomorfos:
 \begin{itemize}
 \item[a)] $S$ con un cap y $S$.
@@ -2397,10 +2430,7 @@ Sea $S$ una superficie. Los siguientes espacios son homeomorfos:
 \item[c)] $S$ con un handle y $S\# \Toro$.
 \item[d)] $S$ con un crosshandle y $S\# K$ (siendo $K$ la botella de Klein). 
 \end{itemize}
-\end{prop}
-\begin{proof}
-a) y b) son consecuencia directa de la \autoref{obs:suma_esfera}. Para c), utilizamos la \autoref{obs:asa}, utilzando para d) una construcción análoga. ((habría que especificar más?)).
-\end{proof}
+\end{corol}
 
 
 
