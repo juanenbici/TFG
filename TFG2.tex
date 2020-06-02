@@ -1487,7 +1487,7 @@ $$V=W\cap (\tau_1 \cup \dots \cup \tau_m )\setminus \{ v \}$$ entonces $U$ y $V$
 
 Como venimos diciendo desde el principio del presente trabajo nuestras superficies fundamentales son el toro $\Toro$, la esfera $ \Esfera$, y el plano proyectivo  $\Proyectivo$. ¿Qué pasa con las otras superficies que hemos visto, como la botella de Klein o la suma conexa de toros y planos proyectivos? La respuesta la obtenemos de los dos siguientes lemas.
 
-\begin{lema}
+\begin{lema}\label{lema:klein_proyectivoproyectivo}
 La botella de Klein es homeomorfa a $\Proyectivo \# \Proyectivo$.
 \end{lema}
 \begin{proof}
@@ -2284,6 +2284,22 @@ $S$ perforada:
 \caption{El disco cerrado como una esfera perforada.\label{fig:disco_esfera_perforada}}
 \end{figure}
 
+\begin{prop}
+Sean $M,M'$ dos superficies conexas (con o sin borde) y sean $P=\langle S\mid W\rangle$ y $P'=\langle S'\mid W'\rangle$ sus respectivas representaciones poligonales de una sola cara. Se tiene entonces:
+\begin{itemize}
+\item[(i)] La suma conexa de una esfera y $S$ es homeomorfa a $S$.
+\item[(ii)] Sea $|\mathcal{P}|$ la realización geométrica de $P$. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$, obtenemos la misma superficie $S$. 
+\item[(iii)] Con una construcción análoga a la del apartado anterior, hacer una perforación sobre una superficie $S'$, con el borde con etiquetas asociadas a una representación poligonal de $S$ e identifacarlas da lugar a la suma conexa $S\# S'$. 
+\end{itemize}
+\end{prop}
+\begin{proof}
+Sea la suma conexa de $\Esfera$ y $M$, cuya representación poligonal viene dada por $\langle a,S\mid aa^{-1}W\rangle$. Plegando por $a$ se obtiene (i).
+
+Para demostrar (ii), sea $\langle a,c,S\mid aa^{-1}cWc^{-1}\rangle$ la representación poligonal de la esfera con una perforación asociada a $M$. Si plegamos por $a$, rotamos, y volvemos a plegar por $c$ obtenemos la palabra $\langle S\mid W\rangle$ que es la representación poligonal de $M$.
+
+Finalmente para (iii), sea $\langle S,S',B,c\mid W'cWc^{-1}\rangle$, que es la representación de $M'$ con una perforación asociada a $M$. Desplegando por $a$ se tiene $$\langle S,S',a,B,c\mid W'aa^{-1}cWc^{-1}\rangle$$ que es la suma conexa de $M'$ y $\Esfera$ con una perforación asociada a $M$. Por (ii), esto es equivalente a la suma conexa de $M'$ y $M$. 
+\end{proof}
+
 \begin{obs}\label{obs:suma_esfera}
 Sea $S$ una superficie conexa y $P=\langle A\mid W\rangle$ una representación poligonal suya de una sola cara (recordemos que esto siempre se puede dar), y sea $|\mathcal{P}|$ su realización geométrica. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$, obtenemos la misma superficie $S$. Esto se da puesto que una esfera perforada es homeomorfa al disco cerrado (\autoref{fig:disco_esfera_perforada}), y por tanto tenemos que hacer la construcción anterior es equivalente a partir de su representación poligonal y generar su realización geométrica. Pero esto también nos indica que $S\# \Esfera=S$. (Ver \autoref{fig:suma_toro_esfera}).
 Por el mismo argumento vemos también que hacer una perforación sobre una superficie $S'$, con el borde con etiquetas asociadas a una representación poligonal de $S$ e identifacarlas da lugar a la suma conexa $S\# S'$. 
@@ -2388,7 +2404,7 @@ Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el e
 \caption{Suma conexa de una superficie y un toro visto como pegar un \textit{asa}. \label{fig:toro_asa}}
 \end{figure}
 
-\begin{prop}
+\begin{prop}\label{prop:handletoro_crosshandleklein}
 \begin{itemize}
 
 \item[(a)] La esfera con un handle es homeomorfa al toro $\Toro$.
@@ -2566,6 +2582,7 @@ que es una representación de $\Toro$ con una perforación, o lo que es lo mismo
 \]
 que es la representación de la botella de Klein con una perforación, es decir, una esfera con un crosshandle y una perforación, y por tanto una superficie ordinaria.
 \end{itemize}
+Por la \autoref{obs:suma_esfera}, queda demostrado.
 ((Tengo que decir algo sobre si aparecen más componentes conexas del borde en las perforaciones?? Irían pegadas una detrás de otra, no se si habría que mencionarlo))
 \end{proof}
 
@@ -2578,7 +2595,30 @@ Sea $S$ una superficie compacta. Sabemos, por el \nameref{teo:rado}, que $S$ est
 \end{proof}
 
 
+\begin{lema}\label{lema:1}
+Un crosshandle es homeomorfo a dos crosscaps.
+\end{lema}
+\begin{proof}
+Por la \autoref{prop:handletoro_crosshandleklein}, la esfera con un crosshandle es homeomorfa a una botella de klein. Por la \autoref{lema:klein_proyectivoproyectivo}, la botella de Klein es homeomorfa a la suma conexa $\Proyectivo \# \Proyectivo$, o lo que es lo mismo, dos crosscaps.
+\end{proof}
 
+\begin{lema}\label{lema:2}
+Handles y crosshandles son equivalentes en la presencia de crosscaps.
+\end{lema}
+\begin{proof}
+Sea una esfera con un par-zip asociado a un handle y otro asociado a un crosscap. Sabemos que, identificando las cremalleras obtenemos un espacio homeomorfo a la suma conexa $\Toro \# \Proyectivo$. Pero por la \autoref{lema:toro_proyectivo}, este espacio es homeomorfo a $\Proyectivo \# \Proyectivo \# \Proyectivo$, que a su vez, es homeomorfo al plano proyectivo con un crosshandle, que a su vez es homeomorfo a una esfera con un crosshandle y un crosscap.
+\end{proof}
+((Ahora no entiendo por qué dado todo lo anterior Conway sólo da la representación de superficies sin borde))
+\begin{tma}[Clasificación de superficies]
+Toda superficie compacta es homeomorfa o bien a una esfera con handles o bien a una esfera con crosscaps.
+\end{tma}
+\begin{proof}
+Por la versión preeliminar del teorema de clasificación, una superficie compacta es homeomorfa a una esfera con handles, crosshandles y crosscaps.
+\begin{itemize}
+\item \textit{Caso 1:} Al menos hay un crosshandle en nuestra superficie. Por el \autoref{lema:1}, cada crosshandle es homeomorfo a dos crosscaps, por lo que la superficie es homeomorfa a una esfera con solamente crosscaps y handles. Como al menos hay un crosscap, cada handle es homeomorfo a un crosshandle (\autoref{lema:2}), que es a us vez homeomorfo a dos crosscaps (\autoref{lema:1} de nuevo), quedando una esfera sólo con crosscaps.
+\item \textit{Caso 2:} No hay ni crosshandles ni crosscap en la superficie. La superficie es entonces homeomorfa a una esfera sólo con handles.
+\end{itemize}
+\end{proof}
 %\begin{prop}
 %Si $S$ es una superficie compacta y conexa, $S$ admite una representación de una sola cara.
 %\end{prop}

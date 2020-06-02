@@ -16,8 +16,8 @@
 \contentsline {section}{\numberline {3.4}Teorema de clasificación de superficies con borde}{29}{section.3.4}% 
 \contentsline {chapter}{\numberline {4}La prueba ZIP de Conway}{33}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Cremalleras}{33}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Teorema de Clasificación}{36}{section.4.2}% 
-\contentsline {chapter}{\numberline {A}Algunos teoremas de topología importantes}{39}{appendix.Alph1}% 
-\contentsline {section}{\numberline {A.1}Cocientes topológicos}{39}{section.Alph1.1}% 
-\contentsline {chapter}{\numberline {B}CW-complejos}{41}{appendix.Alph2}% 
-\contentsline {chapter}{Bibliograf\'{\i }a}{44}{appendix*.35}% 
+\contentsline {section}{\numberline {4.2}Teorema de Clasificación}{37}{section.4.2}% 
+\contentsline {chapter}{\numberline {A}Algunos teoremas de topología importantes}{40}{appendix.Alph1}% 
+\contentsline {section}{\numberline {A.1}Cocientes topológicos}{40}{section.Alph1.1}% 
+\contentsline {chapter}{\numberline {B}CW-complejos}{42}{appendix.Alph2}% 
+\contentsline {chapter}{Bibliograf\'{\i }a}{45}{appendix*.35}% 
