@@ -2286,7 +2286,7 @@ $S$ perforada:
 
 \begin{obs}\label{obs:suma_esfera}
 Sea $S$ una superficie conexa y $P=\langle A\mid W\rangle$ una representación poligonal suya de una sola cara (recordemos que esto siempre se puede dar), y sea $|\mathcal{P}|$ su realización geométrica. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$, obtenemos la misma superficie $S$. Esto se da puesto que una esfera perforada es homeomorfa al disco cerrado (\autoref{fig:disco_esfera_perforada}), y por tanto tenemos que hacer la construcción anterior es equivalente a partir de su representación poligonal y generar su realización geométrica. Pero esto también nos indica que $S\# \Esfera=S$. (Ver \autoref{fig:suma_toro_esfera}).
-Por el mismo argumento vemos también que hacer una perforación sobre $S'$, con el borde con etiquetas asociadas a una representación poligonal de $S$ e identifacarlas da lugar a la suma conexa $S\# S'$. 
+Por el mismo argumento vemos también que hacer una perforación sobre una superficie $S'$, con el borde con etiquetas asociadas a una representación poligonal de $S$ e identifacarlas da lugar a la suma conexa $S\# S'$. 
 \end{obs}
 
 \begin{comment}
@@ -2519,9 +2519,56 @@ Consideramos el caso en que las dos cremalleras ocupan cada una una perforación
 
 Consideramos ahora el caso en el que las dos cremalleras yacen sobre la misma perforación y la cubren totalmente. Identificándolas nos da o bien un \textit{cap} (\autoref{fig:cap}) o bien un \textit{crosscap} (\autoref{fig:crosscap}), dependiendo de sus respectivas orientaciones.
 
-Finalmente, consideramos los varios casos en que las cremalleras no ocupan perforaciones en su totalidad. 
+Finalmente, consideramos los varios casos en que las cremalleras no ocupan perforaciones en su totalidad. Para empezar, supongamos que la superficie ordinaria de la que partimos es una esfera. Tenemos varios casos:
+\begin{itemize}
+\item[(1)] \textit{Una perforación con un par-zip y dos componentes conexas distintas del borde.} Tenemos dos posibilidades dependiendo de la orientación de las cremalleras. En la primera 
+\begin{align*}
+\langle a,z,B_1,B_2,c\mid aa^{-1} c^{-1}zB_2z^{-1}B_1c\rangle & & \\
+\approx & \, \langle z,B_1,B_2,c\mid c^{-1}zB_2z^{-1}B_1c\rangle &\text{(doblar por } a\text{)}\\
+\approx & \, \langle z,B_1,B_2\mid zB_2z^{-1}B_1\rangle &\text{(doblar por \textit{c})}
+\end{align*}
+que es una representación del cilindro, es decir, una esfera con dos perforaciones, y por tanto una superficie ordinaria. Cambiando la aparición de $z^{-1}$ por la de $z$, obtenemos mediante un proceso análogo al anterior la representación
+\[ \langle z,B_1,B_2\mid zB_2zB_1 \rangle
+\]
+que es la representación de un crosscap con dos perforaciones, es decir, una superficie ordinaria.
+\item[(2)] \textit{Una perforación con un par-zip y una componente conexa del borde.} Como antes, dependiendo de la orientación podemos partir de 
+\begin{align*}
+\langle a,z,B,c\mid aa^{-1} c^{-1}zBz^{-1}c\rangle & & \\
+\approx & \, \langle z,B,c\mid c^{-1}zBz^{-1}c\rangle &\text{(doblar por } a\text{)}\\
+\approx & \, \langle z,B\mid zBz^{-1}\rangle &\text{(doblar por \textit{c})}
+\end{align*}
+que es una representación de una esfera perforada. Cambiando la aparición de $z^{-1}$ por $z$, llegamos a la representación
+\[
+\langle z,B,\mid zBz\rangle
+\]
+que es una representación de $\Proyectivo$ perforado, es decir, un crosscap con una perforación, y por lo tanto una superficie ordinaria.
+\item[(3)] \textit{Dos perforaciones con un par-zip y dos componentes conexas distisntas del borde.} Por un lado
+\begin{align*}
+\langle a,z,B_1,B_2,c_1,c_2\mid aa^{-1} c_2^{-1}zB_2c_2c_1z^{-1}B_1c_1\rangle & & \\
+\approx & \, \langle z,B_1,B_2,c_1,c_2\mid c_2^{-1}B_2zc_2c_1^{-1}z^{-1}B_1c_1\rangle &\text{(doblar por } a\text{)}\\
+\approx & \, \langle e,z,B_1,B_2\mid eB_2zze^{-1}z^{-1}B_1\rangle &\text{(rotar y consolidar } e=c_1c_2^{-1} \text{)}
+\end{align*}
+que es la representación de un toro con dos perforaciones. De la misma forma, cambiando la orientación de la aparición de $z^{-1}$ llegamos a 
+\[
+\langle e,z,B_1,B_2\mid eB_2ze^{-1}zB_1\rangle
+\]
+que es la botella de Klein con dos perforaciones, lo que es lo mismo, una esfera con crosshandle y dos perforaciones, es decir, una superficie ordinaria.
 
+\item[(4)] \textit{Dos perforaciones con un par-zip y una componente conexa distinta del borde.} Empezando con la representación
+\begin{align*}
+\langle a,z,B,c_1,c_2\mid aa^{-1} c_2^{-1}Bzc_2c_1^{-1}z^{-1}c_1\rangle & & \\
+\approx & \, \langle z,B,c_1,c_2\mid c_2^{-1}Bzc_2c_1^{-1}z^{-1}c_1\rangle &\text{(doblar por } a\text{)}\\
+\approx & \, \langle e,z,B\mid eBze^{-1}z^{-1}\rangle &\text{(rotar y consolidar } e=c_1c_2^{-1} \text{)}
+\end{align*}
+que es una representación de $\Toro$ con una perforación, o lo que es lo mismo, una esfera con un handle y una perforación, es decir, una superficie ordinaria. De la misma forma, cambiando $z^{-1}$ por $z$ obtenemos
+\[
+\langle e,z,B\mid eBze^{-1}z\rangle
+\]
+que es la representación de la botella de Klein con una perforación, es decir, una esfera con un crosshandle y una perforación, y por tanto una superficie ordinaria.
+\end{itemize}
+((Tengo que decir algo sobre si aparecen más componentes conexas del borde en las perforaciones?? Irían pegadas una detrás de otra, no se si habría que mencionarlo))
 \end{proof}
+
 
 \begin{tma}[Teorema de clasificación, versión preeliminar] %M%%%TEO: Clasificación preeliminar
 Toda superficie compacta es ordinaria.

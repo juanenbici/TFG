@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.8)  1 JUN 2020 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.8)  1 JUN 2020 20:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1473,32 +1473,42 @@ LaTeX Warning: Reference `fig:handle_toro' on page 35 undefined on input line 2
 LaTeX Warning: Reference `fig:crosshandle_klein' on page 36 undefined on input 
 line 2410.
 
-[36] [37]
+[36]
+Overfull \hbox (105.5774pt too wide) detected at line 2550
+[]
+ []
+
+
+Overfull \hbox (38.71611pt too wide) detected at line 2562
+[]
+ []
+
+[37] [38]
 Ap\'{e}ndice A.
-[38
+[39
 
-] [39]
+] [40]
 Ap\'{e}ndice B.
-[40
+[41
 
-] [41] [42]
+] [42] [43]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [43
+ [44
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2782.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2782.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2829.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2829.
  (./TFG2.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2782.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2782.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2829.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2829.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
 (rerunfilecheck)             Checksum: DB6F29E73C8AEAB70D87F5DAF47DADC9;1454.
@@ -1508,11 +1518,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 35974 strings out of 492167
- 831595 string characters out of 6131559
+ 35986 strings out of 492167
+ 831735 string characters out of 6131559
  1076898 words of memory out of 5000000
- 39349 multiletter control sequences out of 15000+600000
- 15739 words of font info for 102 fonts, out of 8000000 for 9000
+ 39353 multiletter control sequences out of 15000+600000
+ 16761 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,104p,1851b,1369s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{eje.1.2.5} has been referenced but does not exist
@@ -1536,10 +1546,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (47 pages, 498510 bytes).
+Output written on TFG2.pdf (48 pages, 501806 bytes).
 PDF statistics:
- 818 PDF objects out of 1000 (max. 8388607)
- 722 compressed objects within 8 object streams
- 269 named destinations out of 1000 (max. 500000)
- 15130 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 822 PDF objects out of 1000 (max. 8388607)
+ 725 compressed objects within 8 object streams
+ 270 named destinations out of 1000 (max. 500000)
+ 16154 words of extra memory for PDF output out of 17280 (max. 10000000)
 
