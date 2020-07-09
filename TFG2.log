@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.8)  2 JUN 2020 20:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.8)  6 JUL 2020 17:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1000,7 +1000,7 @@ LaTeX Info: Redefining \nameref on input line 98.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<images/comlu.jpg, id=115, 536.0025pt x 263.48438pt>
+<images/comlu.jpg, id=123, 536.0025pt x 263.48438pt>
 File: images/comlu.jpg Graphic file (type jpg)
 <use images/comlu.jpg>
 Package pdftex.def Info: images/comlu.jpg  used on input line 109.
@@ -1209,7 +1209,7 @@ Missing character: There is no ; in font nullfont!
 
 LaTeX Warning: Reference `fig:6a4a.' on page 13 undefined on input line 843.
 
-[13] [14] [15]
+[13] [14]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1226,11 +1226,11 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [16
+ [15
 
-] [17
+] [16
 
-] [18]
+] [17]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1258,7 +1258,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [19]
+ [18]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1269,7 +1269,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [20
+ [19
 
 
 ]
@@ -1315,12 +1315,12 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 1328--1371
  []
 
 
-LaTeX Warning: Reference `lema:celdas' on page 21 undefined on input line 1378.
+LaTeX Warning: Reference `lema:celdas' on page 20 undefined on input line 1378.
 
 
-[21]
+[20]
 
-LaTeX Warning: Reference `fig:disco_regular' on page 22 undefined on input line
+LaTeX Warning: Reference `fig:disco_regular' on page 21 undefined on input line
  1396.
 
 Missing character: There is no ; in font nullfont!
@@ -1337,7 +1337,7 @@ Overfull \hbox (5.4431pt too wide) in paragraph at lines 1455--1456
  [][] 
  []
 
-[22] [23]
+[21] [22]
 Package hyperref Info: bookmark level for unknown lema defaults to 0 on input l
 ine 1490.
 Missing character: There is no ; in font nullfont!
@@ -1361,13 +1361,13 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [24
+ [23
 
-] [25]
+] [24]
 
-LaTeX Warning: Reference `fig:PASO6' on page 26 undefined on input line 1614.
+LaTeX Warning: Reference `fig:PASO6' on page 25 undefined on input line 1615.
 
-[26]
+[25]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1409,18 +1409,18 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (7.49803pt too wide) in paragraph at lines 1841--1842
+Overfull \hbox (7.49803pt too wide) in paragraph at lines 1842--1843
 [][] 
  []
 
-[27] [28]
+[26] [27]
 
-LaTeX Warning: Reference `prop:sub_IIAN' on page 29 undefined on input line 187
-2.
+LaTeX Warning: Reference `prop:sub_IIAN' on page 28 undefined on input line 187
+3.
 
-[29
+[28
 
-] [30]
+] [29]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1447,7 +1447,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [31] [32]
+ [30] [31]
 Cap\'{\i }tulo 4.
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1459,62 +1459,52 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-[33
+[32
 
-] [34]
+] [33]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig:handle_toro' on page 34 undefined on input line 2
+358.
 
 
-LaTeX Warning: Reference `fig:handle_toro' on page 35 undefined on input line 2
-416.
+LaTeX Warning: Reference `fig:crosshandle_klein' on page 34 undefined on input 
+line 2368.
 
-[35
+[34
+
+] [35] [36] [37]
+Cap\'{\i }tulo 5.
+[38
 
 ]
-
-LaTeX Warning: Reference `fig:crosshandle_klein' on page 36 undefined on input 
-line 2426.
-
-[36]
-Overfull \hbox (105.5774pt too wide) detected at line 2566
-[]
- []
-
-[37]
-Overfull \hbox (38.71611pt too wide) detected at line 2578
-[]
- []
-
-[38] [39]
 Ap\'{e}ndice A.
-[40
+[39
 
-] [41]
+] [40]
 Ap\'{e}ndice B.
-[42
+[41
 
-] [43] [44]
+] [42] [43]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [45
+ [44
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2869.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2869.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2878.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2878.
  (./TFG2.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2869.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2869.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2878.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2878.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
-(rerunfilecheck)             Checksum: DB6F29E73C8AEAB70D87F5DAF47DADC9;1454.
+(rerunfilecheck)             Checksum: 968853B4008E88C6E3BDE3FCC29682AF;1606.
 
 
 LaTeX Warning: There were undefined references.
@@ -1522,13 +1512,13 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  36001 strings out of 492167
- 832006 string characters out of 6131559
- 1076014 words of memory out of 5000000
+ 832009 string characters out of 6131559
+ 1077023 words of memory out of 5000000
  39358 multiletter control sequences out of 15000+600000
  16761 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,104p,1851b,1369s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{prop.4.1.5} has been referenced but does not exis
+pdfTeX warning (dest): name{prop.4.1.4} has been referenced but does not exis
 t, replaced by a fixed one
 
 pdfTeX warning (dest): name{eje.1.2.5} has been referenced but does not exist, 
@@ -1552,10 +1542,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (49 pages, 506892 bytes).
+Output written on TFG2.pdf (48 pages, 505708 bytes).
 PDF statistics:
- 845 PDF objects out of 1000 (max. 8388607)
- 747 compressed objects within 8 object streams
+ 846 PDF objects out of 1000 (max. 8388607)
+ 749 compressed objects within 8 object streams
  280 named destinations out of 1000 (max. 500000)
- 16154 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 16170 words of extra memory for PDF output out of 17280 (max. 10000000)
 

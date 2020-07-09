@@ -164,9 +164,9 @@ Sea $M$ una variedad, y sea $p\in M$. Si $U\subseteq M$ es un entorno de $p$ que
 A un dominio coordenado que es homeomorfo a una bola de $\R^n$ se le llama \enfatiza{bola coordenada} (si $n=2$, decimos \enfatiza{disco coordenado}). Si $p\in M$ y $U$ es un dominio coordenado que contiene a $p$, decimos que $U$ es un \enfatiza{entorno Euclídeo} de $p$.\\
 No siempre se tiene que la adherencia de una bola coordenada sea homeomorfa a una bola cerrada Euclidea. Por tanto, decimos que una bola coordenada $B\subseteq M$ es una \enfatiza{bola coordenada regular} si existe un entorno $B'$ de $\overline{B}$ y un homeomorfismo $\varphi:B'\to B_{r'}(x)\subseteq \R^n$ que lleva $B$ a $B_r(x)$ y $\overline{B}$ a $\overline{B}_r(x)$ para algún $r'>r>0$ y para algún $x\in \R^n$.
 \begin{obs}%%%%OBS: toda propiedad local de Rn se pasa a las variedades
-Como la propiedad ``ser localmente homeomorfo a $\R^n$'' es local, toda propiedad local de $\R^n$ se traslada a una variedad. Así, las variedades son localmente compactas, I AN, localmente conexas, localmente conexas por caminos y localmente simplemente conexas.
+Ser localmente homeomorfo a $\R^n$ es una propiedad local, y por tanto las propiedades locales de $\R^n$ se trasladan a una variedad. Por lo tanto las variedades son localmente compactas, I AN, localmente conexas, localmente conexas por caminos y localmente simplemente conexas.
 \end{obs}%COPIADO lo de abajo, cambiar las palabras!!!!!!!!!!!!
-El \textit{Teorema de Invarianza del Dominio} dice que si $W\subset \R^n$ y $W'\subset \R^m$ son abiertos y existe $\phi: W \rightarrow W'$ homeomorfismo, entonces $n=m$. Esto implica que, dado un  $p\in M$ de una variedad, hay un único $n=n(p)$ tal que un entorno $U^p$ es homeomorfo a un abierto $U'\subset \R^n$. Llamamos $n(p)$ la \enfatiza{dimensión en p}. Como para todo punto $q\in U$ podemos tomar $U$ como entorno de $q$, se tiene por tanto $n(q)=n(p)$. Luego en toda la componente conexa de $p$, el $n$ que aparece es el mismo, y lo llamaremos \enfatiza{dimensión} de dicha componente conexa. Si escribimos $M=\amalg M_i$, con $M_i$ componentes conexas de $M$, todas las $M_i$ son variedades, y si todas las $M_i$ tienen la misma dimensión $n$, entonces escribimos $n=\dimension{M}$ , y decimos que $M$ es una \enfatiza{n-variedad}.\\
+Vamos a definir ahora la dimensión de una variedad. El \textit{Teorema de Invarianza del Dominio} dice que si $W\subset \R^n$ y $W'\subset \R^m$ son abiertos y existe un homeomorfismo $\phi: W \rightarrow W'$, entonces $n=m$. Así pues, sea $M$ una variedad, y sea $p\in M$. Entonces hay un único $n=n_p$ tal que un entorno $U^p$ de $p$ en $M$ es homeomorfo a un abierto $U'\subset \R^n$. Decimos que $n_p$ es la \enfatiza{dimensión en p}. Si para todo punto $q\in U^p$ tomamos $U^p$ como entorno de $q$, tenemos que $n_q=n_p$. Luego en toda la componente conexa de $p$, el $n$ que aparece es el mismo, y lo llamaremos \enfatiza{dimensión} de dicha componente conexa. Si escribimos $M=\amalg M_i$ como la unión disjunta de sus componentes conexas $M_i$, tenemos que todas las $M_i$ son variedades, y si todas las $M_i$ tienen la misma dimensión $n$, entonces escribimos $n=\dimension{M}$ , y decimos que $M$ es una \enfatiza{n-variedad}.\\
 El ejemplo más trivial de $n$-variedad es $\R^n$, pero también lo es cualquier abierto suyo. De hecho, esto se puede generalizar:
 \begin{prop}%%%%PROP: abierto variedad abierto
 Todo subconjunto abierto de una $n$-variedad es una $n$-variedad.
@@ -860,7 +860,7 @@ Finalmente, para probar (c), volvemos a ver cada polígono como una superficie c
 \end{proof}
 \begin{figure}
 \centering
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.5]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.3]
 %\clip(-15.330160097387678,-13.834559140936781) rectangle (29.900136203459667,16.920192433770143);
 \draw [dashed, shift={(-8.120466412995146,8.354581757803452)},fill=black,fill opacity=0.10000000149011612] (0,0) -- (-117.75854060106003:1.387432401866483) arc (-117.75854060106003:11.093723011557817:1.387432401866483) -- cycle;
 \draw [dashed, shift={(-1.7579751439008828,5.15614020090742)},fill=black,fill opacity=0.10000000149011612] (0,0) -- (126.29777621005324:1.387432401866483) arc (126.29777621005324:175.30713749441017:1.387432401866483) -- cycle;
@@ -1595,6 +1595,7 @@ Toda superficie compacta y conexa no vacía es homeomorfa a alguna de las siguie
 \item[(b)] Una suma conexa $\Toro \# \dots \# \Toro$ de copias del toro.
 \item[(c)] Una suma conexa $\Proyectivo \,  \# \dots\, \# \Proyectivo$ de copias del plano proyectivo. 
 \end{itemize}
+A estas superficies las llamamos \enfatiza{superficies estándar}.
 \end{tma}
 \begin{proof}
 Sea $M$ una superficie junto con una representación poligonal suya, que existe por la \autoref{prop:superficie_tiene_representacion}. Probaremos el teorema haciendo transformaciones elementales sobre esta representación hasta llegar a una de las estándar.
@@ -2265,7 +2266,7 @@ $S$ perforada:
 %
 %
 %
-
+\begin{comment}
 \begin{figure}[h]%%%%FIG: Disco esfera perforada
 \centering
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
@@ -2283,13 +2284,15 @@ $S$ perforada:
 \end{tikzpicture}
 \caption{El disco cerrado como una esfera perforada.\label{fig:disco_esfera_perforada}}
 \end{figure}
+\end{comment}
 
-\begin{prop}
+
+\begin{prop}\label{prop:suma_esfera}
 Sean $M,M'$ dos superficies conexas (con o sin borde) y sean $P=\langle S\mid W\rangle$ y $P'=\langle S'\mid W'\rangle$ sus respectivas representaciones poligonales de una sola cara. Se tiene entonces:
 \begin{itemize}
 \item[(i)] La suma conexa de una esfera y $S$ es homeomorfa a $S$.
 \item[(ii)] Sea $|\mathcal{P}|$ la realización geométrica de $P$. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$, obtenemos la misma superficie $S$. 
-\item[(iii)] Con una construcción análoga a la del apartado anterior, hacer una perforación sobre una superficie $S'$, con el borde con etiquetas asociadas a una representación poligonal de $S$ e identifacarlas da lugar a la suma conexa $S\# S'$. 
+\item[(iii)] Con una construcción análoga a la del apartado anterior, si hacemos una perforación sobre una superficie $S'$ con el borde con etiquetas asociadas a una representación poligonal de $S$, al identifacarlas obtenemos la suma conexa $S\# S'$. 
 \end{itemize}
 \end{prop}
 \begin{proof}
@@ -2300,19 +2303,21 @@ Para demostrar (ii), sea $\langle a,c,S\mid aa^{-1}cWc^{-1}\rangle$ la represent
 Finalmente para (iii), sea $\langle S,S',B,c\mid W'cWc^{-1}\rangle$, que es la representación de $M'$ con una perforación asociada a $M$. Desplegando por $a$ se tiene $$\langle S,S',a,B,c\mid W'aa^{-1}cWc^{-1}\rangle$$ que es la suma conexa de $M'$ y $\Esfera$ con una perforación asociada a $M$. Por (ii), esto es equivalente a la suma conexa de $M'$ y $M$. 
 \end{proof}
 
+
+\begin{comment}
 \begin{obs}\label{obs:suma_esfera}
 Sea $S$ una superficie conexa y $P=\langle A\mid W\rangle$ una representación poligonal suya de una sola cara (recordemos que esto siempre se puede dar), y sea $|\mathcal{P}|$ su realización geométrica. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$, obtenemos la misma superficie $S$. Esto se da puesto que una esfera perforada es homeomorfa al disco cerrado (\autoref{fig:disco_esfera_perforada}), y por tanto tenemos que hacer la construcción anterior es equivalente a partir de su representación poligonal y generar su realización geométrica. Pero esto también nos indica que $S\# \Esfera=S$. (Ver \autoref{fig:suma_toro_esfera}).
 Por el mismo argumento vemos también que hacer una perforación sobre una superficie $S'$, con el borde con etiquetas asociadas a una representación poligonal de $S$ e identifacarlas da lugar a la suma conexa $S\# S'$. 
 \end{obs}
 
-\begin{comment}
+
 \begin{obs}\label{obs:asa}%%%%EJE: Asas y toros
 Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el espacio que se obtiene al pegarle un \textit{handle} a $S$. De forma más precisa, sea $S_0$ que denota a $S$ con dos perforaciones. Entonces $S_0$ y $\mathbb{S}^1\times I$ son ambas superficies con borde, el cual está formado por dos componentes conexas, que como sabemos  son ambas homeomorfas a la union disjunta de dos copias de $\mathbb{S}^1$. Sea $\tilde{S}$ el espacio obtenido pegando $S_0$ y $\mathbb{S}^1\times I$ por sus bordes con un proceso análogo al de la \autoref{prop:borde_perforaciones}. Este espacio cociente es homeomorfo a $S\# \Toro$. La razón se puede ver en la \autoref{fig:toro_asa}, y es que podemos obtener un espacio homeomorfo a $S\# \Toro$ primero quitando un disco abierto de $S$, luego pegando un disco cerrado con dos discos abiertos quitados (es decir, la parte gris de la figura), y finalmente pegando al borde de la construcción el cilindro $\Esfera \times I$. Dado que la primera operación da resultado a un espacio homeomorfo a $S$ con dos discos abiertos quitados, el resultado es el mismo que si quitamos directamente a $S$ dos discos abiertos y entonces pegamos el cilindro a su frontera. 
 %%165%%
 \end{obs}
 \end{comment}
 
-\begin{figure}[h]%%%% FIG: suma conexa toro esfera
+\begin{figure}%%%% FIG: suma conexa toro esfera
 \centering
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.75]
 \fill [black!10] (0.5,0) arc[x radius=0.5, y radius=0.5, start angle=0, end angle=-180];
@@ -2338,6 +2343,40 @@ Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el e
 
 
 
+
+
+
+\begin{prop}\label{prop:handletoro_crosshandleklein}
+\begin{itemize}
+
+\item[(a)] La esfera con un handle es homeomorfa al toro $\Toro$.
+\item [(b)] La esfera con un crosshandle es homeomorfa a la botella de Klein $K$.
+
+\end{itemize}
+\end{prop}
+\begin{proof}
+Sea la representación de la esfera con un par-zip asociado al handle (ver \autoref{fig:handle_toro}) $$\langle a,c_1,c_2,z\mid aa^{-1} c_1^{-1}zc_1c_2^{-1}z^{-1}c_1\rangle.$$ Doblamos por $a$ y nos queda
+\[
+\langle c_1,c_2,z\mid c_1^{-1}zc_1c_2^{-1}z^{-1}c_2\rangle
+\]
+y podemos finalmente reetiquetar $e=c_2c_1^{-1}$ para obtener la representación de $\Toro$ 
+
+\[
+\langle e,z\mid eze^{-1}z^{-1}\rangle
+\]
+
+Similarmente, para demostrar (b), sea la representación de la esfera con un par-zip asociado al crosshandle (ver \autoref{fig:crosshandle_klein}) $$\langle a,c_1,c_2,z\mid aa^{-1} c_1^{-1}zc_1c_2^{-1}zc_1\rangle.$$ Doblamos por $a$ y nos queda
+\[
+\langle c_1,c_2,z\mid c_1^{-1}zc_1c_2^{-1}zc_2\rangle
+\]
+y reetiquetando $e=c_2c_1^{-1}$, obtenemos finalmente la representación de la botella de Klein
+
+\[
+\langle e,z\mid eze^{-1}z\rangle
+\]
+
+
+\end{proof}
 
 \begin{figure}%%%%FIG: Toro-Asa
 \centering
@@ -2403,40 +2442,6 @@ Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el e
 \end{tikzpicture}
 \caption{Suma conexa de una superficie y un toro visto como pegar un \textit{asa}. \label{fig:toro_asa}}
 \end{figure}
-
-\begin{prop}\label{prop:handletoro_crosshandleklein}
-\begin{itemize}
-
-\item[(a)] La esfera con un handle es homeomorfa al toro $\Toro$.
-\item [(b)] La esfera con un crosshandle es homeomorfa a la botella de Klein $K$.
-
-\end{itemize}
-\end{prop}
-\begin{proof}
-Sea la representación de la esfera con un par-zip asociado al handle (ver \autoref{fig:handle_toro}) $$\langle a,c_1,c_2,z\mid aa^{-1} c_1^{-1}zc_1c_2^{-1}z^{-1}c_1\rangle.$$ Doblamos por $a$ y nos queda
-\[
-\langle c_1,c_2,z\mid c_1^{-1}zc_1c_2^{-1}z^{-1}c_2\rangle
-\]
-y podemos finalmente reetiquetar $e=c_2c_1^{-1}$ para obtener la representación de $\Toro$ 
-
-\[
-\langle e,z\mid eze^{-1}z^{-1}\rangle
-\]
-
-Similarmente, para demostrar (b), sea la representación de la esfera con un par-zip asociado al crosshandle (ver \autoref{fig:crosshandle_klein}) $$\langle a,c_1,c_2,z\mid aa^{-1} c_1^{-1}zc_1c_2^{-1}zc_1\rangle.$$ Doblamos por $a$ y nos queda
-\[
-\langle c_1,c_2,z\mid c_1^{-1}zc_1c_2^{-1}zc_2\rangle
-\]
-y reetiquetando $e=c_2c_1^{-1}$, obtenemos finalmente la representación de la botella de Klein
-
-\[
-\langle e,z\mid eze^{-1}z\rangle
-\]
-
-
-\end{proof}
-
-
 
 \begin{corol}
 Sea $S$ una superficie. Los siguientes espacios son homeomorfos:
@@ -2561,8 +2566,8 @@ que es una representación de $\Proyectivo$ perforado, es decir, un crosscap con
 \item[(3)] \textit{Dos perforaciones con un par-zip y dos componentes conexas distisntas del borde.} Por un lado
 \begin{align*}
 \langle a,z,B_1,B_2,c_1,c_2\mid aa^{-1} c_2^{-1}zB_2c_2c_1z^{-1}B_1c_1\rangle & & \\
-\approx & \, \langle z,B_1,B_2,c_1,c_2\mid c_2^{-1}B_2zc_2c_1^{-1}z^{-1}B_1c_1\rangle &\text{(doblar por } a\text{)}\\
-\approx & \, \langle e,z,B_1,B_2\mid eB_2zze^{-1}z^{-1}B_1\rangle &\text{(rotar y consolidar } e=c_1c_2^{-1} \text{)}
+\approx  \, \langle z,B_1,B_2,c_1,c_2\mid c_2^{-1}B_2zc_2c_1^{-1}z^{-1}B_1c_1\rangle &&\text{(doblar por } a\text{)}\\
+\approx  \, \langle e,z,B_1,B_2\mid eB_2zze^{-1}z^{-1}B_1\rangle &&\text{(rotar y consolidar } e=c_1c_2^{-1} \text{)}
 \end{align*}
 que es la representación de un toro con dos perforaciones. De la misma forma, cambiando la orientación de la aparición de $z^{-1}$ llegamos a 
 \[
@@ -2573,8 +2578,8 @@ que es la botella de Klein con dos perforaciones, lo que es lo mismo, una esfera
 \item[(4)] \textit{Dos perforaciones con un par-zip y una componente conexa distinta del borde.} Empezando con la representación
 \begin{align*}
 \langle a,z,B,c_1,c_2\mid aa^{-1} c_2^{-1}Bzc_2c_1^{-1}z^{-1}c_1\rangle & & \\
-\approx & \, \langle z,B,c_1,c_2\mid c_2^{-1}Bzc_2c_1^{-1}z^{-1}c_1\rangle &\text{(doblar por } a\text{)}\\
-\approx & \, \langle e,z,B\mid eBze^{-1}z^{-1}\rangle &\text{(rotar y consolidar } e=c_1c_2^{-1} \text{)}
+\approx  \, \langle z,B,c_1,c_2\mid c_2^{-1}Bzc_2c_1^{-1}z^{-1}c_1\rangle &&\text{(doblar por } a\text{)}\\
+\approx  \, \langle e,z,B\mid eBze^{-1}z^{-1}\rangle &&\text{(rotar y consolidar } e=c_1c_2^{-1} \text{)}
 \end{align*}
 que es una representación de $\Toro$ con una perforación, o lo que es lo mismo, una esfera con un handle y una perforación, es decir, una superficie ordinaria. De la misma forma, cambiando $z^{-1}$ por $z$ obtenemos
 \[
@@ -2582,8 +2587,8 @@ que es una representación de $\Toro$ con una perforación, o lo que es lo mismo
 \]
 que es la representación de la botella de Klein con una perforación, es decir, una esfera con un crosshandle y una perforación, y por tanto una superficie ordinaria.
 \end{itemize}
-Por la \autoref{obs:suma_esfera}, queda demostrado.
-((Tengo que decir algo sobre si aparecen más componentes conexas del borde en las perforaciones?? Irían pegadas una detrás de otra, no se si habría que mencionarlo))
+Por tanto, aplicando la demostración de la \autoref{prop:suma_esfera} (iii), demostramos los cuatro puntos anteriores para cremalleras sobre superficies arbitrarias, por lo que queda entonces demostrada la proposición.
+
 \end{proof}
 
 
@@ -2608,7 +2613,7 @@ Handles y crosshandles son equivalentes en la presencia de crosscaps.
 \begin{proof}
 Sea una esfera con un par-zip asociado a un handle y otro asociado a un crosscap. Sabemos que, identificando las cremalleras obtenemos un espacio homeomorfo a la suma conexa $\Toro \# \Proyectivo$. Pero por la \autoref{lema:toro_proyectivo}, este espacio es homeomorfo a $\Proyectivo \# \Proyectivo \# \Proyectivo$, que a su vez, es homeomorfo al plano proyectivo con un crosshandle, que a su vez es homeomorfo a una esfera con un crosshandle y un crosscap.
 \end{proof}
-((Ahora no entiendo por qué dado todo lo anterior Conway sólo da la representación de superficies sin borde))
+%((Ahora no entiendo por qué dado todo lo anterior Conway sólo da la representación de superficies sin borde))
 \begin{tma}[Clasificación de superficies]
 Toda superficie compacta es homeomorfa o bien a una esfera con handles o bien a una esfera con crosscaps.
 \end{tma}
@@ -2633,10 +2638,14 @@ Por la versión preeliminar del teorema de clasificación, una superficie compac
 
 
 
+\chapter{Teorema de Clasificación, segunda parte}
 
 
+\section{Teorema de Clasificación}
 
-
+\begin{tma}[Teorema de Clasificación, segunda parte]
+Toda superficie compacta es homeomorfa a exáctamente una de las superficies estándar.
+\end{tma}
 
 
 \appendix
