@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.20)  2 SEP 2020 11:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.20)  2 SEP 2020 18:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1071,7 +1071,7 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 198--216
 Package hyperref Info: bookmark level for unknown corol defaults to 0 on input 
 line 250.
  [3]
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 265--287
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 268--290
 []$[]$ $[]$ 
  []
 
@@ -1081,7 +1081,7 @@ Cap\'{\i }tulo 2.
 
 ]
 Package hyperref Info: bookmark level for unknown tma defaults to 0 on input li
-ne 504.
+ne 507.
  [7] [8]
 Cap\'{\i }tulo 3.
 [9
@@ -1199,7 +1199,7 @@ Missing character: There is no ; in font nullfont!
 
 ]
 
-LaTeX Warning: Reference `fig:6a4a.' on page 13 undefined on input line 846.
+LaTeX Warning: Reference `fig:6a4a.' on page 13 undefined on input line 849.
 
 [13] [14]
 Missing character: There is no ; in font nullfont!
@@ -1286,7 +1286,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1265--1327
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1268--1330
 []$[]$ $[]$ 
  []
 
@@ -1302,18 +1302,18 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1331--1374
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1334--1377
 []$[]$ $[]$ 
  []
 
 
-LaTeX Warning: Reference `lema:celdas' on page 20 undefined on input line 1381.
+LaTeX Warning: Reference `lema:celdas' on page 20 undefined on input line 1384.
 
 
 [20]
 
 LaTeX Warning: Reference `fig:disco_regular' on page 21 undefined on input line
- 1399.
+ 1402.
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1325,13 +1325,13 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (5.4431pt too wide) in paragraph at lines 1458--1459
+Overfull \hbox (5.4431pt too wide) in paragraph at lines 1461--1462
  [][] 
  []
 
 [21] [22]
 Package hyperref Info: bookmark level for unknown lema defaults to 0 on input l
-ine 1493.
+ine 1496.
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1357,7 +1357,7 @@ Missing character: There is no ; in font nullfont!
 
 ] [24]
 
-LaTeX Warning: Reference `fig:PASO6' on page 25 undefined on input line 1618.
+LaTeX Warning: Reference `fig:PASO6' on page 25 undefined on input line 1621.
 
 [25]
 Missing character: There is no ; in font nullfont!
@@ -1401,14 +1401,14 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (7.49803pt too wide) in paragraph at lines 1845--1846
+Overfull \hbox (7.49803pt too wide) in paragraph at lines 1848--1849
 [][] 
  []
 
 [26] [27]
 
 LaTeX Warning: Reference `prop:sub_IIAN' on page 28 undefined on input line 187
-6.
+9.
 
 [28
 
@@ -1456,11 +1456,11 @@ Missing character: There is no ; in font nullfont!
 ] [33]
 
 LaTeX Warning: Reference `fig:handle_toro' on page 34 undefined on input line 2
-361.
+364.
 
 
 LaTeX Warning: Reference `fig:crosshandle_klein' on page 34 undefined on input 
-line 2371.
+line 2374.
 
 [34
 
@@ -1468,7 +1468,7 @@ line 2371.
 Cap\'{\i }tulo 5.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2664.
+(hyperref)                than one, level fixed on input line 2667.
 
 [38
 
@@ -1488,16 +1488,16 @@ Package microtype Info: Loading generic protrusion settings for font family
  [45
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2948.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2948.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2951.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2951.
  (./TFG2.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2948.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2948.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2951.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2951.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
 (rerunfilecheck)             Checksum: 94510A906D00EF29A21915A3AE444D82;1633.
@@ -1538,10 +1538,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (49 pages, 513912 bytes).
+Output written on TFG2.pdf (49 pages, 513941 bytes).
 PDF statistics:
- 876 PDF objects out of 1000 (max. 8388607)
- 778 compressed objects within 8 object streams
+ 875 PDF objects out of 1000 (max. 8388607)
+ 777 compressed objects within 8 object streams
  301 named destinations out of 1000 (max. 500000)
  18730 words of extra memory for PDF output out of 20736 (max. 10000000)
 
