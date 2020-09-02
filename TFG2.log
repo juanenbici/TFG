@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.20)  31 AUG 2020 14:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.20)  2 SEP 2020 11:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1509,7 +1509,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  36411 strings out of 480478
  843868 string characters out of 5905959
- 1262953 words of memory out of 5000000
+ 1263953 words of memory out of 5000000
  51362 multiletter control sequences out of 15000+600000
  546162 words of font info for 121 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1538,7 +1538,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (49 pages, 513603 bytes).
+Output written on TFG2.pdf (49 pages, 513912 bytes).
 PDF statistics:
  876 PDF objects out of 1000 (max. 8388607)
  778 compressed objects within 8 object streams
