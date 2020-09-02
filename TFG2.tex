@@ -56,6 +56,9 @@
 \newcommand{\Epsilon}{\mathcal{E}}
 \DeclareMathOperator{\interior}{Int} %interior
 \DeclareMathOperator{\dimension}{dim} %dimension
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Ab}{Ab}
+
 
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Comando para normas
 \newcommand{\Esfera}{\mathbb{S}^2}
@@ -160,7 +163,7 @@ Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo 
 \begin{defin}\label{def:variedad}%%%%DEF: variedad topológica
 Una \textbf{\emph{variedad topológica}} (de ahora en adelante \emph{variedad}) es un espacio topológico Hausdorff, II AN y localmente homeomorfo a $R^n$, para algún $n\geq 0$.
 \end{defin}
-Sea $M$ una variedad, y sea $p\in M$. Si $U\subseteq M$ es un entorno de $p$ que es homeomorfo a un abierto $U'$ de $\R^n$, decimos que $U$ es un \enfatiza{dominio coordenado}, llamamos \enfatiza{aplicación coordenada} a cualquier homeomorfismo $\varphi :U\to U'$ y decimos que el par $(U,\varphi )$ es una \enfatiza{carta para $M$}.\\
+Sea $M$ una variedad, y sea $p\in M$. Si $U\subseteq M$ es un entorno de $p$ que es homeomorfo a un abierto $U'$ de $\R^n$, decimos que $U$ es un \enfatiza{dominio coordenado}, y llamamos \enfatiza{aplicación coordenada} a cualquier homeomorfismo $\varphi :U\to U'$. Decimos que el par $(U,\varphi )$ es una \enfatiza{carta para $M$}.\\
 A un dominio coordenado que es homeomorfo a una bola de $\R^n$ se le llama \enfatiza{bola coordenada} (si $n=2$, decimos \enfatiza{disco coordenado}). Si $p\in M$ y $U$ es un dominio coordenado que contiene a $p$, decimos que $U$ es un \enfatiza{entorno Euclídeo} de $p$.\\
 No siempre se tiene que la adherencia de una bola coordenada sea homeomorfa a una bola cerrada Euclidea. Por tanto, decimos que una bola coordenada $B\subseteq M$ es una \enfatiza{bola coordenada regular} si existe un entorno $B'$ de $\overline{B}$ y un homeomorfismo $\varphi:B'\to B_{r'}(x)\subseteq \R^n$ que lleva $B$ a $B_r(x)$ y $\overline{B}$ a $\overline{B}_r(x)$ para algún $r'>r>0$ y para algún $x\in \R^n$.
 \begin{obs}%%%%OBS: toda propiedad local de Rn se pasa a las variedades
@@ -1866,9 +1869,9 @@ Toda superficie con borde compacta es homeomorfa a una superficie compacta con p
 \begin{proof}
 Sea $M$ una superficie compacta. Vamos a demostrar que el borde $\partial M$ es homeomorfo a una unión disjunta de circunferencias $\mathbb{S}^1$. Por el \autoref{corol:borde_n-1_variedad} se tiene que $\partial M$ es una 1-variedad. Salvo homeomorfismo, las 1-variedades conexas son $\R$ y $\mathbb{S}^1$. Por ser $\partial M$ un subconjunto cerrado de un compacto, es también compacto, y por tanto se tiene que cada componente conexa de $\partial M$ es homeomorfa a $\mathbb{S}^1$.
 
-Por otro lado, vamos a ver que \textit{pegando} discos a las componentes de $\partial M$ se obtiene una superficie sin borde. Sean $S=\amalg_i \overline{\mathbb{B}}_i^2$ y $f:\partial S=\amalg_i \mathbb{S}^1\to \partial M$ un homeomorfismo. Considerando $f$ como una función de $\partial S$ en $M$, definimos la relación de equivalencia $\sim$ en la unión disjunta $M\amalg S$ generada por $a\sim f(a)$, y denotamos el espacio cociente resultante por $M^*=(M\amalg S)/\sim$. Tenemos que ver que $M^*$ es IIAN, Haussdorf y localmente Euclídeo de dimensión $2$. Empecemos con esto último. 
+Por otro lado, vamos a ver que \textit{pegando} discos a las componentes de $\partial M$ se obtiene una superficie sin borde. Sean $S=\amalg_i \overline{\mathbb{B}}_i^2$ y $f:\partial S=\amalg_i \mathbb{S}^1\to \partial M$ un homeomorfismo. Considerando $f$ como una función de $\partial S$ en $M$, definimos la relación de equivalencia $\sim$ en la unión disjunta $M\amalg S$ generada por $a\sim f(a)$, y denotamos el espacio cociente resultante por $M^*=(M\amalg S)/\sim$. Tenemos que ver que $M^*$ es IIAN, Haussdorf y localmente homeomorfo a un espacio euclídeo de dimensión $2$. Empecemos con esto último. 
 
-Sea $q:M\amalg S\to M^*$ la aplicación cociente, y sea $B=q(\partial M\cup \partial S)$. Notamos que $\interior M\amalg \interior S$ es un abierto saturado de $M\amalg S$, por lo que podemos restringir $q$ a una aplicación cociente que va de $\interior M\amalg \interior S$ en $M^*\setminus B$. Dado que esta restricción es inyectiva, es un homeomorfismo, y por tanto $M^*\setminus B$ es localmente Euclídeo de dimensión $2$. Por tanto nos queda considerar los puntos en $B$, pero esto lo tenemos por un argumento análogo al que usamos en la demostración de \autoref{prop:poligonos}. 
+Sea $q:M\amalg S\to M^*$ la aplicación cociente, y sea $B=q(\partial M\cup \partial S)$. Notamos que $\interior M\amalg \interior S$ es un abierto saturado de $M\amalg S$, por lo que podemos restringir $q$ a una aplicación cociente que va de $\interior M\amalg \interior S$ en $M^*\setminus B$. Dado que esta restricción es inyectiva, es un homeomorfismo, y por tanto $M^*\setminus B$ es localmente homeomorfo a un espacio euclídeo de dimensión $2$. Por tanto nos queda considerar los puntos en $B$, pero esto lo tenemos por un argumento análogo al que usamos en la demostración de \autoref{prop:poligonos}. 
 
 Por otro lado, el espacio cociente $M^*$ es IIAN por la proposición \autoref{prop:sub_IIAN}. Para probar que es Haussdorf, hay que ver que las fibras de $q$ se pueden separar por abiertos saturados. Pero esto siempre es posible escogiendo bolas coordenadas suficientemente pequeñas. Así pues, $M^*$ es una superficie. 
 \end{proof}
@@ -2639,13 +2642,79 @@ Por la versión preeliminar del teorema de clasificación, una superficie compac
 
 
 \chapter{Teorema de Clasificación, segunda parte}
+Vamos a empezar recordando brevemente las presentaciones de grupos. 
+
+\begin{defin}
+Sea $S$ un conjunto, y $R\subset F(S)$, donde $F(S)$ es el grupo libre en $S$. Llamamos \enfatiza{presentación de un grupo} al par $\langle S \mid R\rangle$. A los elementos de $S$ los llamamos \enfatiza{generadores}, y a los de $R$ \enfatiza{relaciones}. La presentación de un grupo determina un grupo, que también denotamos por $\langle S \mid R \rangle$, y que viene dado por el siguiente grupo cociente: 
+\[
+\langle S\mid R\rangle = F(S)/\overline{R}
+\]
+donde $\overline{R}$ representa la intersección de todos los subgrupos normales de $F(S)$ que contienen a $R$.
+\end{defin}
+Cada relación $r\in R$ determina un producto de potencias de generadores que vale 1 en el cociente.
+\begin{defin}
+Sea ahora un grupo arbitrario $G$. Decimos que una presentación de un grupo $\langle S \mid R \rangle$ es una \enfatiza{presentación de G} si existe un isomorfismo $\langle S \mid R\rangle \cong G$. 
+\end{defin}
+Los elementos de $G$ claramente generan $G$, y por la propiedad característica de los grupos libres, la aplicación identidad de $G$ en sí mismo se extiende a un homomorfismo único $\Phi: F(G) \to G$. Si ponemos $R= \Ker{\Phi}$, entonces, por el primer teorema de isomorfía tenemos que $G\cong F(G)/R$. Como $R$ es normal, $R=\overline{R}$, y por tanto $G$ tiene como presentación $\langle G\mid R\rangle$. Esta presentación trivial es muy ineficiente, pues normalmente $F(G)$ y $R$ son más grandes que $G$. 
+Si $G$ admite una presentación $\langle S\mid R	\rangle$ en las cuales $S$ y $R$ son conjuntos finitos, decimos que $G$ tiene una \enfatiza{presentación finita}.
 
 
-\section{Teorema de Clasificación}
+
+
+\subsection{Grupos fundamentales de las Superficies Compactas}
+
+\begin{tma}
+Sea $M$ una superficie con una presentación suya de una cara $\langle a_1, \dots , a_n \mid W\rangle$. Entonces una presentación del grupo fundamental $\pi_1 (M)$ viene dada por $\langle a_1, \dots , a_n \mid W\rangle$.
+\end{tma}
+
+\begin{corol}
+Los grupos fundamentales de las superficies compactas estándar tienen como presentación:
+\begin{itemize}
+\item[(a)] $\pi_1 (\Esfera ) \cong \langle \emptyset \mid \emptyset \rangle $ (el grupo trivial).
+\item[(b)] $\pi_1 ( \Toro \# \dots \Toro) \cong \langle \beta_1 , \gamma_1 ,\dots ,\beta_n , \gamma_n \mid \beta_1 \gamma_1 \beta^{-1}_1 \gamma^{-1}_1\dots \beta_n \gamma_n \beta^{-1}_n \gamma^{-1}_n \rangle$.
+\item[(c)] $\pi_1(\Proyectivo \# \dots \# \Proyectivo \rangle \cong \langle \beta_1 , \dots , \beta_n \mid \beta_1^{2} \dots \beta_n^{2} \rangle $. 
+\end{itemize}
+\end{corol}
+
+
+\begin{defin}
+Dado un grupo $G$, el \enfatiza{subgrupo conmutador de G}, denotado por $\left[ G, G \right]$, es el subgrupo de $G$ generado por todos los elementos de la forma $\alpha \beta \alpha^{-1} \beta^{-1}$, para $\alpha \beta \in G$. 
+
+Al grupo cociente $\Ab{(G)} = G / \left[ G,G \right]$ lo llamamos el \enfatiza{abelianizado de G}. 
+\end{defin}
+
+Como el isomorfismo $F:G_1 \to G_2$ lleva el subgrupo conmutador de $G_1$ al de $G_2$, entonces grupos isomorfos tienen abelianizados isomorfos. 
+
+\begin{prop}
+Los grupos fundamentales de las superficies estándar tienen los siguientes abelianizados:
+\begin{itemize}
+\item $\Ab{(\pi_1 (\Esfera ))} = \{ 1 \}$.
+\item $\Ab{(\pi_1 (\Toro \# \dots \# \Toro ))} \cong \mathbb{Z}^{2n}$.
+\item $\Ab{(\pi_1 (\Proyectivo \# \dots \# \Proyectivo ))} \cong \mathbb{Z}^{n-1} \times \mathbb{Z}/2$.
+\end{itemize}
+\end{prop}
+
 
 \begin{tma}[Teorema de Clasificación, segunda parte]
 Toda superficie compacta es homeomorfa a exáctamente una de las superficies estándar.
 \end{tma}
+
+\begin{tma}
+Para $n\geq 2$, $\mathbb{S}^n$ es simplemente conexa.
+\end{tma}
+
+\begin{lema}
+Si un grupo abeliano $G$ tiene una base finita, entonces toda base finita tiene el mismo número de elementos.
+\end{lema}
+
+
+\begin{defin}
+Si $G$ es un grupo abeliano libre con una base finita, decimos que $G$ tiene \enfatiza{rango finito}, y decimos que $G$ es de \enfatiza{rango n} si $n$ es el número de elementos de cualquier base.
+\end{defin}
+
+\begin{defin}
+Sea $G$ un grupo abeliano. Decimos que un elemento suyo $g\in G$ es un elemento de torsión si $ng=0$ para algún $n\in \mathbb{Z}\setminus \{ 0 \}$. Dado que si $ng=n'g'=0$, entonces $nn'(g+g')=0$, y por lo tanto el conjunto de todos los elementos de torsión de $G$ es un subgrupo suyo, denotado por $G_{tor}$. Decimos que $G$ es un grupo sin torsión si el único elemento de torsión es el 0. 
+\end{defin}
 
 
 \appendix
@@ -2802,6 +2871,7 @@ Sea $X$ un CW-complejo con un conjunto numerable de celdas. Si $X$ es localmente
 \begin{prop}
 Si $M$ es una $n$-variedad no vacía y un CW-complejo, entonces $n$ es también la dimensión de $M$ como CW-complejo.
 \end{prop}
+
 
 
 \begin{comment}
