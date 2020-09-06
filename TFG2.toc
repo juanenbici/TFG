@@ -6,20 +6,20 @@
 \contentsline {section}{\numberline {1.1}Variedades}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Variedades con borde}{2}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Suma conexa de variedades}{4}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Triangulación de superficies}{6}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Complejos simpliciales y triangulación}{6}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Teorema de Radó}{7}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Teorema de Clasificación}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Superficies como cocientes}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Representación de superficies}{16}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Teorema de clasificación de superficies compactas}{23}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Teorema de clasificación de superficies con borde}{28}{section.3.4}%
-\contentsline {chapter}{\numberline {4}La prueba ZIP de Conway}{32}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Cremalleras}{32}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Teorema de Clasificación}{35}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Teorema de Clasificación, segunda parte}{38}{chapter.5}%
-\contentsline {subsection}{\numberline {5.0.1}Grupos fundamentales de las Superficies Compactas}{38}{subsection.5.0.1}%
-\contentsline {chapter}{\numberline {A}Algunos teoremas de topología importantes}{40}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Cocientes topológicos}{40}{section.Alph1.1}%
-\contentsline {chapter}{\numberline {B}CW-complejos}{42}{appendix.Alph2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{45}{appendix*.34}%
+\contentsline {chapter}{\numberline {2}Triangulación de superficies}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Complejos simpliciales y triangulación}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Teorema de Radó}{8}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Teorema de Clasificación}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Superficies como cocientes}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Representación de superficies}{17}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Teorema de clasificación de superficies compactas}{24}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Teorema de clasificación de superficies con borde}{29}{section.3.4}%
+\contentsline {chapter}{\numberline {4}La prueba ZIP de Conway}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Cremalleras}{33}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Teorema de Clasificación}{36}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Teorema de Clasificación, segunda parte}{39}{chapter.5}%
+\contentsline {subsection}{\numberline {5.0.1}Grupos fundamentales de las Superficies Compactas}{39}{subsection.5.0.1}%
+\contentsline {chapter}{\numberline {A}Algunos teoremas de topología importantes}{41}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Cocientes topológicos}{41}{section.Alph1.1}%
+\contentsline {chapter}{\numberline {B}CW-complejos}{43}{appendix.Alph2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{46}{appendix*.34}%
