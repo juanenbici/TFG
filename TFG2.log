@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.20)  7 SEP 2020 15:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.20)  7 SEP 2020 18:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1506,13 +1506,16 @@ Package rerunfilecheck Info: File `TFG2.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 36413 strings out of 480478
- 843883 string characters out of 5905959
+ 36415 strings out of 480478
+ 843899 string characters out of 5905959
  1262954 words of memory out of 5000000
  51363 multiletter control sequences out of 15000+600000
- 546162 words of font info for 121 fonts, out of 8000000 for 9000
+ 546270 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,104p,1851b,1360s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{prop.4.1.4} has been referenced but does not exis
@@ -1539,7 +1542,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (50 pages, 514703 bytes).
+Output written on TFG2.pdf (50 pages, 514661 bytes).
 PDF statistics:
  879 PDF objects out of 1000 (max. 8388607)
  780 compressed objects within 8 object streams
