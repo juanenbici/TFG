@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.20)  6 SEP 2020 22:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.20)  7 SEP 2020 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1082,7 +1082,7 @@ Cap\'{\i }tulo 2.
 
 ]
 Package hyperref Info: bookmark level for unknown tma defaults to 0 on input li
-ne 509.
+ne 511.
  [8] [9]
 Cap\'{\i }tulo 3.
 [10
@@ -1200,7 +1200,7 @@ Missing character: There is no ; in font nullfont!
 
 ]
 
-LaTeX Warning: Reference `fig:6a4a.' on page 14 undefined on input line 851.
+LaTeX Warning: Reference `fig:6a4a.' on page 14 undefined on input line 853.
 
 [14] [15]
 Missing character: There is no ; in font nullfont!
@@ -1287,7 +1287,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1270--1332
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1272--1334
 []$[]$ $[]$ 
  []
 
@@ -1303,18 +1303,18 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1336--1379
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1338--1381
 []$[]$ $[]$ 
  []
 
 
-LaTeX Warning: Reference `lema:celdas' on page 21 undefined on input line 1386.
+LaTeX Warning: Reference `lema:celdas' on page 21 undefined on input line 1388.
 
 
 [21]
 
 LaTeX Warning: Reference `fig:disco_regular' on page 22 undefined on input line
- 1404.
+ 1406.
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1326,13 +1326,13 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (5.4431pt too wide) in paragraph at lines 1463--1464
+Overfull \hbox (5.4431pt too wide) in paragraph at lines 1465--1466
  [][] 
  []
 
 [22] [23]
 Package hyperref Info: bookmark level for unknown lema defaults to 0 on input l
-ine 1498.
+ine 1500.
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1358,7 +1358,7 @@ Missing character: There is no ; in font nullfont!
 
 ] [25]
 
-LaTeX Warning: Reference `fig:PASO6' on page 26 undefined on input line 1623.
+LaTeX Warning: Reference `fig:PASO6' on page 26 undefined on input line 1625.
 
 [26]
 Missing character: There is no ; in font nullfont!
@@ -1402,14 +1402,14 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (7.49803pt too wide) in paragraph at lines 1850--1851
+Overfull \hbox (7.49803pt too wide) in paragraph at lines 1852--1853
 [][] 
  []
 
 [27] [28]
 
 LaTeX Warning: Reference `prop:sub_IIAN' on page 29 undefined on input line 188
-1.
+3.
 
 [29
 
@@ -1457,11 +1457,11 @@ Missing character: There is no ; in font nullfont!
 ] [34]
 
 LaTeX Warning: Reference `fig:handle_toro' on page 35 undefined on input line 2
-366.
+368.
 
 
 LaTeX Warning: Reference `fig:crosshandle_klein' on page 35 undefined on input 
-line 2376.
+line 2378.
 
 [35
 
@@ -1469,7 +1469,7 @@ line 2376.
 Cap\'{\i }tulo 5.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2669.
+(hyperref)                than one, level fixed on input line 2671.
 
 [39
 
@@ -1489,16 +1489,16 @@ Package microtype Info: Loading generic protrusion settings for font family
  [46
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2953.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2953.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2955.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2955.
  (./TFG2.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2953.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2953.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2955.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2955.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
 (rerunfilecheck)             Checksum: 94510A906D00EF29A21915A3AE444D82;1633.
@@ -1506,14 +1506,11 @@ Package rerunfilecheck Info: File `TFG2.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  36413 strings out of 480478
  843883 string characters out of 5905959
- 1262953 words of memory out of 5000000
+ 1262954 words of memory out of 5000000
  51363 multiletter control sequences out of 15000+600000
  546162 words of font info for 121 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1542,7 +1539,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (50 pages, 514695 bytes).
+Output written on TFG2.pdf (50 pages, 514703 bytes).
 PDF statistics:
  879 PDF objects out of 1000 (max. 8388607)
  780 compressed objects within 8 object streams
