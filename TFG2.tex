@@ -406,7 +406,7 @@ Un $0$-símplice es un punto, un 1-símplice es un segmento, un $2$-símplice es
 
 
 
-Sea $\sigma$ un $k$-símplice. Cada símplice generado por un subconjunto no vacío de vértices de $\sigma$ se llama \enfatiza{cara de $\sigma$}. Las caras que no son iguales a $\sigma$ se llaman \enfatiza{caras propias}. Las caras $0$-dimensionales de $\sigma$ son sus vértices, y a las caras $1$-dimensionales se les llama \enfatiza{aristas}. Las caras $(k-1)$-dimensionales de un $k$-símplice se llaman \enfatiza{aristas}, y a su unión la llamamos \enfatiza{frontera}. Definimos el \enfatiza{interior} como $\sigma$ menos su frontera. 
+Sea $\sigma$ un $k$-símplice. Cada símplice generado por un subconjunto no vacío de vértices de $\sigma$ se llama \enfatiza{cara de $\sigma$}. Las caras que no son iguales a $\sigma$ se llaman \enfatiza{caras propias}. Las caras $0$-dimensionales de $\sigma$ son sus vértices, y a las caras $1$-dimensionales se les llama \enfatiza{aristas}. Las caras $(k-1)$-dimensionales de un $k$-símplice se llaman \enfatiza{caras fronterizas}, y a su unión la llamamos \enfatiza{frontera}. Definimos el \enfatiza{interior} como $\sigma$ menos su frontera. 
 
 
 \begin{defin}%%%%DEF: Complejo simplicial
@@ -420,11 +420,13 @@ Un \enfatiza{complejo simplicial} es una colección $K$ de símplices en un espa
 \end{defin}
 %La tercera condición implica que $K$ es numerable, pues todo punto de $\R ^n$ tiene un entorno intersecando al menos un número finito de símplices de $K$, y este recubrimiento abierto de $\R ^n$ tiene un subrecubrimiento numerable. A nosotros los símplices que más nos interesan son los \enfatiza{complejos simpliciales finitos}, que son los que contienen únicamente un número finito de símplices. Para estos complejos, la condición (iii) es redundante.
 
+La \autoref{fig:complex} muestra un complejo simplicial en $\R^2$. En cambio en la \autoref{fig:not_complex} los símplices representados no forman un complejo, pues no se respeta la condición (ii) de la \autoref{def:complex}.
+
 Si $K$ un complejo simplicial en $\R ^n$, llamamos \enfatiza{dimensión de $K$} a la dimensión máxima de los símplices en $K$. Esta no es mayor que $n$.
-Un subconjunto $K'\subseteq K$ se dice que es un \enfatiza{subcomlejo de $K$} si para todo $\sigma \in K'$, toda cara de $\sigma$ está en $K'$. Un subcomplejo es un complejo simplicial en sí.
+Un subconjunto $K'\subseteq K$ se dice que es un \enfatiza{subcomlejo de $K$} si para todo $\sigma \in K'$, toda cara de $\sigma$ está en $K'$. Un subcomplejo es un complejo simplicial en sí mismo.
 Para todo $k\leq n$, el conjunto de todos los símplices de $K$ de dimensión menor o igual que $k$ es un subcomplejo llamado \enfatiza{k-esqueleto de $K$}.
 
-La \autoref{fig:complex} muestra un complejo simplicial en $\R^2$. En cambio en la \autoref{fig:not_complex} los símplices representados no forman un complejo, pues no se respeta la condición (ii) de la \autoref{def:complex}.
+
 
 %%
 %%
@@ -519,7 +521,7 @@ Toda superficie con borde es triangulable por un poliedro de un complejo simplic
 \clearpage
 
 \chapter{Teorema de Clasificación}
-En esta sección daremos una demostración clásica del teorema de clasificación de superficies compactas, que fue probado por primera vez en 1907 por Max Dehn y Poul Heegaard \cite{dehn}. En las primeras dos secciones utilizo las nociones que da Lee \cite{lee1} sobre la representación de superficies, y las amplío a la representación de superficies con borde. En la tercera sección demuestro el teorema basándome en la prueba de Lee \cite{lee1}, que a su vez se basa en la demostración clásica de Seifert y Threlfall \cite{seifert}. Finalmente clasifico las superficies con borde, siguiendo la idea de Massey \cite{massey}.
+En esta sección daremos una demostración clásica del teorema de clasificación de superficies compactas, que fue probado por primera vez en 1907 por Max Dehn y Poul Heegaard \cite{dehn}. En las primeras dos secciones utilizo las nociones que da Lee \cite{lee1} sobre la representación de superficies, y las amplío a la representación de superficies con borde. En la tercera sección demuestro el teorema basándome en la prueba de Lee \cite{lee1}, que a su vez se basa en la demostración clásica de Seifert y Threlfall \cite{seifert}. Finalmente clasifico las superficies con borde, siguiendo el libro de Massey \cite{massey}.
 
 
 \section{Superficies como cocientes}
@@ -546,8 +548,8 @@ $$\pi(x,y)=\left\{\begin{array}{lc}
 
 \end{array}
 \right.$$
-Es claro que $\pi$ es continua y hace las mismas identificaciones que la relación de equivalencia. Por ser sobreyectiva, es una aplicación cociente (\autoref{teo:aplicac_cerrada}).
-
+Es claro que $\pi$ es continua y hace las mismas identificaciones que la relación de equivalencia. Como es sobreyectiva, por el teorema de la aplicación cerrada es una aplicación cociente. % (\autoref{teo:aplicac_cerrada}).
+ESTO HAY QUE ARREGLARLO PARA INTENTAR NO APELAR AL B.0.2
 Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ el homeomorfismo construido a partir de la aplicación dada en la demostración de \autoref{teo:convexo_homeom_esfera} que manda linealmente cada segmento radial entre el origen y la frontera de $S$ a un segmento paralelo a este, que une el centro del disco y su frontera. Hagamos ahora $\beta=\pi \circ \alpha : S \to \mathbb{S}^2$, donde $\pi$ es la aplicación cociente del parágrafo anterior. Tenemos entonces que $\beta$ identifica $(x,y)$ y $(-x,y)$ cuando $(x,y)\in \partial S$, y por otro lado es inyectiva, así que hace las mismas identificaciones que la aplicación cociente definida en (b), completando así la demostración (ver \autoref{fig:esfera_cuadrado}). 
 \end{proof}
 \begin{figure}%%%%%%% FIGURA: ESFERA COCIENTE CIRCUNFERENCIA%%%%
@@ -689,7 +691,7 @@ Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},
 El plano proyectivo $\mathbb{P}^2$ es homeomorfo a los siguientes espacios cociente:
 \begin{itemize}
 \item[(a)] El disco cerrado $\overline{\mathbb{B}}^2$ módulo la relación de equivalencia generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \partial \overline{\mathbb{B}}^2$.
-\item[(b)] La región cuadrada $S=\{(x,y):|x|+|y|\leq 1\} $ módulo la relación de equivalencia generada por $(x,y)\sim (-x,-y) $ para todo $(x,y)\in \partial S$.
+\item[(b)] El cuadrado $S=\{(x,y):|x|+|y|\leq 1\} $ módulo la relación de equivalencia generada por $(x,y)\sim (-x,-y) $ para todo $(x,y)\in \partial S$.
 \end{itemize}
 \end{prop}
 \begin{proof}
@@ -720,15 +722,15 @@ Para la parte (b) utilizamos un argumento análogo al de la demostración de la 
 \end{center}
 \end{figure}
 
-De ahora en adelante visualizaremos el plano proyectivo como el \enfatiza{crosscap}, cuya construcción se sigue en la siguiente figura.
-\clearpage
+De ahora en adelante visualizaremos el plano proyectivo como el \enfatiza{crosscap}, que construmos a partir de la proposición anterior, tal como se sigue en la siguiente figura.
+
 
 
 
 \begin{figure}[h]%%%FIG: CROSSCAP
 \centering
 
-\begin{tikzpicture}[use optics][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{tikzpicture}[use optics, scale=0.7][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 %1
 \fill[gray!10] (-5,5) -- (-7,3) -- (-5,1) -- (-3,3) -- cycle;
 \draw [->-](-5,5)-- (-7,3);
