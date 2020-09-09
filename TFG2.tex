@@ -870,9 +870,9 @@ $$\Phi ^{-1}(s)= \begin{cases}
 \pi \circ \psi ^{-1} \circ B^{-1}(s), & s_2\leq 0.\\
  \end{cases}$$
 Dado que las dos partes de la función son iguales donde coinciden, la aplicación es continua, y por tanto $\Phi$ es un homeomorfismo. Así pues, $U\amalg V$ es un entorno Euclideo de $d$. Un argumento análogo al de la demostración de la Proposición \ref{prop:suma_conexa} nos indica que es Hausdorff y IIAN.\\
-Para finalizar, sea $v\in M$ tal que su preimagen por $\pi$ es un conjunto de vértices $\left\{v_1,\dots ,v_k\right\} \subseteq P$. Para cada uno de estos vértices podemos elegir un $\varepsilon>0$ tal que el disco $B_{\varepsilon}(v_i)$ no contenga ningun vértice de la región poligonal $P_j$ a la que pertenece $v_i$ a parte de sí mismo, y tal que no interseca más aristas que las que lo contienen. $B_{\varepsilon}(v_i)\cap P_j$ es homeomorfo a un subconjunto $\Lambda_i$ de $\R^2$ definido por la intersección de dos semiplanos cuyas fronteras coinciden en un único punto y tal que el ángulo que forman es de $2\pi /k$, y que descrito en coordenadas polares queda $\Lambda_i =\left\{ (r,\theta ) \mid \theta_0 \leq \theta \leq \theta_0 + 2k\pi \right\}$. El homeomorfismo viene dado por una traslación del vértice $v_i$ al origen junto con una aplicación que en coordenadas polares es de la forma $(r,\theta ) \mapsto (r,\theta_0 +c\theta )$, con $c$ y $\theta_0$ constantes. Como cada arista está asociada exáctamente a otra arista, podemos ahora construir una aplicación que envíe cada una de las $\Lambda_i$ a un conjunto que contenga un entorno del origen y que, despues de reescalar si es necesario, respete las identificaciones entre las aristas de los $P_j$ (ver \autoref{fig:6.4}). Esta aplicación está definida sobre un conjunto saturado de $P$, que al pasar al cociente determina un homeomorfismo de $v$ a un entorno del origen de $\R^2$.
+Para finalizar, sea $v\in M$ tal que su preimagen por $\pi$ es un conjunto de vértices $\left\{v_1,\dots ,v_k\right\} \subseteq P$. Para cada uno de estos vértices podemos elegir un $\varepsilon>0$ tal que el disco $B_{\varepsilon}(v_i)$ no contenga ningun vértice de la región poligonal $P_j$ a la que pertenece $v_i$ a parte de sí mismo, y tal que no interseca más aristas que las que lo contienen. $B_{\varepsilon}(v_i)\cap P_j$ es homeomorfo a un subconjunto $\Lambda_i$ de $\R^2$ definido por la intersección de dos semiplanos cuyas fronteras coinciden en un único punto y tal que el ángulo que forman es de $2\pi /k$, y que descrito en coordenadas polares queda $\Lambda_i =\left\{ (r,\theta ) \mid \theta_0 \leq \theta \leq \theta_0 + 2k\pi \right\}$. El homeomorfismo viene dado por una traslación del vértice $v_i$ al origen junto con una aplicación que en coordenadas polares es de la forma $(r,\theta ) \mapsto (r,\theta_0 +c\theta )$, con $c$ y $\theta_0$ constantes. Como cada arista está asociada exáctamente a otra arista, podemos ahora construir una aplicación que envíe cada una de las $\Lambda_i$ a un conjunto que contenga un entorno del origen y que, despues de reescalar si es necesario, respete las identificaciones entre las aristas de los $P_j$ (ver \autoref{fig:6.4}). Esta aplicación está definida sobre un conjunto saturado de $P$, que al pasar al cociente determina un homeomorfismo de $v$ a un entorno del origen de $\R^2$. HAUSDORFF Y IIAN?
 
-Finalmente, para probar (c), volvemos a ver cada polígono como una superficie con borde. Las imágenes por $\pi$ de los puntos del interior de aristas que se identifican son localmente euclídeos por la demostración del apartado anterior. Por otro lado, para los puntos del borde que provengan de una arista y que tengan sólo una preimagen podemos encontrar como semibolas coordenadas las mismas de antes de pasar al cociente. Finalmente para las imágenes por $\pi$ de los vértices podemos encontrar una bola o una semibola coordenada con una construcción similar a la de la demostración anterior, dependiendo de si estas imágenes están contenidas en el borde o no. Por tanto se tiene que el espacio cociente resultante es una superficie con borde.
+Finalmente, para probar (b), volvemos a ver cada polígono como una superficie con borde. Las imágenes por $\pi$ de los puntos del interior de aristas que se identifican son localmente euclídeos por la demostración del apartado anterior. Por otro lado, para los puntos del borde que provengan de una arista y que tengan sólo una preimagen podemos encontrar como semibolas coordenadas las mismas de antes de pasar al cociente. Finalmente para las imágenes por $\pi$ de los vértices podemos encontrar una bola o una semibola coordenada con una construcción similar a la de la demostración anterior, dependiendo de si estas imágenes están contenidas en el borde o no. Por tanto se tiene que el espacio cociente resultante es una superficie con borde. HAUSDORFF Y IIAN?
 \end{proof}
 \begin{figure}
 \centering
@@ -946,7 +946,7 @@ Finalmente, para probar (c), volvemos a ver cada polígono como una superficie c
 \end{tikzpicture}
 \caption{Entorno euclídeo de un vértice.\label{fig:6.4}}
 \end{figure}
-\clearpage
+
 \begin{eje}%%%%EJE: Botella Klein
 La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando las aristas del cuadrado $I\times I$ de acuerdo a $(0,t)\sim (1,t)$ y $(t,0)\sim (1-t,1)$ para $0\leq t\leq 1$.  Para visualizar $K$, podemos pensar en pegar las aristas izquierda y derecha creando un cilindro, y luego hacer pasar el extremo superior por la parte inferior del cilindro, para finalmente pegar los dos extremos (ver \autoref{fig:klein}).
 \end{eje}
@@ -1019,44 +1019,44 @@ Veamos ahora como obtener las figuras del \autoref{eje:rep_borde}. El cilindro $
 \end{subfigure}
 \caption{Superficies con borde como cocientes topológicos.}
 \end{figure}
-\clearpage
+
 \section{Representación de superficies}
-Vamos ahora a dar un método uniforme para representar todas las superficies y las superficies con borde como regiones poligonales del plano. A su vez asociaremos a cada región poligonal, y por tanto a cada superficie, una secuencia de símbolos llamada palabra. 
+Vamos ahora a dar un método uniforme para representar todas las superficies compactas (con y sin borde) como regiones poligonales del plano. A su vez asociaremos a cada región poligonal, y por tanto a cada superficie compacta, una secuencia de símbolos llamada palabra. 
 
 
 \begin{defin}%%%%DEF: palabra
-Sea $S$ un conjunto. Una \textbf{\textit{palabra en $S$}} es una $k$-tupla ordenada de símbolos, cada uno de la forma $a$ o $a^{-1}$, para cierto $a\in S$.
+Sea $S$ un conjunto. Una \textbf{\textit{palabra en $S$}} es una $k$-tupla ordenada de símbolos, cada uno de los cuales aparece de la forma $a$ o $a^{-1}$, para cierto $a\in S$.
 \end{defin}
 
 \begin{defin}%%%%DEF: Representación poligonal
 \label{def:rep_pol}
-Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,\dots ,W_k\rangle$$ es un conjunto finito S junto con un número finito de palabras $W_1,..,W_k$ en $S$ de longitud $3$ o más, tal que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Por cuestiones de notación, cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por youxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ se escribe $\langle a,b\mid  aba^{-1}b^{-1}\rangle$. 
+Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,\dots ,W_k\rangle$$ está formada por un conjunto finito S junto con un número finito de palabras $W_1,\dots ,W_k$ en $S$ de longitud mayor o igual que $3$, tal que que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por yuxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ la escribiremos $\langle a,b\mid  aba^{-1}b^{-1}\rangle$. 
 
-Permitimos el caso especial de que $S=\{a\}$ (u otro símbolo cualquiera) y que $\mathcal{P}$ tenga una sola palabra de longitud $2$, es decir, $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
+Permitimos también el caso en que $S=\{a\}$ (u otro símbolo cualquiera) y que $\mathcal{P}$ tenga una sola palabra de longitud $2$, es decir, $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
 \begin{comment} o $1$ \end{comment} 
 \begin{comment}, $\langle a\mid a\rangle$ y $\langle a\mid a^{-1}\rangle$ \end{comment}
 \end{defin}
 
 \begin{defin}%%%%DEF: Realización geométrica
-Toda representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $|\mathcal{P}|$, llamado \textbf{\textit{realización geométrica de $\mathcal{P}$}} . $|\mathcal{P}|$ se obtiene de la siguiente manera:
+Una representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $|\mathcal{P}|$, llamado \textbf{\textit{realización geométrica de $\mathcal{P}$}}, que se obtiene de la siguiente manera:
 \begin{itemize}
-\item[1.] Para cada $W_i\in \mathcal{P}$ de longitud $k$, sea $P_i$ la $k$-región poligonal convexa centrada en el origen con aristas de longitud 1, ángulos iguales y tal que un vértice yace sobre el eje $OY$.
-\item[2.] Se define una correspondencia uno a uno (que llamaremos \textit{etiquetado}) entre los símbolos de $W_ i$ y las aristas de $P_i$ en sentido contrario a las agujas del reloj, empezando por la que yace en el eje $OY$.
-\item[3.] Sea $|\mathcal{P}|$ el espacio cociente de $\coprod_i P_i$ determinado identificando aristas que tengan el mismo símbolo, conforme al homeomorfismo afín que hace coincidir los primeros vértices de las aristas con una etiqueta dada $a$ y los últimos vertices de las que tienen la correspondiente etiqueta $a^{-1}$ (en el sentido contrario a las agujas del reloj).
+\item[1.] Para cada $W_i\in \mathcal{P}$ de longitud $k$, sea $P_i$ una región poligonal convexa con $k$ aristas, centrada en el origen, con aristas de longitud 1, ángulos iguales y tal que un vértice yaczca sobre el eje $OY$.
+\item[2.] Definimos una biyección (que llamaremos \textit{etiquetado}) entre los símbolos de $W_ i$ y las aristas de $P_i$, en sentido contrario a las agujas del reloj y empezando por la que yace en el eje $OY$.
+\item[3.] Sea $|\mathcal{P}|$ el espacio cociente de $\coprod_i P_i$ determinado por la identificación de las aristas que tengan el mismo símbolo, conforme al homeomorfismo afín que hace coincidir los primeros vértices de las aristas con una etiqueta dada $a$ y los últimos vertices de las que tienen la correspondiente etiqueta $a^{-1}$ (en el sentido contrario a las agujas del reloj).
 
 \end{itemize}
 
 
-Si $\mathcal{P}$ es una de las representaciones poligonales de un solo elemento, definimos $|\mathcal{P}|$ como la esfera $\mathbb{S}^2$ si la palabra es $aa^{-1}$ o $a^{-1}a$, o como el plano proyectivo $\mathbb{P}^2$ si es $aa$ o $a^{-1}a^{-1}$.% También decimos que $|\mathcal{P}|$ es el disco cerrado $\overline{\mathbb{B}}^2$ si la palabra es $a$ o $a^{-1}$.
+Si $\mathcal{P}$ es una de las representaciones poligonales de un solo elemento, definimos $|\mathcal{P}|$ como la esfera $\mathbb{S}^2$ si la palabra es $aa^{-1}$ o $a^{-1}a$, o como el plano proyectivo $\mathbb{P}^2$ si la palabra es $aa$ o $a^{-1}a^{-1}$.% También decimos que $|\mathcal{P}|$ es el disco cerrado $\overline{\mathbb{B}}^2$ si la palabra es $a$ o $a^{-1}$.
 \end{defin}
 
-Por notación, dadas dos palabras $W_1$ y $W_2$, $W_1W_2$ representará la palabra formada concatenando $W_1$ y $W_2$. Por otro lado, adoptaremos la convención de que $(a^{-1})^{-1}=a$.
+Dadas dos palabras $W_1$ y $W_2$, $W_1W_2$ representará la palabra formada concatenando los símbolos de $W_1$ y $W_2$. Por otro lado, adoptaremos la convención de que $(a^{-1})^{-1}=a$.
 
-También en lo que sigue $S$ denotará una secuencia cualquiera de símbolos, $a,b,c,a_1,a_2,\dots$ símbolos de $S$, $e$ un símbolo que no sea de $S$ y $W_1, W_2, \dots$ palabras formadas por símbolos de $S$.
+También, en lo que sigue, $S$ denotará una secuencia cualquiera de símbolos, $a,b,c,a_1,a_2,\dots$ símbolos de $S$, $e$ un símbolo que no sea de $S$ y $W_1, W_2, \dots$ palabras formadas por símbolos de $S$.
 
 \begin{defin}%%%%DEF: caras, lados y vértices polígono
 Los interiores, las aristas y los vértices de cada región polgonal $P_i$ se llaman \textbf{\emph{caras, aristas y vértices de la representación}}. El número de caras es el mismo que el número de palabras, y el número de aristas coincide con la suma de la longitud de las palabras.
-Para una arista etiquetada $a$, el \textbf{\emph{vértice inicial}} es el primero en el sentido contrario de las agujas del reloj, y el otro es el \textbf{\emph{vértice final}}. Para una arista etiquetada $a^{-1}$, estas definiciones se invierten. 
+Para una arista etiquetada con $a$, el \textbf{\emph{vértice inicial}} es el primero en el sentido contrario de las agujas del reloj, y el otro es el \textbf{\emph{vértice final}}. Para una arista etiquetada $a^{-1}$, estas definiciones se invierten. 
 \end{defin}
 
 \begin{defin}%%%%DEF: representación de una superficie
@@ -1067,7 +1067,7 @@ Sea $\mathcal{P} =\langle S\mid W_1,\dots ,W_k\rangle$ una representación polig
 \end{itemize}
 \end{defin}
 \begin{obs}%M%%%:OBS: Representación superficie con/sin borde
-Por la \autoref{prop:poligonos}, la realización geométrica de una representación de una superficie es una superficie compacta, y la realización geométrica de una representación de una superficie con borde es una superficie con borde.\\
+Por la \autoref{prop:poligonos}, la realización geométrica de una representación de una superficie es una superficie compacta, y la realización geométrica de una representación de una superficie con borde es una superficie con borde compacta.\\
 En el apartado (ii) de la definición anterior dejamos la posibilidad de que cada símbolo aparezca exáctamente dos veces, como en (i). Esto no es ninguna ambigüedad pues como se expuso en la \autoref{sec:borde} una superficie sin borde es siempre una superficie con borde, y una superficie con borde tal que tiene borde vacío es una superficie sin borde.
 \end{obs}
 \begin{defin}%%%%DEF: representación de un espacio topológico
@@ -1225,27 +1225,27 @@ Podemos dar también las representaciones de algunas superficies con borde (\aut
 \draw [->-] (1.58,1)-- (1,0);
 
 \draw [<->] (-.1,0)--+(0.5,0);
-\draw (-0.9,0) node[anchor= west] {$ b $};
-\draw (-3.1,0) node[anchor= east] {$ b $};
-\draw (-2,1.1) node[anchor= south] {$ a $};
-\draw (-2,-1.1) node[anchor= north] {$ a $};
-\draw (2.16,1.1) node[anchor= south] {$ a $};
+\draw (-0.9,0) node[anchor= west] {$ a $};
+\draw (-3.1,0) node[anchor= east] {$ a $};
+\draw (-2,1.1) node[anchor= south] {$ b $};
+\draw (-2,-1.1) node[anchor= north] {$ b $};
+\draw (2.16,1.1) node[anchor= south] {$ b $};
 
-\draw (3.02,0.5) node[anchor= south west] {$ c $};
-\draw (3.02,-0.5) node[anchor= north west] {$ d $};
+\draw (3.02,0.5) node[anchor= south west] {$ a $};
+\draw (3.02,-0.5) node[anchor= north west] {$ e $};
 
-\draw (2.15, -1.1) node[anchor= north] {$ a $};
+\draw (2.15, -1.1) node[anchor= north] {$ b $};
 
-\draw (1.29,-0.5) node[anchor= north east] {$ d $};
-\draw (1.29,0.5) node[anchor= south east] {$ c $};
+\draw (1.29,-0.5) node[anchor= north east] {$ e $};
+\draw (1.29,0.5) node[anchor= south east] {$ a $};
 \end{tikzpicture}
 
 \caption{Subdividir/consolidar. \label{fig:ejemplo_operacion}}
 \end{figure}
 
 
-Parece claro que, además de $\Esfera$ y $\Proyectivo$, una superficie pueda tener varias presentaciones poligonales. Sea por ejemplo la presentación del toro $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$. Intuitivamente podemos ver que, subdividiendo las aristas etiquetadas con $b$ y reetiquetándolas con $c$ y $d$ (ver \autoref{fig:ejemplo_operacion}), la superficie que representa la representación obtenida $\langle a,c,d\mid  acda^{-1}c^{-1}d^{-1}\rangle$ será la misma.
-Vamos ahora a desarrollar unas reglas generales de transformación que nos den figuras equivalentes.
+Parece claro que, además de $\Esfera$ y $\Proyectivo$, una superficie pueda tener varias presentaciones poligonales. Sea por ejemplo la presentación del toro $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$. Intuitivamente podemos ver que, subdividiendo las aristas etiquetadas con $a$ y reetiquetándolas con $e$ y $a$ (ver \autoref{fig:ejemplo_operacion}), la superficie que representa la representación obtenida $\langle a,e,b\mid  aeb^{-1}e^{-1}a^{-1}b\rangle$ será la misma.
+Vamos ahora a desarrollar unas reglas generales de transformación de representaciones de superficies que den lugar a superficies homeomorfas.
 
 
 
@@ -1259,16 +1259,16 @@ Sean $\mathcal{P}_1$ y $\mathcal{P}_2$ dos representaciones tal que sus realizac
 Vamos a definir ahora unas operaciones elementales sobre las representaciones poligonales. Veremos luego que estas dan lugar a representaciones equivalentes.
 
 \begin{defin}%%%%DEF: Operaciones elementales sobre representaciones
-Las siguientes operaciones se llaman \enfatiza{transformaciones elementales} de una presentación poligonal:
+A las siguientes operaciones las llamamos \enfatiza{transformaciones elementales} de una representación poligonal:
 \begin{itemize}
-\item \enfatiza{Reetiquetar}: Cambiar todas las apariciones de un símbolo $a$ por otro símbolo que no está todavía en la representación, intercambiar todas las apariciones de dos símbolos $a$ y $b$ o intercambiar todas las apariciones de $a$ y $a^{-1}$.
-\item \enfatiza{Subdividir} (\autoref{fig:ejemplo_operacion}): Cambiar todas las apariciones de $a$ por $ae$ y todas las de $a^{-1}$ por $e^{-1}a^{-1}$, donde $e$ es un símbolo que no está todavía en la presentación.
-\item \enfatiza{Consolidar} (\autoref{fig:ejemplo_operacion}): Si $a$ y $b$ aparecen siempre de forma adyacente, intercambiar $ab$ por $a$ y $b^{-1}a^{-1}$ por $a^{-1}$, siempre que esto de lugar a una o más palabras de longitud al menos $3$ o una sola palabra de longitud $2$.
+\item \enfatiza{Reetiquetar}: Se refiere a tres cambios distintos que se pueden dar sobre la representación: cada vez que aparece un símbolo $a$, cambiarlo por otro símbolo que no esté todavía en la representación; intercambiar entre ellos dos símbolos $a$ y $b$ de la representación cada vez que aparezcan; intercambiar todas las $a$ por $a^{-1}$ y las $a^{-1}$ por $a$.
+\item \enfatiza{Subdividir} (\autoref{fig:ejemplo_operacion}): Cada vez que aparezca $a$, sustituirlo por $ae$, y cada vez que aparezca $a^{-1}$ sustituirlo por $e^{-1}a^{-1}$, donde $e$ es un símbolo que no está antes en la presentación.
+\item \enfatiza{Consolidar} (\autoref{fig:ejemplo_operacion}): Si $a$ y $b$ aparecen siempre de forma adyacente, intercambiar $ab$ por $a$ y $b^{-1}a^{-1}$ por $a^{-1}$, siempre que esto de lugar a una o más palabras de longitud al menos $3$ o a una sola palabra de longitud $2$.
 \item \enfatiza{Reflejar} (\autoref{fig:reflejar}): $$\langle S\mid   a_1 \dots a_m, W_2,\dots,W_k\rangle \mapsto \langle S\mid   a_m^{-1}\dots a_1^{-1}, W_2, \dots ,W_k\rangle .$$
 \item \enfatiza{Rotar} (\autoref{fig:rotar}): $$\langle S\mid a_1a_2\dots a_m, W_2,\dots , W_k\rangle \mapsto \langle S\mid   a_2\dots a_ma_1, W_2,\dots , W_k\rangle .$$
 \item \enfatiza{Cortar} (\autoref{fig:cortar}): Si $W_1$ y $W_2$ tienen longitud al menos $2$, $$\langle S\mid W_1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1e, e^{-1}W_2, W_3,\dots W_k\rangle .$$ 
 \item \enfatiza{Pegar} (\autoref{fig:cortar}): $$\langle S,e\mid W_1e, e^-1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1W_2, W_3,\dots , W_k\rangle .$$
-\item \enfatiza{Plegar} (\autoref{fig:plegar}): Si $w_1$ tiene longitud al menos $3$, $$\langle S,e\mid W_1ee^{-1}, W_2,\dots W_k\rangle \mapsto \langle S\mid W_1, W_2,\dots , W_k\rangle .$$ Permitimos que $W_1$ tenga longitud $2$, siempre que la representación tenga una sola palabra.
+\item \enfatiza{Plegar} (\autoref{fig:plegar}): Si $W_1$ tiene longitud al menos $3$, $$\langle S,e\mid W_1ee^{-1}, W_2,\dots W_k\rangle \mapsto \langle S\mid W_1, W_2,\dots , W_k\rangle .$$ También podemos utilizar esta transformación en el caso de que $W_1$ tenga longitud $2$, siempre que la representación tenga una única palabra.
 \item \enfatiza{Desplegar} (\autoref{fig:plegar}): $$\langle S\mid W_1, W_2,\dots , W_k\rangle \mapsto \langle S,e\mid W_1ee^{-1}, W_2,\dots , W_k\rangle .$$
 \end{itemize}
 \end{defin}
@@ -1387,29 +1387,27 @@ Las siguientes operaciones se llaman \enfatiza{transformaciones elementales} de 
 \end{figure}
 
 \begin{prop}%%%%PROP: Operaciones sobre representaciones
-Las operaciones elementales sobre representaciones poligonales dan lugar a representaciones poligonales equivalentes.
+Las operaciones elementales sobre representaciones poligonales dan lugar a representaciones poligonales topológicamente equivalentes.
 \end{prop}
 \begin{proof}
-Los casos de reetiquetar, subdividir y rotar son cambios puramente formales que no afectan al espacio cociente. Los casos subdividir/consolidar, cortar/pegar y plegar/desplegar son inversos, con lo que basta probar uno de cada par. 
-Empecemos con la operación de cortar. Sean $P_1, P_2$ dos regiones poligonales convexas etiquetadas por las palabras $W_1e$ y $e^{-1}W_2$ y sea $P'$ la region poligonal etiquetada por $W_1 W_2$. Supongamos de momento que no hay más palabras en las respectivas presentaciones. Si $\pi :P_1\amalg P_2\to M$ y $\pi' :P'\to M'$ representan respectivamente las aplicaciones cocientes. El segmento que va desde el vértice final de $W_1$ en $P'$ a su vértice inicial yace en $P'$ por convexidad, y lo etiquetamos con $e$. Por el \autoref{lema:celdas}, existe una aplicación continua $f:P_1\amalg P_2\to P'$ que lleva cada arista de $P_1$ o $P_2$ a su correspondiente arista en $P'$, y cuya restricción a cada $P_i$ es un homeomorfismo sobre su imagen. Por el \autoref{teo:aplicac_cerrada}, $f$ es una aplicación cociente. Dado que $f$ identifica únicamente las aristas $e$ y $e^{-1}$, la aplicación cociente $\pi '\circ f$ y $\pi$ hacen exactamente las mismas identificaciones, y por tanto los espacios cociente $M$ y $M'$ son homeomorfos. 
-En el caso de que hubiese otras palabras $W_3,\dots ,W_k$, simplemente extendemos $f$ como la identidad en sus respectivas presentaciones poligonales y procedemos como antes.
+Los pares subdividir/consolidar, cortar/pegar y plegar/desplegar son inversos, con lo que basta probar la proposición para una transformación de cada par. 
+Los casos de reetiquetar, reflejar y rotar son cambios puramente formales que no afectan al espacio cociente. 
+Empecemos con la operación de cortar. Sean $P_1$ y $P_2$ dos regiones poligonales convexas etiquetadas por las palabras $W_1e$ y $e^{-1}W_2$ y sea $P'$ la region poligonal etiquetada por $W_1 W_2$. Supongamos de momento que no hay más palabras en las respectivas representaciones. Sean también $\pi :P_1\amalg P_2\to M$ y $\pi' :P'\to M'$ respectivamente las aplicaciones cocientes. El segmento que va desde el vértice final de $W_1$ en $P'$ a su vértice inicial yace en $P'$ por convexidad, y lo etiquetamos con $e$. La aplicación $\tilde{f} :\partial P_1\amalg \partial P_2\to \partial P'$ que lleva cada arista de $P_1$ o $P_2$ a su correspondiente arista en $P'$ es continua y se puede extender a una aplicación continua $f:P_1\amalg P_2\to P'$ cuya restricción a cada $P_i$ sea un homeomorfismo sobre su imagen. Por el teorema de la aplicación cerrada, $f$ es una aplicación cociente. Dado que $f$ identifica únicamente las aristas $e$ y $e^{-1}$, las aplicaciones cociente $\pi '\circ f$ y $\pi$ hacen exactamente las mismas identificaciones, y por tanto los espacios cociente $M$ y $M'$ son homeomorfos. 
+En el caso de que hubiese otras palabras $W_3,\dots ,W_k$, simplemente extendemos $f$ sobre sus respectivas representaciones poligonales como la identidad, y procedemos como antes.
 
-Para el plegado, ignoramos como antes palabras adicionales $W_2,\dots W_k$. Supongamos para empezar que $W_1=abcd$ tiene longitud exáctamente 4. Sea $P$ una región poligonal convexa con aristas etiquetadas por $abee^{-1}cd$. Si cortamos a lo largo de el segmento $f$ que une el vértice inicial de $a$ con el vértice final de $e$ y obtenemos así $abef$ y $f^{-1}e^{-1}cd$. Consolidamos $ef$ en $h$, obteniendo así $ah^{-1}$ y $bch$. Pegamos por $h$ y obtenemos así $abcd$. ((Lo he cambiado para evitar hablar de simplex que los introduzco más tarde. Vale igualmente?))
+Para la operación de consolidar enmpezamos considerando las palabras de longitud $3$ o más. Para ello, sean $P_1$ y $P_2$ las regiones poligonales etiquetadas respectivamente por $aeWe^{-1}a^{-1}W'$ y $aWa^{-1}W'$ (pudiendo ser $W'$ vacía), sean $M$ y $M'$ los espacios cociente y sean $\pi :P_1\to M$ y $\pi' :P_2\to M'$ las respectivas aplicaciones cociente. Podemos construir un homeomorfismo $f:\partial P_1\to \partial P_2$, que lleve la arista $a$ en $P_1$ a la primera mitad de $a$ en $P_2$, la arista $e$ a la segunda mitad de la arista $a$ en $P_2$, que lleve de forma análoga $e^{-1}$ y $a^{-1}$ en $P_1$ a la arista $a^{-1}$ en $P_2$, y tal que sea la identidad en $W$ y $W'$. Podemos extender este homeomorfismo a un homeomorfismo de $P_1$ en $P_2$, y se tiene entonces que las aplicaciones cociente $\pi \circ f$ y $\pi'$ hacen las mismas identificaciones, por lo que $M$ y $M'$ son homeomorfos. El caso de que la palabra que nos quede al aplicar la consolidación tenga longitud $2$, puede provenir sólo de una representación de longitud $4$ de $\Esfera$ o $\Proyectivo$, quedándonos pues una de las representaciones equivalentes de longitud $2$ que definimos.
+
+Para el plegado, ignoramos como antes palabras adicionales $W_2,\dots W_k$. Supongamos para empezar que $W_1=abcd$ tiene longitud exáctamente 4. Sea $P$ una región poligonal convexa con aristas etiquetadas por $abee^{-1}cd$. Si cortamos a lo largo de el segmento $f$ que une el vértice inicial de $a$ con el vértice final de $e$ y obtenemos así $abef$ y $f^{-1}e^{-1}cd$. Consolidamos $ef$ en $h$, obteniendo así $ah^{-1}$ y $bch$. Pegamos por $h$ y obtenemos así $abcd$.
 Si $W_1$ tiene longitud 2 o 3, podemos subdividir para alargar la longitud de la palabra a 4, plegar, y finalmente consolidar de nuevo.
 \end{proof}
-
-
-
-
-
 
 \begin{prop}%%%%PROP: representación suma conexa
 Sean $M_1$ y $M_2$ superficies que admiten respectivamente representaciones $\langle S_1\mid W_1\rangle $ y $\langle S_2\mid W_2\rangle $, donde $S_1$ y $S_2$ son conjuntos disjuntos y tal que cada presentación tiene una sola cara. Entonces $\langle S_1,S_2\mid W_1W_2\rangle$ es una presentación de la suma conexa $M_1 \# M_2$.
 \end{prop}
 
 \begin{proof}
-Consideramos la representación $\mathcal{P}_1=\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1},abc\rangle$ (\autoref{fig:suma_conexa_rep_pol}). Pegando a lo largo de $a$ y doblando dos veces, tenemos que $\mathcal{P}_1$ es una representación equivalente a $\langle S_1\mid W_1\rangle$ y por tanto es una representación de $M_1$. Llamemos $B_1$ a la imagen en $M_1$ del interior de la región poligonal cuya frontera es $abc$. Veamos que $B_1$ es un disco coordenado regular, es decir, que existe un entorno $B'$ de $B_1$ en $M_1$ y un homeomorfismo $\phi :B'\to \R^2$ que manda $B_1$ a $\mathbb{B}^2$ y $\overline{B}$ a $\overline{\mathbb{B}}^2$. Una forma de verlo lo sugiere la \autoref{fig:suma_conexa_rep_pol}: sean $P_1$, $Q$ y $P_1'$ regiones poligonales convexas etiquetadas respectivamente por las palabras $W_1c^{-1}b^{-1}a^{-1}$, $abc$ y $W_1$. Si triangulamos las regiones poligonales como en la  \autoref{fig:suma_conexa_rep_pol}, obtenemos una aplicación simplicial $f:P_1\amalg Q\to P_1'$ que lleva $Q$ a el triángulo $Q'\subseteq P_1'$, que comparte una vértice $v$ con $P_1'$. La composición $P_1\amalg Q\to P_1'\to M_1$ respeta las identificaciones hechas por la aplicación cociente $P_1'\to M_1$, por lo que se tiene un homeomorfismo de $M_1$ llevando $B_1$ a la imagen de $Q'$.\\
-Ahora, fijémonos en la demostración de la \autoref{prop:poligonos} (b). Cuando construimos el entorno Euclídeo de un vértice, ensamblábamos las regiones del plano de los varios vértices en un mismo disco coordenado. Aplicando esa construcción al vértice $v$, llevamos $Q'$ a un conjunto que es homeomorfo a un disco cerrado en el plano (\autoref{fig:disco_regular}), y  entonces extendemos ese homeomorfismo a un disco abierto que lo contiene.\\
+Consideramos la representación $\mathcal{P}_1=\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1},abc\rangle$ (\autoref{fig:suma_conexa_rep_pol}). Pegando a lo largo de $a$ y doblando dos veces, tenemos que $\mathcal{P}_1$ es una representación equivalente a $\langle S_1\mid W_1\rangle$ y por tanto es una representación de $M_1$. Llamemos $B_1$ a la imagen por la proyección $\pi$ en $M_1$ del interior de la región poligonal cuya frontera es $abc$. Veamos que $B_1$ es un disco coordenado regular, es decir, que existe un entorno $B'$ de $B_1$ en $M_1$ y un homeomorfismo $\phi :B'\to \R^2$ que manda $B_1$ a $\mathbb{B}^2$ y $\overline{B}$ a $\overline{\mathbb{B}}^2$. Siguiendo la figura \autoref{fig:suma_conexa_rep_pol}, sean $P_1$, $Q$ y $P_1'$ regiones poligonales convexas etiquetadas respectivamente por las palabras $W_1c^{-1}b^{-1}a^{-1}$, $abc$ y $W_1$. Si triangulamos las regiones poligonales como en la  imagen, obtenemos una aplicación simplicial $f:P_1\amalg Q\to P_1'$ que lleva $Q$ a el triángulo $Q'\subseteq P_1'$, que comparte un vértice $v$ con $P_1'$. La composición $\pi \circ f: P_1\amalg Q\to \to M_1$ respeta las identificaciones hechas por la aplicación cociente $\pi :P_1'\to M_1$, por lo que se tiene un homeomorfismo de $M_1$, que lleva $B_1$ a la imagen de $Q'$.\\
+Ahora, fijémonos en la demostración de la \autoref{prop:poligonos} (a). Cuando construimos el entorno Euclídeo de un vértice, ensamblábamos las regiones del plano $\Lambda$ que se correspondían con los varios vértices en un mismo disco coordenado. Aplicando esa construcción al vértice $v$, llevamos $Q'$ a un conjunto que es homeomorfo a un disco cerrado en el plano, y  entonces extendemos ese homeomorfismo a un disco abierto que lo contiene.\\
 Se sigue de este resultado que la realización geométrica de $\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1}\rangle$ es homeomorfa a $M_1'=M_1\setminus B_1$, y $\partial B_1$ es la imagen de las aristas $c^{-1}b^{-1}a^{-1}$. Un argumento similar demuestra que $\langle S_2,a,b,c\mid abcW_2\rangle$ es una presentación de $M_2$ menos un disco coordenado $M_2'=M_2\setminus B_1$. Por tanto se tiene que $\langle S_1,S_2,a,b,c\mid W_1,c^{-1}b^{-1}a^{-1},abcW_2\rangle$ es una presentación de $M_1'\amalg M_2'$ con las fronteras de los respectivos discos identificados, es decir, $M_1\# M_2$. Finalmente, pegando por $a$ y doblando dos veces, se obtiene la presentación $\langle S_1,S_2\mid W_1W_2\rangle$.
 \end{proof}
 
