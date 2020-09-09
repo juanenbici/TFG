@@ -1401,18 +1401,25 @@ Para el plegado, ignoramos como antes palabras adicionales $W_2,\dots W_k$. Supo
 Si $W_1$ tiene longitud 2 o 3, podemos subdividir para alargar la longitud de la palabra a 4, plegar, y finalmente consolidar de nuevo.
 \end{proof}
 
+\begin{prop}
+Sea $M$ una superficie que admite como representación $\langle S\mid W\rangle$. Sea $B$ un disco coordenado regular en $M$. Entonces $\langle S,a,b,c\mid Wc^{-1}b^{-1}a^{-1}\rangle$ es una representación de $M\setminus B$.
+\end{prop}
+\begin{proof}
+Consideramos la representación $\mathcal{P}=\langle S,a,b,c\mid Wc^{-1}b^{-1}a^{-1},abc\rangle$ (\autoref{fig:suma_conexa_rep_pol}). Pegando a lo largo de $a$ y doblando dos veces, tenemos que $\mathcal{P}$ es una representación equivalente a $\langle S\mid W\rangle$ y por tanto es una representación de $M$. Llamemos $B$ a la imagen por la proyección $\pi$ en $M$ del interior de la región poligonal cuya frontera es $abc$. Veamos que $B$ es un disco coordenado regular, es decir, que existe un entorno $B'$ de $B$ en $M$ y un homeomorfismo $\phi :B'\to \R^2$ que manda $B$ a $\mathbb{B}^2$ y $\overline{B}$ a $\overline{\mathbb{B}}^2$. Siguiendo la figura \autoref{fig:suma_conexa_rep_pol}, sean $P_1$, $Q$ y $P_1'$ regiones poligonales convexas etiquetadas respectivamente por las palabras $Wc^{-1}b^{-1}a^{-1}$, $abc$ y $W$. Si triangulamos las regiones poligonales como en la  imagen, obtenemos una aplicación simplicial $f:P_1\amalg Q\to P_1'$ que lleva $Q$ a el triángulo $Q'\subseteq P_1'$, que comparte un vértice $v$ con $P_1'$. La composición $\pi \circ f: P_1\amalg Q\to \to M$ respeta las identificaciones hechas por la aplicación cociente $\pi :P_1'\to M$, por lo que se tiene un homeomorfismo de $M$, que lleva $B$ a la imagen de $Q'$.\\
+Ahora, fijémonos en la demostración de la \autoref{prop:poligonos} (a). Cuando construimos el entorno Euclídeo de un vértice, ensamblábamos las regiones del plano $\Lambda$ que se correspondían con los varios vértices en un mismo disco coordenado. Aplicando esa construcción al vértice $v$, llevamos $Q'$ a un conjunto que es homeomorfo a un disco cerrado en el plano, y  entonces extendemos ese homeomorfismo a un disco abierto que lo contiene.\\
+Se tiene por tanto que la realización geométrica de $\langle S,a,b,c\mid Wc^{-1}b^{-1}a^{-1}\rangle$ es homeomorfa a $M\setminus B$, y que $\partial B$ es la imagen de las aristas $c^{-1}b^{-1}a^{-1}$
+\end{proof}
+
 \begin{prop}%%%%PROP: representación suma conexa
-Sean $M_1$ y $M_2$ superficies que admiten respectivamente representaciones $\langle S_1\mid W_1\rangle $ y $\langle S_2\mid W_2\rangle $, donde $S_1$ y $S_2$ son conjuntos disjuntos y tal que cada presentación tiene una sola cara. Entonces $\langle S_1,S_2\mid W_1W_2\rangle$ es una presentación de la suma conexa $M_1 \# M_2$.
+Sean $M_1$ y $M_2$ superficies que admiten respectivamente representaciones $\langle S_1\mid W_1\rangle $ y $\langle S_2\mid W_2\rangle $, donde $S_1$ y $S_2$ son conjuntos disjuntos y tal que cada presentación tiene una sola cara. Entonces $\langle S_1,S_2\mid W_1W_2\rangle$ es una representación de la suma conexa $M_1 \# M_2$.
+
 \end{prop}
 
 \begin{proof}
-Consideramos la representación $\mathcal{P}_1=\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1},abc\rangle$ (\autoref{fig:suma_conexa_rep_pol}). Pegando a lo largo de $a$ y doblando dos veces, tenemos que $\mathcal{P}_1$ es una representación equivalente a $\langle S_1\mid W_1\rangle$ y por tanto es una representación de $M_1$. Llamemos $B_1$ a la imagen por la proyección $\pi$ en $M_1$ del interior de la región poligonal cuya frontera es $abc$. Veamos que $B_1$ es un disco coordenado regular, es decir, que existe un entorno $B'$ de $B_1$ en $M_1$ y un homeomorfismo $\phi :B'\to \R^2$ que manda $B_1$ a $\mathbb{B}^2$ y $\overline{B}$ a $\overline{\mathbb{B}}^2$. Siguiendo la figura \autoref{fig:suma_conexa_rep_pol}, sean $P_1$, $Q$ y $P_1'$ regiones poligonales convexas etiquetadas respectivamente por las palabras $W_1c^{-1}b^{-1}a^{-1}$, $abc$ y $W_1$. Si triangulamos las regiones poligonales como en la  imagen, obtenemos una aplicación simplicial $f:P_1\amalg Q\to P_1'$ que lleva $Q$ a el triángulo $Q'\subseteq P_1'$, que comparte un vértice $v$ con $P_1'$. La composición $\pi \circ f: P_1\amalg Q\to \to M_1$ respeta las identificaciones hechas por la aplicación cociente $\pi :P_1'\to M_1$, por lo que se tiene un homeomorfismo de $M_1$, que lleva $B_1$ a la imagen de $Q'$.\\
-Ahora, fijémonos en la demostración de la \autoref{prop:poligonos} (a). Cuando construimos el entorno Euclídeo de un vértice, ensamblábamos las regiones del plano $\Lambda$ que se correspondían con los varios vértices en un mismo disco coordenado. Aplicando esa construcción al vértice $v$, llevamos $Q'$ a un conjunto que es homeomorfo a un disco cerrado en el plano, y  entonces extendemos ese homeomorfismo a un disco abierto que lo contiene.\\
-Se sigue de este resultado que la realización geométrica de $\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1}\rangle$ es homeomorfa a $M_1'=M_1\setminus B_1$, y $\partial B_1$ es la imagen de las aristas $c^{-1}b^{-1}a^{-1}$. Un argumento similar demuestra que $\langle S_2,a,b,c\mid abcW_2\rangle$ es una presentación de $M_2$ menos un disco coordenado $M_2'=M_2\setminus B_1$. Por tanto se tiene que $\langle S_1,S_2,a,b,c\mid W_1,c^{-1}b^{-1}a^{-1},abcW_2\rangle$ es una presentación de $M_1'\amalg M_2'$ con las fronteras de los respectivos discos identificados, es decir, $M_1\# M_2$. Finalmente, pegando por $a$ y doblando dos veces, se obtiene la presentación $\langle S_1,S_2\mid W_1W_2\rangle$.
+Se sigue de la proposición anterior que la realización geométrica de $\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1}\rangle$ es homeomorfa a $M_1'=M_1\setminus B_1$ y un argumento análogo nos indica que $\langle S_2,a,b,c\mid abcW_2\rangle$ es una presentación de $M_2$ menos un disco coordenado, que denotamos por $M_2'=M_2\setminus B_1$. Por tanto se tiene que $\langle S_1,S_2,a,b,c\mid W_1,c^{-1}b^{-1}a^{-1},abcW_2\rangle$ es una presentación de $M_1'\amalg M_2'$ con las fronteras de los respectivos discos identificados, es decir, $M_1\# M_2$. Finalmente, pegando por $a$ y doblando dos veces, se obtiene la presentación $\langle S_1,S_2\mid W_1W_2\rangle$.
 \end{proof}
 
-
-\begin{figure}
+\begin{figure}[t]
 \centering
 \begin{tikzpicture}[use optics, scale=0.5]
 \draw [dashed] (-6,-3) [out=135, in=-90] to (-8,0) [out=90, in=-135] to (-6,3);
@@ -1481,9 +1488,6 @@ $$\langle a_1,\dots ,a_n, b_1,\dots ,b_n\mid a_1b_1a_1^{-1}b_1^{-1}\dots a_nb_na
 $$\langle a_1,\dots ,a_n\mid a_1a_1\dots a_na_n\rangle$$
 \end{itemize}
 \end{eje}
-
-
-\clearpage
 
 \section{Teorema de clasificación de superficies compactas}
 
