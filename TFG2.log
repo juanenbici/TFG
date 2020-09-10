@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  10 SEP 2020 11:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  10 SEP 2020 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1358,58 +1358,51 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
  [25] [26]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [27]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [28]
 
-LaTeX Warning: Reference `fig:PASO6' on page 27 undefined on input line 1637.
-
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-
-Overfull \hbox (7.49803pt too wide) in paragraph at lines 1864--1865
-[][] 
- []
-
-[27] [28]
-
-LaTeX Warning: Reference `prop:sub_IIAN' on page 29 undefined on input line 189
-5.
+LaTeX Warning: Reference `prop:sub_IIAN' on page 29 undefined on input line 191
+4.
 
 [29
 
@@ -1457,11 +1450,11 @@ Missing character: There is no ; in font nullfont!
 ] [34]
 
 LaTeX Warning: Reference `fig:handle_toro' on page 35 undefined on input line 2
-380.
+399.
 
 
 LaTeX Warning: Reference `fig:crosshandle_klein' on page 35 undefined on input 
-line 2390.
+line 2409.
 
 [35
 
@@ -1469,7 +1462,7 @@ line 2390.
 Cap\'{\i }tulo 5.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2683.
+(hyperref)                than one, level fixed on input line 2702.
 
 [39
 
@@ -1489,16 +1482,16 @@ Package microtype Info: Loading generic protrusion settings for font family
  [46
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2967.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2967.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2986.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2986.
  (./TFG2.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2967.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2967.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2986.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2986.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
 (rerunfilecheck)             Checksum: 4F9DC2191431B06B09AE16A0B9790D01;1789.
@@ -1506,16 +1499,13 @@ Package rerunfilecheck Info: File `TFG2.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 36425 strings out of 480478
- 844012 string characters out of 5905960
- 1274151 words of memory out of 5000000
- 51366 multiletter control sequences out of 15000+600000
- 546270 words of font info for 122 fonts, out of 8000000 for 9000
+ 36418 strings out of 480478
+ 843952 string characters out of 5905960
+ 1266151 words of memory out of 5000000
+ 51365 multiletter control sequences out of 15000+600000
+ 545946 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,104p,1851b,1360s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{prop.4.1.4} has been referenced but does not exis
@@ -1542,7 +1532,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (52 pages, 520313 bytes).
+Output written on TFG2.pdf (52 pages, 520939 bytes).
 PDF statistics:
  904 PDF objects out of 1000 (max. 8388607)
  802 compressed objects within 9 object streams
