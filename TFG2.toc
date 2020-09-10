@@ -16,13 +16,13 @@
 \contentsline {section}{\numberline {3.1}Superficies como cocientes}{10}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Representación de superficies}{17}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Teorema de clasificación de superficies compactas}{25}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Teorema de clasificación de superficies con borde}{30}{section.3.4}%
-\contentsline {chapter}{\numberline {4}La prueba ZIP de Conway}{34}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Cremalleras}{34}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Teorema de Clasificación}{37}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Teorema de Clasificación, segunda parte}{40}{chapter.5}%
-\contentsline {subsection}{\numberline {5.0.1}Grupos fundamentales de las Superficies Compactas}{40}{subsection.5.0.1}%
-\contentsline {chapter}{\numberline {A}Algunos teoremas de topología importantes}{42}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Cocientes topológicos}{42}{section.Alph1.1}%
-\contentsline {chapter}{\numberline {B}CW-complejos}{44}{appendix.Alph2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{47}{appendix*.37}%
+\contentsline {section}{\numberline {3.4}Teorema de clasificación de superficies con borde}{29}{section.3.4}%
+\contentsline {chapter}{\numberline {4}La prueba ZIP de Conway}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Cremalleras}{33}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Teorema de Clasificación}{36}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Teorema de Clasificación, segunda parte}{39}{chapter.5}%
+\contentsline {subsection}{\numberline {5.0.1}Grupos fundamentales de las Superficies Compactas}{39}{subsection.5.0.1}%
+\contentsline {chapter}{\numberline {A}Algunos teoremas de topología importantes}{41}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Cocientes topológicos}{41}{section.Alph1.1}%
+\contentsline {chapter}{\numberline {B}CW-complejos}{43}{appendix.Alph2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{46}{appendix*.37}%
