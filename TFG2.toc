@@ -1,7 +1,10 @@
 \babel@toc {spanish}{}
 \babel@toc {spanish}{}
-\contentsline {chapter}{\'{I}ndice general}{ii}{chapter*.1}%
-\contentsline {chapter}{\'{I}ndice de figuras}{iii}{chapter*.2}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Resumen}{i}{section*.1}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Abstract}{i}{section*.2}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Introducción}{iii}{section*.3}%
+\contentsline {chapter}{\'{I}ndice general}{iv}{chapter*.4}%
+\contentsline {chapter}{\'{I}ndice de figuras}{v}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}Variedades y superficies}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Variedades}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Variedades con borde}{2}{section.1.2}%
@@ -22,4 +25,4 @@
 \contentsline {chapter}{\numberline {A}Algunos teoremas de topología importantes}{42}{appendix.Alph1}%
 \contentsline {section}{\numberline {A.1}Cocientes topológicos}{42}{section.Alph1.1}%
 \contentsline {chapter}{\numberline {B}CW-complejos}{44}{appendix.Alph2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{47}{appendix*.34}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{47}{appendix*.37}%
