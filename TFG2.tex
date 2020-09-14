@@ -1404,7 +1404,7 @@ Para el plegado, ignoramos como antes palabras adicionales $W_2,\dots W_k$. Supo
 Si $W_1$ tiene longitud 2 o 3, podemos subdividir para alargar la longitud de la palabra a 4, plegar, y finalmente consolidar de nuevo.
 \end{proof}
 
-\begin{prop}
+\begin{prop}\label{prop:rep_perf}
 Sea $M$ una superficie que admite como representación $\langle S\mid W\rangle$. Sea $B$ un disco coordenado regular en $M$. Entonces $\langle S,a,b,c\mid Wc^{-1}b^{-1}a^{-1}\rangle$ es una representación de $M\setminus B$.
 \end{prop}
 \begin{proof}
@@ -1892,26 +1892,25 @@ Nos queda el caso en el que aparecen tanto pares torcidos como pares complementa
 
 
 \section{Teorema de clasificación de superficies con borde}
-Podemos dar ahora una clasificación de las superficies con borde, que nos servirá para comparar resultados con la prueba ZIP, donde se da directamente una clasificación de las superficies con borde.
-Empecemos viendo una definición:
+Podemos ahora clasificar las superficies con borde a partir del Teorema de Clasificación, que nos servirá para comparar resultados con la prueba ZIP, donde se da directamente una clasificación de las superficies con borde. Empecemos definiendo un concepto con el que ya hemos trabajado:
 \begin{defin}%M%%%DEF: perforación
 \label{def:perforacion}
-Sea $S$ una superficie (con o sin borde). Sea $p\in \interior (S)$ y $U$ un entorno abierto de $p$ en $S$. Sea $\phi :U\to \R^n$ un homeomorfismo tal que $\phi (p)=0$. Sea $B=\phi ^{-1}(B_1(0))$. Decimos que la nueva superficie con borde $S^o=S\setminus B$ es $S$ \enfatiza{1-perforada}, y a $\partial B\subset S^o$ la llamamos \enfatiza{perforación}. Podemos repetir el proceso sobre $S^o$ sucesivamente, obteniendo $S$ $n$-perforada con un número finito $n\in \N$ de perforaciones.
+Sea $M$ una superficie (con o sin borde). Sea $p\in \interior (M)$ y $U$ un entorno abierto de $p$ en $M$. Sea $\phi :U\to \R^n$ un homeomorfismo tal que $\phi (p)=0$. Sea $B=\phi ^{-1}(B_1(0))$. Decimos que la nueva superficie con borde $M^o=S\setminus B$ es $M$ \enfatiza{1-perforada}, y a $\partial B\subset M^o$ la llamamos \enfatiza{perforación}. Podemos repetir el proceso sobre $M^o$ sucesivamente, obteniendo $M$ $n$-perforada con un número finito $n\in \N$ de perforaciones.
 \end{defin}
 
-Vimos, en el ejemplo \autoref{eje:rep_borde} que un toro con dos perforaciones es una superficie con borde. Veamos una propiedad muy interesante:
+%Vimos, en el ejemplo \autoref{eje:rep_borde} que un toro con dos perforaciones es una superficie con borde. Veamos una propiedad muy interesante:
 
 \begin{prop}\label{prop:borde_perforaciones}
 Toda superficie con borde compacta es homeomorfa a una superficie compacta con perforaciones.
 \end{prop}
 \begin{proof}
-Sea $M$ una superficie compacta. Vamos a demostrar que el borde $\partial M$ es homeomorfo a una unión disjunta de circunferencias $\mathbb{S}^1$. Por el \autoref{corol:borde_n-1_variedad} se tiene que $\partial M$ es una 1-variedad. Salvo homeomorfismo, las 1-variedades conexas son $\R$ y $\mathbb{S}^1$. Por ser $\partial M$ un subconjunto cerrado de un compacto, es también compacto, y por tanto se tiene que cada componente conexa de $\partial M$ es homeomorfa a $\mathbb{S}^1$.
+Sea $M$ una superficie con borde compacta. Vamos a demostrar que el borde $\partial M$ es homeomorfo a una unión disjunta de circunferencias $\mathbb{S}^1$. Por el \autoref{corol:borde_n-1_variedad} se tiene que $\partial M$ es una 1-variedad. Salvo homeomorfismo, las 1-variedades conexas son $\R$ y $\mathbb{S}^1$. Por ser $\partial M$ un subconjunto cerrado de un compacto, es también compacto, y por tanto se tiene que cada componente conexa de $\partial M$ es homeomorfa a $\mathbb{S}^1$.
 
-Por otro lado, vamos a ver que \textit{pegando} discos a las componentes de $\partial M$ se obtiene una superficie sin borde. Sean $S=\amalg_i \overline{\mathbb{B}}_i^2$ y $f:\partial S=\amalg_i \mathbb{S}^1\to \partial M$ un homeomorfismo. Considerando $f$ como una función de $\partial S$ en $M$, definimos la relación de equivalencia $\sim$ en la unión disjunta $M\amalg S$ generada por $a\sim f(a)$, y denotamos el espacio cociente resultante por $M^*=(M\amalg S)/\sim$. Tenemos que ver que $M^*$ es IIAN, Haussdorf y localmente homeomorfo a un espacio euclídeo de dimensión $2$. Empecemos con esto último. 
+Por otro lado, vamos a ver que \textit{pegando} discos a las componentes de $\partial M$ se obtiene una superficie sin borde. Sea $S=\amalg_i \overline{\mathbb{B}}_i^2$ y $f:\partial S=\amalg_i \mathbb{S}^1\to \partial M$ un homeomorfismo. Considerando $f$ como una función de $\partial S$ en $M$, definimos la relación de equivalencia $\sim$ en la unión disjunta $M\amalg S$ generada por $a\sim f(a)$, y denotamos el espacio cociente resultante por $M^*=(M\amalg S)/\sim$. Tenemos que ver que $M^*$ es IIAN, Haussdorf y localmente homeomorfo a un espacio euclídeo de dimensión $2$. Empecemos con esto último. 
 
-Sea $q:M\amalg S\to M^*$ la aplicación cociente, y sea $B=q(\partial M\cup \partial S)$. Notamos que $\interior M\amalg \interior S$ es un abierto saturado de $M\amalg S$, por lo que podemos restringir $q$ a una aplicación cociente que va de $\interior M\amalg \interior S$ en $M^*\setminus B$. Dado que esta restricción es inyectiva, es un homeomorfismo, y por tanto $M^*\setminus B$ es localmente homeomorfo a un espacio euclídeo de dimensión $2$. Por tanto nos queda considerar los puntos en $B$, pero esto lo tenemos por un argumento análogo al que usamos en la demostración de \autoref{prop:poligonos}. 
+Sea $\pi :M\amalg S\to M^*$ la aplicación cociente, y sea $B=\pi (\partial M\cup \partial S)$. Notamos que $\interior M\amalg \interior S$ es un abierto saturado de $M\amalg S$, por lo que podemos restringir $\pi$ a una aplicación cociente que va de $\interior M\amalg \interior S$ a $M^*\setminus B$. Dado que esta restricción es inyectiva, es un homeomorfismo, y $M^*\setminus B$ es localmente euclídeo de dimensión $2$. En estos puntos $M$ es también IIAN y Haussdorf. Por tanto nos queda considerar los puntos en $B$, pero esto lo tenemos por un argumento análogo al que usamos en la demostración de \autoref{prop:suma_conexa}. 
 
-Por otro lado, el espacio cociente $M^*$ es IIAN por la proposición \autoref{prop:sub_IIAN}. Para probar que es Haussdorf, hay que ver que las fibras de $q$ se pueden separar por abiertos saturados. Pero esto siempre es posible escogiendo bolas coordenadas suficientemente pequeñas. Así pues, $M^*$ es una superficie. 
+%Por otro lado, el espacio cociente $M^*$ es IIAN. Para probar que es Haussdorf, hay que ver que las fibras de $\pi$ se pueden separar por abiertos saturados. Pero esto siempre es posible escogiendo bolas coordenadas suficientemente pequeñas. Así pues, $M^*$ es una superficie. 
 \end{proof}
 
 Dada una superficie con borde compacta $M$, denotaremos por $M^*$ la superficie compacta sin borde obtenida mediante el proceso anterior, que llamaremos \enfatiza{pegar} un disco cerrado a cada componente conexa de $\partial M$. Si en cambio empezamos por una superficie compacta sin borde $M^*$ y construimos una superficie con borde haciendo perforaciones, ¿Van a ser homeomorfas las superficies resultantes de hacer las perforaciones en lugares distintos? La respuesta es afirmativa, pero antes necesitamos ver la siguiente proposición:
@@ -1920,11 +1919,13 @@ Dada una superficie con borde compacta $M$, denotaremos por $M^*$ la superficie 
 \centering
 \begin{tikzpicture}[use optics, scale=2,>=angle 60]
 
-\draw (.5,1.5) -- +(1,0) -- (1.5,.5)--cycle ;
+\draw (.5,1.5) -- +(1,0) -- (1.5,.5) ;
+\draw [dashed] (1.5,.5) -- (.5,1.5);
 \draw [dashed] (1.5,.5)[out=-90, in=-45] to (0,0) [out=135, in=180] to (.5,1.5) ;
 \draw (0,0) node [anchor= north east] {$\partial M$};
 
-\draw [shift={(3,0)}] (.5,1.5) -- +(1,0) -- (1.5,.5)--cycle ;
+\draw [shift={(3,0)}] (.5,1.5) -- +(1,0) -- (1.5,.5) ;
+\draw [shift={(3,0)}, dashed] (1.5,.5) -- (.5,1.5);
 \draw [shift={(3,0)}, dashed] (1.5,.5)[out=-90, in=-45] to (0,0) [out=135, in=180] to (.5,1.5) ;
 \draw [shift={(3,0)}] (0,0) node [anchor= north east] {$\partial M$};
 \draw [shift={(3,0)}] (1.5,1.5) -- (1,1);
@@ -1944,13 +1945,13 @@ Toda superficie con borde compacta admite una representación poligonal.
 \begin{proof}
 Sea $M$ una superficie con borde compacta. Sabemos que $M$ es triangulable por el poliedro de un complejo simplicial en el cual hay dos clases de 1-símplices: los 1-símplices cuyo interior se corresponde a puntos interiores y los 1-símplices que se corresponden a componentes del borde de $M$. 
 
-Podemos suponer que la triangulación satisface que ningún 1-símplice tiene los dos vértices contenidos en el borde a menos que esté contenido completamente en el borde, y un 2-símplice no tiene más de una arista en el borde. Si no fuese así, pordemos conseguir esta condición subdividiendo cada arista en dos y cada 2-símplice en seis 2-símplices mediante lo que llamamos subdivisión baricéntrica, representada en la \autoref{fig:baricentrica}. Subdividiendo más veces si es necesario, llegamos a una triangulación que satisface la siguiente condición más fuerte: Si $P_i$ y $P_j$ son  dos 2-símplices tal que cada uno tiene una arista contenida en el borde de $M$, entonces, o bien $P_i$ y $P_j$ son disjuntos, o bien tienen un vértice en común $v$, que es un vértice del borde de $M$.
+Podemos suponer que la triangulación satisface que ningún 1-símplice tiene los dos vértices contenidos en el borde a menos que esté contenido completamente en el borde, y un 2-símplice no tiene más de una arista en el borde. Si no fuese así, pordemos conseguir esta condición subdividiendo cada arista en dos y cada 2-símplice en seis 2-símplices mediante lo que llamamos \textit{subdivisión baricéntrica}, representada en la \autoref{fig:baricentrica}. Subdividiendo más veces si es necesario, llegamos a una triangulación que satisface la siguiente condición más fuerte: Si $P_i$ y $P_j$ son  dos 2-símplices tal que cada uno tiene una arista contenida en el borde de $M$, entonces, o bien $P_i$ y $P_j$ son disjuntos, o bien tienen un vértice en común $v$, que es un vértice del borde de $M$.
 
 Denotemos por $B_1,\dots , B_k$ las componentes de $\partial M$. Si $P$ es un 2-símplice que encuentra a $B_i$ en algún punto suyo, entonces $P$ tiene exáctamente dos aristas que tienen un vértice en $B_i$ pero que no están contenidos en $B_i$. Similarmente, si $\sigma$ es un 1-símplice que tiene un vértice en $B_i$ pero que no yace sobre $B_i$, entonces $\sigma$ es una arista de dos 2-símplices que encuentran a $B_i$. Podemos por tanto ordenar los 2-símplices que encuentran $B_i$ y los 1-símplices que son aristas suyas pero que no yacen sobre $B_i$ de la siguiente manera: 
 \begin{equation*}
-P_1,e_1,P_2,e_2,\dots ,P_n,e_n,P_{n+1}=P_1
+P_1,\sigma_1,P_2,\sigma_2,\dots ,P_n,\sigma_n,P_{n+1}=P_1
 \end{equation*}
-donde cada $e_j$ es una arista de $P_j$ y $P_{j+1}$, y donde cada 2-símplice $P_k$ tiene por tanto como aristas a $e_{k-1}$ y $e_k$. ((Habría que demostrar que es única¿?)) Para cada componente $B_i$ podemos escribir de esa forma un ciclo de 2-símplices y aristas, que es único. Para cada componente del borde $B_i$, la unión de los 2-símplices de su ciclo asociado $\mathcal{P}_i=\bigcup_{j}P_j$ es homeomorfa a una región poligonal con una perforación. La \autoref{fig:triangulacion_perf} muestra un ejemplo cuando $n=?????$. Sean $P'_1,\dots P'_l$ los 2-símplices de la triangulación de $M$ que no pertenecen a ninguna de las $\mathcal{P}_i$, y llamamos $$\mathcal{P}=\left( \bigcup_{i=1}^{k} \mathcal{P}_i\right) \cup \left( \bigcup_{j=1}^{l} P'_j\right).$$
+donde cada $\sigma_j$ es una arista de $P_j$ y $P_{j+1}$, y donde cada 2-símplice $P_k$ tiene por tanto como aristas a $\sigma_{k-1}$ y $\sigma_k$. Para cada componente $B_i$ podemos escribir de esa forma un ciclo de 2-símplices y aristas, que es único. Para cada componente del borde $B_i$, la unión de los 2-símplices de su ciclo asociado $\mathcal{P}_i=\bigcup_{j}P_j$ es homeomorfa a una región poligonal con una perforación. La \autoref{fig:triangulacion_perf} muestra un ejemplo cuando $j=19$. Sean $P'_1,\dots P'_l$ los 2-símplices de la triangulación de $M$ que no pertenecen a ninguna de las $\mathcal{P}_i$, y llamamos $$\mathcal{P}=\left( \bigcup_{i=1}^{k} \mathcal{P}_i\right) \cup \left( \bigcup_{j=1}^{l} P'_j\right).$$
 Ahora sólo falta aplicar sobre $\mathcal{P}$ el resto de la demostración de la \autoref{prop:superficie_tiene_representacion}.
 \end{proof}
 
@@ -2050,7 +2051,7 @@ Ahora sólo falta aplicar sobre $\mathcal{P}$ el resto de la demostración de la
 \caption{Triangulación cerca de una componente del borde de $M$.\label{fig:triangulacion_perf}}
 \end{figure}
 \begin{eje}
-Veamos las representaciones estándar de las superficies fundamentales perforadas. Para ello, hacemos un corte $c_i$ desde un mismo vértice a cada perforación asociada a la componente $B_i$, de forma que estos no se solapen con las perforaciones. En la \autoref{fig:toro_perforado} podemos ver un ejemplo de la representación estándar de la suma conexa de dos toros con dos perforaciones.
+Veamos las representaciones estándar de las superficies fundamentales perforadas. Para ello, utilizando la \autoref{prop:rep_perf}, hacemos un corte $c_i$ desde un mismo vértice a cada perforación asociada a la componente $B_i$, de forma que estos no se solapen con las perforaciones. En la \autoref{fig:toro_perforado} podemos ver un ejemplo de la representación estándar de la suma conexa de dos toros con dos perforaciones.
 \begin{itemize}
 \item [(a)] \textit{Esfera con k perforaciones.} 
 $$\langle a, c_1,\dots ,c_k, B_1, \dots ,B_k \mid aa^{-1}c_1B_1c_1^{-1}\dots c_kB_kc_k^{-1}\rangle$$ 
@@ -2061,11 +2062,31 @@ $$\langle a_1,\dots ,a_n, c_1,\dots ,c_k, B_1,\dots ,B_k\mid a_1a_1\dots a_na_nc
 \end{itemize}
 \end{eje}
 
-\begin{figure}[b]
+
+\begin{tma}[Clasificación de superficies con borde compactas]
+Toda superficie con borde compacta y conexa no vacía es homeomorfa a una de las siguientes superficies:
+\begin{itemize}
+\item[(a)] Una esfera $\Esfera$ con $k$ perforaciones,
+\item[(b)] Una suma conexa $\Toro \# \dots \# \Toro$ de copias del toro con $k$ perforaciones,
+\item[(c)] Una suma conexa $\Proyectivo \,  \# \dots\, \# \Proyectivo$ de copias del plano proyectivo con $k$ perforaciones,
+\end{itemize}
+con $k\in \N$.
+A estas superficies las llamamos \enfatiza{superficies con borde estándar}.
+\end{tma}
+\begin{proof}
+%Probaremos el teorema demostrando que $M_1$ y $M_2$ son homeomorfas a una misma representación estándar de las del ejemplo anterior.
+Sea $M$ una superficie con borde compacta, y sea una representación suya como la de la \autoref{prop:sup_borde_rep}. El teorema se prueba aplicando los siete pasos de la demostración del Teorema de Clasificación de Superficies Compactas a esta representación poligonal, teniendo en cuenta que las operaciones de cortar y pegar que aparecen sucesivamente se hagan evitando las perforaciones. Así podemos asegurar que durante el proceso el número de perforaciones no cambia. Como resultado, obtenemos una de las tres representaciones estándar de las superficies sin borde, con $k$ perforaciones en su interior. Para completar la prueba, hacemos los cortes $c_1,\dots ,c_k$ desde el vértice inicial de la representación poligonal a cada una de las perforaciones $B_1,\dots ,B_k$, de forma inductiva y sin que se solapen, obteniendo uno de los polígonos estándar del ejemplo anterior.
+\end{proof}
+
+\begin{corol}
+Sean $M_1$ y $M_2$ superficies con borde compactas tales que $\partial M_1$ y $\partial M_2$ tienen el mismo número de componentes conexas. Entonces $M_1$ y $M_2$ son homeomorfas si y solo si las superficies $M_1^*$ y $M_2^*$  son homeomorfas.
+\end{corol}
+
+\begin{figure}
+%\centering
+\begin{subfigure}{.5\textwidth}
 \centering
-\begin{subfigure}{1\linewidth}
-\centering
-\begin{tikzpicture}[use optics, >=angle 60, scale=2]
+\begin{tikzpicture}[use optics, >=angle 60, scale=1.7]
 
 \fill[  ,fill=black,fill opacity=0.1] (0,0) -- (0.9238207149966959,0.3828253995531037) -- (1.3063621711370152,1.3067637277623212) -- (0.9235367715839117,2.230584442759017) -- (-0.00040155662530578324,2.6131258988993364) -- (-0.9242222716220017,2.230300499346233) -- (-1.3067637277623212,1.3063621711370155) -- (-0.9239383282092178,0.38254145614031965) -- cycle;
 
@@ -2091,9 +2112,9 @@ $$\langle a_1,\dots ,a_n, c_1,\dots ,c_k, B_1,\dots ,B_k\mid a_1a_1\dots a_na_nc
 \end{tikzpicture}
 \caption{ }
 \end{subfigure}
-\begin{subfigure}{1\linewidth}
+\begin{subfigure}{.5\textwidth}
 \centering
-\begin{tikzpicture}[use optics,scale=2]
+\begin{tikzpicture}[use optics,scale=1.7]
 
 
 
@@ -2116,50 +2137,43 @@ $$\langle a_1,\dots ,a_n, c_1,\dots ,c_k, B_1,\dots ,B_k\mid a_1a_1\dots a_na_nc
 \draw [ -<- ] (-0.5405813207414516,0.260330243470535)-- (0,0)node [anchor=north, midway] {$a_1$};
 
 \filldraw (0,0) circle (1pt);
-\filldraw (1.5146752018566916,1.8993426275695406)  circle (1pt);
+\filldraw (1.1405813207414515,2.3684415170503583)  circle (1pt);
 \end{tikzpicture}
 \caption{ }
 \end{subfigure}
 \caption{La superficie $\Toro \# \Toro$  con dos perforaciones.\label{fig:toro_perforado}}
 \end{figure}
 
-\begin{tma}[Clasificación de superficies con borde compactas]
-Sean $M_1$ y $M_2$ superficies con borde compactas tales que $\partial M_1$ y $\partial M_2$ tienen el mismo número de componentes. Entonces $M_1$ y $M_2$ son homeomorfas si y solo si las superficies $M_1^*$ y $M_2^*$  son homeomorfas.
-\end{tma}
-\begin{proof}
-Probaremos el teorema demostrando que $M_1$ y $M_2$ son homeomorfas a una misma representación estándar de las del ejemplo anterior.
-Sea $M$ una superficie con borde compacta, y sea una representación suya como la de la \autoref{prop:sup_borde_rep}. El teorema se prueba aplicando los siete pasos de la demostración del Teorema de Clasificación de Superficies Compactas a esta representación poligonal, teniendo en cuenta que las operaciones de cortar y pegar que aparecen sucesivamente se hagan evitando las perforaciones. Así podemos asegurar que durante el proceso el número de perforaciones no cambia. Como resultado, obtenemos una de las tres representaciones estándar de las superficies sin borde, con $k$ perforaciones en su interior. Para completar la prueba, hacemos los cortes $c_1,\dots ,c_k$ desde el vértice inicial de la representación poligonal a cada una de las perforaciones $B_1,\dots ,B_k$, de forma inductiva y sin que se solapen, obteniendo uno de los polígonos estándar del ejemplo anterior.
-\end{proof}
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{La prueba ZIP de Conway}
 
+En este capítulo voy a dar un tratamiento riguroso de la prueba ZIP de Conway. Voy a definir los conceptos necesarios para la nueva demostración y me ayudaré de algunos resultados de los capítulos anteriores. El principal cambio será que no demostraremos el Teorema de Clasificación a través de transformaciones sobre una representación poligonal de la superficie, sino que trabajaremos directamente sobre una triangulación de la superficie para llegar a una forma estándar basada en el concepto de suma conexa. Para Conway, uno de los conceptos irrelevantes de la prueba habitual del que se puede prescindir en la prueba ZIP es el de representación poligonal. En cambio yo me apoyaré en él para poder dar una demostración de algunos de los puntos menos rigurosos.
+
+La prueba ZIP sólo nos demustra la primera parte del Teorema de Clasificación: nos dice que toda superficie es homeomorfa a una de las superficies estándar, pero no que estas sean distintas desde el punto de vista topológico. Esto lo demostraremos finalmente en el último capítulo del trabajo, de forma que sea independiente a una u otra prueba.
+
 \section{Cremalleras}
 
 
-Conway utiliza las cremalleras (\textit{zips} en inglés) para describir cómo actúan las identificaciones topológicas. Cada cremallera actúa sobre una o dos perforaciones de una superficie. Están formadas por dos \textit{zips} (dos partes dentadas) fijadas la/s perforación/es y un \textit{zipper} (el deslizador). Al cerrar el \textit{zipper}, las \textit{zips} se juntan identificándose. Trato de dar una definición rigurosa:
+Conway utiliza las cremalleras (\textit{zips} en inglés) para describir de forma gráfica cómo actúan las identificaciones topológicas. Cada cremallera actúa sobre una o dos perforaciones de una superficie. Están formadas por dos \textit{zips} (dos partes dentadas) fijadas a la/s perforación/es y un \textit{zipper} (el deslizador). Al cerrar el \textit{zipper}, las \textit{zips} se juntan identificándose. Trato de dar una definición rigurosa:
 
 
 \begin{defin}%%%DEF: ZIP
-Sea $S$ una superficie con borde compacta. Una \enfatiza{cremallera} es una identificación entre dos subconjuntos cerrados del borde de $S$. A este par lo llamamos \enfatiza{par-zip}.
+Sea $M$ una superficie con borde compacta. Un \enfatiza{zip} es una identificación entre dos subconjuntos cerrados del borde de $M$. A este par lo llamamos \enfatiza{par-zip}, y a cada uno de los dos subconjuntos \enfatiza{cremallera}.
 \end{defin}
 
 
-En la \textit{prueba ZIP}, Conway nos explica gráficamente las posibles formas de unir cremalleras. 
+En la prueba ZIP, Conway nos explica gráficamente cuatro posibles formas de unir cremalleras. Veamos bien estas cuatro construcciones.
 
 \begin{defin}
-Sea $S$ una superficie. Definimos cuatro formas elementales de identificar pares-\textit{zip} en perforaciones de 
-$S$ perforada:
+Sea $M$ una superficie. Definimos cuatro formas elementales de identificar pares-zip en perforaciones de 
+$M$ perforada:
 
 \begin{itemize}
-\item[1.] \enfatiza{Cap}: Los pares zip yacen cada uno sobre la mitad de una misma perforación con orientaciones opuestas (\autoref{fig:cap}).
-\item[2.] \enfatiza{Crosscap}: Los pares zip yacen cada uno sobre la mitad de una misma perforación con la misma orientación (\autoref{fig:crosscap}).
-\item[3.] \enfatiza{Handle}: Los pares zip yacen cada uno sobre una perforación distinta de S con orientaciones opuestas (\autoref{fig:handle}).
-\item[4.] \enfatiza{Crosshandle}: Los pares zip yacen cada uno sobre una perforación distinta de S con la misma orientación (\autoref{fig:crosshandle}).
+\item[1.] \enfatiza{Cap}: Las cremalleras yacen cada una sobre la mitad de una misma perforación con orientaciones opuestas (\autoref{fig:cap}).
+\item[2.] \enfatiza{Crosscap}: Las cremalleras yacen cada una sobre la mitad de una misma perforación con la misma orientación (\autoref{fig:crosscap}).
+\item[3.] \enfatiza{Handle}: Las cremalleras yacen cada una sobre una perforación distinta de S con orientaciones opuestas (\autoref{fig:handle}).
+\item[4.] \enfatiza{Crosshandle}: Las cremalleras yacen cada una sobre una perforación distinta de S con la misma orientación (\autoref{fig:crosshandle}).
 \end{itemize}
 \end{defin}
 
@@ -2167,7 +2181,7 @@ $S$ perforada:
 \begin{figure}
 \begin{subfigure}{1\textwidth} %%%%FIG: Cap
 \centering
-\begin{tikzpicture} [use optics]
+\begin{tikzpicture} [use optics, scale=1.2]
 %\draw [help lines, step=1mm](0,-2) grid (6,2);
 \fill [color=gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
 \fill [gray!10](3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
@@ -2195,7 +2209,7 @@ $S$ perforada:
 
 \begin{subfigure}{1\textwidth} %%%%FIG: Crosscap
 \centering
-\begin{tikzpicture} [use optics]
+\begin{tikzpicture} [use optics, scale=1.2]
 %\draw [help lines, step=1mm](0,-2) grid (6,2);
 \fill [color=gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
 \fill [gray!10](3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
@@ -2230,7 +2244,7 @@ $S$ perforada:
 \begin{subfigure}{1\textwidth} %%%%FIG: Handle
 \centering
 
-\begin{tikzpicture} [use optics]
+\begin{tikzpicture} [use optics, scale=1.2]
 %\draw [help lines, step=1mm](-6,-2) grid (6,2);
 
 \fill [gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
@@ -2265,7 +2279,7 @@ $S$ perforada:
 
 \begin{subfigure}{1\textwidth} 
 \centering
-\begin{tikzpicture}[use optics]
+\begin{tikzpicture}[use optics, scale=1.2]
 %\draw [help lines, step=1mm](-6,-2) grid (6,2);
 
 \fill [gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
@@ -2301,7 +2315,7 @@ $S$ perforada:
 \end{subfigure}
 \caption{Construcciones elementales con cremalleras.}
 \end{figure}
-\clearpage
+
 %
 %
 %
@@ -2331,9 +2345,9 @@ $S$ perforada:
 \begin{prop}\label{prop:suma_esfera}
 Sean $M,M'$ dos superficies conexas (con o sin borde) y sean $P=\langle S\mid W\rangle$ y $P'=\langle S'\mid W'\rangle$ sus respectivas representaciones poligonales de una sola cara. Se tiene entonces:
 \begin{itemize}
-\item[(i)] La suma conexa de una esfera y $S$ es homeomorfa a $S$.
-\item[(ii)] Sea $|\mathcal{P}|$ la realización geométrica de $P$. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre las aristas de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$, obtenemos la misma superficie $S$. 
-\item[(iii)] Con una construcción análoga a la del apartado anterior, si hacemos una perforación sobre una superficie $S'$ con el borde con etiquetas asociadas a una representación poligonal de $S$, al identifacarlas obtenemos la suma conexa $S\# S'$. 
+\item[(i)] La suma conexa de una esfera y $M$ es homeomorfa a $M$.
+\item[(ii)] Sea $|\mathcal{P}|$ la realización geométrica de $P$. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre las aristas de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$, obtenemos la misma superficie $M$. 
+\item[(iii)] Con una construcción análoga a la del apartado anterior, si hacemos una perforación sobre una superficie $M'$ con el borde con etiquetas asociadas a una representación poligonal de $M$, al identifacarlas obtenemos la suma conexa $M\# M'$. 
 \end{itemize}
 \end{prop}
 \begin{proof}
@@ -2396,7 +2410,7 @@ Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el e
 \end{itemize}
 \end{prop}
 \begin{proof}
-Sea la representación de la esfera con un par-zip asociado al handle (ver \autoref{fig:handle_toro}) $$\langle a,c_1,c_2,z\mid aa^{-1} c_1^{-1}zc_1c_2^{-1}z^{-1}c_1\rangle.$$ Doblamos por $a$ y nos queda
+Sea la representación de la esfera con un par-zip asociado al handle $$\langle a,c_1,c_2,z\mid aa^{-1} c_1^{-1}zc_1c_2^{-1}z^{-1}c_1\rangle.$$ Doblamos por $a$ y nos queda
 \[
 \langle c_1,c_2,z\mid c_1^{-1}zc_1c_2^{-1}z^{-1}c_2\rangle
 \]
@@ -2406,7 +2420,7 @@ y podemos finalmente reetiquetar $e=c_2c_1^{-1}$ para obtener la representación
 \langle e,z\mid eze^{-1}z^{-1}\rangle
 \]
 
-Similarmente, para demostrar (b), sea la representación de la esfera con un par-zip asociado al crosshandle (ver \autoref{fig:crosshandle_klein}) $$\langle a,c_1,c_2,z\mid aa^{-1} c_1^{-1}zc_1c_2^{-1}zc_1\rangle.$$ Doblamos por $a$ y nos queda
+Similarmente, para demostrar (b), sea la representación de la esfera con un par-zip asociado al crosshandle $$\langle a,c_1,c_2,z\mid aa^{-1} c_1^{-1}zc_1c_2^{-1}zc_1\rangle.$$ Doblamos por $a$ y nos queda
 \[
 \langle c_1,c_2,z\mid c_1^{-1}zc_1c_2^{-1}zc_2\rangle
 \]
@@ -2485,12 +2499,12 @@ y reetiquetando $e=c_2c_1^{-1}$, obtenemos finalmente la representación de la b
 \end{figure}
 
 \begin{corol}
-Sea $S$ una superficie. Los siguientes espacios son homeomorfos:
+Sea $M$ una superficie. Los siguientes espacios son homeomorfos:
 \begin{itemize}
-\item[a)] $S$ con un cap y $S$.
-\item[b)] $S$ con un crosscap y $S\# \Proyectivo$.
-\item[c)] $S$ con un handle y $S\# \Toro$.
-\item[d)] $S$ con un crosshandle y $S\# K$ (siendo $K$ la botella de Klein). 
+\item[a)] $M$ con un cap y $M$.
+\item[b)] $M$ con un crosscap y $M\# \Proyectivo$.
+\item[c)] $M$ con un handle y $M\# \Toro$.
+\item[d)] $M$ con un crosshandle y $M\# K$ (siendo $K$ la botella de Klein). 
 \end{itemize}
 \end{corol}
 
@@ -2568,16 +2582,19 @@ Sea una esfera perforada como la de la izquierda de la \autoref{fig:rep_perf}. H
 
 \section{Teorema de Clasificación}
 
+Definamos el que va a ser en la prueba ZIP el concepto análogo al de superficie estándar.
+
 \begin{defin}%%%%DEF: Ordinaria
-Una superficie con borde se dice ordinaria si es homeomorfa a una colección finita de esferas cada una con un número finito de \textit{handles}, \textit{crosshandles}, \textit{crosscaps} y perforaciones.
+Una superficie con borde se dice \enfatiza{ordinaria} si es homeomorfa a una colección finita de esferas cada una con un número finito de \textit{handles}, \textit{crosshandles}, \textit{crosscaps} y perforaciones.
 \end{defin}
 
+El siguiente lema es quizás uno de los puntos donde la prueba de Conway es menos rigurosa. En algunos pasos hace \textit{deslizar las perforaciones} fuera de un handle, un crosshandle o un crosscap, y aunque esto tenga sentido desde un punto de vista intuitivo, no está claro como hacerlo de una forma rigurosa. Para resolver este problema, me apoyo en los conceptos de representación poligonal y transformaciones elementales, y así desgloso todos los casos posibles.
 
 \begin{lema}%%%%LEMA: Superficie ordinaria zips
-Sea $S$ una superficie con borde con un par-zip tal que cada cremallera está en una componente conexa de su borde. Entonces, si $S$ es ordinaria antes de identificar las cremalleras, es ordinaria también después.\label{lema:superficie_ordinaria}
+Sea $M$ una superficie con borde con un par-zip tal que cada cremallera está en una componente conexa de su borde. Entonces, si $M$ es ordinaria antes de identificar las cremalleras, es ordinaria también después.\label{lema:superficie_ordinaria}
 \end{lema}
 \begin{proof}
-Consideramos el caso en que las dos cremalleras ocupan cada una una perforación en su totailidad. Entonces al identificarlas se tiene un \textit{handle} (\autoref{fig:handle}) o un \textit{crosshandle} (\autoref{fig:crosshandle}), dependiendo de sus respectivas orientaciones. Si las dos perforaciones pertenecen a componentes conexas de $S$ distintas, entonces identificando obtenemos la suma conexa de las dos componentes. 
+Consideramos el caso en que las dos cremalleras ocupan cada una una perforación en su totailidad. Entonces, si están en la misma componente conexa de $M$, al identificarlas se tiene un \textit{handle} (\autoref{fig:handle}) o un \textit{crosshandle} (\autoref{fig:crosshandle}), dependiendo de sus respectivas orientaciones. Si las dos perforaciones pertenecen a componentes conexas de $S$ distintas, entonces identificando obtenemos la suma conexa de las dos componentes. 
 
 Consideramos ahora el caso en el que las dos cremalleras yacen sobre la misma perforación y la cubren totalmente. Identificándolas nos da o bien un \textit{cap} (\autoref{fig:cap}) o bien un \textit{crosscap} (\autoref{fig:crosscap}), dependiendo de sus respectivas orientaciones.
 
@@ -2587,7 +2604,7 @@ Finalmente, consideramos los varios casos en que las cremalleras no ocupan perfo
 \begin{align*}
 \langle a,z,B_1,B_2,c\mid aa^{-1} c^{-1}zB_2z^{-1}B_1c\rangle & & \\
 \approx & \, \langle z,B_1,B_2,c\mid c^{-1}zB_2z^{-1}B_1c\rangle &\text{(doblar por } a\text{)}\\
-\approx & \, \langle z,B_1,B_2\mid zB_2z^{-1}B_1\rangle &\text{(doblar por \textit{c})}
+\approx & \, \langle z,B_1,B_2\mid zB_2z^{-1}B_1\rangle &\text{(rotar y doblar por \textit{c})}
 \end{align*}
 que es una representación del cilindro, es decir, una esfera con dos perforaciones, y por tanto una superficie ordinaria. Cambiando la aparición de $z^{-1}$ por la de $z$, obtenemos mediante un proceso análogo al anterior la representación
 \[ \langle z,B_1,B_2\mid zB_2zB_1 \rangle
@@ -2597,7 +2614,7 @@ que es la representación de un crosscap con dos perforaciones, es decir, una su
 \begin{align*}
 \langle a,z,B,c\mid aa^{-1} c^{-1}zBz^{-1}c\rangle & & \\
 \approx & \, \langle z,B,c\mid c^{-1}zBz^{-1}c\rangle &\text{(doblar por } a\text{)}\\
-\approx & \, \langle z,B\mid zBz^{-1}\rangle &\text{(doblar por \textit{c})}
+\approx & \, \langle z,B\mid zBz^{-1}\rangle &\text{(rotar y doblar por \textit{c})}
 \end{align*}
 que es una representación de una esfera perforada. Cambiando la aparición de $z^{-1}$ por $z$, llegamos a la representación
 \[
@@ -2634,10 +2651,10 @@ Por tanto, aplicando la demostración de la \autoref{prop:suma_esfera} (iii), de
 
 
 \begin{tma}[Teorema de clasificación, versión preeliminar] %M%%%TEO: Clasificación preeliminar
-Toda superficie compacta es ordinaria.
+Toda superficie con borde compacta es ordinaria.
 \end{tma}
 \begin{proof}
-Sea $S$ una superficie compacta. Sabemos, por el \nameref{teo:rado}, que $S$ está triangulada por un poliedro $|K|$ asociado a un complejo simplicial $K$ tal que cada 1-símplice que contiene puntos interiores de $S$ es una cara de exáctamente dos 2-símplices, y cada 1-símplice que contiene puntos del borde de $S$ es cara de exáctamente un 2-símplice. Si sobre los primeros 1-símplices ponemos una cremallera distinta, en los 2-símplices habrá algunos 1-símplices que se identifiquen. Llamemos $K_2=\left\{\sigma_1,\dots ,\sigma_j\right\}$, donde cada $\sigma_i \text{ es un 2-símplice para todo } i=1\dots ,j$. $K_2$ es una superficie ordinaria, pues cada $\sigma_i$ es homeomorfo a una esfera perforada. Si identificamos ahora las cremalleras una a una, por el \autoref{lema:superficie_ordinaria} y por inducción, la superficie resultante es ordinaria.
+Sea $M$ una superficie con borde compacta. Sabemos, por el \nameref{teo:rado}, que $M$ está triangulada por un poliedro $|K|$ asociado a un complejo simplicial $K$ tal que cada 1-símplice que contiene puntos interiores de $M$ es una cara de exáctamente dos 2-símplices, y cada 1-símplice que contiene puntos del borde de $M$ es cara de exáctamente un 2-símplice. Si sobre cada par de 1-símplices del primer tipo ponemos una cremallera distinta, en el conjunto de los 2-símplices habrá algunos 1-símplices que se identifiquen. Llamemos $K_2=\left\{\sigma_1,\dots ,\sigma_j\right\}$, donde cada $\sigma_i \text{ es un 2-símplice para todo } i=1\dots ,j$. $K_2$ es una superficie ordinaria, pues cada $\sigma_i$ es homeomorfo a una esfera 1-perforada. Si identificamos ahora las cremalleras una a una, por el \autoref{lema:superficie_ordinaria} y por inducción, la superficie resultante es ordinaria.
 \end{proof}
 
 
@@ -2645,7 +2662,7 @@ Sea $S$ una superficie compacta. Sabemos, por el \nameref{teo:rado}, que $S$ est
 Un crosshandle es homeomorfo a dos crosscaps.
 \end{lema}
 \begin{proof}
-Por la \autoref{prop:handletoro_crosshandleklein}, la esfera con un crosshandle es homeomorfa a una botella de klein. Por la \autoref{lema:klein_proyectivoproyectivo}, la botella de Klein es homeomorfa a la suma conexa $\Proyectivo \# \Proyectivo$, o lo que es lo mismo, dos crosscaps.
+Por la \autoref{prop:handletoro_crosshandleklein}, la esfera con un crosshandle es homeomorfa a una botella de klein. Por la \autoref{lema:klein_proyectivoproyectivo}, la botella de Klein es homeomorfa a la suma conexa $\Proyectivo \# \Proyectivo$, o lo que es lo mismo, a la suma conexa de una esfera y dos crosscaps.
 \end{proof}
 
 \begin{lema}\label{lema:2}
@@ -2654,29 +2671,18 @@ Handles y crosshandles son equivalentes en la presencia de crosscaps.
 \begin{proof}
 Sea una esfera con un par-zip asociado a un handle y otro asociado a un crosscap. Sabemos que, identificando las cremalleras obtenemos un espacio homeomorfo a la suma conexa $\Toro \# \Proyectivo$. Pero por la \autoref{lema:toro_proyectivo}, este espacio es homeomorfo a $\Proyectivo \# \Proyectivo \# \Proyectivo$, que a su vez, es homeomorfo al plano proyectivo con un crosshandle, que a su vez es homeomorfo a una esfera con un crosshandle y un crosscap.
 \end{proof}
+Aunque Conway hasta ahora haya hablado de superficies con perforaciones (es decir, de superficies con borde), en el teorema final que veremos ahora decide omitirlas. Aprovechamos y damos directamente la clasificación de superficies con borde.
 %((Ahora no entiendo por qué dado todo lo anterior Conway sólo da la representación de superficies sin borde))
 \begin{tma}[Clasificación de superficies]
-Toda superficie compacta es homeomorfa o bien a una esfera con handles o bien a una esfera con crosscaps.
+Toda superficie con borde compacta es homeomorfa o bien a una esfera con handles o bien a una esfera con crosscaps, junto con $k$ perforaciones.
 \end{tma}
 \begin{proof}
-Por la versión preeliminar del teorema de clasificación, una superficie compacta es homeomorfa a una esfera con handles, crosshandles y crosscaps.
+Por la versión preeliminar del teorema de clasificación, una superficie con borde compacta es homeomorfa a una esfera con handles, crosshandles, crosscaps y perforaciones.
 \begin{itemize}
-\item \textit{Caso 1:} Al menos hay un crosshandle en nuestra superficie. Por el \autoref{lema:1}, cada crosshandle es homeomorfo a dos crosscaps, por lo que la superficie es homeomorfa a una esfera con solamente crosscaps y handles. Como al menos hay un crosscap, cada handle es homeomorfo a un crosshandle (\autoref{lema:2}), que es a us vez homeomorfo a dos crosscaps (\autoref{lema:1} de nuevo), quedando una esfera sólo con crosscaps.
-\item \textit{Caso 2:} No hay ni crosshandles ni crosscap en la superficie. La superficie es entonces homeomorfa a una esfera sólo con handles.
+\item \textit{Caso 1:} Al menos hay un crosshandle en nuestra superficie. Por el \autoref{lema:1}, cada crosshandle es homeomorfo a dos crosscaps, por lo que la superficie es homeomorfa a una esfera con solamente crosscaps y handles. Como al menos hay un crosscap, cada handle es homeomorfo a un crosshandle (\autoref{lema:2}), que es a us vez homeomorfo a dos crosscaps (\autoref{lema:1} de nuevo), quedando una esfera sólo con crosscaps y perforaciones.
+\item \textit{Caso 2:} No hay ni crosshandles ni crosscap en la superficie. La superficie es entonces homeomorfa a una esfera sólo con handles y perforaciones.
 \end{itemize}
 \end{proof}
-%\begin{prop}
-%Si $S$ es una superficie compacta y conexa, $S$ admite una representación de una sola cara.
-%\end{prop}
-
-
-%A la perforación $\partial B_i$ la llamamos \enfatiza{perforación} asociada a $W_i$, y a la imagen por $\phi _i$ de cada par de segmentos $a$ la llamamos \enfatiza{cremallera} asociada a $a\in W_i$.
-
-
-%\begin{defin}%M%%%DEF: zips asociadas a una representación poligonal de una superficie
-%Sea $S$ una superficie. Sea $|\mathcal{P}|$ la realización geométrica de una representación poligonal $P=\langle A\mid W_1,\dots W_n\rangle$ de la superficie. Para cada $W_i$, con $i=1,\dots n$, sea $\partial B_i$ una perforación sobre una esfera $\Esfera_i$, y sea $\phi _i$ un homeomorfismo entre los lados de $|\mathcal{P}|$ y $\partial B_i$. A la perforación $\partial B_i$ la llamamos \enfatiza{perforación} asociada a $W_i$, y a la imagen de $\phi _i$ la llamamos \enfatiza{cremallera} asociada a $W_i$.
-%\end{defin}
-
 
 
 \chapter{Teorema de Clasificación, segunda parte}

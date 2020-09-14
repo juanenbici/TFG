@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  10 SEP 2020 16:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  14 SEP 2020 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1399,12 +1399,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [28]
-
-LaTeX Warning: Reference `prop:sub_IIAN' on page 29 undefined on input line 191
-4.
-
-[29
+ [28] [29
 
 ] [30]
 Missing character: There is no ; in font nullfont!
@@ -1433,65 +1428,60 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [31] [32]
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2087--2144
+[]$[]$ $[]$ 
+ []
+
+[31] [32]
 Cap\'{\i }tulo 4.
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
 [33
 
-] [34]
-
-LaTeX Warning: Reference `fig:handle_toro' on page 35 undefined on input line 2
-399.
-
-
-LaTeX Warning: Reference `fig:crosshandle_klein' on page 35 undefined on input 
-line 2409.
-
-[35
-
-] [36] [37] [38]
+]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [34] [35] [36] [37] [38] [39]
 Cap\'{\i }tulo 5.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2702.
+(hyperref)                than one, level fixed on input line 2708.
 
-[39
+[40
 
-] [40]
+] [41]
 Ap\'{e}ndice A.
-[41
+[42
 
-] [42]
+] [43]
 Ap\'{e}ndice B.
-[43
+[44
 
-] [44] [45]
+] [45] [46]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [46
+ [47
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2986.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2986.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2992.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2992.
  (./TFG2.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2986.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2986.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2992.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2992.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
 (rerunfilecheck)             Checksum: 4F9DC2191431B06B09AE16A0B9790D01;1789.
@@ -1501,11 +1491,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 36418 strings out of 480478
- 843952 string characters out of 5905960
- 1266151 words of memory out of 5000000
- 51365 multiletter control sequences out of 15000+600000
- 545946 words of font info for 119 fonts, out of 8000000 for 9000
+ 36422 strings out of 480478
+ 843964 string characters out of 5905960
+ 1266182 words of memory out of 5000000
+ 51362 multiletter control sequences out of 15000+600000
+ 546162 words of font info for 121 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,104p,1851b,1360s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{prop.4.1.4} has been referenced but does not exis
@@ -1532,10 +1522,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (52 pages, 520939 bytes).
+Output written on TFG2.pdf (53 pages, 523677 bytes).
 PDF statistics:
- 904 PDF objects out of 1000 (max. 8388607)
- 802 compressed objects within 9 object streams
- 309 named destinations out of 1000 (max. 500000)
+ 910 PDF objects out of 1000 (max. 8388607)
+ 807 compressed objects within 9 object streams
+ 312 named destinations out of 1000 (max. 500000)
  18754 words of extra memory for PDF output out of 20736 (max. 10000000)
 
