@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  14 SEP 2020 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  14 SEP 2020 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1452,7 +1452,7 @@ Missing character: There is no ; in font nullfont!
 Cap\'{\i }tulo 5.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2708.
+(hyperref)                than one, level fixed on input line 2710.
 
 [40
 
@@ -1472,16 +1472,16 @@ Package microtype Info: Loading generic protrusion settings for font family
  [47
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2992.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2992.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2994.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2994.
  (./TFG2.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2992.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2992.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2994.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2994.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
 (rerunfilecheck)             Checksum: 4F9DC2191431B06B09AE16A0B9790D01;1789.
@@ -1522,7 +1522,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (53 pages, 523677 bytes).
+Output written on TFG2.pdf (53 pages, 523939 bytes).
 PDF statistics:
  910 PDF objects out of 1000 (max. 8388607)
  807 compressed objects within 9 object streams
