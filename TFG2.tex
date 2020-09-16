@@ -18,7 +18,7 @@
 \usepackage{microtype}%pone bonito el doc a nivel de formato
 
 \setlength{\parindent}{0pt} % Quitar indentado parrafos automatico
-
+\usepackage{mathtools}
 \usepackage{amsmath} % Movidas útiles
 \usepackage{amssymb} % Simbolos mates
 \usepackage{amsthm} % Personalizar teoremas (mas abajo continuacion)
@@ -162,9 +162,11 @@ $I$ representará el intervalo $\left[ 0,1\right]$.
 En este capítulo doy las definiciones y resultados básicos sobre variedades y superficies. Me basaré principalmente en los libros de J. M. Lee \cite{lee1} y V. Muñoz - J. J. Madrigal \cite{juanjo}.\\
 
 \section{Variedades}\label{sec:variedades}
-Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo son las variedades, y en concreto las superficies. Definámoslas.
+Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo son las variedades, y en concreto las superficies. Decimos que un espacio topológico $M$ es \enfatiza{localmente euclídeo de dimensión n} si todo punto de $M$ tiene un entorno en $M$ que es homeomorfo a un abierto de $\R^n$.
+
+
 \begin{defin}\label{def:variedad}%%%%DEF: variedad topológica
-Una \textbf{\emph{variedad topológica}} (de ahora en adelante \emph{variedad}) es un espacio topológico Hausdorff, II AN y localmente homeomorfo a $R^n$, para algún $n\geq 0$.
+Una \textbf{\emph{variedad topológica}} (de ahora en adelante \emph{variedad}) es un espacio topológico Hausdorff, II AN y localmente euclídeo de dimensión $n$, para algún $n\geq 0$.
 \end{defin}
 Sea $M$ una variedad, y sea $p\in M$. Si $U\subseteq M$ es un entorno de $p$ que es homeomorfo a un abierto $U'$ de $\R^n$, decimos que $U$ es un \enfatiza{dominio coordenado}, y llamamos \enfatiza{aplicación coordenada} a cualquier homeomorfismo $\varphi :U\to U'$. Decimos que el par $(U,\varphi )$ es una \enfatiza{carta para $M$}.\\
 A un dominio coordenado que es homeomorfo a una bola de $\R^n$ se le llama \enfatiza{bola coordenada} (si $n=2$, decimos \enfatiza{disco coordenado}). Si $p\in M$ y $U$ es un dominio coordenado que contiene a $p$, decimos que $U$ es un \enfatiza{entorno Euclídeo} de $p$.\\
@@ -2671,7 +2673,7 @@ Handles y crosshandles son equivalentes en la presencia de crosscaps.
 \begin{proof}
 Sea una esfera con un par-zip asociado a un handle y otro asociado a un crosscap. Sabemos que, identificando las cremalleras obtenemos un espacio homeomorfo a la suma conexa $\Toro \# \Proyectivo$. Pero por la \autoref{lema:toro_proyectivo}, este espacio es homeomorfo a $\Proyectivo \# \Proyectivo \# \Proyectivo$, que a su vez, es homeomorfo al plano proyectivo con un crosshandle, que a su vez es homeomorfo a una esfera con un crosshandle y un crosscap.
 \end{proof}
-Aunque Conway hasta ahora haya hablado de superficies con perforaciones (es decir, de superficies con borde), en el teorema final que veremos ahora decide omitirlas. Aprovechamos y damos directamente la clasificación de superficies con borde.
+Aunque Conway hasta ahora haya hablado de superficies con perforaciones (es decir, de superficies con borde), en el teorema final que veremos ahora decide omitirlas. En cambio yo aprovecho lo hecho hasta ahora y doy directamente la clasificación de superficies con borde.
 %((Ahora no entiendo por qué dado todo lo anterior Conway sólo da la representación de superficies sin borde))
 \begin{tma}[Clasificación de superficies]
 Toda superficie con borde compacta es homeomorfa o bien a una esfera con handles o bien a una esfera con crosscaps, junto con $k$ perforaciones.
@@ -2686,8 +2688,9 @@ Por la versión preeliminar del teorema de clasificación, una superficie con bo
 
 
 \chapter{Teorema de Clasificación, segunda parte}
-Hasta ahora hemos demostrado, con dos enfoques distintos, que toda superficie con borde compacta es homeomorfa a una esfera, a una suma conexa de copias del toro o a una suma conexa de copias del plano proyectivo junto con un número finito de perforaciones. Sin embargo no hemos demostrado que estas tres superficies estándar no sean homeomorfas entre sí. En este capítulo completaremos por tanto la parte de la prueba que nos falta. 
+Hasta ahora hemos demostrado, con dos enfoques distintos, que toda superficie con borde compacta es homeomorfa a una esfera, a una suma conexa de copias del toro o a una suma conexa de copias del plano proyectivo, junto con un número finito de perforaciones. Sin embargo no hemos demostrado que estas tres superficies estándar sean no homeomorfas entre sí. En este capítulo completaremos por tanto la parte de la prueba que nos falta. 
 
+\section{Presentaciones de grupos}
 Vamos a empezar recordando brevemente las presentaciones de grupos. 
 
 \begin{defin}
@@ -2707,7 +2710,52 @@ Si $G$ admite una presentación $\langle S\mid R	\rangle$ en las cuales $S$ y $R
 
 
 
-\subsection{Grupos fundamentales de las Superficies Compactas}
+\section{Grupos fundamentales de las Superficies Compactas}
+Empecemos viendo un resultado que es consecuencia del Teorema de Seifert-Van Kampen.
+\begin{prop}
+Sea $X$ un espacio topológico. Supongamos que $U,V\subseteq X$ son abiertos de $X$ tales que $X=U\cup V$. Supongamos también que $U$, $V$ y $U\cap V$ son conexos por caminos. Sea $p\in U\cup V$, y supongamos también que $U$ es simplemente conexo. Entonces la inclusión $l: V\xhookrightarrow{} X$ induce el isomorfismo
+\[
+\pi_1 (X,p) \cong \pi_1 (V,p) / N
+\]
+donde $N$ es el menor subgrupo normal de $\pi_1 (V,p)$ que contiene la imagen del homomorfismo 
+\[ 
+j_* \pi_1 (U\cap V, p) \to \pi_1 (V,p).
+\]
+Si los grupos fundamentales de $V$ y $U\cap V$ tienen presentaciones finitas
+\[
+\pi_1 (V,p) \cong \langle \beta_1 , \dots , \beta_n \mid \sigma_1 , \dots ,\sigma_s \rangle 
+,
+\]
+\[
+\pi_1 (U\cap V, p) \cong \langle \gamma_1 , \dots , \gamma_p \mid \tau_1 ,\dots , \tau_t \rangle ,
+\]
+entonces $\pi_1 (X, p)$ tiene como presentación 
+\[
+\pi_1 (X,p) \cong \langle \beta_1 , \dots , \beta_n \mid \sigma_1 , \dots ,\sigma_s , v_1 , \dots ,v_p \rangle,
+\]
+donde  los generadores $\beta_i$ están representados por los mismos lazos que en la presentación del grupo fundamental de $V$ pero considerados como lazos en $X$, y donde cada $v_i$ es una expresión para $j_* \gamma_i \in \pi_1 (V,p)$ en términos de $\{ \beta_1 \dots ,\beta_n \}$.
+\end{prop}
+\begin{proof}
+Una demostración se puede encontrar en \cite{lee1} o en \cite{munkres}.
+\end{proof}
+\begin{tma}
+Sea $X$ un espacio topológico conexo por caminos, y sea $\varphi: \partial \overline{\mathbb{B}}^2 \to X$ una aplicación continua. Consideramos la relación de equivalencia en $X \amalg \overline{\mathbb{B}}^2$ generada por $s \sim \varphi(s)$ para todo $s\in  \partial \overline{\mathbb{B}}^2$, y denotamos el espacio cociente por $\tilde{X}= (X \amalg  \overline{\mathbb{B}}^2) / \sim$.
+
+%Sea $\tilde{X}$ un espacio topológico Hausdorff y $X$ un subespacio de $X$ cerrado y conexo por caminos. Supongamos que existe $\varphi: \overline{\mathbb{B}}^2\to \tilde{X}$ tal que  y aplica $\partial \overline{\mathbb{B}}^2$ sobre $X$ y la restricción sobre $\interior{\overline{\mathbb{B}}^2}$ es biyectiva en $\tilde{X}\setminus X$. 
+
+Sea $v\in \partial \overline{\mathbb{B}}^2$, $\tilde{v} =\varphi (v) \in X$, y $\gamma =\varphi_* (\alpha ) \in \pi_1 (X, \tilde{v})$, donde $\alpha$ es un generador del grupo cíclico infinito $\pi_1 (\partial \overline{\mathbb{B}}^2 , v)$. Entonces el homomorfismo $\pi_1 (X, \tilde{v})\to \pi_1 (\tilde{X}, \tilde{v})$ inducido por la inclusión $X \xhookrightarrow{} \tilde{X}$ es sobreyectiva, y su núcleo es el menor subgrupo normal que contiene a $\gamma$. 
+
+Si $\pi_1 (X, \tilde{v})$ tiene como presentación finita a 
+
+\[
+\pi_1(X, \tilde{v}) \cong \langle \beta_1 , \dots , \beta_n \mid \sigma_1 , \dots ,\sigma_s \rangle ,
+\]
+entonces $\pi_1 (\tilde{X}, \tilde{v} )$ tiene como presentación a 
+\[
+\pi_1(\tilde{X}, \tilde{v}) \cong \langle \beta_1 , \dots , \beta_n \mid \sigma_1 , \dots ,\sigma_s , \tau \rangle ,
+\]
+donde $\tau$ es una expresión de $\gamma \in \pi_1(X, \tilde{v})$ en términos de   $\{ \beta_1 \dots ,\beta_n \}$.
+\end{tma}
 
 \begin{tma}
 Sea $M$ una superficie con una presentación suya de una cara $\langle a_1, \dots , a_n \mid W\rangle$. Entonces una presentación del grupo fundamental $\pi_1 (M)$ viene dada por $\langle a_1, \dots , a_n \mid W\rangle$.
@@ -2740,15 +2788,27 @@ Los grupos fundamentales de las superficies estándar tienen los siguientes abel
 \end{itemize}
 \end{prop}
 
-
+\section{Teorema de Clasificación}
 \begin{tma}[Teorema de Clasificación, segunda parte]
-Toda superficie compacta es homeomorfa a exáctamente una de las superficies estándar.
+Sea $M$ una superficie compacta y conexa no vacía. Entonces es homeomorfa a una y sólo una de las superficies estándar.
 \end{tma}
+\begin{proof}
+Por el \autoref{teo:csc}, tenemos que $M$ es homeomorfa a una de las superficies estándar, y por lo tanto nos queda demostrar que no son homeomorfas entre sí. Por un lado, la esfera no puede ser homeomorfa a una suma conexa de toros o a una suma conexa de planos proyectivos, pues la esfera tiene grupo fundamental trivial. 
+Los abelianizados de los grupos fundamentales de la suma conexa de planos proyectivos contienen un elemento no trivial de torsión, mientras que los abelianizados de los grupos fundamentales de la suma conexa de toros son libres de torsión. Así pues, las sumas de copias de $\Proyectivo$ no pueden ser homeomorfas a las sumas de copias de $\Toro$.
+Por otro lado, si $M$ y $M'$ son respectivamente sumas conexas de $n$ y $m$ copias del toro, $n\neq m$, sus grupos fundamentales son distintos, pues sus abelianizados son grupos libres conmutativos de rango $2n$ y $2m$ respectivamente.
+Análogamente, si $M$ es una suma conexa de $n$ copias del plano proyectivo y $M'$ es una suma conexa de $m$ copias del plano proyectivo, $n\neq m$, entonces los abelianizados de sus grupos fundamentaes son de rango $n-1$ y $m-1$ respectivamente, es decir, son distintos.
+\end{proof}
 
+
+
+\appendix
+
+\chapter{Grupos}
+\section{Grupo fundamental}
 \begin{tma}
 Para $n\geq 2$, $\mathbb{S}^n$ es simplemente conexa.
 \end{tma}
-
+\section{Grupos abelianos libres}
 \begin{lema}
 Si un grupo abeliano $G$ tiene una base finita, entonces toda base finita tiene el mismo número de elementos.
 \end{lema}
@@ -2761,9 +2821,6 @@ Si $G$ es un grupo abeliano libre con una base finita, decimos que $G$ tiene \en
 \begin{defin}
 Sea $G$ un grupo abeliano. Decimos que un elemento suyo $g\in G$ es un elemento de torsión si $ng=0$ para algún $n\in \mathbb{Z}\setminus \{ 0 \}$. Dado que si $ng=n'g'=0$, entonces $nn'(g+g')=0$, y por lo tanto el conjunto de todos los elementos de torsión de $G$ es un subgrupo suyo, denotado por $G_{tor}$. Decimos que $G$ es un grupo sin torsión si el único elemento de torsión es el 0. 
 \end{defin}
-
-
-\appendix
 \chapter{Algunos teoremas de topología importantes}
 
 
@@ -2817,6 +2874,7 @@ Supongamos que $q:X\to Y$ es una aplicación cociente, $Z$ es un espacio topoló
 \begin{tma}[Lema de pegado]
 Sean $A,B$ dos subconjuntos abiertos (o cerrados) de un espacio topológico $X$, tal que $X=A\cap B$, y sea $Y$ otro espacio topológico. Si la restricción de $f:X\to Y$ a $A$ y $B$ es continua, entonces $f$ es continua.
 \end{tma}
+\begin{comment}
 \chapter{CW-complejos}\label{sec:CW}
 Utilizo la definición inductiva de CW-complejo dada por Hatcher \cite{hatcher} y algunas propiedades expuestas por Lee \cite{lee1}.
 
@@ -2920,7 +2978,7 @@ Si $M$ es una $n$-variedad no vacía y un CW-complejo, entonces $n$ es también 
 
 
 
-\begin{comment}
+
 \chapter{Espacios adjunción}
 
 \chapter{Homología}
@@ -2940,6 +2998,7 @@ es coherente
 \end{defin}
 \end{comment}
 
+\addcontentsline{toc}{chapter}{Bibliography}
 \begin{thebibliography}{99}
 
 \bibitem{lee1}
@@ -2984,10 +3043,10 @@ H. Seifert, W. Threlfall.
 W. S. Massey. 
 \textit{Algebraic Topology, an introduction}, Springer - Verlag. 1970.
 
-\bibitem{wildberger}
-N. J. Wildberger.
-\textit{Algebraic Topolgy: A Begginer's Course}. Lecture 19.
-\\\url{http://www.wildegg.com/youtube-algebraic-topology.html}
+%\bibitem{wildberger}
+%N. J. Wildberger.
+%\textit{Algebraic Topolgy: A Begginer's Course}. Lecture 19.
+%\\\url{http://www.wildegg.com/youtube-algebraic-topology.html}
 
 \end{thebibliography}
 

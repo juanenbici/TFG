@@ -4,7 +4,7 @@
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Abstract}{i}{section*.2}%
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Introducción}{iii}{section*.3}%
 \contentsline {chapter}{\'{I}ndice general}{iv}{chapter*.4}%
-\contentsline {chapter}{\'{I}ndice de figuras}{v}{chapter*.5}%
+\contentsline {chapter}{\'{I}ndice de figuras}{vi}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}Variedades y superficies}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Variedades}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Variedades con borde}{2}{section.1.2}%
@@ -21,8 +21,13 @@
 \contentsline {section}{\numberline {4.1}Cremalleras}{33}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Teorema de Clasificación}{36}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Teorema de Clasificación, segunda parte}{40}{chapter.5}%
-\contentsline {subsection}{\numberline {5.0.1}Grupos fundamentales de las Superficies Compactas}{40}{subsection.5.0.1}%
-\contentsline {chapter}{\numberline {A}Algunos teoremas de topología importantes}{42}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Cocientes topológicos}{42}{section.Alph1.1}%
-\contentsline {chapter}{\numberline {B}CW-complejos}{44}{appendix.Alph2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{47}{appendix*.37}%
+\contentsline {section}{\numberline {5.1}Presentaciones de grupos}{40}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Grupos fundamentales de las Superficies Compactas}{41}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Teorema de Clasificación}{42}{section.5.3}%
+\contentsline {chapter}{\numberline {A}Grupos}{43}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Grupo fundamental}{43}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Grupos abelianos libres}{43}{section.Alph1.2}%
+\contentsline {chapter}{\numberline {B}Algunos teoremas de topología importantes}{44}{appendix.Alph2}%
+\contentsline {section}{\numberline {B.1}Cocientes topológicos}{44}{section.Alph2.1}%
+\contentsline {chapter}{Bibliography}{45}{tma.Alph2.1.9}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{46}{appendix*.36}%
