@@ -23,11 +23,11 @@
 \contentsline {chapter}{\numberline {5}Teorema de Clasificación, segunda parte}{40}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Presentaciones de grupos}{40}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Grupos fundamentales de las Superficies Compactas}{41}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Teorema de Clasificación}{42}{section.5.3}%
-\contentsline {chapter}{\numberline {A}Grupos}{43}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Grupo fundamental}{43}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Grupos abelianos libres}{43}{section.Alph1.2}%
-\contentsline {chapter}{\numberline {B}Algunos teoremas de topología importantes}{44}{appendix.Alph2}%
-\contentsline {section}{\numberline {B.1}Cocientes topológicos}{44}{section.Alph2.1}%
-\contentsline {chapter}{Bibliography}{45}{tma.Alph2.1.9}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{46}{appendix*.36}%
+\contentsline {section}{\numberline {5.3}Teorema de Clasificación}{43}{section.5.3}%
+\contentsline {chapter}{\numberline {A}Grupos}{44}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Grupo fundamental}{44}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Grupos abelianos libres}{44}{section.Alph1.2}%
+\contentsline {chapter}{\numberline {B}Algunos teoremas de topología importantes}{45}{appendix.Alph2}%
+\contentsline {section}{\numberline {B.1}Cocientes topológicos}{45}{section.Alph2.1}%
+\contentsline {chapter}{Bibliography}{46}{tma.Alph2.1.9}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{47}{appendix*.36}%
