@@ -65,7 +65,7 @@
 \newcommand{\Toro}{\mathbb{T}^2}
 \newcommand{\Proyectivo}{\mathbb{P}^2}
 \newcommand{\enfatiza}[1]{\textbf{\textit{#1}}}
-
+\newcommand{\Disco}{\overline{\mathbb{B}}^2}
 % Estilos teoremas (Mejorable)
 \theoremstyle{definition}
 \newtheorem{defin}{Definición}[section]
@@ -86,7 +86,7 @@
     \null
     \thispagestyle{empty}%
     \newpage}
-
+\usepackage{caption}
 \usepackage{subcaption} %para hacer subfigures
 % Cabeceras
 \renewcommand{\title}{ZIP}
@@ -651,7 +651,7 @@ El toro $\Toro$ es homeomorfo al espacio cociente resultante de la relación de 
 Definimos la aplicación $q:I\times I \to \Toro$ que manda $q(u,v)=(e^{2\pi iu},e^{2\pi iv})$. Por el teorema de la aplicación cerrada (\autoref{teo:aplicac_cerrada}), es una aplicación cociente. Al hacer las mismas identificaciones que la relación de equivalencia, por la unicidad del espacio cociente (\autoref{teo:unicidad_espacio_cociente}) se obtiene el resultado.
 \end{proof}
 
-\clearpage
+
 
 \begin{figure}%%%%FIGURA: TORO COMO CUADRADO
 \begin{center}
@@ -1099,7 +1099,7 @@ Podemos dar también las representaciones de algunas superficies con borde (\aut
 \item[(c)] $Cil=\langle a,b,c\mid aba^{-1}c\rangle$ (\autoref{eje:rep_mobius}).
 \end{itemize}
 \end{eje}
-\clearpage
+
 
 
 
@@ -1216,7 +1216,7 @@ Podemos dar también las representaciones de algunas superficies con borde (\aut
 \end{subfigure}
 \caption{Representación de superficies con borde.}\label{fig:rep_sup_borde}
 \end{figure}
-\clearpage
+
 
 \begin{figure}[h]%%%%FIG: ejemplo operacion
 \centering
@@ -2712,8 +2712,8 @@ Si $G$ admite una presentación $\langle S\mid R	\rangle$ en las cuales $S$ y $R
 
 \section{Grupos fundamentales de las Superficies Compactas}
 Empecemos viendo un resultado que es consecuencia del Teorema de Seifert-Van Kampen.
-\begin{prop}
-Sea $X$ un espacio topológico. Supongamos que $U,V\subseteq X$ son abiertos de $X$ tales que $X=U\cup V$. Supongamos también que $U$, $V$ y $U\cap V$ son conexos por caminos. Sea $p\in U\cup V$, y supongamos también que $U$ es simplemente conexo. Entonces la inclusión $l: V\xhookrightarrow{} X$ induce el isomorfismo
+\begin{prop}\label{teo:svk}
+Sea $X$ un espacio topológico. Supongamos que $U,V\subseteq X$ son abiertos de $X$ tales que $X=U\cup V$. Supongamos también que $U$, $V$ y $U\cap V$ son conexos por caminos. Sea $p\in U\cap V$, y supongamos también que $U$ es simplemente conexo. Entonces la inclusión $l: V\xhookrightarrow{} X$ induce el isomorfismo
 \[
 \pi_1 (X,p) \cong \pi_1 (V,p) / N
 \]
@@ -2738,7 +2738,7 @@ donde  los generadores $\beta_i$ están representados por los mismos lazos que e
 \begin{proof}
 Una demostración se puede encontrar en \cite{lee1} o en \cite{munkres}.
 \end{proof}
-\begin{tma}
+\begin{tma}\label{teo:2celda}
 Sea $X$ un espacio topológico conexo por caminos, y sea $\varphi: \partial \overline{\mathbb{B}}^2 \to X$ una aplicación continua. Consideramos la relación de equivalencia en $X \amalg \overline{\mathbb{B}}^2$ generada por $s \sim \varphi(s)$ para todo $s\in  \partial \overline{\mathbb{B}}^2$, y denotamos el espacio cociente por $\tilde{X}= (X \amalg  \overline{\mathbb{B}}^2) / \sim$.
 
 %Sea $\tilde{X}$ un espacio topológico Hausdorff y $X$ un subespacio de $X$ cerrado y conexo por caminos. Supongamos que existe $\varphi: \overline{\mathbb{B}}^2\to \tilde{X}$ tal que  y aplica $\partial \overline{\mathbb{B}}^2$ sobre $X$ y la restricción sobre $\interior{\overline{\mathbb{B}}^2}$ es biyectiva en $\tilde{X}\setminus X$. 
@@ -2754,14 +2754,46 @@ entonces $\pi_1 (\tilde{X}, \tilde{v} )$ tiene como presentación a
 \[
 \pi_1(\tilde{X}, \tilde{v}) \cong \langle \beta_1 , \dots , \beta_n \mid \sigma_1 , \dots ,\sigma_s , \tau \rangle ,
 \]
-donde $\tau$ es una expresión de $\gamma \in \pi_1(X, \tilde{v})$ en términos de   $\{ \beta_1 \dots ,\beta_n \}$.
+donde $\tau$ es una expresión de $\gamma \in \pi_1(X, \tilde{v})$ en términos de   $\{ \beta_1 , \dots ,\beta_n \}$.
 \end{tma}
+\begin{proof}
+Denotemos por $\pi :X\amalg \Disco \to \tilde{X}$ la aplicación cociente, y pensemos en $X$ como su imagen por $\pi$, para así considerarlo un subespacio de $\tilde{X}$.
+Si elegimos un punto $z\in \interior{\Disco}$ y llamamos $U=\interior{\Disco}$, $V=X\amalg \left( \Disco \setminus \{ z \} \right)$, tenemos que $U$ y $V$ son dos abiertos saturados, y sus imágenes por $\pi$ son por tanto abiertos en $\tilde{X}$, que denotaremos por $\tilde{U}$ y $\tilde{V}$ respectivamente. Veamos que $\tilde{U}$ y $\tilde{V}$ son abiertos por caminos.
+
+Por un lado, por ser $\pi$ continua, $\tilde{U}$ y $\tilde{U}\cap \tilde{V}=\pi (\interior{\Disco} \setminus \{ z \} ) $ son conexos por caminos por ser imágenes de conjuntos conexos por caminos. Por otro lado, como $\tilde{V}$ es la unión de los conjuntos conexos por caminos $X$ y $\tilde{U} \cap \tilde{V}$, entonces es también conexo por caminos.
+
+Vamos a elegir un punto base en $\tilde{U} \cap \tilde{V}$ para poder aplicar el \autoref{teo:svk}. Elegimos un $p\in \interior{\Disco} \setminus \{ z \}$, y denotamos por $c$ a un lazo con base en el punto $p$, tal que $\left[ c \right]$ genere $\pi_1 (\interior{\Disco} \setminus \{ z \} )$. Llamamos ahora $\tilde{p}=\pi (p) \in \tilde{U} \cap \tilde{V}$, y $\tilde{c} = \pi \circ c$. 
+Tenemos que la restricción de $\pi$ a $U$ es una aplicación cociente inyectiva, y por lo tanto un homeomorfismo en $\tilde{U}$. Así, dado que $U$ es símplemente conexo, también lo es $\tilde{U}$. Por otro lado, $\tilde{U} \cap \tilde{V}$ es la imagen por $\pi$ del abierto saturado $\interior{\Disco} \setminus \{ z \}$, y por tanto la restricción $\pi : \interior{\Disco} \setminus \{ z \} \to \tilde{U} \cap \tilde{V}$ es una aplicación inyectiva, y por tanto un homeomorfismo. Tenemos entonces que $\pi_1 (\tilde{U} \cap \tilde{V} , \tilde{p})$ es el grupo cíclico infinito generado por $\left[ \tilde{c} \right]$. Ahora, por el \autoref{teo:svk} podemos asegurar que existe una aplicación inyectiva
+\[
+\pi_1 (\tilde{V} , \tilde{p} ) \to \pi_1 (\tilde{X} , \tilde{p} )
+\]
+
+inducida por la inclusión $\tilde{V} \hookrightarrow \tilde{X}$, y cuyo núcleo es el menor subgrupo normal que contiene al subgrupo cícclico generado por $\left[ \tilde{c} \right]$. 
+
+Ahora cambiaremos el punto base, puesto que estamos interesado en $\tilde{v}$ , y no en $\tilde{p}$. Para ello, denotamos por $a$ el camino en $\partial \Disco $ que represente el generador $\alpha$ del enunciado del teorema. Sea $b$ el camino en $D$ que une $p$ con $v$. Entonces $\tilde{b} =\pi \circ b$ es el camino en $\tilde{V}$ que une $\tilde{p}$ con $\tilde{v}$ y $\tilde{a} = \pi \circ a$ es el lazo en $X$ con base en $\tilde{v}$ que representa al $\gamma$ del enunciado del teorema. El lazo $b^{-1} \circ c \circ b$ con base en $v$ es un generador de $\pi_1 (\Disco \setminus \{ z \} , v)$, y así, reemplazando $c$ si es necesario con su camino inverso, tenemos que es homotópico al camino $a$ en $\Disco \setminus \{ z \}$. Los isomorfismos de cambio de base inducidos por el camino $\tilde{b}$, que denotaremos por $\Phi_{\tilde{b}}$ ambos, conmutan con los homomorfismos inducidos por la inclusión del siguiente diagrama:
+\begin{center}
+\begin{tikzpicture}[use optics]
+\draw [->](0,0) node [anchor=east] {$\pi_1 (\tilde{V} , \tilde{p} )$} -- (2,0) node [anchor=west] {$\pi_1 (\tilde{X} , \tilde{p} )$};
+\draw [->]  (0,-1.5) node [anchor= east]{$\pi (\tilde{V} , \tilde{v} )$} -- (2,-1.5) node [anchor=west]{$\pi (\tilde{X} , \tilde{v} )$};
+
+\draw [->] (-.55,-.35) -- (-.55,-1.15) node[anchor=west, midway]{$\Phi_{\tilde{b}}$};
+\draw [->] (2.55,-.35) -- (2.55,-1.15) node[anchor=east, midway] {$\Phi_{\tilde{b}}$};
+\end{tikzpicture}
+\end{center}
+y llevan $\left[ \tilde{c} \right]$ a $\left[ \tilde{a} \right] =\gamma$. El homomorfismo que hemos obtenido es sobreyectivo y tiene como núcleo al menor subgrupo normal que contiene a $\gamma$.
+
+Para completar la demostración, necesitamos relacionar el grupo fundamental de $\tilde{V}$ con el de $X$. Combinando una retracción por deformación fuerte $r:\Disco \setminus \{ z \} \to \partial \Disco$ junto con la identidad en $X$, obtenemos una homotopía $H: V\times I \to V$ que da lugar a una etración por deformación fuerte de $V$ en $X \amalg \partial \Disco$. Dado que $\pi \circ H$ respeta las identificaciones hechas por $\pi \times \text{Id}_I : V \times I \to \tilde{V} \times I$, que a su vez es una aplicación cociente (por ser $V $ compacto y $\tilde{V}$ Hausdorff), esta pasa al cociente como una retracción por deformación fuerte de $\tilde{V}$ en $X$. Así pues, la inclusión $X \hookrightarrow \tilde{V}$ es una equivalencia homotópica. Por lo tanto podemos sustituir $\pi_1 (\tilde{V} , \tilde{v} )$ por $\pi_1 (X, \tilde{v} )$ y obtener así un homomorfismo sobreyectivo cuyo núcleo es el menor subgrupo normal que contiene a $\gamma$. La parte de las presentaciones se obtiene directamente del \autoref{teo:svk}. 
+
+
+
+\end{proof}
 
 \begin{tma}\label{teo:presenta}
 Sea $M$ una superficie con una presentación suya de una cara $\langle a_1, \dots , a_n \mid W\rangle$. Entonces una presentación del grupo fundamental $\pi_1 (M)$ viene dada por $\langle a_1, \dots , a_n \mid W\rangle$.
 \end{tma}
 \begin{proof}
-Denotemos por $\mathcal{P}$ la representación de $M$ dada, y sea $\pi$ la aplicación cociente $\pi: |\mathcal{P}| \to M$. Sea $M_1$ la imagen por $\pi$ del conjunto de las aristas. Se tiene que $M_1$ es una suma wedge de circunferencias $\mathbb{S}^1$, una por cada símbolo de la representación. Así pues, su grupo fundamental tiene como presentación $\langle a_1, \dots ,a_n \mid \emptyset \rangle$. Si ahora aplicamos el \autoref{teo:2celda} (teniendo en cuenta que la región poligonal es homeomorfa al disco cerrado unidad), tenemos que la aplicación $\varphi$ del teorema envía la frontera del polígono al lazo en $M_1$ obtenido siguiendo los generadores en el orden especificado por  la palabra $W$, obteniendo así el resultado.
+Denotemos por $\mathcal{P}$ la representación de $M$ dada, y sea $\pi$ la aplicación cociente $\pi: |\mathcal{P}| \to M$. Sea $M_1$ la imagen por $\pi$ del conjunto de las aristas. Se tiene que $M_1$ es una suma wedge de circunferencias $\mathbb{S}^1$, una por cada símbolo de la representación. Así pues, su grupo fundamental tiene como presentación $\langle a_1, \dots ,a_n \mid \emptyset \rangle$. 
+Teniendo en cuenta que la región poligonal es homeomorfa al disco cerrado unidad, podemos aplicar ahora el \autoref{teo:2celda} para pegar la cara de la región poligonal a la suma wedge. Como espacio $X$ consideramos $M_1$, y tenemos que $\pi$ actúa como la aplicación $\varphi$ del teorema enviando la frontera del polígono al lazo en $M_1$ obtenido siguiendo los generadores $a_1, \dots , a_n$ en el orden especificado por  la palabra $W$, obteniendo así el resultado.
 \end{proof}
 
 
@@ -3064,6 +3096,10 @@ es coherente
 \addcontentsline{toc}{chapter}{Bibliography}
 \begin{thebibliography}{99}
 
+\bibitem{zip}
+G. K. Francis, J. R. Weeks.
+\textit{Conway's ZIP Proof}. Amer. Math. Monthly 106, 1999.
+
 \bibitem{lee1}
 J. M. Lee.
 \textit{Introduction to Topological Manifolds}. Graduate text in mathematics, Springer - Verlag New York, 2011.
@@ -3078,8 +3114,11 @@ A. Hatcher.
 \textit{The Kirby Torus Trick for Surfaces}, 2013.
 \\\url{http://front.math.ucdavis.edu/1312.3518}
 
-\bibitem{rado}
+\bibitem{willard}
+S. Willard
+\textit{General Topology}. Addison-Wesley, 1970.
 
+\bibitem{rado}
 T. Radó.
 \textit{Über den Begriff der Riemannschen Fläche, Acta Sci}. Math. Szeged. 2 1925,
 101–121.
@@ -3104,8 +3143,11 @@ H. Seifert, W. Threlfall.
 
 \bibitem{massey}
 W. S. Massey. 
-\textit{Algebraic Topology, an introduction}, Springer - Verlag. 1970.
+\textit{Algebraic Topology, an introduction}, Springer-Verlag. 1970.
 
+\bibitem{xu}
+J. Gallier, D. Xu.
+\textit{A Guide to the Classification Theorem for Compact Surfaces}. Springer-Verlag, 2013.
 %\bibitem{wildberger}
 %N. J. Wildberger.
 %\textit{Algebraic Topolgy: A Begginer's Course}. Lecture 19.
