@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  22 SEP 2020 03:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  22 SEP 2020 15:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -899,59 +899,304 @@ Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
 \c@subfigure=\count313
 \c@subtable=\count314
 )
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
+
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count315
+
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count316
+\c@listtotal=\count317
+\c@listcount=\count318
+\c@liststart=\count319
+\c@liststop=\count320
+\c@citecount=\count321
+\c@citetotal=\count322
+\c@multicitecount=\count323
+\c@multicitetotal=\count324
+\c@instcount=\count325
+\c@maxnames=\count326
+\c@minnames=\count327
+\c@maxitems=\count328
+\c@minitems=\count329
+\c@citecounter=\count330
+\c@maxcitecounter=\count331
+\c@savedcitecounter=\count332
+\c@uniquelist=\count333
+\c@uniquename=\count334
+\c@refsection=\count335
+\c@refsegment=\count336
+\c@maxextratitle=\count337
+\c@maxextratitleyear=\count338
+\c@maxextraname=\count339
+\c@maxextradate=\count340
+\c@maxextraalpha=\count341
+\c@abbrvpenalty=\count342
+\c@highnamepenalty=\count343
+\c@lownamepenalty=\count344
+\c@maxparens=\count345
+\c@parenlevel=\count346
+\blx@tempcnta=\count347
+\blx@tempcntb=\count348
+\blx@tempcntc=\count349
+\blx@maxsection=\count350
+\blx@maxsegment@0=\count351
+\blx@notetype=\count352
+\blx@parenlevel@text=\count353
+\blx@parenlevel@foot=\count354
+\blx@sectionciteorder@0=\count355
+\blx@entrysetcounter=\count356
+\labelnumberwidth=\skip75
+\labelalphawidth=\skip76
+\biblabelsep=\skip77
+\bibitemsep=\skip78
+\bibnamesep=\skip79
+\bibinitsep=\skip80
+\bibparsep=\skip81
+\bibhang=\skip82
+\blx@bcfin=\read5
+\blx@bcfout=\write4
+\blx@langwohyphens=\language87
+\c@mincomprange=\count357
+\c@maxcomprange=\count358
+\c@mincompwidth=\count359
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count360
+\c@savedafterword=\count361
+\c@annotator=\count362
+\c@savedannotator=\count363
+\c@author=\count364
+\c@savedauthor=\count365
+\c@bookauthor=\count366
+\c@savedbookauthor=\count367
+\c@commentator=\count368
+\c@savedcommentator=\count369
+\c@editor=\count370
+\c@savededitor=\count371
+\c@editora=\count372
+\c@savededitora=\count373
+\c@editorb=\count374
+\c@savededitorb=\count375
+\c@editorc=\count376
+\c@savededitorc=\count377
+\c@foreword=\count378
+\c@savedforeword=\count379
+\c@holder=\count380
+\c@savedholder=\count381
+\c@introduction=\count382
+\c@savedintroduction=\count383
+\c@namea=\count384
+\c@savednamea=\count385
+\c@nameb=\count386
+\c@savednameb=\count387
+\c@namec=\count388
+\c@savednamec=\count389
+\c@translator=\count390
+\c@savedtranslator=\count391
+\c@shortauthor=\count392
+\c@savedshortauthor=\count393
+\c@shorteditor=\count394
+\c@savedshorteditor=\count395
+\c@labelname=\count396
+\c@savedlabelname=\count397
+\c@institution=\count398
+\c@savedinstitution=\count399
+\c@lista=\count400
+\c@savedlista=\count401
+\c@listb=\count402
+\c@savedlistb=\count403
+\c@listc=\count404
+\c@savedlistc=\count405
+\c@listd=\count406
+\c@savedlistd=\count407
+\c@liste=\count408
+\c@savedliste=\count409
+\c@listf=\count410
+\c@savedlistf=\count411
+\c@location=\count412
+\c@savedlocation=\count413
+\c@organization=\count414
+\c@savedorganization=\count415
+\c@origlocation=\count416
+\c@savedoriglocation=\count417
+\c@origpublisher=\count418
+\c@savedorigpublisher=\count419
+\c@publisher=\count420
+\c@savedpublisher=\count421
+\c@language=\count422
+\c@savedlanguage=\count423
+\c@origlanguage=\count424
+\c@savedoriglanguage=\count425
+\c@pageref=\count426
+\c@savedpageref=\count427
+\shorthandwidth=\skip83
+\shortjournalwidth=\skip84
+\shortserieswidth=\skip85
+\shorttitlewidth=\skip86
+\shortauthorwidth=\skip87
+\shorteditorwidth=\skip88
+\locallabelnumberwidth=\skip89
+\locallabelalphawidth=\skip90
+\localshorthandwidth=\skip91
+\localshortjournalwidth=\skip92
+\localshortserieswidth=\skip93
+\localshorttitlewidth=\skip94
+\localshortauthorwidth=\skip95
+\localshorteditorwidth=\skip96
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-bibtex.def
+File: blx-bibtex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+
+
+Package biblatex Warning: Using fall-back BibTeX(8) backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+\c@textcitecount=\count428
+\c@textcitetotal=\count429
+\c@textcitemaxnames=\count430
+\c@biburlbigbreakpenalty=\count431
+\c@biburlbreakpenalty=\count432
+\c@biburlnumpenalty=\count433
+\c@biburlucpenalty=\count434
+\c@biburllcpenalty=\count435
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count436
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count437
+\c@bbx:relatedtotal=\count438
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count439
+\@quotereset=\count440
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-06-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count315
+\l__kernel_color_stack_int=\count441
 \l__pdf_internal_box=\box62
 ) (./TFG2.aux
-LaTeX Info: Redefining \. on input line 24.
-LaTeX Info: Redefining \% on input line 24.
-LaTeX Info: Redefining \. on input line 25.
-LaTeX Info: Redefining \% on input line 25.
+LaTeX Info: Redefining \. on input line 28.
+LaTeX Info: Redefining \% on input line 28.
+LaTeX Info: Redefining \. on input line 32.
+LaTeX Info: Redefining \% on input line 32.
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Info: Redefining \. on input line 101.
-LaTeX Info: Redefining \% on input line 101.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count316
+\scratchcounter=\count442
 \scratchdimen=\dimen302
 \scratchbox=\box63
-\nofMPsegments=\count317
-\nofMParguments=\count318
+\nofMPsegments=\count443
+\nofMParguments=\count444
 \everyMPshowfont=\toks54
-\MPscratchCnt=\count319
+\MPscratchCnt=\count445
 \MPscratchDim=\dimen303
-\MPnumerator=\count320
-\makeMPintoPDFobject=\count321
+\MPnumerator=\count446
+\makeMPintoPDFobject=\count447
 \everyMPtoPDFconversion=\toks55
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(/usr/share/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 101.
+LaTeX Info: Redefining \selectfont on input line 107.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -987,14 +1232,14 @@ LaTeX Info: Redefining \selectfont on input line 101.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 101.
+LaTeX Info: Redefining \microtypecontext on input line 107.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 101.
+LaTeX Info: Redefining \showhyphens on input line 107.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1007,10 +1252,10 @@ ABD: EveryShipout initializing macros
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 101.
+ on input line 107.
 
 \AtBeginShipoutBox=\box64
-Package hyperref Info: Link coloring OFF on input line 101.
+Package hyperref Info: Link coloring OFF on input line 107.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -1020,73 +1265,64 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count322
+\c@section@level=\count448
 )
-LaTeX Info: Redefining \ref on input line 101.
-LaTeX Info: Redefining \pageref on input line 101.
-LaTeX Info: Redefining \nameref on input line 101.
+LaTeX Info: Redefining \ref on input line 107.
+LaTeX Info: Redefining \pageref on input line 107.
+LaTeX Info: Redefining \nameref on input line 107.
 
 (./TFG2.out) (./TFG2.out)
-\@outlinefile=\write4
+\@outlinefile=\write5
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<images/comlu.jpg, id=151, 536.0025pt x 263.48438pt>
+Package biblatex Info: Trying to load language 'spanish'...
+Package biblatex Info: ... file 'spanish.lbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx
+File: spanish.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+Package biblatex Info: Input encoding 'utf8' specified.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'TFG2.bbl' found.
+ (./TFG2.bbl)
+Package biblatex Info: Reference section=0 on input line 107.
+Package biblatex Info: Reference segment=0 on input line 107.
+<images/comlu.jpg, id=147, 536.0025pt x 263.48438pt>
 File: images/comlu.jpg Graphic file (type jpg)
 <use images/comlu.jpg>
-Package pdftex.def Info: images/comlu.jpg  used on input line 112.
+Package pdftex.def Info: images/comlu.jpg  used on input line 118.
 (pdftex.def)             Requested size: 428.80258pt x 210.78777pt.
- [1
+
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/comlu.jpg>]pdfTeX
  warning (ext4): destination with the same identifier (name{page.i}) has been a
 lready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.141 \clearpage
+l.147 \clearpage
                  [1] [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
 
-LaTeX Warning: Citation `mobius' on page iii undefined on input line 146.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
 
-LaTeX Warning: Citation `jordan' on page iii undefined on input line 149.
+LaTeX Warning: Citation 'jordan' on page 3 undefined on input line 155.
 
 
-LaTeX Warning: Citation `vondick' on page iii undefined on input line 150.
-
-
-LaTeX Warning: Citation `alexander' on page iii undefined on input line 150.
-
-
-LaTeX Warning: Citation `brahana' on page iii undefined on input line 150.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 148--152
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 154--158
 
  []
 
@@ -1100,19 +1336,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
+
+ []
+
 [4] (./TFG2.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-LaTeX Info: Redefining \. on input line 2.
-LaTeX Info: Redefining \% on input line 2.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
+LaTeX Info: Redefining \. on input line 3.
+LaTeX Info: Redefining \% on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1123,14 +1376,14 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 
 ])
-\tf@toc=\write5
+\tf@toc=\write6
  [6] (./TFG2.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-LaTeX Info: Redefining \. on input line 2.
-LaTeX Info: Redefining \% on input line 2.
+LaTeX Info: Redefining \. on input line 3.
+LaTeX Info: Redefining \% on input line 3.
 )
-\tf@lof=\write6
+\tf@lof=\write7
 
 [7
 
@@ -1138,31 +1391,31 @@ LaTeX Info: Redefining \% on input line 2.
 ]
 Cap\'{\i }tulo 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
 Package hyperref Info: bookmark level for unknown defin defaults to 0 on input 
-line 195.
+line 201.
 Package hyperref Info: bookmark level for unknown obs defaults to 0 on input li
-ne 202.
+ne 208.
 [1
 
 ]
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 207.
+ine 213.
 Package hyperref Info: bookmark level for unknown eje defaults to 0 on input li
-ne 213.
+ne 219.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 230--248
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 236--254
 []$[]$ $[]$ 
  []
 
 [2]
 Package hyperref Info: bookmark level for unknown corol defaults to 0 on input 
-line 282.
+line 288.
  [3]
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 300--322
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 306--328
 []$[]$ $[]$ 
  []
 
@@ -1170,7 +1423,7 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 300--322
 
 ]
 Package hyperref Info: bookmark level for unknown tma defaults to 0 on input li
-ne 541.
+ne 547.
  [8]
 Cap\'{\i }tulo 2.
 [9
@@ -1179,7 +1432,7 @@ Cap\'{\i }tulo 2.
 ]
 
 LaTeX Warning: Reference `teo:convexo_homeom_esfera' on page 10 undefined on in
-put line 581.
+put line 587.
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1290,15 +1543,15 @@ Missing character: There is no ; in font nullfont!
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `sec:CW' on page 11 undefined on input line 851.
+LaTeX Warning: Reference `sec:CW' on page 11 undefined on input line 857.
 
 [11]
 
-LaTeX Warning: Reference `fig:6a4a' on page 12 undefined on input line 880.
+LaTeX Warning: Reference `fig:6a4a' on page 12 undefined on input line 886.
 
 [12]
 
-LaTeX Warning: Reference `fig:6a4a.' on page 13 undefined on input line 887.
+LaTeX Warning: Reference `fig:6a4a.' on page 13 undefined on input line 893.
 
 [13] [14]
 Missing character: There is no ; in font nullfont!
@@ -1381,7 +1634,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1306--1368
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1312--1374
 []$[]$ $[]$ 
  []
 
@@ -1397,7 +1650,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1372--1415
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1378--1421
 []$[]$ $[]$ 
  []
 
@@ -1412,13 +1665,13 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (5.4431pt too wide) in paragraph at lines 1504--1505
+Overfull \hbox (5.4431pt too wide) in paragraph at lines 1510--1511
  [][] 
  []
 
 [20] [21]
 Package hyperref Info: bookmark level for unknown lema defaults to 0 on input l
-ine 1540.
+ine 1546.
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1512,7 +1765,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2112--2169
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2118--2175
 []$[]$ $[]$ 
  []
 
@@ -1543,40 +1796,41 @@ Ap\'{e}ndice A.
 Ap\'{e}ndice B.
 [43
 
-] [44]
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [45
+] [44] [45
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3181.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3181.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3137.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3137.
  (./TFG2.aux
-LaTeX Info: Redefining \. on input line 24.
-LaTeX Info: Redefining \% on input line 24.
-LaTeX Info: Redefining \. on input line 25.
-LaTeX Info: Redefining \% on input line 25.
+LaTeX Info: Redefining \. on input line 28.
+LaTeX Info: Redefining \% on input line 28.
+LaTeX Info: Redefining \. on input line 32.
+LaTeX Info: Redefining \% on input line 32.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3181.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3181.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3137.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3137.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
-(rerunfilecheck)             Checksum: 70DC835387F5B5B749AB8DFE93F35523;2066.
+(rerunfilecheck)             Checksum: 629AE62334B2135DEA714F8CE126140D;2015.
 
 
 LaTeX Warning: There were undefined references.
 
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                TFG2
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'TFG2.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 36828 strings out of 480478
- 850699 string characters out of 5905960
- 1272317 words of memory out of 5000000
- 51767 multiletter control sequences out of 15000+600000
- 545567 words of font info for 118 fonts, out of 8000000 for 9000
+ 43579 strings out of 480478
+ 983932 string characters out of 5905960
+ 1590351 words of memory out of 5000000
+ 58461 multiletter control sequences out of 15000+600000
+ 545507 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,12n,104p,1851b,1366s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,12n,104p,1851b,2208s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{prop.3.1.4} has been referenced but does not exis
 t, replaced by a fixed one
 
@@ -1599,12 +1853,12 @@ onts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (53 pages, 537349 bytes).
+/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb>
+Output written on TFG2.pdf (53 pages, 524152 bytes).
 PDF statistics:
- 924 PDF objects out of 1000 (max. 8388607)
- 821 compressed objects within 9 object streams
- 306 named destinations out of 1000 (max. 500000)
- 16226 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 921 PDF objects out of 1000 (max. 8388607)
+ 819 compressed objects within 9 object streams
+ 308 named destinations out of 1000 (max. 500000)
+ 15706 words of extra memory for PDF output out of 17280 (max. 10000000)
 

@@ -88,6 +88,12 @@
     \newpage}
 \usepackage{caption}
 \usepackage{subcaption} %para hacer subfigures
+
+%bibliografia
+
+\usepackage[backend=bibtex, style=numeric, sorting=none]{biblatex}
+\addbibresource{bibliografiatfg.bib}
+
 % Cabeceras
 \renewcommand{\title}{ZIP}
 \newcommand{\subtitle}{Trabajo fin de grado}
@@ -3116,67 +3122,17 @@ es coherente
 \end{defin}
 \end{comment}
 
-\addcontentsline{toc}{chapter}{Bibliography}
-\begin{thebibliography}{99}
-
-\bibitem{zip}
-G. K. Francis, J. R. Weeks.
-\textit{Conway's ZIP Proof}. Amer. Math. Monthly 106, 1999.
-
-\bibitem{lee1}
-J. M. Lee.
-\textit{Introduction to Topological Manifolds}. Graduate text in mathematics, Springer - Verlag New York, 2011.
-
-\bibitem{juanjo}
-V. Muñoz, J. J. Madrigal. 
-\textit{Topología Algebráica}. Sanz y Torres, 2015.
 
 
-\bibitem{hatcher_torus}
-A. Hatcher.
-\textit{The Kirby Torus Trick for Surfaces}, 2013.
-\\\url{http://front.math.ucdavis.edu/1312.3518}
 
-\bibitem{willard}
-S. Willard
-\textit{General Topology}. Addison-Wesley, 1970.
-
-\bibitem{rado}
-T. Radó.
-\textit{Über den Begriff der Riemannschen Fläche, Acta Sci}. Math. Szeged. 2 1925,
-101–121.
-
-\bibitem{munkres}
-J. R. Munkres.
-\textit{Elements of Agebraic Topology}. Addison-Wesley, 1984.
-
-\bibitem{hatcher}
-A. Hatcher.
-\textit{Algebraic Topology}. 2001. 
-\\\url{http://pi.math.cornell.edu/~hatcher/AT/ATpage.html}
-
-\bibitem{dehn}
-M. Dehn, P. Heegard.
-\textit{Analysis situs}, Enzyklopädie der Math. Wiss. 1907, 153-220.
+\addcontentsline{toc}{chapter}{Bibliografía} 
+\printbibheading
+\printbibliography[notkeyword=bib, heading=subbibliography, title={Referencias Históricas}]
+\printbibliography[keyword=bib, heading=subbibliography, title={Bibliografía}]
 
 
-\bibitem{seifert}
-H. Seifert, W. Threlfall.
-\textit{A Textbook of Topology}, 1era edición. Academic, New York. 1980.
 
-\bibitem{massey}
-W. S. Massey. 
-\textit{Algebraic Topology, an introduction}, Springer-Verlag. 1970.
 
-\bibitem{xu}
-J. Gallier, D. Xu.
-\textit{A Guide to the Classification Theorem for Compact Surfaces}. Springer-Verlag, 2013.
-%\bibitem{wildberger}
-%N. J. Wildberger.
-%\textit{Algebraic Topolgy: A Begginer's Course}. Lecture 19.
-%\\\url{http://www.wildegg.com/youtube-algebraic-topology.html}
-
-\end{thebibliography}
 
 \end{document}
 

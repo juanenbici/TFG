@@ -1,0 +1,279 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{mobius}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MAF}{%
+         family={Möbius},
+         familyi={M\bibinitperiod},
+         given={August\bibnamedelima F.},
+         giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MAF1}
+    \strng{fullhash}{MAF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Theorie der elementarem verwandtschaft}
+    \field{journaltitle}{Berichte über die Verhandlungen der Königlich
+  Sächsischen Gesellschaft der Wissenschaften}
+    \field{year}{1863}
+  \endentry
+
+  \entry{vondick}{article}{}
+    \name{author}{1}{}{%
+      {{hash=vDW}{%
+         prefix={von},
+         prefixi={v\bibinitperiod},
+         family={Dyck},
+         familyi={D\bibinitperiod},
+         given={Walther},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DWv1}
+    \strng{fullhash}{DWv1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Beiträge zur analysis situs}
+    \field{journaltitle}{Mathematische Annalen 32}
+    \field{year}{1888}
+  \endentry
+
+  \entry{dehn}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DM}{%
+         family={Dehn},
+         familyi={D\bibinitperiod},
+         given={Max},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HP}{%
+         family={Heegard},
+         familyi={H\bibinitperiod},
+         given={Poul},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DMHP1}
+    \strng{fullhash}{DMHP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Analysis situs}
+    \field{journaltitle}{Enzyklopädie der Math. Wiss}
+    \field{year}{1907}
+  \endentry
+
+  \entry{alexander}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AJ}{%
+         family={Alexander},
+         familyi={A\bibinitperiod},
+         given={James},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AJ1}
+    \strng{fullhash}{AJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Normal forms for one- and two-sided surfaces}
+    \field{journaltitle}{Ann. Math. 16}
+    \field{year}{1915}
+  \endentry
+
+  \entry{brahana}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BH}{%
+         family={Brahana},
+         familyi={B\bibinitperiod},
+         given={Henry},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BH1}
+    \strng{fullhash}{BH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Systems of circuits on two-dimensional manifolds}
+    \field{journaltitle}{Ann. Math. 23}
+    \field{year}{1920}
+  \endentry
+
+  \entry{rado}{article}{}
+    \name{author}{1}{}{%
+      {{hash=RT}{%
+         family={Radó},
+         familyi={R\bibinitperiod},
+         given={Tibor},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RT1}
+    \strng{fullhash}{RT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Über den Begriff der Riemannschen Fläche}
+    \field{journaltitle}{Acta Sci. Math. Szeged. 2}
+    \field{year}{1925}
+  \endentry
+
+  \entry{seifert}{book}{}
+    \name{author}{2}{}{%
+      {{hash=SH}{%
+         family={Seifert},
+         familyi={S\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=TW}{%
+         family={Threlfall},
+         familyi={T\bibinitperiod},
+         given={W.},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Academic Press}%
+    }
+    \keyw{bib}
+    \strng{namehash}{SHTW1}
+    \strng{fullhash}{SHTW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{A Textbook of Topology}
+    \field{year}{1980}
+  \endentry
+
+  \entry{massey}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MWS}{%
+         family={Massey},
+         familyi={M\bibinitperiod},
+         given={William\bibnamedelima S.},
+         giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer - Verlag}%
+    }
+    \keyw{bib}
+    \strng{namehash}{MWS1}
+    \strng{fullhash}{MWS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Algebraic Topology, an introduction}
+    \field{year}{1970}
+  \endentry
+
+  \entry{zip}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FGK}{%
+         family={Francis},
+         familyi={F\bibinitperiod},
+         given={George\bibnamedelima K.},
+         giveni={G\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=WJR}{%
+         family={Weeks},
+         familyi={W\bibinitperiod},
+         given={Jeffrey\bibnamedelima R.},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \keyw{bib}
+    \strng{namehash}{FGKWJR1}
+    \strng{fullhash}{FGKWJR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Conway's ZIP Proof}
+    \field{journaltitle}{Amer. Math. Monthly 106}
+    \field{year}{1999}
+  \endentry
+
+  \entry{lee1}{book}{}
+    \name{author}{1}{}{%
+      {{hash=LJM}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={John\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer - Verlag}%
+    }
+    \keyw{bib}
+    \strng{namehash}{LJM1}
+    \strng{fullhash}{LJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Introduction to Topological Manifolds}
+    \field{year}{2011}
+  \endentry
+
+  \entry{juanjo}{book}{}
+    \name{author}{2}{}{%
+      {{hash=MV}{%
+         family={Muñoz},
+         familyi={M\bibinitperiod},
+         given={Vicente},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=MJJ}{%
+         family={Madrigal},
+         familyi={M\bibinitperiod},
+         given={Juan\bibnamedelima José},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Sanz y Torres}%
+    }
+    \keyw{bib}
+    \strng{namehash}{MVMJJ1}
+    \strng{fullhash}{MVMJJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Topología Algebráica}
+    \field{year}{2015}
+  \endentry
+
+  \entry{munkres}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MJR}{%
+         family={Munkres},
+         familyi={M\bibinitperiod},
+         given={James\bibnamedelima R.},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Addison - Wesley}%
+    }
+    \keyw{bib}
+    \strng{namehash}{MJR1}
+    \strng{fullhash}{MJR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Elements of Algebraic Topology}
+    \field{year}{1984}
+  \endentry
+\enddatalist
+\endinput
