@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  22 SEP 2020 15:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  22 SEP 2020 23:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1292,62 +1292,69 @@ Package biblatex Info: ... file 'TFG2.bbl' found.
  (./TFG2.bbl)
 Package biblatex Info: Reference section=0 on input line 107.
 Package biblatex Info: Reference segment=0 on input line 107.
-<images/comlu.jpg, id=147, 536.0025pt x 263.48438pt>
+<images/comlu.jpg, id=123, 536.0025pt x 263.48438pt>
 File: images/comlu.jpg Graphic file (type jpg)
 <use images/comlu.jpg>
-Package pdftex.def Info: images/comlu.jpg  used on input line 118.
+Package pdftex.def Info: images/comlu.jpg  used on input line 119.
 (pdftex.def)             Requested size: 428.80258pt x 210.78777pt.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/comlu.jpg>]pdfTeX
- warning (ext4): destination with the same identifier (name{page.i}) has been a
-lready used, duplicate ignored
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/comlu.jpg>]
+[2]pdfTeX warning (ext4): destination with the same identifier (name{page.i}) h
+as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.147 \clearpage
-                 [1] [2
+l.148 \clearpage
+                 [1]pdfTeX warning (ext4): destination with the same identifier
+ (name{page.ii}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.148 \clearpage
+                 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
 
-LaTeX Warning: Citation 'jordan' on page 3 undefined on input line 155.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--158
+Underfull \hbox (badness 10000) in paragraph at lines 155--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
 
@@ -1356,7 +1363,7 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
 
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1364,7 +1371,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1372,87 +1379,83 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [5
-
-
-])
+))
 \tf@toc=\write6
- [6] (./TFG2.lof
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-LaTeX Info: Redefining \. on input line 3.
-LaTeX Info: Redefining \% on input line 3.
-)
-\tf@lof=\write7
-
-[7
+ [5
 
 
 ]
 Cap\'{\i }tulo 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
 Package hyperref Info: bookmark level for unknown defin defaults to 0 on input 
-line 201.
+line 202.
 Package hyperref Info: bookmark level for unknown obs defaults to 0 on input li
-ne 208.
+ne 209.
 [1
+
 
 ]
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 213.
+ine 214.
 Package hyperref Info: bookmark level for unknown eje defaults to 0 on input li
-ne 219.
+ne 220.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 236--254
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 237--255
 []$[]$ $[]$ 
  []
 
 [2]
 Package hyperref Info: bookmark level for unknown corol defaults to 0 on input 
-line 288.
+line 289.
  [3]
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 306--328
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 307--329
 []$[]$ $[]$ 
  []
 
-[4] [5] [6] [7
+[4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 547--548
 
-]
+ []
+
 Package hyperref Info: bookmark level for unknown tma defaults to 0 on input li
-ne 547.
- [8]
+ne 551.
+[7] [8]
 Cap\'{\i }tulo 2.
+
+LaTeX Warning: Reference `teo:unicidad_espacio_cociente' on page 9 undefined on
+ input line 594.
+
 [9
 
 
 ]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [10]
 
-LaTeX Warning: Reference `teo:convexo_homeom_esfera' on page 10 undefined on in
-put line 587.
+LaTeX Warning: Reference `teo:aplicac_cerrada' on page 11 undefined on input li
+ne 750.
 
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-[10]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1539,21 +1542,17 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `sec:CW' on page 11 undefined on input line 857.
 
 [11]
 
-LaTeX Warning: Reference `fig:6a4a' on page 12 undefined on input line 886.
+LaTeX Warning: Reference `fig:6a4a' on page 12 undefined on input line 904.
 
 [12]
 
-LaTeX Warning: Reference `fig:6a4a.' on page 13 undefined on input line 893.
+LaTeX Warning: Reference `fig:6a4a.' on page 13 undefined on input line 911.
 
-[13] [14]
+[13]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1564,13 +1563,20 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [15] [16]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14] [15] [16]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1634,7 +1640,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1312--1374
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1330--1392
 []$[]$ $[]$ 
  []
 
@@ -1650,7 +1656,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1378--1421
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1396--1439
 []$[]$ $[]$ 
  []
 
@@ -1665,13 +1671,13 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (5.4431pt too wide) in paragraph at lines 1510--1511
+Overfull \hbox (5.4431pt too wide) in paragraph at lines 1528--1529
  [][] 
  []
 
 [20] [21]
 Package hyperref Info: bookmark level for unknown lema defaults to 0 on input l
-ine 1546.
+ine 1564.
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1693,65 +1699,27 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [22] [23]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
- [24]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
- [25] [26
+ [22]
+Underfull \hbox (badness 10000) in paragraph at lines 1673--1675
 
-] [27]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1676--1677
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1678--1679
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1686--1688
+
+ []
+
+[23]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1765,13 +1733,86 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2118--2175
+Underfull \hbox (badness 10000) in paragraph at lines 1755--1756
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1762--1763
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1764--1765
+
+ []
+
+[24]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [25] [26] [27
+
+] [28]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2137--2194
 []$[]$ $[]$ 
  []
 
-[28] [29]
+[29] [30]
 Cap\'{\i }tulo 3.
-[30
+[31
 
 ]
 Missing character: There is no ; in font nullfont!
@@ -1784,58 +1825,53 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [31] [32] [33] [34] [35] [36]
+ [32] [33] [34] [35] [36]
+Underfull \hbox (badness 10000) in paragraph at lines 2739--2740
+
+ []
+
+[37]
 Cap\'{\i }tulo 4.
-[37
+[38
 
-] [38] [39] [40] [41]
-Ap\'{e}ndice A.
-[42
+] [39] [40] [41] [42]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [43
 
-]
-Ap\'{e}ndice B.
-[43
 
-] [44] [45
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3137.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3137.
+] [44]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3163.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3163.
  (./TFG2.aux
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3137.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3137.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3163.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3163.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
-(rerunfilecheck)             Checksum: 629AE62334B2135DEA714F8CE126140D;2015.
+(rerunfilecheck)             Checksum: A624E54130856200F26352D87C85B64D;1590.
 
 
 LaTeX Warning: There were undefined references.
 
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                TFG2
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'TFG2.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 43579 strings out of 480478
- 983932 string characters out of 5905960
- 1590351 words of memory out of 5000000
- 58461 multiletter control sequences out of 15000+600000
- 545507 words of font info for 118 fonts, out of 8000000 for 9000
+ 43599 strings out of 480478
+ 985366 string characters out of 5905960
+ 1589960 words of memory out of 5000000
+ 58502 multiletter control sequences out of 15000+600000
+ 545675 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,12n,104p,1851b,2208s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{prop.3.1.4} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{eje.1.2.5} has been referenced but does not exist, 
-replaced by a fixed one
+ 63i,12n,104p,1851b,2010s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{eje.1.2.5} has been referenced but does not exist
+, replaced by a fixed one
 
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts
@@ -1853,12 +1889,12 @@ onts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbo
-ls/msbm10.pfb>
-Output written on TFG2.pdf (53 pages, 524152 bytes).
+/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on TFG2.pdf (51 pages, 529862 bytes).
 PDF statistics:
- 921 PDF objects out of 1000 (max. 8388607)
- 819 compressed objects within 9 object streams
- 308 named destinations out of 1000 (max. 500000)
- 15706 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 847 PDF objects out of 1000 (max. 8388607)
+ 747 compressed objects within 8 object streams
+ 288 named destinations out of 1000 (max. 500000)
+ 16170 words of extra memory for PDF output out of 17280 (max. 10000000)
 

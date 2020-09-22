@@ -19,49 +19,47 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: TFG2-blx.bib
 Database file #2: bibliografiatfg.bib
-Warning--I didn't find a database entry for "jordan"
 Biblatex version: 3.13
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
-You've used 13 entries,
+You've used 22 entries,
             6365 wiz_defined-function locations,
-            1254 strings with 9913 characters,
-and the built_in function-call counts, 55431 in all, are:
-= -- 3639
-> -- 1116
-< -- 295
-+ -- 1086
-- -- 348
-* -- 3471
-:= -- 5395
+            1295 strings with 10791 characters,
+and the built_in function-call counts, 93935 in all, are:
+= -- 6107
+> -- 1890
+< -- 499
++ -- 1835
+- -- 588
+* -- 5887
+:= -- 8964
 add.period$ -- 0
-call.type$ -- 13
-change.case$ -- 166
+call.type$ -- 22
+change.case$ -- 280
 chr.to.int$ -- 42
-cite$ -- 24
-duplicate$ -- 5715
-empty$ -- 5429
-format.name$ -- 610
-if$ -- 11976
+cite$ -- 42
+duplicate$ -- 9907
+empty$ -- 9248
+format.name$ -- 1066
+if$ -- 20297
 int.to.chr$ -- 0
-int.to.str$ -- 29
+int.to.str$ -- 50
 missing$ -- 0
-newline$ -- 278
-num.names$ -- 548
-pop$ -- 4089
+newline$ -- 469
+num.names$ -- 947
+pop$ -- 7116
 preamble$ -- 1
-purify$ -- 214
+purify$ -- 364
 quote$ -- 0
-skip$ -- 2133
+skip$ -- 3643
 stack$ -- 0
-substring$ -- 5848
-swap$ -- 1317
-text.length$ -- 253
+substring$ -- 9617
+swap$ -- 2284
+text.length$ -- 421
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 430
+type$ -- 736
 warning$ -- 0
-while$ -- 699
+while$ -- 1164
 width$ -- 0
-write$ -- 266
-(There was 1 warning)
+write$ -- 448

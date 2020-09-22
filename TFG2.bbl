@@ -36,6 +36,25 @@
     \field{year}{1863}
   \endentry
 
+  \entry{jordan}{article}{}
+    \name{author}{1}{}{%
+      {{hash=JC}{%
+         family={Jordan},
+         familyi={J\bibinitperiod},
+         given={Camille},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{JC1}
+    \strng{fullhash}{JC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Sur la déformation des surfaces}
+    \field{journaltitle}{J. de Mathématiques Pures et appliquées, 2 e série
+  11}
+    \field{year}{1866}
+  \endentry
+
   \entry{vondick}{article}{}
     \name{author}{1}{}{%
       {{hash=vDW}{%
@@ -274,6 +293,180 @@
     \field{labeltitlesource}{title}
     \field{title}{Elements of Algebraic Topology}
     \field{year}{1984}
+  \endentry
+
+  \entry{doylemorean}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DPH}{%
+         family={Doyle},
+         familyi={D\bibinitperiod},
+         given={P.\bibnamedelima H.},
+         giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=MDA}{%
+         family={Moran},
+         familyi={M\bibinitperiod},
+         given={D.\bibnamedelima A.},
+         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \keyw{bib}
+    \strng{namehash}{DPHMDA1}
+    \strng{fullhash}{DPHMDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{A Short Proof that Compact 2-Manifolds Can Be Triangulated}
+    \field{journaltitle}{Inventiones math. 5}
+    \field{year}{1968}
+  \endentry
+
+  \entry{thomassen}{article}{}
+    \name{author}{1}{}{%
+      {{hash=TC}{%
+         family={Thomassen},
+         familyi={T\bibinitperiod},
+         given={Carsten},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \keyw{bib}
+    \strng{namehash}{TC1}
+    \strng{fullhash}{TC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{The Jordan-Schoenflies Theorem and the Classification of
+  Surface}
+    \field{journaltitle}{The American Mathematical Monthly, vol.99}
+    \field{year}{1992}
+  \endentry
+
+  \entry{moise}{book}{}
+    \name{author}{1}{}{%
+      {{hash=ME}{%
+         family={Moise},
+         familyi={M\bibinitperiod},
+         given={Edwin},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer - Verlag}%
+    }
+    \strng{namehash}{ME1}
+    \strng{fullhash}{ME1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Geometric Topology in Dimensions 2 and 3}
+    \field{year}{1977}
+  \endentry
+
+  \entry{richards}{article}{}
+    \name{author}{1}{}{%
+      {{hash=RI}{%
+         family={Richards},
+         familyi={R\bibinitperiod},
+         given={Ian},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RI1}
+    \strng{fullhash}{RI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{On the classification of noncompact surfaces}
+    \field{journaltitle}{T. Am. Math. Soc 106}
+    \field{year}{1963}
+  \endentry
+
+  \entry{prishlyak}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PAO}{%
+         family={Prishlyak},
+         familyi={P\bibinitperiod},
+         given={A.\bibnamedelima O.},
+         giveni={A\bibinitperiod\bibinitdelim O\bibinitperiod},
+      }}%
+      {{hash=MKI}{%
+         family={Mischenko},
+         familyi={M\bibinitperiod},
+         given={K.\bibnamedelima I.},
+         giveni={K\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PAOMKI1}
+    \strng{fullhash}{PAOMKI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Classification of noncompact surfaces with boundary}
+    \field{journaltitle}{Methods Funct. Anal. Topology 13}
+    \field{year}{2007}
+  \endentry
+
+  \entry{xu}{book}{}
+    \name{author}{2}{}{%
+      {{hash=GJ}{%
+         family={Gallier},
+         familyi={G\bibinitperiod},
+         given={Jean},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=XD}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Diana},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer-Verlag}%
+    }
+    \keyw{bib}
+    \strng{namehash}{GJXD1}
+    \strng{fullhash}{GJXD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{A Guide to the Classification Theorem for Compact Surfaces}
+    \field{year}{2013}
+  \endentry
+
+  \entry{willard}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WS}{%
+         family={Willard},
+         familyi={W\bibinitperiod},
+         given={Stephen},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Addison - Wesley}%
+    }
+    \keyw{bib}
+    \strng{namehash}{WS1}
+    \strng{fullhash}{WS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{General Topology}
+    \field{year}{1970}
+  \endentry
+
+  \entry{hatcher}{booklet}{}
+    \name{author}{1}{}{%
+      {{hash=HA}{%
+         family={Hatcher},
+         familyi={H\bibinitperiod},
+         given={Alan},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{bib}
+    \strng{namehash}{HA1}
+    \strng{fullhash}{HA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+  \field{howpublished}{\url{http://pi.math.cornell.edu/~hatcher/AT/ATpage.html}}
+    \field{title}{Algebraic Topology}
+    \field{year}{2001}
   \endentry
 \enddatalist
 \endinput
