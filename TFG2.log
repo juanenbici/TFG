@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  18 SEP 2020 17:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  22 SEP 2020 03:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1030,7 +1030,7 @@ LaTeX Info: Redefining \nameref on input line 101.
 \@outlinefile=\write4
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<images/comlu.jpg, id=155, 536.0025pt x 263.48438pt>
+<images/comlu.jpg, id=151, 536.0025pt x 263.48438pt>
 File: images/comlu.jpg Graphic file (type jpg)
 <use images/comlu.jpg>
 Package pdftex.def Info: images/comlu.jpg  used on input line 112.
@@ -1045,14 +1045,68 @@ lready used, duplicate ignored
 l.141 \clearpage
                  [1] [2
 
-] [3] (./TFG2.toc
+]
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+
+LaTeX Warning: Citation `mobius' on page iii undefined on input line 146.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+
+LaTeX Warning: Citation `jordan' on page iii undefined on input line 149.
+
+
+LaTeX Warning: Citation `vondick' on page iii undefined on input line 150.
+
+
+LaTeX Warning: Citation `alexander' on page iii undefined on input line 150.
+
+
+LaTeX Warning: Citation `brahana' on page iii undefined on input line 150.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+[4] (./TFG2.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -1065,12 +1119,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [4
+) [5
 
 
 ])
 \tf@toc=\write5
- [5] (./TFG2.lof
+ [6] (./TFG2.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
@@ -1078,57 +1132,54 @@ LaTeX Info: Redefining \% on input line 2.
 )
 \tf@lof=\write6
 
-[6
+[7
 
 
 ]
 Cap\'{\i }tulo 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
 Package hyperref Info: bookmark level for unknown defin defaults to 0 on input 
-line 168.
+line 195.
 Package hyperref Info: bookmark level for unknown obs defaults to 0 on input li
-ne 175.
+ne 202.
 [1
 
 ]
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 180.
+ine 207.
 Package hyperref Info: bookmark level for unknown eje defaults to 0 on input li
-ne 186.
+ne 213.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 203--221
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 230--248
 []$[]$ $[]$ 
  []
 
 [2]
 Package hyperref Info: bookmark level for unknown corol defaults to 0 on input 
-line 255.
+line 282.
  [3]
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 273--295
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 300--322
 []$[]$ $[]$ 
  []
 
-[4] [5] [6]
-Cap\'{\i }tulo 2.
-[7
-
+[4] [5] [6] [7
 
 ]
 Package hyperref Info: bookmark level for unknown tma defaults to 0 on input li
-ne 518.
- [8] [9]
-Cap\'{\i }tulo 3.
-[10
+ne 541.
+ [8]
+Cap\'{\i }tulo 2.
+[9
 
 
 ]
 
-LaTeX Warning: Reference `teo:convexo_homeom_esfera' on page 11 undefined on in
-put line 558.
+LaTeX Warning: Reference `teo:convexo_homeom_esfera' on page 10 undefined on in
+put line 581.
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1140,7 +1191,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-[11]
+[10]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1239,17 +1290,17 @@ Missing character: There is no ; in font nullfont!
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `sec:CW' on page 12 undefined on input line 828.
+LaTeX Warning: Reference `sec:CW' on page 11 undefined on input line 851.
+
+[11]
+
+LaTeX Warning: Reference `fig:6a4a' on page 12 undefined on input line 880.
 
 [12]
 
-LaTeX Warning: Reference `fig:6a4a' on page 13 undefined on input line 857.
+LaTeX Warning: Reference `fig:6a4a.' on page 13 undefined on input line 887.
 
-[13]
-
-LaTeX Warning: Reference `fig:6a4a.' on page 14 undefined on input line 864.
-
-[14] [15]
+[13] [14]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1266,7 +1317,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [16] [17]
+ [15] [16]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1308,7 +1359,7 @@ Missing character: There is no ; in font nullfont!
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18] [19]
+[17] [18]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1330,7 +1381,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1283--1345
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1306--1368
 []$[]$ $[]$ 
  []
 
@@ -1346,11 +1397,11 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1349--1392
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1372--1415
 []$[]$ $[]$ 
  []
 
-[20]
+[19]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1361,13 +1412,13 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (5.4431pt too wide) in paragraph at lines 1481--1482
+Overfull \hbox (5.4431pt too wide) in paragraph at lines 1504--1505
  [][] 
  []
 
-[21] [22]
+[20] [21]
 Package hyperref Info: bookmark level for unknown lema defaults to 0 on input l
-ine 1517.
+ine 1540.
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1389,7 +1440,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [23] [24]
+ [22] [23]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1402,20 +1453,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [25]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
+ [24]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1431,9 +1469,22 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [26] [27
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [25] [26
 
-] [28]
+] [27]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1461,13 +1512,13 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2089--2146
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2112--2169
 []$[]$ $[]$ 
  []
 
-[29] [30]
-Cap\'{\i }tulo 4.
-[31
+[28] [29]
+Cap\'{\i }tulo 3.
+[30
 
 ]
 Missing character: There is no ; in font nullfont!
@@ -1480,39 +1531,39 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [32] [33] [34] [35] [36] [37]
-Cap\'{\i }tulo 5.
-[38
+ [31] [32] [33] [34] [35] [36]
+Cap\'{\i }tulo 4.
+[37
 
-] [39] [40] [41] [42]
+] [38] [39] [40] [41]
 Ap\'{e}ndice A.
-[43
+[42
 
 ]
 Ap\'{e}ndice B.
-[44
+[43
 
-] [45]
+] [44]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [46
+ [45
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3158.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3158.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3181.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3181.
  (./TFG2.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3158.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3158.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3181.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3181.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
-(rerunfilecheck)             Checksum: 2CD8F528E35857B8838FDA65C70B1A47;2127.
+(rerunfilecheck)             Checksum: 70DC835387F5B5B749AB8DFE93F35523;2066.
 
 
 LaTeX Warning: There were undefined references.
@@ -1520,13 +1571,13 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  36828 strings out of 480478
- 850700 string characters out of 5905960
- 1272332 words of memory out of 5000000
- 51768 multiletter control sequences out of 15000+600000
- 545459 words of font info for 117 fonts, out of 8000000 for 9000
+ 850699 string characters out of 5905960
+ 1272317 words of memory out of 5000000
+ 51767 multiletter control sequences out of 15000+600000
+ 545567 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,104p,1851b,1366s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{prop.4.1.4} has been referenced but does not exis
+pdfTeX warning (dest): name{prop.3.1.4} has been referenced but does not exis
 t, replaced by a fixed one
 
 pdfTeX warning (dest): name{eje.1.2.5} has been referenced but does not exist, 
@@ -1550,10 +1601,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (53 pages, 531978 bytes).
+Output written on TFG2.pdf (53 pages, 537349 bytes).
 PDF statistics:
- 926 PDF objects out of 1000 (max. 8388607)
- 823 compressed objects within 9 object streams
- 307 named destinations out of 1000 (max. 500000)
- 16234 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 924 PDF objects out of 1000 (max. 8388607)
+ 821 compressed objects within 9 object streams
+ 306 named destinations out of 1000 (max. 500000)
+ 16226 words of extra memory for PDF output out of 17280 (max. 10000000)
 

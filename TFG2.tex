@@ -135,12 +135,39 @@ Manuel Alonso Morón\\[.1in]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Resumen}\addcontentsline{toc}{chapter}{\numberline{}Resumen}
-El presente trabajo tiene como objetivo dar un tratamiento riguroso a la denominada ``prueba ZIP'' de John H. Conway, que trata de forma intuitiva el Teorema de Clasificación de Superficies. Este asegura que toda superficie con borde compacta es homeomorfa a una suma conexa de esferas, a una suma conexa de toros o a una suma conexa de planos proyectivos, junto con una serie de discos perforados. Con este fin se dará una introducción básica al estudio de las variedades topológicas, se tratará el teorema de triangulación de Radó y se dará un método de representación de las superficies con borde como palabras. 
+El presente trabajo tiene como objetivo dar un tratamiento riguroso a la denominada ``prueba ZIP'' de John H. Conway, que trata de forma intuitiva el Teorema de Clasificación de Superficies. Con este fin se dará una introducción básica al estudio de las variedades topológicas, se tratará el teorema de triangulación de Radó y se dará un método efectivo de representación de las superficies. 
 
 \section*{Abstract}\addcontentsline{toc}{chapter}{\numberline{}Abstract}
 \clearpage
 
 \section*{Introducción}\addcontentsline{toc}{chapter}{\numberline{}Introducción}
+El siguiente trabajo se centra en estudiar el Teorema de Clasificación de Superficies. Este resultado proporciona un \textit{conjunto completo de representantes} para las superficies compactas. En concreto, asegura que toda superficie compacta es homeomorfa a una suma conexa de esferas, a una suma conexa de toros o a una suma conexa de planos proyectivos, y que estas superficies no son homeomorfas entre sí.\\
+
+El Teorema de Clasificación de Superficies está intrínsecamente relacionado con el desarrollo de la topología, desde su nacimiento hasta la actualidad. De la primera aproximación del Teorema hasta la demostración rigurosa completa pasaron más de sesenta años, durante los cuales se fueron construyendo conceptos tales como \textit{homeomorfismo, variedad, triangulación} u \textit{orientabilidad}. Si bien el primer intento de demostrar el teorema se dió en el año 1863 por Möbius \cite{mobius}, la noción de superficie como variedad bidimensional definida en terminos de cartas no se dió hasta los años 30 del siglo XX, y los intentos de clasificación anteriores a esa década asumen sin demostrar que todas las superficies son triangulables. Por otro lado, la noción de homeomorfismo tampoco se da de forma precisa hasta principios de la década de 1900.\\
+
+Todas las demostraciones rigurosas incluyen dos pasos. El primero, demostrar que toda superficie es triangulable. El segundo, transformar la superficie en otra homeomorfa, llamada \textit{forma normal}. \\
+Möbius, en un primer intento, proporcionó una clasificación de las superficies orientables, al igual que hizo Jordan \cite{jordan} tres años después sin aparentemente conocer su trabajo. En la prueba de Jordan encontramos además una tentativa de definición rigurosa de homeomorfismo, así como métodos de transformación que incluyen cortes sobre la superficie y que inspiraron a sus sucesores. Tanto Möbius como Jordan definen por primera vez el concepto de \textit{género} mediante el uso de curvas cerradas simples sobre una superficie, con el Jordan anticipa además su trabajo posterior de las \textit{Curvas de Jordan}.
+En 1888 von Dick \cite{vondick} es el primero en dar la clasificación completa de superficies orientables y no orientables, introduciendo además la noción de \textit{forma normal} de una superficie, pero se considera que son Dehn y Heegaard los que en 1907 \cite{dehn} lo demuestran de forma rigurosa. En 1915 Alexander publica en un artículo \cite{alexander} en el que se representan por primera vez las superficies como polígonos con aristas identificadas, y finalmente es en 1920 cuando Brahana \cite{brahana} demuestra de forma rigurosa y completa el Teorema de Clasificación en términos de transformaciones sobre polígonos que representan superficies. Radó \cite{rado} demuestra en 1925 que toda superficie es triangulable, completando así la prueba con la pieza faltante.
+Hoy en día, la mayoría de los libros de texto siguen la demostración dada por Seifert y Threlfall \cite{seifert}, que a su vez se basa en la de Massey \cite{massey}.\\
+
+En el año 1999, Francis y Weeks presentan en \cite{zip} una demostración totalmente nueva y distinta dada por John H. Conway y llamada ``\textit{ZIP proof}''. Las siglas \textit{ZIP} hacen referencia a \textit{Zero Irrelevancy Proof}, es decir, \textit{Prueba de Cero Irrelevancias}, pues según Conway esta demostración elimina algunas de las irrelevancias que contiene la versión de Seifert-Threlfall. El uso de polígonos para la representación de las superficies es para Conway uno de los pasos que se pueden eliminar, y utiliza en cambio el concepto de \textit{suma conexa de superficies} para llegar a la forma normal. Esta prueba, si bien es corta e instructiva por ser muy comprensible a nivel intuitivo, es bastante informal y carece de rigurosidad. Algunas partes de la demostración incluyen pasos que no se desarrollan en profundidad, y conceptos como triangulación, orientabilidad, género y característica de Euler se citan pero no llegan a definirse. Por otro lado, no se demuestra que las superficies del conjunto de representantes sean no homeomorfas entre sí. El propósito de este trabajo es por tanto formalizar la prueba de Conway y compararla con la Seifert-Threlfall.\\
+
+El trabajo está estructurado en cuatro capítulos.\\
+
+El primer capítulo trata de la triangulación de superficies. En la primera parte doy definiciones y resultados básicos de variedades, variedades con borde, superficies y suma conexa de variedades. En la segunda defino de forma rigurosa el concepto de triangulación de superficies mediante símplices y complejos simpliciales, y trato de dar una aproximación al Teorema de Radó. Esta es la parte más importante del capítulo, donde lo enunciaré y trataré de dar una idea de la demostración. Esta utiliza el \textit{Teorema de la Curva de Jordan} y el \textit{Teorema de Jordan-Shönflies}, que no demostraré pues me alejaría del propósito final del trabajo. Al terminar introduzco algunos resultados relacionados con la triangulación de variedades de dimensión superior.\\
+
+En el segundo capítulo doy la demostración de la primera parte del Teorema de Clasificación, a la manera de Seifert-Threlfall, para poder compararla con la prueba de Conway. Con esta finalidad, presento un método riguroso de representación de cualquier superficie triangulada como un polígono en el plano. Introduzco entonces una serie transformaciones sobre este polígono, de forma que represente una superficie homeomorfa. Estos conceptos también me servirán para formalizar las partes menos rigurosas de la prueba ZIP. Finalmente, una vez probado el teorema, lo extiendo a las superficies con borde.\\
+
+El tercer capítulo es la parte central del trabajo. Sigo paso por paso el artículo de Francis y Weeks, dando para cada resultado una demostración rigurosa, y definiendo formalmente las ideas de Conway. Para ello, me ayudo de algunas ideas expuestas en el capítulo tres. Comento también  donde procede las similitudes y diferencias con la prueba de Seifert-Threlfall, así como las posibles ventajas de una prueba u otra. El teorema que enuncio y demuestro, a diferencia de Conway, da directamente la clasificación de las superficies con borde.\\
+
+En el cuarto capítulo, finalmente completo la demostración probando que las superficies
+
+
+
+
+
+
+
 \clearpage
 \begin{comment}
 \section*{Notación}\addcontentsline{toc}{chapter}{\numberline{}Notación}
@@ -156,7 +183,7 @@ $I$ representará el intervalo $\left[ 0,1\right]$.
 
 
 
-\chapter{Variedades y superficies}
+\chapter{Superficies y triangulación}
 \pagenumbering{arabic} 
 \setcounter{page}{1}
 En este capítulo doy las definiciones y resultados básicos sobre variedades y superficies. Me basaré principalmente en los libros de J. M. Lee \cite{lee1} y V. Muñoz - J. J. Madrigal \cite{juanjo}.\\
@@ -361,11 +388,7 @@ FALTA COMENTARIO DE QUE LA CONSTRUCCIÓN RESULTANTE NO DEPENDE DE LAS ELECCIONES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\chapter{Triangulación de superficies}
 
-Un hecho fundamental para la prueba del teorema de clasificación es que toda superficie es triangulable. La demostración, atribuída a Radó en 1925 \cite{rado}, utiliza el \emph{teorema de Schönflies}, cuya prueba es larga y técnica. ......... \begin{comment} Utilizaremos el truco de Kirby para superficies dado por Hatcher \cite{hatcher_torus}.
-\end{comment}
-\
 
 \section{Complejos simpliciales y triangulación}\label{sec:simplices}
 
