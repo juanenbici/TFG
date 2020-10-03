@@ -116,12 +116,12 @@
 
 % Todo esto de abajo habría que retocarlo pero así sirve de ejemplo
 \huge\textsc{Universidad Complutense de Madrid}\\[0.2in]
-\includegraphics[scale=0.8]{comlu}\\[0.1in] %Introduce la imagen y la reescala, inserta un pequeño hueco con lo de debajo
+\includegraphics[scale=0.14]{complu}\\[0.1in] %Introduce la imagen y la reescala, inserta un pequeño hueco con lo de debajo
 
 \Large{Facultad de Matemáticas}\\[0.5in] %inserta un hueco mayor con lo de abajo
  %la linea horizontal
 \Large{Trabajo de Fin de Grado}\\[.1in]
-\Huge {Un tratamiento riguroso de la prueba ZIP}\\[0.2in]
+\Huge {La prueba ZIP de Conway del Teorema de Clasificación de Superficies}\\[0.2in]
 
 
 
@@ -142,9 +142,10 @@ Manuel Alonso Morón\\[.1in]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \afterpage{\blankpage}
 \section*{Resumen}\addcontentsline{toc}{chapter}{\numberline{}Resumen}
-El presente trabajo tiene como objetivo dar un tratamiento riguroso de la denominada ``\textit{Prueba ZIP}'' de John H. Conway, que trata de forma intuitiva el Teorema de Clasificación de Superficies. Con este fin se dará una introducción básica al estudio de las variedades topológicas, se tratará el teorema de triangulación de Radó y se dará un método efectivo de representación de las superficies. 
+El presente trabajo tiene como objetivo abordar la denominada ``\textit{Prueba ZIP}'' de John H. Conway, que demuestra de forma intuitiva el Teorema de Clasificación de Superficies. La Prueba ZIP presenta ventajas respecto a la prueba clásica de Seifert - Threlfall, principalmente porque se trabaja directamente sobre las superficies y no sobre representaciones poligonales suyas. Por tanto se hará un tratamiento riguroso de la prueba, dando una introducción a las variedades topológicas, estudiando la triangulación de superficies y comparándola con la prueba clásica.
 
 \section*{Abstract}\addcontentsline{toc}{chapter}{\numberline{}Abstract}
+%The aim of the present work is to give a rigorous treatment of the so called ``\textit{ZIP Proof}'' given by John H. Conway, wich gives an intuitive approach to the Classification Theorem of Surfaces. With this in mind, an introduction to the topological manifolds will be given, 
 \clearpage
 
 \section*{Introducción}\addcontentsline{toc}{chapter}{\numberline{}Introducción}
@@ -154,16 +155,16 @@ El Teorema de Clasificación de Superficies está intrínsecamente relacionado c
 
 Todas las demostraciones rigurosas incluyen dos pasos. El primero, demostrar que toda superficie es triangulable. El segundo, transformar la superficie en otra homeomorfa, llamada \textit{forma normal}. \\
 Möbius, en un primer intento, proporcionó una clasificación de las superficies orientables, al igual que hizo Jordan \cite{jordan} tres años después sin aparentemente conocer su trabajo. En la prueba de Jordan encontramos además una tentativa de definición rigurosa de homeomorfismo, así como métodos de transformación que incluyen cortes sobre la superficie y que inspiraron a sus sucesores. Tanto Möbius como Jordan definen por primera vez el concepto de \textit{género} mediante el uso de curvas cerradas simples sobre una superficie, con el Jordan anticipa además su trabajo posterior de las \textit{Curvas de Jordan}.
-En 1888 von Dick \cite{vondick} es el primero en dar la clasificación completa de superficies orientables y no orientables, introduciendo además la noción de \textit{forma normal} de una superficie, pero se considera que son Dehn y Heegaard los que en 1907 \cite{dehn} lo demuestran de forma rigurosa. En 1915 Alexander publica en un artículo \cite{alexander} en el que se representan por primera vez las superficies como polígonos con aristas identificadas, y finalmente es en 1920 cuando Brahana \cite{brahana} demuestra de forma rigurosa y completa el Teorema de Clasificación en términos de transformaciones sobre polígonos que representan superficies. Radó \cite{rado} demuestra en 1925 que toda superficie es triangulable, completando así la prueba con la pieza faltante.
-Hoy en día, la mayoría de los libros de texto siguen la demostración dada por Seifert y Threlfall \cite{seifert}, que a su vez se basa en la de Massey \cite{massey}.\\
+En 1888 von Dick \cite{vondick} es el primero en dar la clasificación completa de superficies orientables y no orientables, introduciendo además la noción de \textit{forma normal} de una superficie, pero se considera que son Dehn y Heegaard los primeros que en 1907 \cite{dehn} lo demuestran de forma rigurosa. En 1915 Alexander publica en un artículo \cite{alexander} en el que se representan por primera vez las superficies como polígonos con aristas identificadas, y finalmente es en 1920 cuando Brahana \cite{brahana} demuestra de forma rigurosa y completa el Teorema de Clasificación en términos de transformaciones sobre polígonos que representan superficies. Radó \cite{rado} demuestra en 1925 que toda superficie es triangulable, completando así la prueba.
+Hoy en día, la mayoría de los libros de texto siguen la demostración dada por Seifert y Threlfall \cite{seifert}.\\
 
 En el año 1999, Francis y Weeks presentan en \cite{zip} una demostración totalmente nueva y distinta dada por John H. Conway y llamada ``\textit{ZIP proof}''. Las siglas \textit{ZIP} hacen referencia a \textit{Zero Irrelevancy Proof}, es decir, \textit{Prueba de Cero Irrelevancias}, pues según Conway esta demostración elimina algunas de las irrelevancias que contiene la versión de Seifert-Threlfall. El uso de polígonos para la representación de las superficies es para Conway uno de los pasos que se pueden eliminar, y utiliza en cambio el concepto de \textit{suma conexa de superficies} para llegar a la forma normal. Esta prueba, si bien es corta e instructiva por ser muy comprensible a nivel intuitivo, es bastante informal y carece de rigurosidad. Algunas partes de la demostración incluyen pasos que no se desarrollan en profundidad, y conceptos como triangulación, orientabilidad, género y característica de Euler se citan pero no llegan a definirse. Por otro lado, no se demuestra que las superficies del conjunto de representantes sean no homeomorfas entre sí. El propósito de este trabajo es por tanto formalizar la prueba de Conway y compararla con la Seifert-Threlfall.\\
 
 El trabajo está estructurado en cuatro capítulos.\\
 
-El primer capítulo trata de la triangulación de superficies. En la primera parte doy definiciones y resultados básicos de variedades, variedades con borde, superficies y suma conexa de variedades. En la segunda defino de forma rigurosa el concepto de triangulación de superficies mediante símplices y complejos simpliciales, y trato de dar una aproximación al Teorema de Radó. Esta es la parte más importante del capítulo, donde lo enunciaré y trataré de dar una idea de la demostración. Esta utiliza el \textit{Teorema de la Curva de Jordan} y el \textit{Teorema de Jordan-Shönflies}, que no demostraré pues me alejaría del propósito final del trabajo. \\
+El primer capítulo trata de la triangulación de superficies. En la primera parte doy definiciones y resultados básicos de variedades, variedades con borde, superficies y suma conexa de variedades. En la segunda defino de forma rigurosa el concepto de triangulación de superficies mediante símplices y complejos simpliciales, y trato de dar una aproximación al Teorema de Radó. \\ %Esta es la parte más importante del capítulo, donde lo enunciaré y trataré de dar una idea de la demostración. %Esta utiliza el \textit{Teorema de Jordan-Shönflies}, que no demostraré pues me alejaría del propósito final del trabajo. \\
 
-En el segundo capítulo doy la demostración de la primera parte del Teorema de Clasificación, a la manera de Seifert-Threlfall, para poder compararla con la prueba de Conway. Con esta finalidad, presento un método riguroso de representación de cualquier superficie triangulada como un polígono en el plano. Introduzco entonces una serie transformaciones sobre este polígono, de forma que al aplicarlas represente una superficie homeomorfa. Estos conceptos también me servirán para formalizar las partes menos rigurosas de la prueba ZIP. Finalmente, una vez probado el teorema, lo extiendo a las superficies con borde.\\
+En el segundo capítulo doy la demostración de la primera parte del Teorema de Clasificación, a la manera de Seifert-Threlfall, para poder compararla con la prueba de Conway. Con esta finalidad, presento un método riguroso de representación de cualquier superficie triangulada como un polígono en el plano. Introduzco entonces una serie transformaciones sobre este polígono que den lugar a superficies homeomorfas. Estos conceptos también me servirán para formalizar las partes menos rigurosas de la prueba ZIP. Finalmente, una vez probado el teorema, lo extiendo a las superficies con borde.\\
 
 El tercer capítulo es la parte central del trabajo. Sigo paso por paso el artículo de Francis y Weeks, dando para cada resultado una demostración rigurosa, y definiendo formalmente las ideas de Conway. Para ello, me ayudo de algunos conceptos expuestos en el capítulo tres. Comento también donde procede las similitudes y diferencias con la prueba de Seifert-Threlfall, así como las posibles ventajas de una prueba u otra. El teorema que enuncio y demuestro, a diferencia de Conway, da directamente la clasificación de las superficies con borde.\\
 
@@ -193,7 +194,7 @@ $I$ representará el intervalo $\left[ 0,1\right]$.
 \chapter{Superficies y triangulación}
 \pagenumbering{arabic} 
 \setcounter{page}{1}
-En este capítulo doy las definiciones y resultados básicos sobre variedades y superficies. Me basaré principalmente en los libros de J. M. Lee \cite{lee1} y V. Muñoz - J. J. Madrigal \cite{juanjo}.\\
+En este capítulo doy las definiciones y resultados básicos sobre variedades y superficies, así como el concepto de suma conexa en el que nos basaremos para la prueba de Conway. En la segunda parte del capítulo daremos una definición rigurosa de triangulación, a través de símplices y complejos simpliciales. Finalmente enunciaré el teorema de Radó y daré una idea de la demostración. Me basaré principalmente en los libros de Lee \cite{lee1}, Muñoz - Madrigal \cite{juanjo} y Munkres \cite{munkres}.\\
 
 \section{Variedades}\label{sec:variedades}
 Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo son las variedades, y en concreto las superficies. Decimos que un espacio topológico $M$ es \enfatiza{localmente euclídeo de dimensión n} si todo punto de $M$ tiene un entorno en $M$ que es homeomorfo a un abierto de $\R^n$.
@@ -399,7 +400,7 @@ La suma conexa de variedades no depende de los puntos elegidos ni de las cartas 
 
 \section{Complejos simpliciales y triangulación}\label{sec:simplices}
 
-Para poder dar una definición rigurosa de triangulación de variedades necesitamos la noción de \textit{complejos simpliciales}. Estos son construcciones formadas por \textit{símplices}, que son una generalización de los triángulos. En esta parte me baso en las definiciones de Munkres \cite{munkres}.
+Para poder dar una definición rigurosa de triangulación de variedades necesitamos la noción de \textit{complejos simpliciales}. Estos son construcciones formadas por \textit{símplices}, que son una generalización de los triángulos. 
 
 \begin{defin}%%%%DEF: Posición general
 Sean $v_0,\dots v_k$ $k+1$ puntos distintos de $\R^n$. Decimos que $\{ v_0,\dots ,v_k\}$ están en \enfatiza{posición general} si $c_0,\dots c_k$ son números reales tales que  $$\sum_{i=0}^{k}c_iv_i=0 \text{ y } \sum_{i=0}^kc_i=0,$$ entonces $c_0=\dots =c_k=0$.
@@ -414,7 +415,7 @@ Sean $\{ v_0,\dots ,v_n\}$ un conjunto de $k+1$ puntos de $\R^n$ en posición ge
 Un $0$-símplice es un punto, un 1-símplice es un segmento, un $2$-símplice es un triángulo junto a su interior, un $3$-símplice es un tetraedro sólido, y así sucesivamente (\autoref{fig:simplices}).
 \end{eje}
 
-\begin{figure}
+\begin{figure}[b]
 \centering
 \begin{tikzpicture}[scale=1.4]
 
@@ -546,39 +547,36 @@ Toda variedad (con borde y sin borde) que admita una triangulación se dice \enf
 \section{Teorema de Radó}
 Llegamos ahora a la sección central del capítulo: el Teorema de Triangulación de Radó, que asegura que toda superficie es triangulable.  Aunque nosotros no probaremos el teorema, demostraciones completas y accesibles se encuentran en \cite{doylemorean} y \cite{thomassen}.\\
 
-Para la demostración, la idea básica consiste en recubrir la superficie con discos coordenados regulares, y demostrar de forma inductiva que se puede triangular cada uno de los discos de forma que la triangulación sea compatible con la anterior. La dificultad reside en que la frontera de cada disco puede intersecar las fronteras de los símplices ya definidos un número infinito de veces. Y aunque sean solo un número finito, ver que las regiones que se crean por las intersecciones de las curvas son homeomorfas a discos cerrados necesita del Teorema de Schönflies, un resultado difícil y largo de probar. Enunciémoslo de forma precisa.
-
-\begin{tma}[Teorema de Jordan-Schönflies]\label{teo:schoenflies}
-Sea $f:C \to C'$ un homeomorfismo entre dos curvas cerradas simples. Entonces $f$ se puede extender a todo el plano como un homeomorfismo.
-\end{tma}
-
-Podemos ver ahora el Teorema de Triangulación para superficies y superficies con borde.
-
 \begin{tma}[Teorema de Radó]
 Toda superficie es triangulable por un poliedro de un complejo simplicial 2-dimensional, en donde cada $1$-símplice es una cara de exáctamente dos $2$-símplices.\label{teo:rado}
 \end{tma}
+
+Para la demostración, la idea básica consiste en recubrir la superficie con discos coordenados regulares, y demostrar de forma inductiva que se puede triangular cada uno de los discos tal que cada triangulación sea compatible con la anterior. La dificultad reside en que la frontera de cada disco puede intersecar las fronteras de los símplices ya definidos un número infinito de veces. Y aunque sean solo un número finito, ver que las regiones que se crean por las intersecciones de las curvas son homeomorfas a discos cerrados necesita del Teorema de Schönflies, un resultado difícil y largo de probar. Podemos extender el Teorema de Radó a las superficies con borde.
 
 \begin{tma}
 Toda superficie con borde es triangulable por un poliedro de un complejo simplicial 2-dimensional, en donde hay dos tipos de 1-símplices: los que están totalmente contenidos en el borde, y los que se corresponden con puntos interiores. Los primeros son cara de exactamente un 2-símplice, y los últimos exactamente de dos 2-símplices.
 \end{tma}
 
-La triangulación de superficies ha dado lugar a la búsqueda de la triangulación de variedades de dimensiones superiores, otro ejemplo más de la importancia del Teorema de Clasificación en la actualidad. Por un lado, en los años 50 del siglo XX Edwin Moise enuncia y demuestra el siguiente teorema \cite{moise}:
+La triangulación de superficies ha llevado a estudiar si todas las variedades de dimensiones superiores son o no triangulables. Su importancia reside en que dan una descripción combinatoria de la variedad, lo que permite calcular invariantes topológicos tales como los grupos de homología. Así, dadas dos variedades trianguladas, podemos distinguirlas en términos de sus respectivas triangulaciones.
 
-\begin{tma}
-Toda 3-variedad es triangulable.
-\end{tma}
+Un tipo de variedades interesantes desde el punto de vista de la triangulación son las que tienen una estructura lineal a trozos (variedades \textit{PL}). Estas admiten lo que se llama una \textit{triangulación combinatoria}, que es una triangulación en la que se refleja la estructura de variedad. En los años 1940, Cairns y Whitehead \cite{cairns} demuestran que toda variedad diferenciable admite una estructura PL compatible.
+Por lo tanto, se tiene que toda variedad diferenciable es triangulable por una triangulación combinatoria.
+Por otro lado, en los años 1950 Edwin Moise \cite{moise} demuestra que toda variedad de dimensión 3 es diferenciable, y por lo tanto triangulable. En cambio, Kirby y Siebenmann \cite{kirby} demuestran que, para toda dimensión mayor o igual que 5, existen variedades sin una estructura PL. 
 
-En cambio, en los años 80 Freedman revolucionó la topología en dimensión 4, dando un ejemplo de una 4-variedad no triangulable. Actualmente se siguen estudiando las triangulaciones en dimensión $\geq 4$.
+En los años 1980, Freedman y Casson revolucionaron el estudio de las variedades de dimensión 4. El primero \cite{freedman} encontró una variedad, llamada $E_8$, que no admite una estructura PL, y por lo tanto no tiene una triangulación combinatoria. El segundo \cite{casson} demostró, de forma más general, que $E_8$ no es triangulable, encontrando por primera vez una variedad que no se puede triangular.
+
+Finalmente, Manolescu \cite{manolescu} demostró en 2013 que para cualquier dimensión mayor o igual que 5, existen también variedades no triangulables.
+
 
 \clearpage
 
 \chapter{Teorema de Clasificación, primera parte}
-En esta sección daremos una demostración clásica de la primera parte del teorema de clasificación de superficies compactas, que fue probado por primera vez en 1907 por Max Dehn y Poul Heegaard \cite{dehn}. En las primeras dos secciones utilizo las nociones que da Lee \cite{lee1} sobre la representación de superficies, y las amplío a la representación de superficies con borde. En la tercera sección demuestro el teorema basándome en la prueba de Lee \cite{lee1}, que a su vez se basa en la demostración clásica de Seifert y Threlfall \cite{seifert}. Finalmente clasifico las superficies con borde, siguiendo las ideas de Massey \cite{massey}.
+En este capítulo daremos una demostración clásica de la primera parte del teorema de clasificación de superficies compactas. Me basaré principalmente en los libros de Lee \cite{lee1}, Seifert-Threlfall \cite{seifert} y Massey \cite{massey}.
 
 
 \section{Superficies como cocientes}
 
-Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Trataremos de dar una forma de representarlas como polígonos, y veremos que toda superficie compacta se puede representar en el plano como el cociente de un polígono por una relación de equivalencia que identifica sus aristas dos a dos.\\
+Para el teorema de clasificación necesitamos un método uniforme de representación de las superficies compactas. Trataremos de dar una forma de representarlas como polígonos con aristas que se identifican, y veremos que toda superficie compacta se puede representar en el plano como el cociente de un polígono por una relación de equivalencia que identifica sus aristas dos a dos.\\
 Veamos tres ejemplos elementales: la esfera $\Esfera$, el plano proyectivo $\Proyectivo$ y el toro $\Toro$. Como veremos, estas superficies son fundamentales pues toda superficie compacta se puede construir a partir de ellas. 
 
 \begin{prop}%%%%PROP: ESFERA COCIENTE DISCO Y CUADRADO%%%%
@@ -774,7 +772,7 @@ Para la parte (b) utilizamos un argumento análogo al de la demostración de la 
 \end{figure}
 
 \begin{obs}
-De ahora en adelante visualizaremos el plano proyectivo como el \enfatiza{crosscap} (\autoref{fig:crosscap_paso_a_paso}), que construmos a partir de la proposición anterior, tal como se sigue en la figura. El primer esbozo de esta figura lo hizo von Dick \cite{vondick}.
+De ahora en adelante visualizaremos el plano proyectivo como el \enfatiza{crosscap}, que construmos a partir de la proposición anterior tal como se sigue en la \autoref{fig:crosscap_paso_a_paso}. El primer esbozo de esta figura lo hizo von Dick \cite{vondick}.
 \end{obs} 
 
 
@@ -871,7 +869,7 @@ De ahora en adelante visualizaremos el plano proyectivo como el \enfatiza{crossc
 
 
 
-En las anteriores proposiciones hemos visto una o varias formas de representar superficies dadas ciertas construcciones geométricas. En estos casos hemos dado aplicaciones y demostraciones concretas para validar nuestros argumentos, pero a medida que aumenta la sofisticación es más útil guiarse visualmente por las figuras construidas. Por ello debemos formalizar un método para construir superficies identificando aristas de figuras geométricas del plano.
+En las anteriores proposiciones hemos visto una o varias formas de representar superficies dadas ciertas construcciones geométricas. En estos casos hemos dado aplicaciones y demostraciones concretas para validar nuestros argumentos, pero a medida que aumenta la sofisticación es más útil guiarse visualmente por las figuras construidas. Por ello debemos formalizar un método general para construir superficies identificando aristas de figuras geométricas del plano.
 %Daremos por sabidas las definiciones básicas de símplices CW-complejos, que dejamos en el \autoref{sec:CW}.
 
 \begin{defin}%%%DEF:Polígono
@@ -901,14 +899,84 @@ Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1\amalg \dots
 %Sea $M$ el espacio cociente, sea $\pi :P\to M$ la aplicación cociente y sean $M_0, \, M_1, \, M_2=M$ respectivamente las imágenes por $\pi$ de los vértices, las aristas y las regiones poligonales. Por la propia definición de $P$, $M_0$ es un espacio discreto, y para $k=1,2$, $M_k$ se obtiene a partir de $M_{k-1}$ pegando un número finito de $k$-celdas. Por tanto $M$ es un CW-complejo (\autoref{def:cw}).\\
 Para demostrar esta propiedad seguiremos una idea similar a la de la \autoref{prop:suma_conexa}. Para probar (a), denotemos por $M$ el espacio cociente, y sea $\pi :P\to M$ la proyección.  %, entonces, por la \autoref{prop:cw_variedad}, $M$ será una superficie.\\
 Por un lado, los puntos que provienen del interior de cada región poligonal son abiertos en $M$ por definición, y por lo tanto son entornos euclideos de cada uno de sus puntos. Así, tenemos que aquí $M$ es localmente euclídea, y además Hausdorff y IIAN \\
-Sea ahora $D$ la imagen por $\pi$ del interior de una arista de una región poligonal, y sea $d\in D$. Veamos que $d$ tiene un entorno Euclideo. Por un lado, $d$ tiene exáctamente dos preimágenes $x$ e $y$, cada una en el interior de una arista distinta $D_1$ y $D_2$. Supongamos sin pérdida de generalidad que estas dos aristas pertenecen respectivamente a $P_1$ y $P_2$ ($P_1$ puede ser igual a $P_2$), y denotemos por $h:D_2\to D_1$ un homeomorfismo tal que $h(y)=x$. Dado que cada $P_i$ es una variedad con borde, y $x,y$ son puntos borde, podemos elegir cartas coordenadas $(U,\varphi)$  para $P_1$ y $(V,\psi)$ para $P_2$ tal que $x\in U$, $y\in V$. Denotamos $\widehat{U}=\varphi(U),\widehat{V}=\psi(V)\subseteq \mathbb{H}^2$ y podemos asumir, contrayendo $U$ y $V$ si es necesario, que $h(V\cap D_2)=U\cap D_1$, y que $\widehat{U}=U_0\times [0,\varepsilon)$, $\widehat{V}=V_0\times [0,\varepsilon)$  para un $\varepsilon >0$ y unos subconjuntos $U_0, V_0 \subset \R$ como se muestra en la \autoref{fig:6a4a} AUNPORHACEr. Así pues podemos escribir las aplicaciones coordenadas como $\varphi(x)=(\varphi_0(x),\varphi_1(x))$, $\psi(x)=(\psi_0(y),\psi_1(y))$ con $\varphi_0:U\to U_0$, $\varphi_1:U\to [0,\varepsilon)$, $\psi_0:V\to V_0$ y $\psi_1:V\to [0,\varepsilon)$ aplicaciones continuas. Que $x$ e $y$ sean puntos borde significa que $\varphi_1(x)=\psi_1(y)=0$.\\
+Sea ahora $D$ la imagen por $\pi$ del interior de una arista de una región poligonal, y sea $d\in D$. Veamos que $d$ tiene un entorno Euclideo. Por un lado, $d$ tiene exáctamente dos preimágenes $x$ e $y$, cada una en el interior de una arista distinta $D_1$ y $D_2$. Supongamos sin pérdida de generalidad que estas dos aristas pertenecen respectivamente a $P_1$ y $P_2$ ($P_1$ puede ser igual a $P_2$), y denotemos por $h:D_2\to D_1$ un homeomorfismo tal que $h(y)=x$. Dado que cada $P_i$ es una variedad con borde, y $x,y$ son puntos borde, podemos elegir cartas coordenadas $(U,\varphi)$  para $P_1$ y $(V,\psi)$ para $P_2$ tal que $x\in U$, $y\in V$. Denotamos $\widehat{U}=\varphi(U),\widehat{V}=\psi(V)\subseteq \mathbb{H}^2$ y podemos asumir, contrayendo $U$ y $V$ si es necesario, que $h(V\cap D_2)=U\cap D_1$, y que $\widehat{U}=U_0\times [0,\varepsilon)$, $\widehat{V}=V_0\times [0,\varepsilon)$  para un $\varepsilon >0$ y unos subconjuntos $U_0, V_0 \subset \R$ como se muestra en la \autoref{fig:6a4a}. Así pues podemos escribir las aplicaciones coordenadas como $\varphi(x)=(\varphi_0(x),\varphi_1(x))$, $\psi(x)=(\psi_0(y),\psi_1(y))$ con $\varphi_0:U\to U_0$, $\varphi_1:U\to [0,\varepsilon)$, $\psi_0:V\to V_0$ y $\psi_1:V\to [0,\varepsilon)$ aplicaciones continuas. Que $x$ e $y$ sean puntos borde significa que $\varphi_1(x)=\psi_1(y)=0$.\\
 Queremos ensamblar estas dos cartas con una aplicación cuya imagen sea un abierto de $\R^2$, pegándolas por los puntos que se corresponden en $D_1$ y $D_2$. En la demostración de la \autoref{prop:suma_conexa} teníamos un homeomorfismo entre los puntos borde de los entornos, pero en este caso el problema es que las aplicaciones $\varphi$ y $\psi$ no tienen por qué llevar puntos borde que se correspondan al mismo punto imagen, y por tanto tenemos que ajustarlo. Se tiene que las dos restricciones 
 $$\begin{array}{lr}
 \varphi_0|_{U\cap D_1}: U\cap D_1\to U_0  & \psi_0|_{V\cap D_2}:V\cap D_2\to V_0
 \end{array}$$
 son homeomorfismos, y definimos así el homeomorfismo $\beta:V_0\to U_0$ por $$\beta=(\varphi_0|_{U\cap D_1})\circ h\circ (\psi_0|_{V\cap D_2})^{-1}\, .$$ 
+\begin{figure}
+\centering
+\begin{tikzpicture}[use optics, >=triangle 45]
+
+\filldraw [color=black!30] (-4.5,-.5) -- +(0,-.7) -- +(1,-.7) -- +(1,0) -- cycle;
+\filldraw [color=black!30] (-4.5,.5) -- +(0,.7) -- +(1,.7) -- +(1,0) -- cycle;
+
+\draw (-4,-1.3) node[anchor=north] {$V$};
+\draw (-4,1.3) node[anchor=south] {$U$};
+
+\draw [dashed] (-4.5,-.5) -- +(0,-.7) -- +(1,-.7) -- +(1,0);
+\draw [dashed] (-4.5,.5) -- +(0,.7) -- +(1,.7) -- +(1,0);
+
+\draw (-5,.5) -- (-3,.5);
+
+\draw (-5,-.5) -- (-3,-.5);
+
+\draw [dashed] (-5,.5) [out=90, in =180] to (-4,3) [out = 0, in =90] to (-3,.5);
+\draw [dashed] (-5,-.5) [out=-90, in =180] to (-4,-3) [out = 0, in =-90] to (-3,-.5);
+
+
+
+
+\draw [fill=black] (-5,.5) circle (1pt);
+\draw [fill=black] (-3,.5) circle (1pt);
+\draw [fill=black] (-5,-.5) circle (1pt);
+\draw [fill=black] (-3,-.5) circle (1pt);
+
+
+
+\filldraw [color=black!30] (-.8,1.5) -- (-.8,2) -- (.8,2) -- (.8,1.5);
+\filldraw [shift={(0,-3)},color=black!30] (-.8,1.5) -- (-.8,2) -- (.8,2) -- (.8,1.5);
+
+\draw [dashed](-.8,1.5) -- (-.8,2) -- (.8,2) -- (.8,1.5);
+\draw [dashed, shift={(0,-3)}](-.8,1.5) -- (-.8,2) -- (.8,2) -- (.8,1.5);
+
+\draw [ very thick] (-.8,1.5) -- (.8,1.5);
+\draw [very thick, shift={(0,-3)}] (-.8,1.5) -- (.8,1.5);
+
+\draw (0,1) -- (0,2.2);
+\draw (-1,1.5) -- (1,1.5);
+\draw (0,1.5) node [anchor=north west]{$U_0$};
+\draw (0,2.2) node [anchor=south west]{$\widehat{U}$};
+
+\draw [shift={(0,-3)}] (0,1) -- (0,2.2);
+\draw  [shift={(0,-3)}] (-1,1.5) -- (1,1.5);
+\draw [shift={(0,-3)}](0,1.5) node [anchor=north west]{$V_0$};
+\draw [shift={(0,-3)}](0,2.2) node [anchor=south west]{$\widehat{V}$};
+
+
+
+\filldraw [color=black!30] (3.3,-.5) -- (3.3,.5) -- (4.8,.5) -- (4.8, -.5);
+\draw [dashed] (3.3,-.5) -- (3.3,.5) -- (4.8,.5) -- (4.8, -.5) -- cycle;
+\draw (3,0) -- (5,0);
+\draw (4,-1) -- (4,1);
+
+
+\draw [->] (-2.5,1) -- (-1.5,1.5) node [midway, above, sloped] {$\varphi$};
+\draw [->] (-2.5,-1) -- (-1.5,-1.5) node [midway, above, sloped] {$\psi$};
+
+\draw [->] (1.5,1.5) -- (2.5,1) node [midway, above, sloped] {$Id$};
+\draw [->] (1.5,-1.5) -- (2.5,-1) node [midway, above, sloped] {$B$};
+
+
+
+
+\end{tikzpicture}
+\caption{Entorno euclídeo de una arista. \label{fig:6a4a}}
+\end{figure}
+
 Sea ahora $B:\widehat{V}\to \R^2$ la aplicación $$B(y_1,y_2)=\left(\beta (y_1), -y_2\right)\, .$$
-Geométricamente, $B$ actúa juntando cada punto borde de acuerdo con $\beta$, y dando la vuelta al segmento que está por encima de él, llevándolo a un segmento por debajo (como en la Figura AUN POR HACER \autoref{fig:6a4a.}). Esta construcción nos asegura que 
+Geométricamente, $B$ actúa juntando cada punto borde de acuerdo con $\beta$, y dando la vuelta al segmento que está por encima de él, llevándolo a un segmento por debajo (como en la \autoref{fig:6a4a}). Esta construcción nos asegura que 
 \begin{equation}\label{ec:1}
 B\circ \psi(y)=\left(\beta \circ \psi_0(y),0\right)=\left(\varphi_0 \circ h(y),0\right)=\varphi \circ h(y).
 \end{equation}
@@ -922,9 +990,9 @@ $$\Phi ^{-1}(s)= \begin{cases}
 \pi \circ \psi ^{-1} \circ B^{-1}(s), & s_2\leq 0.\\
  \end{cases}$$
 Dado que las dos partes de la función son iguales donde coinciden, la aplicación es continua, y por tanto $\Phi$ es un homeomorfismo. Así pues, $U\amalg V$ es un entorno Euclideo de $d$. Un argumento análogo al de la demostración de la Proposición \ref{prop:suma_conexa} nos indica que es Hausdorff y IIAN.\\
-Para finalizar, sea $v\in M$ tal que su preimagen por $\pi$ es un conjunto de vértices $\left\{v_1,\dots ,v_k\right\} \subseteq P$. Para cada uno de estos vértices podemos elegir un $\varepsilon>0$ tal que el disco $B_{\varepsilon}(v_i)$ no contenga ningun vértice de la región poligonal $P_j$ a la que pertenece $v_i$ a parte de sí mismo, y tal que no interseca más aristas que las que lo contienen. $B_{\varepsilon}(v_i)\cap P_j$ es homeomorfo a un subconjunto $\Lambda_i$ de $\R^2$ definido por la intersección de dos semiplanos cuyas fronteras coinciden en un único punto y tal que el ángulo que forman es de $2\pi /k$, y que descrito en coordenadas polares queda $\Lambda_i =\left\{ (r,\theta ) \mid \theta_0 \leq \theta \leq \theta_0 + 2k\pi \right\}$. El homeomorfismo viene dado por una traslación del vértice $v_i$ al origen junto con una aplicación que en coordenadas polares es de la forma $(r,\theta ) \mapsto (r,\theta_0 +c\theta )$, con $c$ y $\theta_0$ constantes. Como cada arista está asociada exáctamente a otra arista, podemos ahora construir una aplicación que envíe cada una de las $\Lambda_i$ a un conjunto que contenga un entorno del origen y que, despues de reescalar si es necesario, respete las identificaciones entre las aristas de los $P_j$ (ver \autoref{fig:6.4}). Esta aplicación está definida sobre un conjunto saturado de $P$, que al pasar al cociente determina un homeomorfismo de $v$ a un entorno del origen de $\R^2$. HAUSDORFF Y IIAN?
+Para finalizar, sea $v\in M$ tal que su preimagen por $\pi$ es un conjunto de vértices $\left\{v_1,\dots ,v_k\right\} \subseteq P$. Para cada uno de estos vértices podemos elegir un $\varepsilon>0$ tal que el disco $B_{\varepsilon}(v_i)$ no contenga ningun vértice de la región poligonal $P_j$ a la que pertenece $v_i$ a parte de sí mismo, y tal que no interseca más aristas que las que lo contienen. $B_{\varepsilon}(v_i)\cap P_j$ es homeomorfo a un subconjunto $\Lambda_i$ de $\R^2$ definido por la intersección de dos semiplanos cuyas fronteras coinciden en un único punto y tal que el ángulo que forman es de $2\pi /k$, y que descrito en coordenadas polares queda $\Lambda_i =\left\{ (r,\theta ) \mid \theta_0 \leq \theta \leq \theta_0 + 2k\pi \right\}$. El homeomorfismo viene dado por una traslación del vértice $v_i$ al origen junto con una aplicación que en coordenadas polares es de la forma $(r,\theta ) \mapsto (r,\theta_0 +c\theta )$, con $c$ y $\theta_0$ constantes. Como cada arista está asociada exáctamente a otra arista, podemos ahora construir una aplicación que envíe cada una de las $\Lambda_i$ a un conjunto que contenga un entorno del origen y que, despues de reescalar si es necesario, respete las identificaciones entre las aristas de los $P_j$ (ver \autoref{fig:6.4}). Esta aplicación está definida sobre un conjunto saturado de $P$, que al pasar al cociente determina un homeomorfismo de $v$ a un entorno del origen de $\R^2$. %HAUSDORFF Y IIAN?
 
-Finalmente, para probar (b), volvemos a ver cada polígono como una superficie con borde. Las imágenes por $\pi$ de los puntos del interior de aristas que se identifican son localmente euclídeos por la demostración del apartado anterior. Por otro lado, para los puntos del borde que provengan de una arista y que tengan sólo una preimagen podemos encontrar como semibolas coordenadas las mismas de antes de pasar al cociente. Finalmente para las imágenes por $\pi$ de los vértices podemos encontrar una bola o una semibola coordenada con una construcción similar a la de la demostración anterior, dependiendo de si estas imágenes están contenidas en el borde o no. Por tanto se tiene que el espacio cociente resultante es una superficie con borde. HAUSDORFF Y IIAN?
+Finalmente, para probar (b), volvemos a ver cada polígono como una superficie con borde. Las imágenes por $\pi$ de los puntos del interior de aristas que se identifican son localmente euclídeos por la demostración del apartado anterior. Por otro lado, para los puntos del borde que provengan de una arista y que tengan sólo una preimagen podemos encontrar como semibolas coordenadas las mismas de antes de pasar al cociente. Finalmente para las imágenes por $\pi$ de los vértices podemos encontrar una bola o una semibola coordenada con una construcción similar a la de la demostración anterior, dependiendo de si estas imágenes están contenidas en el borde o no. Por tanto se tiene que el espacio cociente resultante es una superficie con borde. %HAUSDORFF Y IIAN?
 \end{proof}
 \begin{figure}
 \centering
@@ -999,6 +1067,10 @@ Finalmente, para probar (b), volvemos a ver cada polígono como una superficie c
 \caption{Entorno euclídeo de un vértice.\label{fig:6.4}}
 \end{figure}
 
+
+
+
+
 \begin{eje}%%%%EJE: Botella Klein
 La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando las aristas del cuadrado $I\times I$ de acuerdo a $(0,t)\sim (1,t)$ y $(t,0)\sim (1-t,1)$ para $0\leq t\leq 1$.  Para visualizar $K$, podemos pensar en pegar las aristas izquierda y derecha creando un cilindro, y luego hacer pasar el extremo superior por la parte inferior del cilindro, para finalmente pegar los dos extremos (ver \autoref{fig:klein}).
 \end{eje}
@@ -1007,7 +1079,7 @@ La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando las a
 Veamos ahora como obtener las figuras del \autoref{eje:rep_borde}. El cilindro $Cil$ es la superficie con borde que se obtiene al identificar las aristas de un cuadrado $I\times I$ dada la relación de equivalencia $(0,y)\sim (1,y),$ con $y\in I$ (\autoref{fig:ident_cil}). La banda de Möbius $Mob$ es la superficie con borde que se obtiene identificando las aristas del cuadrado $I\times I$ de acuerdo a la relación $(0,y)\sim (1,1-y)$, $y\in I$ (\autoref{fig:ident_mob}).
 \end{eje}
 
-\begin{figure}[h]%%%%FIG: Klein
+\begin{figure}%%%%FIG: Klein
 \centering
 \begin{tikzpicture} [use optics]
 %\draw [help lines] (-6,-2) grid (6,2);
@@ -1036,7 +1108,7 @@ Veamos ahora como obtener las figuras del \autoref{eje:rep_borde}. El cilindro $
 \caption{Construcción de la botella de Klein.\label{fig:klein}}
 \end{figure}
 \begin{figure}[h]
-\centering
+
 \begin{subfigure}{0.5\textwidth}
 \centering
 
@@ -1151,11 +1223,11 @@ Podemos dar también las representaciones de algunas superficies con borde (\aut
 
 
 
-\begin{figure}[t]%%%%FIG: Representación de superficies impoirtantes
+\begin{figure}%%%%FIG: Representación de superficies impoirtantes
 \centering
 \begin{subfigure}{0.3\textwidth}
 \centering
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.7]
 \draw [-<-](0,2)-- (2,0);
 \draw [-<-](2,0)-- (0,-2);
 \draw [-<-](0,-2)-- (-2,0);
@@ -1169,7 +1241,7 @@ Podemos dar también las representaciones de algunas superficies con borde (\aut
 \end{subfigure}
 \begin{subfigure}{0.3\textwidth}
 \centering
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.7]
 \draw [-<-](3,0)-- (5,2);
 \draw [->-](5,2)-- (7,0);
 \draw [->-](7,0)-- (5,-2);
@@ -1183,7 +1255,7 @@ Podemos dar también las representaciones de algunas superficies con borde (\aut
 \end{subfigure}
 \begin{subfigure}{0.3\textwidth}
 \centering
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.7]
 \draw [-<-](-3,0)-- (-5,2);
 \draw [-<-](-5,-2)-- (-3,0);
 \draw [-<-](-5,-2)-- (-7,0);
@@ -1200,7 +1272,7 @@ Podemos dar también las representaciones de algunas superficies con borde (\aut
 
 \begin{figure}%%%%FIG: Representacion esfera proyectivo
 \centering
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.8]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.7]
 \draw [-<-={at=0}, ->-={at=0.5}](-5,0) circle (2cm);
 \draw [->-={at=0}, ->-={at=0.5}](5,0) circle (2cm);
 \begin{scriptsize}
@@ -1223,7 +1295,7 @@ Podemos dar también las representaciones de algunas superficies con borde (\aut
 \centering
 \begin{subfigure}{0.3\textwidth}
 \centering
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.7]
 \draw [->-] (-2,0)-- (2,0);
 \draw [->-] (2,0)-- (0,3.46);
 \draw [->-] (0,3.46)-- (-2,0);
@@ -1235,7 +1307,7 @@ Podemos dar también las representaciones de algunas superficies con borde (\aut
 \end{subfigure}
 \begin{subfigure}{0.3\textwidth}
 \centering
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.7]
 \draw [-<-](0,2)-- (2,0);
 \draw [-<-](2,0)-- (0,-2);
 \draw [-<-](0,-2)-- (-2,0);
@@ -1249,7 +1321,7 @@ Podemos dar también las representaciones de algunas superficies con borde (\aut
 \end{subfigure}
 \begin{subfigure}{0.3\textwidth}
 \centering
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
+\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.7]
 \draw [-<-](0,2)-- (2,0);
 \draw [-<-](2,0)-- (0,-2);
 \draw [-<-](0,-2)-- (-2,0);
@@ -2198,7 +2270,7 @@ Sean $M_1$ y $M_2$ superficies con borde compactas tales que $\partial M_1$ y $\
 
 \chapter{La prueba ZIP de Conway}
 
-En este capítulo voy a dar un tratamiento riguroso de la prueba ZIP de Conway. Voy a definir los conceptos necesarios para la nueva demostración y me ayudaré de algunos resultados de los capítulos anteriores. El principal cambio será que no demostraremos el Teorema de Clasificación a través de transformaciones sobre una representación poligonal de la superficie, sino que trabajaremos directamente sobre una triangulación de la superficie para llegar a una forma estándar basada en el concepto de suma conexa. Para Conway, uno de los conceptos irrelevantes de la prueba habitual del que se puede prescindir en la prueba ZIP es el de representación poligonal. En cambio yo me apoyaré en él para poder dar una demostración de algunos de los puntos menos rigurosos.
+En este capítulo voy a dar un tratamiento riguroso de la prueba ZIP de Conway. Voy a definir los conceptos necesarios para la nueva demostración y me ayudaré de algunos resultados de los capítulos anteriores. El principal cambio será que no demostraremos el Teorema de Clasificación a través de transformaciones sobre una representación poligonal de la superficie hasta llegar a una forma normal, sino que trabajaremos directamente sobre una triangulación suya para llegar a una forma normal basada en el concepto de suma conexa. Para Conway, uno de los conceptos irrelevantes de la prueba habitual del que se puede prescindir en la prueba ZIP es el de representación poligonal. En cambio yo me apoyaré en él para poder dar una demostración de algunos de los puntos menos rigurosos.
 
 La prueba ZIP sólo nos demustra la primera parte del Teorema de Clasificación: nos dice que toda superficie es homeomorfa a una de las superficies estándar, pero no que estas sean distintas desde el punto de vista topológico. Esto lo demostraremos finalmente en el último capítulo del trabajo, de forma que sea independiente a una u otra prueba.
 
@@ -2736,8 +2808,9 @@ Por la versión preeliminar del teorema de clasificación, una superficie con bo
 \end{itemize}
 \end{proof}
 
-No he podido evitar hacer referencia a la representación poligonal de superficies para demostrar los puntos menos rigurosos, por lo que según Conway habría caído en una de las irrelevancias de la prueba clásica. Sin embargo, creo que combinando las dos ideas como he hecho la prueba se vuelve más entendible y corta. Los siete pasos de la demostración de Massey quedan reducidos considerablemente, y a mi parecer, al trabajar sobre la suma conexa en vez de haciendo transformaciones sobre palabras, la demostración parece más intuitiva, sin perder rigurosidad.\\
-
+\begin{obs}
+Como se ha visto, no he podido evitar hacer referencia a la representación poligonal de superficies para demostrar los puntos menos rigurosos, por lo que según Conway quizás habría caído en una de las irrelevancias de la prueba clásica. Sin embargo, creo que combinando las dos ideas como he hecho la prueba se vuelve más entendible y corta. Los siete pasos de la demostración de Massey quedan reducidos considerablemente, y a mi parecer, al trabajar sobre la suma conexa en vez de haciendo transformaciones sobre palabras, la demostración parece más intuitiva, sin perder rigurosidad.\\
+\end{obs}
 
 \chapter{Teorema de Clasificación, segunda parte}
 Hasta ahora hemos demostrado, con dos enfoques distintos, que toda superficie con borde compacta es homeomorfa a una esfera, a una suma conexa de copias del toro o a una suma conexa de copias del plano proyectivo, junto con un número finito de perforaciones. Sin embargo no hemos demostrado que estas tres superficies estándar sean no homeomorfas entre sí. En este capítulo completaremos por tanto la parte de la prueba que nos falta. 
@@ -2790,6 +2863,61 @@ donde  los generadores $\beta_i$ están representados por los mismos lazos que e
 \begin{proof}
 Una demostración se puede encontrar en \cite{lee1} o en \cite{munkres}.
 \end{proof}
+
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[use optics,scale=0.7]
+\draw (-3.8, 1.5) node {$X$};
+\draw (-4,0) [out=-90, in=150] to (-3,-1.54)  [out=-30, in = 180] to (0,-2) [out=0, in =180] to (1.58,-1.71) [out=0, in = 180] to (3,-2) [out =0, in=-90] to (5,0) [out=90, in=-30] to (3.45,1.09) [out=150, in =0] to (0,1.4) [out=180, in=90] to (-4,0);
+\draw [scale=0.8](1.8,0) arc [x radius= 1, y radius = 0.4, start angle =180, end angle =360];
+\draw [scale=0.8]  (2,-.2) arc [x radius= 0.8, y radius=0.3, start angle=180,  end angle=0];
+
+\draw [shift={(-4,0.3)},scale=0.7] (1.8,0) arc [x radius= 1, y radius = 0.4, start angle =180, end angle =360];
+\draw [shift={(-4,0.3)}, scale=0.7] (2,-.2) arc [x radius= 0.8, y radius=0.3, start angle=180,  end angle=0];
+
+\draw [color=white] (7,0) arc [x radius= 2, y radius =2, start angle=180, end angle= 360] node [color=black, anchor=north west, pos=0.6] {$a$};
+\draw [color=white] (8,0) arc [x radius= 1, y radius =1, start angle=180, end angle= 360] node [color=black, anchor=north west, pos=0.6] {$c$};
+\draw [->-={at=0.8}] (9,0) circle [radius=2] ;
+\draw [->-={at=0.8}] (9,0) circle [radius=1] ;
+\draw [->-={at=0.8}](9,0) -- (11,0) node [below, pos=0.8] {$b$};
+\filldraw (9,0) circle [radius= 2pt];
+\filldraw (11,0) circle [radius= 2pt] node [anchor=south west] {$v$};
+\filldraw (10,0) circle [radius= 2pt] node [anchor=south west] {$p$};
+\draw (9,0) node [above] {$z$};
+
+
+
+
+%\draw [shift={(2,-7)}, dash pattern = on 390pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 700pt] (-4,0) [out=-90, in=150] to (-3,-1.54)  [out=-30, in = 180] to (0,-2) [out=0, in =180] to (1.58,-1.71) [out=0, in = 180] to (3,-2) [out =0, in=-90] to (5,0) [out=90, in=-30] to (3.45,1.09) [out=150, in =0] to (0,1.4) [out=180, in=90] to (-4,0);
+\draw  [shift={(2,-7)}] (-3.8, 1.5) node {$\tilde{X}$};
+\draw [shift={(2,-7)}, dash pattern =on 254pt off 65pt on 700pt] (-4,0) [out=-90, in=150] to (-3,-1.54)  [out=-30, in = 180] to (0,-2) [out=0, in =180] to (1.58,-1.71) [out=0, in = 180] to (3,-2) [out =0, in=-90] to (5,0) [out=90, in=-30] to (3.45,1.09) [out=150, in =0] to (0,1.4) [out=180, in=90] to (-4,0);
+\draw [shift={(2,-7)},scale=0.8](1.8,0) arc [x radius= 1, y radius = 0.4, start angle =180, end angle =360];
+\draw [shift={(2,-7)},scale=0.8]  (2,-.2) arc [x radius= 0.8, y radius=0.3, start angle=180,  end angle=0];
+
+
+
+\draw [shift={(-2,-7.3)},scale=0.7] (1.8,0) arc [x radius= 1, y radius = 0.4, start angle =180, end angle =360];
+\draw [shift={(-2,-7.3)}, scale=0.7] (2,-.2) arc [x radius= 0.8, y radius=0.3, start angle=180,  end angle=0];
+
+\draw [shift={(1.4,-7)}, ->-={at=0.8}](1,-.2) arc [x radius= 1.8, y radius = 0.9, start angle =180, end angle =360] node [anchor=north west, pos=0.7] {$\tilde{a}$};
+\filldraw [shift={(1.4,-7)}] (4.6,-.2) circle [radius=2pt] node [anchor=west] {$\tilde{v}$};
+\draw [shift={(1.4,-7)},dashed](1,-.2) arc [x radius= 1.8, y radius = 0.9, start angle =180, end angle =0];
+
+
+\draw [shift={(1.4,-7)}, ->- = {at=0.9}](1,-.2) arc [x radius= 1.8, y radius = 2.2, start angle =180, end angle =0] node [anchor= west, pos=0.9] {$\tilde{b}$};
+
+
+\draw [shift={(1.4,-7)}, ->-={at=0.8}](1.5,1.3) arc [x radius= 1.3, y radius = 0.3, start angle =180, end angle =360]  node [anchor=north west, pos=0.7] {$\tilde{c}$};
+\draw [shift={(1.4,-7)},, dashed](1.5,1.3) arc [x radius= 1.3, y radius = 0.3, start angle =180, end angle =0];
+\filldraw [shift={(1.4,-7)}] (4.1,1.3) circle [radius=2pt] node [anchor=west] {$\tilde{p}$};
+
+
+\draw [->](6,-2.8) -- (6,-3.8) node [anchor=west, midway] {$\pi$};
+\end{tikzpicture}
+\caption{Pegando una 2-celda\label{fig:2celda}}
+\end{figure}
+
 \begin{tma}\label{teo:2celda}
 Sea $X$ un espacio topológico conexo por caminos, y sea $\varphi: \partial \overline{\mathbb{B}}^2 \to X$ una aplicación continua. Consideramos la relación de equivalencia en $X \amalg \overline{\mathbb{B}}^2$ generada por $s \sim \varphi(s)$ para todo $s\in  \partial \overline{\mathbb{B}}^2$, y denotamos el espacio cociente por $\tilde{X}= (X \amalg  \overline{\mathbb{B}}^2) / \sim$.
 
@@ -2839,6 +2967,8 @@ Para completar la demostración, necesitamos relacionar el grupo fundamental de 
 
 
 \end{proof}
+
+
 
 \begin{tma}\label{teo:presenta}
 Sea $M$ una superficie con una presentación suya de una cara $\langle a_1, \dots , a_n \mid W\rangle$. Entonces una presentación del grupo fundamental $\pi_1 (M)$ viene dada por $\langle a_1, \dots , a_n \mid W\rangle$.
@@ -2946,10 +3076,14 @@ Por otro lado, si $M$ y $M'$ son respectivamente sumas conexas de $n$ y $m$ copi
 Análogamente, si $M$ es una suma conexa de $n$ copias del plano proyectivo y $M'$ es una suma conexa de $m$ copias del plano proyectivo, $n\neq m$, entonces los abelianizados de sus grupos fundamentaes son de rango $n-1$ y $m-1$ respectivamente, es decir, son distintos.
 \end{proof}
 
-La clasificación de superficies compactas dio lugar a la clasificación de superficies no compactas en 1963, debida a Ian Richards \cite{richards}. Sin embargo, la clasificación completa de las superficies con borde no compactas no se obtuvo hasta 2007, cuando la hicieron Prishlyak y Mischenko \cite{prishlyak}.
+La clasificación de superficies compactas dio lugar a la clasificación de superficies no compactas en 1963, debida a Ian Richards \cite{richards}. Sin embargo, la clasificación completa de las superficies con borde no compactas no se obtuvo hasta 2007, cuando la dieron Prishlyak y Mischenko \cite{prishlyak}.
 
 
 \appendix
+
+\chapter{Triangulación de superficies}
+
+
 \begin{comment}
 \chapter{Grupos}
 \section{Grupo fundamental}

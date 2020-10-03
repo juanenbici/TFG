@@ -180,27 +180,6 @@
     \field{year}{1980}
   \endentry
 
-  \entry{massey}{book}{}
-    \name{author}{1}{}{%
-      {{hash=MWS}{%
-         family={Massey},
-         familyi={M\bibinitperiod},
-         given={William\bibnamedelima S.},
-         giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Springer - Verlag}%
-    }
-    \keyw{bib}
-    \strng{namehash}{MWS1}
-    \strng{fullhash}{MWS1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Algebraic Topology, an introduction}
-    \field{year}{1970}
-  \endentry
-
   \entry{zip}{article}{}
     \name{author}{2}{}{%
       {{hash=FGK}{%
@@ -340,6 +319,24 @@
     \field{year}{1992}
   \endentry
 
+  \entry{cairns}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CSS}{%
+         family={Cairns},
+         familyi={C\bibinitperiod},
+         given={Stewart\bibnamedelima S.},
+         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CSS1}
+    \strng{fullhash}{CSS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Triangulation of the manifold of class one}
+    \field{journaltitle}{Bull. Amer. Math. Soc. 41}
+    \field{year}{1935}
+  \endentry
+
   \entry{moise}{book}{}
     \name{author}{1}{}{%
       {{hash=ME}{%
@@ -358,6 +355,113 @@
     \field{labeltitlesource}{title}
     \field{title}{Geometric Topology in Dimensions 2 and 3}
     \field{year}{1977}
+  \endentry
+
+  \entry{kirby}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KRC}{%
+         family={Kirby},
+         familyi={K\bibinitperiod},
+         given={R.\bibnamedelima C.},
+         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=SLC}{%
+         family={Siebenmann},
+         familyi={S\bibinitperiod},
+         given={L.\bibnamedelima C.},
+         giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KRCSLC1}
+    \strng{fullhash}{KRCSLC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{On the triangulation of manifolds and the Hauptvermutung}
+    \field{journaltitle}{Bull. Amer. Math. Soc. 75}
+    \field{year}{1969}
+  \endentry
+
+  \entry{freedman}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FMH}{%
+         family={Freedman},
+         familyi={F\bibinitperiod},
+         given={Michael\bibnamedelima H.},
+         giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FMH1}
+    \strng{fullhash}{FMH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{The topology of four-dimensional manifolds}
+    \field{journaltitle}{J. Differential Geom. 17}
+    \field{year}{1982}
+  \endentry
+
+  \entry{casson}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AS}{%
+         family={Akbulut},
+         familyi={A\bibinitperiod},
+         given={Selman},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MJD}{%
+         family={McCarthy},
+         familyi={M\bibinitperiod},
+         given={John\bibnamedelima D.},
+         giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ASMJD1}
+    \strng{fullhash}{ASMJD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Casson’s invariant for oriented homology 3-spheres}
+    \field{journaltitle}{Mathematical Notes, vol. 36, Princeton University
+  Press}
+    \field{year}{1990}
+  \endentry
+
+  \entry{manolescu}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MC}{%
+         family={Manolescu},
+         familyi={M\bibinitperiod},
+         given={Ciprian},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MC1}
+    \strng{fullhash}{MC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Pin(2)-equivariant Seiberg-Witten Floer homology and the
+  triangulation conjecture}
+    \field{journaltitle}{arXiv:1303.2354v2}
+    \field{year}{2013}
+  \endentry
+
+  \entry{massey}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MWS}{%
+         family={Massey},
+         familyi={M\bibinitperiod},
+         given={William\bibnamedelima S.},
+         giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer - Verlag}%
+    }
+    \keyw{bib}
+    \strng{namehash}{MWS1}
+    \strng{fullhash}{MWS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Algebraic Topology, an introduction}
+    \field{year}{1970}
   \endentry
 
   \entry{richards}{article}{}
@@ -467,6 +571,26 @@
   \field{howpublished}{\url{http://pi.math.cornell.edu/~hatcher/AT/ATpage.html}}
     \field{title}{Algebraic Topology}
     \field{year}{2001}
+  \endentry
+
+  \entry{manolescu2}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MC}{%
+         family={Manolescu},
+         familyi={M\bibinitperiod},
+         given={Ciprian},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \keyw{bib}
+    \strng{namehash}{MC1}
+    \strng{fullhash}{MC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Triangulation on Manifolds}
+    \field{journaltitle}{Notices of the International Congress of Chinese
+  Mathematicians, Vol. 2}
+    \field{year}{2014}
   \endentry
 \enddatalist
 \endinput

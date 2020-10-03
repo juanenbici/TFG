@@ -44,6 +44,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Grupos fundamentales de las Superficies Compactas}{39}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Teorema de Clasificación}{42}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Teorema de Clasificación}{43}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografía}{43}{tma.4.3.1}%
+\contentsline {chapter}{Bibliografía}{44}{tma.4.3.1}%
