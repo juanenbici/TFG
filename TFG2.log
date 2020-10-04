@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  3 OCT 2020 15:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  4 OCT 2020 20:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1146,24 +1146,24 @@ LaTeX Info: Redefining \% on input line 28.
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Info: Redefining \. on input line 107.
-LaTeX Info: Redefining \% on input line 107.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Info: Redefining \. on input line 124.
+LaTeX Info: Redefining \% on input line 124.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1196,7 +1196,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 107.
+LaTeX Info: Redefining \selectfont on input line 124.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1232,14 +1232,14 @@ LaTeX Info: Redefining \selectfont on input line 107.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 107.
+LaTeX Info: Redefining \microtypecontext on input line 124.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 107.
+LaTeX Info: Redefining \showhyphens on input line 124.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1252,10 +1252,10 @@ ABD: EveryShipout initializing macros
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 107.
+ on input line 124.
 
 \AtBeginShipoutBox=\box64
-Package hyperref Info: Link coloring OFF on input line 107.
+Package hyperref Info: Link coloring OFF on input line 124.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -1267,9 +1267,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count448
 )
-LaTeX Info: Redefining \ref on input line 107.
-LaTeX Info: Redefining \pageref on input line 107.
-LaTeX Info: Redefining \nameref on input line 107.
+LaTeX Info: Redefining \ref on input line 124.
+LaTeX Info: Redefining \pageref on input line 124.
+LaTeX Info: Redefining \nameref on input line 124.
 
 (./TFG2.out) (./TFG2.out)
 \@outlinefile=\write5
@@ -1290,12 +1290,12 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'TFG2.bbl' found.
  (./TFG2.bbl)
-Package biblatex Info: Reference section=0 on input line 107.
-Package biblatex Info: Reference segment=0 on input line 107.
+Package biblatex Info: Reference section=0 on input line 124.
+Package biblatex Info: Reference segment=0 on input line 124.
 <images/complu.png, id=123, 1204.5pt x 1375.1375pt>
 File: images/complu.png Graphic file (type png)
 <use images/complu.png>
-Package pdftex.def Info: images/complu.png  used on input line 119.
+Package pdftex.def Info: images/complu.png  used on input line 136.
 (pdftex.def)             Requested size: 168.62885pt x 192.51793pt.
 
 [1
@@ -1305,60 +1305,64 @@ Package pdftex.def Info: images/complu.png  used on input line 119.
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.149 \clearpage
-                 [1]pdfTeX warning (ext4): destination with the same identifier
- (name{page.ii}) has been already used, duplicate ignored
+l.164 \end{dedication}
+                       [1
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) ha
+s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.149 \clearpage
+l.175 \clearpage
                  [2
 
+] [3
+
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--160
+Underfull \hbox (badness 10000) in paragraph at lines 182--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
-[4] (./TFG2.toc
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
+
+ []
+
+[5] (./TFG2.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 3.
@@ -1381,55 +1385,63 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ))
 \tf@toc=\write6
- [5
+ [6
 
 
 ]
 Cap\'{\i }tulo 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
 Package hyperref Info: bookmark level for unknown defin defaults to 0 on input 
-line 203.
+line 229.
 Package hyperref Info: bookmark level for unknown obs defaults to 0 on input li
-ne 210.
+ne 236.
 [1
 
 
 ]
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 215.
+ine 241.
 Package hyperref Info: bookmark level for unknown eje defaults to 0 on input li
-ne 221.
+ne 247.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 238--256
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 264--282
 []$[]$ $[]$ 
  []
 
 [2]
 Package hyperref Info: bookmark level for unknown corol defaults to 0 on input 
-line 290.
+line 316.
  [3]
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 308--330
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 334--356
 []$[]$ $[]$ 
  []
 
 [4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
+Underfull \hbox (badness 10000) in paragraph at lines 574--575
 
  []
 
 Package hyperref Info: bookmark level for unknown tma defaults to 0 on input li
-ne 550.
-[7] [8]
+ne 578.
+[7]
+Package hyperref Info: bookmark level for unknown lema defaults to 0 on input l
+ine 590.
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 620--621
+
+ []
+
+[9]
 Cap\'{\i }tulo 2.
 
-LaTeX Warning: Reference `teo:unicidad_espacio_cociente' on page 9 undefined on
- input line 592.
+LaTeX Warning: Reference `teo:unicidad_espacio_cociente' on page 10 undefined o
+n input line 655.
 
-[9
+[10
 
 
 ]
@@ -1451,10 +1463,10 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [10]
+ [11]
 
-LaTeX Warning: Reference `teo:aplicac_cerrada' on page 11 undefined on input li
-ne 748.
+LaTeX Warning: Reference `teo:aplicac_cerrada' on page 12 undefined on input li
+ne 811.
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1544,7 +1556,7 @@ Missing character: There is no ; in font nullfont!
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11] [12] [13] [14]
+[12] [13] [14] [15]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1562,11 +1574,11 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1112--1144
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1175--1207
 []$[]$ $[]$ 
  []
 
-[15] [16]
+[16] [17]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1608,7 +1620,7 @@ Missing character: There is no ; in font nullfont!
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17] [18]
+[18] [19]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1630,7 +1642,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1402--1464
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1465--1527
 []$[]$ $[]$ 
  []
 
@@ -1646,11 +1658,11 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 1468--1511
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 1531--1574
 []$[]$ $[]$ 
  []
 
-[19]
+[20]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1661,13 +1673,11 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (5.4431pt too wide) in paragraph at lines 1600--1601
+Overfull \hbox (5.4431pt too wide) in paragraph at lines 1663--1664
  [][] 
  []
 
-[20] [21]
-Package hyperref Info: bookmark level for unknown lema defaults to 0 on input l
-ine 1636.
+[21] [22]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1689,51 +1699,23 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [22]
-Underfull \hbox (badness 10000) in paragraph at lines 1745--1747
+ [23]
+Underfull \hbox (badness 10000) in paragraph at lines 1808--1810
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1748--1749
+Underfull \hbox (badness 10000) in paragraph at lines 1811--1812
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1750--1751
+Underfull \hbox (badness 10000) in paragraph at lines 1813--1814
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1758--1760
-
- []
-
-[23]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-
-Underfull \hbox (badness 10000) in paragraph at lines 1827--1828
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1834--1835
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1836--1837
+Underfull \hbox (badness 10000) in paragraph at lines 1821--1823
 
  []
 
@@ -1750,25 +1732,53 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
- [25] [26] [27
 
-] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 1890--1891
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1897--1898
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1899--1900
+
+ []
+
+[25]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [26] [27] [28
+
+] [29]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1796,13 +1806,13 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2209--2266
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2272--2329
 []$[]$ $[]$ 
  []
 
-[29] [30]
+[30] [31]
 Cap\'{\i }tulo 3.
-[31
+[32
 
 ]
 Missing character: There is no ; in font nullfont!
@@ -1815,14 +1825,14 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [32] [33] [34] [35] [36]
-Underfull \hbox (badness 10000) in paragraph at lines 2812--2813
+ [33] [34] [35] [36] [37]
+Underfull \hbox (badness 10000) in paragraph at lines 2875--2876
 
  []
 
-[37]
+[38]
 Cap\'{\i }tulo 4.
-[38
+[39
 
 ]
 Missing character: There is no ; in font nullfont!
@@ -1831,25 +1841,20 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [39] [40] [41] [42] [43]
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [44
+ [40] [41] [42] [43] [44] [45
 
 
-] [45]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3293.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3293.
+] [46]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3359.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3359.
  (./TFG2.aux
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3293.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3293.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3359.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3359.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
 (rerunfilecheck)             Checksum: A624E54130856200F26352D87C85B64D;1590.
@@ -1860,11 +1865,11 @@ LaTeX Warning: There were undefined references.
 Package logreq Info: Writing requests to 'TFG2.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 43690 strings out of 480478
- 987674 string characters out of 5905960
- 1591369 words of memory out of 5000000
- 58585 multiletter control sequences out of 15000+600000
- 545783 words of font info for 120 fonts, out of 8000000 for 9000
+ 43681 strings out of 480478
+ 987341 string characters out of 5905960
+ 1591346 words of memory out of 5000000
+ 58576 multiletter control sequences out of 15000+600000
+ 545507 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,104p,1851b,2010s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{eje.1.2.5} has been referenced but does not exist
@@ -1875,23 +1880,23 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
-b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-tt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (52 pages, 847166 bytes).
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on TFG2.pdf (54 pages, 852789 bytes).
 PDF statistics:
- 866 PDF objects out of 1000 (max. 8388607)
- 764 compressed objects within 8 object streams
- 295 named destinations out of 1000 (max. 500000)
- 16170 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 877 PDF objects out of 1000 (max. 8388607)
+ 773 compressed objects within 8 object streams
+ 299 named destinations out of 1000 (max. 500000)
+ 15658 words of extra memory for PDF output out of 17280 (max. 10000000)
 

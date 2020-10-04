@@ -274,31 +274,6 @@
     \field{year}{1984}
   \endentry
 
-  \entry{doylemorean}{article}{}
-    \name{author}{2}{}{%
-      {{hash=DPH}{%
-         family={Doyle},
-         familyi={D\bibinitperiod},
-         given={P.\bibnamedelima H.},
-         giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
-      }}%
-      {{hash=MDA}{%
-         family={Moran},
-         familyi={M\bibinitperiod},
-         given={D.\bibnamedelima A.},
-         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-    }
-    \keyw{bib}
-    \strng{namehash}{DPHMDA1}
-    \strng{fullhash}{DPHMDA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{A Short Proof that Compact 2-Manifolds Can Be Triangulated}
-    \field{journaltitle}{Inventiones math. 5}
-    \field{year}{1968}
-  \endentry
-
   \entry{thomassen}{article}{}
     \name{author}{1}{}{%
       {{hash=TC}{%
@@ -552,25 +527,6 @@
     \field{labeltitlesource}{title}
     \field{title}{General Topology}
     \field{year}{1970}
-  \endentry
-
-  \entry{hatcher}{booklet}{}
-    \name{author}{1}{}{%
-      {{hash=HA}{%
-         family={Hatcher},
-         familyi={H\bibinitperiod},
-         given={Alan},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \keyw{bib}
-    \strng{namehash}{HA1}
-    \strng{fullhash}{HA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-  \field{howpublished}{\url{http://pi.math.cornell.edu/~hatcher/AT/ATpage.html}}
-    \field{title}{Algebraic Topology}
-    \field{year}{2001}
   \endentry
 
   \entry{manolescu2}{article}{}

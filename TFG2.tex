@@ -100,6 +100,23 @@
 \renewcommand{\maketitle}{{\Large{\textbf{\title}}}\\\\{\Large \subtitle}\\\rule{17cm}{0.4pt}\\}
 
 
+\newenvironment{dedication}
+  {\clearpage           % we want a new page
+   \thispagestyle{empty}% no header and footer
+   \vspace*{\stretch{1}}% some space at the top 
+   \itshape             % the text is in italics
+   \raggedleft          % flush to the right margin
+  }
+  {\par % end the paragraph
+   \vspace{\stretch{3}} % space at bottom is three times that at the top
+   \clearpage           % finish off the page
+  }
+
+
+
+
+
+
 \pagenumbering{roman}
 \setcounter{page}{1}
 
@@ -140,12 +157,21 @@ Manuel Alonso Morón\\[.1in]
 
 %%%%%%%%%%%%%PORTADA%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+\begin{dedication}
+A la Abeba.
+\end{dedication}
+
 \afterpage{\blankpage}
+
 \section*{Resumen}\addcontentsline{toc}{chapter}{\numberline{}Resumen}
-El presente trabajo tiene como objetivo abordar la denominada ``\textit{Prueba ZIP}'' de John H. Conway, que demuestra de forma intuitiva el Teorema de Clasificación de Superficies. La Prueba ZIP presenta ventajas respecto a la prueba clásica de Seifert - Threlfall, principalmente porque se trabaja directamente sobre las superficies y no sobre representaciones poligonales suyas. Por tanto se hará un tratamiento riguroso de la prueba, dando una introducción a las variedades topológicas, estudiando la triangulación de superficies y comparándola con la prueba clásica.
+
+El presente trabajo tiene como objetivo estudiar la denominada ``\textit{Prueba ZIP}'' de John H. Conway, que demuestra de un modo informal el Teorema de Clasificación de Superficies. La Prueba ZIP presenta ventajas respecto a la clásica de Seifert-Threlfall, pero desarrolla sólo una parte de la demostración del teorema. Con esto en mente, daremos una introducción a las variedades topológicas y su triangulación. Desarrollaremos la demostración de Seifert-Threlfall con el fin de comparar las dos pruebas, y finalmente formalizaremos la Prueba ZIP con todo detalle y la completaremos con la segunda parte del teorema.
+
 
 \section*{Abstract}\addcontentsline{toc}{chapter}{\numberline{}Abstract}
-%The aim of the present work is to give a rigorous treatment of the so called ``\textit{ZIP Proof}'' given by John H. Conway, wich gives an intuitive approach to the Classification Theorem of Surfaces. With this in mind, an introduction to the topological manifolds will be given, 
+The aim of the present work is to study the so called ``\textit{ZIP Proof}'' given by John H. Conway, which gives an informal approach to the Classification Theorem of Surfaces. The ZIP proof has some advantages, but it only proves one part of the theorem. With this in mind, an introduction to topological manifolds and their triangulation will be given. We will explain the Seitfert-Threlfall proof for comparison, formalize in detail the ZIP proof, and finally complete it with the second part of the theorem.
 \clearpage
 
 \section*{Introducción}\addcontentsline{toc}{chapter}{\numberline{}Introducción}
@@ -545,17 +571,54 @@ Toda variedad (con borde y sin borde) que admita una triangulación se dice \enf
 
 
 \section{Teorema de Radó}
-Llegamos ahora a la sección central del capítulo: el Teorema de Triangulación de Radó, que asegura que toda superficie es triangulable.  Aunque nosotros no probaremos el teorema, demostraciones completas y accesibles se encuentran en \cite{doylemorean} y \cite{thomassen}.\\
+Llegamos ahora a la sección central del capítulo: el Teorema de Triangulación de Radó, que asegura que toda superficie es triangulable. Para su demostración se necesita el Teorema de Jordan-Schönflies, que a pesar de tener un enunciado intuitivo, su demostración es complicada y redactarla nos alejaría del propósito final del trabajo. Demostrar el Teorema de Radó asumiendo este resultado es de todas maneras instructivo, pues se ve el proceso de construcción de la triangulación de una superficie.\\
+
+Demostraciones del Teorema de Jordan-Schönflies y de los siguientes resultados de teoría de grafos se se pueden consultar en \cite{thomassen}.
+
+\begin{tma}[Teorema de Jordan-Schönflies]
+Sea $f$ un homeomorfismo de una curva simple conexa $C$ en una curva simple conexa $C'$. Entonces $f$ se puede extender a un homeomorfismo de todo el plano.
+\end{tma}
+
+Una consecuencia del Teorema de Schöenflies en teoría de grafos es la siguiente:
+
+\begin{tma}\label{tma:grafos}
+Sea $\Gamma$ un grafo plano biconexo. Sea $H$ la frontera de la cara exterior de $\Gamma$. Entonces exite un grafo plano $\Gamma'$ con el mismo conjunto de vértices y la misma cara exterior que $\Gamma$, y tal que sus aristas que no están en $H$ son todas poligonales. Existe también un homeomorfismo $f:\R^2 \to \R^2$ tal que es la identidad en la cara exterior de $\Gamma$, y que a su vez induce un homeomorfismo que es también un isomorfismo de grafos entre $\Gamma$ y $\Gamma'$ que deja $H$ invariante. Diremos que $\Gamma'$ es $\Gamma$ \enfatiza{redibujado}.
+\end{tma}
+
+Finalmente necesitamos también este lema técnico. En lo que sigue, denotaremos por $\interior{\gamma ([0,1])}$ a la componente conexa acotada de $\R^2 \setminus \gamma ([0,1])$, donde $\gamma :[0,1] \to \R^2$ es una curva cerrada simple. 
+
+\begin{lema}\label{lema:malo}
+Sean $\gamma :[0,1] \to \R^2$, $\gamma_2 : [0,1] \to \R^2$ y $\gamma_3 :[0,1] \to \R^2$ tres curvas cerradas simples y continuas. Supongamos que $\gamma_3 ([0,1]) \subseteq \interior{\gamma_2 ([0,1])} $. Definimos un \enfatiza{segmento malo} de $\gamma$ como un segmento suyo $P$, que une dos puntos $p,q$ de $\gamma_2 ([0,1])$ y tal que todos sus demás puntos están en $\interior{\gamma_2 ([0,1])}$. Definimos un \enfatiza{segmento muy malo} de $\gamma$ como un segmento malo que interseca $\gamma_3 ([0,1])$. Entonces existén sólo un número finito de segmentos muy malos. 
+\end{lema}
+
+
 
 \begin{tma}[Teorema de Radó]
-Toda superficie es triangulable por un poliedro de un complejo simplicial 2-dimensional, en donde cada $1$-símplice es una cara de exáctamente dos $2$-símplices.\label{teo:rado}
+Toda superficie compacta es triangulable. \label{teo:rado}
 \end{tma}
 
-Para la demostración, la idea básica consiste en recubrir la superficie con discos coordenados regulares, y demostrar de forma inductiva que se puede triangular cada uno de los discos tal que cada triangulación sea compatible con la anterior. La dificultad reside en que la frontera de cada disco puede intersecar las fronteras de los símplices ya definidos un número infinito de veces. Y aunque sean solo un número finito, ver que las regiones que se crean por las intersecciones de las curvas son homeomorfas a discos cerrados necesita del Teorema de Schönflies, un resultado difícil y largo de probar. Podemos extender el Teorema de Radó a las superficies con borde.
+\begin{proof}
+Sea $S$ una superficie compacta, y para cada $p\in S$ sea $U_p$ un entorno euclídeo de $p$. Denotemos por $D(p)$ a un disco en $\R^2$ homeomorfo a $U_p$ por el homeomorfismo $\theta_p :D(p)\to U_p$. Dibujemos en $D(p)$ dos cuadriláteros $Q_1(p)$ y $Q_2(p)$, tales que $Q_1(p) \subseteq \interior{Q_2(p)} $ y tal que $p\in \theta_p (\interior{Q_1(p)} )$.
 
-\begin{tma}
-Toda superficie con borde es triangulable por un poliedro de un complejo simplicial 2-dimensional, en donde hay dos tipos de 1-símplices: los que están totalmente contenidos en el borde, y los que se corresponden con puntos interiores. Los primeros son cara de exactamente un 2-símplice, y los últimos exactamente de dos 2-símplices.
-\end{tma}
+Por ser $S$ compacta, existen $p_1, \dots ,p_n$ tales que $S\subseteq \bigcup_{i=1}^n \theta_{p_i} ( \interior{Q_1(p_i)} )$. Mediante traslaciones si es necesario, podemos asumir que los $D(p_1), \dots , D(p_n)$ son disjuntos dos a dos. Lo que vamos a hacer es dejar fijos los $D(p_i)$ y modificar los $Q_1(p_i)$ y $\theta_{p_i}$, para que las intersecciones de los $\theta_{p_i} (Q_1(p_i))$ formen los vértices de un grafo a partir del cual triangularemos la superficie $S$.
+
+Vamos a demostrar que para todo $k$, los $Q_1(p_1), \dots ,Q_1(p_k)$ son tales que cualquieras dos que escojamos de los $\theta_{p_1} (Q_1(p_1)), \dots ,\theta_{p_k} (Q_1 (p_k))$ tienen sólo un número finito de puntos en común en $S$. Supongamos por tanto que es cierto para $k-1$. Traduciendo el \autoref{lema:malo} en este contexto, llamemos $\gamma^j = \theta_{p_j} (Q_1 (p_j))$, para $j=1, \dots ,k-1$, $\gamma_2 = \theta_{p_k} (Q_2 (p_k) ) $ y $\gamma_3 = \theta_{p_k} (Q_3 (p_k))$, con $Q_3 (p_k)$ un cuadrilátero que cumple que $Q_1 (p_k) \subseteq \interior{Q_3 (p_k) }$ y $Q_3 (p_k) \subseteq \interior{ Q_2 (p_k)}$. Así, por el \autoref{lema:malo}, obtenemos que sólo hay un número finito de segmentos muy malos.
+
+Para cada segmento malo $P$ en $\theta_{p_j} (Q_1(p_j))$, llamamos \textit{segmento malo en} $Q_2(p_k)$ a la imagen $\theta^{-1}_{p_k} (P)$. El conjunto de los segmentos malos en $Q_2 (p_k)$ junto con $Q_2 (p_k)$ determina un grafo plano biconexo que llamaremos $\Gamma$. Utilizando el \autoref{tma:grafos}, redibujamos $\Gamma$ dentro de $Q_2(p_k)$ obteniendo así un grafo $\Gamma'$ que es homeomorfo e isomorfo a $\Gamma$, y tal que sus aristas son poligonales. Extendemos el isomorfismo entre $\Gamma$ y $\Gamma'$ a un homeomorfismo de $\overline{\interior{Q_2 (p_k)}}$ que deja a $Q_2 (p_k)$ fijo. Por otro lado, este proceso transforma $Q_1 (p_k)$ y $Q_3(p_k)$ en las curvas símples conexas $Q_1'$ y $Q_3'$ tales que $\interior{Q_1'} \subseteq \interior{Q_3'}$ y tal que $p_k\in \interior{\theta_{p_k} (Q_1')}$. 
+
+Ahora, para cada $q\in Q_3'$, sea $R(q)$ un cuadrado cuyo centro es $q$ y tal que $R(q)$ no interseca ni a $Q_1'$ ni a cualquier segmento malo que no es muy malo. Formamos con los $R(q)$ un recubrimiento finito de $Q'_3$, $R(q_1), \dots ,R(q_m)$. La unión $\bigcup_{i=1}^m$ es un grafo plano biconexo cuyo ciclo exterior, que llamamos $Q_3''$, es una curva poligonal simple en $\interior{Q_2(p_k)}$ tal que $Q_1' \subseteq Q_3''$ y tal que $Q_3''$ no corta a los segmentos malos de $Q_2(p_k)$ excepto los que son muy malos.
+
+Obtenemos entonces que $\Gamma' \cup Q_3'' $ es un grafo biconexo, y redibujándolo y utilizando de nuevo el \autoref{tma:grafos} podemos asumir que $Q_3''$ es un rectángulo cuyo interior contiene a $Q_1$. Así pues, redefinimos $Q_1 (p_k) = Q_3''$, y obtenemos un cuadrilátero tal que $\theta_{p_k} (Q_1(p_k)) \cap \theta_{p_j} (Q_1 (p_j))$ es finita para todo $j=1, \dots , k-1$, demostrando por tanto la hipótesis de inducción.
+
+Finalmente, podemos pensar en $\bigcup_{i=1}^n \theta_{p_i} (Q_1 (p_i))$ como un grafo $G$ dibujado sobre la superficie $S$, cuyos vértices son las intersecciones de los $\theta_{p_j} (Q_1(p_j))$, $j=1, \dots ,k$. Cada región de $S\setminus G$ tiene como frontera a un ciclo $C$ en $G$. Formamos ahora un polígono convexo $C'$ de lados de longitud $1$ y tal que cada vértice de $C'$ se corresponde con un vértice de $C$. Al identificar las aristas de los varios $C'$ que se corresponden con la misma arista en $C$, obtenemos un espacio topológico $S'$ con un grafo sumergido $\Gamma'$ isomorfo a $\Gamma$. Este isomorfismo lo podemos extender a un homeomorfismo $f$ que lleva el conjunto de puntos de $\Gamma$ en $S$ al conjunto de puntos de $\Gamma'$ en $S'$, y cuya restricción a cada ciclo $C$ es un homeomorfismo entre $C$ y $C'$. Por el Teorema de Jordan-Schönflies, podemos extender $f$ a un homeomorfismo de $\overline{\interior{C}}$ en $\overline{\interior{C'}}$, lo que define un homeomorfismo de $S$ en $S'$.
+Como cada $C'$ es un polígono convexo, podemos triangularlo de forma elemental. Haciendo esto en cada $C'$, obtenemos un complejo simplicial cuyo poliedro es homeomorfo a $S$, y tal que cada 1-símplice es una cara de exáctamente dos 2-símplices. Hemos obtenido así una triangulación de $S$.
+
+
+\end{proof}
+
+%Para la demostración, la idea básica consiste en recubrir la superficie con discos coordenados regulares, y demostrar de forma inductiva que se puede triangular cada uno de los discos tal que cada triangulación sea compatible con la anterior. La dificultad reside en que la frontera de cada disco puede intersecar las fronteras de los símplices ya definidos un número infinito de veces. Y aunque sean solo un número finito, ver que las regiones que se crean por las intersecciones de las curvas son homeomorfas a discos cerrados necesita del Teorema de Schönflies, un resultado difícil y largo de probar. Podemos extender el Teorema de Radó a las superficies con borde.
+El teorema de Radó se puede extender también a las superficies con borde, con la diferencia que la triangulación vendrá dada por un poliedro de un complejo simplicial 2-dimensional en donde hay dos tipos de 1-símplices: los que están totalmente contenidos en el borde, y los que se corresponden con puntos interiores. Los primeros son cara de exactamente un 2-símplice, y los últimos exactamente de dos 2-símplices.\\
+
 
 La triangulación de superficies ha llevado a estudiar si todas las variedades de dimensiones superiores son o no triangulables. Su importancia reside en que dan una descripción combinatoria de la variedad, lo que permite calcular invariantes topológicos tales como los grupos de homología. Así, dadas dos variedades trianguladas, podemos distinguirlas en términos de sus respectivas triangulaciones.
 
@@ -3081,7 +3144,6 @@ La clasificación de superficies compactas dio lugar a la clasificación de supe
 
 \appendix
 
-\chapter{Triangulación de superficies}
 
 
 \begin{comment}
