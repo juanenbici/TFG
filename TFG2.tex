@@ -1451,11 +1451,6 @@ Vamos ahora a desarrollar unas reglas generales de transformación de representa
 Sean $\mathcal{P}_1$ y $\mathcal{P}_2$ dos representaciones tal que sus realizaciones geométricas son homeomorfas. Entonces decimos que son \enfatiza{topológicamente equivalentes} y escribimos $\mathcal{P}_1 \approx \mathcal{P}_2$.
 \end{defin}
 
-
-
-
-Vamos a definir ahora unas operaciones elementales sobre las representaciones poligonales. Veremos luego que estas dan lugar a representaciones equivalentes.
-
 \begin{defin}%%%%DEF: Operaciones elementales sobre representaciones
 A las siguientes operaciones las llamamos \enfatiza{transformaciones elementales} de una representación poligonal:
 \begin{itemize}
@@ -2087,7 +2082,7 @@ Nos queda el caso en el que aparecen tanto pares torcidos como pares complementa
 
 
 
-\section{Teorema de clasificación de superficies con borde}
+\section{Teorema de clasificación de superficies con borde}\label{sec:tcsb}
 Podemos ahora clasificar las superficies con borde a partir del Teorema de Clasificación. Empecemos definiendo un concepto importante en la Prueba ZIP, el de perforación sobre una superficie.
 
 \begin{defin}%M%%%DEF: perforación
@@ -2247,7 +2242,7 @@ Ahora sólo falta aplicar sobre $\mathcal{P}$ el resto de la demostración de la
 \caption{Triangulación cerca de una componente del borde de $M$.\label{fig:triangulacion_perf}}
 \end{figure}
 \begin{eje}
-Veamos las representaciones estándar de las superficies fundamentales perforadas. Para ello, utilizando la \autoref{prop:rep_perf}, hacemos un corte $c_i$ desde un mismo vértice a cada perforación asociada a la componente $B_i$, de forma que estos no se solapen con las perforaciones. En la \autoref{fig:toro_perforado} podemos ver un ejemplo de la representación estándar de la suma conexa de dos toros con dos perforaciones.
+Veamos las representaciones en forma estándar de las superficies perforadas. Para ello, utilizando la \autoref{prop:rep_perf}, hacemos un corte $c_i$ desde un mismo vértice a cada perforación asociada a la componente $B_i$, de forma que estos no se solapen con las perforaciones. En la \autoref{fig:toro_perforado} podemos ver un ejemplo de la representación estándar de la suma conexa de dos toros con dos perforaciones.
 \begin{itemize}
 \item [(a)] \textit{Esfera con k perforaciones.} 
 $$\langle a, c_1,\dots ,c_k, B_1, \dots ,B_k \mid aa^{-1}c_1B_1c_1^{-1}\dots c_kB_kc_k^{-1}\rangle$$ 
@@ -2361,7 +2356,8 @@ Sea $M$ una superficie con borde compacta. Un \enfatiza{zip} es una identificaci
 \end{defin}
 
 
-En la prueba ZIP, Conway nos explica gráficamente cuatro posibles formas de unir cremalleras. Veamos bien estas cuatro construcciones.
+En la prueba ZIP, Conway nos explica gráficamente cuatro posibles formas de unir cremalleras. Veamos bien estas cuatro construcciones.\\
+
 
 \begin{defin}
 Sea $M$ una superficie. Definimos cuatro formas elementales de identificar pares-zip en perforaciones de 
@@ -2375,7 +2371,9 @@ $M$ perforada:
 \end{itemize}
 \end{defin}
 
-Como vimos en \autoref{sec:tcsb}, las superficies con perforaciones se pueden representar como polígonos perforados con una serie de cortes (\autoref{fig:toro_perforado}). Esto nos da una forma natural de representar una superficie con cremalleras, etiquetando con el mismo símbolo las cremalleras asociadas al mismo par-zip, en la forma $z$ o $z^{-1}$, dependiendo de sus respectivas orientaciones. 
+Como vimos en \autoref{sec:tcsb}, las superficies con perforaciones se pueden representar como polígonos perforados con una serie de cortes (\autoref{fig:toro_perforado}), lo que nos da una forma de representar una superficie con cremalleras. Dada una superficie $M$ con perforaciones, sea una representación poligonal suya con las perforaciones y cortes asociados sobre el polígono. En las partes de las perforaciones que tengan cremalleras, etiquetamos con el mismo símbolo a las cremalleras asociadas al mismo par-zip, en la forma $z$ o $z^{-1}$, dependiendo de sus respectivas orientaciones. 
+
+
 \begin{figure}
 \begin{subfigure}{1\textwidth} %%%%FIG: Cap
 \centering
@@ -2544,8 +2542,8 @@ Como vimos en \autoref{sec:tcsb}, las superficies con perforaciones se pueden re
 Sean $M,M'$ dos superficies conexas (con o sin borde) y sean $P=\langle S\mid W\rangle$ y $P'=\langle S'\mid W'\rangle$ sus respectivas representaciones poligonales de una sola cara. Se tiene entonces:
 \begin{itemize}
 \item[(i)] La suma conexa de una esfera y $M$ es homeomorfa a $M$.
-\item[(ii)] Sea $|\mathcal{P}|$ la realización geométrica de $P$. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre las aristas de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$, obtenemos la misma superficie $M$. 
-\item[(iii)] Con una construcción análoga a la del apartado anterior, si hacemos una perforación sobre una superficie $M'$ con el borde con etiquetas asociadas a una representación poligonal de $M$, al identifacarlas obtenemos la suma conexa $M\# M'$. 
+\item[(ii)] Sea $|\mathcal{P}|$ la realización geométrica de $P$. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre las aristas de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$ que se correspondan, obtenemos la misma superficie $M$. 
+\item[(iii)] Con una construcción análoga a la del apartado anterior, si hacemos una perforación sobre la superficie $M'$ con el borde con etiquetas asociadas a una representación poligonal de $M$, al identifacarlas obtenemos la suma conexa $M\# M'$. 
 \end{itemize}
 \end{prop}
 \begin{proof}
@@ -2591,7 +2589,7 @@ Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el e
 \draw (5.1,0) arc[x radius=0.4, y radius=0.2, start angle=180, end angle=0];
 \draw (4.8,0.31) arc[x radius=0.7, y radius=0.4, start angle=180, end angle=360];
 \end{tikzpicture}
-\caption{Suma conexa de un toro y una esfera.\label{fig:suma_toro_esfera}}
+\caption{Suma conexa de un toro y una esfera (visto como pegar un toro con un \textit{cap}).\label{fig:suma_toro_esfera}}
 \end{figure}
 
 
@@ -2633,7 +2631,7 @@ y reetiquetando $e=c_2c_1^{-1}$, obtenemos finalmente la representación de la b
 
 \end{proof}
 
-\begin{figure}%%%%FIG: Toro-Asa
+\begin{figure}[b]%%%%FIG: Toro-Asa
 \centering
 \begin{tikzpicture}
 %1
@@ -2695,7 +2693,7 @@ y reetiquetando $e=c_2c_1^{-1}$, obtenemos finalmente la representación de la b
 
 
 \end{tikzpicture}
-\caption{Suma conexa de una superficie y un toro visto como pegar un \textit{asa}. \label{fig:toro_asa}}
+\caption{Suma conexa de una superficie y un toro visto como una superficie con un \textit{asa}. \label{fig:toro_asa}}
 \end{figure}
 
 \begin{corol}
@@ -2782,7 +2780,7 @@ Sea una esfera perforada como la de la izquierda de la \autoref{fig:rep_perf}. H
 
 \section{Teorema de Clasificación}
 
-Definamos el que va a ser en la prueba ZIP el concepto análogo al de superficie estándar.
+Definamos el que va a ser en la prueba ZIP el concepto análogo al de superficie en forma estándar.
 
 \begin{defin}%%%%DEF: Ordinaria
 Una superficie con borde se dice \enfatiza{ordinaria} si es homeomorfa a una colección finita de esferas cada una con un número finito de \textit{handles}, \textit{crosshandles}, \textit{crosscaps} y perforaciones.
@@ -2791,7 +2789,7 @@ Una superficie con borde se dice \enfatiza{ordinaria} si es homeomorfa a una col
 El siguiente lema es quizás uno de los puntos donde la prueba de Conway es menos rigurosa. En algunos pasos hace \textit{deslizar las perforaciones} fuera de un handle, un crosshandle o un crosscap, y aunque esto tenga sentido desde un punto de vista intuitivo, no está claro como hacerlo de una forma rigurosa. Para resolver este problema, me apoyo en los conceptos de representación poligonal y transformaciones elementales, y así desgloso todos los casos posibles.
 
 \begin{lema}%%%%LEMA: Superficie ordinaria zips
-Sea $M$ una superficie con borde con un par-zip tal que cada cremallera está en una componente conexa de su borde. Entonces, si $M$ es ordinaria antes de identificar las cremalleras, es ordinaria también después.\label{lema:superficie_ordinaria}
+Sea $M$ una superficie con borde con un par-zip. Entonces, si $M$ es ordinaria antes de identificar las cremalleras, es ordinaria también después.\label{lema:superficie_ordinaria}
 \end{lema}
 \begin{proof}
 Consideramos el caso en que las dos cremalleras ocupan cada una una perforación en su totailidad. Entonces, si están en la misma componente conexa de $M$, al identificarlas se tiene un \textit{handle} (\autoref{fig:handle}) o un \textit{crosshandle} (\autoref{fig:crosshandle}), dependiendo de sus respectivas orientaciones. Si las dos perforaciones pertenecen a componentes conexas de $S$ distintas, entonces identificando obtenemos la suma conexa de las dos componentes. 
@@ -2857,12 +2855,15 @@ Toda superficie con borde compacta es ordinaria.
 Sea $M$ una superficie con borde compacta. Sabemos, por el \nameref{teo:rado}, que $M$ está triangulada por un poliedro $|K|$ asociado a un complejo simplicial $K$ tal que cada 1-símplice que contiene puntos interiores de $M$ es una cara de exáctamente dos 2-símplices, y cada 1-símplice que contiene puntos del borde de $M$ es cara de exáctamente un 2-símplice. Si sobre cada par de 1-símplices del primer tipo ponemos una cremallera distinta, en el conjunto de los 2-símplices habrá algunos 1-símplices que se identifiquen. Llamemos $K_2=\left\{\sigma_1,\dots ,\sigma_j\right\}$, donde cada $\sigma_i \text{ es un 2-símplice para todo } i=1\dots ,j$. $K_2$ es una superficie ordinaria, pues cada $\sigma_i$ es homeomorfo a una esfera 1-perforada. Si identificamos ahora las cremalleras una a una, por el \autoref{lema:superficie_ordinaria} y por inducción, la superficie resultante es ordinaria.
 \end{proof}
 
+En el artículo, en las siguiente proposición se vuelven a ``\textit{deslizar las perforaciones}'', y además algunos pasos son poco claros en los dibujos que los acompañan.
 
 \begin{lema}\label{lema:1}
 Un crosshandle es homeomorfo a dos crosscaps.
 \end{lema}
 \begin{proof}
-Por la \autoref{prop:handletoro_crosshandleklein}, la esfera con un crosshandle es homeomorfa a una botella de klein. Por la \autoref{lema:klein_proyectivoproyectivo}, la botella de Klein es homeomorfa a la suma conexa $\Proyectivo \# \Proyectivo$, o lo que es lo mismo, a la suma conexa de una esfera y dos crosscaps.
+
+Por la \autoref{prop:handletoro_crosshandleklein}, la esfera con un crosshandle es homeomorfa a una botella de klein. Por la \autoref{lema:klein_proyectivoproyectivo}, la botella de Klein es homeomorfa a la suma conexa $\Proyectivo \# \Proyectivo$, o lo que es lo mismo, a la suma conexa de una esfera y dos crosscaps. 
+También se puede demostrar directamente con la representación de la superficie y las cremalleras.
 \end{proof}
 
 \begin{lema}\label{lema:2}
@@ -2870,8 +2871,9 @@ Handles y crosshandles son equivalentes en la presencia de crosscaps.
 \end{lema}
 \begin{proof}
 Sea una esfera con un par-zip asociado a un handle y otro asociado a un crosscap. Sabemos que, identificando las cremalleras obtenemos un espacio homeomorfo a la suma conexa $\Toro \# \Proyectivo$. Pero por la \autoref{lema:toro_proyectivo}, este espacio es homeomorfo a $\Proyectivo \# \Proyectivo \# \Proyectivo$, que a su vez, es homeomorfo al plano proyectivo con un crosshandle, que a su vez es homeomorfo a una esfera con un crosshandle y un crosscap.
+También se puede demostrar directamente con la representación de la superficie y las cremalleras.
 \end{proof}
-Aunque Conway hasta ahora haya hablado de superficies con perforaciones (es decir, de superficies con borde), en el teorema final que veremos ahora decide omitirlas. En cambio yo aprovecho lo hecho hasta ahora y doy directamente la clasificación de superficies con borde.
+Aunque Conway hasta ahora haya hablado de superficies con perforaciones (es decir, de superficies con borde), en el teorema final que veremos ahora decide omitirlas. En cambio yo aprovecho lo expuesto hasta ahora y doy directamente la clasificación de superficies con borde.
 %((Ahora no entiendo por qué dado todo lo anterior Conway sólo da la representación de superficies sin borde))
 \begin{tma}[Clasificación de superficies]
 Toda superficie con borde compacta es homeomorfa o bien a una esfera con handles o bien a una esfera con crosscaps, junto con $k$ perforaciones.
@@ -2885,11 +2887,13 @@ Por la versión preeliminar del teorema de clasificación, una superficie con bo
 \end{proof}
 
 \begin{obs}
-Como se ha visto, no he podido evitar hacer referencia a la representación poligonal de superficies para demostrar los puntos menos rigurosos, por lo que según Conway quizás habría caído en una de las irrelevancias de la prueba clásica. Sin embargo, creo que combinando las dos ideas como he hecho la prueba se vuelve más entendible y corta. Los siete pasos de la demostración de Massey quedan reducidos considerablemente, y a mi parecer, al trabajar sobre la suma conexa en vez de haciendo transformaciones sobre palabras, la demostración parece más intuitiva, sin perder rigurosidad.\\
+Como se ha visto, no he podido evitar hacer referencia a la representación poligonal de superficies para demostrar los puntos más informales. Sin embargo, creo que combinar la representación poligonal con la idea de Conway facilita mucho la demostración del teorema, pues seguimos quitándonos la ``irrelevancia'' de llegar a la forma normal ``artificial'', y la prueba,  al trabajar sobre la suma conexa en vez de haciendo transformaciones sobre palabras, se vuelve más entendible y corta. Además, como veremos, la representación poligonal nos permitirá demostrar la segunda parte del teorema.\\
 \end{obs}
 
+\afterpage{\blankpage}
+
 \chapter{Teorema de Clasificación, segunda parte}
-Hasta ahora hemos demostrado, con dos enfoques distintos, que toda superficie con borde compacta es homeomorfa a una esfera, a una suma conexa de copias del toro o a una suma conexa de copias del plano proyectivo, junto con un número finito de perforaciones. Sin embargo no hemos demostrado que estas tres superficies estándar sean no homeomorfas entre sí. En este capítulo completaremos por tanto la parte de la prueba que nos falta. 
+Hasta ahora hemos demostrado, con dos enfoques distintos, que toda superficie con borde compacta es homeomorfa a una esfera, a una suma conexa de copias del toro o a una suma conexa de copias del plano proyectivo, junto con un número finito de perforaciones. Sin embargo no hemos demostrado que estas tres superficies estándar sean no homeomorfas entre sí. En este capítulo completaremos la parte de la prueba que nos falta. 
 
 \section{Presentaciones de grupos}
 Vamos a empezar recordando brevemente las presentaciones de grupos. 
@@ -3139,6 +3143,7 @@ donde $h\in \mathbb{Z}/2$ denota el elemento no trivial. Dado que $g+g=0$, tenem
 
 
 \end{proof}
+
 
 
 \section{Teorema de Clasificación}

@@ -36,14 +36,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Cremalleras}{31}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Teorema de Clasificación}{34}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Teorema de Clasificación}{35}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Teorema de Clasificación, segunda parte}{38}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Teorema de Clasificación, segunda parte}{39}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Presentaciones de grupos}{38}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Presentaciones de grupos}{39}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Grupos fundamentales de las Superficies Compactas}{39}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Grupos fundamentales de las Superficies Compactas}{40}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Teorema de Clasificación}{43}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Teorema de Clasificación}{44}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografía}{44}{tma.4.3.1}%
+\contentsline {chapter}{Bibliografía}{45}{tma.4.3.1}%
