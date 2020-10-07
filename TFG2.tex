@@ -159,10 +159,10 @@ Manuel Alonso Morón\\[.1in]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
-\begin{dedication}
-\afterpage{\blankpage}
-A la Abeba.
-\end{dedication}
+%\begin{dedication}
+%\afterpage{\blankpage}
+%A la Abeba.
+%\end{dedication}
 
 
 
@@ -238,21 +238,21 @@ Sea $M$ una variedad, y sea $p\in M$. Si $U\subseteq M$ es un entorno de $p$ que
 A un dominio coordenado que es homeomorfo a una bola de $\R^n$ se le llama \enfatiza{bola coordenada} (si $n=2$, decimos \enfatiza{disco coordenado}). Si $p\in M$ y $U$ es un dominio coordenado que contiene a $p$, decimos que $U$ es un \enfatiza{entorno euclídeo} de $p$.\\
 No siempre se tiene que la adherencia de una bola coordenada sea homeomorfa a una bola cerrada euclídea. Por tanto, decimos que una bola coordenada $B\subseteq M$ es una \enfatiza{bola coordenada regular} si existe un entorno $B'$ de $\overline{B}$ y un homeomorfismo $\varphi:B'\to B_{r'}(x)\subseteq \R^n$ que lleva $B$ a $B_r(x)$ y $\overline{B}$ a $\overline{B}_r(x)$ para algún $r'>r>0$ y para algún $x\in \R^n$.
 \begin{obs}%%%%OBS: toda propiedad local de Rn se pasa a las variedades
-Ser localmente homeomorfo a $\R^n$ es una propiedad local, y por tanto las propiedades locales de $\R^n$ se trasladan a una variedad. Así pues, las variedades son localmente compactas, I AN, localmente conexas, localmente conexas por caminos y localmente simplemente conexas.
+Ser localmente euclídeo de dimensión $n$ es una propiedad local, y por tanto las propiedades locales de $\R^n$ se trasladan a una variedad. Así pues, las variedades son localmente compactas, I AN, localmente conexas, localmente conexas por caminos y localmente simplemente conexas.
 \end{obs}
-Vamos a definir ahora la dimensión de una variedad. El \textit{Teorema de Invarianza del Dominio} dice que si $W\subset \R^n$ y $W'\subset \R^m$ son abiertos y existe un homeomorfismo $\phi: W \rightarrow W'$, entonces $n=m$. Así pues, sea $M$ una variedad, y sea $p\in M$. Entonces hay un único $n=n_p$ tal que un entorno $U^p$ de $p$ en $M$ es homeomorfo a un abierto $U'\subset \R^n$. Decimos que $n_p$ es la \enfatiza{dimensión en p}. Si para todo punto $q\in U^p$ tomamos $U^p$ como entorno de $q$, tenemos que $n_q=n_p$. Luego en toda la componente conexa de $p$, el $n$ que aparece es el mismo, y lo llamaremos \enfatiza{dimensión} de dicha componente conexa. Si escribimos $M=\amalg M_i$ como la unión disjunta de sus componentes conexas $M_i$, tenemos que todas las $M_i$ son variedades, y si todas las $M_i$ tienen la misma dimensión $n$, entonces escribimos $n=\dimension{M}$ , y decimos que $M$ es una \enfatiza{n-variedad}.\\
+Vamos a definir ahora la dimensión de una variedad. El \textit{Teorema de Invarianza del Dominio} dice que si $V\subset \R^n$ y $V'\subset \R^m$ son abiertos y existe un homeomorfismo $\phi: V \rightarrow V'$, entonces $n=m$. Así pues, sea $M$ una variedad, y sea $p\in M$. Entonces hay un único $n=n_p$ tal que un entorno $U^p$ de $p$ en $M$ es homeomorfo a un abierto $U'\subset \R^n$. Decimos que $n_p$ es la \enfatiza{dimensión en p}. Si para todo punto $q\in U^p$ tomamos $U^p$ como entorno de $q$, tenemos que $n_q=n_p$. Luego en toda la componente conexa de $M$, el $n$ que aparece es el mismo, y lo llamaremos \enfatiza{dimensión} de dicha componente conexa. Si escribimos $M=\amalg M_i$ como la unión disjunta de sus componentes conexas $M_i$, tenemos que todas las $M_i$ son variedades, y si todas las $M_i$ tienen la misma dimensión $n$, entonces escribimos $n=\dimension{M}$, y decimos que $M$ es una \enfatiza{n-variedad}.\\
 El ejemplo más trivial de $n$-variedad es $\R^n$, pero también lo es cualquier abierto suyo. De hecho, esto se puede generalizar:
 \begin{prop}%%%%PROP: abierto variedad abierto
 Todo abierto de una $n$-variedad es una $n$-variedad.
 \end{prop}
 \begin{proof}
-Sea $M$ una $n$-variedad, y sea $V$ un subconjunto abierto de $M$. Para todo $p\in V$, $p$ tiene un entorno $U^p$ en $M$ que es homeomorfo a un subconjunto abierto de $\R^n$. $U^p\cap V$ es también abierto y homeomorfo a un subconjunto abierto de $\R^n$, y está contenido en $V$. Por tanto $V$ es localmente homeomorfo a $R^n$. Por otro lado, todo abierto de un espacio Hausdorff es Hausdorff y todo abierto de un espacio II AN es II AN. Por lo que $M$ es una variedad.
+Sea $M$ una $n$-variedad, y sea $V$ un subconjunto abierto de $M$. Para todo $p\in V$, $p$ tiene un entorno $U^p$ en $M$ que es homeomorfo a un subconjunto abierto de $\R^n$. $U^p\cap V$ es también abierto y homeomorfo a un subconjunto abierto de $\R^n$, y está contenido en $V$. Por tanto $V$ es localmente euclídeo de dimensión $n$. Por otro lado, todo abierto de un espacio Hausdorff es Hausdorff y todo abierto de un espacio II AN es II AN. Por lo que $V$ es una variedad.
 \end{proof}
 \begin{eje}%%%%EJE: variedades.
 \begin{itemize}
 \item Las 0-variedades son espacios discretos numerables. La única 0-variedad conexa es un punto.
-\item Existen dos 1-variedades conexas salvo homeomorfismo: la recta $\R$ y el círculo $\mathbb{S}^1\\
-=\left\{(x,y)\in \R^2\mid x^2+y^2=1\right\}=\left\{z=e^{2\pi i\theta}\in \C \mid \theta \in \left[0,1\right] \right\}=\left\{ z\in \C \mid |z|=1\right\}$.
+\item Existen dos 1-variedades conexas salvo homeomorfismo: la recta $\R$ y la circunferencia $$\mathbb{S}^1
+=\left\{(x,y)\in \R^2\mid x^2+y^2=1\right\}$$.
 \end{itemize}
 \end{eje}
 \begin{defin}%%%%DEF: SUPERFICIE
@@ -294,7 +294,7 @@ Hay una serie de espacios topológicos que no son variedades pero que tienen int
 \begin{defin}
 Una \enfatiza{variedad con borde n-dimensional} $M$ (o $n$-variedad con borde) es un espacio topológico  Hausdorff y II AN tal que todo punto $p\in M$ tiene un entorno $U$ homeomorfo a un abierto $U'\subset \mathbb{H}^n$.
 \end{defin}
-Sea $M$ una n-variedad con borde, $p\in M$ y $\varphi :U\to U'\subset \mathbb{H}^n$ un homeomorfismo como en la definición. Como en el caso de variedades, decimos que $U$ es un \enfatiza{dominio coordenado}, que $\varphi$ es una \enfatiza{aplicación coordenada} para $M$ y que el par $(U,\varphi )$ es una \enfatiza{carta para $M$}.\\
+Sea $M$ una n-variedad con borde, $p\in M$ y $\varphi :U\to U'\subset \mathbb{H}^n$ un homeomorfismo como el de la definición. Como en el caso de variedades, decimos que $U$ es un \enfatiza{dominio coordenado}, que $\varphi$ es una \enfatiza{aplicación coordenada} para $M$ y que el par $(U,\varphi )$ es una \enfatiza{carta para $M$}.\\
 Como en la sección anterior, decimos que $B\subseteq M$ es una \enfatiza{semibola coordenada regular} si existe un abierto $B'$ que contiene a $\overline{B}$ y y un homeomorfismo de $B'$ a $B_{r'}(0)\cap \mathbb{H}^n$ que lleva $B$ a $B_r(0)\cap \mathbb{H}^n$ y $\overline{B}$ a $\overline{B}_r(0)\cap \overline{H}^n$ para algún $0<r<r'$.
 Si denotamos $\varphi (p)=a=(a_1,\dots ,a_n)$, podemos distinguir entre dos tipos de puntos:
 \begin{itemize}
@@ -314,7 +314,7 @@ Si $M$ es una $n$-variedad con borde, entonces un punto $p\in M$ no puede ser un
 \begin{proof}
 Dado que las variedades que trato en el trabajo son las superficies, voy a dar la demostración en el caso de que $n=2$. El caso general incluye conceptos de homología que no voy a tratar.\\
 Supongamos que $p\in M$ es tanto un punto interior como un punto borde de $M$. Entonces existen $(U,\varphi)$ tal que $\varphi (U)\subseteq \interior{\mathbb{H}^2}$ y $(V,\psi)$ tal que $\psi (V)\subseteq \mathbb{H}^2$, donde $\psi (p)=s\in \partial \mathbb{H}^2$. Llamando $W=U\cap V$, se tiene que $\varphi (W)$ es homeomorfo a $\psi (V)$. \\
-Ahora bien, podemos elegir un $\varepsilon >0$ tal que $B_{\varepsilon}(s)\cap \mathbb{H}^2 \subseteq \psi (W)$. Sea $U'=\psi^{-1}\left( B_{\varepsilon}(s) \cap \mathbb{H}^2\right)$; utilizando que un abierto de $\R^2$ menos un punto suyo no es simplemente conexo, tenemos que $\varphi (U')\setminus \{\varphi (p) \}$ es no simplemente conexo. Por otro lado, $U'\setminus {p}$ es homeomorfo a $X:=B_{\varepsilon}(s)\cap \mathbb{H}^2 \setminus \{ s\}$.\\
+Ahora bien, podemos elegir un $\varepsilon >0$ tal que $B_{\varepsilon}(s)\cap \mathbb{H}^2 \subseteq \psi (W)$. Sea $U'=\psi^{-1}\left( B_{\varepsilon}(s) \cap \mathbb{H}^2\right)$; utilizando que un abierto de $\R^2$ menos un punto suyo no es simplemente conexo, tenemos que $\varphi (U')\setminus \{\varphi (p) \}$ no es simplemente conexo. Por otro lado, $U'\setminus {p}$ es homeomorfo a $X:=B_{\varepsilon}(s)\cap \mathbb{H}^2 \setminus \{ s\}$.\\
 Sea $x_0\in B_{\varepsilon}(s)\cap \interior{\mathbb{H}^2}$, definimos $F: X\times \left[ 0,1\right] \to X$ por $F(x,t)=x_0 + (1-t)(x-x_0)$, que nos indica que $\{x_0\}$ es un retracto por deformación fuerte de $X$. Por tanto, $X$ es simplemente conexo, lo que implica que también lo son $U'\setminus \{p\}$ y $\varphi(U')\setminus \{ \varphi (p)\}$, pero esto es una contradicción.
 \end{proof}
 
@@ -375,7 +375,7 @@ Mob=
 \end{eje}
 
 \section{Suma conexa de variedades}
-Sean $M_1$ y $M_2$ dos $n$-variedades conexas. Dados $p_1\in M_1$ y $p_2\in M_2$ sean $U_1\subset M_1$, $U_2\subset M_2$  entornos abiertos de $p_1$ y $p_2$ respectivamente, y sean $\varphi_1:U_1\to\R^n$ y $\varphi_2:U_2\to\R^n$ dos homeomorfismos tales que $\varphi_1(p_1)=0$ y $\varphi_2(p_2)=0$. Si llamamos $B_1=\varphi_1^{-1}(B_1(0))\subset M_1$ y $B_2=\varphi_2^{-1}(B_1(0))\subset M_2$, consideremos $M_1^o=M_1\setminus B_1$, $M_2^o=M_2\setminus B_2$ y $M_1^o \amalg M_2^o$ con la topología unión disjunta.
+Sean $M_1$ y $M_2$ dos $n$-variedades conexas. Dados $p_1\in M_1$ y $p_2\in M_2$ sean $U_1\subset M_1$, $U_2\subset M_2$  entornos abiertos de $p_1$ y $p_2$ respectivamente, y sean $\varphi_1:U_1\to\R^n$ y $\varphi_2:U_2\to\R^n$ dos aplicaciones coordenadas tales que $\varphi_1(p_1)=0$ y $\varphi_2(p_2)=0$. Si llamamos $B_1=\varphi_1^{-1}(B_1(0))\subset M_1$ y $B_2=\varphi_2^{-1}(B_1(0))\subset M_2$, consideremos $M_1^o=M_1\setminus B_1$, $M_2^o=M_2\setminus B_2$ y $M_1^o \amalg M_2^o$ con la topología unión disjunta.
 Se define la relación de equivalencia $\sim$ en la que si $x_1\in S_1=\varphi_1^{-1}(\partial B_1(0))$, $x_2\in S_2=\varphi_2^{-1}(\partial B_1(0))$, entonces $x_1\sim x_2$ si y sólo si $\varphi_1(x_1)=\varphi_2(x_2)$, y se considera el cociente 
 
 $$M=\frac{M_1^o\amalg M_2^o}{\sim}.$$
@@ -407,21 +407,21 @@ Sean $M_1$ y $M_2$ variedades. Entonces $M=M_1\#M_2$ es una variedad.
 \end{prop}
 \begin{proof}
 
-Sea $\pi:M_1^o\amalg M_2^o\to M$ la proyección al cociente y sea $S=\pi (S_1)=\pi (S_2)$.  $U_j=M_j^o-S_j$, $j=1,2$ son dos abiertos saturados respecto de $\pi$, por lo que $\pi :U_ j\to \pi (U_j)=U_j'$ es también una aplicación cociente, que además es inyectiva y por lo tanto un homeomorfismo. Tenemos así que $M$ es localmente euclídeo en $U_1'\cup U_2'$, y además es Hausdorff y IIAN. Nos quedan por tanto verificar los puntos $p\in S$.
-Este $p\in S$ verifica que $p=\pi (p_1)=\pi (p_2)$, con $p_j\in S_j$, $j=1,2$, y que  $\varphi_j(p_j)=x_0 \in \partial B_1(0) \subset \R^n$. Si tomamos $V$ un entorno de $x_0$ en $\partial B_1(0)$, tenemos que dado un $\varepsilon >0$, $\hat{V}=\{rx\mid   r\in (1-\varepsilon , 1+\varepsilon ), x\in V\} $ es entorno de $x_0$ en $\R^n$, y que $\hat{V}-B_1(0)=\{rx\mid r\in [1, 1+\varepsilon ), x \in V\}$. Sea $V_j=\varphi_j^{-1}(\hat{V}-B_1(0))$, que es entorno de $p_j$ en $M_j^o$. Como $ V_1\amalg V_2$ es abierto saturado de $M_1^o\amalg M_2^o$ respecto de $\pi$, entonces $\tilde{V}=\pi (V _1\amalg V_2)$ es entorno de $p$ en $M$. Veamos que es localmente euclídeo. Si construimos $\Phi$ de la siguiente manera
+Sea $\pi:M_1^o\amalg M_2^o\to M$ la aplicación cociente y sea $S=\pi (S_1)=\pi (S_2)$.  $U_j=M_j^o\setminus S_j$, $j=1,2$ son dos abiertos saturados respecto de $\pi$, por lo que $\pi :U_ j\to \pi (U_j)=U_j'$ es también una aplicación cociente, que además es inyectiva y por lo tanto un homeomorfismo. Tenemos así que $M$ es localmente euclídeo en $U_1'\cup U_2'$, y además es Hausdorff y IIAN. Nos quedan por tanto verificar los puntos de $S$.
+Dado un $p\in S$ verifica que $p=\pi (p_1)=\pi (p_2)$, con $p_j\in S_j$, $j=1,2$, y que  $\varphi_j(p_j)=x_0 \in \partial B_1(0) \subset \R^n$. Si tomamos $V$ un entorno de $x_0$ en $\partial B_1(0)$, tenemos que dado un $\varepsilon >0$, $\hat{V}=\{rx\mid   r\in (1-\varepsilon , 1+\varepsilon ), x\in V\} $ es entorno de $x_0$ en $\R^n$, y que $\hat{V}-B_1(0)=\{rx\mid r\in [1, 1+\varepsilon ), x \in V\}$. Sea $V_j=\varphi_j^{-1}(\hat{V}-B_1(0))$, que es entorno de $p_j$ en $M_j^o$. Como $ V_1\amalg V_2$ es abierto saturado de $M_1^o\amalg M_2^o$ respecto de $\pi$, entonces $\tilde{V}=\pi (V _1\amalg V_2)$ es entorno de $p$ en $M$. Veamos que es localmente euclídeo. Si construimos $\Phi$ de la siguiente manera
 \begin{align*}
 \Phi : &  V_1\amalg V_2  \to  V\times (1-\varepsilon , 1+ \varepsilon ), \\
 & q_1\in  V_1  \mapsto  (x,r), r=\norm{\varphi_1(q_1)}, x=\varphi_1(q_1)/r,\\
 & q_2\in V_2  \mapsto  (x,2-r), r= \norm{\varphi_2(q_2)}, x= \varphi_2(q_2)/r.
 \end{align*}
 obtenemos que $\Phi :  V_1 \to V \times [1, 1+\varepsilon)$ y $\Phi : V_2 \to V \times (1- \varepsilon, 1]$ son homeomorfismos. Además se tiene que $q_1 \sim q_2$ si y sólo si $\Phi(q_1)=\Phi(q_2)$.  De este modo, $\Phi$ induce una aplicación continua y biyectiva $$\overline{\Phi}=\Phi \circ \pi^{-1}: \tilde{V} \to V \times (1- \varepsilon, 1+ \varepsilon).$$
-Si comprobamos que $\overline{\Phi}$ es abierta, tendremos que es homeomorfismo. Tomamos un abierto básico saturado de $V_1\amalg V_2$, entonces o bien está totalmente incluido en $V_1-S_1$ o en $V_2-S_2$, en cuyo caso la imagen por $\overline{\Phi}$ es un abierto de $V\times (1-\varepsilon ,1)$ o de $V\times (1,1+\varepsilon )$, o bien interseca a $S_1$ y $S_2$. En este caso el abierto es de la forma $W_1\amalg W_2$, construido como hicimos con $V_1\amalg V_2$ a partir de un $W\subset V \subset \partial B_1(0)$. Entonces $\overline{\Phi} (\tilde{W})= W \times (1-\delta , 1+\delta )$ con $0<\delta \leq \varepsilon$, $\tilde{W} = \pi (W_1 \amalg W_2)$. Luego $\overline{\Phi}$ es abierta, y por tanto un homeomorfismo, y así finalmente $\tilde{V}$ es un entorno euclídeo de $p$. 
+Si comprobamos que $\overline{\Phi}$ es abierta, tendremos que es homeomorfismo. Tomamos un abierto básico saturado de $V_1\amalg V_2$, entonces o bien está totalmente incluido en $V_1\setminus S_1$ o en $V_2\setminus S_2$, en cuyo caso la imagen por $\overline{\Phi}$ es un abierto de $V\times (1-\varepsilon ,1)$ o de $V\times (1,1+\varepsilon )$, o bien interseca a $S_1$ y $S_2$. En este caso el abierto es de la forma $W_1\amalg W_2$, construido como hicimos con $V_1\amalg V_2$ a partir de un $W\subset V \subset \partial B_1(0)$. Entonces $\overline{\Phi} (\tilde{W})= W \times (1-\delta , 1+\delta )$ con $0<\delta \leq \varepsilon$, $\tilde{W} = \pi (W_1 \amalg W_2)$. Luego $\overline{\Phi}$ es abierta, y por tanto un homeomorfismo, y así finalmente $\tilde{V}$ es un entorno euclídeo de $p$. 
 
 Por construcción podemos tomar los abiertos $\tilde{V} \subset  M$ en cantidad numerable para dormar una base de la topología, y por lo tanto $M$ es IIAN. Nos queda sólo ver que es Hausdorff. Sea un $q\in U_j'$, $j=1,2$, y  un $p\in S$. Podemos tomar un entorno abierto $\tilde{V}$ de $p$ disjunto de un entorno pequeño de $q$. Y si tomamos $p, p' \in S$ distintos, los abiertos $\tilde{V}$, $\tilde{V}'$ construidos partiendo de $V$, $V'\subset \partial B_1(0)$ disjuntos, son disjuntos. Por lo tanto, $M$ es Hausdorff, y finalmente, variedad.
 
 \end{proof}
 
-La suma conexa de variedades no depende de los puntos elegidos ni de los homeomorfismos $\varphi_1$ y $\varphi_2$, siempre que estas conserven su orientación durante el proceso. Aunque intuitivamente sea fácil de ver, la demostración de este resultado incluye el uso del \textit{annulus theorem}, cuya prueba incluye conceptos que no vamos a tratar en el trabajo. 
+La suma conexa de variedades no depende de los puntos elegidos ni de las aplicaciones coordenadas $\varphi_1$ y $\varphi_2$, siempre que estas conserven su orientación durante el proceso. Aunque intuitivamente sea fácil de ver, la demostración de este resultado incluye el uso del \textit{annulus theorem}, cuya prueba incluye conceptos que no vamos a tratar en el trabajo. 
 
 
 
@@ -485,7 +485,7 @@ Un \enfatiza{complejo simplicial} es una colección $K$ de símplices en un espa
 
 La \autoref{fig:complex} muestra un complejo simplicial en $\R^2$. En cambio en la \autoref{fig:not_complex} los símplices representados no forman un complejo, pues no se respeta la condición (ii) de la \autoref{def:complex}.
 
-Si $K$ un complejo simplicial en $\R ^n$, llamamos \enfatiza{dimensión de $K$} a la dimensión máxima de los símplices en $K$. Esta no es mayor que $n$.
+Si $K$ un complejo simplicial en $\R ^n$, llamamos \enfatiza{dimensión de $K$} a la dimensión máxima de los símplices en $K$. Esta es menor o igual que $n$.
 Un subconjunto $K'\subseteq K$ se dice que es un \enfatiza{subcomlejo de $K$} si para todo $\sigma \in K'$, toda cara de $\sigma$ está en $K'$. Un subcomplejo es un complejo simplicial en sí mismo.
 Para todo $k\leq n$, el conjunto de todos los símplices de $K$ de dimensión menor o igual que $k$ es un subcomplejo llamado \enfatiza{k-esqueleto de $K$}.
 
@@ -577,7 +577,7 @@ Llegamos ahora a la sección central del capítulo: el Teorema de Triangulación
 Demostraciones del Teorema de Jordan-Schönflies y de los siguientes resultados de teoría de grafos se se pueden consultar en \cite{thomassen}.
 
 \begin{tma}[Teorema de Jordan-Schönflies]
-Sea $f$ un homeomorfismo entre dos curvas simples conexas $C$ y $C'$. Entonces $f$ se puede extender a un homeomorfismo de todo el plano.
+Sea $f$ un homeomorfismo entre dos curvas simples cerradas $C$ y $C'$. Entonces $f$ se puede extender a un homeomorfismo de todo el plano.
 \end{tma}
 
 Una consecuencia del Teorema de Schöenflies en teoría de grafos es la siguiente:
@@ -603,13 +603,13 @@ Sea $S$ una superficie compacta, y para cada $p\in S$ sea $U_p$ un entorno eucl�
 
 Por ser $S$ compacta, existen $p_1, \dots ,p_n$ tales que $S\subseteq \bigcup_{i=1}^n \theta_{p_i} ( \interior{Q_1(p_i)} )$. Mediante traslaciones si es necesario, podemos asumir que los $D(p_1), \dots , D(p_n)$ son disjuntos dos a dos. Lo que vamos a hacer es dejar fijos los $D(p_i)$ y modificar los $Q_1(p_i)$ y $\theta_{p_i}$, para que las intersecciones de los $\theta_{p_i} (Q_1(p_i))$ formen los vértices de un grafo a partir del cual triangularemos la superficie $S$.
 
-Vamos a demostrar que para todo $k$, los $Q_1(p_1), \dots ,Q_1(p_k)$ son tales que cualquieras dos que escojamos de los $\theta_{p_1} (Q_1(p_1)), \dots ,\theta_{p_k} (Q_1 (p_k))$ tienen sólo un número finito de puntos en común en $S$. Supongamos por tanto que es cierto para $k-1$. Traduciendo el \autoref{lema:malo} en este contexto, llamemos $\gamma^j = \theta_{p_j} (Q_1 (p_j))$, para $j=1, \dots ,k-1$, $\gamma_2 = \theta_{p_k} (Q_2 (p_k) ) $ y $\gamma_3 = \theta_{p_k} (Q_3 (p_k))$, con $Q_3 (p_k)$ un cuadrilátero que cumple que $Q_1 (p_k) \subseteq \interior{Q_3 (p_k) }$ y $Q_3 (p_k) \subseteq \interior{ Q_2 (p_k)}$. Así, por el \autoref{lema:malo}, obtenemos que sólo hay un número finito de segmentos muy malos.
+Vamos a demostrar por inducción que para todo $k$, los $Q_1(p_1), \dots ,Q_1(p_k)$ son tales que cualquieras dos que escojamos de los $\theta_{p_1} (Q_1(p_1)), \dots ,\theta_{p_k} (Q_1 (p_k))$ tienen sólo un número finito de puntos en común en $S$. Supongamos por tanto que es cierto para $k-1$. Traduciendo el \autoref{lema:malo} en este contexto, llamemos $\gamma^j = \theta_{p_j} (Q_1 (p_j))$, para $j=1, \dots ,k-1$, $\gamma_2 = \theta_{p_k} (Q_2 (p_k) ) $ y $\gamma_3 = \theta_{p_k} (Q_3 (p_k))$, con $Q_3 (p_k)$ un cuadrilátero que cumple que $Q_1 (p_k) \subseteq \interior{Q_3 (p_k) }$ y $Q_3 (p_k) \subseteq \interior{ Q_2 (p_k)}$. Así, por el \autoref{lema:malo}, obtenemos que sólo hay un número finito de segmentos muy malos.
 
 Para cada segmento malo $P$ en $\theta_{p_j} (Q_1(p_j))$, llamamos \textit{segmento malo en} $Q_2(p_k)$ a la imagen $\theta^{-1}_{p_k} (P)$. El conjunto de los segmentos malos en $Q_2 (p_k)$ junto con $Q_2 (p_k)$ determina un grafo plano biconexo que llamaremos $\Gamma$. Utilizando el \autoref{tma:grafos}, redibujamos $\Gamma$ dentro de $Q_2(p_k)$ obteniendo así un grafo $\Gamma'$ que es homeomorfo e isomorfo a $\Gamma$, y tal que sus aristas son poligonales. Extendemos el isomorfismo entre $\Gamma$ y $\Gamma'$ a un homeomorfismo de $\overline{\interior{Q_2 (p_k)}}$ que deja a $Q_2 (p_k)$ fijo. Por otro lado, este proceso transforma $Q_1 (p_k)$ y $Q_3(p_k)$ en las curvas símples conexas $Q_1'$ y $Q_3'$ tales que $\interior{Q_1'} \subseteq \interior{Q_3'}$ y tal que $p_k\in \interior{\theta_{p_k} (Q_1')}$. 
 
-Ahora, para cada $q\in Q_3'$, sea $R(q)$ un cuadrado cuyo centro es $q$ y tal que $R(q)$ no interseca ni a $Q_1'$ ni a cualquier segmento malo que no es muy malo. Formamos con los $R(q)$ un recubrimiento finito de $Q'_3$, $R(q_1), \dots ,R(q_m)$. La unión $\bigcup_{i=1}^m$ es un grafo plano biconexo cuyo ciclo exterior, que llamamos $Q_3''$, es una curva poligonal simple en $\interior{Q_2(p_k)}$ tal que $Q_1' \subseteq Q_3''$ y tal que $Q_3''$ no corta a los segmentos malos de $Q_2(p_k)$ excepto los que son muy malos.
+Ahora, para cada $q\in Q_3'$, sea $R(q)$ un cuadrado cuyo centro es $q$ y tal que $R(q)$ no interseca ni a $Q_1'$ ni a cualquier segmento malo que no es muy malo. Formamos con los $R(q)$ un recubrimiento finito de $Q'_3$, $R(q_1), \dots ,R(q_m)$. La unión $\bigcup_{i=1}^m R(q_i)$ es un grafo plano biconexo cuyo ciclo exterior, que llamamos $Q_3''$, es una curva poligonal simple en $\interior{Q_2(p_k)}$ tal que $Q_1' \subseteq Q_3''$ y tal que $Q_3''$ no corta a los segmentos malos de $Q_2(p_k)$ excepto los que son muy malos.
 
-Obtenemos entonces que $\Gamma' \cup Q_3'' $ es un grafo biconexo, y redibujándolo y utilizando de nuevo el \autoref{tma:grafos} podemos asumir que $Q_3''$ es un rectángulo cuyo interior contiene a $Q_1$. Así pues, redefinimos $Q_1 (p_k) = Q_3''$, y obtenemos un cuadrilátero tal que $\theta_{p_k} (Q_1(p_k)) \cap \theta_{p_j} (Q_1 (p_j))$ es finita para todo $j=1, \dots , k-1$, demostrando por tanto la hipótesis de inducción.
+Obtenemos entonces que $\Gamma' \cup Q_3'' $ es un grafo biconexo, y redibujándolo utilizando de nuevo el \autoref{tma:grafos} podemos asumir que $Q_3''$ es un rectángulo cuyo interior contiene a $Q_1$. Así pues, redefinimos $Q_1 (p_k) = Q_3''$, y obtenemos un cuadrilátero tal que $\theta_{p_k} (Q_1(p_k)) \cap \theta_{p_j} (Q_1 (p_j))$ es finita para todo $j=1, \dots , k-1$, demostrando por tanto la hipótesis de inducción.
 
 Finalmente, podemos pensar en $\bigcup_{i=1}^n \theta_{p_i} (Q_1 (p_i))$ como un grafo $G$ dibujado sobre la superficie $S$, cuyos vértices son las intersecciones de los $\theta_{p_j} (Q_1(p_j))$, $j=1, \dots ,k$. Cada región de $S\setminus G$ tiene como frontera a un ciclo $C$ en $G$. Formamos ahora un polígono convexo $C'$ de lados de longitud $1$ y tal que cada vértice de $C'$ se corresponde con un vértice de $C$. Al identificar las aristas de los varios $C'$ que se corresponden con la misma arista en $C$, obtenemos un espacio topológico $S'$ con un grafo sumergido $\Gamma'$ isomorfo a $\Gamma$. Este isomorfismo lo podemos extender a un homeomorfismo $f$ que lleva el conjunto de puntos de $\Gamma$ en $S$ al conjunto de puntos de $\Gamma'$ en $S'$, y cuya restricción a cada ciclo $C$ es un homeomorfismo entre $C$ y $C'$. Por el Teorema de Jordan-Schönflies, podemos extender $f$ a un homeomorfismo de $\overline{\interior{C}}$ en $\overline{\interior{C'}}$, lo que define un homeomorfismo de $S$ en $S'$.
 Como cada $C'$ es un polígono convexo, podemos triangularlo de forma elemental. Haciendo esto en cada $C'$, obtenemos un complejo simplicial cuyo poliedro es homeomorfo a $S$, y tal que cada 1-símplice es una cara de exáctamente dos 2-símplices. Hemos obtenido así una triangulación de $S$.
@@ -642,7 +642,7 @@ En su demostración Conway hace uso de perforaciones sobre las superficies, sin 
 
 \section{Superficies como cocientes}
 
-Para el Teorema de Clasificación necesitamos un método uniforme de representación de las superficies compactas en el plano. Veremos que toda superficie compacta se puede representar como el cociente de un polígono por una relación de equivalencia que identifica sus aristas dos a dos. Empecemos viendo las tres superficies fundamentales: la esfera $\Esfera$, el plano proyectivo $\Proyectivo$ y el toro $\Toro$. 
+Para el Teorema de Clasificación necesitamos un método de representación de las superficies compactas en el plano. Veremos que toda superficie compacta se puede representar como el cociente de un polígono por una relación de equivalencia que identifica sus aristas dos a dos. Empecemos viendo las tres superficies fundamentales: la esfera $\Esfera$, el plano proyectivo $\Proyectivo$ y el toro $\Toro$. 
 \begin{prop}%%%%PROP: ESFERA COCIENTE DISCO Y CUADRADO%%%%
 \label{prop:Esfera como cociente de disco y cuadrado}
 La esfera $\mathbb{S}^2$ es homeomorfa a los siguientes espacios cociente: 
@@ -653,17 +653,17 @@ La esfera $\mathbb{S}^2$ es homeomorfa a los siguientes espacios cociente:
 \end{itemize}
 \end{prop}
 \begin{proof}
-Para ver que cada espacio es homeomorfo a la esfera, daremos una aplicación cociente desde cada espacio a la esfera que haga las mismas identificaciones que la relación de equivalencia, y entonces apelaremos a la unicidad del espacio cociente.\\
-Para (a), vamos a definir una aplicación que ``envuelve'' cada paralelo de la esfera con un segmento horizontal del disco (ver \autoref{fig:esfera_cociente_circunferencia}).
-Formalmente, esta aplicación $\pi:\overline{\mathbb{B}}^2\to \mathbb{S}^2$ vienen dada por 
+%Para ver que cada espacio es homeomorfo a la esfera, daremos una aplicación cociente desde cada espacio a la esfera que haga las mismas identificaciones que la relación de equivalencia, y entonces apelaremos a la unicidad del espacio cociente.\\
+Para (a), vamos a definir una aplicación que ``envuelva'' cada paralelo de la esfera con un segmento horizontal del disco (ver \autoref{fig:esfera_cociente_circunferencia}).
+Esta aplicación la podemos escribir como $\pi:\overline{\mathbb{B}}^2\to \mathbb{S}^2$ 
 $$\pi(x,y)=\left\{\begin{array}{lc}
 			(-\sqrt{1-y^2} \cos\dfrac{\pi x}{\sqrt{1-y^2}}, -\sqrt{1-y^2}, y), & y\neq \pm 1 \\
 			\\(0,0,y), & y=\pm1 
 
 \end{array}
 \right.$$
-Es claro que $\pi$ es continua y hace las mismas identificaciones que la relación de equivalencia. Como es sobreyectiva, por el teorema de la aplicación cerrada es una aplicación cociente. % (\autoref{teo:aplicac_cerrada}).
-Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ un homeomorfismo que manda linealmente cada segmento radial entre el origen y la frontera de $S$ a un segmento paralelo a este, que une el centro del disco y su frontera. Hagamos ahora $\beta=\pi \circ \alpha : S \to \mathbb{S}^2$, donde $\pi$ es la aplicación cociente del apartado anterior. Tenemos entonces que $\beta$ identifica $(x,y)$ y $(-x,y)$ cuando $(x,y)\in \partial S$, y por otro lado es inyectiva, así que hace las mismas identificaciones que la aplicación cociente definida en (b), completando así la demostración (ver \autoref{fig:esfera_cuadrado}). 
+$\pi$ es continua y hace las mismas identificaciones que la relación de equivalencia. Como es sobreyectiva, por el teorema de la aplicación cerrada es una aplicación cociente. % (\autoref{teo:aplicac_cerrada}).
+Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ un homeomorfismo que manda linealmente cada segmento radial entre el origen y la frontera de $S$ a un segmento paralelo a este que une el centro del disco y su frontera. Hagamos ahora $\beta=\pi \circ \alpha : S \to \mathbb{S}^2$, donde $\pi$ es la aplicación cociente del apartado anterior. Tenemos entonces que $\beta$ identifica $(x,y)$ y $(-x,y)$ cuando $(x,y)\in \partial S$, y por otro lado es inyectiva, así que hace las mismas identificaciones que la aplicación cociente definida en (b), completando así la demostración.% (ver \autoref{fig:esfera_cuadrado}). 
 \end{proof}
 \begin{figure}%%%%%%% FIGURA: ESFERA COCIENTE CIRCUNFERENCIA%%%%
 \begin{center}
@@ -708,63 +708,51 @@ Para probar (b), sea $\alpha:S\to \overline{\mathbb{B}}^2$ un homeomorfismo que 
 \caption{La esfera como cociente del disco $\overline{\mathbb{B}}^2$.\label{fig:esfera_cociente_circunferencia}}
 \end{figure}
 
-\begin{figure}%%%%FIGURA: ESFERA CUADRADO
-\centering
-
-\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.6]
-\draw[-<-={at=0.125},->-={at=0.375}, -<<-={at=0.625}, ->>-={at=0.875} ](0,0) circle (2cm);
-%\draw (-2,0)--(2,0);
-%\draw [rotate=15] (-2,0)--(2,0);
-%\draw [rotate=30] (-2,0)--(2,0);
-%\draw [rotate=45] (-2,0)--(2,0);
-%\draw [rotate=60] (-2,0)--(2,0);
-%\draw [rotate=75] (-2,0)--(2,0);
-%\draw [rotate=90] (-2,0)--(2,0);
-%\draw [rotate=105] (-2,0)--(2,0);
-%\draw [rotate=120] (-2,0)--(2,0);
-%\draw [rotate=135] (-2,0)--(2,0);
-%\draw [rotate=150] (-2,0)--(2,0);
-%\draw [rotate=165] (-2,0)--(2,0);
-
-
-
-\draw [-<-={at=0.5}] (-8,0)-- (-6,2);
-\draw [-<-={at=0.5}](-4,0)-- (-6,2);
-\draw [-<<-={at=0.5}](-8,0)-- (-6,-2);
-\draw [->>-={at=0.5}](-6,-2)-- (-4,0);
-\draw(6,0) circle (2cm);
-\draw (8,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=-180];
-\draw [dashed] (8,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=180];
-\draw [->] (-8.5,0) -- (-3.5,0);
-\draw [->] (-6,-2.5) -- (-6,2.5);
-\draw [->] (-2.5,0) -- (2.5,0);
-\draw [->] (0,-2.5) -- (0,2.5);
-\draw [->] (3.5,0) -- (8.5,0);
-\draw [->] (6,0) -- (6,2.5);
-\draw [->] (6,0) -- (4.51,-2.5);
-\draw [<-][shift={(-3,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
-\draw [<-] [shift={(3,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
-\draw (-3.1,3.21) node[anchor=north west] {$ \alpha $};
-\draw (2.89,3.23) node[anchor=north west] {$ \pi $};
-\draw [->-={at=0.45}, -<<-={at=0.82}](6,2) arc[x radius=0.7, y radius=2, start angle=90, end angle=270];
-\begin{scriptsize}
-\fill [color=black] (0,2) circle (1.5pt);
-\fill [color=black] (-8,0) circle (1.5pt);
-\fill [color=black] (-4,0) circle (1.5pt);
-\fill [color=black] (-6,-2) circle (1.5pt);
-\fill [color=black] (-6,2) circle (1.5pt);
-\fill [color=black] (-2,0) circle (1.5pt);
-\fill [color=black] (2,0) circle (1.5pt);
-\fill [color=black] (0,-2) circle (1.5pt);
-\fill [color=black] (0,2) circle (1.5pt);
-\fill [color=black] (5.34,-0.66) circle (1.5pt);
-\end{scriptsize}
-\end{tikzpicture}
-
-\caption{La esfera como cociente de un cuadrado.\label{fig:esfera_cuadrado}}
-
-
-\end{figure}
+%\begin{figure}%%%%FIGURA: ESFERA CUADRADO
+%\centering
+%
+%\begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.6]
+%\draw[-<-={at=0.125},->-={at=0.375}, -<<-={at=0.625}, ->>-={at=0.875} ](0,0) circle (2cm);
+%
+%
+%
+%\draw [-<-={at=0.5}] (-8,0)-- (-6,2);
+%\draw [-<-={at=0.5}](-4,0)-- (-6,2);
+%\draw [-<<-={at=0.5}](-8,0)-- (-6,-2);
+%\draw [->>-={at=0.5}](-6,-2)-- (-4,0);
+%\draw(6,0) circle (2cm);
+%\draw (8,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=-180];
+%\draw [dashed] (8,0) arc[x radius=2, y radius=0.7, start angle=0, end angle=180];
+%\draw [->] (-8.5,0) -- (-3.5,0);
+%\draw [->] (-6,-2.5) -- (-6,2.5);
+%\draw [->] (-2.5,0) -- (2.5,0);
+%\draw [->] (0,-2.5) -- (0,2.5);
+%\draw [->] (3.5,0) -- (8.5,0);
+%\draw [->] (6,0) -- (6,2.5);
+%\draw [->] (6,0) -- (4.51,-2.5);
+%\draw [<-][shift={(-3,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
+%\draw [<-] [shift={(3,1.25)}] plot[domain=0.64:2.5,variable=\t]({1*1.25*cos(\t r)+0*1.25*sin(\t r)},{0*1.25*cos(\t r)+1*1.25*sin(\t r)});
+%\draw (-3.1,3.21) node[anchor=north west] {$ \alpha $};
+%\draw (2.89,3.23) node[anchor=north west] {$ \pi $};
+%\draw [->-={at=0.45}, -<<-={at=0.82}](6,2) arc[x radius=0.7, y radius=2, start angle=90, end angle=270];
+%\begin{scriptsize}
+%\fill [color=black] (0,2) circle (1.5pt);
+%\fill [color=black] (-8,0) circle (1.5pt);
+%\fill [color=black] (-4,0) circle (1.5pt);
+%\fill [color=black] (-6,-2) circle (1.5pt);
+%\fill [color=black] (-6,2) circle (1.5pt);
+%\fill [color=black] (-2,0) circle (1.5pt);
+%\fill [color=black] (2,0) circle (1.5pt);
+%\fill [color=black] (0,-2) circle (1.5pt);
+%\fill [color=black] (0,2) circle (1.5pt);
+%\fill [color=black] (5.34,-0.66) circle (1.5pt);
+%\end{scriptsize}
+%\end{tikzpicture}
+%
+%\caption{La esfera como cociente de un cuadrado.\label{fig:esfera_cuadrado}}
+%
+%
+%\end{figure}
 
 \begin{prop}%%%%PROP: TORO COMO CUADRADO
 \label{prop:toro_cuadrado}
@@ -776,7 +764,7 @@ Definimos la aplicación $q:I\times I \to \Toro$ que manda $(u,v)\mapsto (e^{2\p
 
 
 
-\begin{figure}%%%%FIGURA: TORO COMO CUADRADO
+\begin{figure}[b]%%%%FIGURA: TORO COMO CUADRADO
 \begin{center}
 \begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1cm, y=1cm, scale=0.7]
 
@@ -825,7 +813,7 @@ El plano proyectivo $\mathbb{P}^2$ es homeomorfo a los siguientes espacios cocie
 \begin{proof}
 Sea la relación de equivalencia $\sim$ generada por $(x,y) \sim (-x,-y)$ para cada $(x,y)\in \mathbb{S}^2$, que representa $\mathbb{P}^2$ como el cociente de una esfera en la cual se identifican polos opuestos, y sea $p:\mathbb{S}^2 \to \mathbb{P}^2$ su aplicación cociente. %AQUI FALTA UN POCO DE EXPLICACION, EJEMPLO 4.54 DEL LEE
 Si $F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2$ es la aplicación que manda el disco al emisferio norte de la esfera mediante la aplicación $F(x,y)=(x,y,\sqrt{1-x^2-y^2})$, entonces $p\circ F:\overline{\mathbb{B}}^2 \to \mathbb{S}^2/\sim$ es sobreyectiva por serlo $p$ y $F$, y es por tanto una aplicación cociente por el teorema de la aplicación cerrada. La aplicación identifica únicamente $(x,y)\in \partial \overline{\mathbb{B}}^2$ con $(-x,-y)\in \partial \overline{\mathbb{B}}^2$, por lo que $\mathbb{P}^2$ es homeomorfo al espacio cociente resultante.
-Para la parte (b) utilizamos un argumento análogo al de la demostración de la \autoref{prop:Esfera como cociente de disco y cuadrado} (b) 
+Para la parte (b) utilizamos, como en \autoref{prop:Esfera como cociente de disco y cuadrado} (b), el homeomorfismo $\alpha:S\to \overline{\mathbb{B}}^2$ que manda linealmente cada segmento radial entre el origen y la frontera de $S$ a un segmento paralelo en el disco que une el centro y su frontera. Al componerlo con $p\circ F$ se obtiene el resultado.
 \end{proof}
 
 
@@ -856,7 +844,7 @@ De ahora en adelante visualizaremos el plano proyectivo como el \enfatiza{crossc
 
 
 
-\begin{figure}[h]%%%FIG: CROSSCAP
+\begin{figure}[h!]%%%FIG: CROSSCAP
 \centering
 
 \begin{tikzpicture}[use optics, scale=0.7][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
@@ -951,6 +939,7 @@ De ahora en adelante visualizaremos el plano proyectivo como el \enfatiza{crossc
 En las anteriores proposiciones hemos visto una o varias formas de representar superficies dadas ciertas construcciones geométricas. En estos casos hemos dado aplicaciones y demostraciones concretas para validar nuestros argumentos, pero a medida que aumenta la sofisticación es más útil guiarse visualmente por las figuras construidas. Por ello debemos formalizar un método general para construir superficies identificando aristas de figuras geométricas del plano.
 %Daremos por sabidas las definiciones básicas de símplices CW-complejos, que dejamos en el \autoref{sec:CW}.
 
+
 \begin{defin}%%%DEF:Polígono
 Un \enfatiza{polígono} es un subconjunto de $\R^2$ que es homeomorfo a $\mathbb{S}^1$ y está formado por un número finito de segmentos, que llamaremos \enfatiza{aristas} y que se intersecan sólo en sus extremos, que llamaremos \enfatiza{vértices}. %Los $0$-símplices y $1$-símplices del poígono son respectivamente sus \enfatiza{vértices} y sus \enfatiza{bordes}. Del lema \autoref{lemma:cw} se sigue que un borde yace exactamente en dos vértices.
 \end{defin}
@@ -976,8 +965,8 @@ Sean $P_1,\dots, P_k$ regiones poligonales en el plano, y sea $P=P_1\amalg \dots
 
 \begin{proof} 
 %Sea $M$ el espacio cociente, sea $\pi :P\to M$ la aplicación cociente y sean $M_0, \, M_1, \, M_2=M$ respectivamente las imágenes por $\pi$ de los vértices, las aristas y las regiones poligonales. Por la propia definición de $P$, $M_0$ es un espacio discreto, y para $k=1,2$, $M_k$ se obtiene a partir de $M_{k-1}$ pegando un número finito de $k$-celdas. Por tanto $M$ es un CW-complejo (\autoref{def:cw}).\\
-Para demostrar esta propiedad seguiremos una idea similar a la de la \autoref{prop:suma_conexa}. Para probar (a), denotemos por $M$ el espacio cociente, y sea $\pi :P\to M$ la proyección.  %, entonces, por la \autoref{prop:cw_variedad}, $M$ será una superficie.\\
-Por un lado, los puntos que provienen del interior de cada región poligonal son abiertos en $M$ por definición, y por lo tanto son entornos euclídeos de cada uno de sus puntos. Así, tenemos que aquí $M$ es localmente euclídea, y además Hausdorff y IIAN \\
+Para demostrar esta propiedad seguiremos una idea similar a la de la \autoref{prop:suma_conexa}. Para probar (a), denotemos por $M$ el espacio cociente, y sea $\pi :P\to M$ la aplicación cociente.  %, entonces, por la \autoref{prop:cw_variedad}, $M$ será una superficie.\\
+Por un lado, los puntos que provienen del interior de cada región poligonal son abiertos en $M$ por definición, y por lo tanto son entornos euclídeos de cada uno de sus puntos. Así, tenemos que aquí $M$ es localmente euclídea, y además Hausdorff y IIAN. \\
 Sea ahora $D$ la imagen por $\pi$ del interior de una arista de una región poligonal, y sea $d\in D$. Veamos que $d$ tiene un entorno euclídeo. Por un lado, $d$ tiene exáctamente dos preimágenes $x$ e $y$, cada una en el interior de una arista distinta $D_1$ y $D_2$. Supongamos sin pérdida de generalidad que estas dos aristas pertenecen respectivamente a $P_1$ y $P_2$ ($P_1$ puede ser igual a $P_2$), y denotemos por $h:D_2\to D_1$ un homeomorfismo tal que $h(y)=x$. Dado que cada $P_i$ es una variedad con borde, y $x,y$ son puntos borde, podemos elegir cartas coordenadas $(U,\varphi)$  para $P_1$ y $(V,\psi)$ para $P_2$ tal que $x\in U$, $y\in V$. Denotamos $\widehat{U}=\varphi(U),\widehat{V}=\psi(V)\subseteq \mathbb{H}^2$ y podemos asumir, contrayendo $U$ y $V$ si es necesario, que $h(V\cap D_2)=U\cap D_1$, y que $\widehat{U}=U_0\times [0,\varepsilon)$, $\widehat{V}=V_0\times [0,\varepsilon)$  para un $\varepsilon >0$ y unos subconjuntos $U_0, V_0 \subset \R$ como se muestra en la \autoref{fig:6a4a}. Así pues podemos escribir las aplicaciones coordenadas como $\varphi(x)=(\varphi_0(x),\varphi_1(x))$, $\psi(x)=(\psi_0(y),\psi_1(y))$ con $\varphi_0:U\to U_0$, $\varphi_1:U\to [0,\varepsilon)$, $\psi_0:V\to V_0$ y $\psi_1:V\to [0,\varepsilon)$ aplicaciones continuas. Que $x$ e $y$ sean puntos borde significa que $\varphi_1(x)=\psi_1(y)=0$.\\
 Queremos ensamblar estas dos cartas con una aplicación cuya imagen sea un abierto de $\R^2$, pegándolas por los puntos que se corresponden en $D_1$ y $D_2$. En la demostración de la \autoref{prop:suma_conexa} teníamos un homeomorfismo entre los puntos borde de los entornos, pero en este caso el problema es que las aplicaciones $\varphi$ y $\psi$ no tienen por qué llevar puntos borde que se correspondan al mismo punto imagen, y por tanto tenemos que ajustarlo. Se tiene que las dos restricciones 
 $$\begin{array}{lr}
@@ -1068,7 +1057,7 @@ $$\Phi ^{-1}(s)= \begin{cases}
 \pi \circ \varphi ^{-1}(s), & s_2\geq 0, \\
 \pi \circ \psi ^{-1} \circ B^{-1}(s), & s_2\leq 0.\\
  \end{cases}$$
-Dado que las dos partes de la función son iguales donde coinciden, la aplicación es continua, y por tanto $\Phi$ es un homeomorfismo. Así pues, $U\amalg V$ es un entorno euclídeo de $d$. Un argumento análogo al de la demostración de la Proposición \ref{prop:suma_conexa} nos indica que es Hausdorff y IIAN.\\
+Dado que las dos partes de la función son iguales donde coinciden, la aplicación es continua, y por tanto $\Phi$ es un homeomorfismo. Así pues, $U\amalg V$ es un entorno euclídeo de $d$. Un argumento análogo al de la demostración de la Proposición \ref{prop:suma_conexa} nos indica que es Hausdorff y IIAN.
 
 \begin{figure}[t]
 \centering
@@ -1143,13 +1132,13 @@ Dado que las dos partes de la función son iguales donde coinciden, la aplicaci�
 \caption{Entorno euclídeo de un vértice.\label{fig:6.4}}
 \end{figure}
 
-Para finalizar, sea $v\in M$ tal que su preimagen por $\pi$ es un conjunto de vértices $\left\{v_1,\dots ,v_k\right\} \subseteq P$. Para cada uno de estos vértices podemos elegir un $\varepsilon>0$ tal que el disco $B_{\varepsilon}(v_i)$ no contenga ningun vértice de la región poligonal $P_j$ a la que pertenece $v_i$ a parte de sí mismo, y tal que no interseca más aristas que las que lo contienen. $B_{\varepsilon}(v_i)\cap P_j$ es homeomorfo a un subconjunto $\Lambda_i$ de $\R^2$ definido por la intersección de dos semiplanos cuyas fronteras coinciden en un único punto y tal que el ángulo que forman es de $2\pi /k$, y que descrito en coordenadas polares queda $\Lambda_i =\left\{ (r,\theta ) \mid \theta_0 \leq \theta \leq \theta_0 + 2k\pi \right\}$. El homeomorfismo viene dado por una traslación del vértice $v_i$ al origen junto con una aplicación que en coordenadas polares es de la forma $(r,\theta ) \mapsto (r,\theta_0 +c\theta )$, con $c$ y $\theta_0$ constantes. Como cada arista está asociada exáctamente a otra arista, podemos ahora construir una aplicación que envíe cada una de las $\Lambda_i$ a un conjunto que contenga un entorno del origen y que, despues de reescalar si es necesario, respete las identificaciones entre las aristas de los $P_j$ (ver \autoref{fig:6.4}). Esta aplicación está definida sobre un conjunto saturado de $P$, que al pasar al cociente determina un homeomorfismo de $v$ a un entorno del origen de $\R^2$. %HAUSDORFF Y IIAN?
+Para finalizar, sea $v\in M$ tal que su preimagen por $\pi$ es un conjunto de vértices $\left\{v_1,\dots ,v_k\right\} \subseteq P$. Para cada uno de estos vértices podemos elegir un $\varepsilon>0$ tal que el disco $B_{\varepsilon}(v_i)$ no contenga ningun vértice de la región poligonal $P_j$ a la que pertenece $v_i$ a parte de sí mismo, y tal que no interseca más aristas que las que lo contienen. $B_{\varepsilon}(v_i)\cap P_j$ es homeomorfo a un subconjunto $\Lambda_i$ de $\R^2$ definido por la intersección de dos semiplanos cuyas fronteras coinciden en un único punto y tal que el ángulo que forman es de $2\pi /k$, y que descrito en coordenadas polares queda $\Lambda_i =\left\{ (r,\theta ) \mid \theta_0 \leq \theta \leq \theta_0 + 2k\pi \right\}$. El homeomorfismo viene dado por una traslación del vértice $v_i$ al origen junto con una aplicación que en coordenadas polares es de la forma $(r,\theta ) \mapsto (r,\theta_0 +c\theta )$, con $c$ y $\theta_0$ constantes. Como cada arista está asociada exáctamente a otra arista, podemos ahora construir una aplicación que envíe cada una de las $\Lambda_i$ a un conjunto que contenga un entorno del origen y que, despues de reescalar si es necesario, respete las identificaciones entre las aristas de los $P_j$ (ver \autoref{fig:6.4}). Esta aplicación está definida sobre un abierto saturado de $P$, que al pasar al cociente determina un homeomorfismo de $v$ a un entorno del origen de $\R^2$. Estos abiertos los podemos tomar en una cantidad numerable para formar una base de la topología. Por otro lado, cogiendo abiertos suficiéntemente pequeños, podemos ver que es separable.%HAUSDORFF Y IIAN?
 
 Finalmente, para probar (b), volvemos a ver cada polígono como una superficie con borde. Las imágenes por $\pi$ de los puntos del interior de aristas que se identifican son localmente euclídeos por la demostración del apartado anterior. Por otro lado, para los puntos del borde que provengan de una arista y que tengan sólo una preimagen podemos encontrar como semibolas coordenadas las mismas de antes de pasar al cociente. Finalmente para las imágenes por $\pi$ de los vértices podemos encontrar una bola o una semibola coordenada con una construcción similar a la de la demostración anterior, dependiendo de si estas imágenes están contenidas en el borde o no. Por tanto se tiene que el espacio cociente resultante es una superficie con borde. %HAUSDORFF Y IIAN?
 \end{proof}
 
 
-\begin{eje}%%%%EJE: Botella Klein
+\begin{eje}\label{eje:klein}%%%%EJE: Botella Klein
 La \enfatiza{botella de Klein} es la superficie $K$ obtenida identificando las aristas del cuadrado $I\times I$ de acuerdo a $(0,t)\sim (1,t)$ y $(t,0)\sim (1-t,1)$ para $0\leq t\leq 1$.  Para visualizar $K$, podemos pensar en pegar las aristas izquierda y derecha creando un cilindro, y luego hacer pasar el extremo superior por la parte inferior del cilindro, para finalmente pegar los dos extremos (ver \autoref{fig:klein}).
 \end{eje}
 
@@ -1223,7 +1212,7 @@ Veamos ahora como obtener las figuras del \autoref{eje:rep_borde}. El cilindro $
 \end{figure}
 
 \section{Representación de superficies}
-Vamos ahora a dar un método uniforme para representar todas las superficies compactas (con y sin borde) como regiones poligonales del plano. A su vez asociaremos a cada región poligonal, y por tanto a cada superficie compacta, una secuencia de símbolos llamada palabra. 
+Vamos ahora a dar un método para representar todas las superficies compactas (con y sin borde) como regiones poligonales del plano. A su vez asociaremos a cada región poligonal, y por tanto a cada superficie compacta, una secuencia de símbolos llamada palabra. 
 
 
 \begin{defin}%%%%DEF: palabra
@@ -1232,7 +1221,7 @@ Sea $S$ un conjunto. Una \textbf{\textit{palabra en $S$}} es una $k$-tupla orden
 
 \begin{defin}%%%%DEF: Representación poligonal
 \label{def:rep_pol}
-Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,\dots ,W_k\rangle$$ está formada por un conjunto finito S junto con un número finito de palabras $W_1,\dots ,W_k$ en $S$ de longitud mayor o igual que $3$, tal que que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por yuxtaposición. Por ejemplo, la presentación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ la escribiremos $\langle a,b\mid  aba^{-1}b^{-1}\rangle$. 
+Una \textbf{\textit{representación poligonal}}, que denotaremos por $$\mathcal{P}=\langle S\mid W_1,\dots ,W_k\rangle$$ está formada por un conjunto finito S junto con un número finito de palabras $W_1,\dots ,W_k$ en $S$ de longitud mayor o igual que $3$, tal que que para todo $a\in S$ existe un $W_i$ tal que $a\in W_i$. Cuando el conjunto $S$ esté descrito listando sus elementos, quitaremos los corchetes que rodean los elementos de $S$ y denotaremos las palabras $W_i$ por yuxtaposición. Por ejemplo, la representación con $S=\{a,b\}$ y la palabra $W=(a,b,a^{-1},b^{-1})$ la escribiremos $\langle a,b\mid  aba^{-1}b^{-1}\rangle$. 
 
 Permitimos también el caso en que $S=\{a\}$ (u otro símbolo cualquiera) y que $\mathcal{P}$ tenga una sola palabra de longitud $2$, es decir, $\langle a\mid aa\rangle$, $\langle a\mid a^{-1}a^{-1}\rangle$, $\langle a\mid aa^{-1}\rangle$ y $\langle a\mid a^{-1}a\rangle$.
 \begin{comment} o $1$ \end{comment} 
@@ -1242,7 +1231,7 @@ Permitimos también el caso en que $S=\{a\}$ (u otro símbolo cualquiera) y que 
 \begin{defin}%%%%DEF: Realización geométrica
 Una representación poligonal $\mathcal{P}$ da lugar a un espacio topológico $|\mathcal{P}|$, llamado \textbf{\textit{realización geométrica de $\mathcal{P}$}}, que se obtiene de la siguiente manera:
 \begin{itemize}
-\item[1.] Para cada $W_i\in \mathcal{P}$ de longitud $k$, sea $P_i$ una región poligonal convexa con $k$ aristas, centrada en el origen, con aristas de longitud 1, ángulos iguales y tal que un vértice yaczca sobre el eje $OY$.
+\item[1.] Para cada $W_i\in \mathcal{P}$ de longitud $k$, sea $P_i$ una región poligonal convexa con $k$ aristas, centrada en el origen, con aristas de longitud 1, ángulos iguales y tal que un vértice esté sobre el eje $OY$.
 \item[2.] Definimos una biyección (que llamaremos \textit{etiquetado}) entre los símbolos de $W_ i$ y las aristas de $P_i$, en sentido contrario a las agujas del reloj y empezando por la que yace en el eje $OY$.
 \item[3.] Sea $|\mathcal{P}|$ el espacio cociente de $\coprod_i P_i$ determinado por la identificación de las aristas que tengan el mismo símbolo, conforme al homeomorfismo afín que hace coincidir los primeros vértices de las aristas con una etiqueta dada $a$ y los últimos vertices de las que tienen la correspondiente etiqueta $a^{-1}$ (en el sentido contrario a las agujas del reloj).
 
@@ -1283,9 +1272,10 @@ Un espacio topológico que admite una representación con una sola cara es conex
 \begin{eje}\label{eje:rep_sup_importantes}%%%%PROP: representación de superficies importantes
 Veamos las representaciones de algunas superficies importantes (ver \autoref{fig:Representacion_superficies_importantes} y \autoref{fig:representacion_esfera_proyectivo}).
 \begin{itemize}
-\item[(a)] $\mathbb{S}^2=\langle a\mid aa^{-1}\rangle=\langle a,b\mid  abb^{-1}a^{-1}\rangle$ (\autoref{prop:Esfera como cociente de disco y cuadrado})
-\item[(b)] $\mathbb{P}^2= \langle a\mid aa \rangle = \langle a,b\mid abab \rangle$ (\autoref{prop:proyectivo_cociente_cuadrado})
-\item[(c)] $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$ (\autoref{prop:toro_cuadrado})
+\item[(a)] $\mathbb{S}^2=\langle a\mid aa^{-1}\rangle=\langle a,b\mid  abb^{-1}a^{-1}\rangle$ (\autoref{prop:Esfera como cociente de disco y cuadrado}).
+\item[(b)] $\mathbb{P}^2= \langle a\mid aa \rangle = \langle a,b\mid abab \rangle$ (\autoref{prop:proyectivo_cociente_cuadrado}).
+\item[(c)] $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$ (\autoref{prop:toro_cuadrado}).
+\item[(d)] $K=\langle a,b\mid abab^{-1} \rangle$ (\autoref{eje:klein}).
 \end{itemize}
 \end{eje}
 
@@ -1398,7 +1388,7 @@ Podemos dar también las representaciones de algunas superficies con borde (\aut
 \centering
 \begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.5]
 \draw [-<-](0,2)-- (2,0);
-\draw [-<-](2,0)-- (0,-2);
+\draw [->-](2,0)-- (0,-2);
 \draw [-<-](0,-2)-- (-2,0);
 \draw [-<-](-2,0)-- (0,2);
 \draw (1,1) node[anchor=south west] {$ c $};
@@ -1415,7 +1405,7 @@ Podemos dar también las representaciones de algunas superficies con borde (\aut
 
 
 
-\begin{figure}[b]%%%%FIG: ejemplo operacion
+\begin{figure}[]%%%%FIG: ejemplo operacion
 \centering
 \begin{tikzpicture}[use optics, x=1cm, y=1cm, scale=0.8]
 \draw [->-={at=0.125}, ->-={at=0.375}, -<-={at=0.625}, -<-={at=0.875}](-1,1) -- (-1,-1) -- (-3,-1) -- (-3, 1) -- (-1,1); 
@@ -1446,7 +1436,7 @@ Podemos dar también las representaciones de algunas superficies con borde (\aut
 \end{figure}
 
 
-Parece claro que, además de $\Esfera$ y $\Proyectivo$, una superficie pueda tener varias presentaciones poligonales. Sea por ejemplo la presentación del toro $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$. Intuitivamente podemos ver que, subdividiendo las aristas etiquetadas con $a$ y reetiquetándolas con $e$ y $a$ (ver \autoref{fig:ejemplo_operacion}), la superficie que representa la representación obtenida $\langle a,e,b\mid  aeb^{-1}e^{-1}a^{-1}b\rangle$ será la misma.
+Parece claro que, además de $\Esfera$ y $\Proyectivo$, una superficie pueda tener varias representaciones poligonales. Sea por ejemplo la representación del toro $\Toro=\langle a,b\mid aba^{-1}b^{-1}\rangle$. Intuitivamente podemos ver que, subdividiendo las aristas etiquetadas con $a$ y reetiquetándolas con $e$ y $a$ (ver \autoref{fig:ejemplo_operacion}), la superficie que representa la representación obtenida $\langle a,e,b\mid  aeb^{-1}e^{-1}a^{-1}b\rangle$ será la misma.
 Vamos ahora a desarrollar unas reglas generales de transformación de representaciones de superficies que den lugar a superficies homeomorfas.
 
 
@@ -1459,12 +1449,12 @@ Sean $\mathcal{P}_1$ y $\mathcal{P}_2$ dos representaciones tal que sus realizac
 A las siguientes operaciones las llamamos \enfatiza{transformaciones elementales} de una representación poligonal:
 \begin{itemize}
 \item \enfatiza{Reetiquetar}: Se refiere a tres cambios distintos que se pueden dar sobre la representación: cada vez que aparece un símbolo $a$, cambiarlo por otro símbolo que no esté todavía en la representación; intercambiar entre ellos dos símbolos $a$ y $b$ de la representación cada vez que aparezcan; intercambiar todas las $a$ por $a^{-1}$ y las $a^{-1}$ por $a$.
-\item \enfatiza{Subdividir} (\autoref{fig:ejemplo_operacion}): Cada vez que aparezca $a$, sustituirlo por $ae$, y cada vez que aparezca $a^{-1}$ sustituirlo por $e^{-1}a^{-1}$, donde $e$ es un símbolo que no está antes en la presentación.
+\item \enfatiza{Subdividir} (\autoref{fig:ejemplo_operacion}): Cada vez que aparezca $a$, sustituirlo por $ae$, y cada vez que aparezca $a^{-1}$ sustituirlo por $e^{-1}a^{-1}$, donde $e$ es un símbolo que no está todavía en la representación.
 \item \enfatiza{Consolidar} (\autoref{fig:ejemplo_operacion}): Si $a$ y $b$ aparecen siempre de forma adyacente, intercambiar $ab$ por $a$ y $b^{-1}a^{-1}$ por $a^{-1}$, siempre que esto de lugar a una o más palabras de longitud al menos $3$ o a una sola palabra de longitud $2$.
 \item \enfatiza{Reflejar} (\autoref{fig:reflejar}): $$\langle S\mid   a_1 \dots a_m, W_2,\dots,W_k\rangle \mapsto \langle S\mid   a_m^{-1}\dots a_1^{-1}, W_2, \dots ,W_k\rangle .$$
 \item \enfatiza{Rotar} (\autoref{fig:rotar}): $$\langle S\mid a_1a_2\dots a_m, W_2,\dots , W_k\rangle \mapsto \langle S\mid   a_2\dots a_ma_1, W_2,\dots , W_k\rangle .$$
 \item \enfatiza{Cortar} (\autoref{fig:cortar}): Si $W_1$ y $W_2$ tienen longitud al menos $2$, $$\langle S\mid W_1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1e, e^{-1}W_2, W_3,\dots W_k\rangle .$$ 
-\item \enfatiza{Pegar} (\autoref{fig:cortar}): $$\langle S,e\mid W_1e, e^-1W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1W_2, W_3,\dots , W_k\rangle .$$
+\item \enfatiza{Pegar} (\autoref{fig:cortar}): $$\langle S,e\mid W_1e, e^{-1}W_2, W_3,\dots , W_k\rangle \mapsto \langle S\mid W_1W_2, W_3,\dots , W_k\rangle .$$
 \item \enfatiza{Plegar} (\autoref{fig:plegar}): Si $W_1$ tiene longitud al menos $3$, $$\langle S,e\mid W_1ee^{-1}, W_2,\dots W_k\rangle \mapsto \langle S\mid W_1, W_2,\dots , W_k\rangle .$$ También podemos utilizar esta transformación en el caso de que $W_1$ tenga longitud $2$, siempre que la representación tenga una única palabra.
 \item \enfatiza{Desplegar} (\autoref{fig:plegar}): $$\langle S\mid W_1, W_2,\dots , W_k\rangle \mapsto \langle S,e\mid W_1ee^{-1}, W_2,\dots , W_k\rangle .$$
 \end{itemize}
@@ -1667,12 +1657,12 @@ Se tiene por tanto que la realización geométrica de $\langle S,a,b,c\mid Wc^{-
 
 
 \begin{prop}%%%%PROP: representación suma conexa
-Sean $M_1$ y $M_2$ superficies que admiten respectivamente representaciones $\langle S_1\mid W_1\rangle $ y $\langle S_2\mid W_2\rangle $, donde $S_1$ y $S_2$ son conjuntos disjuntos y tal que cada presentación tiene una sola cara. Entonces $\langle S_1,S_2\mid W_1W_2\rangle$ es una representación de la suma conexa $M_1 \# M_2$.
+Sean $M_1$ y $M_2$ superficies que admiten respectivamente representaciones $\langle S_1\mid W_1\rangle $ y $\langle S_2\mid W_2\rangle $, donde $S_1$ y $S_2$ son conjuntos disjuntos y tal que cada representación tiene una sola cara. Entonces $\langle S_1,S_2\mid W_1W_2\rangle$ es una representación de la suma conexa $M_1 \# M_2$.
 
 \end{prop}
 
 \begin{proof}
-Se sigue de la proposición anterior que la realización geométrica de $\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1}\rangle$ es homeomorfa a $M_1'=M_1\setminus B_1$ y un argumento análogo nos indica que $\langle S_2,a,b,c\mid abcW_2\rangle$ es una presentación de $M_2$ menos un disco coordenado, que denotamos por $M_2'=M_2\setminus B_1$. Por tanto se tiene que $\langle S_1,S_2,a,b,c\mid W_1,c^{-1}b^{-1}a^{-1},abcW_2\rangle$ es una presentación de $M_1'\amalg M_2'$ con las fronteras de los respectivos discos identificados, es decir, $M_1\# M_2$. Finalmente, pegando por $a$ y doblando dos veces, se obtiene la presentación $\langle S_1,S_2\mid W_1W_2\rangle$.
+Se sigue de la proposición anterior que la realización geométrica de $\langle S_1,a,b,c\mid W_1c^{-1}b^{-1}a^{-1}\rangle$ es homeomorfa a $M_1'=M_1\setminus B_1$ y un argumento análogo nos indica que $\langle S_2,a,b,c\mid abcW_2\rangle$ es una representación de $M_2$ menos un disco coordenado, que denotamos por $M_2'=M_2\setminus B_1$. Por tanto se tiene que $\langle S_1,S_2,a,b,c\mid W_1,c^{-1}b^{-1}a^{-1},abcW_2\rangle$ es una representación de $M_1'\amalg M_2'$ con las fronteras de los respectivos discos identificados, es decir, $M_1\# M_2$. Finalmente, pegando por $a$ y doblando dos veces, se obtiene la representación $\langle S_1,S_2\mid W_1W_2\rangle$.
 \end{proof}
 
 
@@ -1696,9 +1686,9 @@ Sea $M$ una superficie compacta. Entonces tiene una representación poligonal.
 Por el Teorema de Radó, $M$ es homeomorfa al poliedro de un complejo simplicial $K$ de dimensión 2, que denotaremos por $|K|$, en donde todo 1-símplice es una cara de exáctamente dos 2-símplices.
 Sea $\mathcal{P}$ la representación poligonal de una superficie que consta de una palabra de longitud 3 por cada 2-símplice, y cuyas aristas tienen las mismas etiquetas si y solo si corresponden al mismo 1-símplice. Veamos que la realización geométrica de $\mathcal{P}$ es homeomorfa al poliedro $|K|$.
 Si $P=P_1\amalg \dots \amalg P_k$ denota la unión disjunta de los 2-símplices de $K$, entonces tenemos dos aplicaciones cociente $\pi_K :P\to |K|$ y $\pi_{\mathcal{P}} :P\to |\mathcal{P}|$. Por la unicidad del espacio cociente, hay que ver, por tanto, que hacen las mimas identificaciones. Sabemos que ambas aplicaciones son inyectivas en el interior de los 2-símplices, que identifican vértices únicamente con vertices y que identifican las aristas de la misma manera. Falta por tanto demostrar que $\pi_K$ y $\pi_{\mathcal{P}}$ identifican los vértices sólo de acuerdo a la relación generada por la identificación de las aristas.\\
-Supongamos que $v\in K$ es un vértice. Se tiene que $v$ pertenece a un 1-símplice, pues si no sería un punto aislado de $|K|$, lo que contradice que $|K|$ sea una variedad. El Teorema de Radó nos garantiza que este 1-símplice es una cara de exáctamente dos 2-símplices. Definimos una relación de equivalencia sobre los dos 2-símplices que contienen a $v$: si $\sigma , \sigma '$ son dos 2-símplices que contienen a $v$, decimos que están \enfatiza{contectados por arista en v} si hay una secuencia $\sigma =\sigma_1 ,\dots ,\sigma_k =\sigma '$ de 2-símplices que contienen a $v$ talque cada $\sigma_i$ comparte una arista con $\sigma_{i+1}$,  para todo $i=1,\dots , k-1$. Vamos a comprobar por tanto que sólo hay una relación de equivalencia. Supongamos, por reducción al absurdo, que podemos agrupar los 2-símplices que contienen a $v$ en dos conjuntos disjuntos $\{ \sigma_1 ,\dots ,\sigma_k \}$ y $\{ \tau_1 ,\dots ,\tau_m \}$ tales que todo $\sigma_i$ está conectado por arista con todo $\sigma_j$ pero ningún $\tau_i$ está conectado con ningún $\sigma_j$. Sea un $\varepsilon >0$ tal que la bola $B_{\varepsilon}(v)$ interseca sólo los símplices que contienen a $v$.  Se tiene entonces que $B_{\varepsilon}(v)\cap |K|$ es un abierto de $|K|$ y por tanto una superficie, por lo que $v$ tiene un entorno $W\subseteq B_{\varepsilon}(v)\cap |K|$ homeomorfo a $\R^2$, y así pues $W\setminus \{ v \}$ es conexo. 
+Supongamos que $v\in K$ es un vértice. Se tiene que $v$ pertenece a un 1-símplice, pues si no sería un punto aislado de $|K|$, lo que contradice que $|K|$ sea una variedad. El Teorema de Radó nos garantiza que este 1-símplice es una cara de exáctamente dos 2-símplices. Definimos una relación de equivalencia sobre los dos 2-símplices que contienen a $v$: si $\sigma , \sigma '$ son dos 2-símplices que contienen a $v$, decimos que están \enfatiza{contectados por arista en v} si hay una secuencia $\sigma =\sigma_1 ,\dots ,\sigma_k =\sigma '$ de 2-símplices que contienen a $v$ talque cada $\sigma_i$ comparte una arista con $\sigma_{i+1}$,  para todo $i=1,\dots , k-1$. Vamos a comprobar por tanto que sólo hay una clase de equivalencia. Supongamos, por reducción al absurdo, que podemos agrupar los 2-símplices que contienen a $v$ en dos conjuntos disjuntos $\{ \sigma_1 ,\dots ,\sigma_k \}$ y $\{ \tau_1 ,\dots ,\tau_m \}$ tales que todo $\sigma_i$ está conectado por arista con todo $\sigma_j$ pero ningún $\tau_i$ está conectado con ningún $\sigma_j$. Sea un $\varepsilon >0$ tal que la bola $B_{\varepsilon}(v)$ interseca sólo los símplices que contienen a $v$.  Se tiene entonces que $B_{\varepsilon}(v)\cap |K|$ es un abierto de $|K|$ y por tanto una superficie, por lo que $v$ tiene un entorno $W\subseteq B_{\varepsilon}(v)\cap |K|$ homeomorfo a $\R^2$, y así pues $W\setminus \{ v \}$ es conexo. 
 Pero si denotamos ahora los conjuntos $$U=W\cap (\sigma_1 \cup \dots \cup \sigma_k )\setminus \{ v \}$$
-$$V=W\cap (\tau_1 \cup \dots \cup \tau_m )\setminus \{ v \}$$ entonces $U$ y $V$ son dos abiertos disjuntos de $|K|$ cuya intersección con cada símplice es abierta en el símplice, y así, $W=U\cap V$ es una desconexión de $W$. Pero esto es una contradicción.
+$$V=W\cap (\tau_1 \cup \dots \cup \tau_m )\setminus \{ v \}$$ entonces $U$ y $V$ son dos abiertos disjuntos de $|K|$ cuya intersección con cada símplice es abierta en el símplice, y así, $W=U\cup V$ es una desconexión de $W$. Pero esto es una contradicción.
 \end{proof}
 
 
@@ -1712,14 +1702,13 @@ La botella de Klein es homeomorfa a $\Proyectivo \# \Proyectivo$.
 \end{lema}
 \begin{proof}
 Vamos a demostrarlo haciendo transformaciones elementales sobre la representación de la botella de Klein vista en el \autoref{eje:rep_sup_importantes}. 
-Siguiendo la figura \autoref{fig:klein_proyectivo}, tenemos
 \begin{align*}
 \langle a,b\mid abab^{-1}\rangle & & \\
 \approx & \, \langle a,b,c\mid abc, c^{-1}ab^{-1}\rangle &\text{(cortar por } c\text{)}\\
 \approx & \, \langle a,b,c\mid bca,a^{-1}cb\rangle &\text{(rotar y reflejar)}\\
 \approx & \, \langle b,c\mid bbcc\rangle &\text{(pegar por } a \text{ y rotar)}
 \end{align*}
-Y esto es la presentación poligonal de la suma conexa de dos planos proyectivos.
+Y esto es la representación poligonal de la suma conexa de dos planos proyectivos.
 \end{proof}
 
 %\begin{figure}
@@ -1794,7 +1783,7 @@ Y esto es la presentación poligonal de la suma conexa de dos planos proyectivos
 La suma conexa $\Toro \# \Proyectivo$ es homeomorfa a $\Proyectivo \# \Proyectivo \# \Proyectivo$.
 \end{lema}
 \begin{proof}
-Partimos de una representación poligonal de $K\# \Proyectivo$, que es, por el lema anterior, una presentación de $\Proyectivo \# \Proyectivo \# \Proyectivo$ y procedemos haciendo transformaciones elementales:
+Partimos de una representación poligonal de $K\# \Proyectivo$, que es, por el lema anterior, una representación de $\Proyectivo \# \Proyectivo \# \Proyectivo$ y procedemos haciendo transformaciones elementales:
 \begin{align*}
 \langle a,b,c \mid abab^{-1}cc \rangle &&\\
 \approx &\, \langle a,b,c,d \mid cabd^{-1}, c^{-1}ba^{-1}d^{-1} \rangle &\text{(rotar, cortar por } d\text{ y reflejar)}\\
@@ -1812,16 +1801,16 @@ Toda superficie compacta y conexa no vacía es homeomorfa a una de las siguiente
 \item[(b)] Una suma conexa $\Toro \# \dots \# \Toro$ de copias del toro.
 \item[(c)] Una suma conexa $\Proyectivo \,  \# \dots\, \# \Proyectivo$ de copias del plano proyectivo. 
 \end{itemize}
-A estas superficies las llamamos \enfatiza{superficies estándar}.
+A estas superficies las llamamos \enfatiza{superficies fundamentales}.
 \end{tma}
 
 \begin{proof}
-Sea $M$ una superficie junto con una representación poligonal suya, que existe por la \autoref{prop:superficie_tiene_representacion}. Probaremos el teorema haciendo transformaciones elementales sobre esta representación hasta llegar a una de las estándar.
+Sea $M$ una superficie junto con una representación poligonal suya, que existe por la \autoref{prop:superficie_tiene_representacion}. Probaremos el teorema haciendo transformaciones elementales sobre esta representación hasta llegar a una en forma estándar.
 Diremos que dos aristas de una representación poligonal con una misma etiqueta son \enfatiza{complementarias} si aparecen tanto en la forma $a$ como en la de $a^{-1}$, y diremos que son \enfatiza{torcidas} si aparecen únicamente como $a,\dots ,a$ o como $a^{-1},\dots a^{-1}$. \\
 
 \underline{PASO 1}: \textit{M admite una representación con una sola cara.} Si en la representación poligonal de $M$ aparecen dos o más caras, por ser $M$ conexa algua arista de una cara de $M$ tiene que estar identificada con otra arista de otra cara de $M$. Si no fuese así, $M$ sería la unión de los cocientes de sus caras, y dado que cada uno de esos cocientes es abierto y cerrado, desconectarían $M$. Por tanto, a través de sucesivos pegados, con rotaciones y reflexiones si es necesario, podemos reducir el número de caras hasta una.\\
 
-\underline{PASO 2}: \textit{O bien M es homeomorfa a la esfera, o bien M admite una presentación en la cual no hay pares complementarios adyacentes.} Podemos ir eliminando los pares complementarios adyacentes haciendo sucesivos pegados. O bien los eliminamos todos, o bien nos queda $\langle a\mid aa^{-1}\rangle$, lo que implica que $M$ es homeomorfa a la esfera.\\
+\underline{PASO 2}: \textit{O bien M es homeomorfa a la esfera, o bien M admite una representación en la cual no hay pares complementarios adyacentes.} Podemos ir eliminando los pares complementarios adyacentes haciendo sucesivos pegados. O bien los eliminamos todos, o bien nos queda $\langle a\mid aa^{-1}\rangle$, lo que implica que $M$ es homeomorfa a la esfera.\\
 
 \begin{figure}
 \centering
@@ -1959,9 +1948,9 @@ En la representación poligonal hay otra arista que se identifica con $b$, y pue
 %
 %En algún lugar de la representación poligonal hay una arista que se identifica con $b$, de la forma $b$ o $b^{-1}$. Supongamos que aparece en la forma $b^{-1}$ (el otro caso implica como diferencia sólo una reflexión, que indicaremos cuándo ha de hacerse). Podemos escribir la representación como $baXb^{-1}Y$, donde $X$ e $Y$ son palabras desconocidas y al menos una es no vacía. Ahora, cortando a lo largo de $c$ y pegando a lo largo de $b$ (efectuando aquí la reflexión necesaria si la arista aparecía como $b$) como se muestra en la \autoref{fig:PASO4b}, llegamos a una representación en la cual el número de vértices con etiqueta $v$ ha disminuído, mientras que en cambio el número de vértices con la etiqueta $w$ ha aumentado. Si se han introducido nuevos pares complementarios adyacentes, volvemos a aplicar el Paso 2 de nuevo para quitarlos. Esta operación puede hacer disminuir los vértices etiquetados por $v$ (por ejemplo por la operación de plegado) pero nunca aumentarlos. Repitiendo la secuencia un número finito de veces, podemos finalmente eliminar totalmente la clase de vértices $v$. Iterando el proceso podemos quedarnos finalmente con una sola clase de vértices.
 
-\underline{PASO 5}: \textit{Si la presentación tiene un par complementario $a$, $a^{-1}$, entonces tiene otro par complementario $b$,  $b^{-1}$ que aparece intercalado con el primero, en la forma $a,\dots , b, \dots ,a^{-1}, \dots , b^{-1} $.} Si no es así, entonces la presentación es de la forma $aXa^{-1}Y$, donde $X$ contiene sólo aristas de pares complementarios o pares torcidos adyacentes, igual que $Y$. Por lo tanto cada arista en $X$ se identifica con otra arista en $X$, y lo mismo pasa en $Y$. Esto implica que los vértices finales de $a$ y $a^{-1}$, que tocan únicamente $X$, se identifican sólo con vértices de $X$, y que los vértices iniciales de $a$ y $a^{-1}$ se identifican sólo con vértices de $Y$. Esto es una contradicción, puesto que todos los vértices se identifican unos con otros por el Paso 4.\\
+\underline{PASO 5}: \textit{Si la representación tiene un par complementario $a$, $a^{-1}$, entonces tiene otro par complementario $b$,  $b^{-1}$ que aparece intercalado con el primero, en la forma $a,\dots , b, \dots ,a^{-1}, \dots , b^{-1} $.} Si no es así, entonces la representación es de la forma $aXa^{-1}Y$, donde $X$ contiene sólo aristas de pares complementarios o pares torcidos adyacentes, igual que $Y$. Por lo tanto cada arista en $X$ se identifica con otra arista en $X$, y lo mismo pasa en $Y$. Esto implica que los vértices finales de $a$ y $a^{-1}$, que tocan únicamente a $X$, se identifican sólo con vértices de $X$, y que los vértices iniciales de $a$ y $a^{-1}$ se identifican sólo con vértices de $Y$. Esto es una contradicción, puesto que todos los vértices se identifican unos con otros por el Paso 4.\\
 
-\underline{PASO 6}: \textit{M admite una presentación en la que todos los pares complementarios intercalados aparecen juntos con ninguna otra arista entre ellos: $aba^{-1}b^{-1}$.} Si no es así, podemos describir la representación poligonal por la palabra $WaXbYa^{-1}Zb^{-1}$. Hacemos, como en la figura \autoref{fig:PASO6}, las siguientes transformaciones: cortamos a lo largo de $c$, pegamos por $a$, cortamos a lo largo de $d$, y pegamos finalmente por $b$. Obtenemos así la palabra $cdc^{-1}d^{-1}WZYX$, sustituyendo por tanto los dos pares adyacentes por un nuevo par intercalado $cdc^{-1}d^{-1}$, sin separar otras aristas que previamente eran adyacentes. Por lo tanto, repitiendo el proceso por cada gurpo de pares complementarios se obtiene el resultado.\\
+\underline{PASO 6}: \textit{M admite una representación en la que todos los pares complementarios intercalados aparecen juntos con ninguna otra arista entre ellos: $aba^{-1}b^{-1}$.} Si no es así, podemos describir la representación poligonal por la palabra $WaXbYa^{-1}Zb^{-1}$. Hacemos, como en la figura \autoref{fig:PASO6}, las siguientes transformaciones: cortamos a lo largo de $c$, pegamos por $a$, cortamos a lo largo de $d$, y pegamos finalmente por $b$. Obtenemos así la palabra $cdc^{-1}d^{-1}WZYX$, sustituyendo por tanto los dos pares adyacentes por un nuevo par intercalado $cdc^{-1}d^{-1}$, sin separar otras aristas que previamente eran adyacentes. Por lo tanto, repitiendo el proceso por cada gurpo de pares complementarios se obtiene el resultado.\\
 
 \underline{PASO 7}: \textit{M es homeomorfa a la suma conexa de uno o más toros o a la suma conexa de uno o más planos proyectivos.} Este es el paso que finaliza la demostración.  Recapitulando lo hecho en los pasos anteriores, tenemos una representación de $M$ (que llamaremos \textit{representación estándar}) en la cual todos los pares torcidos aparecen uno junto al otro y todos los pares complementarios aparecen intercalados en grupos de dos, en la forma $aba^{-1}b^{-1}$. Por tanto esta es la representación de una suma conexa de copias del $\Toro$ (representadas por los bloques $aba^{-1}b^{-1}$) y de copias de $\Proyectivo$ (representadas por los $cc$). Si sólo aparecen copias de un tipo, hemos terminado.
 Nos queda el caso en el que aparecen tanto pares torcidos como pares complementarios. Si es así, algún par complementario aparece junto a un par torcido, es decir, la representación está descrita por la palabra $aba^{-1}b^{-1}ccX$ o por $ccaba^{-1}b^{-1}X$. En los dos casos, tenemos la suma conexa de un toro, un plano proyectivo, y lo que represente la palabra $X$. Pero por el \autoref{lema:toro_proyectivo}, $\Toro \# \Proyectivo = \Proyectivo \# \Proyectivo \# \Proyectivo$, por lo que podemos eliminar un toro de la suma conexa. Iterando un número finito de veces, eliminamos todas las apariciones de los bloques de pares complementarios, es decir, de las copias de $\Toro$, completando así la demostración.
@@ -2246,7 +2235,7 @@ Ahora sólo falta aplicar sobre $\mathcal{P}$ el resto de la demostración de la
 \caption{Triangulación cerca de una componente del borde de $M$.\label{fig:triangulacion_perf}}
 \end{figure}
 \begin{eje}
-Veamos las representaciones en forma estándar de las superficies perforadas. Para ello, utilizando la \autoref{prop:rep_perf}, hacemos un corte $c_i$ desde un mismo vértice a cada perforación asociada a la componente $B_i$, de forma que estos no se solapen con las perforaciones. En la \autoref{fig:toro_perforado} podemos ver un ejemplo de la representación estándar de la suma conexa de dos toros con dos perforaciones.
+Veamos las representaciones en forma estándar de las superficies fundamentales perforadas. Para ello, utilizando la \autoref{prop:rep_perf}, hacemos un corte $c_i$ desde un mismo vértice a cada perforación asociada a la componente $B_i$, de forma que estos no se solapen con las perforaciones. En la \autoref{fig:toro_perforado} podemos ver un ejemplo de la representación estándar de la suma conexa de dos toros con dos perforaciones.
 \begin{itemize}
 \item [(a)] \textit{Esfera con k perforaciones.} 
 $$\langle a, c_1,\dots ,c_k, B_1, \dots ,B_k \mid aa^{-1}c_1B_1c_1^{-1}\dots c_kB_kc_k^{-1}\rangle$$ 
@@ -2326,7 +2315,7 @@ Toda superficie con borde compacta y conexa no vacía es homeomorfa a una de las
 \item[(b)] Una suma conexa $\Toro \# \dots \# \Toro$ de copias del toro con $k$ perforaciones,
 \item[(c)] Una suma conexa $\Proyectivo \,  \# \dots\, \# \Proyectivo$ de copias del plano proyectivo con $k$ perforaciones,
 \end{itemize}
-con $k\in \N$.
+con $k\geq 0$.
 A estas superficies las llamamos \enfatiza{superficies con borde estándar}.
 \end{tma}
 \begin{proof}
@@ -2348,7 +2337,7 @@ Sean $M_1$ y $M_2$ superficies con borde compactas tales que $\partial M_1$ y $\
 En este capítulo voy a dar un tratamiento riguroso de la prueba ZIP de Conway. Voy a definir los conceptos necesarios para la nueva demostración y me apoyaré en los resultados de los capítulos anteriores para desarrollarla. El principal cambio reside en que no demostraremos el Teorema de Clasificación a través de transformaciones sobre una representación poligonal hasta llegar a una forma normal, sino que trabajaremos directamente sobre una triangulación para llegar a una forma normal basada en el concepto de suma conexa. Si bien Conway no utiliza un método de representación de las superficies, yo me apoyaré en él para poder dar una demostración de algunos de los puntos más informales. Por otro lado, nos serviremos de los resultados de las superficies con borde expuestos anteriormente para justificar el uso de las perforaciones. Mientras que en el artículo \cite{zip} las pruebas se apoyan en gran parte por los dibujos que las acompañan, aquí se darán justificaciones formales.
 Respecto a la triangulación de las superficies, a pesar de ser un punto importante en la prueba no se define en ningún momento de forma rigurosa, y tampoco se prueba que toda superficie sea triangulable. Es por ello que hemos desarrollado el \autoref{cap:1}.
 
-La prueba ZIP, como ya hemos adelantado, sólo nos demustra la primera parte del Teorema de Clasificación: nos dice que toda superficie es homeomorfa a una de las superficies estándar, pero no que estas sean distintas desde el punto de vista topológico. Esto lo demostraremos finalmente en el último capítulo del trabajo.
+La prueba ZIP, como ya hemos adelantado, sólo nos demustra la primera parte del Teorema de Clasificación: nos dice que toda superficie es homeomorfa a una de las superficies fundamentales, pero no que estas sean distintas desde el punto de vista topológico. Esto lo demostraremos finalmente en el último capítulo del trabajo.
 
 \section{Cremalleras}
 
@@ -2886,7 +2875,7 @@ Toda superficie con borde compacta es homeomorfa o bien a una esfera con handles
 \begin{proof}
 Por la versión preeliminar del teorema de clasificación, una superficie con borde compacta es homeomorfa a una esfera con handles, crosshandles, crosscaps y perforaciones.
 \begin{itemize}
-\item \textit{Caso 1:} Al menos hay un crosshandle en nuestra superficie. Por el \autoref{lema:1}, cada crosshandle es homeomorfo a dos crosscaps, por lo que la superficie es homeomorfa a una esfera con solamente crosscaps y handles. Como al menos hay un crosscap, cada handle es homeomorfo a un crosshandle (\autoref{lema:2}), que es a us vez homeomorfo a dos crosscaps (\autoref{lema:1} de nuevo), quedando una esfera sólo con crosscaps y perforaciones.
+\item \textit{Caso 1:} Al menos hay un crosshandle en nuestra superficie. Por el \autoref{lema:1}, cada crosshandle es homeomorfo a dos crosscaps, por lo que la superficie es homeomorfa a una esfera con solamente crosscaps y handles. Como al menos hay un crosscap, cada handle es homeomorfo a un crosshandle (\autoref{lema:2}), que es a su vez homeomorfo a dos crosscaps (\autoref{lema:1} de nuevo), quedando una esfera sólo con crosscaps y perforaciones.
 \item \textit{Caso 2:} No hay ni crosshandles ni crosscap en la superficie. La superficie es entonces homeomorfa a una esfera sólo con handles y perforaciones.
 \end{itemize}
 \end{proof}
@@ -2898,7 +2887,7 @@ Como se ha visto, no he podido evitar hacer referencia a la representación poli
 \afterpage{\blankpage}
 
 \chapter{Teorema de Clasificación, segunda parte}
-Hasta ahora hemos demostrado, con dos enfoques distintos, que toda superficie con borde compacta es homeomorfa a una esfera, a una suma conexa de copias del toro o a una suma conexa de copias del plano proyectivo, junto con un número finito de perforaciones. Sin embargo no hemos demostrado que estas tres superficies estándar sean no homeomorfas entre sí. En este capítulo completaremos la parte de la prueba que nos falta. 
+Hasta ahora hemos demostrado, con dos enfoques distintos, que toda superficie con borde compacta es homeomorfa a una esfera, a una suma conexa de copias del toro o a una suma conexa de copias del plano proyectivo, junto con un número finito de perforaciones. Sin embargo no hemos demostrado que estas tres superficies fundamentales sean no homeomorfas entre sí. En este capítulo completaremos la parte de la prueba que nos falta. 
 
 \section{Presentaciones de grupos}
 Vamos a empezar recordando brevemente las presentaciones de grupos. 
@@ -2927,10 +2916,11 @@ Sea $X$ un espacio topológico. Supongamos que $U,V\subseteq X$ son abiertos de 
 \[
 \pi_1 (X,p) \cong \pi_1 (V,p) / N
 \]
-donde $N$ es el menor subgrupo normal de $\pi_1 (V,p)$ que contiene la imagen del homomorfismo 
+donde $N$ es el menor subgrupo normal de $\pi_1 (V,p)$ que contiene la imagen del homomorfismo inducido por la inclusión $j:U\cap V\to V$
 \[ 
-j_* \pi_1 (U\cap V, p) \to \pi_1 (V,p).
+j_*: \pi_1 (U\cap V, p) \to \pi_1 (V,p).
 \]
+
 Si los grupos fundamentales de $V$ y $U\cap V$ tienen presentaciones finitas
 \[
 \pi_1 (V,p) \cong \langle \beta_1 , \dots , \beta_n \mid \sigma_1 , \dots ,\sigma_s \rangle 
@@ -3056,7 +3046,7 @@ Para completar la demostración, necesitamos relacionar el grupo fundamental de 
 
 
 \begin{tma}\label{teo:presenta}
-Sea $M$ una superficie con una presentación suya de una cara $\langle a_1, \dots , a_n \mid W\rangle$. Entonces una presentación del grupo fundamental $\pi_1 (M)$ viene dada por $\langle a_1, \dots , a_n \mid W\rangle$.
+Sea $M$ una superficie con una representación suya de una cara $\langle a_1, \dots , a_n \mid W\rangle$. Entonces una presentación del grupo fundamental $\pi_1 (M)$ viene dada por $\langle a_1, \dots , a_n \mid W\rangle$.
 \end{tma}
 \begin{proof}
 Denotemos por $\mathcal{P}$ la representación de $M$ dada, y sea $\pi$ la aplicación cociente $\pi: |\mathcal{P}| \to M$. Sea $M_1$ la imagen por $\pi$ del conjunto de las aristas. Se tiene que $M_1$ es una suma wedge de circunferencias $\mathbb{S}^1$, una por cada símbolo de la representación. Así pues, su grupo fundamental tiene como presentación $\langle a_1, \dots ,a_n \mid \emptyset \rangle$. 
@@ -3082,12 +3072,12 @@ Dado un grupo $G$, el \enfatiza{subgrupo conmutador de G}, denotado por $\left[ 
 Al grupo cociente $\Ab{(G)} = G / \left[ G,G \right]$ lo llamamos el \enfatiza{abelianizado de G}. 
 \end{defin}
 
-Como el isomorfismo $F:G_1 \to G_2$ lleva el subgrupo conmutador de $G_1$ al de $G_2$, entonces grupos isomorfos tienen abelianizados isomorfos. Por lo tanto demostraremos que las superficies estándar no son homeomorfas no a través de sus grupos fundamentales si no de sus abelianizados.\\
-Por otro lado, si bien no trataremos homología en este trabajo, observamos que si $X$ es un espacio topológico conexo por caminos, y $p\in X$ un punto suyo, entonces el \textit{primer grupo de homología} $H_1(X)$ es isomorfo al abelianizado de $\pi_1(X,p)$. Una prueba se puede encontrar en \cite{lee1}. Veamos ahora el primer grupo de homología de las superficies estándar.
+Como el isomorfismo $F:G_1 \to G_2$ lleva el subgrupo conmutador de $G_1$ al de $G_2$, entonces grupos isomorfos tienen abelianizados isomorfos. Por lo tanto demostraremos que las superficies fundamentales no son homeomorfas no a través de sus grupos fundamentales si no de sus abelianizados.\\
+Por otro lado, si bien no trataremos homología en este trabajo, observamos que si $X$ es un espacio topológico conexo por caminos, y $p\in X$ un punto suyo, entonces el \textit{primer grupo de homología} $H_1(X)$ es isomorfo al abelianizado de $\pi_1(X,p)$. Una prueba se puede encontrar en \cite{lee1}. Veamos ahora el primer grupo de homología de las superficies fundamentales.
 
 
 \begin{prop}
-Los grupos fundamentales de las superficies estándar tienen los siguientes abelianizados:
+Los grupos fundamentales de las superficies fundamentales tienen los siguientes abelianizados:
 \begin{itemize}
 \item $\Ab{(\pi_1 (\Esfera ))} = \{ 1 \}$.
 \item $\Ab{(\pi_1 (\Toro \# \dots \# \Toro ))} \cong \mathbb{Z}^{2n}$.
@@ -3153,10 +3143,10 @@ donde $h\in \mathbb{Z}/2$ denota el elemento no trivial. Dado que $g+g=0$, tenem
 
 \section{Teorema de Clasificación}
 \begin{tma}[Teorema de Clasificación, segunda parte]
-Sea $M$ una superficie compacta y conexa no vacía. Entonces es homeomorfa a una y sólo una de las superficies estándar.
+Sea $M$ una superficie compacta y conexa no vacía. Entonces es homeomorfa a una y sólo una de las superficies fundamentales.
 \end{tma}
 \begin{proof}
-Por el \autoref{teo:csc}, tenemos que $M$ es homeomorfa a una de las superficies estándar, y por lo tanto nos queda demostrar que no son homeomorfas entre sí. Por un lado, la esfera no puede ser homeomorfa a una suma conexa de toros o a una suma conexa de planos proyectivos, pues la esfera tiene grupo fundamental trivial. 
+Por el \autoref{teo:csc}, tenemos que $M$ es homeomorfa a una de las superficies fundamentales, y por lo tanto nos queda demostrar que no son homeomorfas entre sí. Por un lado, la esfera no puede ser homeomorfa a una suma conexa de toros o a una suma conexa de planos proyectivos, pues la esfera tiene grupo fundamental trivial. 
 Los abelianizados de los grupos fundamentales de la suma conexa de planos proyectivos contienen un elemento no trivial de torsión, mientras que los abelianizados de los grupos fundamentales de la suma conexa de toros son libres de torsión. Así pues, las sumas de copias de $\Proyectivo$ no pueden ser homeomorfas a las sumas de copias de $\Toro$.
 Por otro lado, si $M$ y $M'$ son respectivamente sumas conexas de $n$ y $m$ copias del toro, $n\neq m$, sus grupos fundamentales son distintos, pues sus abelianizados son grupos libres conmutativos de rango $2n$ y $2m$ respectivamente.
 Análogamente, si $M$ es una suma conexa de $n$ copias del plano proyectivo y $M'$ es una suma conexa de $m$ copias del plano proyectivo, $n\neq m$, entonces los abelianizados de sus grupos fundamentaes son de rango $n-1$ y $m-1$ respectivamente, es decir, son distintos.
