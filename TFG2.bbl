@@ -205,75 +205,6 @@
     \field{year}{1999}
   \endentry
 
-  \entry{lee1}{book}{}
-    \name{author}{1}{}{%
-      {{hash=LJM}{%
-         family={Lee},
-         familyi={L\bibinitperiod},
-         given={John\bibnamedelima M.},
-         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Springer - Verlag}%
-    }
-    \keyw{bib}
-    \strng{namehash}{LJM1}
-    \strng{fullhash}{LJM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Introduction to Topological Manifolds}
-    \field{year}{2011}
-  \endentry
-
-  \entry{juanjo}{book}{}
-    \name{author}{2}{}{%
-      {{hash=MV}{%
-         family={Muñoz},
-         familyi={M\bibinitperiod},
-         given={Vicente},
-         giveni={V\bibinitperiod},
-      }}%
-      {{hash=MJJ}{%
-         family={Madrigal},
-         familyi={M\bibinitperiod},
-         given={Juan\bibnamedelima José},
-         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Sanz y Torres}%
-    }
-    \keyw{bib}
-    \strng{namehash}{MVMJJ1}
-    \strng{fullhash}{MVMJJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Topología Algebráica}
-    \field{year}{2015}
-  \endentry
-
-  \entry{munkres}{book}{}
-    \name{author}{1}{}{%
-      {{hash=MJR}{%
-         family={Munkres},
-         familyi={M\bibinitperiod},
-         given={James\bibnamedelima R.},
-         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Addison - Wesley}%
-    }
-    \keyw{bib}
-    \strng{namehash}{MJR1}
-    \strng{fullhash}{MJR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Elements of Algebraic Topology}
-    \field{year}{1984}
-  \endentry
-
   \entry{thomassen}{article}{}
     \name{author}{1}{}{%
       {{hash=TC}{%
@@ -418,25 +349,46 @@
     \field{year}{2013}
   \endentry
 
-  \entry{massey}{book}{}
+  \entry{lee1}{book}{}
     \name{author}{1}{}{%
-      {{hash=MWS}{%
-         family={Massey},
-         familyi={M\bibinitperiod},
-         given={William\bibnamedelima S.},
-         giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
+      {{hash=LJM}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={John\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
       {Springer - Verlag}%
     }
     \keyw{bib}
-    \strng{namehash}{MWS1}
-    \strng{fullhash}{MWS1}
+    \strng{namehash}{LJM1}
+    \strng{fullhash}{LJM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{title}{Algebraic Topology, an introduction}
-    \field{year}{1970}
+    \field{title}{Introduction to Topological Manifolds}
+    \field{year}{2011}
+  \endentry
+
+  \entry{munkres}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MJR}{%
+         family={Munkres},
+         familyi={M\bibinitperiod},
+         given={James\bibnamedelima R.},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Addison - Wesley}%
+    }
+    \keyw{bib}
+    \strng{namehash}{MJR1}
+    \strng{fullhash}{MJR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Elements of Algebraic Topology}
+    \field{year}{1984}
   \endentry
 
   \entry{richards}{article}{}
@@ -508,6 +460,33 @@
     \field{year}{2013}
   \endentry
 
+  \entry{juanjo}{book}{}
+    \name{author}{2}{}{%
+      {{hash=MV}{%
+         family={Muñoz},
+         familyi={M\bibinitperiod},
+         given={Vicente},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=MJJ}{%
+         family={Madrigal},
+         familyi={M\bibinitperiod},
+         given={Juan\bibnamedelima José},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Sanz y Torres}%
+    }
+    \keyw{bib}
+    \strng{namehash}{MVMJJ1}
+    \strng{fullhash}{MVMJJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Topología Algebráica}
+    \field{year}{2015}
+  \endentry
+
   \entry{willard}{book}{}
     \name{author}{1}{}{%
       {{hash=WS}{%
@@ -526,6 +505,48 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{title}{General Topology}
+    \field{year}{1970}
+  \endentry
+
+  \entry{munkres2}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MJR}{%
+         family={Munkres},
+         familyi={M\bibinitperiod},
+         given={James\bibnamedelima R.},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Prentice Hall}%
+    }
+    \keyw{bib}
+    \strng{namehash}{MJR1}
+    \strng{fullhash}{MJR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Topology}
+    \field{year}{1975}
+  \endentry
+
+  \entry{massey}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MWS}{%
+         family={Massey},
+         familyi={M\bibinitperiod},
+         given={William\bibnamedelima S.},
+         giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer - Verlag}%
+    }
+    \keyw{bib}
+    \strng{namehash}{MWS1}
+    \strng{fullhash}{MWS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Algebraic Topology, an introduction}
     \field{year}{1970}
   \endentry
 

@@ -1692,7 +1692,7 @@ $$V=W\cap (\tau_1 \cup \dots \cup \tau_m )\setminus \{ v \}$$ entonces $U$ y $V$
 \end{proof}
 
 
-\section{Teorema de clasificación de superficies compactas}
+\section{Teorema de clasificación de superficies compactas}\label{sec:tcs}
 
 Ya tenemos la maquinaria necesaria para hacer una primera demostración de la primera parte del Teorema de Clasificación.
 Como venimos anunciando desde el principio del presente trabajo nuestras superficies fundamentales son el toro $\Toro$, la esfera $ \Esfera$, y el plano proyectivo  $\Proyectivo$. ¿Qué pasa con las otras superficies que hemos visto, como la botella de Klein o la suma conexa de un toro y un plano proyectivo? La respuesta la obtenemos de los dos siguientes lemas.
@@ -2365,7 +2365,9 @@ $M$ perforada:
 \end{itemize}
 \end{defin}
 
-Como vimos en \autoref{sec:tcsb}, las superficies con perforaciones se pueden representar como polígonos perforados con una serie de cortes (\autoref{fig:toro_perforado}), lo que nos da una forma de representar una superficie con cremalleras. Dada una superficie $M$ con perforaciones, sea una representación poligonal suya con las perforaciones y cortes asociados sobre el polígono. En las partes de las perforaciones que tengan cremalleras, etiquetamos con el mismo símbolo a las cremalleras asociadas al mismo par-zip, en la forma $z$ o $z^{-1}$, dependiendo de sus respectivas orientaciones. 
+Como vimos en \autoref{sec:tcsb}, las superficies con perforaciones se pueden representar como polígonos perforados con una serie de cortes (\autoref{fig:toro_perforado}), lo que nos da una forma de representar una superficie con cremalleras. Dada una superficie $M$ con perforaciones, sea una representación poligonal suya con las perforaciones y cortes asociados sobre el polígono. En las partes de las perforaciones que tengan cremalleras, etiquetamos con el mismo símbolo a las cremalleras asociadas al mismo par-zip, en la forma $z$ o $z^{-1}$, dependiendo de sus respectivas orientaciones. \\
+
+Con la siguiente proposición vamos a relacionar el concepto de suma conexa y las cremalleras sobre perforaciones.
 
 
 \begin{figure}
@@ -2536,7 +2538,7 @@ Como vimos en \autoref{sec:tcsb}, las superficies con perforaciones se pueden re
 Sean $M,M'$ dos superficies conexas (con o sin borde) y sean $P=\langle S\mid W\rangle$ y $P'=\langle S'\mid W'\rangle$ sus respectivas representaciones poligonales de una sola cara. Se tiene entonces:
 \begin{itemize}
 \item[(i)] La suma conexa de una esfera y $M$ es homeomorfa a $M$.
-\item[(ii)] Sea $|\mathcal{P}|$ la realización geométrica de $P$. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre las aristas de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$ que se correspondan, obtenemos la misma superficie $M$. 
+\item[(ii)] Sea $|\mathcal{P}|$ la realización geométrica de $P$. Sea $\partial B$ una perforación sobre $\Esfera$, y sea $\phi$ un homeomorfismo entre las aristas de $|\mathcal{P}|$ y $\partial B$. Si identificamos ahora los pares de segmentos sobre $\partial B$ de la imagen de $\phi$ que se correspondan, obtenemos la superficie $M$. 
 \item[(iii)] Con una construcción análoga a la del apartado anterior, si hacemos una perforación sobre la superficie $M'$ con el borde con etiquetas asociadas a una representación poligonal de $M$, al identifacarlas obtenemos la suma conexa $M\# M'$. 
 \end{itemize}
 \end{prop}
@@ -2583,12 +2585,12 @@ Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el e
 \draw (5.1,0) arc[x radius=0.4, y radius=0.2, start angle=180, end angle=0];
 \draw (4.8,0.31) arc[x radius=0.7, y radius=0.4, start angle=180, end angle=360];
 \end{tikzpicture}
-\caption{Suma conexa de un toro y una esfera (visto como pegar un toro con un \textit{cap}).\label{fig:suma_toro_esfera}}
+\caption{Suma conexa de un toro y una esfera visto como un toro con un \textit{cap}.\label{fig:suma_toro_esfera}}
 \end{figure}
 
 
 
-
+\
 
 
 \begin{prop}\label{prop:handletoro_crosshandleklein}
@@ -2606,7 +2608,7 @@ Sea la representación de la esfera con un par-zip asociado al handle $$\langle 
 \[
 \langle c_1,c_2,z\mid c_1^{-1}zc_1c_2^{-1}z^{-1}c_2\rangle
 \]
-y podemos finalmente reetiquetar $e=c_2c_1^{-1}$ para obtener la representación de $\Toro$ 
+y podemos rotar y finalmente reetiquetar $e=c_2c_1^{-1}$ para obtener la representación de $\Toro$ 
 
 \[
 \langle e,z\mid eze^{-1}z^{-1}\rangle
@@ -2616,7 +2618,7 @@ Similarmente, para demostrar (b), sea la representación de la esfera con un par
 \[
 \langle c_1,c_2,z\mid c_1^{-1}zc_1c_2^{-1}zc_2\rangle
 \]
-y reetiquetando $e=c_2c_1^{-1}$, obtenemos finalmente la representación de la botella de Klein
+y rotando y reetiquetando $e=c_2c_1^{-1}$, obtenemos finalmente la representación de la botella de Klein
 
 \[
 \langle e,z\mid eze^{-1}z\rangle
@@ -2624,6 +2626,7 @@ y reetiquetando $e=c_2c_1^{-1}$, obtenemos finalmente la representación de la b
 
 
 \end{proof}
+
 
 \begin{figure}[b]%%%%FIG: Toro-Asa
 \centering
@@ -2817,7 +2820,7 @@ que es una representación de $\Proyectivo$ perforado, es decir, un crosscap con
 \begin{align*}
 \langle a,z,B_1,B_2,c_1,c_2\mid aa^{-1} c_2^{-1}zB_2c_2c_1z^{-1}B_1c_1\rangle & & \\
 \approx  \, \langle z,B_1,B_2,c_1,c_2\mid c_2^{-1}B_2zc_2c_1^{-1}z^{-1}B_1c_1\rangle &&\text{(doblar por } a\text{)}\\
-\approx  \, \langle e,z,B_1,B_2\mid eB_2zze^{-1}z^{-1}B_1\rangle &&\text{(rotar y consolidar } e=c_1c_2^{-1} \text{)}
+\approx  \, \langle e,z,B_1,B_2\mid eB_2ze^{-1}z^{-1}B_1\rangle &&\text{(rotar y consolidar } e=c_1c_2^{-1} \text{)}
 \end{align*}
 que es la representación de un toro con dos perforaciones. De la misma forma, cambiando la orientación de la aparición de $z^{-1}$ llegamos a 
 \[
@@ -2849,15 +2852,15 @@ Toda superficie con borde compacta es ordinaria.
 Sea $M$ una superficie con borde compacta. Sabemos, por el \nameref{teo:rado}, que $M$ está triangulada por un poliedro $|K|$ asociado a un complejo simplicial $K$ tal que cada 1-símplice que contiene puntos interiores de $M$ es una cara de exáctamente dos 2-símplices, y cada 1-símplice que contiene puntos del borde de $M$ es cara de exáctamente un 2-símplice. Si sobre cada par de 1-símplices del primer tipo ponemos una cremallera distinta, en el conjunto de los 2-símplices habrá algunos 1-símplices que se identifiquen. Llamemos $K_2=\left\{\sigma_1,\dots ,\sigma_j\right\}$, donde cada $\sigma_i \text{ es un 2-símplice para todo } i=1\dots ,j$. $K_2$ es una superficie ordinaria, pues cada $\sigma_i$ es homeomorfo a una esfera 1-perforada. Si identificamos ahora las cremalleras una a una, por el \autoref{lema:superficie_ordinaria} y por inducción, la superficie resultante es ordinaria.
 \end{proof}
 
-En el artículo, en las siguiente proposición se vuelven a ``\textit{deslizar las perforaciones}'', y además algunos pasos son poco claros en los dibujos que los acompañan.
+En el artículo, en las siguiente proposición se vuelven a ``\textit{deslizar las perforaciones}'', y además algunos pasos son poco claros en los dibujos que los acompañan. Para probarlo, podemos utilizar representaciones poligonales o remitirnos a lo que ya probamos en la \autoref{sec:tcs}.
 
 \begin{lema}\label{lema:1}
 Un crosshandle es homeomorfo a dos crosscaps.
 \end{lema}
 \begin{proof}
 
-Por la \autoref{prop:handletoro_crosshandleklein}, la esfera con un crosshandle es homeomorfa a una botella de klein. Por la \autoref{lema:klein_proyectivoproyectivo}, la botella de Klein es homeomorfa a la suma conexa $\Proyectivo \# \Proyectivo$, o lo que es lo mismo, a la suma conexa de una esfera y dos crosscaps. 
-También se puede demostrar directamente con la representación de la superficie y las cremalleras.
+Por la \autoref{prop:handletoro_crosshandleklein}, la esfera con un crosshandle es homeomorfa a la botella de Klein. Por la \autoref{lema:klein_proyectivoproyectivo}, la botella de Klein es homeomorfa a la suma conexa $\Proyectivo \# \Proyectivo$, o lo que es lo mismo, a la suma conexa de una esfera y dos crosscaps. 
+
 \end{proof}
 
 \begin{lema}\label{lema:2}
@@ -2865,7 +2868,6 @@ Handles y crosshandles son equivalentes en la presencia de crosscaps.
 \end{lema}
 \begin{proof}
 Sea una esfera con un par-zip asociado a un handle y otro asociado a un crosscap. Sabemos que, identificando las cremalleras obtenemos un espacio homeomorfo a la suma conexa $\Toro \# \Proyectivo$. Pero por la \autoref{lema:toro_proyectivo}, este espacio es homeomorfo a $\Proyectivo \# \Proyectivo \# \Proyectivo$, que a su vez, es homeomorfo al plano proyectivo con un crosshandle, que a su vez es homeomorfo a una esfera con un crosshandle y un crosscap.
-También se puede demostrar directamente con la representación de la superficie y las cremalleras.
 \end{proof}
 Aunque Conway hasta ahora haya hablado de superficies con perforaciones (es decir, de superficies con borde), en el teorema final que veremos ahora decide omitirlas. En cambio yo aprovecho lo expuesto hasta ahora y doy directamente la clasificación de superficies con borde.
 %((Ahora no entiendo por qué dado todo lo anterior Conway sólo da la representación de superficies sin borde))
@@ -2887,7 +2889,7 @@ Como se ha visto, no he podido evitar hacer referencia a la representación poli
 \afterpage{\blankpage}
 
 \chapter{Teorema de Clasificación, segunda parte}
-Hasta ahora hemos demostrado, con dos enfoques distintos, que toda superficie con borde compacta es homeomorfa a una esfera, a una suma conexa de copias del toro o a una suma conexa de copias del plano proyectivo, junto con un número finito de perforaciones. Sin embargo no hemos demostrado que estas tres superficies fundamentales sean no homeomorfas entre sí. En este capítulo completaremos la parte de la prueba que nos falta. 
+Hasta ahora hemos demostrado, con dos enfoques distintos, que toda superficie con borde compacta es homeomorfa a una esfera, a una suma conexa de copias del toro o a una suma conexa de copias del plano proyectivo, junto con un número finito de perforaciones. Sin embargo no hemos demostrado que estas tres superficies fundamentales no sean homeomorfas entre sí. En este capítulo completaremos la parte de la prueba que nos falta. 
 
 \section{Presentaciones de grupos}
 Vamos a empezar recordando brevemente las presentaciones de grupos. 
@@ -2903,7 +2905,7 @@ Cada relación $r\in R$ determina un producto de potencias de generadores que va
 \begin{defin}
 Sea ahora un grupo arbitrario $G$. Decimos que una presentación de un grupo $\langle S \mid R \rangle$ es una \enfatiza{presentación de G} si existe un isomorfismo $\langle S \mid R\rangle \cong G$. 
 \end{defin}
-Los elementos de $G$ claramente generan $G$, y por la propiedad característica de los grupos libres, la aplicación identidad de $G$ en sí mismo se extiende a un homomorfismo único $\Phi: F(G) \to G$. Si ponemos $R= \Ker{\Phi}$, entonces, por el primer teorema de isomorfía tenemos que $G\cong F(G)/R$. Como $R$ es normal, $R=\overline{R}$, y por tanto $G$ tiene como presentación $\langle G\mid R\rangle$. Esta presentación trivial es muy ineficiente, pues normalmente $F(G)$ y $R$ son más grandes que $G$. 
+Los elementos de $G$ claramente generan $G$, y la aplicación identidad de $G$ en sí mismo se extiende a un homomorfismo único $\Phi: F(G) \to G$. Si ponemos $R= \Ker{\Phi}$, entonces, por el primer teorema de isomorfía tenemos que $G\cong F(G)/R$. Como $R$ es normal, $R=\overline{R}$, y por tanto $G$ tiene como presentación $\langle G\mid R\rangle$. Esta presentación trivial es muy ineficiente, pues normalmente $F(G)$ y $R$ son más grandes que $G$. 
 Si $G$ admite una presentación $\langle S\mid R	\rangle$ en las cuales $S$ y $R$ son conjuntos finitos, decimos que $G$ tiene una \enfatiza{presentación finita}.
 
 
@@ -3067,12 +3069,12 @@ De la esfera sabemos que es símplemente conexa. (b) y (c) se deducen del \autor
 \end{proof}
 
 \begin{defin}
-Dado un grupo $G$, el \enfatiza{subgrupo conmutador de G}, denotado por $\left[ G, G \right]$, es el subgrupo de $G$ generado por todos los elementos de la forma $\alpha \beta \alpha^{-1} \beta^{-1}$, para $\alpha \beta \in G$. 
+Dado un grupo $G$, el \enfatiza{subgrupo conmutador de G}, denotado por $\left[ G, G \right]$, es el subgrupo de $G$ generado por todos los elementos de la forma $\alpha \beta \alpha^{-1} \beta^{-1}$, para $\alpha , \beta \in G$. 
 
-Al grupo cociente $\Ab{(G)} = G / \left[ G,G \right]$ lo llamamos el \enfatiza{abelianizado de G}. 
+Al grupo cociente $\Ab{(G)} := G / \left[ G,G \right]$ lo llamamos el \enfatiza{abelianizado de G}. 
 \end{defin}
 
-Como el isomorfismo $F:G_1 \to G_2$ lleva el subgrupo conmutador de $G_1$ al de $G_2$, entonces grupos isomorfos tienen abelianizados isomorfos. Por lo tanto demostraremos que las superficies fundamentales no son homeomorfas no a través de sus grupos fundamentales si no de sus abelianizados.\\
+Como un isomorfismo $F:G_1 \to G_2$ lleva el subgrupo conmutador de $G_1$ al de $G_2$, entonces grupos isomorfos tienen abelianizados isomorfos. Por lo tanto demostraremos que las superficies fundamentales no son homeomorfas no a través de sus grupos fundamentales si no de sus abelianizados.\\
 Por otro lado, si bien no trataremos homología en este trabajo, observamos que si $X$ es un espacio topológico conexo por caminos, y $p\in X$ un punto suyo, entonces el \textit{primer grupo de homología} $H_1(X)$ es isomorfo al abelianizado de $\pi_1(X,p)$. Una prueba se puede encontrar en \cite{lee1}. Veamos ahora el primer grupo de homología de las superficies fundamentales.
 
 
@@ -3098,7 +3100,7 @@ su grupo fundamental. Si denotamos $e_i=(0,\dots ,1, \dots ,0) \in \mathbb{Z}^{2
 & \gamma_i & \mapsto & e_{i+1}
 \end{array}
 \]
-Si pensamos en $\varphi$ como una aplicación del grupo libre $F(\beta_1 , \gamma_1 , \dots , \beta_n, \gamma_n )$ en $\mathbb{Z}^{2n}$, $\varphi$ envía el elemento\\ $\beta_1 \gamma_1 \beta_1^{-1} \gamma_1^{-1} \cdots \beta_n \gamma_n \beta_n^{-1} \gamma_n^{-1}$ al $(0,\dots ,0)$., y por lo tanto pasa al cociente $G$ como un homomorfismo $\tilde{\varphi}$ de $\Ab{(G)}$ en $\mathbb{Z}^{2n}$. Para hallar su inversa, si definimos ahora  $\psi: \mathbb{Z}^{2n}\to \Ab{(G)}$ por
+Si pensamos en $\varphi$ como una aplicación del grupo libre $F(\beta_1 , \gamma_1 , \dots , \beta_n, \gamma_n )$ en $\mathbb{Z}^{2n}$, $\varphi$ envía el elemento\\ $\beta_1 \gamma_1 \beta_1^{-1} \gamma_1^{-1} \cdots \beta_n \gamma_n \beta_n^{-1} \gamma_n^{-1}$ al $(0,\dots ,0)$, y por lo tanto obtenemos un homomorfismo de $G$ en $\Z^{2n}$, del cual obtenemos un homomorfismo $\tilde{\varphi}$ de $\Ab{(G)}$ en $\mathbb{Z}^{2n}$. Para hallar su inversa, si definimos ahora  $\psi: \mathbb{Z}^{2n}\to \Ab{(G)}$ por
 
 \[
 \psi (e_i) = \left\{ 
@@ -3109,7 +3111,7 @@ Si pensamos en $\varphi$ como una aplicación del grupo libre $F(\beta_1 , \gamm
 \right.
 \]
 
-donde los corchetes indican la clase de equivalencia del elemento en $\Ab{(G)}$, entonces podemos extenderlo a un homomorfismo $\tilde{\psi}=\tilde{\varphi}^-1$.
+donde los corchetes indican la clase de equivalencia del elemento en $\Ab{(G)}$, entonces podemos extenderlo a un homomorfismo $\tilde{\psi}$ que es la inversa de $\tilde{\varphi}^{-1}$.
 
 De forma análoga, consideremos ahora una suma conexa de copias del plano proyectivo, y denotemos su grupo fundamental por
 \[
@@ -3127,7 +3129,7 @@ h-e_{n-1} - \dots - e_1, & i=n.
 \right.
 \]
 
-donde $h\in \mathbb{Z}/2$ denota el elemento no trivial. Dado que $g+g=0$, tenemos que $\varphi \left( \beta_1^2 \cdots \beta_n^2\right) =(0, \dots ,0)$,  y como antes $\phi$ pasa al cociente como un homomorfismo $\tilde{\varphi} :  \Ab{(G)} \to \mathbb{Z}^{n-1} \times \mathbb{Z}/2 $. Por otro lado, podemos definir su inversa como el homomorfismo 
+donde $h\in \mathbb{Z}/2$ denota el elemento no trivial. Dado que $h+h=0$, tenemos que $\varphi \left( \beta_1^2 \cdots \beta_n^2\right) =(0, \dots ,0)$,  y como antes $\phi$ pasa al cociente como un homomorfismo $\tilde{\varphi} :  \Ab{(G)} \to \mathbb{Z}^{n-1} \times \mathbb{Z}/2 $. Por otro lado, podemos definir su inversa como el homomorfismo 
 \[
 \begin{array}{rccl}
 \psi : & \mathbb{Z}^{n-1}  \times \mathbb{Z}/2 & \to & \Ab{(H)} \\

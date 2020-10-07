@@ -38,12 +38,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Teorema de Clasificación}{37}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Teorema de Clasificación, segunda parte}{41}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Teorema de Clasificación, segunda parte}{42}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Presentaciones de grupos}{41}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Presentaciones de grupos}{42}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Grupos fundamentales de las Superficies Compactas}{42}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Grupos fundamentales de las Superficies Compactas}{43}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Teorema de Clasificación}{46}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Teorema de Clasificación}{47}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografía}{47}{tma.4.3.1}%
+\contentsline {chapter}{Bibliografía}{48}{tma.4.3.1}%
