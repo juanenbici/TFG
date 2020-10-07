@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  7 OCT 2020 18:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  7 OCT 2020 22:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1652,17 +1652,17 @@ Overfull \hbox (5.4431pt too wide) in paragraph at lines 1644--1645
  []
 
 [22] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1808--1810
+Underfull \hbox (badness 10000) in paragraph at lines 1807--1809
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 1811--1812
+Underfull \hbox (badness 10000) in paragraph at lines 1810--1811
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1813--1814
+Underfull \hbox (badness 10000) in paragraph at lines 1812--1813
 
  []
 
@@ -1679,12 +1679,12 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1882--1884
+Underfull \hbox (badness 10000) in paragraph at lines 1881--1883
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1892--1893
+Underfull \hbox (badness 10000) in paragraph at lines 1891--1892
 
  []
 
@@ -1697,12 +1697,12 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1951--1952
+Underfull \hbox (badness 10000) in paragraph at lines 1950--1951
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1953--1954
+Underfull \hbox (badness 10000) in paragraph at lines 1952--1953
 
  []
 
@@ -1757,7 +1757,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2251--2308
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2250--2307
 []$[]$ $[]$ 
  []
 
@@ -1766,12 +1766,12 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 2251--2308
 ]
 Cap\'{\i }tulo 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2353--2354
+Underfull \hbox (badness 10000) in paragraph at lines 2352--2353
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 2368--2369
+Underfull \hbox (badness 10000) in paragraph at lines 2367--2368
 
  []
 
@@ -1786,45 +1786,45 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 [34] [35] [36] [37] [38]
-Underfull \hbox (badness 10000) in paragraph at lines 2886--2887
+Underfull \hbox (badness 10000) in paragraph at lines 2888--2889
 
  []
 
-[39] [40] [41
+[39] [40]
+Cap\'{\i }tulo 4.
+[41
 
 ]
-Cap\'{\i }tulo 4.
-[42]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [43] [44] [45] [46] [47] [48
+ [42] [43] [44] [45] [46] [47
 
 
-] [49]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3374.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3374.
+] [48]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3375.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3375.
  (./TFG2.aux
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3374.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3374.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3375.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3375.
 
 Package rerunfilecheck Info: File `TFG2.out' has not changed.
-(rerunfilecheck)             Checksum: A624E54130856200F26352D87C85B64D;1590.
+(rerunfilecheck)             Checksum: 7B090D71AD70D98F74D849DE13BBF6D8;1580.
 Package logreq Info: Writing requests to 'TFG2.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 43661 strings out of 480478
- 986817 string characters out of 5905960
- 1595500 words of memory out of 5000000
- 58548 multiletter control sequences out of 15000+600000
+ 43657 strings out of 480478
+ 986761 string characters out of 5905960
+ 1595490 words of memory out of 5000000
+ 58545 multiletter control sequences out of 15000+600000
  545831 words of font info for 121 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,104p,1851b,2010s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1849,10 +1849,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (57 pages, 850023 bytes).
+Output written on TFG2.pdf (56 pages, 849933 bytes).
 PDF statistics:
- 888 PDF objects out of 1000 (max. 8388607)
- 781 compressed objects within 8 object streams
- 301 named destinations out of 1000 (max. 500000)
+ 883 PDF objects out of 1000 (max. 8388607)
+ 777 compressed objects within 8 object streams
+ 300 named destinations out of 1000 (max. 500000)
  15658 words of extra memory for PDF output out of 17280 (max. 10000000)
 

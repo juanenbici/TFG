@@ -188,15 +188,15 @@ Möbius, en un primer intento, proporcionó una clasificación de las superficie
 En 1888 von Dick \cite{vondick} es el primero en dar la clasificación completa de superficies orientables y no orientables, introduciendo además la noción de \textit{forma normal} de una superficie, pero se considera que son Dehn y Heegaard los primeros que en 1907 \cite{dehn} lo demuestran de forma rigurosa. En 1915 Alexander publica en un artículo \cite{alexander} en el que se representan por primera vez las superficies como polígonos con aristas identificadas, y finalmente es en 1920 cuando Brahana \cite{brahana} demuestra de forma rigurosa y completa el Teorema de Clasificación en términos de transformaciones sobre polígonos que representan superficies. Radó \cite{rado} demuestra en 1925 que toda superficie es triangulable, completando así la prueba.
 Hoy en día, la mayoría de los libros de texto siguen la demostración dada por Seifert y Threlfall \cite{seifert}.\\
 
-En el año 1999, Francis y Weeks presentan en \cite{zip} una demostración totalmente nueva y distinta dada por John H. Conway y llamada ``\textit{ZIP proof}''. Las siglas \textit{ZIP} hacen referencia a \textit{Zero Irrelevancy Proof}, es decir, \textit{Prueba de Cero Irrelevancias}, pues según Conway esta demostración elimina algunas de las irrelevancias que contiene la versión de Seifert-Threlfall. El uso de cortes sobre polígonos es para Conway uno de los pasos que se pueden eliminar, y utiliza en cambio el concepto de \textit{suma conexa de superficies} para llegar a la forma normal. Esta prueba, si bien es corta e instructiva por ser muy comprensible a nivel intuitivo, es bastante informal. Algunas partes de la demostración incluyen pasos que no se desarrollan en profundidad, y conceptos como triangulación, orientabilidad, género y característica de Euler se citan pero no llegan a definirse. Por otro lado, no se demuestra que las superficies del conjunto de representantes sean no homeomorfas entre sí. El propósito de este trabajo es por tanto formalizar la prueba de Conway y compararla con la de Seifert-Threlfall.\\
+En el año 1999, Francis y Weeks presentan en \cite{zip} una demostración totalmente nueva y distinta dada por John H. Conway y llamada ``\textit{ZIP proof}''. Las siglas \textit{ZIP} hacen referencia a \textit{Zero Irrelevancy Proof}, es decir, \textit{Prueba de Irrelevancia Cero}, pues según Conway esta demostración elimina algunas de las irrelevancias que contiene la versión de Seifert-Threlfall. El uso de cortes sobre polígonos es para Conway uno de los pasos que se pueden eliminar, y utiliza en cambio el concepto de \textit{suma conexa de superficies} para llegar a la forma normal. Esta prueba, si bien es corta e instructiva por ser muy comprensible a nivel intuitivo, es bastante informal. Algunas partes de la demostración incluyen pasos que no se desarrollan en profundidad, y conceptos como triangulación, orientabilidad, género y característica de Euler se citan pero no llegan a definirse. Por otro lado, no se demuestra que las superficies del conjunto de representantes no sean homeomorfas entre sí. El propósito de este trabajo es formalizar la prueba de Conway y compararla con la de Seifert-Threlfall.\\
 
 El trabajo está estructurado en cuatro capítulos.\\
 
 El primer capítulo trata de la triangulación de superficies. En la primera parte doy definiciones y resultados básicos de variedades, variedades con borde, superficies y suma conexa de variedades, que será el concepto central en la demostración de Conway. En la segunda defino de forma rigurosa el concepto de triangulación de superficies mediante símplices y complejos simpliciales, y doy las lineas generales de la demostración del Teorema de Radó. \\ %Esta es la parte más importante del capítulo, donde lo enunciaré y trataré de dar una idea de la demostración. %Esta utiliza el \textit{Teorema de Jordan-Shönflies}, que no demostraré pues me alejaría del propósito final del trabajo. \\
 
-En el segundo capítulo estudio la demostración de la primera parte del Teorema de Clasificación, a la manera de Seifert-Threlfall, para poder compararla con la prueba de Conway. Con esta finalidad, presento un método riguroso de representación de cualquier superficie triangulada como un polígono en el plano. Introduzco entonces una serie transformaciones sobre este polígono que den lugar a superficies homeomorfas. Estos conceptos también me servirán para formalizar algunos pasos de la prueba ZIP. Finalmente, una vez probado el teorema, lo extiendo a las superficies con borde.\\
+En el segundo capítulo estudio la demostración de la primera parte del Teorema de Clasificación, a la manera de Seifert-Threlfall, para poder compararla con la prueba de Conway. Con esta finalidad, presento un método riguroso de representación de cualquier superficie triangulada como un polígono en el plano. Introduzco entonces una serie transformaciones sobre este polígono que den lugar a superficies homeomorfas. Estos conceptos también me servirán para formalizar la prueba ZIP. Finalmente, una vez probado el teorema, lo extiendo a las superficies con borde.\\
 
-El tercer capítulo es la parte central del trabajo. Sigo paso por paso el artículo de Francis y Weeks, dando para cada resultado una demostración rigurosa, y definiendo formalmente las ideas de Conway. Para ello, me ayudo de algunos conceptos expuestos en el capítulo tres. Comento también donde procede las similitudes y diferencias con la prueba de Seifert-Threlfall, así como las posibles ventajas de una prueba u otra. El teorema que enuncio y demuestro da directamente la clasificación de las superficies con borde.\\
+El tercer capítulo es la parte central del trabajo. Sigo paso por paso el artículo de Francis y Weeks, dando para cada resultado una demostración rigurosa, y definiendo formalmente las ideas de Conway. Para ello, me ayudo de algunos conceptos expuestos en el capítulo dos. Comento también donde procede las similitudes y diferencias con la prueba de Seifert-Threlfall, así como las posibles ventajas de una prueba u otra. El teorema que enuncio y demuestro da directamente la clasificación de las superficies con borde.\\
 
 En el cuarto capítulo, finalmente, completo la demostración probando que la esfera, la suma conexa de toros y la suma conexa de planos proyectivos no son homeomorfas. Para ello utilizaré como invariante topológico el subgrupo conmutador del grupo fundamental de las superficies. Esta prueba no dependerá de la utilizada para la primera parte del teorema. \\
 
@@ -223,9 +223,9 @@ $I$ representará el intervalo $\left[ 0,1\right]$.
 \chapter{Superficies y triangulación}\label{cap:1}
 \pagenumbering{arabic} 
 \setcounter{page}{1}
-En este capítulo doy las definiciones y resultados básicos de las variedades, así como de las variedades con borde, que Conway utiliza en la Prueba ZIP sin mencionarlas ni definirlas. También estudiaremos la suma conexa de superficies, concepto en el que nos basaremos para llegar a una forma normal en la prueba de Conway. 
+En este capítulo desarrollaremos los conceptos que nos permitirán clasificar las superficies. Consta de dos partes. En la primera doy las definiciones y resultados básicos de las variedades, así como de las variedades con borde, que Conway utiliza en la Prueba ZIP sin mencionarlas ni definirlas. También estudiaremos la suma conexa de variedades, en la que nos basaremos para llegar a una forma estándar en la prueba ZIP. 
 
-En la segunda parte del capítulo daremos una definición rigurosa de triangulación, a través de símplices y complejos simpliciales. Finalmente enunciaré el teorema de Radó y daré una idea de la demostración. \\%Me basaré principalmente en los libros de Lee \cite{lee1}, Muñoz - Madrigal \cite{juanjo} y Munkres \cite{munkres}.\\
+En la segunda parte del capítulo expondré los conceptos de símplices y complejos simpliciales, de cara a poder dar una definición rigurosa de triangulación de una superficie. Finalmente enunciaré el teorema de Radó y expondré una demostración que se basa en el Teorema de Jordan-Schönflies. \\%Me basaré principalmente en los libros de Lee \cite{lee1}, Muñoz - Madrigal \cite{juanjo} y Munkres \cite{munkres}.\\
 
 \section{Variedades}\label{sec:variedades}
 Los espacios topológicos de los que nos vamos a ocupar en el siguiente trabajo son las variedades, y en concreto las superficies. Decimos que un espacio topológico $M$ es \enfatiza{localmente euclídeo de dimensión n} si todo punto de $M$ tiene un entorno en $M$ que es homeomorfo a un abierto de $\R^n$.
@@ -627,7 +627,7 @@ Un tipo de variedades interesantes desde el punto de vista de la triangulación 
 Por lo tanto, se tiene que toda variedad diferenciable es triangulable por una triangulación combinatoria.
 Por otro lado, en los años 1950 Edwin Moise \cite{moise} demuestra que toda variedad de dimensión 3 es diferenciable, y por lo tanto triangulable. En cambio, Kirby y Siebenmann \cite{kirby} demuestran que, para toda dimensión mayor o igual que 5, existen variedades sin una estructura PL. 
 
-En los años 1980, Freedman y Casson revolucionaron el estudio de las variedades de dimensión 4. El primero \cite{freedman} encontró una variedad, llamada $E_8$, que no admite una estructura PL, y por lo tanto no tiene una triangulación combinatoria. El segundo \cite{casson} demostró, de forma más general, que $E_8$ no es triangulable, encontrando por primera vez una variedad que no se puede triangular.
+En los años 1980, Freedman y Casson revolucionaron el estudio de las variedades de dimensión 4. El primero \cite{freedman} encontró una variedad, la variedad $E_8$, que no admite una estructura PL, y por lo tanto no tiene una triangulación combinatoria. El segundo \cite{casson} demostró, de forma más general, que $E_8$ no es triangulable, encontrando por primera vez una variedad que no se puede triangular.
 
 Finalmente, Manolescu \cite{manolescu} demostró en 2013 que para cualquier dimensión mayor o igual que 5, existen también variedades no triangulables.
 
@@ -977,8 +977,8 @@ son homeomorfismos, y definimos así el homeomorfismo $\beta:V_0\to U_0$ por $$\
 \centering
 \begin{tikzpicture}[use optics, >=triangle 45]
 
-\filldraw [color=black!30] (-4.5,-.5) -- +(0,-.7) -- +(1,-.7) -- +(1,0) -- cycle;
-\filldraw [color=black!30] (-4.5,.5) -- +(0,.7) -- +(1,.7) -- +(1,0) -- cycle;
+\filldraw [color=gray!20] (-4.5,-.5) -- +(0,-.7) -- +(1,-.7) -- +(1,0) -- cycle;
+\filldraw [color=gray!20] (-4.5,.5) -- +(0,.7) -- +(1,.7) -- +(1,0) -- cycle;
 
 \draw (-4,-1.3) node[anchor=north] {$V$};
 \draw (-4,1.3) node[anchor=south] {$U$};
@@ -1003,8 +1003,8 @@ son homeomorfismos, y definimos así el homeomorfismo $\beta:V_0\to U_0$ por $$\
 
 
 
-\filldraw [color=black!30] (-.8,1.5) -- (-.8,2) -- (.8,2) -- (.8,1.5);
-\filldraw [shift={(0,-3)},color=black!30] (-.8,1.5) -- (-.8,2) -- (.8,2) -- (.8,1.5);
+\filldraw [color=gray!20] (-.8,1.5) -- (-.8,2) -- (.8,2) -- (.8,1.5);
+\filldraw [shift={(0,-3)},color=gray!20] (-.8,1.5) -- (-.8,2) -- (.8,2) -- (.8,1.5);
 
 \draw [dashed](-.8,1.5) -- (-.8,2) -- (.8,2) -- (.8,1.5);
 \draw [dashed, shift={(0,-3)}](-.8,1.5) -- (-.8,2) -- (.8,2) -- (.8,1.5);
@@ -1024,7 +1024,7 @@ son homeomorfismos, y definimos así el homeomorfismo $\beta:V_0\to U_0$ por $$\
 
 
 
-\filldraw [color=black!30] (3.3,-.5) -- (3.3,.5) -- (4.8,.5) -- (4.8, -.5);
+\filldraw [color=gray!20] (3.3,-.5) -- (3.3,.5) -- (4.8,.5) -- (4.8, -.5);
 \draw [dashed] (3.3,-.5) -- (3.3,.5) -- (4.8,.5) -- (4.8, -.5) -- cycle;
 \draw (3,0) -- (5,0);
 \draw (4,-1) -- (4,1);
@@ -1650,10 +1650,9 @@ Sea $M$ una superficie que admite como representación $\langle S\mid W\rangle$.
 \end{prop}
 \begin{proof}
 Consideramos la representación $\mathcal{P}=\langle S,a,b,c\mid Wc^{-1}b^{-1}a^{-1},abc\rangle$ (\autoref{fig:suma_conexa_rep_pol}). Pegando a lo largo de $a$ y doblando dos veces, tenemos que $\mathcal{P}$ es una representación equivalente a $\langle S\mid W\rangle$ y por tanto es una representación de $M$. Llamemos $B$ a la imagen por la proyección $\pi$ en $M$ del interior de la región poligonal cuya frontera es $abc$. Veamos que $B$ es un disco coordenado regular, es decir, que existe un entorno $B'$ de $B$ en $M$ y un homeomorfismo $\phi :B'\to \R^2$ que manda $B$ a $\mathbb{B}^2$ y $\overline{B}$ a $\overline{\mathbb{B}}^2$. Siguiendo la figura \autoref{fig:suma_conexa_rep_pol}, sean $P_1$, $Q$ y $P_1'$ regiones poligonales convexas etiquetadas respectivamente por las palabras $Wc^{-1}b^{-1}a^{-1}$, $abc$ y $W$. Si triangulamos las regiones poligonales como en la  imagen, obtenemos una aplicación simplicial $f:P_1\amalg Q\to P_1'$ que lleva $Q$ a el triángulo $Q'\subseteq P_1'$, que comparte un vértice $v$ con $P_1'$. La composición $\pi \circ f: P_1\amalg Q\to \to M$ respeta las identificaciones hechas por la aplicación cociente $\pi :P_1'\to M$, por lo que se tiene un homeomorfismo de $M$, que lleva $B$ a la imagen de $Q'$.\\
-Ahora, fijémonos en la demostración de la \autoref{prop:poligonos} (a). Cuando construimos el entorno euclídeo de un vértice, ensamblábamos las regiones del plano $\Lambda$ que se correspondían con los varios vértices en un mismo disco coordenado. Aplicando esa construcción al vértice $v$, llevamos $Q'$ a un conjunto que es homeomorfo a un disco cerrado en el plano, y  entonces extendemos ese homeomorfismo a un disco abierto que lo contiene.\\
-Se tiene por tanto que la realización geométrica de $\langle S,a,b,c\mid Wc^{-1}b^{-1}a^{-1}\rangle$ es homeomorfa a $M\setminus B$, y que $\partial B$ es la imagen de las aristas $c^{-1}b^{-1}a^{-1}$
+Ahora, fijémonos en la demostración de la \autoref{prop:poligonos} (a). Cuando construimos el entorno euclídeo de un vértice, ensamblábamos las regiones del plano $\Lambda$ que se correspondían con los varios vértices en un mismo disco coordenado. Aplicando esa construcción al vértice $v$, llevamos $Q'$ a un conjunto que es homeomorfo a un disco cerrado en el plano, y  entonces extendemos ese homeomorfismo a un disco abierto que lo contiene. Se tiene por tanto que la realización geométrica de $\langle S,a,b,c\mid Wc^{-1}b^{-1}a^{-1}\rangle$ es homeomorfa a $M\setminus B$, y que $\partial B$ es la imagen de las aristas $c^{-1}b^{-1}a^{-1}$.
 \end{proof}
-
+En la anterior proposición podemos cambiar $abc$ por otra palabra formada por símbolos que no estén en la representación de $M$.
 
 
 \begin{prop}%%%%PROP: representación suma conexa
@@ -1692,7 +1691,7 @@ $$V=W\cap (\tau_1 \cup \dots \cup \tau_m )\setminus \{ v \}$$ entonces $U$ y $V$
 \end{proof}
 
 
-\section{Teorema de clasificación de superficies compactas}\label{sec:tcs}
+\section{Teorema de clasificación de superficies}\label{sec:tcs}
 
 Ya tenemos la maquinaria necesaria para hacer una primera demostración de la primera parte del Teorema de Clasificación.
 Como venimos anunciando desde el principio del presente trabajo nuestras superficies fundamentales son el toro $\Toro$, la esfera $ \Esfera$, y el plano proyectivo  $\Proyectivo$. ¿Qué pasa con las otras superficies que hemos visto, como la botella de Klein o la suma conexa de un toro y un plano proyectivo? La respuesta la obtenemos de los dos siguientes lemas.
@@ -2155,25 +2154,25 @@ Ahora sólo falta aplicar sobre $\mathcal{P}$ el resto de la demostración de la
 
 
 
-\fill[ fill=black,fill opacity= 0.1] (-1.0734974348383717,1.9534822942323429) -- (-1.2251018153471387,1.062806558743338) -- (-2.267381931344911,3.2800206236840523) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (-2.267381931344911,3.2800206236840523) -- (-2.7221950728712114,1.4797186051424467) -- (-1.2251018153471387,1.062806558743338) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (-2.7221950728712114,1.4797186051424467) -- (-2.13472809839974,-0.30163286583556315) -- (-1.2251018153471387,1.062806558743338) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (-1.2251018153471387,1.062806558743338) -- (-0.5618326506212836,0) -- (-2.13472809839974,-0.30163286583556315) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (-0.5618326506212836,0) -- (1,0) -- (-0.5428821030576877,-1.4197151720877181) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (-2.13472809839974,-0.30163286583556315) -- (-0.5428821030576877,-1.4197151720877181) -- (-0.5618326506212836,0) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (1,0) -- (1.5985297716286444,-1.4197151720877181) -- (-0.5428821030576877,-1.4197151720877181) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (1,0) -- (1.8448868899553905,0.4184879415810791) -- (1.5985297716286444,-1.4197151720877181) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (1.8448868899553905,0.4184879415810791) -- (3.796793289005764,0.19108137081792892) -- (1.5985297716286444,-1.4197151720877181) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (1.8448868899553905,0.4184879415810791) -- (3.417782337733847,1.9155811991051512) -- (3.796793289005764,0.19108137081792892) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (3.417782337733847,1.9155811991051512) -- (2.015441818027753,1.422866962451659) -- (1.8448868899553905,0.4184879415810791) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (2.015441818027753,1.422866962451659) -- (1.39007374842909,2.1429877698683013) -- (3.417782337733847,1.9155811991051512) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (3.417782337733847,1.9155811991051512) -- (2.849265910825971,3.3558228139384356) -- (1.39007374842909,2.1429877698683013) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (1.39007374842909,2.1429877698683013) -- (1.636430866755836,4.113844716482269) -- (2.849265910825971,3.3558228139384356) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (1.636430866755836,4.113844716482269) -- (0.6320518458852555,2.465147078449431) -- (1.39007374842909,2.1429877698683013) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (-2.267381931344911,3.2800206236840523) -- (-0.2965249847309415,4.473905120190591) -- (-1.0734974348383717,1.9534822942323429) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (-1.0734974348383717,1.9534822942323429) -- (-0.1828216993493664,2.446196530885835) -- (-0.2965249847309415,4.473905120190591) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (-0.2965249847309415,4.473905120190591) -- (0.6320518458852555,2.465147078449431) -- (-0.1828216993493664,2.446196530885835) -- cycle;
-\fill[ fill=black,fill opacity= 0.1] (-0.2965249847309415,4.473905120190591) -- (1.636430866755836,4.113844716482269) -- (0.6320518458852555,2.465147078449431) -- cycle;
+\fill[ fill=gray!20] (-1.0734974348383717,1.9534822942323429) -- (-1.2251018153471387,1.062806558743338) -- (-2.267381931344911,3.2800206236840523) -- cycle;
+\fill[ fill=gray!20] (-2.267381931344911,3.2800206236840523) -- (-2.7221950728712114,1.4797186051424467) -- (-1.2251018153471387,1.062806558743338) -- cycle;
+\fill[ fill=gray!20] (-2.7221950728712114,1.4797186051424467) -- (-2.13472809839974,-0.30163286583556315) -- (-1.2251018153471387,1.062806558743338) -- cycle;
+\fill[ fill=gray!20] (-1.2251018153471387,1.062806558743338) -- (-0.5618326506212836,0) -- (-2.13472809839974,-0.30163286583556315) -- cycle;
+\fill[ fill=gray!20] (-0.5618326506212836,0) -- (1,0) -- (-0.5428821030576877,-1.4197151720877181) -- cycle;
+\fill[ fill=gray!20] (-2.13472809839974,-0.30163286583556315) -- (-0.5428821030576877,-1.4197151720877181) -- (-0.5618326506212836,0) -- cycle;
+\fill[ fill=gray!20] (1,0) -- (1.5985297716286444,-1.4197151720877181) -- (-0.5428821030576877,-1.4197151720877181) -- cycle;
+\fill[ fill=gray!20] (1,0) -- (1.8448868899553905,0.4184879415810791) -- (1.5985297716286444,-1.4197151720877181) -- cycle;
+\fill[ fill=gray!20] (1.8448868899553905,0.4184879415810791) -- (3.796793289005764,0.19108137081792892) -- (1.5985297716286444,-1.4197151720877181) -- cycle;
+\fill[ fill=gray!20] (1.8448868899553905,0.4184879415810791) -- (3.417782337733847,1.9155811991051512) -- (3.796793289005764,0.19108137081792892) -- cycle;
+\fill[ fill=gray!20] (3.417782337733847,1.9155811991051512) -- (2.015441818027753,1.422866962451659) -- (1.8448868899553905,0.4184879415810791) -- cycle;
+\fill[ fill=gray!20] (2.015441818027753,1.422866962451659) -- (1.39007374842909,2.1429877698683013) -- (3.417782337733847,1.9155811991051512) -- cycle;
+\fill[ fill=gray!20] (3.417782337733847,1.9155811991051512) -- (2.849265910825971,3.3558228139384356) -- (1.39007374842909,2.1429877698683013) -- cycle;
+\fill[ fill=gray!20] (1.39007374842909,2.1429877698683013) -- (1.636430866755836,4.113844716482269) -- (2.849265910825971,3.3558228139384356) -- cycle;
+\fill[ fill=gray!20] (1.636430866755836,4.113844716482269) -- (0.6320518458852555,2.465147078449431) -- (1.39007374842909,2.1429877698683013) -- cycle;
+\fill[ fill=gray!20] (-2.267381931344911,3.2800206236840523) -- (-0.2965249847309415,4.473905120190591) -- (-1.0734974348383717,1.9534822942323429) -- cycle;
+\fill[ fill=gray!20] (-1.0734974348383717,1.9534822942323429) -- (-0.1828216993493664,2.446196530885835) -- (-0.2965249847309415,4.473905120190591) -- cycle;
+\fill[ fill=gray!20] (-0.2965249847309415,4.473905120190591) -- (0.6320518458852555,2.465147078449431) -- (-0.1828216993493664,2.446196530885835) -- cycle;
+\fill[ fill=gray!20] (-0.2965249847309415,4.473905120190591) -- (1.636430866755836,4.113844716482269) -- (0.6320518458852555,2.465147078449431) -- cycle;
 \draw [ ] (-1.0734974348383717,1.9534822942323429)-- (-1.2251018153471387,1.062806558743338);
 \draw [ ] (-1.2251018153471387,1.062806558743338)-- (-2.267381931344911,3.2800206236840523);
 \draw [ ] (-2.267381931344911,3.2800206236840523)-- (-1.0734974348383717,1.9534822942323429);
@@ -2252,7 +2251,7 @@ $$\langle a_1,\dots ,a_n, c_1,\dots ,c_k, B_1,\dots ,B_k\mid a_1a_1\dots a_na_nc
 \centering
 \begin{tikzpicture}[use optics, >=angle 60, scale=1.7]
 
-\fill[  ,fill=black,fill opacity=0.1] (0,0) -- (0.9238207149966959,0.3828253995531037) -- (1.3063621711370152,1.3067637277623212) -- (0.9235367715839117,2.230584442759017) -- (-0.00040155662530578324,2.6131258988993364) -- (-0.9242222716220017,2.230300499346233) -- (-1.3067637277623212,1.3063621711370155) -- (-0.9239383282092178,0.38254145614031965) -- cycle;
+\fill[  ,fill=gray!20] (0,0) -- (0.9238207149966959,0.3828253995531037) -- (1.3063621711370152,1.3067637277623212) -- (0.9235367715839117,2.230584442759017) -- (-0.00040155662530578324,2.6131258988993364) -- (-0.9242222716220017,2.230300499346233) -- (-1.3067637277623212,1.3063621711370155) -- (-0.9239383282092178,0.38254145614031965) -- cycle;
 
 \draw  [->-]  (0,0) -- (0.9238207149966959,0.3828253995531037)node[midway,below] {$b_2$};
 \draw  [->-](0.9238207149966959,0.3828253995531037)-- (1.3063621711370152,1.3067637277623212)node[midway, anchor=west] {$a_2$};
@@ -2282,7 +2281,7 @@ $$\langle a_1,\dots ,a_n, c_1,\dots ,c_k, B_1,\dots ,B_k\mid a_1a_1\dots a_na_nc
 
 
 
-\fill[  fill=black,fill opacity=0.1] (0,0) -- (0.6,0) -- (1.1405813207414512,0.2603302434705348) -- (1.5146752018566914,0.7294291329513525) -- (1.6481877622304801,1.3143858802604464) -- (1.5146752018566916,1.8993426275695406) -- (1.1405813207414515,2.3684415170503583) -- (0.6,2.6287717605208933) -- (0,2.628771760520894) -- (-0.5405813207414512,2.3684415170503588) -- (-0.9146752018566913,1.899342627569541) -- (-1.0481877622304798,1.314385880260447) -- (-0.9146752018566915,0.7294291329513529) -- (-0.5405813207414516,0.260330243470535) -- cycle;
+\fill[  fill=gray!20] (0,0) -- (0.6,0) -- (1.1405813207414512,0.2603302434705348) -- (1.5146752018566914,0.7294291329513525) -- (1.6481877622304801,1.3143858802604464) -- (1.5146752018566916,1.8993426275695406) -- (1.1405813207414515,2.3684415170503583) -- (0.6,2.6287717605208933) -- (0,2.628771760520894) -- (-0.5405813207414512,2.3684415170503588) -- (-0.9146752018566913,1.899342627569541) -- (-1.0481877622304798,1.314385880260447) -- (-0.9146752018566915,0.7294291329513529) -- (-0.5405813207414516,0.260330243470535) -- cycle;
 
 
 \draw [ -<- ] (0,0)-- (0.6,0) node [anchor=north, midway] {$c_1$};
@@ -2566,7 +2565,7 @@ Dada una superficie $S$, la suma conexa $S\# \Toro$ puede visualizarse como el e
 
 \begin{figure}%%%% FIG: suma conexa toro esfera
 \centering
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.75]
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.85]
 \fill [black!10] (0.5,0) arc[x radius=0.5, y radius=0.5, start angle=0, end angle=-180];
 \fill[color=black!15] (0.5,0) arc[x radius=0.5, y radius=0.23, start angle=0, end angle=360];
 \draw [rotate around={0:(-5.5,0)}] (-5.5,0) ellipse (2.5cm and 2cm);
@@ -2693,6 +2692,8 @@ y rotando y reetiquetando $e=c_2c_1^{-1}$, obtenemos finalmente la representaci�
 \caption{Suma conexa de una superficie y un toro visto como una superficie con un \textit{asa}. \label{fig:toro_asa}}
 \end{figure}
 
+\
+
 \begin{corol}
 Sea $M$ una superficie. Los siguientes espacios son homeomorfos:
 \begin{itemize}
@@ -2804,7 +2805,7 @@ Finalmente, consideramos los varios casos en que las cremalleras no ocupan perfo
 que es una representación del cilindro, es decir, una esfera con dos perforaciones, y por tanto una superficie ordinaria. Cambiando la aparición de $z^{-1}$ por la de $z$, obtenemos mediante un proceso análogo al anterior la representación
 \[ \langle z,B_1,B_2\mid zB_2zB_1 \rangle
 \]
-que es la representación de un crosscap con dos perforaciones, es decir, una superficie ordinaria.
+que es la representación de una banda de Möbius, o lo que es equivalente, un crosscap con una perforación, es decir, una superficie ordinaria.
 \item[(2)] \textit{Una perforación con un par-zip y una componente conexa del borde.} Como antes, dependiendo de la orientación podemos partir de 
 \begin{align*}
 \langle a,z,B,c\mid aa^{-1} c^{-1}zBz^{-1}c\rangle & & \\
@@ -2822,11 +2823,11 @@ que es una representación de $\Proyectivo$ perforado, es decir, un crosscap con
 \approx  \, \langle z,B_1,B_2,c_1,c_2\mid c_2^{-1}B_2zc_2c_1^{-1}z^{-1}B_1c_1\rangle &&\text{(doblar por } a\text{)}\\
 \approx  \, \langle e,z,B_1,B_2\mid eB_2ze^{-1}z^{-1}B_1\rangle &&\text{(rotar y consolidar } e=c_1c_2^{-1} \text{)}
 \end{align*}
-que es la representación de un toro con dos perforaciones. De la misma forma, cambiando la orientación de la aparición de $z^{-1}$ llegamos a 
+que es la representación de un toro con una perforación. De la misma forma, cambiando la orientación de la aparición de $z^{-1}$ llegamos a 
 \[
 \langle e,z,B_1,B_2\mid eB_2ze^{-1}zB_1\rangle
 \]
-que es la botella de Klein con dos perforaciones, lo que es lo mismo, una esfera con crosshandle y dos perforaciones, es decir, una superficie ordinaria.
+que es la botella de Klein con una perforación, lo que es lo mismo, una esfera con crosshandle y una perforación, es decir, una superficie ordinaria.
 
 \item[(4)] \textit{Dos perforaciones con un par-zip y una componente conexa distinta del borde.} Empezando con la representación
 \begin{align*}
@@ -2844,6 +2845,7 @@ Por tanto, aplicando la demostración de la \autoref{prop:suma_esfera} (iii), de
 
 \end{proof}
 
+\
 
 \begin{tma}[Teorema de clasificación, versión preeliminar] %M%%%TEO: Clasificación preeliminar
 Toda superficie con borde compacta es ordinaria.
@@ -2886,7 +2888,6 @@ Por la versión preeliminar del teorema de clasificación, una superficie con bo
 Como se ha visto, no he podido evitar hacer referencia a la representación poligonal de superficies para demostrar los puntos más informales. Sin embargo, creo que combinar la representación poligonal con la idea de Conway facilita mucho la demostración del teorema, pues seguimos quitándonos la ``irrelevancia'' de llegar a la forma normal ``artificial'', y la prueba,  al trabajar sobre la suma conexa en vez de haciendo transformaciones sobre palabras, se vuelve más entendible y corta. Además, como veremos, la representación poligonal nos permitirá demostrar la segunda parte del teorema.\\
 \end{obs}
 
-\afterpage{\blankpage}
 
 \chapter{Teorema de Clasificación, segunda parte}
 Hasta ahora hemos demostrado, con dos enfoques distintos, que toda superficie con borde compacta es homeomorfa a una esfera, a una suma conexa de copias del toro o a una suma conexa de copias del plano proyectivo, junto con un número finito de perforaciones. Sin embargo no hemos demostrado que estas tres superficies fundamentales no sean homeomorfas entre sí. En este capítulo completaremos la parte de la prueba que nos falta. 
@@ -3015,19 +3016,19 @@ donde $\tau$ es una expresión de $\gamma \in \pi_1(X, \tilde{v})$ en términos 
 \end{tma}
 \begin{proof}
 Denotemos por $\pi :X\amalg \Disco \to \tilde{X}$ la aplicación cociente, y pensemos en $X$ como su imagen por $\pi$, para así considerarlo un subespacio de $\tilde{X}$.
-Si elegimos un punto $z\in \interior{\Disco}$ y llamamos $U=\interior{\Disco}$, $V=X\amalg \left( \Disco \setminus \{ z \} \right)$, tenemos que $U$ y $V$ son dos abiertos saturados, y sus imágenes por $\pi$ son por tanto abiertos en $\tilde{X}$, que denotaremos por $\tilde{U}$ y $\tilde{V}$ respectivamente. Veamos que $\tilde{U}$ y $\tilde{V}$ son abiertos por caminos.
+Si elegimos un punto $z\in \interior{\Disco}$ y llamamos $U=\interior{\Disco}$, $V=X\amalg \left( \Disco \setminus \{ z \} \right)$, tenemos que $U$ y $V$ son dos abiertos saturados, y sus imágenes por $\pi$ son por tanto abiertos en $\tilde{X}$, que denotaremos por $\tilde{U}$ y $\tilde{V}$ respectivamente. Veamos que $\tilde{U}$ y $\tilde{V}$ son conexos por caminos.
 
 Por un lado, por ser $\pi$ continua, $\tilde{U}$ y $\tilde{U}\cap \tilde{V}=\pi (\interior{\Disco} \setminus \{ z \} ) $ son conexos por caminos por ser imágenes de conjuntos conexos por caminos. Por otro lado, como $\tilde{V}$ es la unión de los conjuntos conexos por caminos $X$ y $\tilde{U} \cap \tilde{V}$, entonces es también conexo por caminos.
 
 Vamos a elegir un punto base en $\tilde{U} \cap \tilde{V}$ para poder aplicar el \autoref{teo:svk}. Elegimos un $p\in \interior{\Disco} \setminus \{ z \}$, y denotamos por $c$ a un lazo con base en el punto $p$, tal que $\left[ c \right]$ genere $\pi_1 (\interior{\Disco} \setminus \{ z \} )$. Llamamos ahora $\tilde{p}=\pi (p) \in \tilde{U} \cap \tilde{V}$, y $\tilde{c} = \pi \circ c$. 
-Tenemos que la restricción de $\pi$ a $U$ es una aplicación cociente inyectiva, y por lo tanto un homeomorfismo en $\tilde{U}$. Así, dado que $U$ es símplemente conexo, también lo es $\tilde{U}$. Por otro lado, $\tilde{U} \cap \tilde{V}$ es la imagen por $\pi$ del abierto saturado $\interior{\Disco} \setminus \{ z \}$, y por tanto la restricción $\pi : \interior{\Disco} \setminus \{ z \} \to \tilde{U} \cap \tilde{V}$ es una aplicación inyectiva, y por tanto un homeomorfismo. Tenemos entonces que $\pi_1 (\tilde{U} \cap \tilde{V} , \tilde{p})$ es el grupo cíclico infinito generado por $\left[ \tilde{c} \right]$. Ahora, por el \autoref{teo:svk} podemos asegurar que existe una aplicación inyectiva
+Tenemos que la restricción de $\pi$ a $U$ es una aplicación cociente inyectiva, y por lo tanto un homeomorfismo en $\tilde{U}$. Así, dado que $U$ es símplemente conexo, también lo es $\tilde{U}$. Por otro lado, $\tilde{U} \cap \tilde{V}$ es la imagen por $\pi$ del abierto saturado $\interior{\Disco} \setminus \{ z \}$, y por tanto la restricción $\pi : \interior{\Disco} \setminus \{ z \} \to \tilde{U} \cap \tilde{V}$ es una aplicación inyectiva, y por tanto un homeomorfismo. Tenemos entonces que $\pi_1 (\tilde{U} \cap \tilde{V} , \tilde{p})$ es el grupo cíclico infinito generado por $\left[ \tilde{c} \right]$. Ahora, por la \autoref{teo:svk} podemos asegurar que existe una aplicación inyectiva
 \[
 \pi_1 (\tilde{V} , \tilde{p} ) \to \pi_1 (\tilde{X} , \tilde{p} )
 \]
 
 inducida por la inclusión $\tilde{V} \hookrightarrow \tilde{X}$, y cuyo núcleo es el menor subgrupo normal que contiene al subgrupo cícclico generado por $\left[ \tilde{c} \right]$. 
 
-Ahora cambiaremos el punto base, puesto que estamos interesado en $\tilde{v}$ , y no en $\tilde{p}$. Para ello, denotamos por $a$ el camino en $\partial \Disco $ que represente el generador $\alpha$ del enunciado del teorema. Sea $b$ el camino en $D$ que une $p$ con $v$. Entonces $\tilde{b} =\pi \circ b$ es el camino en $\tilde{V}$ que une $\tilde{p}$ con $\tilde{v}$ y $\tilde{a} = \pi \circ a$ es el lazo en $X$ con base en $\tilde{v}$ que representa al $\gamma$ del enunciado del teorema. El lazo $b^{-1} \circ c \circ b$ con base en $v$ es un generador de $\pi_1 (\Disco \setminus \{ z \} , v)$, y así, reemplazando $c$ si es necesario con su camino inverso, tenemos que es homotópico al camino $a$ en $\Disco \setminus \{ z \}$. Los isomorfismos de cambio de base inducidos por el camino $\tilde{b}$, que denotaremos por $\Phi_{\tilde{b}}$ ambos, conmutan con los homomorfismos inducidos por la inclusión del siguiente diagrama:
+Ahora cambiaremos el punto base, puesto que estamos interesado en $\tilde{v}$ , y no en $\tilde{p}$. Para ello, denotamos por $a$ el camino en $\partial \Disco $ que represente el generador $\alpha$ del enunciado del teorema. Sea $b$ el camino en $D$ que une $p$ con $v$. Entonces $\tilde{b} =\pi \circ b$ es el camino en $\tilde{V}$ que une $\tilde{p}$ con $\tilde{v}$ y $\tilde{a} = \pi \circ a$ es el lazo en $X$ con base en $\tilde{v}$ que representa al $\gamma$ del enunciado del teorema. El lazo $b^{-1} \circ c \circ b$ con base en $v$ es un generador de $\pi_1 (\Disco \setminus \{ z \} , v)$, y así, reemplazando $c$ si es necesario con su camino inverso, tenemos que es homotópico al camino $a$ en $\Disco \setminus \{ z \}$. Los isomorfismos de cambio de base inducidos por el camino $\tilde{b}$, que denotaremos ambos por $\Phi_{\tilde{b}}$, conmutan con los homomorfismos inducidos por la inclusión del siguiente diagrama:
 \begin{center}
 \begin{tikzpicture}[use optics]
 \draw [->](0,0) node [anchor=east] {$\pi_1 (\tilde{V} , \tilde{p} )$} -- (2,0) node [anchor=west] {$\pi_1 (\tilde{X} , \tilde{p} )$};
@@ -3039,7 +3040,7 @@ Ahora cambiaremos el punto base, puesto que estamos interesado en $\tilde{v}$ , 
 \end{center}
 y llevan $\left[ \tilde{c} \right]$ a $\left[ \tilde{a} \right] =\gamma$. El homomorfismo que hemos obtenido es sobreyectivo y tiene como núcleo al menor subgrupo normal que contiene a $\gamma$.
 
-Para completar la demostración, necesitamos relacionar el grupo fundamental de $\tilde{V}$ con el de $X$. Combinando una retracción por deformación fuerte $r:\Disco \setminus \{ z \} \to \partial \Disco$ junto con la identidad en $X$, obtenemos una homotopía $H: V\times I \to V$ que da lugar a una etración por deformación fuerte de $V$ en $X \amalg \partial \Disco$. Dado que $\pi \circ H$ respeta las identificaciones hechas por $\pi \times \text{Id}_I : V \times I \to \tilde{V} \times I$, que a su vez es una aplicación cociente (por ser $V $ compacto y $\tilde{V}$ Hausdorff), esta pasa al cociente como una retracción por deformación fuerte de $\tilde{V}$ en $X$. Así pues, la inclusión $X \hookrightarrow \tilde{V}$ es una equivalencia homotópica. Por lo tanto podemos sustituir $\pi_1 (\tilde{V} , \tilde{v} )$ por $\pi_1 (X, \tilde{v} )$ y obtener así un homomorfismo sobreyectivo cuyo núcleo es el menor subgrupo normal que contiene a $\gamma$. La parte de las presentaciones se obtiene directamente del \autoref{teo:svk}. 
+Para completar la demostración, necesitamos relacionar el grupo fundamental de $\tilde{V}$ con el de $X$. Combinando una retracción por deformación fuerte $r:\Disco \setminus \{ z \} \to \partial \Disco$ junto con la identidad en $X$, obtenemos una homotopía $H: V\times I \to V$ que da lugar a una retración por deformación fuerte de $V$ en $X \amalg \partial \Disco$. Dado que $\pi \circ H$ respeta las identificaciones hechas por $\pi \times \text{Id}_I : V \times I \to \tilde{V} \times I$, que a su vez es una aplicación cociente (por ser $V $ compacto y $\tilde{V}$ Hausdorff), esta pasa al cociente como una retracción por deformación fuerte de $\tilde{V}$ en $X$. Así pues, la inclusión $X \hookrightarrow \tilde{V}$ es una equivalencia homotópica. Por lo tanto podemos sustituir $\pi_1 (\tilde{V} , \tilde{v} )$ por $\pi_1 (X, \tilde{v} )$ y obtener así un homomorfismo sobreyectivo cuyo núcleo es el menor subgrupo normal que contiene a $\gamma$. La parte de las presentaciones se obtiene directamente del \autoref{teo:svk}. 
 
 
 
