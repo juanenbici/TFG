@@ -2,13 +2,13 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {spanish}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Resumen}{i}{section*.1}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Resumen}{iii}{section*.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Abstract}{i}{section*.2}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Abstract}{iii}{section*.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Introducción}{iii}{section*.3}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Introducción}{v}{section*.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\'{I}ndice general}{v}{chapter*.4}%
+\contentsline {chapter}{\'{I}ndice general}{vii}{chapter*.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Superficies y triangulación}{1}{chapter.1}%
 \defcounter {refsection}{0}\relax 

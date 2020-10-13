@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  7 OCT 2020 22:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  8 OCT 2020 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1305,13 +1305,17 @@ Package pdftex.def Info: images/complu.png  used on input line 136.
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.179 \clearpage
-                 [1]pdfTeX warning (ext4): destination with the same identifier
- (name{page.ii}) has been already used, duplicate ignored
+l.165 \end{dedication}
+                       [1
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) ha
+s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.179 \clearpage
-                 [2
+l.165 \end{dedication}
+                       [2
+
+] [3] [4
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 182--183
@@ -1343,7 +1347,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
-[3]
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
  []
@@ -1358,7 +1362,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
-[4] (./TFG2.toc
+[6] (./TFG2.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 3.
@@ -1381,9 +1385,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ))
 \tf@toc=\write6
- [5
+ [7
 
-] [6
+] [8
 
 
 ]
@@ -1821,8 +1825,8 @@ Package rerunfilecheck Info: File `TFG2.out' has not changed.
 Package logreq Info: Writing requests to 'TFG2.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 43657 strings out of 480478
- 986761 string characters out of 5905960
+ 43659 strings out of 480478
+ 986778 string characters out of 5905960
  1595490 words of memory out of 5000000
  58545 multiletter control sequences out of 15000+600000
  545831 words of font info for 121 fonts, out of 8000000 for 9000
@@ -1849,10 +1853,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (56 pages, 849933 bytes).
+Output written on TFG2.pdf (58 pages, 850300 bytes).
 PDF statistics:
- 883 PDF objects out of 1000 (max. 8388607)
- 777 compressed objects within 8 object streams
- 300 named destinations out of 1000 (max. 500000)
+ 892 PDF objects out of 1000 (max. 8388607)
+ 784 compressed objects within 8 object streams
+ 302 named destinations out of 1000 (max. 500000)
  15658 words of extra memory for PDF output out of 17280 (max. 10000000)
 
