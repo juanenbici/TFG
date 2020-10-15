@@ -3,5 +3,3 @@
 \babel@toc {spanish}{}
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {1}{Introducción}{2}{0}{1}
-\defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {2}{Second Section}{56}{0}{2}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  8 OCT 2020 13:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  13 OCT 2020 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1825,10 +1825,10 @@ Package rerunfilecheck Info: File `TFG2.out' has not changed.
 Package logreq Info: Writing requests to 'TFG2.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 43659 strings out of 480478
- 986778 string characters out of 5905960
+ 43661 strings out of 480478
+ 986821 string characters out of 5905960
  1595490 words of memory out of 5000000
- 58545 multiletter control sequences out of 15000+600000
+ 58547 multiletter control sequences out of 15000+600000
  545831 words of font info for 121 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,104p,1851b,2010s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1853,7 +1853,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TFG2.pdf (58 pages, 850300 bytes).
+Output written on TFG2.pdf (58 pages, 850284 bytes).
 PDF statistics:
  892 PDF objects out of 1000 (max. 8388607)
  784 compressed objects within 8 object streams

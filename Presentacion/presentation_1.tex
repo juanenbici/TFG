@@ -171,7 +171,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Trabajo de Fin de Grado]{La Prueb ZIP de Conway del Teorema de Clasificación de Superficies} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[Trabajo de Fin de Grado]{La Prueba ZIP de Conway del Teorema de Clasificación de Superficies} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Juan Valero Oliet} % Your name
 \institute[UCM] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
@@ -205,20 +205,18 @@ Universidad Complutense de Madrid \\ % Your institution for the title page
 
 \begin{frame}
 \frametitle{Introducción al trabajo}
-La prueba ZIP de Conway hace una demostración informal del Teorema de Clasificación de Superficies. \pause
+ 
 
 \begin{tma}[Clasificación de Superficies]
-Sea $S$ una superficie compacta. Entonces $S$ es homeomorfa a una y sólo una de las siguientes superficies: \pause
+Sea $S$ una superficie compacta y conexa. Entonces $S$ es homeomorfa a una y sólo una de las siguientes superficies: 
 \begin{itemize}
-\item<1-> La esfera $\Esfera$. \pause
-\item<2-> Una suma conexa de copias del toro $\Toro \# \dots \# \Toro$. \pause
-\item<3-> Una suma conexa de copias del plano proyectivo $\Proyectivo \# \dots \# \Proyectivo$.
+\item La esfera $\Esfera$. 
+\item Una suma conexa de copias del toro $\Toro \# \dots \# \Toro$. 
+\item Una suma conexa de copias del plano proyectivo $\Proyectivo \# \dots \# \Proyectivo$.
 
 \end{itemize}
 \end{tma}
-\end{frame}
 
-\begin{frame}
 \frametitle{}
 \begin{figure}
 \centering%%%%FIG: Toro y esfera
@@ -281,18 +279,23 @@ Sea $S$ una superficie compacta. Entonces $S$ es homeomorfa a una y sólo una de
 \end{figure}
 \end{frame}
 
+
+
+
 %----
 \begin{frame}
 \frametitle{Introducción Histórica}
 \begin{itemize}
-\item<1-> 1863 - Möbius
-\item<2-> 1866 - Jordan
-\item<3-> 1888 - von Dick
-\item<4-> 1907 - Dehn y Heegard
-\item<5-> 1915 - Alexander
-\item<6-> 1920 - Brahana
-\item<7-> 1925 - Radó
+\item 1863 - Möbius
+\item 1866 - Jordan
+\item 1888 - von Dick
+\item 1907 - Dehn y Heegard
+\item 1915 - Alexander
+\item 1920 - Brahana
+\item 1925 - Radó\pause
 \end{itemize}
+
+Textos de hoy en día $\longrightarrow$ Seifert - Threlfall.
 
 \end{frame}
 
@@ -300,24 +303,29 @@ Sea $S$ una superficie compacta. Entonces $S$ es homeomorfa a una y sólo una de
 
 \begin{frame}
 \frametitle{Prueba ZIP}
-\begin{center}
-Prueba de Irrelevancia Cero \pause 
-\end{center}
+\begin{itemize}
 
+\item 1999 $\longrightarrow$ artículo de Francis y Weeks.
+
+\item John H. Conway.
+
+\item Prueba de Irrelevancia Cero. 
+\end{itemize}
+\pause
 
 \begin{block}{Ventajas}
-\pause
+
 \begin{itemize}
-\item Más intuitivo. \pause 
-\item La forma normal se basa en el concepto de suma conexa. \pause
+\item Se basa en el concepto de suma conexa.
+\item  Más intuitivo.\pause
 \end{itemize}
 \end{block}
 
 \begin{block}{Problemas}
-\pause
+
 \begin{itemize}
-\item No se definen algunos conceptos utilizados. \pause
-\item No se desarrollan los resultados en profundidad. \pause
+\item No se definen algunos conceptos utilizados. 
+\item No se desarrollan en profundidad algunos resultados.
 \item No se demuestra que las superficies no sean homeomorfas entre sí. 
 \end{itemize}
 \end{block}
@@ -328,24 +336,20 @@ Prueba de Irrelevancia Cero \pause
 
 \begin{itemize}
 \frametitle{Trabajo}
-\item Estudiar los conceptos previos.\pause
-\item Estudiar la demostración clásica.\pause
-\item Tratamiento riguroso de la prueba ZIP.\pause
+\item Estudiar los conceptos previos.
+\item Estudiar la demostración clásica.
+\item Tratamiento riguroso de la prueba ZIP.
 \item Completar con la segunda parte del teorema.
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Triangulación}
-La definimos en términos de complejos simpliciales.
+
 \begin{figure}
 \includegraphics[scale=0.07]{./images/triangulacion.png}
 \end{figure}
-\end{frame}
 
-
-\begin{frame}
-\frametitle{Teorema de Radó}
 \begin{tma}[Teorema de Radó]
 Toda superficie es triangulable.
 \end{tma}
@@ -357,16 +361,16 @@ Sea $f$ un homeomorfismo entre dos curvas simples cerradas $C$ y $C'$. Entonces 
 
 \begin{frame}
 \frametitle{Teorema de Radó}
-Idea de la demostración (Thomassen):\pause
+Idea de la demostración (Thomassen)
 \begin{itemize}
-\item Recubrir la superficie con un número finito de discos coordenados.\pause
-\item Triangular cada disco de forma que sea compatible con los anteriores.\pause
+\item Recubrir la superficie con un número finito de discos coordenados.
+\item Triangular cada disco de forma que sea compatible con los anteriores.
 \end{itemize}
-Dificultades:\pause
-\begin{itemize}
-\item Mostrar que las intersecciones entre las curvas son un número finito.\pause
-\item Mostrar que las regiones que definen estas intersecciones son homeomorfas a discos cerrados $\longrightarrow$ \textit{Schönflies}.
-\end{itemize}
+%Dificultades:\pause
+%\begin{itemize}
+%\item Mostrar que las intersecciones entre las curvas son un número finito.\pause
+%\item Mostrar que las regiones que definen estas intersecciones son homeomorfas a discos cerrados $\longrightarrow$ \textit{Schönflies}.
+%\end{itemize}
 \end{frame}
 
 %------------------------------------------------
@@ -395,9 +399,9 @@ Dificultades:\pause
 
 
 \begin{frame}
-\frametitle{Perforaciones}\pause
+\frametitle{Perforaciones}
 \begin{prop}
-Toda superficie con borde compacta es homeomorfa a una superficie compacta con perforaciones.\pause
+Toda superficie con borde compacta es homeomorfa a una superficie compacta con perforaciones.
 \end{prop}
 
 \begin{prop}[Teorema de Clasificación]
@@ -425,17 +429,13 @@ Sean $M_1$ y $M_2$ superficies con borde compactas tales que $\partial M_1$ y $\
 \end{tikzpicture}
 \caption{Suma conexa de dos toros.}
 \end{figure}
-\end{frame}
 
-
-\begin{frame}
-\frametitle{Suma Conexa}
 \begin{enumerate}
-\item Se consideran dos variedades $M_1$ y $M_2$. \pause
-\item Realizamos una perforación en cada variedad $\longrightarrow$ variedades con borde $M_1^o$ y $M_2^o$.\pause
-\item Consideramos un homeomorfismo $f:\partial M_1^o \to \partial M_2^o$.\pause
-\item Relacionamos en $M_1^o\amalg M_2^o$ cada punto de $\partial M_1^o$ con su imagen por $f$.\pause
-\item Al espacio cociente $M=\frac{M_1^o\amalg M_2^o}{\sim}$ lo llamamos \enfatiza{suma conexa} de $M_1$ y $M_2$.\pause
+\item Se consideran dos superficies $M_1$ y $M_2$. 
+\item Realizamos una perforación en cada superficie $\longrightarrow$ superficies con borde $M_1^o$ y $M_2^o$.
+\item Consideramos un homeomorfismo $f:\partial M_1^o \to \partial M_2^o$.
+\item Relacionamos en $M_1^o\amalg M_2^o$ cada punto de $\partial M_1^o$ con su imagen por $f$.
+\item Al espacio cociente $M=\frac{M_1^o\amalg M_2^o}{\sim}$ lo llamamos \enfatiza{suma conexa} de $M_1$ y $M_2$.
 \end{enumerate}
 \end{frame}
 %------------------------------------------------
@@ -835,14 +835,8 @@ $$\langle a_1,\dots ,a_n\mid a_1a_1\dots a_na_n\rangle$$
 %%%%% ZIP ZIP ZIP ZIP ZIP%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Prueba ZIP}
-\begin{defin}[Cremalleras]
-\begin{itemize}
-\item \enfatiza{zip}: identificación entre dos subconjuntos del borde de $M$. 
-\item \enfatiza{cremallera}: cada uno de estos dos subconjuntos que se identifican. 
-\item \enfatiza{par-zip}: el par formado por dos cremalleras que se identifican. 
-\end{itemize}
-\end{defin}\pause
-\begin{figure}%%%%FIG: Representación esferas
+
+\begin{figure}[b]%%%%FIG: Representación esferas
 \centering
 \begin{tikzpicture}[use optics, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale=0.8]
 \begin{scriptsize}
@@ -879,111 +873,466 @@ $$\langle a_1,\dots ,a_n\mid a_1a_1\dots a_na_n\rangle$$
 
 \end{tikzpicture}
 \end{figure}
+\begin{defin}[Cremalleras]
+\begin{itemize}
+\item Consideramos una identificación entre dos subconjuntos del borde de una superficie perforada. 
+\item \enfatiza{cremallera}: cada uno de estos dos subconjuntos que se identifican. 
+\item \enfatiza{par-zip}: el par formado por dos cremalleras que se identifican. 
+\end{itemize}
+\end{defin}
+
 \end{frame}
 
-%------------------------------------------------
+
+
 
 \begin{frame}
-\frametitle{Multiple Columns}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+\frametitle{Prueba ZIP}
 
-\column{.45\textwidth} % Left column and width
-\textbf{Heading}
-\begin{enumerate}
-\item Se consideran dos variedades $M_1$ y $M_2$.
-\item Realizamos una perforación en cada variedad $\longrightarrow$ variedades con borde $M_1^o$ y $M_2^o$.
-\item Consideramos un homeomorfismo $f:\partial M_1^o \to \partial M_2^o$.
-\item Relacionamos en $M_1^o\amalg M_2^o$ cada punto de $\partial M_1^o$ con su imagen por $f$.
-\item Al espacio cociente $M=\frac{M_1^o\amalg M_2^o}{\sim}$ lo llamamos \enfatiza{suma conexa de $M_1$ y $M_2$}
-\end{enumerate}
+\begin{figure}
 
-\column{.5\textwidth} % Right column and width
+\centering
+\begin{tikzpicture} [use optics, scale=1]
 
 
-\end{columns}
+%\draw [help lines, step=1mm](0,-2) grid (6,2);
+\fill [color=gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\fill [gray!10](3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\fill [gray!20] (2,-.1) [out=80, in=180] to (3,0.7) [out=0, in=100] to (4,-.1) arc[x radius=1, y radius=0.5, start angle=0, end angle=-180];
+\fill [white] (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+\draw (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\draw (3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\draw [-<-={at=0.1}, ->-={at=0.6}] (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+\draw [dashed](2,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=0];
+\draw (2,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=360];
+\draw[-<-={at=0.48}] [dash pattern= on 50pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt] (2.4,-.5) [out=90, in=180] to (3.1,.685) [out=0, in=90] to (3.6,.3);
+\draw (2,-.1) [out=80, in=180] to (3,0.7) [out=0, in=100] to (4,-.1);
+%\draw (2.4,-.5)-- (3.6,.3);
+
+\fill [color=black] (-3.6,-.5) circle (1.pt);
+\fill [color=black] (-2.4,.3) circle (1.pt);
+\fill [color=black] (3.6,.3) circle (1.pt);
+\fill [color=black] (2.4,-.5) circle (1.pt);
+
+
+\end{tikzpicture}
+\caption{Construcción del \textit{cap}.\label{fig:cap}}
+\end{figure}
+
 \end{frame}
 
-%------------------------------------------------
-\section{Second Section}
-%------------------------------------------------
-
 \begin{frame}
-\frametitle{Table}
-\begin{table}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\end{table}
+\frametitle{Prueba ZIP}
+\begin{figure} %%%%FIG: Crosscap
+\centering
+\begin{tikzpicture} [use optics, scale=1]
+
+
+%\draw [help lines, step=1mm](0,-2) grid (6,2);
+\fill [color=gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\fill [gray!10](3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\fill [white] (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+\fill [gray!20](2,-.1) [out=90,in=180] to (3.1,2)[out=0, in=90] to (4,-.1)  arc[x radius=1, y radius=0.5, start angle=0, end angle=-180];
+\draw (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\draw[dash pattern= on 103pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt  on 2pt off 2pt  on 2pt off 3pt  on 150pt] (3,-1.5) -- (5,0) -- (3,1) -- (1,0);
+\draw (1,0) -- (3,-1.5);
+\draw [-<-={at=0.4}, -<-={at=0.9}] (-4,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=-180];
+\draw [dashed](2,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=0];
+\draw (2,-.1) arc[x radius=1, y radius=0.5, start angle=180, end angle=360];
+\draw (2,-.1) [out=90,in=180] to (3.1,2)[out=0, in=90] to (4,-.1);
+\draw (3.1,2) -- (3.1,0.7);
+
+\fill [color=black] (-3.6,.3) circle (1.pt);
+\fill [color=black] (-2.4,-.5) circle (1.pt);
+
+%\fill [color=black] (-4,-.1) circle (1.pt);
+%\fill [color=black] (-2,-.1) circle (1.pt);
+
+%\fill [color=black] (-3.6,-.5) circle (1.pt);
+%\fill [color=black] (-2.4,.3) circle (1.pt);
+
+
+\draw (2.17,1.15) [out=-80, in=-135, looseness=0.6] to (3.1,1.2) [out=-45, in=-90, looseness=0.6] to (3.9,1.2);
+\draw [dashed] (2.17,1.15) [out=90, in=135, looseness=0.6] to (3.1,1.2) [out=45, in=90, looseness=0.6] to (3.9,1.2);
+
+
+\end{tikzpicture}
+\caption{Construcción del \textit{crosscap}.\label{fig:crosscap}}
+
+\end{figure}
 \end{frame}
 
-%------------------------------------------------
+\begin{frame}
+\frametitle{Prueba ZIP}
+\begin{figure}
+
+\centering
+
+\centering
+
+\begin{tikzpicture} [use optics, scale=1]
+%\draw [help lines, step=1mm](-6,-2) grid (6,2);
+\begin{scriptsize}
+
+\fill [gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\fill [white](-4.4,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=540];
+\fill [white](-1.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=360];
+\fill [gray!10](3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\fill [gray!20](1.6,-.05) [out=90, in=180] to (3,2) [out=0, in=90] to (4.4,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180]  [out=90, in=0] to (3,1.2) [out=180, in=90] to (2.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180] ;
+
+\draw (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\draw [dash pattern= on 19pt off 2 pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt  on 2pt off 2pt on 2pt off 2pt  on 1pt off 1pt on 24pt](5,0) -- (3,1);
+\draw [dash pattern= on 12pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 50pt ](3,1) -- (1,0);
+\draw (1,0) -- (3,-1.5) -- (5,0);
+\draw [-<-={at=0}](-4.4,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=540];
+\draw [->-={at=0}](-1.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=360];
+
+\draw (1.6,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=360];
+\draw  (4.4,-.05)arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180];
+\draw [dashed](1.6,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=0];
+\draw  [dashed](4.4,-.05)arc [x radius=0.5, y radius=0.25, start angle=0, end angle=180];
+
+\draw (1.6,-.05) [out=90, in=180] to (3,2) [out=0, in=90] to (4.4,-.05);
+\draw (2.6,-.05) [out=90, in=180] to (3,1.2) [out=0, in=90]to (3.4,-.05);
+\draw [->-](3,1.2) [out=180, in=180, looseness=0.7] to (3,2);
+\draw [dashed] (3,1.2)[out=0, in=0, looseness=0.7] to (3,2);
+\fill (-3.4,-.05) circle (1pt);
+\fill (-2.6,-.05) circle (1pt);
+\end{scriptsize}
+
+\end{tikzpicture}
+
+\caption{Construcción del \textit{handle}. \label{fig:handle}}
+\end{figure}
+\end{frame}
 
 \begin{frame}
-\frametitle{Theorem}
-\begin{tma}[Mass--energy equivalence]
-$E = mc^2$
+\frametitle{Prueba ZIP}
+\begin{figure}
+\centering
+\begin{tikzpicture}[use optics, scale=1]
+%\draw [help lines, step=1mm](-6,-2) grid (6,2);
+\begin{scriptsize}
+
+\fill [gray!10] (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\fill [white](-4.4,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=540];
+\fill [white](-1.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=360];
+\fill [gray!10](3,-1.5) -- (5,0) -- (3,1) -- (1,0) -- cycle;
+\fill [gray!20](1.6,-.05) [out=90, in=180] to (3,2) [out=0, in=90] to (4.4,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180]  [out=90, in=0] to (3,1.2) [out=180, in=90] to (2.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180] ;
+
+\draw (-3,-1.5) -- (-5,0) -- (-3,1) -- (-1,0) -- cycle;
+\draw [dash pattern= on 19pt off 2 pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt  on 2pt off 2pt on 2pt off 2pt  on 1pt off 1pt on 24pt](5,0) -- (3,1);
+\draw [dash pattern= on 12pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 2pt off 2pt on 50pt ](3,1) -- (1,0);
+\draw (1,0) -- (3,-1.5) -- (5,0);
+\draw [-<-={at=0}](-4.4,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=540];
+\draw [-<-={at=0}](-1.6,-.05) arc [x radius=0.5, y radius=0.25, start angle=0, end angle=360];
+
+\draw (1.6,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=360];
+\draw  (4.4,-.05)arc [x radius=0.5, y radius=0.25, start angle=0, end angle=-180];
+\draw [dashed](1.6,-.05) arc[x radius=0.5, y radius=0.25, start angle=180, end angle=0];
+\draw  [dashed](4.4,-.05)arc [x radius=0.5, y radius=0.25, start angle=0, end angle=180];
+
+\draw (2.1,1.56) [out=-90, in=-135, looseness=0.5] to (3, 1.56) [out=-45, in=-90, looseness=0.5] to (3.9, 1.56);
+\draw [dashed] (2.1,1.56) [out=90, in=135, looseness=0.5] to (3, 1.56) [out=45, in=90, looseness=0.5] to (3.9, 1.56);
+\draw (1.6,-.05) [out=90, in=180] to (3,2) [out=0, in=90] to (4.4,-.05);
+\draw (2.6,-.05) [out=90, in=180] to (3,1.2) [out=0, in=90]to (3.4,-.05);
+%\draw (3,1.2) [out=180, in=180, looseness=0.2] to (3,2);
+\draw (3,1.2)-- (3,2);
+%\draw [dashed] (3,1.2)[out=0, in=0, looseness=0.7] to (3,2);
+\fill (-3.4,-.05) circle (1pt);
+\fill (-2.6,-.05) circle (1pt);
+\end{scriptsize}
+
+\end{tikzpicture}
+\caption{Construcción del \textit{crosshandle}.\label{fig:crosshandle}}
+
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{ Representación de las superficies con cremalleras.}
+
+\begin{figure}[]
+%\centering
+\begin{subfigure}{.45\textwidth}
+\centering
+\begin{tikzpicture}[use optics, >=angle 60, scale=1]
+\begin{scriptsize}
+
+
+\fill[  ,fill=gray!20] (0,0) -- (0.9238207149966959,0.3828253995531037) -- (1.3063621711370152,1.3067637277623212) -- (0.9235367715839117,2.230584442759017) -- (-0.00040155662530578324,2.6131258988993364) -- (-0.9242222716220017,2.230300499346233) -- (-1.3067637277623212,1.3063621711370155) -- (-0.9239383282092178,0.38254145614031965) -- cycle;
+
+\draw  [->-]  (0,0) -- (0.9238207149966959,0.3828253995531037)node[midway,below] {$b_2$};
+\draw  [->-](0.9238207149966959,0.3828253995531037)-- (1.3063621711370152,1.3067637277623212)node[midway, anchor=west] {$a_2$};
+\draw  [-<-](1.3063621711370152,1.3067637277623212)-- (0.9235367715839117,2.230584442759017)node[midway,anchor=west] {$b_2$};
+\draw  [-<-](0.9235367715839117,2.230584442759017)-- (-0.00040155662530578324,2.6131258988993364)node[midway,anchor=south west] {$a_2$};
+\draw  [->-](-0.00040155662530578324,2.6131258988993364)-- (-0.9242222716220017,2.230300499346233)node[midway,anchor=south east] {$b_1$};
+\draw  [->-](-0.9242222716220017,2.230300499346233)-- (-1.3067637277623212,1.3063621711370155)node[midway,anchor=east] {$a_1$};
+\draw  [-<-](-1.3067637277623212,1.3063621711370155)-- (-0.9239383282092178,0.38254145614031965)node[midway,anchor=east] {$b_1$};
+\draw  [-<-](-0.9239383282092178,0.38254145614031965)-- (0,0)node[midway,below] {$a_1$};
+\draw  [-<-](0,0)-- (-0.5128819104663424,1.2073243438172108) node [midway, anchor=east] {$c_1$};
+\draw  [-<-](0,0)-- (0.4909162594319499,1.202150126446601)node [midway, anchor=west] {$c_2$};
+
+\filldraw[white]  (-0.5,1.5)circle (0.2929590130705814cm);
+\filldraw [white] (0.5,1.5) circle (0.2979883580250803cm);
+\draw  [->-={at=0.25}](-0.5,1.5) circle (0.2929590130705814cm);
+\draw  [->-={at=0.25}](0.5,1.5) circle (0.2979883580250803cm);
+\draw (-0.27,1.5) node [anchor=east] {$z$};
+\draw (0.27,1.5) node [anchor=west] {$z$};
+
+\filldraw (0,0) circle (1pt);
+\end{scriptsize}
+\end{tikzpicture}
+\caption{ }
+\end{subfigure}
+\begin{subfigure}{.45\textwidth}
+\centering
+\begin{tikzpicture}[use optics,scale=1]
+
+\begin{scriptsize}
+
+
+\fill[  fill=gray!20] (0,0) -- (0.6,0) -- (1.1405813207414512,0.2603302434705348) -- (1.5146752018566914,0.7294291329513525) -- (1.6481877622304801,1.3143858802604464) -- (1.5146752018566916,1.8993426275695406) -- (1.1405813207414515,2.3684415170503583) -- (0.6,2.6287717605208933) -- (0,2.628771760520894) -- (-0.5405813207414512,2.3684415170503588) -- (-0.9146752018566913,1.899342627569541) -- (-1.0481877622304798,1.314385880260447) -- (-0.9146752018566915,0.7294291329513529) -- (-0.5405813207414516,0.260330243470535) -- cycle;
+
+
+\draw [ -<- ] (0,0)-- (0.6,0) node [anchor=north, midway] {$c_1$};
+\draw [ -<- ] (0.6,0)-- (1.1405813207414512,0.2603302434705348)node [anchor=north, midway] {$z$};
+\draw [ ->- ] (1.1405813207414512,0.2603302434705348)-- (1.5146752018566914,0.7294291329513525) node [anchor=north west, midway] {$c_1$};
+\draw [ -<- ] (1.5146752018566914,0.7294291329513525)-- (1.6481877622304801,1.3143858802604464) node [midway, anchor=west] {$c_2$};
+\draw [ -<- ] (1.6481877622304801,1.3143858802604464)-- (1.5146752018566916,1.8993426275695406) node [midway, anchor=west] {$z$};
+\draw [ ->- ] (1.5146752018566916,1.8993426275695406)-- (1.1405813207414515,2.3684415170503583) node [anchor=south west, midway]  {$c_2$};
+\draw [ ->- ] (1.1405813207414515,2.3684415170503583)-- (0.6,2.6287717605208933)node [midway, anchor=south] {$b_2$};
+\draw [  ->-] (0.6,2.6287717605208933)-- (0,2.628771760520894)node [midway, anchor=south] {$a_2$};
+\draw [ -<- ] (0,2.628771760520894)-- (-0.5405813207414512,2.3684415170503588)node [midway, anchor=south] {$b_2$};
+\draw [ -<- ] (-0.5405813207414512,2.3684415170503588)-- (-0.9146752018566913,1.899342627569541)node [anchor= south east, midway] {$a_2$};
+\draw [ ->- ] (-0.9146752018566913,1.899342627569541)-- (-1.0481877622304798,1.314385880260447)node [midway, anchor=east]{$b_1$};
+\draw [ ->- ] (-1.0481877622304798,1.314385880260447)-- (-0.9146752018566915,0.7294291329513529) node [anchor=east, midway] {$a_1$};
+\draw [  -<-] (-0.9146752018566915,0.7294291329513529)-- (-0.5405813207414516,0.260330243470535) node [anchor=north east, midway]{$b_1$};
+\draw [ -<- ] (-0.5405813207414516,0.260330243470535)-- (0,0)node [anchor=north, midway] {$a_1$};
+
+\filldraw (0,0) circle (1pt);
+\filldraw (1.1405813207414515,2.3684415170503583)  circle (1pt);
+\end{scriptsize}
+
+\end{tikzpicture}
+\caption{ }
+\end{subfigure}
+\caption{La superficie $\Toro \# \Toro$  con un crosshandle.}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Prueba ZIP}
+\begin{prop}
+
+Sea $M$ una superficie. Los siguientes espacios son homeomorfos:
+\begin{itemize}
+\item[a)] $M$ con un cap y $M$.
+\item[b)] $M$ con un crosscap y $M\# \Proyectivo$.
+\item[c)] $M$ con un handle y $M\# \Toro$.
+\item[d)] $M$ con un crosshandle y $M\# K$ (siendo $K$ la botella de Klein). 
+\end{itemize}
+
+\end{prop}
+\end{frame}
+
+\begin{frame}
+\frametitle{Prueba ZIP: Demostración del Teorema de Clasificación}
+\begin{defin}%%%%DEF: Ordinaria
+Una superficie con borde se dice \enfatiza{ordinaria} si es homeomorfa a una colección finita de esferas cada una con un número finito de \textit{handles}, \textit{crosshandles}, \textit{crosscaps} y perforaciones.
+\end{defin}
+\end{frame}
+
+\begin{frame}
+\frametitle{Prueba ZIP: Demostración del Teorema de Clasificación.}
+\begin{lema}%%%%LEMA: Superficie ordinaria zips
+Sea $M$ una superficie con borde con un par-zip. Entonces, si $M$ es ordinaria antes de identificar las cremalleras, es ordinaria también después.\label{lema:superficie_ordinaria}
+\end{lema}
+\begin{itemize}
+%\item Las dos cremalleras ocupan cada una una perforación en su totalidad.
+%\item Las dos cremalleras cubren totalmente la misma perforación.
+\item Las cremalleras no ocupan perforaciones en su totalidad $\longrightarrow$ informal.
+\end{itemize}
+
+
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Prueba ZIP: Demostración del Teorema de Clasificación.}
+\begin{tma}[Clasificación de Superficies, versión preeliminar]
+Toda superficie con borde compacta es ordinaria.\pause
 \end{tma}
+\begin{itemize}
+\item Consideramos una triangulación de la superficie con borde. 
+\item Ponemos una cremallera en cada 1-símplice que sea cara de dos 2-símplices.
+\item El conjunto de 2-símplices es una superficie ordinaria con cremalleras. 
+\item Por inducción, vamos identificando las cremalleras una a una.
+\end{itemize}
 \end{frame}
-
-%------------------------------------------------
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Verbatim}
-\begin{example}[Theorem Slide Code]
-\begin{verbatim}
-\begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}\end{verbatim}
-\end{example}
-\end{frame}
-
-%------------------------------------------------
 
 \begin{frame}
-\frametitle{Figure}
-Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
-%\begin{figure}
-%\includegraphics[width=0.8\linewidth]{test}
-%\end{figure}
+\frametitle{Prueba ZIP: Demostración del Teorema de Clasificación.}
+\begin{lema} [1]
+Un crosshandle es homeomorfo a dos crosscaps.
+\end{lema}
+
+\begin{lema}[2]
+Handles y crosshandles son equivalentes en la presencia de crosscaps.
+\end{lema}
 \end{frame}
-
-%------------------------------------------------
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Citation}
-An example of the \verb|\cite| command to cite within the presentation:\\~
-
-This statement requires citation \cite{p1}.
-\end{frame}
-
-%------------------------------------------------
 
 \begin{frame}
-\frametitle{References}
-\footnotesize{
-\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
-\bibitem[Smith, 2012]{p1} John Smith (2012)
-\newblock Title of the publication
-\newblock \emph{Journal Name} 12(3), 45 -- 678.
-\end{thebibliography}
-}
+\frametitle{Prueba ZIP: Demostración del Teorema de Clasificación.}
+\begin{tma}
+Toda superficie con borde compacta y conexa es homeomorfa o bien a una esfera con handles o bien a una esfera con crosscaps, junto con $k$ perforaciones.
+\end{tma}
+\begin{proof}
+Por la versión preeliminar del teorema $\longrightarrow$ toda superficie compacta conexa es homeomorfa a una esfera con handles, crosshandles, crosscaps y perforaciones.\pause
+
+\begin{itemize}
+\item \textit{Caso 1}: Al menos hay un crosshandle en la superficie. 
+\end{itemize}
+\end{proof}
 \end{frame}
+
+\begin{frame}
+\frametitle{Prueba ZIP: Demostración del Teorema de Clasificación.}
+\begin{lema} [1]
+Un crosshandle es homeomorfo a dos crosscaps.
+\end{lema}
+
+\begin{lema}[2]
+Handles y crosshandles son equivalentes en la presencia de crosscaps.
+\end{lema}
+\end{frame}
+
+\begin{frame}
+\frametitle{Prueba ZIP: Demostración del Teorema de Clasificación.}
+\begin{tma}
+Toda superficie con borde compacta y conexa es homeomorfa o bien a una esfera con handles o bien a una esfera con crosscaps, junto con $k$ perforaciones.
+\end{tma}
+\begin{proof}
+Por la versión preeliminar del teorema $\longrightarrow$ toda superficie compacta conexa es homeomorfa a una esfera con handles, crosshandles, crosscaps y perforaciones.
+
+\begin{itemize}
+\item \textit{Caso 1}: Al menos hay un crosshandle en la superficie $\rightarrow$ esfera con crosscaps y handles.
+\end{itemize}
+\end{proof}
+\end{frame}
+
+\begin{frame}
+\frametitle{Prueba ZIP: Demostración del Teorema de Clasificación.}
+\begin{lema} [1]
+Un crosshandle es homeomorfo a dos crosscaps.
+\end{lema}
+
+\begin{lema}[2]
+Handles y crosshandles son equivalentes en la presencia de crosscaps.
+\end{lema}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Prueba ZIP: Demostración del Teorema de Clasificación.}
+\begin{tma}
+Toda superficie con borde compacta y conexa es homeomorfa o bien a una esfera con handles o bien a una esfera con crosscaps, junto con $k$ perforaciones.
+\end{tma}
+\begin{proof}
+Por la versión preeliminar del teorema $\longrightarrow$ toda superficie compacta conexa es homeomorfa a una esfera con handles, crosshandles, crosscaps y perforaciones.
+
+\begin{itemize}
+\item \textit{Caso 1}: Al menos hay un crosshandle en la superficie $\rightarrow$ esfera con crosscaps y handles $\rightarrow$ esfera crosscaps y crosshandles.
+\end{itemize}
+\end{proof}
+\end{frame}
+
+\begin{frame}
+\frametitle{Prueba ZIP: Demostración del Teorema de Clasificación.}
+\begin{lema} [1]
+Un crosshandle es homeomorfo a dos crosscaps.
+\end{lema}
+
+\begin{lema}[2]
+Handles y crosshandles son equivalentes en la presencia de crosscaps.
+\end{lema}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Prueba ZIP: Demostración del Teorema de Clasificación.}
+\begin{tma}
+Toda superficie con borde compacta y conexa es homeomorfa o bien a una esfera con handles o bien a una esfera con crosscaps, junto con $k$ perforaciones.
+\end{tma}
+\begin{proof}
+Por la versión preeliminar del teorema $\longrightarrow$ toda superficie compacta conexa es homeomorfa a una esfera con handles, crosshandles, crosscaps y perforaciones.
+
+\begin{itemize}
+\item \textit{Caso 1}: Al menos hay un crosshandle en la superficie $\rightarrow$ esfera con crosscaps y handles $\rightarrow$ esfera crosscaps y crosshandles $\rightarrow$ esfera con crosscaps.\pause
+\item \textit{Caso 2}: No hay ni crosshandles ni crosscaps en la superficie $\rightarrow$ esfera con handles.
+\end{itemize}
+\end{proof}
+\end{frame}
+
+\begin{frame}
+\frametitle{Teorema de Clasificación, segunda parte}
+\begin{lema}
+Grupos isomorfos tienen abelianizados isomorfos.
+\end{lema}
+
+\begin{itemize}
+\item Obtenemos las presentaciones de los grupos fundamentales a partir de las representaciones poligonales.
+\item Calculamos los abelianizados a partir de las presentaciones de los grupos fundamentales.
+\item Vemos que los abelianizados no son isomorfos.
+
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Conclusiones}
+\textbf{Conclusiones}
+\begin{itemize}
+\item La representación nos ha permitido formalizar la prueba ZIP y demostrar la segunda parte del teorema.
+\item Cobinando herramientas de la prueba clásica hemos demostrado el teorema de clasificación de forma rigurosa con las ideas de Conway sin perder la parte intuitiva.
+\end{itemize}
+
+\end{frame}
+
+
+%------------------------------------------------
+%
+%\begin{frame}
+%\frametitle{Multiple Columns}
+%\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+%
+%\column{.45\textwidth} % Left column and width
+%\textbf{Heading}
+%\begin{enumerate}
+%\item Se consideran dos variedades $M_1$ y $M_2$.
+%\item Realizamos una perforación en cada variedad $\longrightarrow$ variedades con borde $M_1^o$ y $M_2^o$.
+%\item Consideramos un homeomorfismo $f:\partial M_1^o \to \partial M_2^o$.
+%\item Relacionamos en $M_1^o\amalg M_2^o$ cada punto de $\partial M_1^o$ con su imagen por $f$.
+%\item Al espacio cociente $M=\frac{M_1^o\amalg M_2^o}{\sim}$ lo llamamos \enfatiza{suma conexa de $M_1$ y $M_2$}
+%\end{enumerate}
+%
+%\column{.5\textwidth} % Right column and width
+%
+%
+%\end{columns}
+%\end{frame}
+%
+%%------------------------------------------------
+
 
 %------------------------------------------------
 
-\begin{frame}
-\Huge{\centerline{The End}}
-\end{frame}
+
 
 %----------------------------------------------------------------------------------------
 
